@@ -1,0 +1,26 @@
+{
+  "HEADER": {
+    "SOURCE_ORG": "GRMFMC000",
+    "SOURCE_PERSON": "aloumiotis@foo.gr",
+    "DOMAIN": "IFDat",
+    "CATEGORY": "income"
+  },
+  "DATASETS": {
+    "REVENUE": [
+      {
+        "DIMS": {
+          "IID": "GRF000000001",
+          "TP": "R1",
+          "DT": "2022-01-31",
+          "FREQ": "M"
+        },
+        "AMNT": {
+          "VALUE": 7.78
+        },
+        "EUR_AMNT": {
+          "VALUE": 7.78
+        }
+      }
+    ]
+  }
+}

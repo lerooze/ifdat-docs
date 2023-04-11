@@ -1,0 +1,5965 @@
+{
+  "title": "Message",
+  "type": "object",
+  "properties": {
+    "HEADER": {
+      "$ref": "#/definitions/Header"
+    },
+    "DATASETS": {
+      "$ref": "#/definitions/Datasets"
+    }
+  },
+  "required": [
+    "HEADER",
+    "DATASETS"
+  ],
+  "additionalProperties": false,
+  "definitions": {
+    "Header": {
+      "title": "Header",
+      "type": "object",
+      "properties": {
+        "SOURCE_ORG": {
+          "title": "Source Org",
+          "maxLength": 32,
+          "type": "string"
+        },
+        "SOURCE_PERSON": {
+          "title": "Source Person",
+          "maxLength": 32,
+          "type": "string"
+        },
+        "DOMAIN": {
+          "title": "Domain",
+          "enum": [
+            "IFDat"
+          ],
+          "type": "string"
+        },
+        "CATEGORY": {
+          "title": "Category",
+          "enum": [
+            "self_info"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "SOURCE_ORG",
+        "SOURCE_PERSON",
+        "DOMAIN",
+        "CATEGORY"
+      ]
+    },
+    "BaseDimensionContainer": {
+      "title": "BaseDimensionContainer",
+      "type": "object",
+      "properties": {
+        "ID": {
+          "title": "Id",
+          "maxLength": 32,
+          "type": "string"
+        }
+      },
+      "required": [
+        "ID"
+      ]
+    },
+    "AttrObsrvtnSttsEnum": {
+      "title": "AttrObsrvtnSttsEnum",
+      "description": "An enumeration.",
+      "enum": [
+        "A",
+        "E",
+        "M",
+        "O"
+      ],
+      "type": "string"
+    },
+    "GenericStatusAttr_AttrObsrvtnSttsEnum_": {
+      "title": "GenericStatusAttr[AttrObsrvtnSttsEnum]",
+      "type": "object",
+      "properties": {
+        "STATUS": {
+          "default": "A",
+          "allOf": [
+            {
+              "$ref": "#/definitions/AttrObsrvtnSttsEnum"
+            }
+          ]
+        }
+      }
+    },
+    "Measure_date__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
+      "title": "Measure[date, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "title": "Value",
+          "type": "string",
+          "format": "date"
+        },
+        "ATTRS": {
+          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "GenCntryEnum": {
+      "title": "GenCntryEnum",
+      "description": "An enumeration.",
+      "enum": [
+        "AE",
+        "AF",
+        "AL",
+        "AO",
+        "AR",
+        "AT",
+        "AU",
+        "BE",
+        "BG",
+        "BH",
+        "BJ",
+        "BM",
+        "BR",
+        "BS",
+        "BY",
+        "BZ",
+        "CA",
+        "CG",
+        "CH",
+        "CL",
+        "CM",
+        "CN",
+        "CO",
+        "CW",
+        "CY",
+        "CZ",
+        "DE",
+        "DK",
+        "DO",
+        "EG",
+        "ER",
+        "ES",
+        "FI",
+        "FO",
+        "FR",
+        "GB",
+        "GE",
+        "GG",
+        "GI",
+        "GR",
+        "HK",
+        "HR",
+        "HU",
+        "ID",
+        "IE",
+        "IL",
+        "IM",
+        "IN",
+        "IO",
+        "IS",
+        "IT",
+        "JE",
+        "JP",
+        "KE",
+        "KR",
+        "KY",
+        "KZ",
+        "LB",
+        "LR",
+        "LU",
+        "LV",
+        "LY",
+        "ME",
+        "MH",
+        "MK",
+        "MN",
+        "MU",
+        "MW",
+        "MX",
+        "NG",
+        "NL",
+        "NO",
+        "NZ",
+        "OM",
+        "PA",
+        "PE",
+        "PG",
+        "PH",
+        "PL",
+        "PT",
+        "QA",
+        "RO",
+        "RS",
+        "RU",
+        "SA",
+        "SC",
+        "SD",
+        "SE",
+        "SG",
+        "SH",
+        "SI",
+        "SK",
+        "TH",
+        "TR",
+        "TW",
+        "TZ",
+        "UA",
+        "US",
+        "VA",
+        "VE",
+        "VG",
+        "ZA",
+        "ZM"
+      ],
+      "type": "string"
+    },
+    "Measure_GenCntryEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
+      "title": "Measure[GenCntryEnum, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "$ref": "#/definitions/GenCntryEnum"
+        },
+        "ATTRS": {
+          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "Measure_Str32ID__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
+      "title": "Measure[Str32ID, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "title": "Value",
+          "maxLength": 32,
+          "type": "string"
+        },
+        "ATTRS": {
+          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "Measure_Str20ID__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
+      "title": "Measure[Str20ID, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "title": "Value",
+          "maxLength": 20,
+          "type": "string"
+        },
+        "ATTRS": {
+          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "Measure_Str31ID__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
+      "title": "Measure[Str31ID, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "title": "Value",
+          "maxLength": 31,
+          "type": "string"
+        },
+        "ATTRS": {
+          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "Measure_ID__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
+      "title": "Measure[ID, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "title": "Value",
+          "maxLength": 32,
+          "type": "string"
+        },
+        "ATTRS": {
+          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "FundSeries": {
+      "title": "FundSeries",
+      "type": "object",
+      "properties": {
+        "DIMS": {
+          "$ref": "#/definitions/BaseDimensionContainer"
+        },
+        "DT_BRTH": {
+          "$ref": "#/definitions/Measure_date__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "DT_CLS": {
+          "$ref": "#/definitions/Measure_date__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "CNTRY_BRTH": {
+          "$ref": "#/definitions/Measure_GenCntryEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "ESCB_ID": {
+          "$ref": "#/definitions/Measure_Str32ID__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "LEI_ID": {
+          "$ref": "#/definitions/Measure_Str20ID__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "TAX_ID": {
+          "$ref": "#/definitions/Measure_Str31ID__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "NBR_ID": {
+          "$ref": "#/definitions/Measure_Str31ID__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "SPLT_FRM": {
+          "$ref": "#/definitions/Measure_ID__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "MRGD_WTH": {
+          "$ref": "#/definitions/Measure_ID__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        }
+      },
+      "required": [
+        "DIMS"
+      ]
+    },
+    "StaticDimensionContainer": {
+      "title": "StaticDimensionContainer",
+      "type": "object",
+      "properties": {
+        "ID": {
+          "title": "Id",
+          "maxLength": 32,
+          "type": "string"
+        },
+        "VLD_FRM": {
+          "title": "Vld Frm",
+          "type": "string",
+          "format": "date"
+        },
+        "VLD_T": {
+          "title": "Vld T",
+          "type": "string",
+          "format": "date"
+        }
+      },
+      "required": [
+        "ID"
+      ]
+    },
+    "Measure_Str128__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
+      "title": "Measure[Str128, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "title": "Value",
+          "maxLength": 128,
+          "type": "string"
+        },
+        "ATTRS": {
+          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "Measure_LatinStr128__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
+      "title": "Measure[LatinStr128, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "title": "Value",
+          "maxLength": 128,
+          "type": "string"
+        },
+        "ATTRS": {
+          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "Measure_Str64__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
+      "title": "Measure[Str64, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "title": "Value",
+          "maxLength": 64,
+          "type": "string"
+        },
+        "ATTRS": {
+          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "Measure_LatinStr64__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
+      "title": "Measure[LatinStr64, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "title": "Value",
+          "maxLength": 64,
+          "type": "string"
+        },
+        "ATTRS": {
+          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "Measure_Str32__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
+      "title": "Measure[Str32, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "title": "Value",
+          "maxLength": 32,
+          "type": "string"
+        },
+        "ATTRS": {
+          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "Measure_LatinStr32__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
+      "title": "Measure[LatinStr32, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "title": "Value",
+          "maxLength": 32,
+          "type": "string"
+        },
+        "ATTRS": {
+          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "Measure_Str16__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
+      "title": "Measure[Str16, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "title": "Value",
+          "maxLength": 16,
+          "type": "string"
+        },
+        "ATTRS": {
+          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "Measure_Str8__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
+      "title": "Measure[Str8, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "title": "Value",
+          "maxLength": 8,
+          "type": "string"
+        },
+        "ATTRS": {
+          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "Measure_AnyUrl__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
+      "title": "Measure[AnyUrl, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "title": "Value",
+          "minLength": 1,
+          "maxLength": 65536,
+          "format": "uri",
+          "type": "string"
+        },
+        "ATTRS": {
+          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "Measure_EmailStr__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
+      "title": "Measure[EmailStr, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "title": "Value",
+          "type": "string",
+          "format": "email"
+        },
+        "ATTRS": {
+          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "Measure_bool__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
+      "title": "Measure[bool, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "title": "Value",
+          "type": "boolean"
+        },
+        "ATTRS": {
+          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "OrgLglPrcdngSttsEnum": {
+      "title": "OrgLglPrcdngSttsEnum",
+      "description": "An enumeration.",
+      "enum": [
+        "-",
+        "0",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "type": "string"
+    },
+    "Measure_OrgLglPrcdngSttsEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
+      "title": "Measure[OrgLglPrcdngSttsEnum, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "$ref": "#/definitions/OrgLglPrcdngSttsEnum"
+        },
+        "ATTRS": {
+          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "GenCrrncyEnum": {
+      "title": "GenCrrncyEnum",
+      "description": "An enumeration.",
+      "enum": [
+        "ARS",
+        "AUD",
+        "BGN",
+        "BRL",
+        "CAD",
+        "CHF",
+        "CLP",
+        "CNY",
+        "COP",
+        "CZK",
+        "DKK",
+        "EGP",
+        "EUR",
+        "GBP",
+        "HKD",
+        "HRK",
+        "HUF",
+        "IDR",
+        "ILS",
+        "INR",
+        "JPY",
+        "KRW",
+        "KZT",
+        "MXN",
+        "NOK",
+        "PEN",
+        "PGK",
+        "PHP",
+        "PLN",
+        "RON",
+        "RSD",
+        "RUB",
+        "SEK",
+        "SGD",
+        "THB",
+        "TRY",
+        "TWD",
+        "UAH",
+        "USD",
+        "ZAR",
+        "GRD"
+      ],
+      "type": "string"
+    },
+    "Measure_GenCrrncyEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
+      "title": "Measure[GenCrrncyEnum, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "$ref": "#/definitions/GenCrrncyEnum"
+        },
+        "ATTRS": {
+          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "OrgInstttnlSctrCntrlEnum": {
+      "title": "OrgInstttnlSctrCntrlEnum",
+      "description": "An enumeration.",
+      "enum": [
+        "-",
+        "0",
+        "1",
+        "2",
+        "3",
+        "-4"
+      ],
+      "type": "string"
+    },
+    "Measure_OrgInstttnlSctrCntrlEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
+      "title": "Measure[OrgInstttnlSctrCntrlEnum, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "$ref": "#/definitions/OrgInstttnlSctrCntrlEnum"
+        },
+        "ATTRS": {
+          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "OrgSzEnum": {
+      "title": "OrgSzEnum",
+      "description": "An enumeration.",
+      "enum": [
+        "-",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "type": "string"
+    },
+    "Measure_OrgSzEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
+      "title": "Measure[OrgSzEnum, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "$ref": "#/definitions/OrgSzEnum"
+        },
+        "ATTRS": {
+          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "OrgLglFrmEnum": {
+      "title": "OrgLglFrmEnum",
+      "description": "An enumeration.",
+      "enum": [
+        "-",
+        "AT102",
+        "AT103",
+        "AT201",
+        "AT202",
+        "AT401",
+        "AT501",
+        "AT601",
+        "AT603",
+        "AT604",
+        "AT605",
+        "AT607",
+        "AT609",
+        "AT610",
+        "AT611",
+        "AT612",
+        "AT613",
+        "BE000",
+        "BE002",
+        "BE003",
+        "BE006",
+        "BE008",
+        "BE011",
+        "BE012",
+        "BE013",
+        "BE014",
+        "BE015",
+        "BE017",
+        "BE019",
+        "BE020",
+        "BE021",
+        "BE023",
+        "BE025",
+        "BE026",
+        "BE028",
+        "BE029",
+        "BE030",
+        "BE051",
+        "BE060",
+        "BE070",
+        "BE107",
+        "BE108",
+        "BE114",
+        "BE117",
+        "BE121",
+        "BE124",
+        "BE125",
+        "BE127",
+        "BE129",
+        "BE151",
+        "BE160",
+        "BE200",
+        "BE206",
+        "BE208",
+        "BE211",
+        "BE212",
+        "BE213",
+        "BE214",
+        "BE215",
+        "BE217",
+        "BE218",
+        "BE225",
+        "BE301",
+        "BE302",
+        "BE303",
+        "BE310",
+        "BE320",
+        "BE325",
+        "BE330",
+        "BE340",
+        "BE350",
+        "BE400",
+        "BE411",
+        "BE412",
+        "BE413",
+        "BE414",
+        "BE415",
+        "BE416",
+        "BE417",
+        "BE418",
+        "BE419",
+        "BE420",
+        "BE422",
+        "BE506",
+        "BE508",
+        "BE511",
+        "BE512",
+        "BE513",
+        "BE514",
+        "BE515",
+        "BE560",
+        "BE610",
+        "BE612",
+        "BE616",
+        "BE617",
+        "BE651",
+        "BE702",
+        "BE706",
+        "BE716",
+        "BE721",
+        "BG101",
+        "BG102",
+        "BG103",
+        "BG104",
+        "BG105",
+        "BG106",
+        "BG107",
+        "BG1539",
+        "BG462",
+        "BG466",
+        "BG472",
+        "CY102",
+        "CY103",
+        "CY109",
+        "CY111",
+        "CY112",
+        "CY113",
+        "CY114",
+        "CY115",
+        "CY116",
+        "CY117",
+        "CZ100",
+        "CZ111",
+        "CZ112",
+        "CZ113",
+        "CZ115",
+        "CZ116",
+        "CZ117",
+        "CZ118",
+        "CZ121",
+        "CZ141",
+        "CZ145",
+        "CZ151",
+        "CZ152",
+        "CZ161",
+        "CZ205",
+        "CZ301",
+        "CZ313",
+        "CZ325",
+        "CZ326",
+        "CZ331",
+        "CZ352",
+        "CZ353",
+        "CZ361",
+        "CZ381",
+        "CZ391",
+        "CZ421",
+        "CZ422",
+        "CZ424",
+        "CZ521",
+        "CZ541",
+        "CZ601",
+        "CZ641",
+        "CZ661",
+        "CZ703",
+        "CZ704",
+        "CZ705",
+        "CZ706",
+        "CZ707",
+        "CZ708",
+        "CZ711",
+        "CZ715",
+        "CZ721",
+        "CZ722",
+        "CZ723",
+        "CZ731",
+        "CZ732",
+        "CZ733",
+        "CZ734",
+        "CZ736",
+        "CZ741",
+        "CZ745",
+        "CZ751",
+        "CZ761",
+        "CZ771",
+        "CZ801",
+        "CZ804",
+        "CZ805",
+        "CZ901",
+        "CZ906",
+        "CZ907",
+        "CZ908",
+        "CZ911",
+        "CZ921",
+        "CZ922",
+        "CZ936",
+        "CZ937",
+        "CZ938",
+        "CZ950",
+        "CZ960",
+        "CZ961",
+        "CZ962",
+        "DE101",
+        "DE102",
+        "DE103",
+        "DE104",
+        "DE105",
+        "DE108",
+        "DE109",
+        "DE110",
+        "DE201",
+        "DE202",
+        "DE205",
+        "DE206",
+        "DE207",
+        "DE209",
+        "DE210",
+        "DE211",
+        "DE301",
+        "DE401",
+        "DE501",
+        "DE502",
+        "DE503",
+        "DE504",
+        "DE505",
+        "DE507",
+        "DE601",
+        "DE602",
+        "DE603",
+        "DE604",
+        "DE605",
+        "DE606",
+        "DE701",
+        "DK100",
+        "DK110",
+        "DK115",
+        "DK130",
+        "DK140",
+        "DK150",
+        "DK151",
+        "DK152",
+        "DK20",
+        "DK230",
+        "DK235",
+        "DK240",
+        "DK245",
+        "DK250",
+        "DK260",
+        "DK280",
+        "DK285",
+        "DK30",
+        "DK40",
+        "DK45",
+        "DK50",
+        "DK60",
+        "DK70",
+        "DK80",
+        "DK81",
+        "DK90",
+        "EE101",
+        "EE102",
+        "EE201",
+        "EE202",
+        "EE203",
+        "EE204",
+        "EE205",
+        "EE206",
+        "EE207",
+        "ESC04",
+        "ESC05",
+        "ESC06",
+        "ESC07",
+        "ESC08",
+        "ESC09",
+        "ESC10",
+        "ESC11",
+        "ESC12",
+        "ESC13",
+        "ESC14",
+        "ESC16",
+        "ESC17",
+        "ESC19",
+        "ESC20",
+        "ESC21",
+        "ESC25",
+        "ESC30",
+        "ESC31",
+        "ESC32",
+        "ESC33",
+        "ESC34",
+        "EU100",
+        "EU200",
+        "EU300",
+        "EU400",
+        "FBRANCH",
+        "FI10",
+        "FI11",
+        "FI12",
+        "FI13",
+        "FI14",
+        "FI16",
+        "FI17",
+        "FI19",
+        "FI20",
+        "FI21",
+        "FI22",
+        "FI23",
+        "FI24",
+        "FI25",
+        "FI26",
+        "FI27",
+        "FI28",
+        "FI29",
+        "FI30",
+        "FI31",
+        "FI32",
+        "FI33",
+        "FI35",
+        "FI39",
+        "FI40",
+        "FI41",
+        "FI42",
+        "FI43",
+        "FI44",
+        "FI45",
+        "FI46",
+        "FI47",
+        "FI48",
+        "FI49",
+        "FI50",
+        "FI51",
+        "FI52",
+        "FI54",
+        "FI55",
+        "FI57",
+        "FI59",
+        "FI60",
+        "FI61",
+        "FI62",
+        "FI63",
+        "FI99",
+        "FR001",
+        "FR002",
+        "FR003",
+        "FR004",
+        "FR005",
+        "FR006",
+        "FR007",
+        "FR008",
+        "FR009",
+        "FR010",
+        "FR011",
+        "FR0110",
+        "FR012",
+        "FR0120",
+        "FR013",
+        "FR014",
+        "FR015",
+        "FR016",
+        "FR017",
+        "FR018",
+        "FR019",
+        "FR020",
+        "FR021",
+        "FR022",
+        "FR024",
+        "FR025",
+        "FR026",
+        "FR027",
+        "FR028",
+        "FR029",
+        "FR030",
+        "FR031",
+        "FR032",
+        "FR033",
+        "FR034",
+        "FR035",
+        "FR036",
+        "FR037",
+        "FR038",
+        "FR039",
+        "FR040",
+        "FR041",
+        "FR042",
+        "FR043",
+        "FR044",
+        "FR045",
+        "FR046",
+        "FR047",
+        "FR048",
+        "FR049",
+        "FR050",
+        "FR051",
+        "FR052",
+        "FR053",
+        "FR054",
+        "FR055",
+        "FR056",
+        "FR057",
+        "FR058",
+        "FR059",
+        "FR060",
+        "FR061",
+        "FR062",
+        "FR063",
+        "FR064",
+        "FR065",
+        "FR066",
+        "FR1100",
+        "FR1200",
+        "FR1300",
+        "FR1400",
+        "FR1500",
+        "FR1600",
+        "FR1700",
+        "FR1800",
+        "FR2110",
+        "FR2120",
+        "FR2210",
+        "FR2220",
+        "FR2310",
+        "FR2320",
+        "FR2385",
+        "FR2400",
+        "FR2700",
+        "FR2900",
+        "FR3110",
+        "FR3120",
+        "FR3205",
+        "FR3210",
+        "FR3220",
+        "FR3290",
+        "FR4110",
+        "FR4120",
+        "FR4130",
+        "FR4140",
+        "FR4150",
+        "FR4160",
+        "FR5191",
+        "FR5192",
+        "FR5193",
+        "FR5194",
+        "FR5195",
+        "FR5196",
+        "FR5202",
+        "FR5203",
+        "FR5306",
+        "FR5307",
+        "FR5308",
+        "FR5309",
+        "FR5370",
+        "FR5385",
+        "FR5410",
+        "FR5415",
+        "FR5422",
+        "FR5426",
+        "FR5430",
+        "FR5431",
+        "FR5432",
+        "FR5442",
+        "FR5443",
+        "FR5451",
+        "FR5453",
+        "FR5454",
+        "FR5455",
+        "FR5458",
+        "FR5459",
+        "FR5460",
+        "FR5470",
+        "FR5485",
+        "FR5498",
+        "FR5499",
+        "FR5505",
+        "FR5510",
+        "FR5515",
+        "FR5520",
+        "FR5522",
+        "FR5525",
+        "FR5530",
+        "FR5531",
+        "FR5532",
+        "FR5542",
+        "FR5543",
+        "FR5546",
+        "FR5547",
+        "FR5548",
+        "FR5551",
+        "FR5552",
+        "FR5553",
+        "FR5554",
+        "FR5555",
+        "FR5558",
+        "FR5559",
+        "FR5560",
+        "FR5570",
+        "FR5585",
+        "FR5599",
+        "FR5605",
+        "FR5610",
+        "FR5615",
+        "FR5620",
+        "FR5622",
+        "FR5625",
+        "FR5630",
+        "FR5631",
+        "FR5632",
+        "FR5642",
+        "FR5643",
+        "FR5646",
+        "FR5647",
+        "FR5648",
+        "FR5651",
+        "FR5652",
+        "FR5653",
+        "FR5654",
+        "FR5655",
+        "FR5658",
+        "FR5659",
+        "FR5660",
+        "FR5670",
+        "FR5685",
+        "FR5699",
+        "FR5710",
+        "FR5720",
+        "FR5770",
+        "FR5785",
+        "FR6100",
+        "FR6220",
+        "FR6316",
+        "FR6317",
+        "FR6318",
+        "FR6411",
+        "FR6511",
+        "FR6521",
+        "FR6532",
+        "FR6533",
+        "FR6534",
+        "FR6535",
+        "FR6536",
+        "FR6537",
+        "FR6538",
+        "FR6539",
+        "FR6540",
+        "FR6541",
+        "FR6542",
+        "FR6543",
+        "FR6544",
+        "FR6551",
+        "FR6554",
+        "FR6558",
+        "FR6560",
+        "FR6561",
+        "FR6562",
+        "FR6563",
+        "FR6564",
+        "FR6565",
+        "FR6566",
+        "FR6567",
+        "FR6568",
+        "FR6569",
+        "FR6571",
+        "FR6572",
+        "FR6573",
+        "FR6574",
+        "FR6575",
+        "FR6576",
+        "FR6577",
+        "FR6578",
+        "FR6585",
+        "FR6588",
+        "FR6589",
+        "FR6595",
+        "FR6596",
+        "FR6597",
+        "FR6598",
+        "FR6599",
+        "FR6901",
+        "FR7111",
+        "FR7112",
+        "FR7113",
+        "FR7120",
+        "FR7150",
+        "FR7160",
+        "FR7171",
+        "FR7172",
+        "FR7179",
+        "FR7190",
+        "FR7210",
+        "FR7220",
+        "FR7225",
+        "FR7229",
+        "FR7230",
+        "FR7312",
+        "FR7313",
+        "FR7314",
+        "FR7321",
+        "FR7322",
+        "FR7323",
+        "FR7331",
+        "FR7340",
+        "FR7341",
+        "FR7342",
+        "FR7343",
+        "FR7344",
+        "FR7345",
+        "FR7346",
+        "FR7347",
+        "FR7348",
+        "FR7349",
+        "FR7351",
+        "FR7352",
+        "FR7353",
+        "FR7354",
+        "FR7355",
+        "FR7356",
+        "FR7357",
+        "FR7361",
+        "FR7362",
+        "FR7363",
+        "FR7364",
+        "FR7365",
+        "FR7366",
+        "FR7367",
+        "FR7371",
+        "FR7372",
+        "FR7373",
+        "FR7378",
+        "FR7379",
+        "FR7381",
+        "FR7382",
+        "FR7383",
+        "FR7384",
+        "FR7385",
+        "FR7389",
+        "FR7410",
+        "FR7430",
+        "FR7450",
+        "FR7470",
+        "FR7490",
+        "FR8110",
+        "FR8120",
+        "FR8130",
+        "FR8140",
+        "FR8150",
+        "FR8160",
+        "FR8170",
+        "FR8190",
+        "FR8210",
+        "FR8250",
+        "FR8290",
+        "FR8310",
+        "FR8311",
+        "FR8410",
+        "FR8420",
+        "FR8450",
+        "FR8470",
+        "FR8490",
+        "FR8510",
+        "FR8520",
+        "FR9110",
+        "FR9150",
+        "FR9210",
+        "FR9220",
+        "FR9221",
+        "FR9222",
+        "FR9223",
+        "FR9224",
+        "FR9230",
+        "FR9240",
+        "FR9260",
+        "FR9300",
+        "FR9900",
+        "FR9970",
+        "GB100",
+        "GB200",
+        "GB300",
+        "GB400",
+        "GB500",
+        "GB600",
+        "GR901",
+        "GR902",
+        "GR903",
+        "GR904",
+        "GR905",
+        "GR906",
+        "GR907",
+        "GR908",
+        "GR909",
+        "GR910",
+        "GR911",
+        "GR912",
+        "GR913",
+        "GR999",
+        "HR01",
+        "HR02",
+        "HR03",
+        "HR04",
+        "HR05",
+        "HR06",
+        "HR07",
+        "HR08",
+        "HR09",
+        "HR10",
+        "HR13",
+        "HR14",
+        "HR15",
+        "HR16",
+        "HR17",
+        "HR18",
+        "HR19",
+        "HR20",
+        "HR21",
+        "HR22",
+        "HR23",
+        "HR25",
+        "HR26",
+        "HR27",
+        "HR28",
+        "HR29",
+        "HR30",
+        "HR31",
+        "HR32",
+        "HR34",
+        "HR35",
+        "HR37",
+        "HR38",
+        "HR39",
+        "HR40",
+        "HR42",
+        "HR44",
+        "HR45",
+        "HR47",
+        "HR48",
+        "HR49",
+        "HR51",
+        "HR52",
+        "HR53",
+        "HR55",
+        "HR57",
+        "HR58",
+        "HR59",
+        "HR60",
+        "HR61",
+        "HR62",
+        "HU113",
+        "HU114",
+        "HU116",
+        "HU117",
+        "HU122",
+        "HU129",
+        "HU226",
+        "HU524",
+        "HU529",
+        "HU581",
+        "HU582",
+        "HU611",
+        "HU736",
+        "HU915",
+        "HU916",
+        "HU999",
+        "IE01",
+        "IE02",
+        "IE03",
+        "IE04",
+        "IE05",
+        "IE06",
+        "IE07",
+        "IE08",
+        "IE11",
+        "IE12",
+        "IE13",
+        "IE14",
+        "IE15",
+        "IE16",
+        "IT101",
+        "IT201",
+        "IT301",
+        "IT401",
+        "IT402",
+        "IT501",
+        "IT601",
+        "IT701",
+        "IT702",
+        "IT703",
+        "IT999",
+        "LT101",
+        "LT102",
+        "LT103",
+        "LT104",
+        "LT105",
+        "LT106",
+        "LT107",
+        "LT108",
+        "LT109",
+        "LT110",
+        "LT111",
+        "LT201",
+        "LT202",
+        "LT203",
+        "LT204",
+        "LT205",
+        "LT206",
+        "LT207",
+        "LT208",
+        "LT209",
+        "LT210",
+        "LT211",
+        "LT212",
+        "LT213",
+        "LT214",
+        "LT215",
+        "LT216",
+        "LT301",
+        "LU01",
+        "LU02",
+        "LU03",
+        "LU04",
+        "LU05",
+        "LU06",
+        "LU07",
+        "LU08",
+        "LU09",
+        "LU10",
+        "LU11",
+        "LU12",
+        "LU13",
+        "LU14",
+        "LU15",
+        "LU16",
+        "LU17",
+        "LU18",
+        "LU19",
+        "LU20",
+        "LU21",
+        "LU22",
+        "LU23",
+        "LU24",
+        "LU26",
+        "LU27",
+        "LU32",
+        "LU33",
+        "LU34",
+        "LV101",
+        "LV103",
+        "LV104",
+        "LV105",
+        "LV106",
+        "LV107",
+        "LV108",
+        "LV109",
+        "LV110",
+        "LV111",
+        "LV301",
+        "LV302",
+        "LV303",
+        "LV401",
+        "LV402",
+        "LV403",
+        "LV404",
+        "LV405",
+        "LV406",
+        "LV701",
+        "LV801",
+        "LV802",
+        "LV901",
+        "LV903",
+        "MT010",
+        "MT020",
+        "MT021",
+        "MT030",
+        "MT031",
+        "MT033",
+        "MT040",
+        "MT050",
+        "MT060",
+        "MT070",
+        "MT080",
+        "NL101",
+        "NL102",
+        "NL11",
+        "NL201",
+        "NL202",
+        "NL203",
+        "NL204",
+        "NL205",
+        "NL206",
+        "NL207",
+        "NL301",
+        "NL302",
+        "NL303",
+        "NL304",
+        "NL401",
+        "NL402",
+        "NL501",
+        "NL7",
+        "NL9",
+        "NL901",
+        "PLA019",
+        "PLA044",
+        "PLA070",
+        "PLA085",
+        "PLA099",
+        "PLA115",
+        "PLA116",
+        "PLA117",
+        "PLA118",
+        "PLA120",
+        "PLA121",
+        "PLA124",
+        "PLA126",
+        "PLA132",
+        "PLA134",
+        "PLA140",
+        "PLA146",
+        "PLA148",
+        "PLA177",
+        "PLA180",
+        "PLA403",
+        "PLA409",
+        "PLA428",
+        "PLB050",
+        "PLB055",
+        "PLB060",
+        "PLB133",
+        "PLB137",
+        "PLB138",
+        "PLB141",
+        "PLB147",
+        "PLB381",
+        "PLB401",
+        "PLB429",
+        "PLC049",
+        "PLD049",
+        "PLE049",
+        "PT111",
+        "PT121",
+        "PT122",
+        "PT131",
+        "PT141",
+        "PT151",
+        "PT171",
+        "PT181",
+        "PT182",
+        "PT211",
+        "PT221",
+        "PT231",
+        "PT311",
+        "PT312",
+        "PT321",
+        "PT331",
+        "PT411",
+        "PT711",
+        "PT901",
+        "RO101",
+        "RO102",
+        "RO103",
+        "RO104",
+        "RO105",
+        "RO107",
+        "RO108",
+        "RO110",
+        "RO111",
+        "RO114",
+        "RO115",
+        "RO116",
+        "RO117",
+        "RO120",
+        "RO121",
+        "RO122",
+        "RW100",
+        "RW200",
+        "RW300",
+        "RW400",
+        "RW500",
+        "RW600",
+        "SE21",
+        "SE22",
+        "SE31",
+        "SE41",
+        "SE42",
+        "SE49",
+        "SE51",
+        "SE53",
+        "SE54",
+        "SE61",
+        "SE62",
+        "SE63",
+        "SE71",
+        "SE72",
+        "SE81",
+        "SE82",
+        "SE83",
+        "SE84",
+        "SE87",
+        "SE88",
+        "SE91",
+        "SE92",
+        "SE93",
+        "SE94",
+        "SE95",
+        "SE98",
+        "SI101",
+        "SI102",
+        "SI103",
+        "SI104",
+        "SI105",
+        "SI108",
+        "SI112",
+        "SI113",
+        "SI201",
+        "SI210",
+        "SI211",
+        "SI213",
+        "SI300",
+        "SI301",
+        "SI302",
+        "SI303",
+        "SI304",
+        "SI305",
+        "SI306",
+        "SI307",
+        "SI308",
+        "SI309",
+        "SI310",
+        "SI311",
+        "SI313",
+        "SI315",
+        "SI316",
+        "SI318",
+        "SI319",
+        "SI321",
+        "SI322",
+        "SI352",
+        "SI354",
+        "SI355",
+        "SI357",
+        "SI358",
+        "SI359",
+        "SI360",
+        "SI361",
+        "SI362",
+        "SI401",
+        "SI402",
+        "SI403",
+        "SI404",
+        "SI405",
+        "SI406",
+        "SI407",
+        "SI451",
+        "SI452",
+        "SI453",
+        "SI458",
+        "SI703",
+        "SI708",
+        "SI713",
+        "SI715",
+        "SI719",
+        "SI799",
+        "SI804",
+        "SI899",
+        "SK111",
+        "SK112",
+        "SK113",
+        "SK117",
+        "SK118",
+        "SK119",
+        "SK120",
+        "SK121",
+        "SK125",
+        "SK205",
+        "SK271",
+        "SK301",
+        "SK311",
+        "SK312",
+        "SK321",
+        "SK331",
+        "SK333",
+        "SK381",
+        "SK382",
+        "SK383",
+        "SK421",
+        "SK434",
+        "SK445",
+        "SK701",
+        "SK711",
+        "SK721",
+        "SK741",
+        "SK745",
+        "SK751",
+        "SK801",
+        "SK803",
+        "SK901",
+        "SK911",
+        "SK921",
+        "SK931",
+        "SPFUND"
+      ],
+      "type": "string"
+    },
+    "Measure_OrgLglFrmEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
+      "title": "Measure[OrgLglFrmEnum, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "$ref": "#/definitions/OrgLglFrmEnum"
+        },
+        "ATTRS": {
+          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "OrgSprvsnTypEnum": {
+      "title": "OrgSprvsnTypEnum",
+      "description": "An enumeration.",
+      "enum": [
+        "-",
+        "1",
+        "2"
+      ],
+      "type": "string"
+    },
+    "Measure_OrgSprvsnTypEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
+      "title": "Measure[OrgSprvsnTypEnum, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "$ref": "#/definitions/OrgSprvsnTypEnum"
+        },
+        "ATTRS": {
+          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "FndTypEnum": {
+      "title": "FndTypEnum",
+      "description": "An enumeration.",
+      "enum": [
+        "-",
+        "UCITS",
+        "AIF",
+        "REIT",
+        "OTHER"
+      ],
+      "type": "string"
+    },
+    "Measure_FndTypEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
+      "title": "Measure[FndTypEnum, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "$ref": "#/definitions/FndTypEnum"
+        },
+        "ATTRS": {
+          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "FndInvstmntPlcyEnum": {
+      "title": "FndInvstmntPlcyEnum",
+      "description": "An enumeration.",
+      "enum": [
+        "-",
+        "MMF",
+        "EQT",
+        "BON",
+        "MIX",
+        "RES",
+        "HED",
+        "LOA",
+        "COM",
+        "INF",
+        "OTH"
+      ],
+      "type": "string"
+    },
+    "Measure_FndInvstmntPlcyEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
+      "title": "Measure[FndInvstmntPlcyEnum, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "$ref": "#/definitions/FndInvstmntPlcyEnum"
+        },
+        "ATTRS": {
+          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "FndSbtypEnum": {
+      "title": "FndSbtypEnum",
+      "description": "An enumeration.",
+      "enum": [
+        "-",
+        "OPEN",
+        "CLOSE"
+      ],
+      "type": "string"
+    },
+    "Measure_FndSbtypEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
+      "title": "Measure[FndSbtypEnum, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "$ref": "#/definitions/FndSbtypEnum"
+        },
+        "ATTRS": {
+          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "FndDstrbtnTypEnum": {
+      "title": "FndDstrbtnTypEnum",
+      "description": "An enumeration.",
+      "enum": [
+        "-",
+        "DIS",
+        "CUM",
+        "MIX"
+      ],
+      "type": "string"
+    },
+    "Measure_FndDstrbtnTypEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
+      "title": "Measure[FndDstrbtnTypEnum, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "$ref": "#/definitions/FndDstrbtnTypEnum"
+        },
+        "ATTRS": {
+          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "FndInvstrTypEnum": {
+      "title": "FndInvstrTypEnum",
+      "description": "An enumeration.",
+      "enum": [
+        "-",
+        "PRF",
+        "RTL",
+        "ART",
+        "OTH"
+      ],
+      "type": "string"
+    },
+    "Measure_FndInvstrTypEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
+      "title": "Measure[FndInvstrTypEnum, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "$ref": "#/definitions/FndInvstrTypEnum"
+        },
+        "ATTRS": {
+          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "FndGrnTypEnum": {
+      "title": "FndGrnTypEnum",
+      "description": "An enumeration.",
+      "enum": [
+        "-",
+        "LIGHT",
+        "DARK"
+      ],
+      "type": "string"
+    },
+    "Measure_FndGrnTypEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
+      "title": "Measure[FndGrnTypEnum, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "$ref": "#/definitions/FndGrnTypEnum"
+        },
+        "ATTRS": {
+          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "FndStrtgyEnum": {
+      "title": "FndStrtgyEnum",
+      "description": "An enumeration.",
+      "enum": [
+        "-",
+        "ACTIVE",
+        "SYNPAS",
+        "SYNPHY"
+      ],
+      "type": "string"
+    },
+    "Measure_FndStrtgyEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
+      "title": "Measure[FndStrtgyEnum, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "$ref": "#/definitions/FndStrtgyEnum"
+        },
+        "ATTRS": {
+          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "FndGgrphclFcsEnum": {
+      "title": "FndGgrphclFcsEnum",
+      "description": "An enumeration.",
+      "enum": [
+        "-",
+        "DOM",
+        "EEA",
+        "OEA",
+        "NAM",
+        "SAM",
+        "ASP",
+        "MEA",
+        "AFR",
+        "OTH"
+      ],
+      "type": "string"
+    },
+    "Measure_FndGgrphclFcsEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
+      "title": "Measure[FndGgrphclFcsEnum, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "$ref": "#/definitions/FndGgrphclFcsEnum"
+        },
+        "ATTRS": {
+          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "FndBndFcsEnum": {
+      "title": "FndBndFcsEnum",
+      "description": "An enumeration.",
+      "enum": [
+        "-",
+        "GOV",
+        "COR",
+        "MIX"
+      ],
+      "type": "string"
+    },
+    "Measure_FndBndFcsEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
+      "title": "Measure[FndBndFcsEnum, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "$ref": "#/definitions/FndBndFcsEnum"
+        },
+        "ATTRS": {
+          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "FndBndGrdEnum": {
+      "title": "FndBndGrdEnum",
+      "description": "An enumeration.",
+      "enum": [
+        "-",
+        "INV",
+        "NIN",
+        "MIX"
+      ],
+      "type": "string"
+    },
+    "Measure_FndBndGrdEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
+      "title": "Measure[FndBndGrdEnum, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "$ref": "#/definitions/FndBndGrdEnum"
+        },
+        "ATTRS": {
+          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "FndRlEsttTypEnum": {
+      "title": "FndRlEsttTypEnum",
+      "description": "An enumeration.",
+      "enum": [
+        "-",
+        "RES",
+        "COM",
+        "IND",
+        "MUL",
+        "OTH"
+      ],
+      "type": "string"
+    },
+    "Measure_FndRlEsttTypEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
+      "title": "Measure[FndRlEsttTypEnum, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "$ref": "#/definitions/FndRlEsttTypEnum"
+        },
+        "ATTRS": {
+          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "StaticFundSeries": {
+      "title": "StaticFundSeries",
+      "type": "object",
+      "properties": {
+        "DIMS": {
+          "$ref": "#/definitions/StaticDimensionContainer"
+        },
+        "NM": {
+          "$ref": "#/definitions/Measure_Str128__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "NM_LTN": {
+          "$ref": "#/definitions/Measure_LatinStr128__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "NM_SHRT": {
+          "$ref": "#/definitions/Measure_Str64__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "STRT": {
+          "$ref": "#/definitions/Measure_Str64__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "STRT_LTN": {
+          "$ref": "#/definitions/Measure_LatinStr64__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "CTY": {
+          "$ref": "#/definitions/Measure_Str32__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "CTY_LTN": {
+          "$ref": "#/definitions/Measure_LatinStr32__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "PSTL_CD": {
+          "$ref": "#/definitions/Measure_Str16__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "PSTL_BX": {
+          "$ref": "#/definitions/Measure_Str8__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "URL": {
+          "$ref": "#/definitions/Measure_AnyUrl__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "EMAIL": {
+          "$ref": "#/definitions/Measure_EmailStr__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "CNTRY_RSDNC": {
+          "$ref": "#/definitions/Measure_GenCntryEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "IS_LSTD": {
+          "$ref": "#/definitions/Measure_bool__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "IS_INVSTMNT_GRDD": {
+          "$ref": "#/definitions/Measure_bool__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "IS_INCTV": {
+          "$ref": "#/definitions/Measure_bool__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "IS_UNDR_LQDTN": {
+          "$ref": "#/definitions/Measure_bool__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "LGL_PRCDNG_STTS": {
+          "$ref": "#/definitions/Measure_OrgLglPrcdngSttsEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "ACCNTS_CRRNCY": {
+          "$ref": "#/definitions/Measure_GenCrrncyEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "INSTTTNL_SCTR_CNTRL": {
+          "$ref": "#/definitions/Measure_OrgInstttnlSctrCntrlEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "SZ": {
+          "$ref": "#/definitions/Measure_OrgSzEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "LGL_FRM": {
+          "$ref": "#/definitions/Measure_OrgLglFrmEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "TYP_SPRVSN": {
+          "$ref": "#/definitions/Measure_OrgSprvsnTypEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "MNGD_BY": {
+          "$ref": "#/definitions/Measure_ID__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "RPRTD_BY": {
+          "$ref": "#/definitions/Measure_ID__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "UNDR_UMBRLL_BY": {
+          "$ref": "#/definitions/Measure_ID__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "TYP": {
+          "$ref": "#/definitions/Measure_FndTypEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "INVSTMNT_PLCY": {
+          "$ref": "#/definitions/Measure_FndInvstmntPlcyEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "SBTYP": {
+          "$ref": "#/definitions/Measure_FndSbtypEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "DSTRBTN_TYP": {
+          "$ref": "#/definitions/Measure_FndDstrbtnTypEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "INVSTR_TYP": {
+          "$ref": "#/definitions/Measure_FndInvstrTypEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "GRN_TYP": {
+          "$ref": "#/definitions/Measure_FndGrnTypEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "STRTGY": {
+          "$ref": "#/definitions/Measure_FndStrtgyEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "GGRPHCL_FCS": {
+          "$ref": "#/definitions/Measure_FndGgrphclFcsEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "BND_FCS": {
+          "$ref": "#/definitions/Measure_FndBndFcsEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "BND_GRD": {
+          "$ref": "#/definitions/Measure_FndBndGrdEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "RL_ESTT_TYP": {
+          "$ref": "#/definitions/Measure_FndRlEsttTypEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "IS_FOF": {
+          "$ref": "#/definitions/Measure_bool__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "IS_ETF": {
+          "$ref": "#/definitions/Measure_bool__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "IS_PEF": {
+          "$ref": "#/definitions/Measure_bool__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        }
+      },
+      "required": [
+        "DIMS"
+      ]
+    },
+    "Measure_Str12ID__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
+      "title": "Measure[Str12ID, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "title": "Value",
+          "maxLength": 12,
+          "type": "string"
+        },
+        "ATTRS": {
+          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "Measure_NonNegativeFloat__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
+      "title": "Measure[NonNegativeFloat, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "title": "Value",
+          "minimum": 0,
+          "type": "number"
+        },
+        "ATTRS": {
+          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "GenMrktEnum": {
+      "title": "GenMrktEnum",
+      "description": "An enumeration.",
+      "enum": [
+        "-",
+        "3579",
+        "24EX",
+        "360T",
+        "4AXE",
+        "A2XX",
+        "AACA",
+        "AAPA",
+        "AATS",
+        "ABAN",
+        "ABFI",
+        "ABNA",
+        "ABNC",
+        "ABSI",
+        "ABUL",
+        "ABXX",
+        "ACEX",
+        "ACKF",
+        "ADVT",
+        "AFDL",
+        "AFET",
+        "AFEX",
+        "AFSA",
+        "AFSE",
+        "AFSI",
+        "AFSL",
+        "AFSO",
+        "AFSX",
+        "AGBP",
+        "AILT",
+        "AIMX",
+        "AIXE",
+        "AIXK",
+        "AKIS",
+        "ALDP",
+        "ALLT",
+        "ALSI",
+        "ALTX",
+        "ALXA",
+        "ALXB",
+        "ALXL",
+        "ALXP",
+        "AMLG",
+        "AMNL",
+        "AMPX",
+        "AMTS",
+        "AMXO",
+        "ANLP",
+        "ANTS",
+        "ANZL",
+        "APAW",
+        "APCL",
+        "APEX",
+        "APXL",
+        "AQEA",
+        "AQED",
+        "AQEU",
+        "AQSD",
+        "AQSE",
+        "AQSF",
+        "AQSG",
+        "AQSL",
+        "AQSN",
+        "AQST",
+        "AQUA",
+        "AQXA",
+        "AQXD",
+        "AQXE",
+        "ARAX",
+        "ARCD",
+        "ARCH",
+        "ARCO",
+        "ARCX",
+        "AREX",
+        "ARIA",
+        "ARKX",
+        "ARTX",
+        "ASEF",
+        "ASEX",
+        "ASMT",
+        "ASPI",
+        "ASPN",
+        "ASTR",
+        "ASXB",
+        "ASXC",
+        "ASXP",
+        "ASXT",
+        "ASXV",
+        "ATDF",
+        "ATFX",
+        "ATHL",
+        "ATLB",
+        "ATLN",
+        "ATSA",
+        "AURB",
+        "AURO",
+        "AUTB",
+        "AUTO",
+        "AUTP",
+        "AUTX",
+        "AWBX",
+        "AWEX",
+        "AXSI",
+        "BAAD",
+        "BACE",
+        "BACR",
+        "BAEP",
+        "BAIK",
+        "BAIP",
+        "BAJD",
+        "BAJM",
+        "BALT",
+        "BAML",
+        "BAMP",
+        "BAMX",
+        "BANA",
+        "BAPA",
+        "BAPE",
+        "BAPX",
+        "BARD",
+        "BARK",
+        "BARL",
+        "BARO",
+        "BART",
+        "BARU",
+        "BARX",
+        "BASE",
+        "BASI",
+        "BASP",
+        "BASX",
+        "BATD",
+        "BATE",
+        "BATF",
+        "BATO",
+        "BATP",
+        "BATS",
+        "BATY",
+        "BBIE",
+        "BBIS",
+        "BBLX",
+        "BBOK",
+        "BBSF",
+        "BBSI",
+        "BBSX",
+        "BBVA",
+        "BBVX",
+        "BCDX",
+        "BCEE",
+        "BCFS",
+        "BCMA",
+        "BCMM",
+        "BCRM",
+        "BCSC",
+        "BCSE",
+        "BCSI",
+        "BCSL",
+        "BCXE",
+        "BDEA",
+        "BDSK",
+        "BEAM",
+        "BEBG",
+        "BEEX",
+        "BEIS",
+        "BELB",
+        "BELF",
+        "BERA",
+        "BERB",
+        "BERC",
+        "BETA",
+        "BETP",
+        "BETX",
+        "BEUD",
+        "BEUE",
+        "BEUF",
+        "BEUO",
+        "BEUP",
+        "BEUT",
+        "BFEX",
+        "BFPT",
+        "BGCA",
+        "BGCB",
+        "BGCD",
+        "BGCF",
+        "BGCI",
+        "BGCM",
+        "BGCO",
+        "BGFI",
+        "BGFU",
+        "BGFX",
+        "BGHX",
+        "BGLU",
+        "BGSI",
+        "BGUK",
+        "BHSF",
+        "BHWA",
+        "BIDS",
+        "BILT",
+        "BILU",
+        "BINV",
+        "BISI",
+        "BIVA",
+        "BJSE",
+        "BKBF",
+        "BKBR",
+        "BKDM",
+        "BKKT",
+        "BKLF",
+        "BKLN",
+        "BKSK",
+        "BLBB",
+        "BLBF",
+        "BLBS",
+        "BLEQ",
+        "BLEV",
+        "BLFX",
+        "BLIQ",
+        "BLKX",
+        "BLNK",
+        "BLOX",
+        "BLPX",
+        "BLTD",
+        "BLTX",
+        "BLUE",
+        "BLUX",
+        "BLXA",
+        "BMCL",
+        "BMCM",
+        "BMEA",
+        "BMEX",
+        "BMFA",
+        "BMFM",
+        "BMFX",
+        "BMLB",
+        "BMLI",
+        "BMLS",
+        "BMLX",
+        "BMSI",
+        "BMTF",
+        "BMTS",
+        "BNDD",
+        "BNLD",
+        "BNPA",
+        "BNPC",
+        "BNPF",
+        "BNPL",
+        "BNPP",
+        "BNPS",
+        "BNPX",
+        "BNSX",
+        "BNTW",
+        "BNYC",
+        "BOAL",
+        "BOAT",
+        "BOCF",
+        "BOFS",
+        "BOND",
+        "BOSC",
+        "BOSD",
+        "BOSP",
+        "BOTC",
+        "BOTE",
+        "BOTV",
+        "BOVA",
+        "BOVM",
+        "BPAS",
+        "BPKO",
+        "BPLC",
+        "BPOL",
+        "BPSX",
+        "BRDE",
+        "BRDL",
+        "BRDS",
+        "BREA",
+        "BRED",
+        "BRFQ",
+        "BRGA",
+        "BRIX",
+        "BRMF",
+        "BRNX",
+        "BSAB",
+        "BSEX",
+        "BSFX",
+        "BSLB",
+        "BSME",
+        "BSPL",
+        "BSTX",
+        "BTAM",
+        "BTBS",
+        "BTEC",
+        "BTEE",
+        "BTEQ",
+        "BTFE",
+        "BTLX",
+        "BTNL",
+        "BTQE",
+        "BTQG",
+        "BTRL",
+        "BTUN",
+        "BULK",
+        "BURG",
+        "BURM",
+        "BUYN",
+        "BVCA",
+        "BVMF",
+        "BVUK",
+        "BVUR",
+        "BVUS",
+        "BYXD",
+        "BZXD",
+        "C2OX",
+        "CABK",
+        "CABV",
+        "CAES",
+        "CALH",
+        "CAND",
+        "CANX",
+        "CAPA",
+        "CAPI",
+        "CAPL",
+        "CASI",
+        "CATS",
+        "CAVD",
+        "CAVE",
+        "CAZE",
+        "CBAE",
+        "CBAL",
+        "CBKA",
+        "CBKC",
+        "CBKD",
+        "CBKE",
+        "CBKF",
+        "CBKG",
+        "CBKS",
+        "CBLC",
+        "CBNL",
+        "CBOE",
+        "CBSK",
+        "CBSX",
+        "CBTS",
+        "CCEU",
+        "CCEX",
+        "CCFE",
+        "CCFX",
+        "CCLX",
+        "CCML",
+        "CCMS",
+        "CCMX",
+        "CCO2",
+        "CCRM",
+        "CCXE",
+        "CDED",
+        "CDEL",
+        "CDSI",
+        "CDSL",
+        "CECA",
+        "CECS",
+        "CEDX",
+        "CELP",
+        "CEPL",
+        "CEPU",
+        "CESI",
+        "CETI",
+        "CETO",
+        "CEUD",
+        "CEUE",
+        "CEUO",
+        "CEUX",
+        "CFAU",
+        "CFBC",
+        "CFHK",
+        "CFIC",
+        "CFIF",
+        "CFIL",
+        "CFJP",
+        "CFTW",
+        "CGCM",
+        "CGDB",
+        "CGEB",
+        "CGEC",
+        "CGEE",
+        "CGET",
+        "CGGD",
+        "CGIT",
+        "CGMA",
+        "CGMC",
+        "CGMD",
+        "CGME",
+        "CGMG",
+        "CGMH",
+        "CGMI",
+        "CGML",
+        "CGMT",
+        "CGMU",
+        "CGMX",
+        "CGND",
+        "CGQD",
+        "CGQT",
+        "CGTR",
+        "CGXS",
+        "CHEV",
+        "CHIA",
+        "CHIC",
+        "CHID",
+        "CHIE",
+        "CHIJ",
+        "CHIO",
+        "CHIS",
+        "CHIV",
+        "CHIX",
+        "CHIY",
+        "CIBC",
+        "CIBH",
+        "CIBP",
+        "CICX",
+        "CILH",
+        "CIMA",
+        "CIMB",
+        "CIMD",
+        "CIME",
+        "CIMV",
+        "CIOI",
+        "CISD",
+        "CITD",
+        "CITX",
+        "CLAU",
+        "CLCH",
+        "CLHK",
+        "CLJP",
+        "CLMX",
+        "CLPH",
+        "CLST",
+        "CLTD",
+        "CLVE",
+        "CMAP",
+        "CMCI",
+        "CMCM",
+        "CMEC",
+        "CMED",
+        "CMEE",
+        "CMES",
+        "CMET",
+        "CMMT",
+        "CMSF",
+        "CMTS",
+        "CNOD",
+        "CNSI",
+        "COAL",
+        "CODA",
+        "COHR",
+        "COMG",
+        "COMM",
+        "CONC",
+        "CONE",
+        "CORE",
+        "COTC",
+        "CPGX",
+        "CPTX",
+        "CRDL",
+        "CRED",
+        "CREM",
+        "CRYD",
+        "CRYP",
+        "CRYX",
+        "CSAG",
+        "CSAS",
+        "CSAU",
+        "CSBX",
+        "CSCF",
+        "CSCL",
+        "CSDA",
+        "CSE2",
+        "CSEC",
+        "CSEU",
+        "CSFB",
+        "CSGI",
+        "CSHK",
+        "CSIN",
+        "CSJP",
+        "CSLB",
+        "CSLP",
+        "CSMD",
+        "CSOB",
+        "CSOT",
+        "CSSI",
+        "CSSX",
+        "CSTO",
+        "CSVW",
+        "CSZH",
+        "CTWO",
+        "CURX",
+        "CXAB",
+        "CXAC",
+        "CXAF",
+        "CXAM",
+        "CXAN",
+        "CXAP",
+        "CXAQ",
+        "CXAR",
+        "CXAV",
+        "CXAW",
+        "CXAI",
+        "CXOT",
+        "CXRT",
+        "DAIW",
+        "DAMP",
+        "DAPA",
+        "DASH",
+        "DASI",
+        "DAUK",
+        "DAVY",
+        "DBAB",
+        "DBAG",
+        "DBCR",
+        "DBCX",
+        "DBDC",
+        "DBDX",
+        "DBES",
+        "DBHK",
+        "DBIX",
+        "DBLN",
+        "DBLX",
+        "DBMO",
+        "DBOX",
+        "DBSE",
+        "DBSX",
+        "DBVX",
+        "DCSE",
+        "DCSX",
+        "DDTX",
+        "DEAL",
+        "DEKA",
+        "DEXE",
+        "DGCX",
+        "DHEL",
+        "DHLX",
+        "DICE",
+        "DIFX",
+        "DKED",
+        "DKFI",
+        "DKOB",
+        "DKTC",
+        "DKWB",
+        "DNDK",
+        "DNFI",
+        "DNIS",
+        "DNSE",
+        "DOSE",
+        "DOTS",
+        "DOWE",
+        "DOWG",
+        "DOWM",
+        "DRCT",
+        "DRSP",
+        "DSMD",
+        "DSME",
+        "DSTO",
+        "DUMX",
+        "DUSA",
+        "DUSB",
+        "DUSC",
+        "DUSD",
+        "DVFX",
+        "DWFI",
+        "DWSF",
+        "DZBK",
+        "EACM",
+        "EBHU",
+        "EBLX",
+        "EBMX",
+        "EBON",
+        "EBRA",
+        "EBSC",
+        "EBSD",
+        "EBSF",
+        "EBSI",
+        "EBSM",
+        "EBSN",
+        "EBSO",
+        "EBSS",
+        "EBSX",
+        "EBXV",
+        "ECAG",
+        "ECAL",
+        "ECEU",
+        "ECGS",
+        "ECHO",
+        "ECNL",
+        "ECSL",
+        "ECXE",
+        "EDBT",
+        "EDDP",
+        "EDGA",
+        "EDGD",
+        "EDGE",
+        "EDGL",
+        "EDGO",
+        "EDGX",
+        "EDRF",
+        "EEAL",
+        "EESE",
+        "EFTP",
+        "EGMT",
+        "EGSI",
+        "EIXE",
+        "ELEU",
+        "ELIX",
+        "ELNO",
+        "ELSE",
+        "ELUK",
+        "ELXE",
+        "EMBX",
+        "EMCE",
+        "EMCH",
+        "EMDR",
+        "EMIB",
+        "EMID",
+        "EMIR",
+        "EMLD",
+        "EMTF",
+        "EMTS",
+        "ENAX",
+        "ENCL",
+        "ENMS",
+        "ENSL",
+        "ENSX",
+        "ENSY",
+        "ENTW",
+        "ENXB",
+        "ENXL",
+        "EOTC",
+        "EPEX",
+        "EPRD",
+        "EPRL",
+        "EQCA",
+        "EQIE",
+        "EQLD",
+        "EQOC",
+        "EQOD",
+        "EQOS",
+        "EQSE",
+        "EQSL",
+        "EQTA",
+        "EQTB",
+        "EQTC",
+        "EQTD",
+        "EQUS",
+        "EQWB",
+        "ERBX",
+        "ERFQ",
+        "ERIS",
+        "ERST",
+        "ESLO",
+        "ESPD",
+        "ESTO",
+        "ETFP",
+        "ETLX",
+        "ETPA",
+        "ETSC",
+        "EUAX",
+        "EUCC",
+        "EUCH",
+        "EUFN",
+        "EUOB",
+        "EURM",
+        "EUSC",
+        "EUSP",
+        "EUWA",
+        "EUWB",
+        "EUWX",
+        "EVOL",
+        "EWRM",
+        "EWSM",
+        "EXAA",
+        "EXBO",
+        "EXCP",
+        "EXDC",
+        "EXEU",
+        "EXGM",
+        "EXLP",
+        "EXMP",
+        "EXOR",
+        "EXOT",
+        "EXPA",
+        "EXPM",
+        "EXSB",
+        "EXSD",
+        "EXSE",
+        "EXSF",
+        "EXSH",
+        "EXSI",
+        "EXSP",
+        "EXSY",
+        "EXTR",
+        "EXVP",
+        "EXYY",
+        "FAIR",
+        "FAST",
+        "FBSI",
+        "FCBT",
+        "FCME",
+        "FGEX",
+        "FICO",
+        "FICX",
+        "FIED",
+        "FINC",
+        "FINN",
+        "FINO",
+        "FINR",
+        "FINY",
+        "FISH",
+        "FISU",
+        "FLTB",
+        "FLTR",
+        "FLWX",
+        "FMTS",
+        "FNCS",
+        "FNDK",
+        "FNEE",
+        "FNFI",
+        "FNFT",
+        "FNFX",
+        "FNIS",
+        "FNIX",
+        "FNLT",
+        "FNLV",
+        "FNSE",
+        "FNUK",
+        "FNXB",
+        "FPWB",
+        "FRAA",
+        "FRAB",
+        "FRAD",
+        "FRAS",
+        "FRAU",
+        "FRAV",
+        "FRAW",
+        "FREI",
+        "FREX",
+        "FRRF",
+        "FRTE",
+        "FSEF",
+        "FSHX",
+        "FSME",
+        "FTFM",
+        "FTFS",
+        "FTUS",
+        "FUSD",
+        "FXAL",
+        "FXCL",
+        "FXCM",
+        "FXFM",
+        "FXGB",
+        "FXMT",
+        "FXNM",
+        "FXOP",
+        "FXPS",
+        "FXRQ",
+        "FXRS",
+        "FXSM",
+        "FXSW",
+        "G1XX",
+        "GBOB",
+        "GBOT",
+        "GBSI",
+        "GBUL",
+        "GBWB",
+        "GEMX",
+        "GETB",
+        "GFAM",
+        "GFAU",
+        "GFBM",
+        "GFBO",
+        "GFIA",
+        "GFIB",
+        "GFIC",
+        "GFIF",
+        "GFIM",
+        "GFIN",
+        "GFIR",
+        "GFKS",
+        "GFOX",
+        "GFPO",
+        "GFSM",
+        "GFSO",
+        "GIPB",
+        "GLBX",
+        "GLLC",
+        "GLMX",
+        "GLOM",
+        "GLPS",
+        "GLPX",
+        "GMBG",
+        "GMEG",
+        "GMEO",
+        "GMES",
+        "GMEX",
+        "GMGD",
+        "GMGE",
+        "GMGL",
+        "GMNI",
+        "GMTF",
+        "GMTS",
+        "GOTC",
+        "GOVX",
+        "GPBC",
+        "GREE",
+        "GRIF",
+        "GRIO",
+        "GROW",
+        "GRSE",
+        "GSAL",
+        "GSBE",
+        "GSBX",
+        "GSCI",
+        "GSCO",
+        "GSEF",
+        "GSEI",
+        "GSIB",
+        "GSIL",
+        "GSPL",
+        "GSPX",
+        "GSSI",
+        "GSXC",
+        "GSXH",
+        "GSXK",
+        "GSXL",
+        "GSXT",
+        "GTCO",
+        "GTSX",
+        "GTXE",
+        "GTXS",
+        "GXGF",
+        "GXGM",
+        "GXGR",
+        "GXMA",
+        "HAMA",
+        "HAMB",
+        "HAML",
+        "HAMM",
+        "HAMN",
+        "HANA",
+        "HANB",
+        "HBFR",
+        "HBPL",
+        "HCER",
+        "HCHC",
+        "HDAT",
+        "HEDE",
+        "HEGX",
+        "HELA",
+        "HEMO",
+        "HESP",
+        "HGSP",
+        "HKME",
+        "HMOD",
+        "HMTF",
+        "HOTC",
+        "HPCO",
+        "HPCS",
+        "HPCV",
+        "HPCX",
+        "HPPO",
+        "HPSO",
+        "HPSX",
+        "HREU",
+        "HRFQ",
+        "HRSI",
+        "HRTF",
+        "HRTX",
+        "HSBC",
+        "HSBT",
+        "HSFX",
+        "HSTC",
+        "HSXA",
+        "HSXE",
+        "HUDX",
+        "HUNG",
+        "HUPX",
+        "IATS",
+        "IBAL",
+        "IBEQ",
+        "IBER",
+        "IBEX",
+        "IBGH",
+        "IBIS",
+        "IBLX",
+        "IBSI",
+        "IBUL",
+        "ICAH",
+        "ICAP",
+        "ICAS",
+        "ICAT",
+        "ICBX",
+        "ICDX",
+        "ICEL",
+        "ICEN",
+        "ICEO",
+        "ICES",
+        "ICEU",
+        "ICHK",
+        "ICKR",
+        "ICOR",
+        "ICOT",
+        "ICPM",
+        "ICRO",
+        "ICSE",
+        "ICSH",
+        "ICSU",
+        "ICSZ",
+        "ICTQ",
+        "ICTW",
+        "ICUR",
+        "ICUS",
+        "ICXL",
+        "ICXR",
+        "IDXM",
+        "IEBS",
+        "IECE",
+        "IECL",
+        "IENG",
+        "IEPA",
+        "IEXC",
+        "IEXD",
+        "IEXG",
+        "IFAD",
+        "IFBX",
+        "IFCA",
+        "IFED",
+        "IFEN",
+        "IFEU",
+        "IFLL",
+        "IFLO",
+        "IFLS",
+        "IFLX",
+        "IFSG",
+        "IFSM",
+        "IFUS",
+        "IFUT",
+        "IFXA",
+        "IFXC",
+        "IFXR",
+        "IGDL",
+        "IIDX",
+        "IINX",
+        "IKBS",
+        "ILCM",
+        "IMAG",
+        "IMBD",
+        "IMCC",
+        "IMCD",
+        "IMCE",
+        "IMCG",
+        "IMCM",
+        "IMCO",
+        "IMCR",
+        "IMCS",
+        "IMCT",
+        "IMED",
+        "IMEN",
+        "IMEQ",
+        "IMET",
+        "IMEX",
+        "IMFD",
+        "IMFX",
+        "IMGB",
+        "IMGI",
+        "IMIR",
+        "IMMH",
+        "IMMM",
+        "IMRD",
+        "IMSB",
+        "IMTF",
+        "IMTS",
+        "INCA",
+        "INCR",
+        "INGB",
+        "INGE",
+        "INGF",
+        "INGU",
+        "INGW",
+        "INSE",
+        "INTL",
+        "INVE",
+        "IOCD",
+        "IOED",
+        "IOFB",
+        "IOFI",
+        "IOFX",
+        "IOGB",
+        "IOGI",
+        "IOIR",
+        "IOMM",
+        "IOTC",
+        "IOTF",
+        "IPNL",
+        "IPSX",
+        "IPXP",
+        "IPXW",
+        "ISBA",
+        "ISBV",
+        "ISDA",
+        "ISDX",
+        "ISEC",
+        "ISEX",
+        "ISSI",
+        "ISWA",
+        "ISWB",
+        "ISWC",
+        "ISWE",
+        "ISWN",
+        "ISWO",
+        "ISWP",
+        "ISWR",
+        "ISWT",
+        "ISWV",
+        "ITGI",
+        "ITGL",
+        "ITSM",
+        "IUOB",
+        "IVZX",
+        "IXSP",
+        "JADX",
+        "JASR",
+        "JATA",
+        "JBSI",
+        "JBUL",
+        "JEFE",
+        "JEFS",
+        "JEFX",
+        "JESI",
+        "JISI",
+        "JLEQ",
+        "JLEU",
+        "JLQD",
+        "JLSI",
+        "JNSI",
+        "JNST",
+        "JPBX",
+        "JPCB",
+        "JPEU",
+        "JPMI",
+        "JPMS",
+        "JPMX",
+        "JPSI",
+        "JSEB",
+        "JSEF",
+        "JSER",
+        "JSES",
+        "JSJX",
+        "JSSI",
+        "JYSI",
+        "KABU",
+        "KAIX",
+        "KBCB",
+        "KBLC",
+        "KBLL",
+        "KBLM",
+        "KBLS",
+        "KBLT",
+        "KCCP",
+        "KDPW",
+        "KELR",
+        "KHHU",
+        "KLEU",
+        "KLSH",
+        "KMTS",
+        "KMUX",
+        "KNCM",
+        "KNEM",
+        "KNIG",
+        "KNLI",
+        "KNMX",
+        "KOCN",
+        "KOME",
+        "KOTF",
+        "KRME",
+        "LAFD",
+        "LAFL",
+        "LAFX",
+        "LAMP",
+        "LASF",
+        "LASP",
+        "LATG",
+        "LAVA",
+        "LBBW",
+        "LBCM",
+        "LBCW",
+        "LBWL",
+        "LBWS",
+        "LCHC",
+        "LCUR",
+        "LEBV",
+        "LEDG",
+        "LELE",
+        "LESI",
+        "LEUE",
+        "LEUF",
+        "LEVL",
+        "LICA",
+        "LIFI",
+        "LIGA",
+        "LIQF",
+        "LIQH",
+        "LIQU",
+        "LISX",
+        "LISZ",
+        "LIUH",
+        "LIUS",
+        "LLAT",
+        "LMAD",
+        "LMAE",
+        "LMAF",
+        "LMAO",
+        "LMAX",
+        "LMEC",
+        "LMNR",
+        "LMNX",
+        "LMTS",
+        "LNEQ",
+        "LNFI",
+        "LOTC",
+        "LOUI",
+        "LOYD",
+        "LPPM",
+        "LPSF",
+        "LQED",
+        "LQFI",
+        "LSSI",
+        "LTAA",
+        "LTSE",
+        "LXJP",
+        "LYNX",
+        "MABX",
+        "MACB",
+        "MACX",
+        "MAEL",
+        "MAGM",
+        "MAKX",
+        "MALM",
+        "MALX",
+        "MANL",
+        "MAQE",
+        "MAQH",
+        "MAQI",
+        "MAQJ",
+        "MAQL",
+        "MAQU",
+        "MAQX",
+        "MARF",
+        "MASG",
+        "MATN",
+        "MATX",
+        "MAXD",
+        "MBCP",
+        "MBPL",
+        "MBSI",
+        "MBUL",
+        "MCAD",
+        "MCID",
+        "MCRY",
+        "MCSE",
+        "MCUR",
+        "MCXR",
+        "MCXS",
+        "MCXX",
+        "MCZK",
+        "MDIP",
+        "MDRV",
+        "MEAU",
+        "MEHK",
+        "MELO",
+        "MEMD",
+        "MEMM",
+        "MEMX",
+        "MERD",
+        "MERF",
+        "MERK",
+        "MESI",
+        "MESQ",
+        "METZ",
+        "MFGL",
+        "MFOX",
+        "MFXA",
+        "MFXC",
+        "MFXR",
+        "MHBD",
+        "MHBE",
+        "MHBL",
+        "MHBP",
+        "MHEL",
+        "MHEU",
+        "MHIP",
+        "MIBG",
+        "MIBL",
+        "MICE",
+        "MIDC",
+        "MIHI",
+        "MISX",
+        "MIVX",
+        "MIZX",
+        "MKAA",
+        "MKAP",
+        "MKTF",
+        "MLAX",
+        "MLCO",
+        "MLER",
+        "MLES",
+        "MLEU",
+        "MLEX",
+        "MLIB",
+        "MLIX",
+        "MLRQ",
+        "MLSI",
+        "MLVE",
+        "MLVX",
+        "MLXB",
+        "MLXN",
+        "MNDK",
+        "MNFI",
+        "MNIS",
+        "MNSE",
+        "MOCX",
+        "MOSE",
+        "MOTX",
+        "MPRL",
+        "MSAL",
+        "MSAX",
+        "MSBI",
+        "MSCO",
+        "MSCX",
+        "MSDM",
+        "MSEL",
+        "MSEU",
+        "MSIP",
+        "MSLP",
+        "MSMS",
+        "MSNT",
+        "MSPL",
+        "MSRP",
+        "MSSI",
+        "MSTC",
+        "MSTO",
+        "MSTX",
+        "MSWP",
+        "MTAA",
+        "MTAH",
+        "MTAX",
+        "MTCH",
+        "MTSA",
+        "MTSB",
+        "MTSC",
+        "MTSD",
+        "MTSF",
+        "MTSG",
+        "MTSM",
+        "MTSO",
+        "MTSP",
+        "MTSS",
+        "MTSW",
+        "MTUS",
+        "MTXA",
+        "MTXC",
+        "MTXM",
+        "MTXS",
+        "MTXX",
+        "MUBE",
+        "MUBL",
+        "MUBM",
+        "MUBP",
+        "MUDX",
+        "MUFP",
+        "MUNA",
+        "MUNB",
+        "MUNC",
+        "MUND",
+        "MUSE",
+        "MUSN",
+        "MUTI",
+        "MVCX",
+        "MXLM",
+        "MXNL",
+        "MXOP",
+        "MYTR",
+        "N2EX",
+        "NABA",
+        "NABE",
+        "NABL",
+        "NABP",
+        "NABU",
+        "NAMX",
+        "NAPA",
+        "NASB",
+        "NASD",
+        "NASN",
+        "NASX",
+        "NATX",
+        "NAVE",
+        "NBFL",
+        "NBLX",
+        "NBOT",
+        "NBXO",
+        "NCEL",
+        "NCME",
+        "NCML",
+        "NDCM",
+        "NDEX",
+        "NDXS",
+        "NECD",
+        "NEEQ",
+        "NEOC",
+        "NEOD",
+        "NEOE",
+        "NEON",
+        "NESI",
+        "NEXD",
+        "NEXF",
+        "NEXG",
+        "NEXL",
+        "NEXN",
+        "NEXO",
+        "NEXS",
+        "NEXT",
+        "NEXX",
+        "NEXY",
+        "NFSA",
+        "NFSC",
+        "NFSD",
+        "NGXC",
+        "NIBC",
+        "NIBR",
+        "NILX",
+        "NLAX",
+        "NLBX",
+        "NLPX",
+        "NMCE",
+        "NMRA",
+        "NMRJ",
+        "NMSX",
+        "NMTF",
+        "NMTS",
+        "NNCS",
+        "NOCO",
+        "NODX",
+        "NOED",
+        "NOFF",
+        "NOFI",
+        "NOME",
+        "NOOB",
+        "NOPS",
+        "NORD",
+        "NORX",
+        "NOSC",
+        "NOSI",
+        "NOTC",
+        "NOWB",
+        "NOWX",
+        "NPEX",
+        "NPGA",
+        "NSME",
+        "NSPO",
+        "NSSA",
+        "NSXB",
+        "NTUK",
+        "NURD",
+        "NURO",
+        "NWMS",
+        "NWNV",
+        "NXEU",
+        "NXJP",
+        "NXSE",
+        "NXUS",
+        "NXVW",
+        "NYFX",
+        "NYMS",
+        "NYMX",
+        "NYPC",
+        "NYSD",
+        "NYSI",
+        "NZFX",
+        "OAPA",
+        "OBKL",
+        "OCEA",
+        "OCSI",
+        "ODDO",
+        "ODOC",
+        "ODXE",
+        "OFEX",
+        "OHVO",
+        "OILX",
+        "OLBB",
+        "OLLC",
+        "OMEL",
+        "OMGA",
+        "OMIC",
+        "OMIP",
+        "ONEC",
+        "ONSE",
+        "OOTC",
+        "OPCO",
+        "OPEX",
+        "OPRA",
+        "OSDS",
+        "OSLC",
+        "OSSG",
+        "OTCB",
+        "OTCE",
+        "OTCI",
+        "OTCM",
+        "OTCN",
+        "OTCQ",
+        "OTCX",
+        "OTPB",
+        "OTPR",
+        "OTXB",
+        "OTXT",
+        "PARK",
+        "PARX",
+        "PATF",
+        "PAVE",
+        "PBGR",
+        "PBUL",
+        "PCDS",
+        "PDEX",
+        "PDQD",
+        "PDQX",
+        "PEEL",
+        "PEPH",
+        "PEPM",
+        "PEPQ",
+        "PEPW",
+        "PEPY",
+        "PFTQ",
+        "PFTS",
+        "PFXD",
+        "PIEU",
+        "PINC",
+        "PINI",
+        "PINL",
+        "PINX",
+        "PIPE",
+        "PIPR",
+        "PIRM",
+        "PJCX",
+        "PKOP",
+        "PLDX",
+        "PLPD",
+        "PLPO",
+        "PLPS",
+        "PLPX",
+        "PLSX",
+        "PLUS",
+        "PMTS",
+        "PNED",
+        "POEE",
+        "PORT",
+        "POSE",
+        "POTC",
+        "PPEX",
+        "PRME",
+        "PROS",
+        "PRSE",
+        "PSGM",
+        "PSXD",
+        "PTPG",
+        "PULX",
+        "PUMA",
+        "PUMX",
+        "PUND",
+        "PURE",
+        "PVMF",
+        "PXIL",
+        "QMTF",
+        "QMTS",
+        "QWIX",
+        "R5FX",
+        "RABL",
+        "RABO",
+        "RAJA",
+        "RBCB",
+        "RBCC",
+        "RBCE",
+        "RBCG",
+        "RBCM",
+        "RBCT",
+        "RBHU",
+        "RBIV",
+        "RBSI",
+        "RBSX",
+        "RCBX",
+        "RCMA",
+        "RENC",
+        "RESE",
+        "RESF",
+        "REST",
+        "RFBK",
+        "RICD",
+        "RICX",
+        "RITS",
+        "RLBO",
+        "RMMS",
+        "RMMX",
+        "RMTF",
+        "RMTS",
+        "ROCO",
+        "ROFX",
+        "ROSR",
+        "ROTC",
+        "RPDX",
+        "RPWC",
+        "RR4G",
+        "RSEX",
+        "RTSI",
+        "RTSL",
+        "RTSP",
+        "RTSX",
+        "RUSX",
+        "S3FM",
+        "SAGE",
+        "SANT",
+        "SB1M",
+        "SBAR",
+        "SBEX",
+        "SBIJ",
+        "SBIL",
+        "SBIU",
+        "SBIV",
+        "SBMF",
+        "SBSI",
+        "SCAG",
+        "SCOT",
+        "SCXA",
+        "SCXF",
+        "SCXM",
+        "SCXO",
+        "SCXS",
+        "SEBA",
+        "SEBL",
+        "SEBS",
+        "SEBX",
+        "SECC",
+        "SECD",
+        "SECE",
+        "SECF",
+        "SEDC",
+        "SEDR",
+        "SEDX",
+        "SEED",
+        "SELC",
+        "SEMX",
+        "SEND",
+        "SEOB",
+        "SEPE",
+        "SEWB",
+        "SFCL",
+        "SFOX",
+        "SGA2",
+        "SGAS",
+        "SGEX",
+        "SGMA",
+        "SGMT",
+        "SGMU",
+        "SGMV",
+        "SGMW",
+        "SGMX",
+        "SGMY",
+        "SGMZ",
+        "SGOE",
+        "SHAD",
+        "SHAR",
+        "SHAW",
+        "SHSC",
+        "SIAB",
+        "SIBC",
+        "SICS",
+        "SIDX",
+        "SIFX",
+        "SIGA",
+        "SIGH",
+        "SIGJ",
+        "SIGX",
+        "SIMD",
+        "SIMV",
+        "SISI",
+        "SISU",
+        "SKBB",
+        "SKSI",
+        "SKYX",
+        "SLHB",
+        "SLKK",
+        "SLXT",
+        "SMBB",
+        "SMBC",
+        "SMBD",
+        "SMBE",
+        "SMBG",
+        "SMBP",
+        "SMEX",
+        "SMFE",
+        "SMFF",
+        "SMTS",
+        "SNSI",
+        "SNUK",
+        "SOHO",
+        "SPAD",
+        "SPAX",
+        "SPBE",
+        "SPDX",
+        "SPEC",
+        "SPEX",
+        "SPIM",
+        "SPRZ",
+        "SPTR",
+        "SPTX",
+        "SPXE",
+        "SQUA",
+        "SSBI",
+        "SSBM",
+        "SSBT",
+        "SSEX",
+        "SSFX",
+        "SSIL",
+        "SSME",
+        "SSOB",
+        "SSTX",
+        "SSWM",
+        "STAL",
+        "STAN",
+        "STEE",
+        "STFL",
+        "STFU",
+        "STFX",
+        "STOX",
+        "STRM",
+        "STRT",
+        "STSI",
+        "STUA",
+        "STUB",
+        "STUC",
+        "STUD",
+        "STUE",
+        "STUF",
+        "STXS",
+        "SUNB",
+        "SUNM",
+        "SUNO",
+        "SUNT",
+        "SVES",
+        "SVEX",
+        "SVXI",
+        "SWAP",
+        "SWBI",
+        "SWEE",
+        "SWLT",
+        "SWLV",
+        "SXSI",
+        "SYFX",
+        "SZSC",
+        "T212",
+        "TBEN",
+        "TBLA",
+        "TBSA",
+        "TBSP",
+        "TCDS",
+        "TCME",
+        "TCML",
+        "TDBL",
+        "TDGF",
+        "TDON",
+        "TECO",
+        "TEEG",
+        "TEFD",
+        "TEFX",
+        "TEGB",
+        "TEGI",
+        "TEIR",
+        "TEMB",
+        "TEMC",
+        "TEMF",
+        "TEMG",
+        "TEMI",
+        "TEMM",
+        "TEMR",
+        "TEOF",
+        "TEPF",
+        "TEPG",
+        "TEPI",
+        "TEPM",
+        "TEPR",
+        "TEPX",
+        "TERA",
+        "TERE",
+        "TERM",
+        "TEUR",
+        "TFEX",
+        "TFSA",
+        "TFSC",
+        "TFSD",
+        "TFSE",
+        "TFSG",
+        "TFSS",
+        "TFSU",
+        "TFSV",
+        "TGAT",
+        "TGSI",
+        "THEM",
+        "THRD",
+        "THRE",
+        "TIRD",
+        "TLAB",
+        "TLCM",
+        "TMCC",
+        "TMCY",
+        "TMEX",
+        "TMID",
+        "TMTS",
+        "TMUK",
+        "TMXS",
+        "TNLA",
+        "TNLB",
+        "TNLK",
+        "TNLL",
+        "TOCP",
+        "TOMD",
+        "TOMF",
+        "TOMG",
+        "TOMX",
+        "TOWR",
+        "TPCD",
+        "TPDE",
+        "TPEE",
+        "TPEL",
+        "TPEO",
+        "TPEQ",
+        "TPER",
+        "TPES",
+        "TPEU",
+        "TPFD",
+        "TPFR",
+        "TPIC",
+        "TPID",
+        "TPIE",
+        "TPIM",
+        "TPIO",
+        "TPIR",
+        "TPIS",
+        "TPLF",
+        "TPMF",
+        "TPMG",
+        "TPRE",
+        "TPSD",
+        "TPSE",
+        "TPSL",
+        "TPSO",
+        "TPSP",
+        "TPSV",
+        "TPSY",
+        "TQEA",
+        "TQEB",
+        "TQEM",
+        "TQEX",
+        "TRAI",
+        "TRAL",
+        "TRAS",
+        "TRAX",
+        "TRCK",
+        "TRCX",
+        "TRDC",
+        "TRDE",
+        "TRDX",
+        "TREA",
+        "TREO",
+        "TREU",
+        "TRFW",
+        "TRFX",
+        "TRNL",
+        "TRPX",
+        "TRQA",
+        "TRQB",
+        "TRQC",
+        "TRQD",
+        "TRQM",
+        "TRQS",
+        "TRQX",
+        "TRSI",
+        "TRU1",
+        "TRU2",
+        "TRUK",
+        "TRUX",
+        "TRWB",
+        "TRXE",
+        "TSAD",
+        "TSAF",
+        "TSBX",
+        "TSCB",
+        "TSCD",
+        "TSED",
+        "TSEF",
+        "TSFF",
+        "TSFG",
+        "TSFI",
+        "TSFX",
+        "TSGB",
+        "TSGI",
+        "TSIG",
+        "TSIR",
+        "TSMB",
+        "TSMC",
+        "TSMG",
+        "TSMI",
+        "TSMM",
+        "TSMR",
+        "TSRE",
+        "TSUK",
+        "TUOB",
+        "TWEA",
+        "TWEM",
+        "TWEO",
+        "TWEU",
+        "TWGP",
+        "TWHK",
+        "TWJP",
+        "TWJT",
+        "TWSF",
+        "TWSG",
+        "UBCZ",
+        "UBEC",
+        "UBIM",
+        "UBIN",
+        "UBIS",
+        "UBSA",
+        "UBSB",
+        "UBSC",
+        "UBSD",
+        "UBSE",
+        "UBSF",
+        "UBSG",
+        "UBSI",
+        "UBSL",
+        "UBSP",
+        "UBSS",
+        "UBST",
+        "UBSX",
+        "UBSY",
+        "UCBA",
+        "UCBG",
+        "UCDE",
+        "UCHU",
+        "UCIT",
+        "UFEX",
+        "UGEN",
+        "UICE",
+        "UKCA",
+        "UKEX",
+        "UKGD",
+        "UKOR",
+        "UKPX",
+        "UKRE",
+        "ULTX",
+        "UMTS",
+        "UNGB",
+        "URCE",
+        "USEF",
+        "USOB",
+        "USWB",
+        "USWP",
+        "UTSL",
+        "VABD",
+        "VAGL",
+        "VAGM",
+        "VALX",
+        "VCMO",
+        "VCRS",
+        "VDRK",
+        "VEGA",
+        "VERT",
+        "VFCM",
+        "VFEX",
+        "VFGB",
+        "VFIL",
+        "VFMI",
+        "VFSI",
+        "VFUK",
+        "VFXO",
+        "VIRT",
+        "VIUK",
+        "VKAB",
+        "VLEX",
+        "VMFX",
+        "VMTS",
+        "VNDM",
+        "VOLA",
+        "VONT",
+        "VPXB",
+        "VRXP",
+        "VTBC",
+        "VTEX",
+        "VTLS",
+        "VTPS",
+        "VUSA",
+        "VWDA",
+        "VWDX",
+        "WABR",
+        "WBAH",
+        "WBCL",
+        "WBDM",
+        "WBGF",
+        "WBKP",
+        "WBLC",
+        "WBON",
+        "WCDE",
+        "WCLK",
+        "WDER",
+        "WEED",
+        "WELN",
+        "WELS",
+        "WELX",
+        "WETP",
+        "WFLB",
+        "WFSE",
+        "WGAS",
+        "WIND",
+        "WINS",
+        "WINX",
+        "WIPO",
+        "WMTF",
+        "WOOD",
+        "WOPO",
+        "WQXL",
+        "WSAG",
+        "WSIL",
+        "WSIN",
+        "XA1X",
+        "XABC",
+        "XABG",
+        "XABJ",
+        "XABX",
+        "XACE",
+        "XADE",
+        "XADF",
+        "XADS",
+        "XAEX",
+        "XAFR",
+        "XAFX",
+        "XAIM",
+        "XALB",
+        "XALG",
+        "XALS",
+        "XALT",
+        "XAMM",
+        "XAMS",
+        "XANT",
+        "XAOM",
+        "XAPA",
+        "XAPI",
+        "XAQS",
+        "XARC",
+        "XARM",
+        "XASE",
+        "XASM",
+        "XASX",
+        "XATH",
+        "XATL",
+        "XATS",
+        "XAUK",
+        "XAZX",
+        "XBAA",
+        "XBAB",
+        "XBAH",
+        "XBAN",
+        "XBAR",
+        "XBAV",
+        "XBBF",
+        "XBBJ",
+        "XBBK",
+        "XBCC",
+        "XBCE",
+        "XBCL",
+        "XBCM",
+        "XBCV",
+        "XBCX",
+        "XBDA",
+        "XBDV",
+        "XBEL",
+        "XBER",
+        "XBES",
+        "XBEY",
+        "XBFO",
+        "XBIL",
+        "XBIS",
+        "XBKF",
+        "XBKK",
+        "XBLB",
+        "XBLK",
+        "XBLN",
+        "XBMF",
+        "XBMK",
+        "XBND",
+        "XBNV",
+        "XBOG",
+        "XBOL",
+        "XBOM",
+        "XBOS",
+        "XBOT",
+        "XBOX",
+        "XBRA",
+        "XBRD",
+        "XBRE",
+        "XBRM",
+        "XBRN",
+        "XBRT",
+        "XBRU",
+        "XBRV",
+        "XBSD",
+        "XBSE",
+        "XBSP",
+        "XBTF",
+        "XBTR",
+        "XBUD",
+        "XBUE",
+        "XBUL",
+        "XBVC",
+        "XBVM",
+        "XBVP",
+        "XBVR",
+        "XBXO",
+        "XCAI",
+        "XCAL",
+        "XCAN",
+        "XCAR",
+        "XCAS",
+        "XCAY",
+        "XCBF",
+        "XCBO",
+        "XCBT",
+        "XCCE",
+        "XCCX",
+        "XCDE",
+        "XCEC",
+        "XCEG",
+        "XCET",
+        "XCFE",
+        "XCFF",
+        "XCGS",
+        "XCHG",
+        "XCHI",
+        "XCIE",
+        "XCIS",
+        "XCME",
+        "XCNF",
+        "XCNQ",
+        "XCOL",
+        "XCOR",
+        "XCRC",
+        "XCRO",
+        "XCSC",
+        "XCSE",
+        "XCSX",
+        "XCUE",
+        "XCUR",
+        "XCX2",
+        "XCXD",
+        "XCYO",
+        "XCYS",
+        "XDAR",
+        "XDBC",
+        "XDBV",
+        "XDBX",
+        "XDCE",
+        "XDES",
+        "XDEX",
+        "XDFB",
+        "XDFM",
+        "XDHA",
+        "XDLP",
+        "XDMI",
+        "XDNB",
+        "XDPA",
+        "XDRF",
+        "XDRK",
+        "XDSE",
+        "XDSM",
+        "XDSX",
+        "XDTB",
+        "XDUB",
+        "XDUS",
+        "XDWZ",
+        "XEAS",
+        "XEBI",
+        "XEBS",
+        "XECB",
+        "XECC",
+        "XECM",
+        "XECS",
+        "XEDA",
+        "XEDX",
+        "XEEE",
+        "XEEO",
+        "XEER",
+        "XEHQ",
+        "XEID",
+        "XELX",
+        "XEMD",
+        "XEMS",
+        "XEQT",
+        "XEQY",
+        "XERE",
+        "XERT",
+        "XESM",
+        "XETA",
+        "XETB",
+        "XETC",
+        "XETD",
+        "XETE",
+        "XETF",
+        "XETI",
+        "XETR",
+        "XETS",
+        "XETU",
+        "XETV",
+        "XETW",
+        "XETX",
+        "XEUB",
+        "XEUC",
+        "XEUE",
+        "XEUI",
+        "XEUM",
+        "XEUP",
+        "XEUR",
+        "XEUS",
+        "XEYE",
+        "XFCI",
+        "XFCM",
+        "XFDA",
+        "XFEX",
+        "XFFE",
+        "XFKA",
+        "XFMN",
+        "XFND",
+        "XFNO",
+        "XFNX",
+        "XFOM",
+        "XFRA",
+        "XFTA",
+        "XFTX",
+        "XGAS",
+        "XGAT",
+        "XGCL",
+        "XGCX",
+        "XGDX",
+        "XGEM",
+        "XGFI",
+        "XGHA",
+        "XGLO",
+        "XGME",
+        "XGMX",
+        "XGRM",
+        "XGSE",
+        "XGSX",
+        "XGTG",
+        "XGUA",
+        "XHAM",
+        "XHAN",
+        "XHCE",
+        "XHEL",
+        "XHER",
+        "XHFT",
+        "XHIR",
+        "XHKF",
+        "XHKG",
+        "XHNF",
+        "XHNX",
+        "XHON",
+        "XIAB",
+        "XIBE",
+        "XICB",
+        "XICE",
+        "XICX",
+        "XIDX",
+        "XIEL",
+        "XIEX",
+        "XIGG",
+        "XIHK",
+        "XIJP",
+        "XIMA",
+        "XIMC",
+        "XIME",
+        "XIMM",
+        "XINE",
+        "XINS",
+        "XINV",
+        "XIOM",
+        "XIPE",
+        "XIPO",
+        "XIQS",
+        "XISA",
+        "XISE",
+        "XISL",
+        "XIST",
+        "XISX",
+        "XJAM",
+        "XJAS",
+        "XJKT",
+        "XJNB",
+        "XJPX",
+        "XJSE",
+        "XJWY",
+        "XKAC",
+        "XKAR",
+        "XKAZ",
+        "XKBT",
+        "XKCE",
+        "XKCM",
+        "XKEM",
+        "XKFB",
+        "XKFE",
+        "XKGT",
+        "XKHA",
+        "XKHR",
+        "XKIE",
+        "XKIS",
+        "XKKT",
+        "XKLS",
+        "XKON",
+        "XKOR",
+        "XKOS",
+        "XKRX",
+        "XKSE",
+        "XKST",
+        "XKUW",
+        "XKYO",
+        "XLAH",
+        "XLAO",
+        "XLAT",
+        "XLBM",
+        "XLCE",
+        "XLCH",
+        "XLDN",
+        "XLDX",
+        "XLFX",
+        "XLGT",
+        "XLIF",
+        "XLIM",
+        "XLIS",
+        "XLIT",
+        "XLJM",
+        "XLJS",
+        "XLJU",
+        "XLLB",
+        "XLME",
+        "XLOD",
+        "XLOF",
+        "XLOM",
+        "XLON",
+        "XLQC",
+        "XLSM",
+        "XLTO",
+        "XLUS",
+        "XLUX",
+        "XMAB",
+        "XMAC",
+        "XMAD",
+        "XMAE",
+        "XMAI",
+        "XMAL",
+        "XMAN",
+        "XMAP",
+        "XMAT",
+        "XMAU",
+        "XMCE",
+        "XMDG",
+        "XMDS",
+        "XMEF",
+        "XMER",
+        "XMEV",
+        "XMEX",
+        "XMFX",
+        "XMGE",
+        "XMIC",
+        "XMID",
+        "XMIF",
+        "XMIL",
+        "XMIO",
+        "XMLI",
+        "XMLX",
+        "XMNT",
+        "XMNX",
+        "XMOC",
+        "XMOD",
+        "XMOL",
+        "XMON",
+        "XMOO",
+        "XMOS",
+        "XMOT",
+        "XMPW",
+        "XMRV",
+        "XMSM",
+        "XMSW",
+        "XMTB",
+        "XMTS",
+        "XMUN",
+        "XMUS",
+        "XMVL",
+        "XNAF",
+        "XNAI",
+        "XNAM",
+        "XNAS",
+        "XNCD",
+        "XNCM",
+        "XNCO",
+        "XNDQ",
+        "XNDU",
+        "XNDX",
+        "XNEC",
+        "XNEE",
+        "XNEP",
+        "XNEW",
+        "XNFI",
+        "XNGM",
+        "XNGO",
+        "XNGS",
+        "XNII",
+        "XNIM",
+        "XNKS",
+        "XNLI",
+        "XNLX",
+        "XNMR",
+        "XNMS",
+        "XNOM",
+        "XNOR",
+        "XNQL",
+        "XNSA",
+        "XNSE",
+        "XNST",
+        "XNXC",
+        "XNXD",
+        "XNYC",
+        "XNYE",
+        "XNYF",
+        "XNYL",
+        "XNYM",
+        "XNYS",
+        "XNZE",
+        "XOAA",
+        "XOAD",
+        "XOAM",
+        "XOAS",
+        "XOBD",
+        "XOCH",
+        "XODE",
+        "XOFF",
+        "XOME",
+        "XOPV",
+        "XOSA",
+        "XOSC",
+        "XOSD",
+        "XOSE",
+        "XOSJ",
+        "XOSL",
+        "XOSM",
+        "XOST",
+        "XOTB",
+        "XOTC",
+        "XOTP",
+        "XPAC",
+        "XPAE",
+        "XPAL",
+        "XPAR",
+        "XPBT",
+        "XPET",
+        "XPHL",
+        "XPHO",
+        "XPHS",
+        "XPHX",
+        "XPIC",
+        "XPIN",
+        "XPLU",
+        "XPMS",
+        "XPOL",
+        "XPOM",
+        "XPOR",
+        "XPOS",
+        "XPOT",
+        "XPOW",
+        "XPRA",
+        "XPRI",
+        "XPRM",
+        "XPSE",
+        "XPSF",
+        "XPST",
+        "XPSX",
+        "XPTY",
+        "XPUK",
+        "XPUS",
+        "XPXE",
+        "XQLX",
+        "XQMH",
+        "XQOD",
+        "XQTX",
+        "XQUI",
+        "XRAS",
+        "XRBM",
+        "XRCB",
+        "XREP",
+        "XRFQ",
+        "XRIO",
+        "XRIS",
+        "XRMO",
+        "XRMS",
+        "XRMZ",
+        "XROS",
+        "XROT",
+        "XROV",
+        "XROX",
+        "XRPM",
+        "XRSP",
+        "XRTR",
+        "XRUS",
+        "XSAF",
+        "XSAM",
+        "XSAP",
+        "XSAT",
+        "XSAU",
+        "XSBI",
+        "XSBT",
+        "XSC1",
+        "XSC2",
+        "XSC3",
+        "XSCA",
+        "XSCE",
+        "XSCL",
+        "XSCO",
+        "XSCU",
+        "XSDX",
+        "XSEB",
+        "XSEC",
+        "XSEF",
+        "XSES",
+        "XSFA",
+        "XSFE",
+        "XSGA",
+        "XSGB",
+        "XSGE",
+        "XSGO",
+        "XSHE",
+        "XSHG",
+        "XSIB",
+        "XSIC",
+        "XSIM",
+        "XSLS",
+        "XSME",
+        "XSMP",
+        "XSOM",
+        "XSOP",
+        "XSPM",
+        "XSPS",
+        "XSRM",
+        "XSSC",
+        "XSSE",
+        "XSTC",
+        "XSTE",
+        "XSTF",
+        "XSTM",
+        "XSTO",
+        "XSTP",
+        "XSTU",
+        "XSTV",
+        "XSTX",
+        "XSUR",
+        "XSVA",
+        "XSWA",
+        "XSWB",
+        "XSWM",
+        "XSWO",
+        "XSWX",
+        "XTAA",
+        "XTAD",
+        "XTAE",
+        "XTAF",
+        "XTAI",
+        "XTAL",
+        "XTAM",
+        "XTAR",
+        "XTEH",
+        "XTFE",
+        "XTFF",
+        "XTFN",
+        "XTIR",
+        "XTK1",
+        "XTK2",
+        "XTK3",
+        "XTKA",
+        "XTKO",
+        "XTKS",
+        "XTKT",
+        "XTLX",
+        "XTND",
+        "XTNX",
+        "XTOE",
+        "XTPE",
+        "XTPZ",
+        "XTRA",
+        "XTRD",
+        "XTRN",
+        "XTRZ",
+        "XTSE",
+        "XTSX",
+        "XTUC",
+        "XTUN",
+        "XTUP",
+        "XTUR",
+        "XTXD",
+        "XTXE",
+        "XTXM",
+        "XUAX",
+        "XUBS",
+        "XUGA",
+        "XUKR",
+        "XULA",
+        "XUMP",
+        "XUNI",
+        "XUSE",
+        "XVAL",
+        "XVAR",
+        "XVES",
+        "XVIA",
+        "XVIE",
+        "XVLA",
+        "XVPA",
+        "XVPB",
+        "XVSE",
+        "XVTX",
+        "XWAR",
+        "XWBO",
+        "XWCE",
+        "XWEE",
+        "XXSC",
+        "XXXX",
+        "XYIE",
+        "XYKT",
+        "XZAG",
+        "XZAM",
+        "XZAP",
+        "XZCE",
+        "XZIM",
+        "YKNA",
+        "YLDX",
+        "ZAPA",
+        "ZARX",
+        "ZBUL",
+        "ZERO",
+        "ZFXM",
+        "ZKBX",
+        "ZOBX",
+        "ZODM"
+      ],
+      "type": "string"
+    },
+    "Measure_GenMrktEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
+      "title": "Measure[GenMrktEnum, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "$ref": "#/definitions/GenMrktEnum"
+        },
+        "ATTRS": {
+          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "DbtPrmryClssEnum": {
+      "title": "DbtPrmryClssEnum",
+      "description": "An enumeration.",
+      "enum": [
+        "-",
+        "D.1",
+        "D.2",
+        "D.3",
+        "D.9"
+      ],
+      "type": "string"
+    },
+    "Measure_DbtPrmryClssEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
+      "title": "Measure[DbtPrmryClssEnum, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "$ref": "#/definitions/DbtPrmryClssEnum"
+        },
+        "ATTRS": {
+          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "DbtGrntLvlEnum": {
+      "title": "DbtGrntLvlEnum",
+      "description": "An enumeration.",
+      "enum": [
+        "-",
+        "1",
+        "2",
+        "8",
+        "9"
+      ],
+      "type": "string"
+    },
+    "Measure_DbtGrntLvlEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
+      "title": "Measure[DbtGrntLvlEnum, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "$ref": "#/definitions/DbtGrntLvlEnum"
+        },
+        "ATTRS": {
+          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "DbtRnkLvlEnum": {
+      "title": "DbtRnkLvlEnum",
+      "description": "An enumeration.",
+      "enum": [
+        "-",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "9"
+      ],
+      "type": "string"
+    },
+    "Measure_DbtRnkLvlEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
+      "title": "Measure[DbtRnkLvlEnum, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "$ref": "#/definitions/DbtRnkLvlEnum"
+        },
+        "ATTRS": {
+          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "DbtScrtyLvlEnum": {
+      "title": "DbtScrtyLvlEnum",
+      "description": "An enumeration.",
+      "enum": [
+        "-",
+        "1",
+        "2",
+        "3"
+      ],
+      "type": "string"
+    },
+    "Measure_DbtScrtyLvlEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
+      "title": "Measure[DbtScrtyLvlEnum, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "$ref": "#/definitions/DbtScrtyLvlEnum"
+        },
+        "ATTRS": {
+          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "DbtScrtznTypEnum": {
+      "title": "DbtScrtznTypEnum",
+      "description": "An enumeration.",
+      "enum": [
+        "-",
+        "1100",
+        "1200",
+        "1300",
+        "1400",
+        "1500",
+        "1800",
+        "1900"
+      ],
+      "type": "string"
+    },
+    "Measure_DbtScrtznTypEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
+      "title": "Measure[DbtScrtznTypEnum, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "$ref": "#/definitions/DbtScrtznTypEnum"
+        },
+        "ATTRS": {
+          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "DbtCvrdTypEnum": {
+      "title": "DbtCvrdTypEnum",
+      "description": "An enumeration.",
+      "enum": [
+        "-",
+        "2100",
+        "2200",
+        "2300",
+        "2400",
+        "2500",
+        "2800",
+        "2900"
+      ],
+      "type": "string"
+    },
+    "Measure_DbtCvrdTypEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
+      "title": "Measure[DbtCvrdTypEnum, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "$ref": "#/definitions/DbtCvrdTypEnum"
+        },
+        "ATTRS": {
+          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "DbtCpnTypEnum": {
+      "title": "DbtCpnTypEnum",
+      "description": "An enumeration.",
+      "enum": [
+        "-",
+        "FIX",
+        "STE",
+        "FLO",
+        "ZER",
+        "IDX",
+        "OTH",
+        "CRE"
+      ],
+      "type": "string"
+    },
+    "Measure_DbtCpnTypEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
+      "title": "Measure[DbtCpnTypEnum, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "$ref": "#/definitions/DbtCpnTypEnum"
+        },
+        "ATTRS": {
+          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "DbtCpnFrqncyEnum": {
+      "title": "DbtCpnFrqncyEnum",
+      "description": "An enumeration.",
+      "enum": [
+        "-",
+        "ZC",
+        "AN",
+        "SA",
+        "QU",
+        "BM",
+        "MO",
+        "FN",
+        "IR",
+        "UK",
+        "OT"
+      ],
+      "type": "string"
+    },
+    "Measure_DbtCpnFrqncyEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
+      "title": "Measure[DbtCpnFrqncyEnum, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "$ref": "#/definitions/DbtCpnFrqncyEnum"
+        },
+        "ATTRS": {
+          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "Measure_Str6ID__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
+      "title": "Measure[Str6ID, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "title": "Value",
+          "maxLength": 6,
+          "type": "string"
+        },
+        "ATTRS": {
+          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "DebtSeries": {
+      "title": "DebtSeries",
+      "type": "object",
+      "properties": {
+        "DIMS": {
+          "$ref": "#/definitions/BaseDimensionContainer"
+        },
+        "DT_BRTH": {
+          "$ref": "#/definitions/Measure_date__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "DT_CLS": {
+          "$ref": "#/definitions/Measure_date__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "ORGNL_MTRTY": {
+          "$ref": "#/definitions/Measure_date__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "ISIN_ID": {
+          "$ref": "#/definitions/Measure_Str32ID__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "INTRNL_ID": {
+          "$ref": "#/definitions/Measure_Str12ID__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "CRRNCY": {
+          "$ref": "#/definitions/Measure_GenCrrncyEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "ISS_PRC": {
+          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "RDMPTN_PRC": {
+          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "MRKT": {
+          "$ref": "#/definitions/Measure_GenMrktEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "ACCRL_STRTDT": {
+          "$ref": "#/definitions/Measure_date__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "PRMRY_CLSS": {
+          "$ref": "#/definitions/Measure_DbtPrmryClssEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "GRNT_LVL": {
+          "$ref": "#/definitions/Measure_DbtGrntLvlEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "RNK_LVL": {
+          "$ref": "#/definitions/Measure_DbtRnkLvlEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "SCRTY_LVL": {
+          "$ref": "#/definitions/Measure_DbtScrtyLvlEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "IS_SCRTZTN": {
+          "$ref": "#/definitions/Measure_bool__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "SCRTZTN_TYP": {
+          "$ref": "#/definitions/Measure_DbtScrtznTypEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "IS_CVRD": {
+          "$ref": "#/definitions/Measure_bool__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "CVRD_TYP": {
+          "$ref": "#/definitions/Measure_DbtCvrdTypEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "CPN_TYP": {
+          "$ref": "#/definitions/Measure_DbtCpnTypEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "CPN_CRRNCY": {
+          "$ref": "#/definitions/Measure_GenCrrncyEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "CPN_FRQNCY": {
+          "$ref": "#/definitions/Measure_DbtCpnFrqncyEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "CPN_SPRD": {
+          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "CPN_MLTPLR": {
+          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "CPN_CP": {
+          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "CPN_FLR": {
+          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "FRST_CPN_DT": {
+          "$ref": "#/definitions/Measure_date__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "LST_CPN_DT": {
+          "$ref": "#/definitions/Measure_date__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "UNDRLYNG": {
+          "$ref": "#/definitions/Measure_ID__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "MNMM_INVSTMNT": {
+          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "IS_PRVT": {
+          "$ref": "#/definitions/Measure_bool__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "CFI": {
+          "$ref": "#/definitions/Measure_Str6ID__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "RSTRCTRD_T": {
+          "$ref": "#/definitions/Measure_ID__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "RSTRCTRD_FRM": {
+          "$ref": "#/definitions/Measure_ID__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "DDPLCT_OF": {
+          "$ref": "#/definitions/Measure_ID__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        }
+      },
+      "required": [
+        "DIMS"
+      ]
+    },
+    "DbtSttsEnum": {
+      "title": "DbtSttsEnum",
+      "description": "An enumeration.",
+      "enum": [
+        "-",
+        "100",
+        "101",
+        "102",
+        "202",
+        "220",
+        "221",
+        "222",
+        "223"
+      ],
+      "type": "string"
+    },
+    "Measure_DbtSttsEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
+      "title": "Measure[DbtSttsEnum, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "$ref": "#/definitions/DbtSttsEnum"
+        },
+        "ATTRS": {
+          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "StaticDebtSeries": {
+      "title": "StaticDebtSeries",
+      "type": "object",
+      "properties": {
+        "DIMS": {
+          "$ref": "#/definitions/StaticDimensionContainer"
+        },
+        "NM": {
+          "$ref": "#/definitions/Measure_Str128__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "NM_LTN": {
+          "$ref": "#/definitions/Measure_LatinStr128__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "NM_SHRT": {
+          "$ref": "#/definitions/Measure_Str64__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "STTS": {
+          "$ref": "#/definitions/Measure_DbtSttsEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "MTRTY_DT": {
+          "$ref": "#/definitions/Measure_date__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "ISSD_BY": {
+          "$ref": "#/definitions/Measure_ID__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "CFI": {
+          "$ref": "#/definitions/Measure_Str6ID__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        }
+      },
+      "required": [
+        "DIMS"
+      ]
+    },
+    "ShareSeries": {
+      "title": "ShareSeries",
+      "type": "object",
+      "properties": {
+        "DIMS": {
+          "$ref": "#/definitions/BaseDimensionContainer"
+        },
+        "DT_BRTH": {
+          "$ref": "#/definitions/Measure_date__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "DT_CLS": {
+          "$ref": "#/definitions/Measure_date__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "ISIN_ID": {
+          "$ref": "#/definitions/Measure_Str32ID__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "INTRNL_ID": {
+          "$ref": "#/definitions/Measure_Str12ID__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "CRRNCY": {
+          "$ref": "#/definitions/Measure_GenCrrncyEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "MRKT": {
+          "$ref": "#/definitions/Measure_GenMrktEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "RSTRCTRD_T": {
+          "$ref": "#/definitions/Measure_ID__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "DDPLCT_OF": {
+          "$ref": "#/definitions/Measure_ID__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        }
+      },
+      "required": [
+        "DIMS"
+      ]
+    },
+    "ShrFndRdmptnFrqncyEnum": {
+      "title": "ShrFndRdmptnFrqncyEnum",
+      "description": "An enumeration.",
+      "enum": [
+        "-",
+        "PP",
+        "AN",
+        "SA",
+        "QU",
+        "MO",
+        "BA",
+        "OR",
+        "IR",
+        "SS",
+        "ON",
+        "EL",
+        "OT"
+      ],
+      "type": "string"
+    },
+    "Measure_ShrFndRdmptnFrqncyEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
+      "title": "Measure[ShrFndRdmptnFrqncyEnum, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "$ref": "#/definitions/ShrFndRdmptnFrqncyEnum"
+        },
+        "ATTRS": {
+          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "StaticShareSeries": {
+      "title": "StaticShareSeries",
+      "type": "object",
+      "properties": {
+        "DIMS": {
+          "$ref": "#/definitions/StaticDimensionContainer"
+        },
+        "NM": {
+          "$ref": "#/definitions/Measure_Str128__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "NM_LTN": {
+          "$ref": "#/definitions/Measure_LatinStr128__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "NM_SHRT": {
+          "$ref": "#/definitions/Measure_Str64__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "ISSD_BY": {
+          "$ref": "#/definitions/Measure_ID__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "NMNL_PRC": {
+          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "CFI": {
+          "$ref": "#/definitions/Measure_Str6ID__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "RDMPTN_FRQNCY": {
+          "$ref": "#/definitions/Measure_ShrFndRdmptnFrqncyEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "MNMM_AMNT": {
+          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        }
+      },
+      "required": [
+        "DIMS"
+      ]
+    },
+    "ManagementSeries": {
+      "title": "ManagementSeries",
+      "type": "object",
+      "properties": {
+        "DIMS": {
+          "$ref": "#/definitions/BaseDimensionContainer"
+        },
+        "DT_BRTH": {
+          "$ref": "#/definitions/Measure_date__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "DT_CLS": {
+          "$ref": "#/definitions/Measure_date__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "CNTRY_BRTH": {
+          "$ref": "#/definitions/Measure_GenCntryEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "ESCB_ID": {
+          "$ref": "#/definitions/Measure_Str32ID__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "LEI_ID": {
+          "$ref": "#/definitions/Measure_Str20ID__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "TAX_ID": {
+          "$ref": "#/definitions/Measure_Str31ID__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "NBR_ID": {
+          "$ref": "#/definitions/Measure_Str31ID__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "SPLT_FRM": {
+          "$ref": "#/definitions/Measure_ID__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "MRGD_WTH": {
+          "$ref": "#/definitions/Measure_ID__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        }
+      },
+      "required": [
+        "DIMS"
+      ]
+    },
+    "StaticManagementSeries": {
+      "title": "StaticManagementSeries",
+      "type": "object",
+      "properties": {
+        "DIMS": {
+          "$ref": "#/definitions/StaticDimensionContainer"
+        },
+        "NM": {
+          "$ref": "#/definitions/Measure_Str128__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "NM_LTN": {
+          "$ref": "#/definitions/Measure_LatinStr128__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "NM_SHRT": {
+          "$ref": "#/definitions/Measure_Str64__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "STRT": {
+          "$ref": "#/definitions/Measure_Str64__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "STRT_LTN": {
+          "$ref": "#/definitions/Measure_LatinStr64__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "CTY": {
+          "$ref": "#/definitions/Measure_Str32__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "CTY_LTN": {
+          "$ref": "#/definitions/Measure_LatinStr32__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "PSTL_CD": {
+          "$ref": "#/definitions/Measure_Str16__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "PSTL_BX": {
+          "$ref": "#/definitions/Measure_Str8__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "URL": {
+          "$ref": "#/definitions/Measure_AnyUrl__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "EMAIL": {
+          "$ref": "#/definitions/Measure_EmailStr__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "CNTRY_RSDNC": {
+          "$ref": "#/definitions/Measure_GenCntryEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "LGL_PRCDNG_STTS": {
+          "$ref": "#/definitions/Measure_OrgLglPrcdngSttsEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        }
+      },
+      "required": [
+        "DIMS"
+      ]
+    },
+    "ReporterSeries": {
+      "title": "ReporterSeries",
+      "type": "object",
+      "properties": {
+        "DIMS": {
+          "$ref": "#/definitions/BaseDimensionContainer"
+        },
+        "DT_BRTH": {
+          "$ref": "#/definitions/Measure_date__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "DT_CLS": {
+          "$ref": "#/definitions/Measure_date__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "CNTRY_BRTH": {
+          "$ref": "#/definitions/Measure_GenCntryEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "ESCB_ID": {
+          "$ref": "#/definitions/Measure_Str32ID__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "LEI_ID": {
+          "$ref": "#/definitions/Measure_Str20ID__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "TAX_ID": {
+          "$ref": "#/definitions/Measure_Str31ID__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "NBR_ID": {
+          "$ref": "#/definitions/Measure_Str31ID__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "SPLT_FRM": {
+          "$ref": "#/definitions/Measure_ID__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "MRGD_WTH": {
+          "$ref": "#/definitions/Measure_ID__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        }
+      },
+      "required": [
+        "DIMS"
+      ]
+    },
+    "OrgInstttnlSctrEnum": {
+      "title": "OrgInstttnlSctrEnum",
+      "description": "An enumeration.",
+      "enum": [
+        "S11",
+        "S121",
+        "S122",
+        "S123",
+        "S124",
+        "S125",
+        "S126",
+        "S127",
+        "S128",
+        "S129",
+        "S1311",
+        "S1312",
+        "S1313",
+        "S1314",
+        "S14",
+        "S15"
+      ],
+      "type": "string"
+    },
+    "Measure_OrgInstttnlSctrEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
+      "title": "Measure[OrgInstttnlSctrEnum, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "$ref": "#/definitions/OrgInstttnlSctrEnum"
+        },
+        "ATTRS": {
+          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "StaticReporterSeries": {
+      "title": "StaticReporterSeries",
+      "type": "object",
+      "properties": {
+        "DIMS": {
+          "$ref": "#/definitions/StaticDimensionContainer"
+        },
+        "NM": {
+          "$ref": "#/definitions/Measure_Str128__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "NM_LTN": {
+          "$ref": "#/definitions/Measure_LatinStr128__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "NM_SHRT": {
+          "$ref": "#/definitions/Measure_Str64__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "STRT": {
+          "$ref": "#/definitions/Measure_Str64__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "STRT_LTN": {
+          "$ref": "#/definitions/Measure_LatinStr64__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "CTY": {
+          "$ref": "#/definitions/Measure_Str32__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "CTY_LTN": {
+          "$ref": "#/definitions/Measure_LatinStr32__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "PSTL_CD": {
+          "$ref": "#/definitions/Measure_Str16__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "PSTL_BX": {
+          "$ref": "#/definitions/Measure_Str8__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "URL": {
+          "$ref": "#/definitions/Measure_AnyUrl__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "EMAIL": {
+          "$ref": "#/definitions/Measure_EmailStr__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "CNTRY_RSDNC": {
+          "$ref": "#/definitions/Measure_GenCntryEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "LGL_PRCDNG_STTS": {
+          "$ref": "#/definitions/Measure_OrgLglPrcdngSttsEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "INSTTTNL_SCTR": {
+          "$ref": "#/definitions/Measure_OrgInstttnlSctrEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        }
+      },
+      "required": [
+        "DIMS"
+      ]
+    },
+    "AttrCnfdntltySttsEnum": {
+      "title": "AttrCnfdntltySttsEnum",
+      "description": "An enumeration.",
+      "enum": [
+        "C",
+        "F"
+      ],
+      "type": "string"
+    },
+    "GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum_": {
+      "title": "GenericStatusConfAttr[AttrObsrvtnSttsEnum, AttrCnfdntltySttsEnum]",
+      "type": "object",
+      "properties": {
+        "STATUS": {
+          "default": "A",
+          "allOf": [
+            {
+              "$ref": "#/definitions/AttrObsrvtnSttsEnum"
+            }
+          ]
+        },
+        "CONF": {
+          "default": "C",
+          "allOf": [
+            {
+              "$ref": "#/definitions/AttrCnfdntltySttsEnum"
+            }
+          ]
+        }
+      }
+    },
+    "Measure_EmailStr__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__": {
+      "title": "Measure[EmailStr, GenericStatusConfAttr[AttrObsrvtnSttsEnum, AttrCnfdntltySttsEnum]]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "title": "Value",
+          "type": "string",
+          "format": "email"
+        },
+        "ATTRS": {
+          "$ref": "#/definitions/GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum_"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "Measure_Str32__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__": {
+      "title": "Measure[Str32, GenericStatusConfAttr[AttrObsrvtnSttsEnum, AttrCnfdntltySttsEnum]]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "title": "Value",
+          "maxLength": 32,
+          "type": "string"
+        },
+        "ATTRS": {
+          "$ref": "#/definitions/GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum_"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "GenGndrEnum": {
+      "title": "GenGndrEnum",
+      "description": "An enumeration.",
+      "enum": [
+        "-",
+        "MALE",
+        "FEMALE",
+        "OTHER"
+      ],
+      "type": "string"
+    },
+    "Measure_GenGndrEnum__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__": {
+      "title": "Measure[GenGndrEnum, GenericStatusConfAttr[AttrObsrvtnSttsEnum, AttrCnfdntltySttsEnum]]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "$ref": "#/definitions/GenGndrEnum"
+        },
+        "ATTRS": {
+          "$ref": "#/definitions/GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum_"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "Measure_LatinStr32__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__": {
+      "title": "Measure[LatinStr32, GenericStatusConfAttr[AttrObsrvtnSttsEnum, AttrCnfdntltySttsEnum]]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "title": "Value",
+          "maxLength": 32,
+          "type": "string"
+        },
+        "ATTRS": {
+          "$ref": "#/definitions/GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum_"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "ContactSeries": {
+      "title": "ContactSeries",
+      "type": "object",
+      "properties": {
+        "DIMS": {
+          "$ref": "#/definitions/BaseDimensionContainer"
+        },
+        "EMAIL": {
+          "$ref": "#/definitions/Measure_EmailStr__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+        },
+        "FRST": {
+          "$ref": "#/definitions/Measure_Str32__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+        },
+        "FRST_SLTTN": {
+          "$ref": "#/definitions/Measure_Str32__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+        },
+        "LST": {
+          "$ref": "#/definitions/Measure_Str32__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+        },
+        "LST_SLTTN": {
+          "$ref": "#/definitions/Measure_Str32__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+        },
+        "GNDR": {
+          "$ref": "#/definitions/Measure_GenGndrEnum__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+        },
+        "PHN": {
+          "$ref": "#/definitions/Measure_LatinStr32__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+        }
+      },
+      "required": [
+        "DIMS"
+      ]
+    },
+    "RelDimensionContainer": {
+      "title": "RelDimensionContainer",
+      "type": "object",
+      "properties": {
+        "LID": {
+          "title": "Lid",
+          "maxLength": 32,
+          "type": "string"
+        },
+        "RID": {
+          "title": "Rid",
+          "maxLength": 32,
+          "type": "string"
+        },
+        "VLD_FRM": {
+          "title": "Vld Frm",
+          "type": "string",
+          "format": "date"
+        },
+        "VLD_T": {
+          "title": "Vld T",
+          "type": "string",
+          "format": "date"
+        }
+      },
+      "required": [
+        "LID",
+        "RID"
+      ]
+    },
+    "DprtmntEnum": {
+      "title": "DprtmntEnum",
+      "description": "An enumeration.",
+      "enum": [
+        "-",
+        "ACC",
+        "ECO",
+        "COM",
+        "FIN",
+        "STA",
+        "ORG"
+      ],
+      "type": "string"
+    },
+    "Measure_DprtmntEnum__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__": {
+      "title": "Measure[DprtmntEnum, GenericStatusConfAttr[AttrObsrvtnSttsEnum, AttrCnfdntltySttsEnum]]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "$ref": "#/definitions/DprtmntEnum"
+        },
+        "ATTRS": {
+          "$ref": "#/definitions/GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum_"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "Measure_bool__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__": {
+      "title": "Measure[bool, GenericStatusConfAttr[AttrObsrvtnSttsEnum, AttrCnfdntltySttsEnum]]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "title": "Value",
+          "type": "boolean"
+        },
+        "ATTRS": {
+          "$ref": "#/definitions/GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum_"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "ContactToReporterSeries": {
+      "title": "ContactToReporterSeries",
+      "type": "object",
+      "properties": {
+        "DIMS": {
+          "$ref": "#/definitions/RelDimensionContainer"
+        },
+        "ASSCTD_WTH": {
+          "$ref": "#/definitions/Measure_bool__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "IS_EMPLY_OF": {
+          "$ref": "#/definitions/Measure_bool__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "IS_CNTRCTR_OF": {
+          "$ref": "#/definitions/Measure_bool__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "WRKS_FR": {
+          "$ref": "#/definitions/Measure_DprtmntEnum__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+        },
+        "RSPNSBL_FR_IFDAT": {
+          "$ref": "#/definitions/Measure_bool__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+        }
+      },
+      "required": [
+        "DIMS"
+      ]
+    },
+    "Datasets": {
+      "title": "Datasets",
+      "type": "object",
+      "properties": {
+        "FUND": {
+          "title": "Fund",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/FundSeries"
+          }
+        },
+        "STATIC_FUND": {
+          "title": "Static Fund",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/StaticFundSeries"
+          }
+        },
+        "DEBT": {
+          "title": "Debt",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/DebtSeries"
+          }
+        },
+        "STATIC_DEBT": {
+          "title": "Static Debt",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/StaticDebtSeries"
+          }
+        },
+        "SHARE": {
+          "title": "Share",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ShareSeries"
+          }
+        },
+        "STATIC_SHARE": {
+          "title": "Static Share",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/StaticShareSeries"
+          }
+        },
+        "MANAGEMENT": {
+          "title": "Management",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ManagementSeries"
+          }
+        },
+        "STATIC_MANAGEMENT": {
+          "title": "Static Management",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/StaticManagementSeries"
+          }
+        },
+        "RA": {
+          "title": "Ra",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ReporterSeries"
+          }
+        },
+        "STATIC_RA": {
+          "title": "Static Ra",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/StaticReporterSeries"
+          }
+        },
+        "CONTACT": {
+          "title": "Contact",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ContactSeries"
+          }
+        },
+        "CONTACT_TO_RA": {
+          "title": "Contact To Ra",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ContactToReporterSeries"
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

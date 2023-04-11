@@ -1,0 +1,430 @@
+{
+  "title": "Message",
+  "type": "object",
+  "properties": {
+    "HEADER": {
+      "$ref": "#/definitions/Header"
+    },
+    "DATASETS": {
+      "$ref": "#/definitions/Datasets"
+    }
+  },
+  "required": [
+    "HEADER",
+    "DATASETS"
+  ],
+  "additionalProperties": false,
+  "definitions": {
+    "Header": {
+      "title": "Header",
+      "type": "object",
+      "properties": {
+        "SOURCE_ORG": {
+          "title": "Source Org",
+          "maxLength": 32,
+          "type": "string"
+        },
+        "SOURCE_PERSON": {
+          "title": "Source Person",
+          "maxLength": 32,
+          "type": "string"
+        },
+        "DOMAIN": {
+          "title": "Domain",
+          "enum": [
+            "IFDat"
+          ],
+          "type": "string"
+        },
+        "CATEGORY": {
+          "title": "Category",
+          "enum": [
+            "other_key"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "SOURCE_ORG",
+        "SOURCE_PERSON",
+        "DOMAIN",
+        "CATEGORY"
+      ]
+    },
+    "DtDimensionContainer": {
+      "title": "DtDimensionContainer",
+      "type": "object",
+      "properties": {
+        "ID": {
+          "title": "Id",
+          "maxLength": 32,
+          "type": "string"
+        },
+        "DT": {
+          "title": "Dt",
+          "type": "string",
+          "format": "date"
+        }
+      },
+      "required": [
+        "ID",
+        "DT"
+      ]
+    },
+    "AttrObsrvtnSttsEnum": {
+      "title": "AttrObsrvtnSttsEnum",
+      "description": "An enumeration.",
+      "enum": [
+        "A",
+        "E",
+        "M",
+        "O"
+      ],
+      "type": "string"
+    },
+    "GenericStatusAttr_AttrObsrvtnSttsEnum_": {
+      "title": "GenericStatusAttr[AttrObsrvtnSttsEnum]",
+      "type": "object",
+      "properties": {
+        "STATUS": {
+          "default": "A",
+          "allOf": [
+            {
+              "$ref": "#/definitions/AttrObsrvtnSttsEnum"
+            }
+          ]
+        }
+      }
+    },
+    "Measure_NonNegativeFloat__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
+      "title": "Measure[NonNegativeFloat, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "title": "Value",
+          "minimum": 0,
+          "type": "number"
+        },
+        "ATTRS": {
+          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "DebtSeries": {
+      "title": "DebtSeries",
+      "type": "object",
+      "properties": {
+        "DIMS": {
+          "$ref": "#/definitions/DtDimensionContainer"
+        },
+        "PRC": {
+          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "ACCRD_INTRST": {
+          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        }
+      },
+      "required": [
+        "DIMS",
+        "PRC",
+        "ACCRD_INTRST"
+      ]
+    },
+    "Measure_float__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
+      "title": "Measure[float, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "title": "Value",
+          "type": "number"
+        },
+        "ATTRS": {
+          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "CouponSeries": {
+      "title": "CouponSeries",
+      "type": "object",
+      "properties": {
+        "DIMS": {
+          "$ref": "#/definitions/DtDimensionContainer"
+        },
+        "RT": {
+          "$ref": "#/definitions/Measure_float__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        }
+      },
+      "required": [
+        "DIMS",
+        "RT"
+      ]
+    },
+    "ShareSeries": {
+      "title": "ShareSeries",
+      "type": "object",
+      "properties": {
+        "DIMS": {
+          "$ref": "#/definitions/DtDimensionContainer"
+        },
+        "PRC": {
+          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        }
+      },
+      "required": [
+        "DIMS",
+        "PRC"
+      ]
+    },
+    "DvdndTypEnum": {
+      "title": "DvdndTypEnum",
+      "description": "An enumeration.",
+      "enum": [
+        "-",
+        "10",
+        "20",
+        "11",
+        "12",
+        "13",
+        "21",
+        "22",
+        "23",
+        "31",
+        "32",
+        "33",
+        "91",
+        "92",
+        "93"
+      ],
+      "type": "string"
+    },
+    "Measure_DvdndTypEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
+      "title": "Measure[DvdndTypEnum, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "$ref": "#/definitions/DvdndTypEnum"
+        },
+        "ATTRS": {
+          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "GenCrrncyEnum": {
+      "title": "GenCrrncyEnum",
+      "description": "An enumeration.",
+      "enum": [
+        "ARS",
+        "AUD",
+        "BGN",
+        "BRL",
+        "CAD",
+        "CHF",
+        "CLP",
+        "CNY",
+        "COP",
+        "CZK",
+        "DKK",
+        "EGP",
+        "EUR",
+        "GBP",
+        "HKD",
+        "HRK",
+        "HUF",
+        "IDR",
+        "ILS",
+        "INR",
+        "JPY",
+        "KRW",
+        "KZT",
+        "MXN",
+        "NOK",
+        "PEN",
+        "PGK",
+        "PHP",
+        "PLN",
+        "RON",
+        "RSD",
+        "RUB",
+        "SEK",
+        "SGD",
+        "THB",
+        "TRY",
+        "TWD",
+        "UAH",
+        "USD",
+        "ZAR",
+        "GRD"
+      ],
+      "type": "string"
+    },
+    "Measure_GenCrrncyEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
+      "title": "Measure[GenCrrncyEnum, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "$ref": "#/definitions/GenCrrncyEnum"
+        },
+        "ATTRS": {
+          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "Measure_PositiveFloat__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
+      "title": "Measure[PositiveFloat, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "title": "Value",
+          "exclusiveMinimum": 0,
+          "type": "number"
+        },
+        "ATTRS": {
+          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "DividendSeries": {
+      "title": "DividendSeries",
+      "type": "object",
+      "properties": {
+        "DIMS": {
+          "$ref": "#/definitions/DtDimensionContainer"
+        },
+        "TYP": {
+          "$ref": "#/definitions/Measure_DvdndTypEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "CRRNCY": {
+          "$ref": "#/definitions/Measure_GenCrrncyEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "AMNT": {
+          "$ref": "#/definitions/Measure_PositiveFloat__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        }
+      },
+      "required": [
+        "DIMS",
+        "TYP",
+        "CRRNCY",
+        "AMNT"
+      ]
+    },
+    "SplitSeries": {
+      "title": "SplitSeries",
+      "type": "object",
+      "properties": {
+        "DIMS": {
+          "$ref": "#/definitions/DtDimensionContainer"
+        },
+        "FCTR": {
+          "$ref": "#/definitions/Measure_PositiveFloat__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        }
+      },
+      "required": [
+        "DIMS",
+        "FCTR"
+      ]
+    },
+    "EdrSeries": {
+      "title": "EdrSeries",
+      "type": "object",
+      "properties": {
+        "DIMS": {
+          "$ref": "#/definitions/DtDimensionContainer"
+        },
+        "PRC": {
+          "$ref": "#/definitions/Measure_float__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        }
+      },
+      "required": [
+        "DIMS",
+        "PRC"
+      ]
+    },
+    "OdrSeries": {
+      "title": "OdrSeries",
+      "type": "object",
+      "properties": {
+        "DIMS": {
+          "$ref": "#/definitions/DtDimensionContainer"
+        },
+        "PRC": {
+          "$ref": "#/definitions/Measure_float__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        }
+      },
+      "required": [
+        "DIMS",
+        "PRC"
+      ]
+    },
+    "Datasets": {
+      "title": "Datasets",
+      "type": "object",
+      "properties": {
+        "DEBT": {
+          "title": "Debt",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/DebtSeries"
+          }
+        },
+        "COUPON": {
+          "title": "Coupon",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CouponSeries"
+          }
+        },
+        "SHARE": {
+          "title": "Share",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ShareSeries"
+          }
+        },
+        "DIVIDEND": {
+          "title": "Dividend",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/DividendSeries"
+          }
+        },
+        "SPLIT": {
+          "title": "Split",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SplitSeries"
+          }
+        },
+        "EXT_DERIVATIVE": {
+          "title": "Ext Derivative",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/EdrSeries"
+          }
+        },
+        "OTC_DERIVATIVE": {
+          "title": "Otc Derivative",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/OdrSeries"
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

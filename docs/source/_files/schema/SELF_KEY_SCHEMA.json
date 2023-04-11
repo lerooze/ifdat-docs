@@ -1,0 +1,529 @@
+{
+  "title": "Message",
+  "type": "object",
+  "properties": {
+    "HEADER": {
+      "$ref": "#/definitions/Header"
+    },
+    "DATASETS": {
+      "$ref": "#/definitions/Datasets"
+    }
+  },
+  "required": [
+    "HEADER",
+    "DATASETS"
+  ],
+  "additionalProperties": false,
+  "definitions": {
+    "Header": {
+      "title": "Header",
+      "type": "object",
+      "properties": {
+        "SOURCE_ORG": {
+          "title": "Source Org",
+          "maxLength": 32,
+          "type": "string"
+        },
+        "SOURCE_PERSON": {
+          "title": "Source Person",
+          "maxLength": 32,
+          "type": "string"
+        },
+        "DOMAIN": {
+          "title": "Domain",
+          "enum": [
+            "IFDat"
+          ],
+          "type": "string"
+        },
+        "CATEGORY": {
+          "title": "Category",
+          "enum": [
+            "self_key"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "SOURCE_ORG",
+        "SOURCE_PERSON",
+        "DOMAIN",
+        "CATEGORY"
+      ]
+    },
+    "DtDimensionContainer": {
+      "title": "DtDimensionContainer",
+      "type": "object",
+      "properties": {
+        "ID": {
+          "title": "Id",
+          "maxLength": 32,
+          "type": "string"
+        },
+        "DT": {
+          "title": "Dt",
+          "type": "string",
+          "format": "date"
+        }
+      },
+      "required": [
+        "ID",
+        "DT"
+      ]
+    },
+    "AttrObsrvtnSttsEnum": {
+      "title": "AttrObsrvtnSttsEnum",
+      "description": "An enumeration.",
+      "enum": [
+        "A",
+        "E",
+        "M",
+        "O"
+      ],
+      "type": "string"
+    },
+    "GenericStatusAttr_AttrObsrvtnSttsEnum_": {
+      "title": "GenericStatusAttr[AttrObsrvtnSttsEnum]",
+      "type": "object",
+      "properties": {
+        "STATUS": {
+          "default": "A",
+          "allOf": [
+            {
+              "$ref": "#/definitions/AttrObsrvtnSttsEnum"
+            }
+          ]
+        }
+      }
+    },
+    "Measure_NonNegativeFloat__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
+      "title": "Measure[NonNegativeFloat, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "title": "Value",
+          "minimum": 0,
+          "type": "number"
+        },
+        "ATTRS": {
+          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "DebtSeries": {
+      "title": "DebtSeries",
+      "type": "object",
+      "properties": {
+        "DIMS": {
+          "$ref": "#/definitions/DtDimensionContainer"
+        },
+        "PRC": {
+          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "ACCRD_INTRST": {
+          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "OTSTNDNG": {
+          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        }
+      },
+      "required": [
+        "DIMS",
+        "PRC",
+        "ACCRD_INTRST",
+        "OTSTNDNG"
+      ]
+    },
+    "Measure_float__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
+      "title": "Measure[float, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "title": "Value",
+          "type": "number"
+        },
+        "ATTRS": {
+          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "CouponSeries": {
+      "title": "CouponSeries",
+      "type": "object",
+      "properties": {
+        "DIMS": {
+          "$ref": "#/definitions/DtDimensionContainer"
+        },
+        "RT": {
+          "$ref": "#/definitions/Measure_float__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        }
+      },
+      "required": [
+        "DIMS",
+        "RT"
+      ]
+    },
+    "GenFrqncyEnum": {
+      "title": "GenFrqncyEnum",
+      "description": "An enumeration.",
+      "enum": [
+        "-",
+        "A",
+        "B",
+        "D",
+        "H",
+        "M",
+        "N",
+        "Q",
+        "S",
+        "W",
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A10",
+        "A20",
+        "A30",
+        "A_3",
+        "M2",
+        "M_2",
+        "M_3",
+        "W2",
+        "W3",
+        "W4",
+        "W_2",
+        "W_3",
+        "D_2",
+        "H2",
+        "H3",
+        "I",
+        "OA",
+        "OM",
+        "_O",
+        "_U",
+        "_Z"
+      ],
+      "type": "string"
+    },
+    "FreqDimensionContainer": {
+      "title": "FreqDimensionContainer",
+      "type": "object",
+      "properties": {
+        "ID": {
+          "title": "Id",
+          "maxLength": 32,
+          "type": "string"
+        },
+        "DT": {
+          "title": "Dt",
+          "type": "string",
+          "format": "date"
+        },
+        "FRQNCY": {
+          "$ref": "#/definitions/GenFrqncyEnum"
+        }
+      },
+      "required": [
+        "ID",
+        "DT",
+        "FRQNCY"
+      ]
+    },
+    "ShareSeries": {
+      "title": "ShareSeries",
+      "type": "object",
+      "properties": {
+        "DIMS": {
+          "$ref": "#/definitions/FreqDimensionContainer"
+        },
+        "PRC": {
+          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "OTSTNDNG": {
+          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "SBSCRPTNS": {
+          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "RDMPTNS": {
+          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        }
+      },
+      "required": [
+        "DIMS",
+        "PRC",
+        "OTSTNDNG",
+        "SBSCRPTNS",
+        "RDMPTNS"
+      ]
+    },
+    "Measure_date__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
+      "title": "Measure[date, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "title": "Value",
+          "type": "string",
+          "format": "date"
+        },
+        "ATTRS": {
+          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "DvdndCstmFrqncyEnum": {
+      "title": "DvdndCstmFrqncyEnum",
+      "description": "An enumeration.",
+      "enum": [
+        "-",
+        "AN",
+        "SA",
+        "QA",
+        "BM",
+        "MO",
+        "WE",
+        "DA"
+      ],
+      "type": "string"
+    },
+    "Measure_DvdndCstmFrqncyEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
+      "title": "Measure[DvdndCstmFrqncyEnum, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "$ref": "#/definitions/DvdndCstmFrqncyEnum"
+        },
+        "ATTRS": {
+          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "DvdndTypEnum": {
+      "title": "DvdndTypEnum",
+      "description": "An enumeration.",
+      "enum": [
+        "-",
+        "10",
+        "20",
+        "11",
+        "12",
+        "13",
+        "21",
+        "22",
+        "23",
+        "31",
+        "32",
+        "33",
+        "91",
+        "92",
+        "93"
+      ],
+      "type": "string"
+    },
+    "Measure_DvdndTypEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
+      "title": "Measure[DvdndTypEnum, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "$ref": "#/definitions/DvdndTypEnum"
+        },
+        "ATTRS": {
+          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "GenCrrncyEnum": {
+      "title": "GenCrrncyEnum",
+      "description": "An enumeration.",
+      "enum": [
+        "ARS",
+        "AUD",
+        "BGN",
+        "BRL",
+        "CAD",
+        "CHF",
+        "CLP",
+        "CNY",
+        "COP",
+        "CZK",
+        "DKK",
+        "EGP",
+        "EUR",
+        "GBP",
+        "HKD",
+        "HRK",
+        "HUF",
+        "IDR",
+        "ILS",
+        "INR",
+        "JPY",
+        "KRW",
+        "KZT",
+        "MXN",
+        "NOK",
+        "PEN",
+        "PGK",
+        "PHP",
+        "PLN",
+        "RON",
+        "RSD",
+        "RUB",
+        "SEK",
+        "SGD",
+        "THB",
+        "TRY",
+        "TWD",
+        "UAH",
+        "USD",
+        "ZAR",
+        "GRD"
+      ],
+      "type": "string"
+    },
+    "Measure_GenCrrncyEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
+      "title": "Measure[GenCrrncyEnum, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "$ref": "#/definitions/GenCrrncyEnum"
+        },
+        "ATTRS": {
+          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "Measure_PositiveFloat__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
+      "title": "Measure[PositiveFloat, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "title": "Value",
+          "exclusiveMinimum": 0,
+          "type": "number"
+        },
+        "ATTRS": {
+          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "DividendSeries": {
+      "title": "DividendSeries",
+      "type": "object",
+      "properties": {
+        "DIMS": {
+          "$ref": "#/definitions/DtDimensionContainer"
+        },
+        "EX_DT": {
+          "$ref": "#/definitions/Measure_date__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "DCLRTN_DT": {
+          "$ref": "#/definitions/Measure_date__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "PYMNT_DT": {
+          "$ref": "#/definitions/Measure_date__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "FRQNCY": {
+          "$ref": "#/definitions/Measure_DvdndCstmFrqncyEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "TYP": {
+          "$ref": "#/definitions/Measure_DvdndTypEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "CRRNCY": {
+          "$ref": "#/definitions/Measure_GenCrrncyEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        },
+        "AMNT": {
+          "$ref": "#/definitions/Measure_PositiveFloat__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        }
+      },
+      "required": [
+        "DIMS",
+        "EX_DT",
+        "DCLRTN_DT",
+        "PYMNT_DT",
+        "FRQNCY",
+        "TYP",
+        "CRRNCY",
+        "AMNT"
+      ]
+    },
+    "SplitSeries": {
+      "title": "SplitSeries",
+      "type": "object",
+      "properties": {
+        "DIMS": {
+          "$ref": "#/definitions/DtDimensionContainer"
+        },
+        "FCTR": {
+          "$ref": "#/definitions/Measure_PositiveFloat__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+        }
+      },
+      "required": [
+        "DIMS",
+        "FCTR"
+      ]
+    },
+    "Datasets": {
+      "title": "Datasets",
+      "type": "object",
+      "properties": {
+        "DEBT": {
+          "title": "Debt",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/DebtSeries"
+          }
+        },
+        "COUPON": {
+          "title": "Coupon",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CouponSeries"
+          }
+        },
+        "SHARE": {
+          "title": "Share",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ShareSeries"
+          }
+        },
+        "DIV": {
+          "title": "Div",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/DividendSeries"
+          }
+        },
+        "SPLIT": {
+          "title": "Split",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SplitSeries"
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}
