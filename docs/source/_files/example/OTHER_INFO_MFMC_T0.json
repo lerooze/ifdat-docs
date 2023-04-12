@@ -1,6 +1,6 @@
 {
   "HEADER": {
-    "SOURCE_ORG": "GRMFMC000",
+    "SOURCE_ORG": "EGRMFMC000",
     "SOURCE_PERSON": "aloumiotis@foo.gr",
     "DOMAIN": "IFDat",
     "CATEGORY": "other_info"
@@ -9,7 +9,7 @@
     "ISSUER": [
       {
         "DIMS": {
-          "ID": "GR011"
+          "ID": "EGR011"
         },
         "ESCB_ID": {
           "VALUE": "GR011"
@@ -17,7 +17,7 @@
       },
       {
         "DIMS": {
-          "ID": "GR017N"
+          "ID": "EGR017N"
         },
         "ESCB_ID": {
           "VALUE": "GR017N"
@@ -25,7 +25,7 @@
       },
       {
         "DIMS": {
-          "ID": "L_213800U3Y9UL7Y4QVM11"
+          "ID": "L213800U3Y9UL7Y4QVM11"
         },
         "LEI_ID": {
           "VALUE": "213800U3Y9UL7Y4QVM11"
@@ -35,7 +35,7 @@
     "STATIC_ISSUER": [
       {
         "DIMS": {
-          "ID": "GR011"
+          "ID": "EGR011"
         },
         "NM": {
           "VALUE": "ΕΘΝΙΚΗ ΤΡΑΠΕΖΑ ΤΗΣ ΕΛΛΑΔΟΣ Α.Ε."
@@ -55,7 +55,7 @@
       },
       {
         "DIMS": {
-          "ID": "GR017N"
+          "ID": "EGR017N"
         },
         "NM": {
           "VALUE": "ΤΡΑΠΕΖΑ ΠΕΙΡΑΙΩΣ ΑΝΩΝΥΜΟΣ ΕΤΑΙΡΕΙΑ"
@@ -75,7 +75,7 @@
       },
       {
         "DIMS": {
-          "ID": "L_213800U3Y9UL7Y4QVM11"
+          "ID": "L213800U3Y9UL7Y4QVM11"
         },
         "NM": {
           "VALUE": "ΜΟΤΟΡ ΟΪΛ (ΕΛΛΑΣ) ΔΙΥΛΙΣΤΗΡΙΑ ΚΟΡΙΝΘΟΥ ΑΕ"
@@ -97,7 +97,7 @@
     "HOLDER": [
       {
         "DIMS": {
-          "ID": "I_GRMFMC000_H1"
+          "ID": "PGRMFMC000_H1"
         },
         "INTRNL_ID": {
           "VALUE": "GRMFMC000_H1"
@@ -105,7 +105,7 @@
       },
       {
         "DIMS": {
-          "ID": "I_GRMFMC000_H2"
+          "ID": "PGRMFMC000_H2"
         },
         "INTRNL_ID": {
           "VALUE": "GRMFMC000_H2"
@@ -113,7 +113,7 @@
       },
       {
         "DIMS": {
-          "ID": "T_GR99999999"
+          "ID": "TGR99999999"
         },
         "TAX_ID": {
           "VALUE": "GR999999999"
@@ -123,7 +123,7 @@
     "STATIC_HOLDER": [
       {
         "DIMS": {
-          "ID": "I_GRMFMC000_H1"
+          "ID": "PGRMFMC000_H1"
         },
         "CNTRY_RSDNC": {
           "VALUE": "GR"
@@ -134,7 +134,7 @@
       },
       {
         "DIMS": {
-          "ID": "I_GRMFMC000_H2"
+          "ID": "PGRMFMC000_H2"
         },
         "CNTRY_RSDNC": {
           "VALUE": "CY"
@@ -145,7 +145,7 @@
       },
       {
         "DIMS": {
-          "ID": "T_GR99999999"
+          "ID": "TGR99999999"
         },
         "NM": {
           "VALUE": "ΥΠΟΘΕΤΙΚΗ Α.Ε."
@@ -161,7 +161,7 @@
     "DEPOSIT": [
       {
         "DIMS": {
-          "ID": "GR8801101230000012300302300"
+          "ID": "IGR8801101230000012300302300"
         },
         "DT_BRTH": {
           "VALUE": "2022-01-27"
@@ -183,7 +183,7 @@
     "STATIC_DEPOSIT": [
       {
         "DIMS": {
-          "ID": "GR8801101230000012300302300"
+          "ID": "IGR8801101230000012300302300"
         },
         "NMNL_INTRST": {
           "VALUE": 1.0
@@ -192,17 +192,17 @@
           "VALUE": 2.0
         },
         "DBTR": {
-          "VALUE": "GR011"
+          "VALUE": "EGR011"
         },
         "CRDTR": {
-          "VALUE": "GRAK1"
+          "VALUE": "EGRAK1"
         }
       }
     ],
     "DEBT": [
       {
         "DIMS": {
-          "ID": "XS2400040460"
+          "ID": "IXS2400040460"
         },
         "DT_BRTH": {
           "VALUE": "2021-11-03"
@@ -260,7 +260,7 @@
     "STATIC_DEBT": [
       {
         "DIMS": {
-          "ID": "XS2400040460"
+          "ID": "IXS2400040460"
         },
         "NM": {
           "VALUE": "Piraeus Bank S.A. 3,875% 21/27"
@@ -272,14 +272,14 @@
           "VALUE": "2027-11-03"
         },
         "ISSD_BY": {
-          "VALUE": "GR017N"
+          "VALUE": "EGR017N"
         }
       }
     ],
     "SHARE": [
       {
         "DIMS": {
-          "ID": "GRS426003000"
+          "ID": "IGRS426003000"
         },
         "ISIN_ID": {
           "VALUE": "GRS426003000"
@@ -301,13 +301,13 @@
     "STATIC_SHARE": [
       {
         "DIMS": {
-          "ID": "GRS426003000"
+          "ID": "IGRS426003000"
         },
         "NM": {
           "VALUE": "ΜΟΤΟΡ ΟΪΛ ΕΛΛΑΣ Α.Ε. (ΚΟ)"
         },
         "ISSD_BY": {
-          "VALUE": "L_213800U3Y9UL7Y4QVM11"
+          "VALUE": "L213800U3Y9UL7Y4QVM11"
         }
       }
     ]

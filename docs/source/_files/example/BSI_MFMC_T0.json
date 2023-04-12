@@ -1,6 +1,6 @@
 {
   "HEADER": {
-    "SOURCE_ORG": "GRMFMC000",
+    "SOURCE_ORG": "EGRMFMC000",
     "SOURCE_PERSON": "aloumiotis@foo.gr",
     "DOMAIN": "IFDat",
     "CATEGORY": "bsi"
@@ -9,7 +9,7 @@
     "DEPOSIT": [
       {
         "DIMS": {
-          "IID": "GR8801101230000012300302300",
+          "IID": "IGR8801101230000012300302300",
           "DT": "2022-01-31"
         },
         "STCK": {
@@ -26,8 +26,8 @@
     "ASSET_DEBT": [
       {
         "DIMS": {
-          "IID": "XS2400040460",
-          "ID": "GRAK1",
+          "IID": "IXS2400040460",
+          "ID": "EGRAK1",
           "DT": "2022-01-31",
           "FRQNCY": "M"
         },
@@ -66,8 +66,8 @@
     "SHARE": [
       {
         "DIMS": {
-          "IID": "XS2400040460",
-          "ID": "GRAK1",
+          "IID": "IXS2400040460",
+          "ID": "EGRAK1",
           "DT": "2022-01-31",
           "FRQNCY": "M"
         },
@@ -100,7 +100,7 @@
     "LIAB_REM": [
       {
         "DIMS": {
-          "ID": "GRAK1",
+          "ID": "IGRAK1",
           "CNTRGRP": "S126.GR",
           "CRRNCY": "EUR",
           "DT": "2022-01-31"
@@ -116,8 +116,8 @@
     "HOLDER": [
       {
         "DIMS": {
-          "IID": "GRF000000001",
-          "ID": "I_GRMFMC000_H1",
+          "IID": "IGRF000000001",
+          "ID": "PGRMFMC000_H1",
           "DT": "2022-01-31",
           "FRQNCY": "M"
         },
@@ -139,8 +139,8 @@
       },
       {
         "DIMS": {
-          "IID": "GRF000000001",
-          "ID": "I_GRMFMC000_H2",
+          "IID": "IGRF000000001",
+          "ID": "PGRMFMC000_H2",
           "DT": "2022-01-31",
           "FRQNCY": "M"
         },
@@ -162,8 +162,8 @@
       },
       {
         "DIMS": {
-          "IID": "GRF000000001",
-          "ID": "T_GR99999999",
+          "IID": "IGRF000000001",
+          "ID": "TGR99999999",
           "DT": "2022-01-31",
           "FRQNCY": "M"
         },

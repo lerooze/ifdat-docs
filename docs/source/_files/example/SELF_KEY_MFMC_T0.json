@@ -1,6 +1,6 @@
 {
   "HEADER": {
-    "SOURCE_ORG": "GRMFMC000",
+    "SOURCE_ORG": "EGRMFMC000",
     "SOURCE_PERSON": "aloumiotis@foo.gr",
     "DOMAIN": "IFDat",
     "CATEGORY": "self_key"
@@ -9,7 +9,7 @@
     "SHARE": [
       {
         "DIMS": {
-          "ID": "GRF000000001",
+          "ID": "IGRF000000001",
           "DT": "2022-01-27",
           "FRQNCY": "D"
         },
@@ -28,7 +28,7 @@
       },
       {
         "DIMS": {
-          "ID": "GRF000000001",
+          "ID": "IGRF000000001",
           "DT": "2022-01-28",
           "FRQNCY": "D"
         },
@@ -47,7 +47,7 @@
       },
       {
         "DIMS": {
-          "ID": "GRF000000001",
+          "ID": "IGRF000000001",
           "DT": "2022-01-31",
           "FRQNCY": "D"
         },

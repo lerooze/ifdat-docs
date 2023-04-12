@@ -1,6 +1,6 @@
 {
   "HEADER": {
-    "SOURCE_ORG": "GRMFMC000",
+    "SOURCE_ORG": "EGRMFMC000",
     "SOURCE_PERSON": "aloumiotis@foo.gr",
     "DOMAIN": "IFDat",
     "CATEGORY": "self_info"
@@ -9,7 +9,7 @@
     "FUND": [
       {
         "DIMS": {
-          "ID": "GRAK1"
+          "ID": "EGRAK1"
         },
         "DT_BRTH": {
           "VALUE": "2022-01-27"
@@ -18,7 +18,7 @@
           "VALUE": "GR"
         },
         "ESCB_ID": {
-          "VALUE": "GRAK1"
+          "VALUE": "EGRAK1"
         },
         "LEI_ID": {
           "VALUE": "213800X4WM397A7OL933"
@@ -55,10 +55,10 @@
           "VALUE": "2"
         },
         "MNGD_BY": {
-          "VALUE": "GRMFMC000"
+          "VALUE": "EGRMFMC000"
         },
         "RPRTD_BY": {
-          "VALUE": "GRMFMC000"
+          "VALUE": "EGRMFMC000"
         },
         "TYP": {
           "VALUE": "UCITS"
@@ -86,7 +86,7 @@
     "SHARE": [
       {
         "DIMS": {
-          "ID": "GRF000000001"
+          "ID": "IGRF000000001"
         },
         "DT_BRTH": {
           "VALUE": "2022-01-27"
@@ -114,7 +114,7 @@
           "VALUE": "FOO BLNCD DOMESTIC (R)/UT"
         },
         "ISSD_BY": {
-          "VALUE": "GRAK1"
+          "VALUE": "EGRAK1"
         },
         "NMNL_PRC": {
           "VALUE": 10.0
@@ -130,7 +130,7 @@
     "MANAGEMENT": [
       {
         "DIMS": {
-          "ID": "GRMFMC000"
+          "ID": "EGRMFMC000"
         },
         "DT_BRTH": {
           "VALUE": "2022-01-01"
@@ -155,7 +155,7 @@
     "STATIC_MANAGEMENT": [
       {
         "DIMS": {
-          "ID": "GRMFMC000"
+          "ID": "EGRMFMC000"
         },
         "NM": {
           "VALUE": "ΦΟΥ ΑΕΔΑΚ"
@@ -227,7 +227,7 @@
       {
         "DIMS": {
           "LID": "aloumiotis@foo.gr",
-          "RID": "GRMFMC000"
+          "RID": "EGRMFMC000"
         },
         "ASSCTD_WTH": {
           "VALUE": true
