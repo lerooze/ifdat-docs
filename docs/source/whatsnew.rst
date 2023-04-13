@@ -12,6 +12,13 @@ What's new?
 .. ============
 
 
+v0.3.1 (2023-04-13)
+-------------------
+
+* Fix INTERNAL ID format
+* Fix minor bugs
+* Fix syntax
+
 v0.3.0 (2023-04-11)
 -------------------
 
