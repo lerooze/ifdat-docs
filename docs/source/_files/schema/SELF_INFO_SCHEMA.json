@@ -19,14 +19,16 @@
       "title": "Header",
       "type": "object",
       "properties": {
-        "SOURCE_ORG": {
-          "title": "Source Org",
+        "RA": {
+          "title": "Ra",
           "maxLength": 32,
+          "pattern": "^[ELTBP][a-zA-z0-9_]+",
           "type": "string"
         },
-        "SOURCE_PERSON": {
-          "title": "Source Person",
+        "RP": {
+          "title": "Rp",
           "maxLength": 32,
+          "pattern": "^[a-zA-z0-9_]+",
           "type": "string"
         },
         "DOMAIN": {
@@ -39,25 +41,26 @@
         "CATEGORY": {
           "title": "Category",
           "enum": [
-            "self_info"
+            "SELF_INFO"
           ],
           "type": "string"
         }
       },
       "required": [
-        "SOURCE_ORG",
-        "SOURCE_PERSON",
+        "RA",
+        "RP",
         "DOMAIN",
         "CATEGORY"
       ]
     },
-    "BaseDimensionContainer": {
-      "title": "BaseDimensionContainer",
+    "DimensionContainer_ORG_": {
+      "title": "DimensionContainer[ORG]",
       "type": "object",
       "properties": {
         "ID": {
           "title": "Id",
           "maxLength": 32,
+          "pattern": "^[ELTBP][a-zA-z0-9_]+",
           "type": "string"
         }
       },
@@ -232,8 +235,8 @@
         "VALUE"
       ]
     },
-    "Measure_Str32ID__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
-      "title": "Measure[Str32ID, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+    "Measure_Ascii32__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
+      "title": "Measure[Ascii32, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
       "type": "object",
       "properties": {
         "VALUE": {
@@ -249,8 +252,8 @@
         "VALUE"
       ]
     },
-    "Measure_Str20ID__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
-      "title": "Measure[Str20ID, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+    "Measure_Ascii20__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
+      "title": "Measure[Ascii20, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
       "type": "object",
       "properties": {
         "VALUE": {
@@ -266,8 +269,8 @@
         "VALUE"
       ]
     },
-    "Measure_Str31ID__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
-      "title": "Measure[Str31ID, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+    "Measure_Ascii31__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
+      "title": "Measure[Ascii31, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
       "type": "object",
       "properties": {
         "VALUE": {
@@ -283,13 +286,14 @@
         "VALUE"
       ]
     },
-    "Measure_ID__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
-      "title": "Measure[ID, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+    "Measure_ORG__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
+      "title": "Measure[ORG, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
       "type": "object",
       "properties": {
         "VALUE": {
           "title": "Value",
           "maxLength": 32,
+          "pattern": "^[ELTBP][a-zA-z0-9_]+",
           "type": "string"
         },
         "ATTRS": {
@@ -305,7 +309,7 @@
       "type": "object",
       "properties": {
         "DIMS": {
-          "$ref": "#/definitions/BaseDimensionContainer"
+          "$ref": "#/definitions/DimensionContainer_ORG_"
         },
         "DT_BRTH": {
           "$ref": "#/definitions/Measure_date__GenericStatusAttr_AttrObsrvtnSttsEnum__"
@@ -317,35 +321,36 @@
           "$ref": "#/definitions/Measure_GenCntryEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
         },
         "ESCB_ID": {
-          "$ref": "#/definitions/Measure_Str32ID__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/Measure_Ascii32__GenericStatusAttr_AttrObsrvtnSttsEnum__"
         },
         "LEI_ID": {
-          "$ref": "#/definitions/Measure_Str20ID__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/Measure_Ascii20__GenericStatusAttr_AttrObsrvtnSttsEnum__"
         },
         "TAX_ID": {
-          "$ref": "#/definitions/Measure_Str31ID__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/Measure_Ascii31__GenericStatusAttr_AttrObsrvtnSttsEnum__"
         },
         "NBR_ID": {
-          "$ref": "#/definitions/Measure_Str31ID__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/Measure_Ascii31__GenericStatusAttr_AttrObsrvtnSttsEnum__"
         },
         "SPLT_FRM": {
-          "$ref": "#/definitions/Measure_ID__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/Measure_ORG__GenericStatusAttr_AttrObsrvtnSttsEnum__"
         },
         "MRGD_WTH": {
-          "$ref": "#/definitions/Measure_ID__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/Measure_ORG__GenericStatusAttr_AttrObsrvtnSttsEnum__"
         }
       },
       "required": [
         "DIMS"
       ]
     },
-    "StaticDimensionContainer": {
-      "title": "StaticDimensionContainer",
+    "StaticDimensionContainer_ORG_": {
+      "title": "StaticDimensionContainer[ORG]",
       "type": "object",
       "properties": {
         "ID": {
           "title": "Id",
           "maxLength": 32,
+          "pattern": "^[ELTBP][a-zA-z0-9_]+",
           "type": "string"
         },
         "VLD_FRM": {
@@ -380,8 +385,8 @@
         "VALUE"
       ]
     },
-    "Measure_LatinStr128__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
-      "title": "Measure[LatinStr128, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+    "Measure_Ascii128__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
+      "title": "Measure[Ascii128, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
       "type": "object",
       "properties": {
         "VALUE": {
@@ -414,8 +419,8 @@
         "VALUE"
       ]
     },
-    "Measure_LatinStr64__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
-      "title": "Measure[LatinStr64, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+    "Measure_Ascii64__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
+      "title": "Measure[Ascii64, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
       "type": "object",
       "properties": {
         "VALUE": {
@@ -433,23 +438,6 @@
     },
     "Measure_Str32__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
       "title": "Measure[Str32, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
-      "type": "object",
-      "properties": {
-        "VALUE": {
-          "title": "Value",
-          "maxLength": 32,
-          "type": "string"
-        },
-        "ATTRS": {
-          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
-        }
-      },
-      "required": [
-        "VALUE"
-      ]
-    },
-    "Measure_LatinStr32__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
-      "title": "Measure[LatinStr32, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
       "type": "object",
       "properties": {
         "VALUE": {
@@ -1830,6 +1818,23 @@
         "VALUE"
       ]
     },
+    "Measure_ID__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
+      "title": "Measure[ID, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "title": "Value",
+          "maxLength": 32,
+          "type": "string"
+        },
+        "ATTRS": {
+          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
     "FndTypEnum": {
       "title": "FndTypEnum",
       "description": "An enumeration.",
@@ -2136,13 +2141,13 @@
       "type": "object",
       "properties": {
         "DIMS": {
-          "$ref": "#/definitions/StaticDimensionContainer"
+          "$ref": "#/definitions/StaticDimensionContainer_ORG_"
         },
         "NM": {
           "$ref": "#/definitions/Measure_Str128__GenericStatusAttr_AttrObsrvtnSttsEnum__"
         },
         "NM_LTN": {
-          "$ref": "#/definitions/Measure_LatinStr128__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/Measure_Ascii128__GenericStatusAttr_AttrObsrvtnSttsEnum__"
         },
         "NM_SHRT": {
           "$ref": "#/definitions/Measure_Str64__GenericStatusAttr_AttrObsrvtnSttsEnum__"
@@ -2151,13 +2156,13 @@
           "$ref": "#/definitions/Measure_Str64__GenericStatusAttr_AttrObsrvtnSttsEnum__"
         },
         "STRT_LTN": {
-          "$ref": "#/definitions/Measure_LatinStr64__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/Measure_Ascii64__GenericStatusAttr_AttrObsrvtnSttsEnum__"
         },
         "CTY": {
           "$ref": "#/definitions/Measure_Str32__GenericStatusAttr_AttrObsrvtnSttsEnum__"
         },
         "CTY_LTN": {
-          "$ref": "#/definitions/Measure_LatinStr32__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/Measure_Ascii32__GenericStatusAttr_AttrObsrvtnSttsEnum__"
         },
         "PSTL_CD": {
           "$ref": "#/definitions/Measure_Str16__GenericStatusAttr_AttrObsrvtnSttsEnum__"
@@ -2260,8 +2265,23 @@
         "DIMS"
       ]
     },
-    "Measure_Str12ID__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
-      "title": "Measure[Str12ID, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+    "DimensionContainer_DBT_": {
+      "title": "DimensionContainer[DBT]",
+      "type": "object",
+      "properties": {
+        "ID": {
+          "title": "Id",
+          "maxLength": 32,
+          "pattern": "^[IP][a-zA-z0-9_]+",
+          "type": "string"
+        }
+      },
+      "required": [
+        "ID"
+      ]
+    },
+    "Measure_Ascii12__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
+      "title": "Measure[Ascii12, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
       "type": "object",
       "properties": {
         "VALUE": {
@@ -5104,8 +5124,8 @@
         "VALUE"
       ]
     },
-    "Measure_Str6ID__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
-      "title": "Measure[Str6ID, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+    "Measure_Ascii6__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
+      "title": "Measure[Ascii6, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
       "type": "object",
       "properties": {
         "VALUE": {
@@ -5121,12 +5141,48 @@
         "VALUE"
       ]
     },
+    "Measure_DBT__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
+      "title": "Measure[DBT, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "title": "Value",
+          "maxLength": 32,
+          "pattern": "^[IP][a-zA-z0-9_]+",
+          "type": "string"
+        },
+        "ATTRS": {
+          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "Measure_LON__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
+      "title": "Measure[LON, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "title": "Value",
+          "maxLength": 32,
+          "pattern": "^P[a-zA-z0-9_]+",
+          "type": "string"
+        },
+        "ATTRS": {
+          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
     "DebtSeries": {
       "title": "DebtSeries",
       "type": "object",
       "properties": {
         "DIMS": {
-          "$ref": "#/definitions/BaseDimensionContainer"
+          "$ref": "#/definitions/DimensionContainer_DBT_"
         },
         "DT_BRTH": {
           "$ref": "#/definitions/Measure_date__GenericStatusAttr_AttrObsrvtnSttsEnum__"
@@ -5138,10 +5194,10 @@
           "$ref": "#/definitions/Measure_date__GenericStatusAttr_AttrObsrvtnSttsEnum__"
         },
         "ISIN_ID": {
-          "$ref": "#/definitions/Measure_Str32ID__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/Measure_Ascii32__GenericStatusAttr_AttrObsrvtnSttsEnum__"
         },
         "INTRNL_ID": {
-          "$ref": "#/definitions/Measure_Str12ID__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/Measure_Ascii12__GenericStatusAttr_AttrObsrvtnSttsEnum__"
         },
         "CRRNCY": {
           "$ref": "#/definitions/Measure_GenCrrncyEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
@@ -5219,20 +5275,45 @@
           "$ref": "#/definitions/Measure_bool__GenericStatusAttr_AttrObsrvtnSttsEnum__"
         },
         "CFI": {
-          "$ref": "#/definitions/Measure_Str6ID__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/Measure_Ascii6__GenericStatusAttr_AttrObsrvtnSttsEnum__"
         },
         "RSTRCTRD_T": {
-          "$ref": "#/definitions/Measure_ID__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/Measure_DBT__GenericStatusAttr_AttrObsrvtnSttsEnum__"
         },
         "RSTRCTRD_FRM": {
-          "$ref": "#/definitions/Measure_ID__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/Measure_LON__GenericStatusAttr_AttrObsrvtnSttsEnum__"
         },
         "DDPLCT_OF": {
-          "$ref": "#/definitions/Measure_ID__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/Measure_DBT__GenericStatusAttr_AttrObsrvtnSttsEnum__"
         }
       },
       "required": [
         "DIMS"
+      ]
+    },
+    "StaticDimensionContainer_DBT_": {
+      "title": "StaticDimensionContainer[DBT]",
+      "type": "object",
+      "properties": {
+        "ID": {
+          "title": "Id",
+          "maxLength": 32,
+          "pattern": "^[IP][a-zA-z0-9_]+",
+          "type": "string"
+        },
+        "VLD_FRM": {
+          "title": "Vld Frm",
+          "type": "string",
+          "format": "date"
+        },
+        "VLD_T": {
+          "title": "Vld T",
+          "type": "string",
+          "format": "date"
+        }
+      },
+      "required": [
+        "ID"
       ]
     },
     "DbtSttsEnum": {
@@ -5271,13 +5352,13 @@
       "type": "object",
       "properties": {
         "DIMS": {
-          "$ref": "#/definitions/StaticDimensionContainer"
+          "$ref": "#/definitions/StaticDimensionContainer_DBT_"
         },
         "NM": {
           "$ref": "#/definitions/Measure_Str128__GenericStatusAttr_AttrObsrvtnSttsEnum__"
         },
         "NM_LTN": {
-          "$ref": "#/definitions/Measure_LatinStr128__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/Measure_Ascii128__GenericStatusAttr_AttrObsrvtnSttsEnum__"
         },
         "NM_SHRT": {
           "$ref": "#/definitions/Measure_Str64__GenericStatusAttr_AttrObsrvtnSttsEnum__"
@@ -5292,11 +5373,44 @@
           "$ref": "#/definitions/Measure_ID__GenericStatusAttr_AttrObsrvtnSttsEnum__"
         },
         "CFI": {
-          "$ref": "#/definitions/Measure_Str6ID__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/Measure_Ascii6__GenericStatusAttr_AttrObsrvtnSttsEnum__"
         }
       },
       "required": [
         "DIMS"
+      ]
+    },
+    "DimensionContainer_SHR_": {
+      "title": "DimensionContainer[SHR]",
+      "type": "object",
+      "properties": {
+        "ID": {
+          "title": "Id",
+          "maxLength": 32,
+          "pattern": "^[IP][a-zA-z0-9_]+",
+          "type": "string"
+        }
+      },
+      "required": [
+        "ID"
+      ]
+    },
+    "Measure_SHR__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
+      "title": "Measure[SHR, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "title": "Value",
+          "maxLength": 32,
+          "pattern": "^[IP][a-zA-z0-9_]+",
+          "type": "string"
+        },
+        "ATTRS": {
+          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
+        }
+      },
+      "required": [
+        "VALUE"
       ]
     },
     "ShareSeries": {
@@ -5304,7 +5418,7 @@
       "type": "object",
       "properties": {
         "DIMS": {
-          "$ref": "#/definitions/BaseDimensionContainer"
+          "$ref": "#/definitions/DimensionContainer_SHR_"
         },
         "DT_BRTH": {
           "$ref": "#/definitions/Measure_date__GenericStatusAttr_AttrObsrvtnSttsEnum__"
@@ -5313,10 +5427,10 @@
           "$ref": "#/definitions/Measure_date__GenericStatusAttr_AttrObsrvtnSttsEnum__"
         },
         "ISIN_ID": {
-          "$ref": "#/definitions/Measure_Str32ID__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/Measure_Ascii32__GenericStatusAttr_AttrObsrvtnSttsEnum__"
         },
         "INTRNL_ID": {
-          "$ref": "#/definitions/Measure_Str12ID__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/Measure_Ascii12__GenericStatusAttr_AttrObsrvtnSttsEnum__"
         },
         "CRRNCY": {
           "$ref": "#/definitions/Measure_GenCrrncyEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
@@ -5325,14 +5439,39 @@
           "$ref": "#/definitions/Measure_GenMrktEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
         },
         "RSTRCTRD_T": {
-          "$ref": "#/definitions/Measure_ID__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/Measure_SHR__GenericStatusAttr_AttrObsrvtnSttsEnum__"
         },
         "DDPLCT_OF": {
-          "$ref": "#/definitions/Measure_ID__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/Measure_SHR__GenericStatusAttr_AttrObsrvtnSttsEnum__"
         }
       },
       "required": [
         "DIMS"
+      ]
+    },
+    "StaticDimensionContainer_SHR_": {
+      "title": "StaticDimensionContainer[SHR]",
+      "type": "object",
+      "properties": {
+        "ID": {
+          "title": "Id",
+          "maxLength": 32,
+          "pattern": "^[IP][a-zA-z0-9_]+",
+          "type": "string"
+        },
+        "VLD_FRM": {
+          "title": "Vld Frm",
+          "type": "string",
+          "format": "date"
+        },
+        "VLD_T": {
+          "title": "Vld T",
+          "type": "string",
+          "format": "date"
+        }
+      },
+      "required": [
+        "ID"
       ]
     },
     "ShrFndRdmptnFrqncyEnum": {
@@ -5375,13 +5514,13 @@
       "type": "object",
       "properties": {
         "DIMS": {
-          "$ref": "#/definitions/StaticDimensionContainer"
+          "$ref": "#/definitions/StaticDimensionContainer_SHR_"
         },
         "NM": {
           "$ref": "#/definitions/Measure_Str128__GenericStatusAttr_AttrObsrvtnSttsEnum__"
         },
         "NM_LTN": {
-          "$ref": "#/definitions/Measure_LatinStr128__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/Measure_Ascii128__GenericStatusAttr_AttrObsrvtnSttsEnum__"
         },
         "NM_SHRT": {
           "$ref": "#/definitions/Measure_Str64__GenericStatusAttr_AttrObsrvtnSttsEnum__"
@@ -5393,7 +5532,7 @@
           "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusAttr_AttrObsrvtnSttsEnum__"
         },
         "CFI": {
-          "$ref": "#/definitions/Measure_Str6ID__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/Measure_Ascii6__GenericStatusAttr_AttrObsrvtnSttsEnum__"
         },
         "RDMPTN_FRQNCY": {
           "$ref": "#/definitions/Measure_ShrFndRdmptnFrqncyEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
@@ -5411,7 +5550,7 @@
       "type": "object",
       "properties": {
         "DIMS": {
-          "$ref": "#/definitions/BaseDimensionContainer"
+          "$ref": "#/definitions/DimensionContainer_ORG_"
         },
         "DT_BRTH": {
           "$ref": "#/definitions/Measure_date__GenericStatusAttr_AttrObsrvtnSttsEnum__"
@@ -5423,22 +5562,22 @@
           "$ref": "#/definitions/Measure_GenCntryEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
         },
         "ESCB_ID": {
-          "$ref": "#/definitions/Measure_Str32ID__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/Measure_Ascii32__GenericStatusAttr_AttrObsrvtnSttsEnum__"
         },
         "LEI_ID": {
-          "$ref": "#/definitions/Measure_Str20ID__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/Measure_Ascii20__GenericStatusAttr_AttrObsrvtnSttsEnum__"
         },
         "TAX_ID": {
-          "$ref": "#/definitions/Measure_Str31ID__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/Measure_Ascii31__GenericStatusAttr_AttrObsrvtnSttsEnum__"
         },
         "NBR_ID": {
-          "$ref": "#/definitions/Measure_Str31ID__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/Measure_Ascii31__GenericStatusAttr_AttrObsrvtnSttsEnum__"
         },
         "SPLT_FRM": {
-          "$ref": "#/definitions/Measure_ID__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/Measure_ORG__GenericStatusAttr_AttrObsrvtnSttsEnum__"
         },
         "MRGD_WTH": {
-          "$ref": "#/definitions/Measure_ID__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/Measure_ORG__GenericStatusAttr_AttrObsrvtnSttsEnum__"
         }
       },
       "required": [
@@ -5450,13 +5589,13 @@
       "type": "object",
       "properties": {
         "DIMS": {
-          "$ref": "#/definitions/StaticDimensionContainer"
+          "$ref": "#/definitions/StaticDimensionContainer_ORG_"
         },
         "NM": {
           "$ref": "#/definitions/Measure_Str128__GenericStatusAttr_AttrObsrvtnSttsEnum__"
         },
         "NM_LTN": {
-          "$ref": "#/definitions/Measure_LatinStr128__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/Measure_Ascii128__GenericStatusAttr_AttrObsrvtnSttsEnum__"
         },
         "NM_SHRT": {
           "$ref": "#/definitions/Measure_Str64__GenericStatusAttr_AttrObsrvtnSttsEnum__"
@@ -5465,13 +5604,13 @@
           "$ref": "#/definitions/Measure_Str64__GenericStatusAttr_AttrObsrvtnSttsEnum__"
         },
         "STRT_LTN": {
-          "$ref": "#/definitions/Measure_LatinStr64__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/Measure_Ascii64__GenericStatusAttr_AttrObsrvtnSttsEnum__"
         },
         "CTY": {
           "$ref": "#/definitions/Measure_Str32__GenericStatusAttr_AttrObsrvtnSttsEnum__"
         },
         "CTY_LTN": {
-          "$ref": "#/definitions/Measure_LatinStr32__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/Measure_Ascii32__GenericStatusAttr_AttrObsrvtnSttsEnum__"
         },
         "PSTL_CD": {
           "$ref": "#/definitions/Measure_Str16__GenericStatusAttr_AttrObsrvtnSttsEnum__"
@@ -5501,7 +5640,7 @@
       "type": "object",
       "properties": {
         "DIMS": {
-          "$ref": "#/definitions/BaseDimensionContainer"
+          "$ref": "#/definitions/DimensionContainer_ORG_"
         },
         "DT_BRTH": {
           "$ref": "#/definitions/Measure_date__GenericStatusAttr_AttrObsrvtnSttsEnum__"
@@ -5513,22 +5652,22 @@
           "$ref": "#/definitions/Measure_GenCntryEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
         },
         "ESCB_ID": {
-          "$ref": "#/definitions/Measure_Str32ID__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/Measure_Ascii32__GenericStatusAttr_AttrObsrvtnSttsEnum__"
         },
         "LEI_ID": {
-          "$ref": "#/definitions/Measure_Str20ID__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/Measure_Ascii20__GenericStatusAttr_AttrObsrvtnSttsEnum__"
         },
         "TAX_ID": {
-          "$ref": "#/definitions/Measure_Str31ID__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/Measure_Ascii31__GenericStatusAttr_AttrObsrvtnSttsEnum__"
         },
         "NBR_ID": {
-          "$ref": "#/definitions/Measure_Str31ID__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/Measure_Ascii31__GenericStatusAttr_AttrObsrvtnSttsEnum__"
         },
         "SPLT_FRM": {
-          "$ref": "#/definitions/Measure_ID__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/Measure_ORG__GenericStatusAttr_AttrObsrvtnSttsEnum__"
         },
         "MRGD_WTH": {
-          "$ref": "#/definitions/Measure_ID__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/Measure_ORG__GenericStatusAttr_AttrObsrvtnSttsEnum__"
         }
       },
       "required": [
@@ -5578,13 +5717,13 @@
       "type": "object",
       "properties": {
         "DIMS": {
-          "$ref": "#/definitions/StaticDimensionContainer"
+          "$ref": "#/definitions/StaticDimensionContainer_ORG_"
         },
         "NM": {
           "$ref": "#/definitions/Measure_Str128__GenericStatusAttr_AttrObsrvtnSttsEnum__"
         },
         "NM_LTN": {
-          "$ref": "#/definitions/Measure_LatinStr128__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/Measure_Ascii128__GenericStatusAttr_AttrObsrvtnSttsEnum__"
         },
         "NM_SHRT": {
           "$ref": "#/definitions/Measure_Str64__GenericStatusAttr_AttrObsrvtnSttsEnum__"
@@ -5593,13 +5732,13 @@
           "$ref": "#/definitions/Measure_Str64__GenericStatusAttr_AttrObsrvtnSttsEnum__"
         },
         "STRT_LTN": {
-          "$ref": "#/definitions/Measure_LatinStr64__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/Measure_Ascii64__GenericStatusAttr_AttrObsrvtnSttsEnum__"
         },
         "CTY": {
           "$ref": "#/definitions/Measure_Str32__GenericStatusAttr_AttrObsrvtnSttsEnum__"
         },
         "CTY_LTN": {
-          "$ref": "#/definitions/Measure_LatinStr32__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/Measure_Ascii32__GenericStatusAttr_AttrObsrvtnSttsEnum__"
         },
         "PSTL_CD": {
           "$ref": "#/definitions/Measure_Str16__GenericStatusAttr_AttrObsrvtnSttsEnum__"
@@ -5625,6 +5764,21 @@
       },
       "required": [
         "DIMS"
+      ]
+    },
+    "DimensionContainer_PSN_": {
+      "title": "DimensionContainer[PSN]",
+      "type": "object",
+      "properties": {
+        "ID": {
+          "title": "Id",
+          "maxLength": 32,
+          "pattern": "^[a-zA-z0-9_]+",
+          "type": "string"
+        }
+      },
+      "required": [
+        "ID"
       ]
     },
     "AttrCnfdntltySttsEnum": {
@@ -5718,8 +5872,8 @@
         "VALUE"
       ]
     },
-    "Measure_LatinStr32__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__": {
-      "title": "Measure[LatinStr32, GenericStatusConfAttr[AttrObsrvtnSttsEnum, AttrCnfdntltySttsEnum]]",
+    "Measure_Ascii32__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__": {
+      "title": "Measure[Ascii32, GenericStatusConfAttr[AttrObsrvtnSttsEnum, AttrCnfdntltySttsEnum]]",
       "type": "object",
       "properties": {
         "VALUE": {
@@ -5740,7 +5894,7 @@
       "type": "object",
       "properties": {
         "DIMS": {
-          "$ref": "#/definitions/BaseDimensionContainer"
+          "$ref": "#/definitions/DimensionContainer_PSN_"
         },
         "EMAIL": {
           "$ref": "#/definitions/Measure_EmailStr__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
@@ -5761,25 +5915,27 @@
           "$ref": "#/definitions/Measure_GenGndrEnum__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
         },
         "PHN": {
-          "$ref": "#/definitions/Measure_LatinStr32__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/Measure_Ascii32__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
         }
       },
       "required": [
         "DIMS"
       ]
     },
-    "RelDimensionContainer": {
-      "title": "RelDimensionContainer",
+    "RelDimensionContainer_PSN__ORG_": {
+      "title": "RelDimensionContainer[PSN, ORG]",
       "type": "object",
       "properties": {
         "LID": {
           "title": "Lid",
           "maxLength": 32,
+          "pattern": "^[a-zA-z0-9_]+",
           "type": "string"
         },
         "RID": {
           "title": "Rid",
           "maxLength": 32,
+          "pattern": "^[ELTBP][a-zA-z0-9_]+",
           "type": "string"
         },
         "VLD_FRM": {
@@ -5848,7 +6004,7 @@
       "type": "object",
       "properties": {
         "DIMS": {
-          "$ref": "#/definitions/RelDimensionContainer"
+          "$ref": "#/definitions/RelDimensionContainer_PSN__ORG_"
         },
         "ASSCTD_WTH": {
           "$ref": "#/definitions/Measure_bool__GenericStatusAttr_AttrObsrvtnSttsEnum__"

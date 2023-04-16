@@ -19,14 +19,16 @@
       "title": "Header",
       "type": "object",
       "properties": {
-        "SOURCE_ORG": {
-          "title": "Source Org",
+        "RA": {
+          "title": "Ra",
           "maxLength": 32,
+          "pattern": "^[ELTBP][a-zA-z0-9_]+",
           "type": "string"
         },
-        "SOURCE_PERSON": {
-          "title": "Source Person",
+        "RP": {
+          "title": "Rp",
           "maxLength": 32,
+          "pattern": "^[a-zA-z0-9_]+",
           "type": "string"
         },
         "DOMAIN": {
@@ -39,14 +41,14 @@
         "CATEGORY": {
           "title": "Category",
           "enum": [
-            "bsi"
+            "BSI"
           ],
           "type": "string"
         }
       },
       "required": [
-        "SOURCE_ORG",
-        "SOURCE_PERSON",
+        "RA",
+        "RP",
         "DOMAIN",
         "CATEGORY"
       ]
@@ -109,6 +111,7 @@
         "ID": {
           "title": "Id",
           "maxLength": 32,
+          "pattern": "^[ELTBP][a-zA-z0-9_]+",
           "type": "string"
         },
         "DT": {
@@ -202,13 +205,14 @@
         "EUR_STCK"
       ]
     },
-    "AccDimensionContainer": {
-      "title": "AccDimensionContainer",
+    "AccDimensionContainer_DEP_": {
+      "title": "AccDimensionContainer[DEP]",
       "type": "object",
       "properties": {
         "IID": {
           "title": "Iid",
           "maxLength": 32,
+          "pattern": "^[IP][a-zA-z0-9_]+",
           "type": "string"
         },
         "DT": {
@@ -243,7 +247,7 @@
       "type": "object",
       "properties": {
         "DIMS": {
-          "$ref": "#/definitions/AccDimensionContainer"
+          "$ref": "#/definitions/AccDimensionContainer_DEP_"
         },
         "STCK": {
           "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
@@ -262,12 +266,33 @@
         "ACCRLS"
       ]
     },
+    "AccDimensionContainer_SFT_": {
+      "title": "AccDimensionContainer[SFT]",
+      "type": "object",
+      "properties": {
+        "IID": {
+          "title": "Iid",
+          "maxLength": 32,
+          "pattern": "^P[a-zA-z0-9_]+",
+          "type": "string"
+        },
+        "DT": {
+          "title": "Dt",
+          "type": "string",
+          "format": "date"
+        }
+      },
+      "required": [
+        "IID",
+        "DT"
+      ]
+    },
     "SftSeries": {
       "title": "SftSeries",
       "type": "object",
       "properties": {
         "DIMS": {
-          "$ref": "#/definitions/AccDimensionContainer"
+          "$ref": "#/definitions/AccDimensionContainer_SFT_"
         },
         "STCK": {
           "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
@@ -324,18 +349,20 @@
       ],
       "type": "string"
     },
-    "RelFrqncyAccDimensionContainer": {
-      "title": "RelFrqncyAccDimensionContainer",
+    "RelFrqncyAccDimensionContainer_DBT__ORG_": {
+      "title": "RelFrqncyAccDimensionContainer[DBT, ORG]",
       "type": "object",
       "properties": {
         "IID": {
           "title": "Iid",
           "maxLength": 32,
+          "pattern": "^[IP][a-zA-z0-9_]+",
           "type": "string"
         },
         "ID": {
           "title": "Id",
           "maxLength": 32,
+          "pattern": "^[ELTBP][a-zA-z0-9_]+",
           "type": "string"
         },
         "DT": {
@@ -359,7 +386,7 @@
       "type": "object",
       "properties": {
         "DIMS": {
-          "$ref": "#/definitions/RelFrqncyAccDimensionContainer"
+          "$ref": "#/definitions/RelFrqncyAccDimensionContainer_DBT__ORG_"
         },
         "STCK": {
           "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
@@ -406,12 +433,44 @@
         "ARRRS"
       ]
     },
+    "RelFrqncyAccDimensionContainer_SHR__ORG_": {
+      "title": "RelFrqncyAccDimensionContainer[SHR, ORG]",
+      "type": "object",
+      "properties": {
+        "IID": {
+          "title": "Iid",
+          "maxLength": 32,
+          "pattern": "^[IP][a-zA-z0-9_]+",
+          "type": "string"
+        },
+        "ID": {
+          "title": "Id",
+          "maxLength": 32,
+          "pattern": "^[ELTBP][a-zA-z0-9_]+",
+          "type": "string"
+        },
+        "DT": {
+          "title": "Dt",
+          "type": "string",
+          "format": "date"
+        },
+        "FRQNCY": {
+          "$ref": "#/definitions/GenFrqncyEnum"
+        }
+      },
+      "required": [
+        "IID",
+        "ID",
+        "DT",
+        "FRQNCY"
+      ]
+    },
     "ShareSeries": {
       "title": "ShareSeries",
       "type": "object",
       "properties": {
         "DIMS": {
-          "$ref": "#/definitions/RelFrqncyAccDimensionContainer"
+          "$ref": "#/definitions/RelFrqncyAccDimensionContainer_SHR__ORG_"
         },
         "STCK": {
           "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
@@ -450,6 +509,38 @@
         "LND_FR_MLT"
       ]
     },
+    "RelFrqncyAccDimensionContainer_EDR__ORG_": {
+      "title": "RelFrqncyAccDimensionContainer[EDR, ORG]",
+      "type": "object",
+      "properties": {
+        "IID": {
+          "title": "Iid",
+          "maxLength": 32,
+          "pattern": "^[IP][a-zA-z0-9_]+",
+          "type": "string"
+        },
+        "ID": {
+          "title": "Id",
+          "maxLength": 32,
+          "pattern": "^[ELTBP][a-zA-z0-9_]+",
+          "type": "string"
+        },
+        "DT": {
+          "title": "Dt",
+          "type": "string",
+          "format": "date"
+        },
+        "FRQNCY": {
+          "$ref": "#/definitions/GenFrqncyEnum"
+        }
+      },
+      "required": [
+        "IID",
+        "ID",
+        "DT",
+        "FRQNCY"
+      ]
+    },
     "DrvtvStrtgyEnum": {
       "title": "DrvtvStrtgyEnum",
       "description": "An enumeration.",
@@ -482,7 +573,7 @@
       "type": "object",
       "properties": {
         "DIMS": {
-          "$ref": "#/definitions/RelFrqncyAccDimensionContainer"
+          "$ref": "#/definitions/RelFrqncyAccDimensionContainer_EDR__ORG_"
         },
         "STCK": {
           "$ref": "#/definitions/Measure_float__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
@@ -513,13 +604,14 @@
         "STRTGY"
       ]
     },
-    "FrqncyAccDimensionContainer": {
-      "title": "FrqncyAccDimensionContainer",
+    "FrqncyAccDimensionContainer_ODR_": {
+      "title": "FrqncyAccDimensionContainer[ODR]",
       "type": "object",
       "properties": {
         "IID": {
           "title": "Iid",
           "maxLength": 32,
+          "pattern": "^[IP][a-zA-z0-9_]+",
           "type": "string"
         },
         "DT": {
@@ -542,7 +634,7 @@
       "type": "object",
       "properties": {
         "DIMS": {
-          "$ref": "#/definitions/FrqncyAccDimensionContainer"
+          "$ref": "#/definitions/FrqncyAccDimensionContainer_ODR_"
         },
         "STCK": {
           "$ref": "#/definitions/Measure_float__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
@@ -565,12 +657,44 @@
         "STRTGY"
       ]
     },
+    "RelFrqncyAccDimensionContainer_RRE__ORG_": {
+      "title": "RelFrqncyAccDimensionContainer[RRE, ORG]",
+      "type": "object",
+      "properties": {
+        "IID": {
+          "title": "Iid",
+          "maxLength": 32,
+          "pattern": "^[NP][a-zA-z0-9_]+",
+          "type": "string"
+        },
+        "ID": {
+          "title": "Id",
+          "maxLength": 32,
+          "pattern": "^[ELTBP][a-zA-z0-9_]+",
+          "type": "string"
+        },
+        "DT": {
+          "title": "Dt",
+          "type": "string",
+          "format": "date"
+        },
+        "FRQNCY": {
+          "$ref": "#/definitions/GenFrqncyEnum"
+        }
+      },
+      "required": [
+        "IID",
+        "ID",
+        "DT",
+        "FRQNCY"
+      ]
+    },
     "RreSeries": {
       "title": "RreSeries",
       "type": "object",
       "properties": {
         "DIMS": {
-          "$ref": "#/definitions/FrqncyAccDimensionContainer"
+          "$ref": "#/definitions/RelFrqncyAccDimensionContainer_RRE__ORG_"
         },
         "STCK": {
           "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
@@ -601,12 +725,44 @@
         "WRT_OFFS"
       ]
     },
+    "RelFrqncyAccDimensionContainer_CRE__ORG_": {
+      "title": "RelFrqncyAccDimensionContainer[CRE, ORG]",
+      "type": "object",
+      "properties": {
+        "IID": {
+          "title": "Iid",
+          "maxLength": 32,
+          "pattern": "^[NP][a-zA-z0-9_]+",
+          "type": "string"
+        },
+        "ID": {
+          "title": "Id",
+          "maxLength": 32,
+          "pattern": "^[ELTBP][a-zA-z0-9_]+",
+          "type": "string"
+        },
+        "DT": {
+          "title": "Dt",
+          "type": "string",
+          "format": "date"
+        },
+        "FRQNCY": {
+          "$ref": "#/definitions/GenFrqncyEnum"
+        }
+      },
+      "required": [
+        "IID",
+        "ID",
+        "DT",
+        "FRQNCY"
+      ]
+    },
     "CreSeries": {
       "title": "CreSeries",
       "type": "object",
       "properties": {
         "DIMS": {
-          "$ref": "#/definitions/FrqncyAccDimensionContainer"
+          "$ref": "#/definitions/RelFrqncyAccDimensionContainer_CRE__ORG_"
         },
         "STCK": {
           "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
@@ -781,6 +937,7 @@
         "ID": {
           "title": "Id",
           "maxLength": 32,
+          "pattern": "^[ELTBP][a-zA-z0-9_]+",
           "type": "string"
         },
         "DT": {
@@ -2498,6 +2655,7 @@
         "ID": {
           "title": "Id",
           "maxLength": 32,
+          "pattern": "^[ELTBP][a-zA-z0-9_]+",
           "type": "string"
         },
         "CNTRGRP": {
@@ -2544,7 +2702,7 @@
       "type": "object",
       "properties": {
         "DIMS": {
-          "$ref": "#/definitions/RelFrqncyAccDimensionContainer"
+          "$ref": "#/definitions/RelFrqncyAccDimensionContainer_DBT__ORG_"
         },
         "STCK": {
           "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
@@ -2575,12 +2733,33 @@
         "ARRRS"
       ]
     },
+    "AccDimensionContainer_LON_": {
+      "title": "AccDimensionContainer[LON]",
+      "type": "object",
+      "properties": {
+        "IID": {
+          "title": "Iid",
+          "maxLength": 32,
+          "pattern": "^P[a-zA-z0-9_]+",
+          "type": "string"
+        },
+        "DT": {
+          "title": "Dt",
+          "type": "string",
+          "format": "date"
+        }
+      },
+      "required": [
+        "IID",
+        "DT"
+      ]
+    },
     "LoanSeries": {
       "title": "LoanSeries",
       "type": "object",
       "properties": {
         "DIMS": {
-          "$ref": "#/definitions/AccDimensionContainer"
+          "$ref": "#/definitions/AccDimensionContainer_LON_"
         },
         "STCK": {
           "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
@@ -2616,7 +2795,7 @@
       "type": "object",
       "properties": {
         "DIMS": {
-          "$ref": "#/definitions/RelFrqncyAccDimensionContainer"
+          "$ref": "#/definitions/RelFrqncyAccDimensionContainer_SHR__ORG_"
         },
         "QNTTY": {
           "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"

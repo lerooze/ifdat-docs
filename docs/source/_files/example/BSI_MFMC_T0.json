@@ -1,9 +1,9 @@
 {
   "HEADER": {
-    "SOURCE_ORG": "EGRMFMC000",
-    "SOURCE_PERSON": "aloumiotis@foo.gr",
+    "RA": "EGRMFMC000",
+    "RP": "aloumiotis",
     "DOMAIN": "IFDat",
-    "CATEGORY": "bsi"
+    "CATEGORY": "BSI"
   },
   "DATASETS": {
     "DEPOSIT": [
@@ -100,7 +100,7 @@
     "LIAB_REM": [
       {
         "DIMS": {
-          "ID": "IGRAK1",
+          "ID": "EGRAK1",
           "CNTRGRP": "S126.GR",
           "CRRNCY": "EUR",
           "DT": "2022-01-31"

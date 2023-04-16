@@ -19,14 +19,16 @@
       "title": "Header",
       "type": "object",
       "properties": {
-        "SOURCE_ORG": {
-          "title": "Source Org",
+        "RA": {
+          "title": "Ra",
           "maxLength": 32,
+          "pattern": "^[ELTBP][a-zA-z0-9_]+",
           "type": "string"
         },
-        "SOURCE_PERSON": {
-          "title": "Source Person",
+        "RP": {
+          "title": "Rp",
           "maxLength": 32,
+          "pattern": "^[a-zA-z0-9_]+",
           "type": "string"
         },
         "DOMAIN": {
@@ -39,14 +41,14 @@
         "CATEGORY": {
           "title": "Category",
           "enum": [
-            "income"
+            "INCOME"
           ],
           "type": "string"
         }
       },
       "required": [
-        "SOURCE_ORG",
-        "SOURCE_PERSON",
+        "RA",
+        "RP",
         "DOMAIN",
         "CATEGORY"
       ]
@@ -113,6 +115,7 @@
         "IID": {
           "title": "Iid",
           "maxLength": 32,
+          "pattern": "^[IP][a-zA-z0-9_]+",
           "type": "string"
         },
         "TP": {
@@ -238,6 +241,7 @@
         "IID": {
           "title": "Iid",
           "maxLength": 32,
+          "pattern": "^[IP][a-zA-z0-9_]+",
           "type": "string"
         },
         "TP": {

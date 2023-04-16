@@ -1,15 +1,15 @@
 {
   "HEADER": {
-    "SOURCE_ORG": "EGRMFMC000",
-    "SOURCE_PERSON": "aloumiotis@foo.gr",
+    "RA": "EGRMFMC000",
+    "RP": "aloumiotis",
     "DOMAIN": "IFDat",
-    "CATEGORY": "other_key"
+    "CATEGORY": "OTHER_KEY"
   },
   "DATASETS": {
     "DEBT": [
       {
         "DIMS": {
-          "ID": "XS2400040460",
+          "ID": "IXS2400040460",
           "DT": "2022-01-31"
         },
         "PRC": {
@@ -79,7 +79,7 @@
     "SHARE": [
       {
         "DIMS": {
-          "ID": "GRS426003000",
+          "ID": "IGRS426003000",
           "DT": "2022-01-31"
         },
         "PRC": {

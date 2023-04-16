@@ -1,9 +1,9 @@
 {
   "HEADER": {
-    "SOURCE_ORG": "EGRMFMC000",
-    "SOURCE_PERSON": "aloumiotis@foo.gr",
+    "RA": "EGRMFMC000",
+    "RP": "aloumiotis",
     "DOMAIN": "IFDat",
-    "CATEGORY": "self_info"
+    "CATEGORY": "SELF_INFO"
   },
   "DATASETS": {
     "FUND": [
@@ -28,7 +28,7 @@
     "STATIC_FUND": [
       {
         "DIMS": {
-          "ID": "GRAK1"
+          "ID": "EGRAK1"
         },
         "NM": {
           "VALUE": "ΦΟΥ ΜΙΚΤΟ ΕΣΩΤΕΡΙΚΟΥ"
@@ -102,7 +102,7 @@
     "STATIC_SHARE": [
       {
         "DIMS": {
-          "ID": "GRF000000001"
+          "ID": "IGRF000000001"
         },
         "NM": {
           "VALUE": "ΦΟΥ ΜΙΚΤΟ ΕΣΩΤΕΡΙΚΟΥ (Κατηγορία Μεριδίων R)"
@@ -198,10 +198,10 @@
     "CONTACT": [
       {
         "DIMS": {
-          "ID": "aloumiotis@foo.gr"
+          "ID": "aloumiotis"
         },
         "EMAIL": {
-          "VALUE": "aloumiotis@foo.gr"
+          "VALUE": "aloumiotis@fooaedak.gr"
         },
         "FRST": {
           "VALUE": "Αντώνιος"
@@ -226,7 +226,7 @@
     "CONTACT_TO_RA": [
       {
         "DIMS": {
-          "LID": "aloumiotis@foo.gr",
+          "LID": "aloumiotis",
           "RID": "EGRMFMC000"
         },
         "ASSCTD_WTH": {

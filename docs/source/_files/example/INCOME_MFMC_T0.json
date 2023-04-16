@@ -1,15 +1,15 @@
 {
   "HEADER": {
-    "SOURCE_ORG": "EGRMFMC000",
-    "SOURCE_PERSON": "aloumiotis@foo.gr",
+    "RA": "EGRMFMC000",
+    "RP": "aloumiotis",
     "DOMAIN": "IFDat",
-    "CATEGORY": "income"
+    "CATEGORY": "INCOME"
   },
   "DATASETS": {
     "REVENUE": [
       {
         "DIMS": {
-          "IID": "GRF000000001",
+          "IID": "IGRF000000001",
           "TP": "R1",
           "DT": "2022-01-31",
           "FREQ": "M"

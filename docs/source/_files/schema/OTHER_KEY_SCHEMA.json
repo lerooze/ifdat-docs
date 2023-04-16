@@ -19,14 +19,16 @@
       "title": "Header",
       "type": "object",
       "properties": {
-        "SOURCE_ORG": {
-          "title": "Source Org",
+        "RA": {
+          "title": "Ra",
           "maxLength": 32,
+          "pattern": "^[ELTBP][a-zA-z0-9_]+",
           "type": "string"
         },
-        "SOURCE_PERSON": {
-          "title": "Source Person",
+        "RP": {
+          "title": "Rp",
           "maxLength": 32,
+          "pattern": "^[a-zA-z0-9_]+",
           "type": "string"
         },
         "DOMAIN": {
@@ -39,25 +41,26 @@
         "CATEGORY": {
           "title": "Category",
           "enum": [
-            "other_key"
+            "OTHER_KEY"
           ],
           "type": "string"
         }
       },
       "required": [
-        "SOURCE_ORG",
-        "SOURCE_PERSON",
+        "RA",
+        "RP",
         "DOMAIN",
         "CATEGORY"
       ]
     },
-    "DtDimensionContainer": {
-      "title": "DtDimensionContainer",
+    "DtDimensionContainer_DBT_": {
+      "title": "DtDimensionContainer[DBT]",
       "type": "object",
       "properties": {
         "ID": {
           "title": "Id",
           "maxLength": 32,
+          "pattern": "^[IP][a-zA-z0-9_]+",
           "type": "string"
         },
         "DT": {
@@ -118,7 +121,7 @@
       "type": "object",
       "properties": {
         "DIMS": {
-          "$ref": "#/definitions/DtDimensionContainer"
+          "$ref": "#/definitions/DtDimensionContainer_DBT_"
         },
         "PRC": {
           "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusAttr_AttrObsrvtnSttsEnum__"
@@ -154,7 +157,7 @@
       "type": "object",
       "properties": {
         "DIMS": {
-          "$ref": "#/definitions/DtDimensionContainer"
+          "$ref": "#/definitions/DtDimensionContainer_DBT_"
         },
         "RT": {
           "$ref": "#/definitions/Measure_float__GenericStatusAttr_AttrObsrvtnSttsEnum__"
@@ -165,12 +168,33 @@
         "RT"
       ]
     },
+    "DtDimensionContainer_SHR_": {
+      "title": "DtDimensionContainer[SHR]",
+      "type": "object",
+      "properties": {
+        "ID": {
+          "title": "Id",
+          "maxLength": 32,
+          "pattern": "^[IP][a-zA-z0-9_]+",
+          "type": "string"
+        },
+        "DT": {
+          "title": "Dt",
+          "type": "string",
+          "format": "date"
+        }
+      },
+      "required": [
+        "ID",
+        "DT"
+      ]
+    },
     "ShareSeries": {
       "title": "ShareSeries",
       "type": "object",
       "properties": {
         "DIMS": {
-          "$ref": "#/definitions/DtDimensionContainer"
+          "$ref": "#/definitions/DtDimensionContainer_SHR_"
         },
         "PRC": {
           "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusAttr_AttrObsrvtnSttsEnum__"
@@ -303,7 +327,7 @@
       "type": "object",
       "properties": {
         "DIMS": {
-          "$ref": "#/definitions/DtDimensionContainer"
+          "$ref": "#/definitions/DtDimensionContainer_SHR_"
         },
         "TYP": {
           "$ref": "#/definitions/Measure_DvdndTypEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
@@ -327,7 +351,7 @@
       "type": "object",
       "properties": {
         "DIMS": {
-          "$ref": "#/definitions/DtDimensionContainer"
+          "$ref": "#/definitions/DtDimensionContainer_SHR_"
         },
         "FCTR": {
           "$ref": "#/definitions/Measure_PositiveFloat__GenericStatusAttr_AttrObsrvtnSttsEnum__"
@@ -338,12 +362,33 @@
         "FCTR"
       ]
     },
+    "DtDimensionContainer_EDR_": {
+      "title": "DtDimensionContainer[EDR]",
+      "type": "object",
+      "properties": {
+        "ID": {
+          "title": "Id",
+          "maxLength": 32,
+          "pattern": "^[IP][a-zA-z0-9_]+",
+          "type": "string"
+        },
+        "DT": {
+          "title": "Dt",
+          "type": "string",
+          "format": "date"
+        }
+      },
+      "required": [
+        "ID",
+        "DT"
+      ]
+    },
     "EdrSeries": {
       "title": "EdrSeries",
       "type": "object",
       "properties": {
         "DIMS": {
-          "$ref": "#/definitions/DtDimensionContainer"
+          "$ref": "#/definitions/DtDimensionContainer_EDR_"
         },
         "PRC": {
           "$ref": "#/definitions/Measure_float__GenericStatusAttr_AttrObsrvtnSttsEnum__"
@@ -354,12 +399,33 @@
         "PRC"
       ]
     },
+    "DtDimensionContainer_ODR_": {
+      "title": "DtDimensionContainer[ODR]",
+      "type": "object",
+      "properties": {
+        "ID": {
+          "title": "Id",
+          "maxLength": 32,
+          "pattern": "^[IP][a-zA-z0-9_]+",
+          "type": "string"
+        },
+        "DT": {
+          "title": "Dt",
+          "type": "string",
+          "format": "date"
+        }
+      },
+      "required": [
+        "ID",
+        "DT"
+      ]
+    },
     "OdrSeries": {
       "title": "OdrSeries",
       "type": "object",
       "properties": {
         "DIMS": {
-          "$ref": "#/definitions/DtDimensionContainer"
+          "$ref": "#/definitions/DtDimensionContainer_ODR_"
         },
         "PRC": {
           "$ref": "#/definitions/Measure_float__GenericStatusAttr_AttrObsrvtnSttsEnum__"

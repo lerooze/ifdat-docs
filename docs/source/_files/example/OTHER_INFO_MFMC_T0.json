@@ -1,9 +1,9 @@
 {
   "HEADER": {
-    "SOURCE_ORG": "EGRMFMC000",
-    "SOURCE_PERSON": "aloumiotis@foo.gr",
+    "RA": "EGRMFMC000",
+    "RP": "aloumiotis",
     "DOMAIN": "IFDat",
-    "CATEGORY": "other_info"
+    "CATEGORY": "OTHER_INFO"
   },
   "DATASETS": {
     "ISSUER": [
