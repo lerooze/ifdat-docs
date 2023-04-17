@@ -1,0 +1,189 @@
+{
+  "HEADER": {
+    "RA": "EGRMFMC000",
+    "RP": "aloumiotis",
+    "DOMAIN": "IFDat"
+  },
+  "CATEGORIES": {
+    "BSI": {
+      "DEPOSIT": [
+        {
+          "DIMS": {
+            "IID": "IGR8801101230000012300302300",
+            "DT": "2022-01-31"
+          },
+          "STCK": {
+            "VALUE": 4110007.78
+          },
+          "EUR_STCK": {
+            "VALUE": 4110007.78
+          },
+          "ACCRLS": {
+            "VALUE": 7.78
+          }
+        }
+      ],
+      "ASSET_DEBT": [
+        {
+          "DIMS": {
+            "IID": "IXS2400040460",
+            "ID": "EGRAK1",
+            "DT": "2022-01-31",
+            "FRQNCY": "M"
+          },
+          "STCK": {
+            "VALUE": 1000000.0
+          },
+          "EUR_STCK": {
+            "VALUE": 1000000.0
+          },
+          "TRNSCTNS": {
+            "VALUE": 1000000.0
+          },
+          "NMNL_STCK": {
+            "VALUE": 1023386.0
+          },
+          "LND_FR_RPS": {
+            "VALUE": 0.0
+          },
+          "LND_FR_SCLB": {
+            "VALUE": 0.0
+          },
+          "LND_FR_BSBT": {
+            "VALUE": 0.0
+          },
+          "LND_FR_MLT": {
+            "VALUE": 0.0
+          },
+          "ACCRLS": {
+            "VALUE": 9667.55
+          },
+          "ARRRS": {
+            "VALUE": 0.0
+          }
+        }
+      ],
+      "SHARE": [
+        {
+          "DIMS": {
+            "IID": "IXS2400040460",
+            "ID": "EGRAK1",
+            "DT": "2022-01-31",
+            "FRQNCY": "M"
+          },
+          "STCK": {
+            "VALUE": 3950003.16
+          },
+          "EUR_STCK": {
+            "VALUE": 3950003.16
+          },
+          "TRNSCTNS": {
+            "VALUE": 4000000.0
+          },
+          "QNTTY": {
+            "VALUE": 277778.0
+          },
+          "LND_FR_RPS": {
+            "VALUE": 0.0
+          },
+          "LND_FR_SCLB": {
+            "VALUE": 0.0
+          },
+          "LND_FR_BSBT": {
+            "VALUE": 0.0
+          },
+          "LND_FR_MLT": {
+            "VALUE": 0.0
+          }
+        }
+      ],
+      "LIAB_REM": [
+        {
+          "DIMS": {
+            "ID": "EGRAK1",
+            "CNTRGRP": "S126.GR",
+            "CRRNCY": "EUR",
+            "DT": "2022-01-31"
+          },
+          "STCK": {
+            "VALUE": 110000.0
+          },
+          "EUR_STCK": {
+            "VALUE": 110000.0
+          }
+        }
+      ],
+      "HOLDER": [
+        {
+          "DIMS": {
+            "IID": "IGRF000000001",
+            "ID": "PGRMFMC000_H1",
+            "DT": "2022-01-31",
+            "FRQNCY": "M"
+          },
+          "QNTTY": {
+            "VALUE": 30000.0
+          },
+          "SBSCRPTNS": {
+            "VALUE": 303000.0
+          },
+          "SUB_CHRGS": {
+            "VALUE": 3000.0
+          },
+          "RDMPTNS": {
+            "VALUE": 0.0
+          },
+          "RED_CHRGS": {
+            "VALUE": 0.0
+          }
+        },
+        {
+          "DIMS": {
+            "IID": "IGRF000000001",
+            "ID": "PGRMFMC000_H2",
+            "DT": "2022-01-31",
+            "FRQNCY": "M"
+          },
+          "QNTTY": {
+            "VALUE": 70000.0
+          },
+          "SBSCRPTNS": {
+            "VALUE": 707000.0
+          },
+          "SUB_CHRGS": {
+            "VALUE": 7000.0
+          },
+          "RDMPTNS": {
+            "VALUE": 0.0
+          },
+          "RED_CHRGS": {
+            "VALUE": 0.0
+          }
+        },
+        {
+          "DIMS": {
+            "IID": "IGRF000000001",
+            "ID": "TGR99999999",
+            "DT": "2022-01-31",
+            "FRQNCY": "M"
+          },
+          "QNTTY": {
+            "VALUE": 900000.0
+          },
+          "SBSCRPTNS": {
+            "VALUE": 9090000.0
+          },
+          "SUB_CHRGS": {
+            "VALUE": 90000.0
+          },
+          "RDMPTNS": {
+            "VALUE": 990000.0
+          },
+          "RED_CHRGS": {
+            "VALUE": 10000.0
+          }
+        }
+      ]
+    }
+  }
+}

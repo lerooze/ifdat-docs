@@ -1,0 +1,316 @@
+{
+  "HEADER": {
+    "RA": "EGRMFMC000",
+    "RP": "aloumiotis",
+    "DOMAIN": "IFDat"
+  },
+  "CATEGORIES": {
+    "OI": {
+      "ISSUER": [
+        {
+          "DIMS": {
+            "ID": "EGR011"
+          },
+          "ESCB_ID": {
+            "VALUE": "GR011"
+          }
+        },
+        {
+          "DIMS": {
+            "ID": "EGR017N"
+          },
+          "ESCB_ID": {
+            "VALUE": "GR017N"
+          }
+        },
+        {
+          "DIMS": {
+            "ID": "L213800U3Y9UL7Y4QVM11"
+          },
+          "LEI_ID": {
+            "VALUE": "213800U3Y9UL7Y4QVM11"
+          }
+        }
+      ],
+      "STATIC_ISSUER": [
+        {
+          "DIMS": {
+            "ID": "EGR011"
+          },
+          "NM": {
+            "VALUE": "ΕΘΝΙΚΗ ΤΡΑΠΕΖΑ ΤΗΣ ΕΛΛΑΔΟΣ Α.Ε."
+          },
+          "CNTRY_RSDNC": {
+            "VALUE": "GR"
+          },
+          "LGL_PRCDNG_STTS": {
+            "VALUE": "1"
+          },
+          "INSTTTNL_SCTR": {
+            "VALUE": "S122"
+          },
+          "ECNMC_ACTVTY": {
+            "VALUE": "64_19"
+          }
+        },
+        {
+          "DIMS": {
+            "ID": "EGR017N"
+          },
+          "NM": {
+            "VALUE": "ΤΡΑΠΕΖΑ ΠΕΙΡΑΙΩΣ ΑΝΩΝΥΜΟΣ ΕΤΑΙΡΕΙΑ"
+          },
+          "CNTRY_RSDNC": {
+            "VALUE": "GR"
+          },
+          "LGL_PRCDNG_STTS": {
+            "VALUE": "1"
+          },
+          "INSTTTNL_SCTR": {
+            "VALUE": "S122"
+          },
+          "ECNMC_ACTVTY": {
+            "VALUE": "64_19"
+          }
+        },
+        {
+          "DIMS": {
+            "ID": "L213800U3Y9UL7Y4QVM11"
+          },
+          "NM": {
+            "VALUE": "ΜΟΤΟΡ ΟΪΛ (ΕΛΛΑΣ) ΔΙΥΛΙΣΤΗΡΙΑ ΚΟΡΙΝΘΟΥ ΑΕ"
+          },
+          "CNTRY_RSDNC": {
+            "VALUE": "GR"
+          },
+          "LGL_PRCDNG_STTS": {
+            "VALUE": "1"
+          },
+          "INSTTTNL_SCTR": {
+            "VALUE": "S11"
+          },
+          "ECNMC_ACTVTY": {
+            "VALUE": "19_20"
+          }
+        }
+      ],
+      "HOLDER": [
+        {
+          "DIMS": {
+            "ID": "PGRMFMC000_H1"
+          },
+          "INTRNL_ID": {
+            "VALUE": "GRMFMC000_H1"
+          }
+        },
+        {
+          "DIMS": {
+            "ID": "PGRMFMC000_H2"
+          },
+          "INTRNL_ID": {
+            "VALUE": "GRMFMC000_H2"
+          }
+        },
+        {
+          "DIMS": {
+            "ID": "TGR99999999"
+          },
+          "TAX_ID": {
+            "VALUE": "GR999999999"
+          }
+        }
+      ],
+      "STATIC_HOLDER": [
+        {
+          "DIMS": {
+            "ID": "PGRMFMC000_H1"
+          },
+          "CNTRY_RSDNC": {
+            "VALUE": "GR"
+          },
+          "INSTTTNL_SCTR": {
+            "VALUE": "S14"
+          }
+        },
+        {
+          "DIMS": {
+            "ID": "PGRMFMC000_H2"
+          },
+          "CNTRY_RSDNC": {
+            "VALUE": "CY"
+          },
+          "INSTTTNL_SCTR": {
+            "VALUE": "S14"
+          }
+        },
+        {
+          "DIMS": {
+            "ID": "TGR99999999"
+          },
+          "NM": {
+            "VALUE": "ΥΠΟΘΕΤΙΚΗ Α.Ε."
+          },
+          "CNTRY_RSDNC": {
+            "VALUE": "GR"
+          },
+          "INSTTTNL_SCTR": {
+            "VALUE": "S11"
+          }
+        }
+      ],
+      "DEPOSIT": [
+        {
+          "DIMS": {
+            "ID": "IGR8801101230000012300302300"
+          },
+          "DT_BRTH": {
+            "VALUE": "2022-01-27"
+          },
+          "IBAN_ID": {
+            "VALUE": "GR8801101230000012300302300"
+          },
+          "TYP": {
+            "VALUE": "OVER"
+          },
+          "CRRNCY": {
+            "VALUE": "EUR"
+          },
+          "IS_TRNSFRBL": {
+            "VALUE": true
+          }
+        }
+      ],
+      "STATIC_DEPOSIT": [
+        {
+          "DIMS": {
+            "ID": "IGR8801101230000012300302300"
+          },
+          "NMNL_INTRST": {
+            "VALUE": 1.0
+          },
+          "CMPND_TMS": {
+            "VALUE": 2.0
+          },
+          "DBTR": {
+            "VALUE": "EGR011"
+          },
+          "CRDTR": {
+            "VALUE": "EGRAK1"
+          }
+        }
+      ],
+      "DEBT": [
+        {
+          "DIMS": {
+            "ID": "IXS2400040460"
+          },
+          "DT_BRTH": {
+            "VALUE": "2021-11-03"
+          },
+          "DT_CLS": {
+            "VALUE": "2027-11-03"
+          },
+          "ORGNL_MTRTY": {
+            "VALUE": "2027-11-03"
+          },
+          "ISIN_ID": {
+            "VALUE": "XS2400040460"
+          },
+          "CRRNCY": {
+            "VALUE": "EUR"
+          },
+          "ISS_PRC": {
+            "VALUE": 100.0
+          },
+          "RDMPTN_PRC": {
+            "VALUE": 100.0
+          },
+          "MRKT": {
+            "VALUE": "XFRA"
+          },
+          "ACCRL_STRTDT": {
+            "VALUE": "2021-11-03"
+          },
+          "PRMRY_CLSS": {
+            "VALUE": "D.1"
+          },
+          "GRNT_LVL": {
+            "VALUE": "1"
+          },
+          "RNK_LVL": {
+            "VALUE": "4"
+          },
+          "SCRTY_LVL": {
+            "VALUE": "1"
+          },
+          "CPN_TYP": {
+            "VALUE": "FLO"
+          },
+          "CPN_CRRNCY": {
+            "VALUE": "EUR"
+          },
+          "CPN_FRQNCY": {
+            "VALUE": "AN"
+          },
+          "FRST_CPN_DT": {
+            "VALUE": "2022-11-03"
+          }
+        }
+      ],
+      "STATIC_DEBT": [
+        {
+          "DIMS": {
+            "ID": "IXS2400040460"
+          },
+          "NM": {
+            "VALUE": "Piraeus Bank S.A. 3,875% 21/27"
+          },
+          "STTS": {
+            "VALUE": "100"
+          },
+          "MTRTY_DT": {
+            "VALUE": "2027-11-03"
+          },
+          "ISSD_BY": {
+            "VALUE": "EGR017N"
+          }
+        }
+      ],
+      "SHARE": [
+        {
+          "DIMS": {
+            "ID": "IGRS426003000"
+          },
+          "ISIN_ID": {
+            "VALUE": "GRS426003000"
+          },
+          "CRRNCY": {
+            "VALUE": "EUR"
+          },
+          "MRKT": {
+            "VALUE": "ASEX"
+          },
+          "TYP": {
+            "VALUE": "F511"
+          },
+          "PRMRY_CLSS": {
+            "VALUE": "E.1"
+          }
+        }
+      ],
+      "STATIC_SHARE": [
+        {
+          "DIMS": {
+            "ID": "IGRS426003000"
+          },
+          "NM": {
+            "VALUE": "ΜΟΤΟΡ ΟΪΛ ΕΛΛΑΣ Α.Ε. (ΚΟ)"
+          },
+          "ISSD_BY": {
+            "VALUE": "L213800U3Y9UL7Y4QVM11"
+          }
+        }
+      ]
+    }
+  }
+}

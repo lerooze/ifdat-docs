@@ -12,6 +12,12 @@ What's new?
 .. ============
 
 
+v0.4.0 (2023-04-18)
+-------------------
+
+* Introduce one DATA MODEL, one json schema and one template file rather than
+  seperate ones for each category
+
 v0.3.1 (2023-04-13)
 -------------------
 

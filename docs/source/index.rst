@@ -1,7 +1,15 @@
 IFDAT-DOCS
 ==========
 
-Τις οδηγίες σε μορφή pdf θα τις βρείτε :download:`εδώ </_files/ifdat-docs.pdf>` και σε μορφή docx :download:`εδώ </_files/ifdat-docs.docx>`.
+:download:`Εδώ </_files/ifdat-docs.pdf>` θα βρείτε τις οδηγίες σε μορφή pdf.
+
+:download:`Εδώ </_files/ifdat-docs.docx>` θα βρείτε τις οδηγίες σε μορφή docx.
+
+:download:`Εδώ </_files/IFDAT_DATAMODEL.xlsx>` θα βρείτε τo DATA MODEL (:doc:`model`).
+
+:download:`Εδώ </_files/IFDAT_TEMPLATE.xlsx>` θα βρείτε τo υπόδειγμα EXCEL για εισαγωγή στοιχείων (:doc:`submission`).
+
+:download:`Εδώ </_files/IFDAT_SCHEMA.json>` θα βρείτε τo JSON schema για εισαγωγή στοιχείων σε μορφή json (:doc:`submission`).
 
 Το **IFDAT-DOCS** παρουσιάζει τις οδηγίες σε σχέση σε σχέση με το σχέδιο συλλογής αναλυτικών στοιχείων από επενδυτικούς οργανισμούς από την Τράπεζα της Ελλάδος.
 
