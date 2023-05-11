@@ -12,6 +12,13 @@ What's new?
 .. ============
 
 
+v0.4.3 (2023-05-11)
+-------------------
+
+* Adjust SI and SK to reflect current data needs
+* Drop attributes
+* Added to SK TRANCHE and REDEMPTION tables
+  
 v0.4.2 (2023-04-18)
 -------------------
 

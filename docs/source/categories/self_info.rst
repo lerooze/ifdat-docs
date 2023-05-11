@@ -31,12 +31,6 @@ BIRTHDATE (DT_BRTH)
 CLOSEDATE (DT_CLS)
    Ημερομηνία λύσης (κατά περίπτωση)·
 
-COUNTRY OF BIRTH (CNTRY_BRTH)
-   Χώρα σύστασης με επιλογή από τη λίστα τιμών `GEN_CNTRY_ENUM`` ·
-
-ESCB ID (ESCB_ID)
-   Αναγνωριστικός κωδικός που αποδίδεται από το ``ΕΣΚΤ``.  Είναι γνωστός και ως ``RIAD code`` ·
-
 LEI ID (LEI_ID)
    Αναγνωριστικός κωδικός ο οποίος αποδίδεται βάσει του προτύπου ISO-17442·
 
@@ -111,23 +105,14 @@ LATIN CITY (CTY_LTN)
 POSTAL CODE (PSTL_CD)
     Ταχυδρομικός κώδικας.  Αφορά ``ΠΜ`` χωρίς διαχειρίστρια εταιρεία·
 
-POSTAL BOX (PSTL_BX)
-    Ταχυδρομική θυρίδα. Αφορά ``ΠΜ`` χωρίς διαχειρίστρια εταιρεία·
-
 URL
     Διεύθυνση στο διαδίκτυο (κατά περίπτωση)·
 
 EMAIL
     Ηλεκτρονική διεύθυνση αλληλογραφίας (κατά περίπτωση)·
 
-COUNTRY OF RESIDENCE (CNTRY_RSDNC)
-    Χώρα κατοικίας με επιλογή από τη λίστα τιμών ``GEN_CNTRY_ENUM`` ·
-
 IS LISTED (IS_LSTD)
     Ένδειξη περί εισηγμένου·
-
-IS INVESTMENT GRADED (IS_INVSTMNT_GRDD)
-    Ένδειξη επενδυτικής βαθμίδας.  Αφορά ``ΠΜ`` που είναι νομικές οντότητες·
 
 IS INACTIVE (IS_INCTV)
     Ένδειξη κατάστασης αδράνειας·
@@ -135,25 +120,8 @@ IS INACTIVE (IS_INCTV)
 IS UNDER LIQUIDATION (IS_UNDR_LQDTN)
     Ένδειξη καθεστώς εκκαθάρισης·
 
-LEGAL PROCEEDINGS STATUS (LGL_PRCDNG_STTS)
-    Νομική κατάσταση με επιλογή από τη λίστα τιμών ``ORG_LGL_PRCDNG_STTS_ENUM`` ·
-
-ACCOUNTS CURRENCY (ACCNTS_CRRNCY)
-    Νόμισμα στο οποίο εκφράζονται οι χρηματοοικονομικές καταστάσεις με επιλογή από τη λίστα τιμών ``GEN_CRRNCY_ENUM`` ·
-
 INSTITUTIONAL SECTOR CONTROL (INSTTTNL_SCTR_CNTRL)
     Είδος θεσμικού ελέγχου με επιλογή από τη λίστα τιμών ``ORG_INSTTTNL_SCTR_CNTRL_ENUM`` που προκύπτει από το Κεφάλαιο 2 του ESA2010·
-
-SIZE (SZ)
-    Μέγεθος με επιλογή από τη λίστα τιμών ``ORG_SZ_ENUM`` σύμφωνα με το ``Annex to Commission Recommendation 2033/361/EC`` ·  Αφορά νομικές οντότητες.
-
-LEGAL FORM (LGL_FRM)
-    Νομική μορφή με επιλογή από τη λίστα τιμών ``ORG_LGL_FRM_ENUM`` ·
-
-TYPE OF SUPERVISION (TYP_SPRVSN)
-    Είδος εποπτείας με επιλογή από τη λίστα τιμών ``ORG_SPRVSN_TYP_ENUM`` ·
-
-.. _fscurrency:
 
 MANAGED BY (MNGD_BY)
     Αναγνωριστικός κωδικός διαχειρίστριας εταιρείας (κατά περίπτωση) (:ref:`org`)·
@@ -196,10 +164,6 @@ BOND FUND FOCUS (BND_FCS)
     Κλαδική εστίαση χαρτοφυλακίου με επιλογή από τη λίστα τιμών
     ``FND_BND_FCS_ENUM``.  Αφορά ομολογιακή ``ΠΜ`` ·
 
-BOND FUND GRADE (BND_GRD)
-    Επενδυτική βαθμίδα των περιουσιακών στοιχείων με επιλογή από τη λίστα
-    τιμών ``FND_BND_GRD_ENUM``.  Αφορά ομολογιακή ``ΠΜ`` ·
-
 REAL ESTATE FUND TYPE (RL_ESTT_TYP)
     Είδος χαρτοφυλακίου ακίνητης περιουσίας με επιλογή από τη λίστα τιμών
     ``FND_RL_ESTT_TYP_ENUM``.  Αφορά ``ΠΜ`` ακίνητης περιουσίας·
@@ -214,6 +178,17 @@ IS EXCHANGE TRADED FUND (IS_ETF)
 IS PRIVATE EQUITY FUND (IS_PEF)
     Ένδειξη ότι πρόκειται για ιδιωτικό επενδυτικό κεφάλαιο όπως ορίζεται στις
     Κατευθυντήρια Γραμμή ΕΚΤ/2014/5·
+
+.. _fscurrency:
+
+ACCOUNTS CURRENCY (ACCNTS_CRRNCY)
+    Νόμισμα στο οποίο εκφράζονται οι χρηματοοικονομικές καταστάσεις με επιλογή από τη λίστα τιμών ``GEN_CRRNCY_ENUM`` ·
+
+VALUATION FREQUENCY(VLTN_FRQNCY)
+    Συχνότητα αποτίμησης στοιχείων ισολογισμού με επιλογή από τη λίστα τιμών ``VLTN_CSTM_FRQNCY`` · 
+
+VALUATION DEADLINE (VLTN_DDLN)
+    Χρονικό περιθώριο αποτίμησης στοιχείων ισολογισμού σε ημέρες.  Για παράδειγμα για στοιχεία ισολογισμού που αποτιμώνται σε τριμηνιαία βάση έως δύο μήνες από το τέλος της περιόδου αναφορας συμπληρώνεται η τιμή 60. 
 
 DEBT
 ----
@@ -356,9 +331,6 @@ VALID TO (VLD_T)
 ΜΕΤΑΒΛΗΤΕΣ
 ~~~~~~~~~~
 
-NAME (NM)
-    Ονομασία·
-
 LATIN NAME (NM_LTN)
     Ονομασία με λατινικούς χαρακτήρες·
 
@@ -444,9 +416,6 @@ VALID TO (VLD_T)
 ΜΕΤΑΒΛΗΤΕΣ
 ~~~~~~~~~~
 
-NAME (NM)
-    Ονομασία·
-
 LATIN NAME (NM_LTN)
     Ονομασία με λατινικούς χαρακτήρες·
 
@@ -487,12 +456,6 @@ BIRTHDATE (DT_BRTH)
 
 CLOSEDATE (DT_CLS)
    Ημερομηνία λύσης (κατά περίπτωση)·
-
-COUNTRY OF BIRTH (CNTRY_BRTH)
-   Χώρα σύστασης με επιλογή από τη λίστα τιμών `GEN_CNTRY_ENUM`` ·
-
-ESCB ID (ESCB_ID)
-   Αναγνωριστικός κωδικός που αποδίδεται από το ``ΕΣΚΤ``.  Είναι γνωστός και ως ``RIAD code`` ·
 
 LEI ID (LEI_ID)
    Αναγνωριστικός κωδικός ο οποίος αποδίδεται βάσει του προτύπου ISO-17442·
@@ -554,9 +517,6 @@ LATIN CITY (CTY_LTN)
 POSTAL CODE (PSTL_CD)
     Ταχυδρομικός κώδικας·
 
-POSTAL BOX (PSTL_BX)
-    Ταχυδρομικός κώδικας·
-
 URL
     Διεύθυνση στο διαδίκτυο·
 
@@ -565,9 +525,6 @@ EMAIL
 
 COUNTRY OF RESIDENCE (CNTRY_RSDNC)
     Χώρα κατοικίας με επιλογή από τη λίστα τιμών ``GEN_CNTRY_ENUM`` ·
-
-LEGAL PROCEEDINGS STATUS (LGL_PRCDNG_STTS)
-    Νομική κατάσταση με επιλογή από τη λίστα τιμών ``ORG_LGL_PRCDNG_STTS_ENUM`` ·
 
 RA
 --
@@ -588,12 +545,6 @@ BIRTHDATE (DT_BRTH)
 
 CLOSEDATE (DT_CLS)
    Ημερομηνία λύσης (κατά περίπτωση)·
-
-COUNTRY OF BIRTH (CNTRY_BRTH)
-   Χώρα σύστασης με επιλογή από τη λίστα τιμών `GEN_CNTRY_ENUM`` ·
-
-ESCB ID (ESCB_ID)
-   Αναγνωριστικός κωδικός που αποδίδεται από το ``ΕΣΚΤ``.  Είναι γνωστός και ως ``RIAD code`` ·
 
 LEI ID (LEI_ID)
    Αναγνωριστικός κωδικός ο οποίος αποδίδεται βάσει του προτύπου ISO-17442·
@@ -656,9 +607,6 @@ LATIN CITY (CTY_LTN)
 POSTAL CODE (PSTL_CD)
     Ταχυδρομικός κώδικας·
 
-POSTAL BOX (PSTL_BX)
-    Ταχυδρομικός κώδικας·
-
 URL
     Διεύθυνση στο διαδίκτυο·
 
@@ -667,9 +615,6 @@ EMAIL
 
 COUNTRY OF RESIDENCE (CNTRY_RSDNC)
     Χώρα κατοικίας με επιλογή από τη λίστα τιμών ``GEN_CNTRY_ENUM`` ·
-
-LEGAL PROCEEDINGS STATUS (LGL_PRCDNG_STTS)
-    Νομική κατάσταση με επιλογή από τη λίστα τιμών ``ORG_LGL_PRCDNG_STTS_ENUM`` ·
 
 
 
@@ -700,9 +645,6 @@ LAST NAME (LST)
 
 SALUTATION OF LAST NAME (LST_SLTTN)
     Προσφώνηση επωνύμου·
-
-GENDER (GNDR)
-    Φύλλο με επιλογή από τη λίστα τιμών ``GEN_GNDR_ENUM`` ·
 
 PHONE (PHN)
     Τηλέφωνο επικοινωνίας·

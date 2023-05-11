@@ -60,226 +60,50 @@
         "ID"
       ]
     },
-    "AttrObsrvtnSttsEnum": {
-      "title": "AttrObsrvtnSttsEnum",
-      "description": "An enumeration.",
-      "enum": [
-        "A",
-        "E",
-        "M",
-        "O"
-      ],
-      "type": "string"
-    },
-    "GenericStatusAttr_AttrObsrvtnSttsEnum_": {
-      "title": "GenericStatusAttr[AttrObsrvtnSttsEnum]",
-      "type": "object",
-      "properties": {
-        "STATUS": {
-          "default": "A",
-          "allOf": [
-            {
-              "$ref": "#/definitions/AttrObsrvtnSttsEnum"
-            }
-          ]
-        }
-      }
-    },
-    "Measure_date__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
-      "title": "Measure[date, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+    "BaseMeasure_date_": {
+      "title": "BaseMeasure[date]",
       "type": "object",
       "properties": {
         "VALUE": {
           "title": "Value",
           "type": "string",
           "format": "date"
-        },
-        "ATTRS": {
-          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
         }
       },
       "required": [
         "VALUE"
       ]
     },
-    "GenCntryEnum": {
-      "title": "GenCntryEnum",
-      "description": "An enumeration.",
-      "enum": [
-        "AE",
-        "AF",
-        "AL",
-        "AO",
-        "AR",
-        "AT",
-        "AU",
-        "BE",
-        "BG",
-        "BH",
-        "BJ",
-        "BM",
-        "BR",
-        "BS",
-        "BY",
-        "BZ",
-        "CA",
-        "CG",
-        "CH",
-        "CL",
-        "CM",
-        "CN",
-        "CO",
-        "CW",
-        "CY",
-        "CZ",
-        "DE",
-        "DK",
-        "DO",
-        "EG",
-        "ER",
-        "ES",
-        "FI",
-        "FO",
-        "FR",
-        "GB",
-        "GE",
-        "GG",
-        "GI",
-        "GR",
-        "HK",
-        "HR",
-        "HU",
-        "ID",
-        "IE",
-        "IL",
-        "IM",
-        "IN",
-        "IO",
-        "IS",
-        "IT",
-        "JE",
-        "JP",
-        "KE",
-        "KR",
-        "KY",
-        "KZ",
-        "LB",
-        "LR",
-        "LU",
-        "LV",
-        "LY",
-        "ME",
-        "MH",
-        "MK",
-        "MN",
-        "MU",
-        "MW",
-        "MX",
-        "NG",
-        "NL",
-        "NO",
-        "NZ",
-        "OM",
-        "PA",
-        "PE",
-        "PG",
-        "PH",
-        "PL",
-        "PT",
-        "QA",
-        "RO",
-        "RS",
-        "RU",
-        "SA",
-        "SC",
-        "SD",
-        "SE",
-        "SG",
-        "SH",
-        "SI",
-        "SK",
-        "TH",
-        "TR",
-        "TW",
-        "TZ",
-        "UA",
-        "US",
-        "VA",
-        "VE",
-        "VG",
-        "ZA",
-        "ZM"
-      ],
-      "type": "string"
-    },
-    "Measure_GenCntryEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
-      "title": "Measure[GenCntryEnum, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
-      "type": "object",
-      "properties": {
-        "VALUE": {
-          "$ref": "#/definitions/GenCntryEnum"
-        },
-        "ATTRS": {
-          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
-        }
-      },
-      "required": [
-        "VALUE"
-      ]
-    },
-    "Measure_Ascii32__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
-      "title": "Measure[Ascii32, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
-      "type": "object",
-      "properties": {
-        "VALUE": {
-          "title": "Value",
-          "maxLength": 32,
-          "type": "string"
-        },
-        "ATTRS": {
-          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
-        }
-      },
-      "required": [
-        "VALUE"
-      ]
-    },
-    "Measure_Ascii20__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
-      "title": "Measure[Ascii20, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+    "BaseMeasure_Ascii20_": {
+      "title": "BaseMeasure[Ascii20]",
       "type": "object",
       "properties": {
         "VALUE": {
           "title": "Value",
           "maxLength": 20,
           "type": "string"
-        },
-        "ATTRS": {
-          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
         }
       },
       "required": [
         "VALUE"
       ]
     },
-    "Measure_Ascii31__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
-      "title": "Measure[Ascii31, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+    "BaseMeasure_Ascii31_": {
+      "title": "BaseMeasure[Ascii31]",
       "type": "object",
       "properties": {
         "VALUE": {
           "title": "Value",
           "maxLength": 31,
           "type": "string"
-        },
-        "ATTRS": {
-          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
         }
       },
       "required": [
         "VALUE"
       ]
     },
-    "Measure_ORG__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
-      "title": "Measure[ORG, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+    "BaseMeasure_ORG_": {
+      "title": "BaseMeasure[ORG]",
       "type": "object",
       "properties": {
         "VALUE": {
@@ -287,9 +111,6 @@
           "maxLength": 32,
           "pattern": "^[ELTBP][a-zA-z0-9_]+",
           "type": "string"
-        },
-        "ATTRS": {
-          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
         }
       },
       "required": [
@@ -304,31 +125,25 @@
           "$ref": "#/definitions/DimensionContainer_ORG_"
         },
         "DT_BRTH": {
-          "$ref": "#/definitions/Measure_date__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_date_"
         },
         "DT_CLS": {
-          "$ref": "#/definitions/Measure_date__GenericStatusAttr_AttrObsrvtnSttsEnum__"
-        },
-        "CNTRY_BRTH": {
-          "$ref": "#/definitions/Measure_GenCntryEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
-        },
-        "ESCB_ID": {
-          "$ref": "#/definitions/Measure_Ascii32__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_date_"
         },
         "LEI_ID": {
-          "$ref": "#/definitions/Measure_Ascii20__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Ascii20_"
         },
         "TAX_ID": {
-          "$ref": "#/definitions/Measure_Ascii31__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Ascii31_"
         },
         "NBR_ID": {
-          "$ref": "#/definitions/Measure_Ascii31__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Ascii31_"
         },
         "SPLT_FRM": {
-          "$ref": "#/definitions/Measure_ORG__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_ORG_"
         },
         "MRGD_WTH": {
-          "$ref": "#/definitions/Measure_ORG__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_ORG_"
         }
       },
       "required": [
@@ -360,127 +175,106 @@
         "ID"
       ]
     },
-    "Measure_Str128__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
-      "title": "Measure[Str128, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+    "BaseMeasure_Str128_": {
+      "title": "BaseMeasure[Str128]",
       "type": "object",
       "properties": {
         "VALUE": {
           "title": "Value",
           "maxLength": 128,
           "type": "string"
-        },
-        "ATTRS": {
-          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
         }
       },
       "required": [
         "VALUE"
       ]
     },
-    "Measure_Ascii128__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
-      "title": "Measure[Ascii128, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+    "BaseMeasure_Ascii128_": {
+      "title": "BaseMeasure[Ascii128]",
       "type": "object",
       "properties": {
         "VALUE": {
           "title": "Value",
           "maxLength": 128,
           "type": "string"
-        },
-        "ATTRS": {
-          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
         }
       },
       "required": [
         "VALUE"
       ]
     },
-    "Measure_Str64__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
-      "title": "Measure[Str64, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+    "BaseMeasure_Str64_": {
+      "title": "BaseMeasure[Str64]",
       "type": "object",
       "properties": {
         "VALUE": {
           "title": "Value",
           "maxLength": 64,
           "type": "string"
-        },
-        "ATTRS": {
-          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
         }
       },
       "required": [
         "VALUE"
       ]
     },
-    "Measure_Ascii64__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
-      "title": "Measure[Ascii64, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+    "BaseMeasure_Ascii64_": {
+      "title": "BaseMeasure[Ascii64]",
       "type": "object",
       "properties": {
         "VALUE": {
           "title": "Value",
           "maxLength": 64,
           "type": "string"
-        },
-        "ATTRS": {
-          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
         }
       },
       "required": [
         "VALUE"
       ]
     },
-    "Measure_Str32__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
-      "title": "Measure[Str32, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+    "BaseMeasure_Str32_": {
+      "title": "BaseMeasure[Str32]",
       "type": "object",
       "properties": {
         "VALUE": {
           "title": "Value",
           "maxLength": 32,
           "type": "string"
-        },
-        "ATTRS": {
-          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
         }
       },
       "required": [
         "VALUE"
       ]
     },
-    "Measure_Str16__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
-      "title": "Measure[Str16, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+    "BaseMeasure_Ascii32_": {
+      "title": "BaseMeasure[Ascii32]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "title": "Value",
+          "maxLength": 32,
+          "type": "string"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "BaseMeasure_Str16_": {
+      "title": "BaseMeasure[Str16]",
       "type": "object",
       "properties": {
         "VALUE": {
           "title": "Value",
           "maxLength": 16,
           "type": "string"
-        },
-        "ATTRS": {
-          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
         }
       },
       "required": [
         "VALUE"
       ]
     },
-    "Measure_Str8__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
-      "title": "Measure[Str8, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
-      "type": "object",
-      "properties": {
-        "VALUE": {
-          "title": "Value",
-          "maxLength": 8,
-          "type": "string"
-        },
-        "ATTRS": {
-          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
-        }
-      },
-      "required": [
-        "VALUE"
-      ]
-    },
-    "Measure_AnyUrl__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
-      "title": "Measure[AnyUrl, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+    "BaseMeasure_AnyUrl_": {
+      "title": "BaseMeasure[AnyUrl]",
       "type": "object",
       "properties": {
         "VALUE": {
@@ -489,50 +283,41 @@
           "maxLength": 65536,
           "format": "uri",
           "type": "string"
-        },
-        "ATTRS": {
-          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
         }
       },
       "required": [
         "VALUE"
       ]
     },
-    "Measure_EmailStr__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
-      "title": "Measure[EmailStr, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+    "BaseMeasure_EmailStr_": {
+      "title": "BaseMeasure[EmailStr]",
       "type": "object",
       "properties": {
         "VALUE": {
           "title": "Value",
           "type": "string",
           "format": "email"
-        },
-        "ATTRS": {
-          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
         }
       },
       "required": [
         "VALUE"
       ]
     },
-    "Measure_bool__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
-      "title": "Measure[bool, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+    "BaseMeasure_bool_": {
+      "title": "BaseMeasure[bool]",
       "type": "object",
       "properties": {
         "VALUE": {
           "title": "Value",
           "type": "boolean"
-        },
-        "ATTRS": {
-          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
         }
       },
       "required": [
         "VALUE"
       ]
     },
-    "OrgLglPrcdngSttsEnum": {
-      "title": "OrgLglPrcdngSttsEnum",
+    "OrgInstttnlSctrCntrlEnum": {
+      "title": "OrgInstttnlSctrCntrlEnum",
       "description": "An enumeration.",
       "enum": [
         "-",
@@ -540,19 +325,275 @@
         "1",
         "2",
         "3",
-        "4"
+        "-4"
       ],
       "type": "string"
     },
-    "Measure_OrgLglPrcdngSttsEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
-      "title": "Measure[OrgLglPrcdngSttsEnum, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+    "BaseMeasure_OrgInstttnlSctrCntrlEnum_": {
+      "title": "BaseMeasure[OrgInstttnlSctrCntrlEnum]",
       "type": "object",
       "properties": {
         "VALUE": {
-          "$ref": "#/definitions/OrgLglPrcdngSttsEnum"
-        },
-        "ATTRS": {
-          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
+          "$ref": "#/definitions/OrgInstttnlSctrCntrlEnum"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "BaseMeasure_ID_": {
+      "title": "BaseMeasure[ID]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "title": "Value",
+          "maxLength": 32,
+          "type": "string"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "FndTypEnum": {
+      "title": "FndTypEnum",
+      "description": "An enumeration.",
+      "enum": [
+        "-",
+        "UCITS",
+        "AIF",
+        "REIT",
+        "OTHER"
+      ],
+      "type": "string"
+    },
+    "BaseMeasure_FndTypEnum_": {
+      "title": "BaseMeasure[FndTypEnum]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "$ref": "#/definitions/FndTypEnum"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "FndInvstmntPlcyEnum": {
+      "title": "FndInvstmntPlcyEnum",
+      "description": "An enumeration.",
+      "enum": [
+        "-",
+        "MMF",
+        "EQT",
+        "BON",
+        "MIX",
+        "RES",
+        "HED",
+        "LOA",
+        "COM",
+        "INF",
+        "OTH"
+      ],
+      "type": "string"
+    },
+    "BaseMeasure_FndInvstmntPlcyEnum_": {
+      "title": "BaseMeasure[FndInvstmntPlcyEnum]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "$ref": "#/definitions/FndInvstmntPlcyEnum"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "FndSbtypEnum": {
+      "title": "FndSbtypEnum",
+      "description": "An enumeration.",
+      "enum": [
+        "-",
+        "OPEN",
+        "CLOSE"
+      ],
+      "type": "string"
+    },
+    "BaseMeasure_FndSbtypEnum_": {
+      "title": "BaseMeasure[FndSbtypEnum]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "$ref": "#/definitions/FndSbtypEnum"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "FndDstrbtnTypEnum": {
+      "title": "FndDstrbtnTypEnum",
+      "description": "An enumeration.",
+      "enum": [
+        "-",
+        "DIS",
+        "CUM",
+        "MIX"
+      ],
+      "type": "string"
+    },
+    "BaseMeasure_FndDstrbtnTypEnum_": {
+      "title": "BaseMeasure[FndDstrbtnTypEnum]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "$ref": "#/definitions/FndDstrbtnTypEnum"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "FndInvstrTypEnum": {
+      "title": "FndInvstrTypEnum",
+      "description": "An enumeration.",
+      "enum": [
+        "-",
+        "PRF",
+        "RTL",
+        "ART",
+        "OTH"
+      ],
+      "type": "string"
+    },
+    "BaseMeasure_FndInvstrTypEnum_": {
+      "title": "BaseMeasure[FndInvstrTypEnum]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "$ref": "#/definitions/FndInvstrTypEnum"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "FndGrnTypEnum": {
+      "title": "FndGrnTypEnum",
+      "description": "An enumeration.",
+      "enum": [
+        "-",
+        "LIGHT",
+        "DARK"
+      ],
+      "type": "string"
+    },
+    "BaseMeasure_FndGrnTypEnum_": {
+      "title": "BaseMeasure[FndGrnTypEnum]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "$ref": "#/definitions/FndGrnTypEnum"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "FndStrtgyEnum": {
+      "title": "FndStrtgyEnum",
+      "description": "An enumeration.",
+      "enum": [
+        "-",
+        "ACTIVE",
+        "SYNPAS",
+        "SYNPHY"
+      ],
+      "type": "string"
+    },
+    "BaseMeasure_FndStrtgyEnum_": {
+      "title": "BaseMeasure[FndStrtgyEnum]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "$ref": "#/definitions/FndStrtgyEnum"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "FndGgrphclFcsEnum": {
+      "title": "FndGgrphclFcsEnum",
+      "description": "An enumeration.",
+      "enum": [
+        "-",
+        "DOM",
+        "EEA",
+        "OEA",
+        "NAM",
+        "SAM",
+        "ASP",
+        "MEA",
+        "AFR",
+        "OTH"
+      ],
+      "type": "string"
+    },
+    "BaseMeasure_FndGgrphclFcsEnum_": {
+      "title": "BaseMeasure[FndGgrphclFcsEnum]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "$ref": "#/definitions/FndGgrphclFcsEnum"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "FndBndFcsEnum": {
+      "title": "FndBndFcsEnum",
+      "description": "An enumeration.",
+      "enum": [
+        "-",
+        "GOV",
+        "COR",
+        "MIX"
+      ],
+      "type": "string"
+    },
+    "BaseMeasure_FndBndFcsEnum_": {
+      "title": "BaseMeasure[FndBndFcsEnum]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "$ref": "#/definitions/FndBndFcsEnum"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "FndRlEsttTypEnum": {
+      "title": "FndRlEsttTypEnum",
+      "description": "An enumeration.",
+      "enum": [
+        "-",
+        "RES",
+        "COM",
+        "IND",
+        "MUL",
+        "OTH"
+      ],
+      "type": "string"
+    },
+    "BaseMeasure_FndRlEsttTypEnum_": {
+      "title": "BaseMeasure[FndRlEsttTypEnum]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "$ref": "#/definitions/FndRlEsttTypEnum"
         }
       },
       "required": [
@@ -607,1521 +648,51 @@
       ],
       "type": "string"
     },
-    "Measure_GenCrrncyEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
-      "title": "Measure[GenCrrncyEnum, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+    "BaseMeasure_GenCrrncyEnum_": {
+      "title": "BaseMeasure[GenCrrncyEnum]",
       "type": "object",
       "properties": {
         "VALUE": {
           "$ref": "#/definitions/GenCrrncyEnum"
-        },
-        "ATTRS": {
-          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
         }
       },
       "required": [
         "VALUE"
       ]
     },
-    "OrgInstttnlSctrCntrlEnum": {
-      "title": "OrgInstttnlSctrCntrlEnum",
+    "VltnCstmFrqncyEnum": {
+      "title": "VltnCstmFrqncyEnum",
       "description": "An enumeration.",
       "enum": [
         "-",
-        "0",
-        "1",
-        "2",
-        "3",
-        "-4"
+        "AN",
+        "SA",
+        "QA",
+        "MO",
+        "BD"
       ],
       "type": "string"
     },
-    "Measure_OrgInstttnlSctrCntrlEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
-      "title": "Measure[OrgInstttnlSctrCntrlEnum, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+    "BaseMeasure_VltnCstmFrqncyEnum_": {
+      "title": "BaseMeasure[VltnCstmFrqncyEnum]",
       "type": "object",
       "properties": {
         "VALUE": {
-          "$ref": "#/definitions/OrgInstttnlSctrCntrlEnum"
-        },
-        "ATTRS": {
-          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
+          "$ref": "#/definitions/VltnCstmFrqncyEnum"
         }
       },
       "required": [
         "VALUE"
       ]
     },
-    "OrgSzEnum": {
-      "title": "OrgSzEnum",
-      "description": "An enumeration.",
-      "enum": [
-        "-",
-        "1",
-        "2",
-        "3",
-        "4"
-      ],
-      "type": "string"
-    },
-    "Measure_OrgSzEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
-      "title": "Measure[OrgSzEnum, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
-      "type": "object",
-      "properties": {
-        "VALUE": {
-          "$ref": "#/definitions/OrgSzEnum"
-        },
-        "ATTRS": {
-          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
-        }
-      },
-      "required": [
-        "VALUE"
-      ]
-    },
-    "OrgLglFrmEnum": {
-      "title": "OrgLglFrmEnum",
-      "description": "An enumeration.",
-      "enum": [
-        "-",
-        "AT102",
-        "AT103",
-        "AT201",
-        "AT202",
-        "AT401",
-        "AT501",
-        "AT601",
-        "AT603",
-        "AT604",
-        "AT605",
-        "AT607",
-        "AT609",
-        "AT610",
-        "AT611",
-        "AT612",
-        "AT613",
-        "BE000",
-        "BE002",
-        "BE003",
-        "BE006",
-        "BE008",
-        "BE011",
-        "BE012",
-        "BE013",
-        "BE014",
-        "BE015",
-        "BE017",
-        "BE019",
-        "BE020",
-        "BE021",
-        "BE023",
-        "BE025",
-        "BE026",
-        "BE028",
-        "BE029",
-        "BE030",
-        "BE051",
-        "BE060",
-        "BE070",
-        "BE107",
-        "BE108",
-        "BE114",
-        "BE117",
-        "BE121",
-        "BE124",
-        "BE125",
-        "BE127",
-        "BE129",
-        "BE151",
-        "BE160",
-        "BE200",
-        "BE206",
-        "BE208",
-        "BE211",
-        "BE212",
-        "BE213",
-        "BE214",
-        "BE215",
-        "BE217",
-        "BE218",
-        "BE225",
-        "BE301",
-        "BE302",
-        "BE303",
-        "BE310",
-        "BE320",
-        "BE325",
-        "BE330",
-        "BE340",
-        "BE350",
-        "BE400",
-        "BE411",
-        "BE412",
-        "BE413",
-        "BE414",
-        "BE415",
-        "BE416",
-        "BE417",
-        "BE418",
-        "BE419",
-        "BE420",
-        "BE422",
-        "BE506",
-        "BE508",
-        "BE511",
-        "BE512",
-        "BE513",
-        "BE514",
-        "BE515",
-        "BE560",
-        "BE610",
-        "BE612",
-        "BE616",
-        "BE617",
-        "BE651",
-        "BE702",
-        "BE706",
-        "BE716",
-        "BE721",
-        "BG101",
-        "BG102",
-        "BG103",
-        "BG104",
-        "BG105",
-        "BG106",
-        "BG107",
-        "BG1539",
-        "BG462",
-        "BG466",
-        "BG472",
-        "CY102",
-        "CY103",
-        "CY109",
-        "CY111",
-        "CY112",
-        "CY113",
-        "CY114",
-        "CY115",
-        "CY116",
-        "CY117",
-        "CZ100",
-        "CZ111",
-        "CZ112",
-        "CZ113",
-        "CZ115",
-        "CZ116",
-        "CZ117",
-        "CZ118",
-        "CZ121",
-        "CZ141",
-        "CZ145",
-        "CZ151",
-        "CZ152",
-        "CZ161",
-        "CZ205",
-        "CZ301",
-        "CZ313",
-        "CZ325",
-        "CZ326",
-        "CZ331",
-        "CZ352",
-        "CZ353",
-        "CZ361",
-        "CZ381",
-        "CZ391",
-        "CZ421",
-        "CZ422",
-        "CZ424",
-        "CZ521",
-        "CZ541",
-        "CZ601",
-        "CZ641",
-        "CZ661",
-        "CZ703",
-        "CZ704",
-        "CZ705",
-        "CZ706",
-        "CZ707",
-        "CZ708",
-        "CZ711",
-        "CZ715",
-        "CZ721",
-        "CZ722",
-        "CZ723",
-        "CZ731",
-        "CZ732",
-        "CZ733",
-        "CZ734",
-        "CZ736",
-        "CZ741",
-        "CZ745",
-        "CZ751",
-        "CZ761",
-        "CZ771",
-        "CZ801",
-        "CZ804",
-        "CZ805",
-        "CZ901",
-        "CZ906",
-        "CZ907",
-        "CZ908",
-        "CZ911",
-        "CZ921",
-        "CZ922",
-        "CZ936",
-        "CZ937",
-        "CZ938",
-        "CZ950",
-        "CZ960",
-        "CZ961",
-        "CZ962",
-        "DE101",
-        "DE102",
-        "DE103",
-        "DE104",
-        "DE105",
-        "DE108",
-        "DE109",
-        "DE110",
-        "DE201",
-        "DE202",
-        "DE205",
-        "DE206",
-        "DE207",
-        "DE209",
-        "DE210",
-        "DE211",
-        "DE301",
-        "DE401",
-        "DE501",
-        "DE502",
-        "DE503",
-        "DE504",
-        "DE505",
-        "DE507",
-        "DE601",
-        "DE602",
-        "DE603",
-        "DE604",
-        "DE605",
-        "DE606",
-        "DE701",
-        "DK100",
-        "DK110",
-        "DK115",
-        "DK130",
-        "DK140",
-        "DK150",
-        "DK151",
-        "DK152",
-        "DK20",
-        "DK230",
-        "DK235",
-        "DK240",
-        "DK245",
-        "DK250",
-        "DK260",
-        "DK280",
-        "DK285",
-        "DK30",
-        "DK40",
-        "DK45",
-        "DK50",
-        "DK60",
-        "DK70",
-        "DK80",
-        "DK81",
-        "DK90",
-        "EE101",
-        "EE102",
-        "EE201",
-        "EE202",
-        "EE203",
-        "EE204",
-        "EE205",
-        "EE206",
-        "EE207",
-        "ESC04",
-        "ESC05",
-        "ESC06",
-        "ESC07",
-        "ESC08",
-        "ESC09",
-        "ESC10",
-        "ESC11",
-        "ESC12",
-        "ESC13",
-        "ESC14",
-        "ESC16",
-        "ESC17",
-        "ESC19",
-        "ESC20",
-        "ESC21",
-        "ESC25",
-        "ESC30",
-        "ESC31",
-        "ESC32",
-        "ESC33",
-        "ESC34",
-        "EU100",
-        "EU200",
-        "EU300",
-        "EU400",
-        "FBRANCH",
-        "FI10",
-        "FI11",
-        "FI12",
-        "FI13",
-        "FI14",
-        "FI16",
-        "FI17",
-        "FI19",
-        "FI20",
-        "FI21",
-        "FI22",
-        "FI23",
-        "FI24",
-        "FI25",
-        "FI26",
-        "FI27",
-        "FI28",
-        "FI29",
-        "FI30",
-        "FI31",
-        "FI32",
-        "FI33",
-        "FI35",
-        "FI39",
-        "FI40",
-        "FI41",
-        "FI42",
-        "FI43",
-        "FI44",
-        "FI45",
-        "FI46",
-        "FI47",
-        "FI48",
-        "FI49",
-        "FI50",
-        "FI51",
-        "FI52",
-        "FI54",
-        "FI55",
-        "FI57",
-        "FI59",
-        "FI60",
-        "FI61",
-        "FI62",
-        "FI63",
-        "FI99",
-        "FR001",
-        "FR002",
-        "FR003",
-        "FR004",
-        "FR005",
-        "FR006",
-        "FR007",
-        "FR008",
-        "FR009",
-        "FR010",
-        "FR011",
-        "FR0110",
-        "FR012",
-        "FR0120",
-        "FR013",
-        "FR014",
-        "FR015",
-        "FR016",
-        "FR017",
-        "FR018",
-        "FR019",
-        "FR020",
-        "FR021",
-        "FR022",
-        "FR024",
-        "FR025",
-        "FR026",
-        "FR027",
-        "FR028",
-        "FR029",
-        "FR030",
-        "FR031",
-        "FR032",
-        "FR033",
-        "FR034",
-        "FR035",
-        "FR036",
-        "FR037",
-        "FR038",
-        "FR039",
-        "FR040",
-        "FR041",
-        "FR042",
-        "FR043",
-        "FR044",
-        "FR045",
-        "FR046",
-        "FR047",
-        "FR048",
-        "FR049",
-        "FR050",
-        "FR051",
-        "FR052",
-        "FR053",
-        "FR054",
-        "FR055",
-        "FR056",
-        "FR057",
-        "FR058",
-        "FR059",
-        "FR060",
-        "FR061",
-        "FR062",
-        "FR063",
-        "FR064",
-        "FR065",
-        "FR066",
-        "FR1100",
-        "FR1200",
-        "FR1300",
-        "FR1400",
-        "FR1500",
-        "FR1600",
-        "FR1700",
-        "FR1800",
-        "FR2110",
-        "FR2120",
-        "FR2210",
-        "FR2220",
-        "FR2310",
-        "FR2320",
-        "FR2385",
-        "FR2400",
-        "FR2700",
-        "FR2900",
-        "FR3110",
-        "FR3120",
-        "FR3205",
-        "FR3210",
-        "FR3220",
-        "FR3290",
-        "FR4110",
-        "FR4120",
-        "FR4130",
-        "FR4140",
-        "FR4150",
-        "FR4160",
-        "FR5191",
-        "FR5192",
-        "FR5193",
-        "FR5194",
-        "FR5195",
-        "FR5196",
-        "FR5202",
-        "FR5203",
-        "FR5306",
-        "FR5307",
-        "FR5308",
-        "FR5309",
-        "FR5370",
-        "FR5385",
-        "FR5410",
-        "FR5415",
-        "FR5422",
-        "FR5426",
-        "FR5430",
-        "FR5431",
-        "FR5432",
-        "FR5442",
-        "FR5443",
-        "FR5451",
-        "FR5453",
-        "FR5454",
-        "FR5455",
-        "FR5458",
-        "FR5459",
-        "FR5460",
-        "FR5470",
-        "FR5485",
-        "FR5498",
-        "FR5499",
-        "FR5505",
-        "FR5510",
-        "FR5515",
-        "FR5520",
-        "FR5522",
-        "FR5525",
-        "FR5530",
-        "FR5531",
-        "FR5532",
-        "FR5542",
-        "FR5543",
-        "FR5546",
-        "FR5547",
-        "FR5548",
-        "FR5551",
-        "FR5552",
-        "FR5553",
-        "FR5554",
-        "FR5555",
-        "FR5558",
-        "FR5559",
-        "FR5560",
-        "FR5570",
-        "FR5585",
-        "FR5599",
-        "FR5605",
-        "FR5610",
-        "FR5615",
-        "FR5620",
-        "FR5622",
-        "FR5625",
-        "FR5630",
-        "FR5631",
-        "FR5632",
-        "FR5642",
-        "FR5643",
-        "FR5646",
-        "FR5647",
-        "FR5648",
-        "FR5651",
-        "FR5652",
-        "FR5653",
-        "FR5654",
-        "FR5655",
-        "FR5658",
-        "FR5659",
-        "FR5660",
-        "FR5670",
-        "FR5685",
-        "FR5699",
-        "FR5710",
-        "FR5720",
-        "FR5770",
-        "FR5785",
-        "FR6100",
-        "FR6220",
-        "FR6316",
-        "FR6317",
-        "FR6318",
-        "FR6411",
-        "FR6511",
-        "FR6521",
-        "FR6532",
-        "FR6533",
-        "FR6534",
-        "FR6535",
-        "FR6536",
-        "FR6537",
-        "FR6538",
-        "FR6539",
-        "FR6540",
-        "FR6541",
-        "FR6542",
-        "FR6543",
-        "FR6544",
-        "FR6551",
-        "FR6554",
-        "FR6558",
-        "FR6560",
-        "FR6561",
-        "FR6562",
-        "FR6563",
-        "FR6564",
-        "FR6565",
-        "FR6566",
-        "FR6567",
-        "FR6568",
-        "FR6569",
-        "FR6571",
-        "FR6572",
-        "FR6573",
-        "FR6574",
-        "FR6575",
-        "FR6576",
-        "FR6577",
-        "FR6578",
-        "FR6585",
-        "FR6588",
-        "FR6589",
-        "FR6595",
-        "FR6596",
-        "FR6597",
-        "FR6598",
-        "FR6599",
-        "FR6901",
-        "FR7111",
-        "FR7112",
-        "FR7113",
-        "FR7120",
-        "FR7150",
-        "FR7160",
-        "FR7171",
-        "FR7172",
-        "FR7179",
-        "FR7190",
-        "FR7210",
-        "FR7220",
-        "FR7225",
-        "FR7229",
-        "FR7230",
-        "FR7312",
-        "FR7313",
-        "FR7314",
-        "FR7321",
-        "FR7322",
-        "FR7323",
-        "FR7331",
-        "FR7340",
-        "FR7341",
-        "FR7342",
-        "FR7343",
-        "FR7344",
-        "FR7345",
-        "FR7346",
-        "FR7347",
-        "FR7348",
-        "FR7349",
-        "FR7351",
-        "FR7352",
-        "FR7353",
-        "FR7354",
-        "FR7355",
-        "FR7356",
-        "FR7357",
-        "FR7361",
-        "FR7362",
-        "FR7363",
-        "FR7364",
-        "FR7365",
-        "FR7366",
-        "FR7367",
-        "FR7371",
-        "FR7372",
-        "FR7373",
-        "FR7378",
-        "FR7379",
-        "FR7381",
-        "FR7382",
-        "FR7383",
-        "FR7384",
-        "FR7385",
-        "FR7389",
-        "FR7410",
-        "FR7430",
-        "FR7450",
-        "FR7470",
-        "FR7490",
-        "FR8110",
-        "FR8120",
-        "FR8130",
-        "FR8140",
-        "FR8150",
-        "FR8160",
-        "FR8170",
-        "FR8190",
-        "FR8210",
-        "FR8250",
-        "FR8290",
-        "FR8310",
-        "FR8311",
-        "FR8410",
-        "FR8420",
-        "FR8450",
-        "FR8470",
-        "FR8490",
-        "FR8510",
-        "FR8520",
-        "FR9110",
-        "FR9150",
-        "FR9210",
-        "FR9220",
-        "FR9221",
-        "FR9222",
-        "FR9223",
-        "FR9224",
-        "FR9230",
-        "FR9240",
-        "FR9260",
-        "FR9300",
-        "FR9900",
-        "FR9970",
-        "GB100",
-        "GB200",
-        "GB300",
-        "GB400",
-        "GB500",
-        "GB600",
-        "GR901",
-        "GR902",
-        "GR903",
-        "GR904",
-        "GR905",
-        "GR906",
-        "GR907",
-        "GR908",
-        "GR909",
-        "GR910",
-        "GR911",
-        "GR912",
-        "GR913",
-        "GR999",
-        "HR01",
-        "HR02",
-        "HR03",
-        "HR04",
-        "HR05",
-        "HR06",
-        "HR07",
-        "HR08",
-        "HR09",
-        "HR10",
-        "HR13",
-        "HR14",
-        "HR15",
-        "HR16",
-        "HR17",
-        "HR18",
-        "HR19",
-        "HR20",
-        "HR21",
-        "HR22",
-        "HR23",
-        "HR25",
-        "HR26",
-        "HR27",
-        "HR28",
-        "HR29",
-        "HR30",
-        "HR31",
-        "HR32",
-        "HR34",
-        "HR35",
-        "HR37",
-        "HR38",
-        "HR39",
-        "HR40",
-        "HR42",
-        "HR44",
-        "HR45",
-        "HR47",
-        "HR48",
-        "HR49",
-        "HR51",
-        "HR52",
-        "HR53",
-        "HR55",
-        "HR57",
-        "HR58",
-        "HR59",
-        "HR60",
-        "HR61",
-        "HR62",
-        "HU113",
-        "HU114",
-        "HU116",
-        "HU117",
-        "HU122",
-        "HU129",
-        "HU226",
-        "HU524",
-        "HU529",
-        "HU581",
-        "HU582",
-        "HU611",
-        "HU736",
-        "HU915",
-        "HU916",
-        "HU999",
-        "IE01",
-        "IE02",
-        "IE03",
-        "IE04",
-        "IE05",
-        "IE06",
-        "IE07",
-        "IE08",
-        "IE11",
-        "IE12",
-        "IE13",
-        "IE14",
-        "IE15",
-        "IE16",
-        "IT101",
-        "IT201",
-        "IT301",
-        "IT401",
-        "IT402",
-        "IT501",
-        "IT601",
-        "IT701",
-        "IT702",
-        "IT703",
-        "IT999",
-        "LT101",
-        "LT102",
-        "LT103",
-        "LT104",
-        "LT105",
-        "LT106",
-        "LT107",
-        "LT108",
-        "LT109",
-        "LT110",
-        "LT111",
-        "LT201",
-        "LT202",
-        "LT203",
-        "LT204",
-        "LT205",
-        "LT206",
-        "LT207",
-        "LT208",
-        "LT209",
-        "LT210",
-        "LT211",
-        "LT212",
-        "LT213",
-        "LT214",
-        "LT215",
-        "LT216",
-        "LT301",
-        "LU01",
-        "LU02",
-        "LU03",
-        "LU04",
-        "LU05",
-        "LU06",
-        "LU07",
-        "LU08",
-        "LU09",
-        "LU10",
-        "LU11",
-        "LU12",
-        "LU13",
-        "LU14",
-        "LU15",
-        "LU16",
-        "LU17",
-        "LU18",
-        "LU19",
-        "LU20",
-        "LU21",
-        "LU22",
-        "LU23",
-        "LU24",
-        "LU26",
-        "LU27",
-        "LU32",
-        "LU33",
-        "LU34",
-        "LV101",
-        "LV103",
-        "LV104",
-        "LV105",
-        "LV106",
-        "LV107",
-        "LV108",
-        "LV109",
-        "LV110",
-        "LV111",
-        "LV301",
-        "LV302",
-        "LV303",
-        "LV401",
-        "LV402",
-        "LV403",
-        "LV404",
-        "LV405",
-        "LV406",
-        "LV701",
-        "LV801",
-        "LV802",
-        "LV901",
-        "LV903",
-        "MT010",
-        "MT020",
-        "MT021",
-        "MT030",
-        "MT031",
-        "MT033",
-        "MT040",
-        "MT050",
-        "MT060",
-        "MT070",
-        "MT080",
-        "NL101",
-        "NL102",
-        "NL11",
-        "NL201",
-        "NL202",
-        "NL203",
-        "NL204",
-        "NL205",
-        "NL206",
-        "NL207",
-        "NL301",
-        "NL302",
-        "NL303",
-        "NL304",
-        "NL401",
-        "NL402",
-        "NL501",
-        "NL7",
-        "NL9",
-        "NL901",
-        "PLA019",
-        "PLA044",
-        "PLA070",
-        "PLA085",
-        "PLA099",
-        "PLA115",
-        "PLA116",
-        "PLA117",
-        "PLA118",
-        "PLA120",
-        "PLA121",
-        "PLA124",
-        "PLA126",
-        "PLA132",
-        "PLA134",
-        "PLA140",
-        "PLA146",
-        "PLA148",
-        "PLA177",
-        "PLA180",
-        "PLA403",
-        "PLA409",
-        "PLA428",
-        "PLB050",
-        "PLB055",
-        "PLB060",
-        "PLB133",
-        "PLB137",
-        "PLB138",
-        "PLB141",
-        "PLB147",
-        "PLB381",
-        "PLB401",
-        "PLB429",
-        "PLC049",
-        "PLD049",
-        "PLE049",
-        "PT111",
-        "PT121",
-        "PT122",
-        "PT131",
-        "PT141",
-        "PT151",
-        "PT171",
-        "PT181",
-        "PT182",
-        "PT211",
-        "PT221",
-        "PT231",
-        "PT311",
-        "PT312",
-        "PT321",
-        "PT331",
-        "PT411",
-        "PT711",
-        "PT901",
-        "RO101",
-        "RO102",
-        "RO103",
-        "RO104",
-        "RO105",
-        "RO107",
-        "RO108",
-        "RO110",
-        "RO111",
-        "RO114",
-        "RO115",
-        "RO116",
-        "RO117",
-        "RO120",
-        "RO121",
-        "RO122",
-        "RW100",
-        "RW200",
-        "RW300",
-        "RW400",
-        "RW500",
-        "RW600",
-        "SE21",
-        "SE22",
-        "SE31",
-        "SE41",
-        "SE42",
-        "SE49",
-        "SE51",
-        "SE53",
-        "SE54",
-        "SE61",
-        "SE62",
-        "SE63",
-        "SE71",
-        "SE72",
-        "SE81",
-        "SE82",
-        "SE83",
-        "SE84",
-        "SE87",
-        "SE88",
-        "SE91",
-        "SE92",
-        "SE93",
-        "SE94",
-        "SE95",
-        "SE98",
-        "SI101",
-        "SI102",
-        "SI103",
-        "SI104",
-        "SI105",
-        "SI108",
-        "SI112",
-        "SI113",
-        "SI201",
-        "SI210",
-        "SI211",
-        "SI213",
-        "SI300",
-        "SI301",
-        "SI302",
-        "SI303",
-        "SI304",
-        "SI305",
-        "SI306",
-        "SI307",
-        "SI308",
-        "SI309",
-        "SI310",
-        "SI311",
-        "SI313",
-        "SI315",
-        "SI316",
-        "SI318",
-        "SI319",
-        "SI321",
-        "SI322",
-        "SI352",
-        "SI354",
-        "SI355",
-        "SI357",
-        "SI358",
-        "SI359",
-        "SI360",
-        "SI361",
-        "SI362",
-        "SI401",
-        "SI402",
-        "SI403",
-        "SI404",
-        "SI405",
-        "SI406",
-        "SI407",
-        "SI451",
-        "SI452",
-        "SI453",
-        "SI458",
-        "SI703",
-        "SI708",
-        "SI713",
-        "SI715",
-        "SI719",
-        "SI799",
-        "SI804",
-        "SI899",
-        "SK111",
-        "SK112",
-        "SK113",
-        "SK117",
-        "SK118",
-        "SK119",
-        "SK120",
-        "SK121",
-        "SK125",
-        "SK205",
-        "SK271",
-        "SK301",
-        "SK311",
-        "SK312",
-        "SK321",
-        "SK331",
-        "SK333",
-        "SK381",
-        "SK382",
-        "SK383",
-        "SK421",
-        "SK434",
-        "SK445",
-        "SK701",
-        "SK711",
-        "SK721",
-        "SK741",
-        "SK745",
-        "SK751",
-        "SK801",
-        "SK803",
-        "SK901",
-        "SK911",
-        "SK921",
-        "SK931",
-        "SPFUND"
-      ],
-      "type": "string"
-    },
-    "Measure_OrgLglFrmEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
-      "title": "Measure[OrgLglFrmEnum, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
-      "type": "object",
-      "properties": {
-        "VALUE": {
-          "$ref": "#/definitions/OrgLglFrmEnum"
-        },
-        "ATTRS": {
-          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
-        }
-      },
-      "required": [
-        "VALUE"
-      ]
-    },
-    "OrgSprvsnTypEnum": {
-      "title": "OrgSprvsnTypEnum",
-      "description": "An enumeration.",
-      "enum": [
-        "-",
-        "1",
-        "2"
-      ],
-      "type": "string"
-    },
-    "Measure_OrgSprvsnTypEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
-      "title": "Measure[OrgSprvsnTypEnum, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
-      "type": "object",
-      "properties": {
-        "VALUE": {
-          "$ref": "#/definitions/OrgSprvsnTypEnum"
-        },
-        "ATTRS": {
-          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
-        }
-      },
-      "required": [
-        "VALUE"
-      ]
-    },
-    "Measure_ID__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
-      "title": "Measure[ID, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+    "BaseMeasure_PositiveInt_": {
+      "title": "BaseMeasure[PositiveInt]",
       "type": "object",
       "properties": {
         "VALUE": {
           "title": "Value",
-          "maxLength": 32,
-          "type": "string"
-        },
-        "ATTRS": {
-          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
-        }
-      },
-      "required": [
-        "VALUE"
-      ]
-    },
-    "FndTypEnum": {
-      "title": "FndTypEnum",
-      "description": "An enumeration.",
-      "enum": [
-        "-",
-        "UCITS",
-        "AIF",
-        "REIT",
-        "OTHER"
-      ],
-      "type": "string"
-    },
-    "Measure_FndTypEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
-      "title": "Measure[FndTypEnum, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
-      "type": "object",
-      "properties": {
-        "VALUE": {
-          "$ref": "#/definitions/FndTypEnum"
-        },
-        "ATTRS": {
-          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
-        }
-      },
-      "required": [
-        "VALUE"
-      ]
-    },
-    "FndInvstmntPlcyEnum": {
-      "title": "FndInvstmntPlcyEnum",
-      "description": "An enumeration.",
-      "enum": [
-        "-",
-        "MMF",
-        "EQT",
-        "BON",
-        "MIX",
-        "RES",
-        "HED",
-        "LOA",
-        "COM",
-        "INF",
-        "OTH"
-      ],
-      "type": "string"
-    },
-    "Measure_FndInvstmntPlcyEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
-      "title": "Measure[FndInvstmntPlcyEnum, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
-      "type": "object",
-      "properties": {
-        "VALUE": {
-          "$ref": "#/definitions/FndInvstmntPlcyEnum"
-        },
-        "ATTRS": {
-          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
-        }
-      },
-      "required": [
-        "VALUE"
-      ]
-    },
-    "FndSbtypEnum": {
-      "title": "FndSbtypEnum",
-      "description": "An enumeration.",
-      "enum": [
-        "-",
-        "OPEN",
-        "CLOSE"
-      ],
-      "type": "string"
-    },
-    "Measure_FndSbtypEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
-      "title": "Measure[FndSbtypEnum, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
-      "type": "object",
-      "properties": {
-        "VALUE": {
-          "$ref": "#/definitions/FndSbtypEnum"
-        },
-        "ATTRS": {
-          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
-        }
-      },
-      "required": [
-        "VALUE"
-      ]
-    },
-    "FndDstrbtnTypEnum": {
-      "title": "FndDstrbtnTypEnum",
-      "description": "An enumeration.",
-      "enum": [
-        "-",
-        "DIS",
-        "CUM",
-        "MIX"
-      ],
-      "type": "string"
-    },
-    "Measure_FndDstrbtnTypEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
-      "title": "Measure[FndDstrbtnTypEnum, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
-      "type": "object",
-      "properties": {
-        "VALUE": {
-          "$ref": "#/definitions/FndDstrbtnTypEnum"
-        },
-        "ATTRS": {
-          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
-        }
-      },
-      "required": [
-        "VALUE"
-      ]
-    },
-    "FndInvstrTypEnum": {
-      "title": "FndInvstrTypEnum",
-      "description": "An enumeration.",
-      "enum": [
-        "-",
-        "PRF",
-        "RTL",
-        "ART",
-        "OTH"
-      ],
-      "type": "string"
-    },
-    "Measure_FndInvstrTypEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
-      "title": "Measure[FndInvstrTypEnum, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
-      "type": "object",
-      "properties": {
-        "VALUE": {
-          "$ref": "#/definitions/FndInvstrTypEnum"
-        },
-        "ATTRS": {
-          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
-        }
-      },
-      "required": [
-        "VALUE"
-      ]
-    },
-    "FndGrnTypEnum": {
-      "title": "FndGrnTypEnum",
-      "description": "An enumeration.",
-      "enum": [
-        "-",
-        "LIGHT",
-        "DARK"
-      ],
-      "type": "string"
-    },
-    "Measure_FndGrnTypEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
-      "title": "Measure[FndGrnTypEnum, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
-      "type": "object",
-      "properties": {
-        "VALUE": {
-          "$ref": "#/definitions/FndGrnTypEnum"
-        },
-        "ATTRS": {
-          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
-        }
-      },
-      "required": [
-        "VALUE"
-      ]
-    },
-    "FndStrtgyEnum": {
-      "title": "FndStrtgyEnum",
-      "description": "An enumeration.",
-      "enum": [
-        "-",
-        "ACTIVE",
-        "SYNPAS",
-        "SYNPHY"
-      ],
-      "type": "string"
-    },
-    "Measure_FndStrtgyEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
-      "title": "Measure[FndStrtgyEnum, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
-      "type": "object",
-      "properties": {
-        "VALUE": {
-          "$ref": "#/definitions/FndStrtgyEnum"
-        },
-        "ATTRS": {
-          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
-        }
-      },
-      "required": [
-        "VALUE"
-      ]
-    },
-    "FndGgrphclFcsEnum": {
-      "title": "FndGgrphclFcsEnum",
-      "description": "An enumeration.",
-      "enum": [
-        "-",
-        "DOM",
-        "EEA",
-        "OEA",
-        "NAM",
-        "SAM",
-        "ASP",
-        "MEA",
-        "AFR",
-        "OTH"
-      ],
-      "type": "string"
-    },
-    "Measure_FndGgrphclFcsEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
-      "title": "Measure[FndGgrphclFcsEnum, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
-      "type": "object",
-      "properties": {
-        "VALUE": {
-          "$ref": "#/definitions/FndGgrphclFcsEnum"
-        },
-        "ATTRS": {
-          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
-        }
-      },
-      "required": [
-        "VALUE"
-      ]
-    },
-    "FndBndFcsEnum": {
-      "title": "FndBndFcsEnum",
-      "description": "An enumeration.",
-      "enum": [
-        "-",
-        "GOV",
-        "COR",
-        "MIX"
-      ],
-      "type": "string"
-    },
-    "Measure_FndBndFcsEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
-      "title": "Measure[FndBndFcsEnum, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
-      "type": "object",
-      "properties": {
-        "VALUE": {
-          "$ref": "#/definitions/FndBndFcsEnum"
-        },
-        "ATTRS": {
-          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
-        }
-      },
-      "required": [
-        "VALUE"
-      ]
-    },
-    "FndBndGrdEnum": {
-      "title": "FndBndGrdEnum",
-      "description": "An enumeration.",
-      "enum": [
-        "-",
-        "INV",
-        "NIN",
-        "MIX"
-      ],
-      "type": "string"
-    },
-    "Measure_FndBndGrdEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
-      "title": "Measure[FndBndGrdEnum, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
-      "type": "object",
-      "properties": {
-        "VALUE": {
-          "$ref": "#/definitions/FndBndGrdEnum"
-        },
-        "ATTRS": {
-          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
-        }
-      },
-      "required": [
-        "VALUE"
-      ]
-    },
-    "FndRlEsttTypEnum": {
-      "title": "FndRlEsttTypEnum",
-      "description": "An enumeration.",
-      "enum": [
-        "-",
-        "RES",
-        "COM",
-        "IND",
-        "MUL",
-        "OTH"
-      ],
-      "type": "string"
-    },
-    "Measure_FndRlEsttTypEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
-      "title": "Measure[FndRlEsttTypEnum, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
-      "type": "object",
-      "properties": {
-        "VALUE": {
-          "$ref": "#/definitions/FndRlEsttTypEnum"
-        },
-        "ATTRS": {
-          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
+          "exclusiveMinimum": 0,
+          "type": "integer"
         }
       },
       "required": [
@@ -2136,125 +707,109 @@
           "$ref": "#/definitions/StaticDimensionContainer_ORG_"
         },
         "NM": {
-          "$ref": "#/definitions/Measure_Str128__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Str128_"
         },
         "NM_LTN": {
-          "$ref": "#/definitions/Measure_Ascii128__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Ascii128_"
         },
         "NM_SHRT": {
-          "$ref": "#/definitions/Measure_Str64__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Str64_"
         },
         "STRT": {
-          "$ref": "#/definitions/Measure_Str64__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Str64_"
         },
         "STRT_LTN": {
-          "$ref": "#/definitions/Measure_Ascii64__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Ascii64_"
         },
         "CTY": {
-          "$ref": "#/definitions/Measure_Str32__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Str32_"
         },
         "CTY_LTN": {
-          "$ref": "#/definitions/Measure_Ascii32__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Ascii32_"
         },
         "PSTL_CD": {
-          "$ref": "#/definitions/Measure_Str16__GenericStatusAttr_AttrObsrvtnSttsEnum__"
-        },
-        "PSTL_BX": {
-          "$ref": "#/definitions/Measure_Str8__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Str16_"
         },
         "URL": {
-          "$ref": "#/definitions/Measure_AnyUrl__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_AnyUrl_"
         },
         "EMAIL": {
-          "$ref": "#/definitions/Measure_EmailStr__GenericStatusAttr_AttrObsrvtnSttsEnum__"
-        },
-        "CNTRY_RSDNC": {
-          "$ref": "#/definitions/Measure_GenCntryEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_EmailStr_"
         },
         "IS_LSTD": {
-          "$ref": "#/definitions/Measure_bool__GenericStatusAttr_AttrObsrvtnSttsEnum__"
-        },
-        "IS_INVSTMNT_GRDD": {
-          "$ref": "#/definitions/Measure_bool__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_bool_"
         },
         "IS_INCTV": {
-          "$ref": "#/definitions/Measure_bool__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_bool_"
         },
         "IS_UNDR_LQDTN": {
-          "$ref": "#/definitions/Measure_bool__GenericStatusAttr_AttrObsrvtnSttsEnum__"
-        },
-        "LGL_PRCDNG_STTS": {
-          "$ref": "#/definitions/Measure_OrgLglPrcdngSttsEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
-        },
-        "ACCNTS_CRRNCY": {
-          "$ref": "#/definitions/Measure_GenCrrncyEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_bool_"
         },
         "INSTTTNL_SCTR_CNTRL": {
-          "$ref": "#/definitions/Measure_OrgInstttnlSctrCntrlEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
-        },
-        "SZ": {
-          "$ref": "#/definitions/Measure_OrgSzEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
-        },
-        "LGL_FRM": {
-          "$ref": "#/definitions/Measure_OrgLglFrmEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
-        },
-        "TYP_SPRVSN": {
-          "$ref": "#/definitions/Measure_OrgSprvsnTypEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_OrgInstttnlSctrCntrlEnum_"
         },
         "MNGD_BY": {
-          "$ref": "#/definitions/Measure_ID__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_ID_"
         },
         "RPRTD_BY": {
-          "$ref": "#/definitions/Measure_ID__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_ID_"
         },
         "UNDR_UMBRLL_BY": {
-          "$ref": "#/definitions/Measure_ID__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_ID_"
         },
         "TYP": {
-          "$ref": "#/definitions/Measure_FndTypEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_FndTypEnum_"
         },
         "INVSTMNT_PLCY": {
-          "$ref": "#/definitions/Measure_FndInvstmntPlcyEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_FndInvstmntPlcyEnum_"
         },
         "SBTYP": {
-          "$ref": "#/definitions/Measure_FndSbtypEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_FndSbtypEnum_"
         },
         "DSTRBTN_TYP": {
-          "$ref": "#/definitions/Measure_FndDstrbtnTypEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_FndDstrbtnTypEnum_"
         },
         "INVSTR_TYP": {
-          "$ref": "#/definitions/Measure_FndInvstrTypEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_FndInvstrTypEnum_"
         },
         "GRN_TYP": {
-          "$ref": "#/definitions/Measure_FndGrnTypEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_FndGrnTypEnum_"
         },
         "STRTGY": {
-          "$ref": "#/definitions/Measure_FndStrtgyEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_FndStrtgyEnum_"
         },
         "GGRPHCL_FCS": {
-          "$ref": "#/definitions/Measure_FndGgrphclFcsEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_FndGgrphclFcsEnum_"
         },
         "BND_FCS": {
-          "$ref": "#/definitions/Measure_FndBndFcsEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
-        },
-        "BND_GRD": {
-          "$ref": "#/definitions/Measure_FndBndGrdEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_FndBndFcsEnum_"
         },
         "RL_ESTT_TYP": {
-          "$ref": "#/definitions/Measure_FndRlEsttTypEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_FndRlEsttTypEnum_"
         },
         "IS_FOF": {
-          "$ref": "#/definitions/Measure_bool__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_bool_"
         },
         "IS_ETF": {
-          "$ref": "#/definitions/Measure_bool__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_bool_"
         },
         "IS_PEF": {
-          "$ref": "#/definitions/Measure_bool__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_bool_"
+        },
+        "ACCNTS_CRRNCY": {
+          "$ref": "#/definitions/BaseMeasure_GenCrrncyEnum_"
+        },
+        "VLTN_FRQNCY": {
+          "$ref": "#/definitions/BaseMeasure_VltnCstmFrqncyEnum_"
+        },
+        "VLTN_DDLN": {
+          "$ref": "#/definitions/BaseMeasure_PositiveInt_"
         }
       },
       "required": [
-        "DIMS"
+        "DIMS",
+        "VLTN_FRQNCY",
+        "VLTN_DDLN"
       ]
     },
     "DimensionContainer_DBT_": {
@@ -2272,34 +827,28 @@
         "ID"
       ]
     },
-    "Measure_Ascii12__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
-      "title": "Measure[Ascii12, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+    "BaseMeasure_Ascii12_": {
+      "title": "BaseMeasure[Ascii12]",
       "type": "object",
       "properties": {
         "VALUE": {
           "title": "Value",
           "maxLength": 12,
           "type": "string"
-        },
-        "ATTRS": {
-          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
         }
       },
       "required": [
         "VALUE"
       ]
     },
-    "Measure_NonNegativeFloat__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
-      "title": "Measure[NonNegativeFloat, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+    "BaseMeasure_NonNegativeFloat_": {
+      "title": "BaseMeasure[NonNegativeFloat]",
       "type": "object",
       "properties": {
         "VALUE": {
           "title": "Value",
           "minimum": 0,
           "type": "number"
-        },
-        "ATTRS": {
-          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
         }
       },
       "required": [
@@ -4867,15 +3416,12 @@
       ],
       "type": "string"
     },
-    "Measure_GenMrktEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
-      "title": "Measure[GenMrktEnum, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+    "BaseMeasure_GenMrktEnum_": {
+      "title": "BaseMeasure[GenMrktEnum]",
       "type": "object",
       "properties": {
         "VALUE": {
           "$ref": "#/definitions/GenMrktEnum"
-        },
-        "ATTRS": {
-          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
         }
       },
       "required": [
@@ -4894,15 +3440,12 @@
       ],
       "type": "string"
     },
-    "Measure_DbtPrmryClssEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
-      "title": "Measure[DbtPrmryClssEnum, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+    "BaseMeasure_DbtPrmryClssEnum_": {
+      "title": "BaseMeasure[DbtPrmryClssEnum]",
       "type": "object",
       "properties": {
         "VALUE": {
           "$ref": "#/definitions/DbtPrmryClssEnum"
-        },
-        "ATTRS": {
-          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
         }
       },
       "required": [
@@ -4921,15 +3464,12 @@
       ],
       "type": "string"
     },
-    "Measure_DbtGrntLvlEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
-      "title": "Measure[DbtGrntLvlEnum, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+    "BaseMeasure_DbtGrntLvlEnum_": {
+      "title": "BaseMeasure[DbtGrntLvlEnum]",
       "type": "object",
       "properties": {
         "VALUE": {
           "$ref": "#/definitions/DbtGrntLvlEnum"
-        },
-        "ATTRS": {
-          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
         }
       },
       "required": [
@@ -4952,15 +3492,12 @@
       ],
       "type": "string"
     },
-    "Measure_DbtRnkLvlEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
-      "title": "Measure[DbtRnkLvlEnum, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+    "BaseMeasure_DbtRnkLvlEnum_": {
+      "title": "BaseMeasure[DbtRnkLvlEnum]",
       "type": "object",
       "properties": {
         "VALUE": {
           "$ref": "#/definitions/DbtRnkLvlEnum"
-        },
-        "ATTRS": {
-          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
         }
       },
       "required": [
@@ -4978,15 +3515,12 @@
       ],
       "type": "string"
     },
-    "Measure_DbtScrtyLvlEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
-      "title": "Measure[DbtScrtyLvlEnum, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+    "BaseMeasure_DbtScrtyLvlEnum_": {
+      "title": "BaseMeasure[DbtScrtyLvlEnum]",
       "type": "object",
       "properties": {
         "VALUE": {
           "$ref": "#/definitions/DbtScrtyLvlEnum"
-        },
-        "ATTRS": {
-          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
         }
       },
       "required": [
@@ -5008,15 +3542,12 @@
       ],
       "type": "string"
     },
-    "Measure_DbtScrtznTypEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
-      "title": "Measure[DbtScrtznTypEnum, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+    "BaseMeasure_DbtScrtznTypEnum_": {
+      "title": "BaseMeasure[DbtScrtznTypEnum]",
       "type": "object",
       "properties": {
         "VALUE": {
           "$ref": "#/definitions/DbtScrtznTypEnum"
-        },
-        "ATTRS": {
-          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
         }
       },
       "required": [
@@ -5038,15 +3569,12 @@
       ],
       "type": "string"
     },
-    "Measure_DbtCvrdTypEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
-      "title": "Measure[DbtCvrdTypEnum, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+    "BaseMeasure_DbtCvrdTypEnum_": {
+      "title": "BaseMeasure[DbtCvrdTypEnum]",
       "type": "object",
       "properties": {
         "VALUE": {
           "$ref": "#/definitions/DbtCvrdTypEnum"
-        },
-        "ATTRS": {
-          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
         }
       },
       "required": [
@@ -5068,15 +3596,12 @@
       ],
       "type": "string"
     },
-    "Measure_DbtCpnTypEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
-      "title": "Measure[DbtCpnTypEnum, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+    "BaseMeasure_DbtCpnTypEnum_": {
+      "title": "BaseMeasure[DbtCpnTypEnum]",
       "type": "object",
       "properties": {
         "VALUE": {
           "$ref": "#/definitions/DbtCpnTypEnum"
-        },
-        "ATTRS": {
-          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
         }
       },
       "required": [
@@ -5101,40 +3626,34 @@
       ],
       "type": "string"
     },
-    "Measure_DbtCpnFrqncyEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
-      "title": "Measure[DbtCpnFrqncyEnum, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+    "BaseMeasure_DbtCpnFrqncyEnum_": {
+      "title": "BaseMeasure[DbtCpnFrqncyEnum]",
       "type": "object",
       "properties": {
         "VALUE": {
           "$ref": "#/definitions/DbtCpnFrqncyEnum"
-        },
-        "ATTRS": {
-          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
         }
       },
       "required": [
         "VALUE"
       ]
     },
-    "Measure_Ascii6__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
-      "title": "Measure[Ascii6, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+    "BaseMeasure_Ascii6_": {
+      "title": "BaseMeasure[Ascii6]",
       "type": "object",
       "properties": {
         "VALUE": {
           "title": "Value",
           "maxLength": 6,
           "type": "string"
-        },
-        "ATTRS": {
-          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
         }
       },
       "required": [
         "VALUE"
       ]
     },
-    "Measure_DBT__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
-      "title": "Measure[DBT, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+    "BaseMeasure_DBT_": {
+      "title": "BaseMeasure[DBT]",
       "type": "object",
       "properties": {
         "VALUE": {
@@ -5142,17 +3661,14 @@
           "maxLength": 32,
           "pattern": "^[IP][a-zA-z0-9_]+",
           "type": "string"
-        },
-        "ATTRS": {
-          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
         }
       },
       "required": [
         "VALUE"
       ]
     },
-    "Measure_LON__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
-      "title": "Measure[LON, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+    "BaseMeasure_LON_": {
+      "title": "BaseMeasure[LON]",
       "type": "object",
       "properties": {
         "VALUE": {
@@ -5160,9 +3676,6 @@
           "maxLength": 32,
           "pattern": "^P[a-zA-z0-9_]+",
           "type": "string"
-        },
-        "ATTRS": {
-          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
         }
       },
       "required": [
@@ -5177,106 +3690,106 @@
           "$ref": "#/definitions/DimensionContainer_DBT_"
         },
         "DT_BRTH": {
-          "$ref": "#/definitions/Measure_date__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_date_"
         },
         "DT_CLS": {
-          "$ref": "#/definitions/Measure_date__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_date_"
         },
         "ORGNL_MTRTY": {
-          "$ref": "#/definitions/Measure_date__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_date_"
         },
         "ISIN_ID": {
-          "$ref": "#/definitions/Measure_Ascii32__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Ascii32_"
         },
         "INTRNL_ID": {
-          "$ref": "#/definitions/Measure_Ascii12__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Ascii12_"
         },
         "CRRNCY": {
-          "$ref": "#/definitions/Measure_GenCrrncyEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_GenCrrncyEnum_"
         },
         "ISS_PRC": {
-          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
         "RDMPTN_PRC": {
-          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
         "MRKT": {
-          "$ref": "#/definitions/Measure_GenMrktEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_GenMrktEnum_"
         },
         "ACCRL_STRTDT": {
-          "$ref": "#/definitions/Measure_date__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_date_"
         },
         "PRMRY_CLSS": {
-          "$ref": "#/definitions/Measure_DbtPrmryClssEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_DbtPrmryClssEnum_"
         },
         "GRNT_LVL": {
-          "$ref": "#/definitions/Measure_DbtGrntLvlEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_DbtGrntLvlEnum_"
         },
         "RNK_LVL": {
-          "$ref": "#/definitions/Measure_DbtRnkLvlEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_DbtRnkLvlEnum_"
         },
         "SCRTY_LVL": {
-          "$ref": "#/definitions/Measure_DbtScrtyLvlEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_DbtScrtyLvlEnum_"
         },
         "IS_SCRTZTN": {
-          "$ref": "#/definitions/Measure_bool__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_bool_"
         },
         "SCRTZTN_TYP": {
-          "$ref": "#/definitions/Measure_DbtScrtznTypEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_DbtScrtznTypEnum_"
         },
         "IS_CVRD": {
-          "$ref": "#/definitions/Measure_bool__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_bool_"
         },
         "CVRD_TYP": {
-          "$ref": "#/definitions/Measure_DbtCvrdTypEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_DbtCvrdTypEnum_"
         },
         "CPN_TYP": {
-          "$ref": "#/definitions/Measure_DbtCpnTypEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_DbtCpnTypEnum_"
         },
         "CPN_CRRNCY": {
-          "$ref": "#/definitions/Measure_GenCrrncyEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_GenCrrncyEnum_"
         },
         "CPN_FRQNCY": {
-          "$ref": "#/definitions/Measure_DbtCpnFrqncyEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_DbtCpnFrqncyEnum_"
         },
         "CPN_SPRD": {
-          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
         "CPN_MLTPLR": {
-          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
         "CPN_CP": {
-          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
         "CPN_FLR": {
-          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
         "FRST_CPN_DT": {
-          "$ref": "#/definitions/Measure_date__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_date_"
         },
         "LST_CPN_DT": {
-          "$ref": "#/definitions/Measure_date__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_date_"
         },
         "UNDRLYNG": {
-          "$ref": "#/definitions/Measure_ID__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_ID_"
         },
         "MNMM_INVSTMNT": {
-          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
         "IS_PRVT": {
-          "$ref": "#/definitions/Measure_bool__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_bool_"
         },
         "CFI": {
-          "$ref": "#/definitions/Measure_Ascii6__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Ascii6_"
         },
         "RSTRCTRD_T": {
-          "$ref": "#/definitions/Measure_DBT__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_DBT_"
         },
         "RSTRCTRD_FRM": {
-          "$ref": "#/definitions/Measure_LON__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_LON_"
         },
         "DDPLCT_OF": {
-          "$ref": "#/definitions/Measure_DBT__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_DBT_"
         }
       },
       "required": [
@@ -5324,15 +3837,12 @@
       ],
       "type": "string"
     },
-    "Measure_DbtSttsEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
-      "title": "Measure[DbtSttsEnum, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+    "BaseMeasure_DbtSttsEnum_": {
+      "title": "BaseMeasure[DbtSttsEnum]",
       "type": "object",
       "properties": {
         "VALUE": {
           "$ref": "#/definitions/DbtSttsEnum"
-        },
-        "ATTRS": {
-          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
         }
       },
       "required": [
@@ -5346,26 +3856,23 @@
         "DIMS": {
           "$ref": "#/definitions/StaticDimensionContainer_DBT_"
         },
-        "NM": {
-          "$ref": "#/definitions/Measure_Str128__GenericStatusAttr_AttrObsrvtnSttsEnum__"
-        },
         "NM_LTN": {
-          "$ref": "#/definitions/Measure_Ascii128__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Ascii128_"
         },
         "NM_SHRT": {
-          "$ref": "#/definitions/Measure_Str64__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Str64_"
         },
         "STTS": {
-          "$ref": "#/definitions/Measure_DbtSttsEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_DbtSttsEnum_"
         },
         "MTRTY_DT": {
-          "$ref": "#/definitions/Measure_date__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_date_"
         },
         "ISSD_BY": {
-          "$ref": "#/definitions/Measure_ID__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_ID_"
         },
         "CFI": {
-          "$ref": "#/definitions/Measure_Ascii6__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Ascii6_"
         }
       },
       "required": [
@@ -5387,8 +3894,8 @@
         "ID"
       ]
     },
-    "Measure_SHR__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
-      "title": "Measure[SHR, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+    "BaseMeasure_SHR_": {
+      "title": "BaseMeasure[SHR]",
       "type": "object",
       "properties": {
         "VALUE": {
@@ -5396,9 +3903,6 @@
           "maxLength": 32,
           "pattern": "^[IP][a-zA-z0-9_]+",
           "type": "string"
-        },
-        "ATTRS": {
-          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
         }
       },
       "required": [
@@ -5413,28 +3917,28 @@
           "$ref": "#/definitions/DimensionContainer_SHR_"
         },
         "DT_BRTH": {
-          "$ref": "#/definitions/Measure_date__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_date_"
         },
         "DT_CLS": {
-          "$ref": "#/definitions/Measure_date__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_date_"
         },
         "ISIN_ID": {
-          "$ref": "#/definitions/Measure_Ascii32__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Ascii32_"
         },
         "INTRNL_ID": {
-          "$ref": "#/definitions/Measure_Ascii12__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Ascii12_"
         },
         "CRRNCY": {
-          "$ref": "#/definitions/Measure_GenCrrncyEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_GenCrrncyEnum_"
         },
         "MRKT": {
-          "$ref": "#/definitions/Measure_GenMrktEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_GenMrktEnum_"
         },
         "RSTRCTRD_T": {
-          "$ref": "#/definitions/Measure_SHR__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_SHR_"
         },
         "DDPLCT_OF": {
-          "$ref": "#/definitions/Measure_SHR__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_SHR_"
         }
       },
       "required": [
@@ -5486,15 +3990,12 @@
       ],
       "type": "string"
     },
-    "Measure_ShrFndRdmptnFrqncyEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
-      "title": "Measure[ShrFndRdmptnFrqncyEnum, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+    "BaseMeasure_ShrFndRdmptnFrqncyEnum_": {
+      "title": "BaseMeasure[ShrFndRdmptnFrqncyEnum]",
       "type": "object",
       "properties": {
         "VALUE": {
           "$ref": "#/definitions/ShrFndRdmptnFrqncyEnum"
-        },
-        "ATTRS": {
-          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
         }
       },
       "required": [
@@ -5508,29 +4009,26 @@
         "DIMS": {
           "$ref": "#/definitions/StaticDimensionContainer_SHR_"
         },
-        "NM": {
-          "$ref": "#/definitions/Measure_Str128__GenericStatusAttr_AttrObsrvtnSttsEnum__"
-        },
         "NM_LTN": {
-          "$ref": "#/definitions/Measure_Ascii128__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Ascii128_"
         },
         "NM_SHRT": {
-          "$ref": "#/definitions/Measure_Str64__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Str64_"
         },
         "ISSD_BY": {
-          "$ref": "#/definitions/Measure_ID__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_ID_"
         },
         "NMNL_PRC": {
-          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
         "CFI": {
-          "$ref": "#/definitions/Measure_Ascii6__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Ascii6_"
         },
         "RDMPTN_FRQNCY": {
-          "$ref": "#/definitions/Measure_ShrFndRdmptnFrqncyEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_ShrFndRdmptnFrqncyEnum_"
         },
         "MNMM_AMNT": {
-          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         }
       },
       "required": [
@@ -5545,35 +4043,151 @@
           "$ref": "#/definitions/DimensionContainer_ORG_"
         },
         "DT_BRTH": {
-          "$ref": "#/definitions/Measure_date__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_date_"
         },
         "DT_CLS": {
-          "$ref": "#/definitions/Measure_date__GenericStatusAttr_AttrObsrvtnSttsEnum__"
-        },
-        "CNTRY_BRTH": {
-          "$ref": "#/definitions/Measure_GenCntryEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
-        },
-        "ESCB_ID": {
-          "$ref": "#/definitions/Measure_Ascii32__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_date_"
         },
         "LEI_ID": {
-          "$ref": "#/definitions/Measure_Ascii20__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Ascii20_"
         },
         "TAX_ID": {
-          "$ref": "#/definitions/Measure_Ascii31__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Ascii31_"
         },
         "NBR_ID": {
-          "$ref": "#/definitions/Measure_Ascii31__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Ascii31_"
         },
         "SPLT_FRM": {
-          "$ref": "#/definitions/Measure_ORG__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_ORG_"
         },
         "MRGD_WTH": {
-          "$ref": "#/definitions/Measure_ORG__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_ORG_"
         }
       },
       "required": [
         "DIMS"
+      ]
+    },
+    "GenCntryEnum": {
+      "title": "GenCntryEnum",
+      "description": "An enumeration.",
+      "enum": [
+        "AE",
+        "AF",
+        "AL",
+        "AO",
+        "AR",
+        "AT",
+        "AU",
+        "BE",
+        "BG",
+        "BH",
+        "BJ",
+        "BM",
+        "BR",
+        "BS",
+        "BY",
+        "BZ",
+        "CA",
+        "CG",
+        "CH",
+        "CL",
+        "CM",
+        "CN",
+        "CO",
+        "CW",
+        "CY",
+        "CZ",
+        "DE",
+        "DK",
+        "DO",
+        "EG",
+        "ER",
+        "ES",
+        "FI",
+        "FO",
+        "FR",
+        "GB",
+        "GE",
+        "GG",
+        "GI",
+        "GR",
+        "HK",
+        "HR",
+        "HU",
+        "ID",
+        "IE",
+        "IL",
+        "IM",
+        "IN",
+        "IO",
+        "IS",
+        "IT",
+        "JE",
+        "JP",
+        "KE",
+        "KR",
+        "KY",
+        "KZ",
+        "LB",
+        "LR",
+        "LU",
+        "LV",
+        "LY",
+        "ME",
+        "MH",
+        "MK",
+        "MN",
+        "MU",
+        "MW",
+        "MX",
+        "NG",
+        "NL",
+        "NO",
+        "NZ",
+        "OM",
+        "PA",
+        "PE",
+        "PG",
+        "PH",
+        "PL",
+        "PT",
+        "QA",
+        "RO",
+        "RS",
+        "RU",
+        "SA",
+        "SC",
+        "SD",
+        "SE",
+        "SG",
+        "SH",
+        "SI",
+        "SK",
+        "TH",
+        "TR",
+        "TW",
+        "TZ",
+        "UA",
+        "US",
+        "VA",
+        "VE",
+        "VG",
+        "ZA",
+        "ZM"
+      ],
+      "type": "string"
+    },
+    "BaseMeasure_GenCntryEnum_": {
+      "title": "BaseMeasure[GenCntryEnum]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "$ref": "#/definitions/GenCntryEnum"
+        }
+      },
+      "required": [
+        "VALUE"
       ]
     },
     "StaticManagementSeries": {
@@ -5584,43 +4198,37 @@
           "$ref": "#/definitions/StaticDimensionContainer_ORG_"
         },
         "NM": {
-          "$ref": "#/definitions/Measure_Str128__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Str128_"
         },
         "NM_LTN": {
-          "$ref": "#/definitions/Measure_Ascii128__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Ascii128_"
         },
         "NM_SHRT": {
-          "$ref": "#/definitions/Measure_Str64__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Str64_"
         },
         "STRT": {
-          "$ref": "#/definitions/Measure_Str64__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Str64_"
         },
         "STRT_LTN": {
-          "$ref": "#/definitions/Measure_Ascii64__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Ascii64_"
         },
         "CTY": {
-          "$ref": "#/definitions/Measure_Str32__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Str32_"
         },
         "CTY_LTN": {
-          "$ref": "#/definitions/Measure_Ascii32__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Ascii32_"
         },
         "PSTL_CD": {
-          "$ref": "#/definitions/Measure_Str16__GenericStatusAttr_AttrObsrvtnSttsEnum__"
-        },
-        "PSTL_BX": {
-          "$ref": "#/definitions/Measure_Str8__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Str16_"
         },
         "URL": {
-          "$ref": "#/definitions/Measure_AnyUrl__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_AnyUrl_"
         },
         "EMAIL": {
-          "$ref": "#/definitions/Measure_EmailStr__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_EmailStr_"
         },
         "CNTRY_RSDNC": {
-          "$ref": "#/definitions/Measure_GenCntryEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
-        },
-        "LGL_PRCDNG_STTS": {
-          "$ref": "#/definitions/Measure_OrgLglPrcdngSttsEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_GenCntryEnum_"
         }
       },
       "required": [
@@ -5635,73 +4243,29 @@
           "$ref": "#/definitions/DimensionContainer_ORG_"
         },
         "DT_BRTH": {
-          "$ref": "#/definitions/Measure_date__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_date_"
         },
         "DT_CLS": {
-          "$ref": "#/definitions/Measure_date__GenericStatusAttr_AttrObsrvtnSttsEnum__"
-        },
-        "CNTRY_BRTH": {
-          "$ref": "#/definitions/Measure_GenCntryEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
-        },
-        "ESCB_ID": {
-          "$ref": "#/definitions/Measure_Ascii32__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_date_"
         },
         "LEI_ID": {
-          "$ref": "#/definitions/Measure_Ascii20__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Ascii20_"
         },
         "TAX_ID": {
-          "$ref": "#/definitions/Measure_Ascii31__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Ascii31_"
         },
         "NBR_ID": {
-          "$ref": "#/definitions/Measure_Ascii31__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Ascii31_"
         },
         "SPLT_FRM": {
-          "$ref": "#/definitions/Measure_ORG__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_ORG_"
         },
         "MRGD_WTH": {
-          "$ref": "#/definitions/Measure_ORG__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_ORG_"
         }
       },
       "required": [
         "DIMS"
-      ]
-    },
-    "OrgInstttnlSctrEnum": {
-      "title": "OrgInstttnlSctrEnum",
-      "description": "An enumeration.",
-      "enum": [
-        "S11",
-        "S121",
-        "S122",
-        "S123",
-        "S124",
-        "S125",
-        "S126",
-        "S127",
-        "S128",
-        "S129",
-        "S1311",
-        "S1312",
-        "S1313",
-        "S1314",
-        "S14",
-        "S15"
-      ],
-      "type": "string"
-    },
-    "Measure_OrgInstttnlSctrEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
-      "title": "Measure[OrgInstttnlSctrEnum, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
-      "type": "object",
-      "properties": {
-        "VALUE": {
-          "$ref": "#/definitions/OrgInstttnlSctrEnum"
-        },
-        "ATTRS": {
-          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
-        }
-      },
-      "required": [
-        "VALUE"
       ]
     },
     "StaticReporterSeries": {
@@ -5712,46 +4276,37 @@
           "$ref": "#/definitions/StaticDimensionContainer_ORG_"
         },
         "NM": {
-          "$ref": "#/definitions/Measure_Str128__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Str128_"
         },
         "NM_LTN": {
-          "$ref": "#/definitions/Measure_Ascii128__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Ascii128_"
         },
         "NM_SHRT": {
-          "$ref": "#/definitions/Measure_Str64__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Str64_"
         },
         "STRT": {
-          "$ref": "#/definitions/Measure_Str64__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Str64_"
         },
         "STRT_LTN": {
-          "$ref": "#/definitions/Measure_Ascii64__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Ascii64_"
         },
         "CTY": {
-          "$ref": "#/definitions/Measure_Str32__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Str32_"
         },
         "CTY_LTN": {
-          "$ref": "#/definitions/Measure_Ascii32__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Ascii32_"
         },
         "PSTL_CD": {
-          "$ref": "#/definitions/Measure_Str16__GenericStatusAttr_AttrObsrvtnSttsEnum__"
-        },
-        "PSTL_BX": {
-          "$ref": "#/definitions/Measure_Str8__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Str16_"
         },
         "URL": {
-          "$ref": "#/definitions/Measure_AnyUrl__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_AnyUrl_"
         },
         "EMAIL": {
-          "$ref": "#/definitions/Measure_EmailStr__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_EmailStr_"
         },
         "CNTRY_RSDNC": {
-          "$ref": "#/definitions/Measure_GenCntryEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
-        },
-        "LGL_PRCDNG_STTS": {
-          "$ref": "#/definitions/Measure_OrgLglPrcdngSttsEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
-        },
-        "INSTTTNL_SCTR": {
-          "$ref": "#/definitions/Measure_OrgInstttnlSctrEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_GenCntryEnum_"
         }
       },
       "required": [
@@ -5773,114 +4328,6 @@
         "ID"
       ]
     },
-    "AttrCnfdntltySttsEnum": {
-      "title": "AttrCnfdntltySttsEnum",
-      "description": "An enumeration.",
-      "enum": [
-        "C",
-        "F"
-      ],
-      "type": "string"
-    },
-    "GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum_": {
-      "title": "GenericStatusConfAttr[AttrObsrvtnSttsEnum, AttrCnfdntltySttsEnum]",
-      "type": "object",
-      "properties": {
-        "STATUS": {
-          "default": "A",
-          "allOf": [
-            {
-              "$ref": "#/definitions/AttrObsrvtnSttsEnum"
-            }
-          ]
-        },
-        "CONF": {
-          "default": "C",
-          "allOf": [
-            {
-              "$ref": "#/definitions/AttrCnfdntltySttsEnum"
-            }
-          ]
-        }
-      }
-    },
-    "Measure_EmailStr__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__": {
-      "title": "Measure[EmailStr, GenericStatusConfAttr[AttrObsrvtnSttsEnum, AttrCnfdntltySttsEnum]]",
-      "type": "object",
-      "properties": {
-        "VALUE": {
-          "title": "Value",
-          "type": "string",
-          "format": "email"
-        },
-        "ATTRS": {
-          "$ref": "#/definitions/GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum_"
-        }
-      },
-      "required": [
-        "VALUE"
-      ]
-    },
-    "Measure_Str32__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__": {
-      "title": "Measure[Str32, GenericStatusConfAttr[AttrObsrvtnSttsEnum, AttrCnfdntltySttsEnum]]",
-      "type": "object",
-      "properties": {
-        "VALUE": {
-          "title": "Value",
-          "maxLength": 32,
-          "type": "string"
-        },
-        "ATTRS": {
-          "$ref": "#/definitions/GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum_"
-        }
-      },
-      "required": [
-        "VALUE"
-      ]
-    },
-    "GenGndrEnum": {
-      "title": "GenGndrEnum",
-      "description": "An enumeration.",
-      "enum": [
-        "-",
-        "MALE",
-        "FEMALE",
-        "OTHER"
-      ],
-      "type": "string"
-    },
-    "Measure_GenGndrEnum__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__": {
-      "title": "Measure[GenGndrEnum, GenericStatusConfAttr[AttrObsrvtnSttsEnum, AttrCnfdntltySttsEnum]]",
-      "type": "object",
-      "properties": {
-        "VALUE": {
-          "$ref": "#/definitions/GenGndrEnum"
-        },
-        "ATTRS": {
-          "$ref": "#/definitions/GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum_"
-        }
-      },
-      "required": [
-        "VALUE"
-      ]
-    },
-    "Measure_Ascii32__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__": {
-      "title": "Measure[Ascii32, GenericStatusConfAttr[AttrObsrvtnSttsEnum, AttrCnfdntltySttsEnum]]",
-      "type": "object",
-      "properties": {
-        "VALUE": {
-          "title": "Value",
-          "maxLength": 32,
-          "type": "string"
-        },
-        "ATTRS": {
-          "$ref": "#/definitions/GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum_"
-        }
-      },
-      "required": [
-        "VALUE"
-      ]
-    },
     "ContactSeries": {
       "title": "ContactSeries",
       "type": "object",
@@ -5889,25 +4336,22 @@
           "$ref": "#/definitions/DimensionContainer_PSN_"
         },
         "EMAIL": {
-          "$ref": "#/definitions/Measure_EmailStr__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_EmailStr_"
         },
         "FRST": {
-          "$ref": "#/definitions/Measure_Str32__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Str32_"
         },
         "FRST_SLTTN": {
-          "$ref": "#/definitions/Measure_Str32__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Str32_"
         },
         "LST": {
-          "$ref": "#/definitions/Measure_Str32__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Str32_"
         },
         "LST_SLTTN": {
-          "$ref": "#/definitions/Measure_Str32__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
-        },
-        "GNDR": {
-          "$ref": "#/definitions/Measure_GenGndrEnum__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Str32_"
         },
         "PHN": {
-          "$ref": "#/definitions/Measure_Ascii32__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Ascii32_"
         }
       },
       "required": [
@@ -5960,31 +4404,12 @@
       ],
       "type": "string"
     },
-    "Measure_DprtmntEnum__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__": {
-      "title": "Measure[DprtmntEnum, GenericStatusConfAttr[AttrObsrvtnSttsEnum, AttrCnfdntltySttsEnum]]",
+    "BaseMeasure_DprtmntEnum_": {
+      "title": "BaseMeasure[DprtmntEnum]",
       "type": "object",
       "properties": {
         "VALUE": {
           "$ref": "#/definitions/DprtmntEnum"
-        },
-        "ATTRS": {
-          "$ref": "#/definitions/GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum_"
-        }
-      },
-      "required": [
-        "VALUE"
-      ]
-    },
-    "Measure_bool__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__": {
-      "title": "Measure[bool, GenericStatusConfAttr[AttrObsrvtnSttsEnum, AttrCnfdntltySttsEnum]]",
-      "type": "object",
-      "properties": {
-        "VALUE": {
-          "title": "Value",
-          "type": "boolean"
-        },
-        "ATTRS": {
-          "$ref": "#/definitions/GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum_"
         }
       },
       "required": [
@@ -5999,19 +4424,19 @@
           "$ref": "#/definitions/RelDimensionContainer_PSN__ORG_"
         },
         "ASSCTD_WTH": {
-          "$ref": "#/definitions/Measure_bool__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_bool_"
         },
         "IS_EMPLY_OF": {
-          "$ref": "#/definitions/Measure_bool__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_bool_"
         },
         "IS_CNTRCTR_OF": {
-          "$ref": "#/definitions/Measure_bool__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_bool_"
         },
         "WRKS_FR": {
-          "$ref": "#/definitions/Measure_DprtmntEnum__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_DprtmntEnum_"
         },
         "RSPNSBL_FR_IFDAT": {
-          "$ref": "#/definitions/Measure_bool__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_bool_"
         }
       },
       "required": [
@@ -6138,13 +4563,13 @@
           "$ref": "#/definitions/DtDimensionContainer_DBT_"
         },
         "PRC": {
-          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
         "ACCRD_INTRST": {
-          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
         "OTSTNDNG": {
-          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         }
       },
       "required": [
@@ -6154,16 +4579,45 @@
         "OTSTNDNG"
       ]
     },
-    "Measure_float__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
-      "title": "Measure[float, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+    "TrancheSeries": {
+      "title": "TrancheSeries",
+      "type": "object",
+      "properties": {
+        "DIMS": {
+          "$ref": "#/definitions/DtDimensionContainer_DBT_"
+        },
+        "AMNT": {
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
+        }
+      },
+      "required": [
+        "DIMS",
+        "AMNT"
+      ]
+    },
+    "RedemptionSeries": {
+      "title": "RedemptionSeries",
+      "type": "object",
+      "properties": {
+        "DIMS": {
+          "$ref": "#/definitions/DtDimensionContainer_DBT_"
+        },
+        "AMNT": {
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
+        }
+      },
+      "required": [
+        "DIMS",
+        "AMNT"
+      ]
+    },
+    "BaseMeasure_float_": {
+      "title": "BaseMeasure[float]",
       "type": "object",
       "properties": {
         "VALUE": {
           "title": "Value",
           "type": "number"
-        },
-        "ATTRS": {
-          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
         }
       },
       "required": [
@@ -6178,7 +4632,7 @@
           "$ref": "#/definitions/DtDimensionContainer_DBT_"
         },
         "RT": {
-          "$ref": "#/definitions/Measure_float__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_float_"
         }
       },
       "required": [
@@ -6261,16 +4715,16 @@
           "$ref": "#/definitions/FreqDimensionContainer_SHR_"
         },
         "PRC": {
-          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_float_"
         },
         "OTSTNDNG": {
-          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
         "SBSCRPTNS": {
-          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
         "RDMPTNS": {
-          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         }
       },
       "required": [
@@ -6317,15 +4771,12 @@
       ],
       "type": "string"
     },
-    "Measure_DvdndCstmFrqncyEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
-      "title": "Measure[DvdndCstmFrqncyEnum, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+    "BaseMeasure_DvdndCstmFrqncyEnum_": {
+      "title": "BaseMeasure[DvdndCstmFrqncyEnum]",
       "type": "object",
       "properties": {
         "VALUE": {
           "$ref": "#/definitions/DvdndCstmFrqncyEnum"
-        },
-        "ATTRS": {
-          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
         }
       },
       "required": [
@@ -6354,32 +4805,26 @@
       ],
       "type": "string"
     },
-    "Measure_DvdndTypEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
-      "title": "Measure[DvdndTypEnum, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+    "BaseMeasure_DvdndTypEnum_": {
+      "title": "BaseMeasure[DvdndTypEnum]",
       "type": "object",
       "properties": {
         "VALUE": {
           "$ref": "#/definitions/DvdndTypEnum"
-        },
-        "ATTRS": {
-          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
         }
       },
       "required": [
         "VALUE"
       ]
     },
-    "Measure_PositiveFloat__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
-      "title": "Measure[PositiveFloat, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+    "BaseMeasure_PositiveFloat_": {
+      "title": "BaseMeasure[PositiveFloat]",
       "type": "object",
       "properties": {
         "VALUE": {
           "title": "Value",
           "exclusiveMinimum": 0,
           "type": "number"
-        },
-        "ATTRS": {
-          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
         }
       },
       "required": [
@@ -6394,25 +4839,25 @@
           "$ref": "#/definitions/DtDimensionContainer_SHR_"
         },
         "EX_DT": {
-          "$ref": "#/definitions/Measure_date__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_date_"
         },
         "DCLRTN_DT": {
-          "$ref": "#/definitions/Measure_date__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_date_"
         },
         "PYMNT_DT": {
-          "$ref": "#/definitions/Measure_date__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_date_"
         },
         "FRQNCY": {
-          "$ref": "#/definitions/Measure_DvdndCstmFrqncyEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_DvdndCstmFrqncyEnum_"
         },
         "TYP": {
-          "$ref": "#/definitions/Measure_DvdndTypEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_DvdndTypEnum_"
         },
         "CRRNCY": {
-          "$ref": "#/definitions/Measure_GenCrrncyEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_GenCrrncyEnum_"
         },
         "AMNT": {
-          "$ref": "#/definitions/Measure_PositiveFloat__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_PositiveFloat_"
         }
       },
       "required": [
@@ -6434,7 +4879,7 @@
           "$ref": "#/definitions/DtDimensionContainer_SHR_"
         },
         "FCTR": {
-          "$ref": "#/definitions/Measure_PositiveFloat__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_PositiveFloat_"
         }
       },
       "required": [
@@ -6451,6 +4896,20 @@
           "type": "array",
           "items": {
             "$ref": "#/definitions/journey__structure__ifdat__self_key__DebtSeries"
+          }
+        },
+        "TRANCHE": {
+          "title": "Tranche",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/TrancheSeries"
+          }
+        },
+        "REDEMPTION": {
+          "title": "Redemption",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/RedemptionSeries"
           }
         },
         "COUPON": {
@@ -6682,15 +5141,12 @@
       ],
       "type": "string"
     },
-    "Measure_OrgIntrntnlOrgnstnCdEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
-      "title": "Measure[OrgIntrntnlOrgnstnCdEnum, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+    "BaseMeasure_OrgIntrntnlOrgnstnCdEnum_": {
+      "title": "BaseMeasure[OrgIntrntnlOrgnstnCdEnum]",
       "type": "object",
       "properties": {
         "VALUE": {
           "$ref": "#/definitions/OrgIntrntnlOrgnstnCdEnum"
-        },
-        "ATTRS": {
-          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
         }
       },
       "required": [
@@ -6705,41 +5161,101 @@
           "$ref": "#/definitions/DimensionContainer_ORG_"
         },
         "DT_BRTH": {
-          "$ref": "#/definitions/Measure_date__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_date_"
         },
         "DT_CLS": {
-          "$ref": "#/definitions/Measure_date__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_date_"
         },
         "ESCB_ID": {
-          "$ref": "#/definitions/Measure_Ascii32__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Ascii32_"
         },
         "LEI_ID": {
-          "$ref": "#/definitions/Measure_Ascii20__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Ascii20_"
         },
         "TAX_ID": {
-          "$ref": "#/definitions/Measure_Ascii31__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Ascii31_"
         },
         "NBR_ID": {
-          "$ref": "#/definitions/Measure_Ascii31__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Ascii31_"
         },
         "INTRNL_ID": {
-          "$ref": "#/definitions/Measure_Ascii31__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Ascii31_"
         },
         "INTRNL_ORGNSTN": {
-          "$ref": "#/definitions/Measure_OrgIntrntnlOrgnstnCdEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_OrgIntrntnlOrgnstnCdEnum_"
         },
         "SPLT_FRM": {
-          "$ref": "#/definitions/Measure_ORG__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_ORG_"
         },
         "MRGD_WTH": {
-          "$ref": "#/definitions/Measure_ORG__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_ORG_"
         },
         "DDPLCT_OF": {
-          "$ref": "#/definitions/Measure_ORG__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_ORG_"
         }
       },
       "required": [
         "DIMS"
+      ]
+    },
+    "OrgLglPrcdngSttsEnum": {
+      "title": "OrgLglPrcdngSttsEnum",
+      "description": "An enumeration.",
+      "enum": [
+        "-",
+        "0",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "type": "string"
+    },
+    "BaseMeasure_OrgLglPrcdngSttsEnum_": {
+      "title": "BaseMeasure[OrgLglPrcdngSttsEnum]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "$ref": "#/definitions/OrgLglPrcdngSttsEnum"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "OrgInstttnlSctrEnum": {
+      "title": "OrgInstttnlSctrEnum",
+      "description": "An enumeration.",
+      "enum": [
+        "S11",
+        "S121",
+        "S122",
+        "S123",
+        "S124",
+        "S125",
+        "S126",
+        "S127",
+        "S128",
+        "S129",
+        "S1311",
+        "S1312",
+        "S1313",
+        "S1314",
+        "S14",
+        "S15"
+      ],
+      "type": "string"
+    },
+    "BaseMeasure_OrgInstttnlSctrEnum_": {
+      "title": "BaseMeasure[OrgInstttnlSctrEnum]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "$ref": "#/definitions/OrgInstttnlSctrEnum"
+        }
+      },
+      "required": [
+        "VALUE"
       ]
     },
     "OrgEcnmcActvtyTypEnum": {
@@ -7720,20 +6236,18 @@
         "98_2",
         "98_20",
         "99",
+        "-99",
         "99_0",
         "99_00"
       ],
       "type": "string"
     },
-    "Measure_OrgEcnmcActvtyTypEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
-      "title": "Measure[OrgEcnmcActvtyTypEnum, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+    "BaseMeasure_OrgEcnmcActvtyTypEnum_": {
+      "title": "BaseMeasure[OrgEcnmcActvtyTypEnum]",
       "type": "object",
       "properties": {
         "VALUE": {
           "$ref": "#/definitions/OrgEcnmcActvtyTypEnum"
-        },
-        "ATTRS": {
-          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
         }
       },
       "required": [
@@ -7748,19 +6262,19 @@
           "$ref": "#/definitions/StaticDimensionContainer_ORG_"
         },
         "NM": {
-          "$ref": "#/definitions/Measure_Str128__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Str128_"
         },
         "CNTRY_RSDNC": {
-          "$ref": "#/definitions/Measure_GenCntryEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_GenCntryEnum_"
         },
         "LGL_PRCDNG_STTS": {
-          "$ref": "#/definitions/Measure_OrgLglPrcdngSttsEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_OrgLglPrcdngSttsEnum_"
         },
         "INSTTTNL_SCTR": {
-          "$ref": "#/definitions/Measure_OrgInstttnlSctrEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_OrgInstttnlSctrEnum_"
         },
         "ECNMC_ACTVTY": {
-          "$ref": "#/definitions/Measure_OrgEcnmcActvtyTypEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_OrgEcnmcActvtyTypEnum_"
         }
       },
       "required": [
@@ -7775,37 +6289,37 @@
           "$ref": "#/definitions/DimensionContainer_ORG_"
         },
         "DT_BRTH": {
-          "$ref": "#/definitions/Measure_date__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_date_"
         },
         "DT_CLS": {
-          "$ref": "#/definitions/Measure_date__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_date_"
         },
         "ESCB_ID": {
-          "$ref": "#/definitions/Measure_Ascii32__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Ascii32_"
         },
         "LEI_ID": {
-          "$ref": "#/definitions/Measure_Ascii20__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Ascii20_"
         },
         "TAX_ID": {
-          "$ref": "#/definitions/Measure_Ascii31__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Ascii31_"
         },
         "NBR_ID": {
-          "$ref": "#/definitions/Measure_Ascii31__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Ascii31_"
         },
         "INTRNL_ID": {
-          "$ref": "#/definitions/Measure_Ascii31__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Ascii31_"
         },
         "INTRNL_ORGNSTN": {
-          "$ref": "#/definitions/Measure_OrgIntrntnlOrgnstnCdEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_OrgIntrntnlOrgnstnCdEnum_"
         },
         "SPLT_FRM": {
-          "$ref": "#/definitions/Measure_ORG__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_ORG_"
         },
         "MRGD_WTH": {
-          "$ref": "#/definitions/Measure_ORG__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_ORG_"
         },
         "DDPLCT_OF": {
-          "$ref": "#/definitions/Measure_ORG__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_ORG_"
         }
       },
       "required": [
@@ -7820,13 +6334,13 @@
           "$ref": "#/definitions/StaticDimensionContainer_ORG_"
         },
         "NM": {
-          "$ref": "#/definitions/Measure_Str128__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Str128_"
         },
         "CNTRY_RSDNC": {
-          "$ref": "#/definitions/Measure_GenCntryEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_GenCntryEnum_"
         },
         "INSTTTNL_SCTR": {
-          "$ref": "#/definitions/Measure_OrgInstttnlSctrEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_OrgInstttnlSctrEnum_"
         }
       },
       "required": [
@@ -7859,15 +6373,12 @@
       ],
       "type": "string"
     },
-    "Measure_DepTypEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
-      "title": "Measure[DepTypEnum, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+    "BaseMeasure_DepTypEnum_": {
+      "title": "BaseMeasure[DepTypEnum]",
       "type": "object",
       "properties": {
         "VALUE": {
           "$ref": "#/definitions/DepTypEnum"
-        },
-        "ATTRS": {
-          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
         }
       },
       "required": [
@@ -7885,15 +6396,12 @@
       ],
       "type": "string"
     },
-    "Measure_DepNtcEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
-      "title": "Measure[DepNtcEnum, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+    "BaseMeasure_DepNtcEnum_": {
+      "title": "BaseMeasure[DepNtcEnum]",
       "type": "object",
       "properties": {
         "VALUE": {
           "$ref": "#/definitions/DepNtcEnum"
-        },
-        "ATTRS": {
-          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
         }
       },
       "required": [
@@ -7908,34 +6416,34 @@
           "$ref": "#/definitions/DimensionContainer_DEP_"
         },
         "DT_BRTH": {
-          "$ref": "#/definitions/Measure_date__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_date_"
         },
         "DT_CLS": {
-          "$ref": "#/definitions/Measure_date__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_date_"
         },
         "IBAN_ID": {
-          "$ref": "#/definitions/Measure_Ascii32__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Ascii32_"
         },
         "INTRNL_ID": {
-          "$ref": "#/definitions/Measure_Ascii31__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Ascii31_"
         },
         "TYP": {
-          "$ref": "#/definitions/Measure_DepTypEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_DepTypEnum_"
         },
         "NTC": {
-          "$ref": "#/definitions/Measure_DepNtcEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_DepNtcEnum_"
         },
         "CRRNCY": {
-          "$ref": "#/definitions/Measure_GenCrrncyEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_GenCrrncyEnum_"
         },
         "IS_TRNSFRBL": {
-          "$ref": "#/definitions/Measure_bool__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_bool_"
         },
         "IS_SHRD": {
-          "$ref": "#/definitions/Measure_bool__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_bool_"
         },
         "DDPLCT_OF": {
-          "$ref": "#/definitions/Measure_ORG__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_ORG_"
         }
       },
       "required": [
@@ -7975,19 +6483,19 @@
           "$ref": "#/definitions/StaticDimensionContainer_DEP_"
         },
         "MTRTY_DT": {
-          "$ref": "#/definitions/Measure_date__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_date_"
         },
         "NMNL_INTRST": {
-          "$ref": "#/definitions/Measure_float__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_float_"
         },
         "CMPND_TMS": {
-          "$ref": "#/definitions/Measure_float__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_float_"
         },
         "DBTR": {
-          "$ref": "#/definitions/Measure_ORG__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_ORG_"
         },
         "CRDTR": {
-          "$ref": "#/definitions/Measure_ORG__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_ORG_"
         }
       },
       "required": [
@@ -8021,23 +6529,20 @@
       ],
       "type": "string"
     },
-    "Measure_SftTypEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
-      "title": "Measure[SftTypEnum, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+    "BaseMeasure_SftTypEnum_": {
+      "title": "BaseMeasure[SftTypEnum]",
       "type": "object",
       "properties": {
         "VALUE": {
           "$ref": "#/definitions/SftTypEnum"
-        },
-        "ATTRS": {
-          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
         }
       },
       "required": [
         "VALUE"
       ]
     },
-    "Measure_SFT__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
-      "title": "Measure[SFT, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+    "BaseMeasure_SFT_": {
+      "title": "BaseMeasure[SFT]",
       "type": "object",
       "properties": {
         "VALUE": {
@@ -8045,9 +6550,6 @@
           "maxLength": 32,
           "pattern": "^P[a-zA-z0-9_]+",
           "type": "string"
-        },
-        "ATTRS": {
-          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
         }
       },
       "required": [
@@ -8062,22 +6564,22 @@
           "$ref": "#/definitions/DimensionContainer_SFT_"
         },
         "DT_BRTH": {
-          "$ref": "#/definitions/Measure_date__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_date_"
         },
         "DT_CLS": {
-          "$ref": "#/definitions/Measure_date__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_date_"
         },
         "INTRNL_ID": {
-          "$ref": "#/definitions/Measure_Ascii31__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Ascii31_"
         },
         "CRRNCY": {
-          "$ref": "#/definitions/Measure_GenCrrncyEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_GenCrrncyEnum_"
         },
         "TYP": {
-          "$ref": "#/definitions/Measure_SftTypEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_SftTypEnum_"
         },
         "DDPLCT_OF": {
-          "$ref": "#/definitions/Measure_SFT__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_SFT_"
         }
       },
       "required": [
@@ -8117,16 +6619,16 @@
           "$ref": "#/definitions/StaticDimensionContainer_SFT_"
         },
         "MTRTY_DT": {
-          "$ref": "#/definitions/Measure_date__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_date_"
         },
         "NMNL_INTRST": {
-          "$ref": "#/definitions/Measure_float__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_float_"
         },
         "DBTR": {
-          "$ref": "#/definitions/Measure_ORG__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_ORG_"
         },
         "CRDTR": {
-          "$ref": "#/definitions/Measure_ORG__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_ORG_"
         }
       },
       "required": [
@@ -8167,15 +6669,12 @@
       ],
       "type": "string"
     },
-    "Measure_LonTypEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
-      "title": "Measure[LonTypEnum, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+    "BaseMeasure_LonTypEnum_": {
+      "title": "BaseMeasure[LonTypEnum]",
       "type": "object",
       "properties": {
         "VALUE": {
           "$ref": "#/definitions/LonTypEnum"
-        },
-        "ATTRS": {
-          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
         }
       },
       "required": [
@@ -8190,22 +6689,22 @@
           "$ref": "#/definitions/DimensionContainer_LON_"
         },
         "DT_BRTH": {
-          "$ref": "#/definitions/Measure_date__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_date_"
         },
         "DT_CLS": {
-          "$ref": "#/definitions/Measure_date__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_date_"
         },
         "INTRNL_ID": {
-          "$ref": "#/definitions/Measure_Ascii31__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Ascii31_"
         },
         "CRRNCY": {
-          "$ref": "#/definitions/Measure_GenCrrncyEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_GenCrrncyEnum_"
         },
         "TYP": {
-          "$ref": "#/definitions/Measure_LonTypEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_LonTypEnum_"
         },
         "DDPLCT_OF": {
-          "$ref": "#/definitions/Measure_LON__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_LON_"
         }
       },
       "required": [
@@ -8245,16 +6744,16 @@
           "$ref": "#/definitions/StaticDimensionContainer_LON_"
         },
         "MTRTY_DT": {
-          "$ref": "#/definitions/Measure_date__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_date_"
         },
         "NMNL_INTRST": {
-          "$ref": "#/definitions/Measure_float__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_float_"
         },
         "DBTR": {
-          "$ref": "#/definitions/Measure_ID__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_ID_"
         },
         "CRDTR": {
-          "$ref": "#/definitions/Measure_ID__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_ID_"
         }
       },
       "required": [
@@ -8269,91 +6768,91 @@
           "$ref": "#/definitions/DimensionContainer_DBT_"
         },
         "DT_BRTH": {
-          "$ref": "#/definitions/Measure_date__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_date_"
         },
         "DT_CLS": {
-          "$ref": "#/definitions/Measure_date__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_date_"
         },
         "ORGNL_MTRTY": {
-          "$ref": "#/definitions/Measure_date__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_date_"
         },
         "ISIN_ID": {
-          "$ref": "#/definitions/Measure_Ascii12__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Ascii12_"
         },
         "INTRNL_ID": {
-          "$ref": "#/definitions/Measure_Ascii31__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Ascii31_"
         },
         "CRRNCY": {
-          "$ref": "#/definitions/Measure_GenCrrncyEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_GenCrrncyEnum_"
         },
         "ISS_PRC": {
-          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
         "RDMPTN_PRC": {
-          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
         "MRKT": {
-          "$ref": "#/definitions/Measure_GenMrktEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_GenMrktEnum_"
         },
         "ACCRL_STRTDT": {
-          "$ref": "#/definitions/Measure_date__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_date_"
         },
         "PRMRY_CLSS": {
-          "$ref": "#/definitions/Measure_DbtPrmryClssEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_DbtPrmryClssEnum_"
         },
         "GRNT_LVL": {
-          "$ref": "#/definitions/Measure_DbtGrntLvlEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_DbtGrntLvlEnum_"
         },
         "RNK_LVL": {
-          "$ref": "#/definitions/Measure_DbtRnkLvlEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_DbtRnkLvlEnum_"
         },
         "SCRTY_LVL": {
-          "$ref": "#/definitions/Measure_DbtScrtyLvlEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_DbtScrtyLvlEnum_"
         },
         "IS_SCRTZTN": {
-          "$ref": "#/definitions/Measure_bool__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_bool_"
         },
         "SCRTZTN_TYP": {
-          "$ref": "#/definitions/Measure_DbtScrtznTypEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_DbtScrtznTypEnum_"
         },
         "IS_CVRD": {
-          "$ref": "#/definitions/Measure_bool__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_bool_"
         },
         "CVRD_TYP": {
-          "$ref": "#/definitions/Measure_DbtCvrdTypEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_DbtCvrdTypEnum_"
         },
         "CPN_TYP": {
-          "$ref": "#/definitions/Measure_DbtCpnTypEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_DbtCpnTypEnum_"
         },
         "CPN_CRRNCY": {
-          "$ref": "#/definitions/Measure_GenCrrncyEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_GenCrrncyEnum_"
         },
         "CPN_FRQNCY": {
-          "$ref": "#/definitions/Measure_DbtCpnFrqncyEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_DbtCpnFrqncyEnum_"
         },
         "CPN_SPRD": {
-          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
         "CPN_MLTPLR": {
-          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
         "CPN_CP": {
-          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
         "CPN_FLR": {
-          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
         "FRST_CPN_DT": {
-          "$ref": "#/definitions/Measure_date__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_date_"
         },
         "LST_CPN_DT": {
-          "$ref": "#/definitions/Measure_date__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_date_"
         },
         "UNDRLYNG": {
-          "$ref": "#/definitions/Measure_DBT__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_DBT_"
         },
         "DDPLCT_OF": {
-          "$ref": "#/definitions/Measure_DBT__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_DBT_"
         }
       },
       "required": [
@@ -8368,16 +6867,16 @@
           "$ref": "#/definitions/StaticDimensionContainer_DBT_"
         },
         "NM": {
-          "$ref": "#/definitions/Measure_Str128__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Str128_"
         },
         "STTS": {
-          "$ref": "#/definitions/Measure_DbtSttsEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_DbtSttsEnum_"
         },
         "MTRTY_DT": {
-          "$ref": "#/definitions/Measure_date__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_date_"
         },
         "ISSD_BY": {
-          "$ref": "#/definitions/Measure_ORG__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_ORG_"
         }
       },
       "required": [
@@ -8396,15 +6895,12 @@
       ],
       "type": "string"
     },
-    "Measure_ShrTypEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
-      "title": "Measure[ShrTypEnum, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+    "BaseMeasure_ShrTypEnum_": {
+      "title": "BaseMeasure[ShrTypEnum]",
       "type": "object",
       "properties": {
         "VALUE": {
           "$ref": "#/definitions/ShrTypEnum"
-        },
-        "ATTRS": {
-          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
         }
       },
       "required": [
@@ -8427,15 +6923,12 @@
       ],
       "type": "string"
     },
-    "Measure_ShrPrmryClssEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
-      "title": "Measure[ShrPrmryClssEnum, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+    "BaseMeasure_ShrPrmryClssEnum_": {
+      "title": "BaseMeasure[ShrPrmryClssEnum]",
       "type": "object",
       "properties": {
         "VALUE": {
           "$ref": "#/definitions/ShrPrmryClssEnum"
-        },
-        "ATTRS": {
-          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
         }
       },
       "required": [
@@ -8450,31 +6943,31 @@
           "$ref": "#/definitions/DimensionContainer_SHR_"
         },
         "DT_BRTH": {
-          "$ref": "#/definitions/Measure_date__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_date_"
         },
         "DT_CLS": {
-          "$ref": "#/definitions/Measure_date__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_date_"
         },
         "ISIN_ID": {
-          "$ref": "#/definitions/Measure_Ascii12__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Ascii12_"
         },
         "INTRNL_ID": {
-          "$ref": "#/definitions/Measure_Ascii31__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Ascii31_"
         },
         "CRRNCY": {
-          "$ref": "#/definitions/Measure_GenCrrncyEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_GenCrrncyEnum_"
         },
         "MRKT": {
-          "$ref": "#/definitions/Measure_GenMrktEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_GenMrktEnum_"
         },
         "TYP": {
-          "$ref": "#/definitions/Measure_ShrTypEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_ShrTypEnum_"
         },
         "PRMRY_CLSS": {
-          "$ref": "#/definitions/Measure_ShrPrmryClssEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_ShrPrmryClssEnum_"
         },
         "DDPLCT_OF": {
-          "$ref": "#/definitions/Measure_SHR__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_SHR_"
         }
       },
       "required": [
@@ -8489,10 +6982,10 @@
           "$ref": "#/definitions/StaticDimensionContainer_SHR_"
         },
         "NM": {
-          "$ref": "#/definitions/Measure_Str128__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Str128_"
         },
         "ISSD_BY": {
-          "$ref": "#/definitions/Measure_ORG__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_ORG_"
         }
       },
       "required": [
@@ -8530,23 +7023,20 @@
       ],
       "type": "string"
     },
-    "Measure_DrvtvTypEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
-      "title": "Measure[DrvtvTypEnum, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+    "BaseMeasure_DrvtvTypEnum_": {
+      "title": "BaseMeasure[DrvtvTypEnum]",
       "type": "object",
       "properties": {
         "VALUE": {
           "$ref": "#/definitions/DrvtvTypEnum"
-        },
-        "ATTRS": {
-          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
         }
       },
       "required": [
         "VALUE"
       ]
     },
-    "Measure_EDR__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
-      "title": "Measure[EDR, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+    "BaseMeasure_EDR_": {
+      "title": "BaseMeasure[EDR]",
       "type": "object",
       "properties": {
         "VALUE": {
@@ -8554,9 +7044,6 @@
           "maxLength": 32,
           "pattern": "^[IP][a-zA-z0-9_]+",
           "type": "string"
-        },
-        "ATTRS": {
-          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
         }
       },
       "required": [
@@ -8571,37 +7058,37 @@
           "$ref": "#/definitions/DimensionContainer_EDR_"
         },
         "DT_BRTH": {
-          "$ref": "#/definitions/Measure_date__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_date_"
         },
         "DT_CLS": {
-          "$ref": "#/definitions/Measure_date__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_date_"
         },
         "NM": {
-          "$ref": "#/definitions/Measure_Str128__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Str128_"
         },
         "ISIN_ID": {
-          "$ref": "#/definitions/Measure_Ascii12__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Ascii12_"
         },
         "TCKR": {
-          "$ref": "#/definitions/Measure_Ascii12__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Ascii12_"
         },
         "INTRNL_ID": {
-          "$ref": "#/definitions/Measure_Ascii31__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Ascii31_"
         },
         "TYP": {
-          "$ref": "#/definitions/Measure_DrvtvTypEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_DrvtvTypEnum_"
         },
         "CRRNCY": {
-          "$ref": "#/definitions/Measure_GenCrrncyEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_GenCrrncyEnum_"
         },
         "MLTPLR": {
-          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
         "WRITER": {
-          "$ref": "#/definitions/Measure_GenMrktEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_GenMrktEnum_"
         },
         "DDPLCT_OF": {
-          "$ref": "#/definitions/Measure_EDR__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_EDR_"
         }
       },
       "required": [
@@ -8616,34 +7103,34 @@
           "$ref": "#/definitions/DimensionContainer_EDR_"
         },
         "DT_BRTH": {
-          "$ref": "#/definitions/Measure_date__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_date_"
         },
         "DT_CLS": {
-          "$ref": "#/definitions/Measure_date__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_date_"
         },
         "NM": {
-          "$ref": "#/definitions/Measure_Str128__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Str128_"
         },
         "INTRNL_ID": {
-          "$ref": "#/definitions/Measure_Ascii31__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Ascii31_"
         },
         "TYP": {
-          "$ref": "#/definitions/Measure_DrvtvTypEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_DrvtvTypEnum_"
         },
         "CRRNCY": {
-          "$ref": "#/definitions/Measure_GenCrrncyEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_GenCrrncyEnum_"
         },
         "MLTPLR": {
-          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
         "WRTR": {
-          "$ref": "#/definitions/Measure_ORG__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_ORG_"
         },
         "BYR": {
-          "$ref": "#/definitions/Measure_ORG__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_ORG_"
         },
         "DDPLCT_OF": {
-          "$ref": "#/definitions/Measure_EDR__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_EDR_"
         }
       },
       "required": [
@@ -8679,15 +7166,12 @@
       ],
       "type": "string"
     },
-    "Measure_RreTypEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
-      "title": "Measure[RreTypEnum, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+    "BaseMeasure_RreTypEnum_": {
+      "title": "BaseMeasure[RreTypEnum]",
       "type": "object",
       "properties": {
         "VALUE": {
           "$ref": "#/definitions/RreTypEnum"
-        },
-        "ATTRS": {
-          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
         }
       },
       "required": [
@@ -10251,23 +8735,20 @@
       ],
       "type": "string"
     },
-    "Measure_GenNutsEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
-      "title": "Measure[GenNutsEnum, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+    "BaseMeasure_GenNutsEnum_": {
+      "title": "BaseMeasure[GenNutsEnum]",
       "type": "object",
       "properties": {
         "VALUE": {
           "$ref": "#/definitions/GenNutsEnum"
-        },
-        "ATTRS": {
-          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
         }
       },
       "required": [
         "VALUE"
       ]
     },
-    "Measure_RRE__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
-      "title": "Measure[RRE, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+    "BaseMeasure_RRE_": {
+      "title": "BaseMeasure[RRE]",
       "type": "object",
       "properties": {
         "VALUE": {
@@ -10275,9 +8756,6 @@
           "maxLength": 32,
           "pattern": "^[NP][a-zA-z0-9_]+",
           "type": "string"
-        },
-        "ATTRS": {
-          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
         }
       },
       "required": [
@@ -10292,28 +8770,28 @@
           "$ref": "#/definitions/DimensionContainer_RRE_"
         },
         "NTNL_ID": {
-          "$ref": "#/definitions/Measure_Ascii32__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Ascii32_"
         },
         "INTRNL_ID": {
-          "$ref": "#/definitions/Measure_Ascii31__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Ascii31_"
         },
         "CNTRY": {
-          "$ref": "#/definitions/Measure_GenCntryEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_GenCntryEnum_"
         },
         "TYP": {
-          "$ref": "#/definitions/Measure_RreTypEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_RreTypEnum_"
         },
         "CTY": {
-          "$ref": "#/definitions/Measure_Str32__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Str32_"
         },
         "PSTL_CD": {
-          "$ref": "#/definitions/Measure_Str32__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Str32_"
         },
         "TRRTRY": {
-          "$ref": "#/definitions/Measure_GenNutsEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_GenNutsEnum_"
         },
         "DDPLCT_OF": {
-          "$ref": "#/definitions/Measure_RRE__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_RRE_"
         }
       },
       "required": [
@@ -10350,23 +8828,20 @@
       ],
       "type": "string"
     },
-    "Measure_CreTypEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
-      "title": "Measure[CreTypEnum, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+    "BaseMeasure_CreTypEnum_": {
+      "title": "BaseMeasure[CreTypEnum]",
       "type": "object",
       "properties": {
         "VALUE": {
           "$ref": "#/definitions/CreTypEnum"
-        },
-        "ATTRS": {
-          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
         }
       },
       "required": [
         "VALUE"
       ]
     },
-    "Measure_CRE__GenericStatusAttr_AttrObsrvtnSttsEnum__": {
-      "title": "Measure[CRE, GenericStatusAttr[AttrObsrvtnSttsEnum]]",
+    "BaseMeasure_CRE_": {
+      "title": "BaseMeasure[CRE]",
       "type": "object",
       "properties": {
         "VALUE": {
@@ -10374,9 +8849,6 @@
           "maxLength": 32,
           "pattern": "^[NP][a-zA-z0-9_]+",
           "type": "string"
-        },
-        "ATTRS": {
-          "$ref": "#/definitions/GenericStatusAttr_AttrObsrvtnSttsEnum_"
         }
       },
       "required": [
@@ -10391,28 +8863,28 @@
           "$ref": "#/definitions/DimensionContainer_CRE_"
         },
         "NTNL_ID": {
-          "$ref": "#/definitions/Measure_Ascii32__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Ascii32_"
         },
         "INTRNL_ID": {
-          "$ref": "#/definitions/Measure_Ascii31__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Ascii31_"
         },
         "CNTRY": {
-          "$ref": "#/definitions/Measure_GenCntryEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_GenCntryEnum_"
         },
         "TYP": {
-          "$ref": "#/definitions/Measure_CreTypEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_CreTypEnum_"
         },
         "CTY": {
-          "$ref": "#/definitions/Measure_Str32__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Str32_"
         },
         "PSTL_CD": {
-          "$ref": "#/definitions/Measure_Str32__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_Str32_"
         },
         "TRRTRY": {
-          "$ref": "#/definitions/Measure_GenNutsEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_GenNutsEnum_"
         },
         "DDPLCT_OF": {
-          "$ref": "#/definitions/Measure_CRE__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_CRE_"
         }
       },
       "required": [
@@ -10560,10 +9032,10 @@
           "$ref": "#/definitions/DtDimensionContainer_DBT_"
         },
         "PRC": {
-          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
         "ACCRD_INTRST": {
-          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         }
       },
       "required": [
@@ -10580,7 +9052,7 @@
           "$ref": "#/definitions/DtDimensionContainer_DBT_"
         },
         "RT": {
-          "$ref": "#/definitions/Measure_float__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_float_"
         }
       },
       "required": [
@@ -10596,7 +9068,7 @@
           "$ref": "#/definitions/DtDimensionContainer_SHR_"
         },
         "PRC": {
-          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         }
       },
       "required": [
@@ -10612,13 +9084,13 @@
           "$ref": "#/definitions/DtDimensionContainer_SHR_"
         },
         "TYP": {
-          "$ref": "#/definitions/Measure_DvdndTypEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_DvdndTypEnum_"
         },
         "CRRNCY": {
-          "$ref": "#/definitions/Measure_GenCrrncyEnum__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_GenCrrncyEnum_"
         },
         "AMNT": {
-          "$ref": "#/definitions/Measure_PositiveFloat__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_PositiveFloat_"
         }
       },
       "required": [
@@ -10636,7 +9108,7 @@
           "$ref": "#/definitions/DtDimensionContainer_SHR_"
         },
         "FCTR": {
-          "$ref": "#/definitions/Measure_PositiveFloat__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_PositiveFloat_"
         }
       },
       "required": [
@@ -10673,7 +9145,7 @@
           "$ref": "#/definitions/DtDimensionContainer_EDR_"
         },
         "PRC": {
-          "$ref": "#/definitions/Measure_float__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_float_"
         }
       },
       "required": [
@@ -10710,7 +9182,7 @@
           "$ref": "#/definitions/DtDimensionContainer_ODR_"
         },
         "PRC": {
-          "$ref": "#/definitions/Measure_float__GenericStatusAttr_AttrObsrvtnSttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_float_"
         }
       },
       "required": [
@@ -10799,23 +9271,6 @@
         "DT"
       ]
     },
-    "Measure_NonNegativeFloat__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__": {
-      "title": "Measure[NonNegativeFloat, GenericStatusConfAttr[AttrObsrvtnSttsEnum, AttrCnfdntltySttsEnum]]",
-      "type": "object",
-      "properties": {
-        "VALUE": {
-          "title": "Value",
-          "minimum": 0,
-          "type": "number"
-        },
-        "ATTRS": {
-          "$ref": "#/definitions/GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum_"
-        }
-      },
-      "required": [
-        "VALUE"
-      ]
-    },
     "CashSeries": {
       "title": "CashSeries",
       "type": "object",
@@ -10824,10 +9279,10 @@
           "$ref": "#/definitions/CrrncyDimensionContainer"
         },
         "STCK": {
-          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
         "EUR_STCK": {
-          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         }
       },
       "required": [
@@ -10857,22 +9312,6 @@
         "DT"
       ]
     },
-    "Measure_float__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__": {
-      "title": "Measure[float, GenericStatusConfAttr[AttrObsrvtnSttsEnum, AttrCnfdntltySttsEnum]]",
-      "type": "object",
-      "properties": {
-        "VALUE": {
-          "title": "Value",
-          "type": "number"
-        },
-        "ATTRS": {
-          "$ref": "#/definitions/GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum_"
-        }
-      },
-      "required": [
-        "VALUE"
-      ]
-    },
     "DepositSeries": {
       "title": "DepositSeries",
       "type": "object",
@@ -10881,13 +9320,13 @@
           "$ref": "#/definitions/AccDimensionContainer_DEP_"
         },
         "STCK": {
-          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
         "EUR_STCK": {
-          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
         "ACCRLS": {
-          "$ref": "#/definitions/Measure_float__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_float_"
         }
       },
       "required": [
@@ -10926,10 +9365,10 @@
           "$ref": "#/definitions/AccDimensionContainer_SFT_"
         },
         "STCK": {
-          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
         "EUR_STCK": {
-          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         }
       },
       "required": [
@@ -10978,34 +9417,34 @@
           "$ref": "#/definitions/RelFrqncyAccDimensionContainer_DBT__ORG_"
         },
         "STCK": {
-          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
         "EUR_STCK": {
-          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
         "TRNSCTNS": {
-          "$ref": "#/definitions/Measure_float__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_float_"
         },
         "NMNL_STCK": {
-          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
         "LND_FR_RPS": {
-          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
         "LND_FR_SCLB": {
-          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
         "LND_FR_BSBT": {
-          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
         "LND_FR_MLT": {
-          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
         "ACCRLS": {
-          "$ref": "#/definitions/Measure_float__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_float_"
         },
         "ARRRS": {
-          "$ref": "#/definitions/Measure_float__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_float_"
         }
       },
       "required": [
@@ -11062,28 +9501,28 @@
           "$ref": "#/definitions/RelFrqncyAccDimensionContainer_SHR__ORG_"
         },
         "STCK": {
-          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
         "EUR_STCK": {
-          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
         "TRNSCTNS": {
-          "$ref": "#/definitions/Measure_float__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_float_"
         },
         "QNTTY": {
-          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
         "LND_FR_RPS": {
-          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
         "LND_FR_SCLB": {
-          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
         "LND_FR_BSBT": {
-          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
         "LND_FR_MLT": {
-          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         }
       },
       "required": [
@@ -11142,15 +9581,12 @@
       ],
       "type": "string"
     },
-    "Measure_DrvtvStrtgyEnum__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__": {
-      "title": "Measure[DrvtvStrtgyEnum, GenericStatusConfAttr[AttrObsrvtnSttsEnum, AttrCnfdntltySttsEnum]]",
+    "BaseMeasure_DrvtvStrtgyEnum_": {
+      "title": "BaseMeasure[DrvtvStrtgyEnum]",
       "type": "object",
       "properties": {
         "VALUE": {
           "$ref": "#/definitions/DrvtvStrtgyEnum"
-        },
-        "ATTRS": {
-          "$ref": "#/definitions/GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum_"
         }
       },
       "required": [
@@ -11165,22 +9601,22 @@
           "$ref": "#/definitions/RelFrqncyAccDimensionContainer_EDR__ORG_"
         },
         "STCK": {
-          "$ref": "#/definitions/Measure_float__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_float_"
         },
         "EUR_STCK": {
-          "$ref": "#/definitions/Measure_float__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_float_"
         },
         "GRSS_STCK": {
-          "$ref": "#/definitions/Measure_float__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_float_"
         },
         "TRNSCTNS": {
-          "$ref": "#/definitions/Measure_float__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_float_"
         },
         "QNTTY": {
-          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
         "STRTGY": {
-          "$ref": "#/definitions/Measure_DrvtvStrtgyEnum__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_DrvtvStrtgyEnum_"
         }
       },
       "required": [
@@ -11226,16 +9662,16 @@
           "$ref": "#/definitions/FrqncyAccDimensionContainer_ODR_"
         },
         "STCK": {
-          "$ref": "#/definitions/Measure_float__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_float_"
         },
         "EUR_STCK": {
-          "$ref": "#/definitions/Measure_float__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_float_"
         },
         "TRNSCTNS": {
-          "$ref": "#/definitions/Measure_float__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_float_"
         },
         "STRTGY": {
-          "$ref": "#/definitions/Measure_DrvtvStrtgyEnum__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_DrvtvStrtgyEnum_"
         }
       },
       "required": [
@@ -11286,22 +9722,22 @@
           "$ref": "#/definitions/RelFrqncyAccDimensionContainer_RRE__ORG_"
         },
         "STCK": {
-          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
         "EUR_STCK": {
-          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
         "TRNSCTNS": {
-          "$ref": "#/definitions/Measure_float__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_float_"
         },
         "ACCRLS": {
-          "$ref": "#/definitions/Measure_float__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_float_"
         },
         "ARRRS": {
-          "$ref": "#/definitions/Measure_float__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_float_"
         },
         "WRT_OFFS": {
-          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         }
       },
       "required": [
@@ -11354,22 +9790,22 @@
           "$ref": "#/definitions/RelFrqncyAccDimensionContainer_CRE__ORG_"
         },
         "STCK": {
-          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
         "EUR_STCK": {
-          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
         "TRNSCTNS": {
-          "$ref": "#/definitions/Measure_float__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_float_"
         },
         "ACCRLS": {
-          "$ref": "#/definitions/Measure_float__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_float_"
         },
         "ARRRS": {
-          "$ref": "#/definitions/Measure_float__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_float_"
         },
         "WRT_OFFS": {
-          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         }
       },
       "required": [
@@ -11444,22 +9880,22 @@
           "$ref": "#/definitions/RmngFxdDimensionContainer"
         },
         "STCK": {
-          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
         "EUR_STCK": {
-          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
         "TRNSCTNS": {
-          "$ref": "#/definitions/Measure_float__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_float_"
         },
         "ACCRLS": {
-          "$ref": "#/definitions/Measure_float__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_float_"
         },
         "ARRRS": {
-          "$ref": "#/definitions/Measure_float__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_float_"
         },
         "WRT_OFFS": {
-          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         }
       },
       "required": [
@@ -13164,10 +11600,10 @@
           "$ref": "#/definitions/RmngDimensionContainer"
         },
         "STCK": {
-          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
         "EUR_STCK": {
-          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         }
       },
       "required": [
@@ -13184,22 +11620,22 @@
           "$ref": "#/definitions/RelFrqncyAccDimensionContainer_DBT__ORG_"
         },
         "STCK": {
-          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
         "EUR_STCK": {
-          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
         "TRNSCTNS": {
-          "$ref": "#/definitions/Measure_float__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_float_"
         },
         "NMNL_STCK": {
-          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
         "ACCRLS": {
-          "$ref": "#/definitions/Measure_float__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_float_"
         },
         "ARRRS": {
-          "$ref": "#/definitions/Measure_float__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_float_"
         }
       },
       "required": [
@@ -13241,22 +11677,22 @@
           "$ref": "#/definitions/AccDimensionContainer_LON_"
         },
         "STCK": {
-          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
         "EUR_STCK": {
-          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
         "UDRN_AMNT": {
-          "$ref": "#/definitions/Measure_float__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_float_"
         },
         "ACCRLS": {
-          "$ref": "#/definitions/Measure_float__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_float_"
         },
         "ARRRS": {
-          "$ref": "#/definitions/Measure_float__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_float_"
         },
         "WRT_OFFS": {
-          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         }
       },
       "required": [
@@ -13277,19 +11713,19 @@
           "$ref": "#/definitions/RelFrqncyAccDimensionContainer_SHR__ORG_"
         },
         "QNTTY": {
-          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
         "SBSCRPTNS": {
-          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
         "SUB_CHRGS": {
-          "$ref": "#/definitions/Measure_float__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_float_"
         },
         "RDMPTNS": {
-          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
         "RED_CHRGS": {
-          "$ref": "#/definitions/Measure_float__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_float_"
         }
       },
       "required": [
@@ -13470,10 +11906,10 @@
           "$ref": "#/definitions/RevenueDimensionContainer"
         },
         "AMNT": {
-          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
         "EUR_AMNT": {
-          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         }
       },
       "required": [
@@ -13537,10 +11973,10 @@
           "$ref": "#/definitions/ExpenseDimensionContainer"
         },
         "AMNT": {
-          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
         "EUR_AMNT": {
-          "$ref": "#/definitions/Measure_NonNegativeFloat__GenericStatusConfAttr_AttrObsrvtnSttsEnum__AttrCnfdntltySttsEnum__"
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         }
       },
       "required": [
