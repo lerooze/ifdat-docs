@@ -75,29 +75,23 @@ MERGED WITH (MRGD_WTH)
 """""""""""
 Στοιχεία από διαχειρίστρια εταιρεία
 
-#. Αρχική υποβολή στις 2/1/2023 ( :download:`SI_FUND_MFMC_S0 </_files/SI_FUND_MFMC_S0.xlsx>`, :download:`SI_FUND_MFMC_S0 </_files/SI_FUND_MFMC_S0.json>` ).
+#. Αρχική υποβολή στις 2/1/2023 
 
 #. Χειρισμός συγχώνευσης με υποβολή στις 2/4/2023 
-   .. ( :download:`SI_FUND_MFMC_S1 </_files/SI_FUND_MFMC_S1.xlsx>`, :download:`SI_FUND_MFMC_S1 </_files/SI_FUND_MFMC_S1.json>` ).
 
 #. Χειρισμός διόρθωσης της ημερομηνίας σύστασης με υποβολή στις 2/5/2023 
-   .. ( :download:`SI_FUND_MFMC_S2 </_files/SI_FUND_MFMC_S2.xlsx>`, :download:`SI_FUND_MFMC_S2 </_files/SI_FUND_MFMC_S2.json>` ).
 
 #. Χειρισμός προσθήκης ΠΜ με υποβολή στις 2/6/2023 
-   .. ( :download:`SI_FUND_MFMC_S3 </_files/SI_FUND_MFMC_S3.xlsx>`, :download:`SI_FUND_MFMC_S3 </_files/SI_FUND_MFMC_S3.json>` ).
 
 ΠΕΡΙΠΤΩΣΗ 2 
 """""""""""
 Στοιχεία από ΜΠΣ που αποτελεί ΠΜ.
 
 #. Αρχική υποβολή στις 2/1/2023 
-   .. ( :download:`SI_FUND_OA_S0 </_files/SI_FUND_OA_S0.xlsx>`, :download:`SI_FUND_OA_S0 </_files/SI_FUND_OA_S0.json>` ).
 
 #. Χειρισμός διόρθωσης της ημερομηνίας σύσταστης με υποβολή στις 2/4/2023 
-   .. ( :download:`SI_FUND_OA_S1 </_files/SI_FUND_OA_S1.xlsx>`, :download:`SI_FUND_OA_S1 </_files/SI_FUND_OA_S1.json>` ).
 
 #. Χειρισμός συγχώνευσης με υποβολή στις 2/5/2023 
-   .. ( :download:`SI_FUND_OA_S2 </_files/SI_FUND_OA_S2.xlsx>`, :download:`SI_FUND_OA_S2 </_files/SI_FUND_OA_S2.json>` ).
 
 STATIC_FUND
 -----------
@@ -238,32 +232,24 @@ ACCOUNTS CURRENCY (ACCNTS_CRRNCY)
 Στοιχεία από διαχειρίστρια εταιρεία
 
 #. Αρχική υποβολή στις 2/1/2023 
-   .. ( :download:`SI_STATIC_FUND_MFMC_S0 </_files/SI_STATIC_FUND_MFMC_S0.xlsx>`, :download:`SI_STATIC_FUND_MFMC_S0 </_files/SI_STATIC_FUND_MFMC_S0.json>` ).
 
 #. Χειρισμός αλλαγής ονομασίας και αλλαγής email με υποβολή στις 2/4/2023 
-   .. ( :download:`SI_STATIC_FUND_MFMC_S1 </_files/SI_STATIC_FUND_MFMC_S1.xlsx>`, :download:`SI_STATIC_FUND_MFMC_S1 </_files/SI_STATIC_FUND_MFMC_S1.json>` ).
 
 #. Χειρισμός διόρθωσης της ονομασίας με υποβολή στις 2/5/2023 
-   .. ( :download:`SI_STATIC_FUND_MFMC_S2 </_files/SI_STATIC_FUND_MFMC_S2.xlsx>`, :download:`SI_STATIC_FUND_MFMC_S2 </_files/SI_STATIC_FUND_MFMC_S2.json>` ).
 
 #. Χειρισμός προσθήκης ΠΜ με υποβολή στις 2/6/2023 
-   .. ( :download:`SI_STATIC_FUND_MFMC_S3 </_files/SI_STATIC_FUND_MFMC_S3.xlsx>`, :download:`SI_STATIC_FUND_MFMC_S3 </_files/SI_STATIC_FUND_MFMC_S3.json>` ).
 
 #. Χειρισμός αλλαγής διαχειρίστριας εταιρείας με υποβολή στις 2/7/2023 
-   .. ( :download:`SI_STATIC_FUND_MFMC_S4 </_files/SI_STATIC_FUND_MFMC_S4.xlsx>`, :download:`SI_STATIC_FUND_MFMC_S4 </_files/SI_STATIC_FUND_MFMC_S4.json>` ).
 
 ΠΕΡΙΠΤΩΣΗ 2 
 """""""""""
 Στοιχεία από ΜΠΣ που αποτελεί ΠΜ.
 
 #. Αρχική υποβολή στις 2/1/2023 
-   .. ( :download:`SI_STATIC_FUND_OA_S0 </_files/SI_STATIC_FUND_OA_S0.xlsx>`, :download:`SI_STATIC_FUND_OA_S0 </_files/SI_STATIC_FUND_OA_S0.json>` ).
 
 #. Χειρισμός αλλαγής ονομασίας και διεύθυνσης με υποβολή στις 2/4/2023 
-   .. ( :download:`SI_STATIC_FUND_OA_S1 </_files/SI_STATIC_FUND_OA_S1.xlsx>`, :download:`SI_STATIC_FUND_OA_S1 </_files/SI_STATIC_FUND_OA_S1.json>` ).
 
 #. Χειρισμός διόρθωσης της ονομασίας με υποβολή στις 2/5/2023 
-   .. ( :download:`SI_STATIC_FUND_OA_S2 </_files/SI_STATIC_FUND_OA_S2.xlsx>`, :download:`SI_STATIC_FUND_OA_S2 </_files/SI_STATIC_FUND_OA_S2.json>` ).
 
 
 DEBT
@@ -391,13 +377,10 @@ ALIAS OF (ALS_OF)
 Στοιχεία από ΜΠΣ που αποτελεί ΠΜ.
 
 #. Αρχική υποβολή στις 2/1/2023 
-   .. ( :download:`SI_DEBT_OA_S0 </_files/SI_DEBT_OA_S0.xlsx>`, :download:`SI_DEBT_OA_S0 </_files/SI_DEBT_OA_S0.json>` ).
 
 #. Χειρισμός διόρθωσης με υποβολή στις 2/4/2023 
-   .. ( :download:`SI_DEBT_OA_S1 </_files/SI_DEBT_OA_S1.xlsx>`, :download:`SI_DEBT_OA_S1 </_files/SI_DEBT_OA_S1.json>` ).
 
 #. Χειρισμός νέου τίτλου που δημιουργήθηκε από μετατροπή δανείου σε ομόλογο με υποβολή στις 2/4/2023 
-   .. ( :download:`SI_DEBT_OA_S1 </_files/SI_DEBT_OA_S1.xlsx>`, :download:`SI_DEBT_OA_S1 </_files/SI_DEBT_OA_S1.json>` ).
 
 
 STATIC_DEBT

@@ -23,7 +23,7 @@ IFDAT-DOCS
 
 Στο κεφάλαιο :doc:`categories` περιγράφονται αναλυτικά οι έξι κατηγορίες δεδομένων που περιέχει το **IFDat**.
 
-Στο κεφάλαιο :doc:`examples` δίνονται συγκεκριμένα παραδείγματα υποβολών δεδομένων.
+.. Στο κεφάλαιο :doc:`examples` δίνονται συγκεκριμένα παραδείγματα υποβολών δεδομένων.
 
 Στο κεφάλαιο :doc:`data validation <validation>` περιγράφεται ο τρόπος επικύρωσης των εισερχόμενων αρχείων.
 
@@ -45,7 +45,6 @@ IFDAT-DOCS
    generic
    categories
    examples
-   .. validation
    identifiers
    ras
    whatsnew
@@ -54,5 +53,4 @@ IFDAT-DOCS
 .. toctree::
    :hidden:
 
-   .. glossary
    license
