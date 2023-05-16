@@ -12,6 +12,15 @@ What's new?
 .. ============
 
 
+v0.5.0 (2023-05-16)
+-------------------
+
+* Reorganize categories
+* Drop other_key category
+* Introduce examples per table
+* Drop not needed variables
+* Drop all other static tables
+  
 v0.4.3 (2023-05-11)
 -------------------
 

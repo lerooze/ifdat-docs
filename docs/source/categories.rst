@@ -4,17 +4,15 @@
 +------------------------------------------------+
 | Κατηγορία                                      |
 +================================================+
-| :doc:`SELF_INFO (SI) <categories/self_info>`   |
+| :doc:`SELF <categories/self>`             |
 +------------------------------------------------+
-| :doc:`SELF_KEY (SK) <categories/self_key>`     |
+| :doc:`EVENT <categories/self_key>`        |
 +------------------------------------------------+
-| :doc:`OTHER_INFO (OI) <categories/other_info>` |
+| :doc:`OTHER <categories/other_info>` |
 +------------------------------------------------+
-| :doc:`OTHER_KEY (OK) <categories/other_key>`   |
+| :doc:`BSI <categories/bsi>`              |
 +------------------------------------------------+
-| :doc:`BSI (BSI) <categories/bsi>`              |
-+------------------------------------------------+
-|  :doc:`INCOME (INC) <categories/income>`       |
+|  :doc:`INCOME <categories/income>`       |
 +------------------------------------------------+
 
 Για κάθε από τις έξι κατηγορίες δεδομένων του ``IFDat`` ο παραπάνω πίνακας
@@ -38,9 +36,8 @@
 .. toctree::
    :hidden:
 
-   categories/self_info
-   categories/self_key
-   categories/other_info
-   categories/other_key
+   categories/self
+   categories/event
+   categories/other
    categories/bsi
    categories/income

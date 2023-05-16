@@ -9,16 +9,18 @@
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
-#
-# import os
-# import sys
-# sys.path.insert(0, os.path.abspath('.'))
+
+import os
+import sys
+
+sys.path.append(os.path.abspath("ext"))
+sys.path.append(".")
 
 
 # -- Project information -----------------------------------------------------
 
 project = "IFDat-Docs"
-author = 'Antonis Loumiotis'
+author = "Antonis Loumiotis"
 copyright = "2022–2023 ifdat-docs developers"
 
 # # The full version, including alpha/beta/rc tags
@@ -31,6 +33,7 @@ copyright = "2022–2023 ifdat-docs developers"
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
+    "xref",
     "sphinx.ext.autodoc",
     "sphinx.ext.autosummary",
     "sphinx.ext.extlinks",
@@ -40,8 +43,11 @@ extensions = [
     "sphinx.ext.viewcode",
     "IPython.sphinxext.ipython_console_highlighting",
     "IPython.sphinxext.ipython_directive",
-    "docxsphinx"
+    "docxsphinx",
 ]
+
+from links.link import *
+from links import *
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ["_templates"]

@@ -660,45 +660,6 @@
         "VALUE"
       ]
     },
-    "VltnCstmFrqncyEnum": {
-      "title": "VltnCstmFrqncyEnum",
-      "description": "An enumeration.",
-      "enum": [
-        "-",
-        "AN",
-        "SA",
-        "QA",
-        "MO",
-        "BD"
-      ],
-      "type": "string"
-    },
-    "BaseMeasure_VltnCstmFrqncyEnum_": {
-      "title": "BaseMeasure[VltnCstmFrqncyEnum]",
-      "type": "object",
-      "properties": {
-        "VALUE": {
-          "$ref": "#/definitions/VltnCstmFrqncyEnum"
-        }
-      },
-      "required": [
-        "VALUE"
-      ]
-    },
-    "BaseMeasure_PositiveInt_": {
-      "title": "BaseMeasure[PositiveInt]",
-      "type": "object",
-      "properties": {
-        "VALUE": {
-          "title": "Value",
-          "exclusiveMinimum": 0,
-          "type": "integer"
-        }
-      },
-      "required": [
-        "VALUE"
-      ]
-    },
     "StaticFundSeries": {
       "title": "StaticFundSeries",
       "type": "object",
@@ -798,18 +759,10 @@
         },
         "ACCNTS_CRRNCY": {
           "$ref": "#/definitions/BaseMeasure_GenCrrncyEnum_"
-        },
-        "VLTN_FRQNCY": {
-          "$ref": "#/definitions/BaseMeasure_VltnCstmFrqncyEnum_"
-        },
-        "VLTN_DDLN": {
-          "$ref": "#/definitions/BaseMeasure_PositiveInt_"
         }
       },
       "required": [
-        "DIMS",
-        "VLTN_FRQNCY",
-        "VLTN_DDLN"
+        "DIMS"
       ]
     },
     "DimensionContainer_DBT_": {
@@ -825,20 +778,6 @@
       },
       "required": [
         "ID"
-      ]
-    },
-    "BaseMeasure_Ascii12_": {
-      "title": "BaseMeasure[Ascii12]",
-      "type": "object",
-      "properties": {
-        "VALUE": {
-          "title": "Value",
-          "maxLength": 12,
-          "type": "string"
-        }
-      },
-      "required": [
-        "VALUE"
       ]
     },
     "BaseMeasure_NonNegativeFloat_": {
@@ -3682,7 +3621,7 @@
         "VALUE"
       ]
     },
-    "journey__structure__ifdat__self_info__DebtSeries": {
+    "DebtSeries": {
       "title": "DebtSeries",
       "type": "object",
       "properties": {
@@ -3697,12 +3636,6 @@
         },
         "ORGNL_MTRTY": {
           "$ref": "#/definitions/BaseMeasure_date_"
-        },
-        "ISIN_ID": {
-          "$ref": "#/definitions/BaseMeasure_Ascii32_"
-        },
-        "INTRNL_ID": {
-          "$ref": "#/definitions/BaseMeasure_Ascii12_"
         },
         "CRRNCY": {
           "$ref": "#/definitions/BaseMeasure_GenCrrncyEnum_"
@@ -3788,7 +3721,7 @@
         "RSTRCTRD_FRM": {
           "$ref": "#/definitions/BaseMeasure_LON_"
         },
-        "DDPLCT_OF": {
+        "ALS_OF": {
           "$ref": "#/definitions/BaseMeasure_DBT_"
         }
       },
@@ -3894,6 +3827,20 @@
         "ID"
       ]
     },
+    "BaseMeasure_Ascii12_": {
+      "title": "BaseMeasure[Ascii12]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "title": "Value",
+          "maxLength": 12,
+          "type": "string"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
     "BaseMeasure_SHR_": {
       "title": "BaseMeasure[SHR]",
       "type": "object",
@@ -3909,7 +3856,7 @@
         "VALUE"
       ]
     },
-    "journey__structure__ifdat__self_info__ShareSeries": {
+    "journey__structure__ifdat__self__ShareSeries": {
       "title": "ShareSeries",
       "type": "object",
       "properties": {
@@ -3937,7 +3884,7 @@
         "RSTRCTRD_T": {
           "$ref": "#/definitions/BaseMeasure_SHR_"
         },
-        "DDPLCT_OF": {
+        "ALS_OF": {
           "$ref": "#/definitions/BaseMeasure_SHR_"
         }
       },
@@ -4002,7 +3949,35 @@
         "VALUE"
       ]
     },
-    "journey__structure__ifdat__self_info__StaticShareSeries": {
+    "ShrPrmryClssEnum": {
+      "title": "ShrPrmryClssEnum",
+      "description": "An enumeration.",
+      "enum": [
+        "-",
+        "E.1",
+        "E.2",
+        "E.3",
+        "E.4",
+        "E.9",
+        "F.1",
+        "F.2",
+        "F.9"
+      ],
+      "type": "string"
+    },
+    "BaseMeasure_ShrPrmryClssEnum_": {
+      "title": "BaseMeasure[ShrPrmryClssEnum]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "$ref": "#/definitions/ShrPrmryClssEnum"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "StaticShareSeries": {
       "title": "StaticShareSeries",
       "type": "object",
       "properties": {
@@ -4029,6 +4004,9 @@
         },
         "MNMM_AMNT": {
           "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
+        },
+        "PRMRY_CLSS": {
+          "$ref": "#/definitions/BaseMeasure_ShrPrmryClssEnum_"
         }
       },
       "required": [
@@ -4341,13 +4319,7 @@
         "FRST": {
           "$ref": "#/definitions/BaseMeasure_Str32_"
         },
-        "FRST_SLTTN": {
-          "$ref": "#/definitions/BaseMeasure_Str32_"
-        },
         "LST": {
-          "$ref": "#/definitions/BaseMeasure_Str32_"
-        },
-        "LST_SLTTN": {
           "$ref": "#/definitions/BaseMeasure_Str32_"
         },
         "PHN": {
@@ -4443,7 +4415,7 @@
         "DIMS"
       ]
     },
-    "journey__structure__ifdat__self_info__Datasets": {
+    "journey__structure__ifdat__self__Datasets": {
       "title": "Datasets",
       "type": "object",
       "properties": {
@@ -4465,7 +4437,7 @@
           "title": "Debt",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/journey__structure__ifdat__self_info__DebtSeries"
+            "$ref": "#/definitions/DebtSeries"
           }
         },
         "STATIC_DEBT": {
@@ -4479,14 +4451,14 @@
           "title": "Share",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/journey__structure__ifdat__self_info__ShareSeries"
+            "$ref": "#/definitions/journey__structure__ifdat__self__ShareSeries"
           }
         },
         "STATIC_SHARE": {
           "title": "Static Share",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/journey__structure__ifdat__self_info__StaticShareSeries"
+            "$ref": "#/definitions/StaticShareSeries"
           }
         },
         "MANAGEMENT": {
@@ -4555,30 +4527,6 @@
         "DT"
       ]
     },
-    "journey__structure__ifdat__self_key__DebtSeries": {
-      "title": "DebtSeries",
-      "type": "object",
-      "properties": {
-        "DIMS": {
-          "$ref": "#/definitions/DtDimensionContainer_DBT_"
-        },
-        "PRC": {
-          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
-        },
-        "ACCRD_INTRST": {
-          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
-        },
-        "OTSTNDNG": {
-          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
-        }
-      },
-      "required": [
-        "DIMS",
-        "PRC",
-        "ACCRD_INTRST",
-        "OTSTNDNG"
-      ]
-    },
     "TrancheSeries": {
       "title": "TrancheSeries",
       "type": "object",
@@ -4624,7 +4572,7 @@
         "VALUE"
       ]
     },
-    "journey__structure__ifdat__self_key__CouponSeries": {
+    "CouponSeries": {
       "title": "CouponSeries",
       "type": "object",
       "properties": {
@@ -4638,101 +4586,6 @@
       "required": [
         "DIMS",
         "RT"
-      ]
-    },
-    "GenFrqncyEnum": {
-      "title": "GenFrqncyEnum",
-      "description": "An enumeration.",
-      "enum": [
-        "-",
-        "A",
-        "B",
-        "D",
-        "H",
-        "M",
-        "N",
-        "Q",
-        "S",
-        "W",
-        "A2",
-        "A3",
-        "A4",
-        "A5",
-        "A10",
-        "A20",
-        "A30",
-        "A_3",
-        "M2",
-        "M_2",
-        "M_3",
-        "W2",
-        "W3",
-        "W4",
-        "W_2",
-        "W_3",
-        "D_2",
-        "H2",
-        "H3",
-        "I",
-        "OA",
-        "OM",
-        "_O",
-        "_U",
-        "_Z"
-      ],
-      "type": "string"
-    },
-    "FreqDimensionContainer_SHR_": {
-      "title": "FreqDimensionContainer[SHR]",
-      "type": "object",
-      "properties": {
-        "ID": {
-          "title": "Id",
-          "maxLength": 32,
-          "pattern": "^[IP][a-zA-z0-9_]+",
-          "type": "string"
-        },
-        "DT": {
-          "title": "Dt",
-          "type": "string",
-          "format": "date"
-        },
-        "FRQNCY": {
-          "$ref": "#/definitions/GenFrqncyEnum"
-        }
-      },
-      "required": [
-        "ID",
-        "DT",
-        "FRQNCY"
-      ]
-    },
-    "journey__structure__ifdat__self_key__ShareSeries": {
-      "title": "ShareSeries",
-      "type": "object",
-      "properties": {
-        "DIMS": {
-          "$ref": "#/definitions/FreqDimensionContainer_SHR_"
-        },
-        "PRC": {
-          "$ref": "#/definitions/BaseMeasure_float_"
-        },
-        "OTSTNDNG": {
-          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
-        },
-        "SBSCRPTNS": {
-          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
-        },
-        "RDMPTNS": {
-          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
-        }
-      },
-      "required": [
-        "DIMS",
-        "PRC",
-        "OTSTNDNG",
-        "SBSCRPTNS",
-        "RDMPTNS"
       ]
     },
     "DtDimensionContainer_SHR_": {
@@ -4831,7 +4684,7 @@
         "VALUE"
       ]
     },
-    "journey__structure__ifdat__self_key__DividendSeries": {
+    "DividendSeries": {
       "title": "DividendSeries",
       "type": "object",
       "properties": {
@@ -4871,7 +4724,7 @@
         "AMNT"
       ]
     },
-    "journey__structure__ifdat__self_key__SplitSeries": {
+    "SplitSeries": {
       "title": "SplitSeries",
       "type": "object",
       "properties": {
@@ -4887,17 +4740,10 @@
         "FCTR"
       ]
     },
-    "journey__structure__ifdat__self_key__Datasets": {
+    "journey__structure__ifdat__event__Datasets": {
       "title": "Datasets",
       "type": "object",
       "properties": {
-        "DEBT": {
-          "title": "Debt",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/journey__structure__ifdat__self_key__DebtSeries"
-          }
-        },
         "TRANCHE": {
           "title": "Tranche",
           "type": "array",
@@ -4916,312 +4762,25 @@
           "title": "Coupon",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/journey__structure__ifdat__self_key__CouponSeries"
-          }
-        },
-        "SHARE": {
-          "title": "Share",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/journey__structure__ifdat__self_key__ShareSeries"
+            "$ref": "#/definitions/CouponSeries"
           }
         },
         "DIV": {
           "title": "Div",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/journey__structure__ifdat__self_key__DividendSeries"
+            "$ref": "#/definitions/DividendSeries"
           }
         },
         "SPLIT": {
           "title": "Split",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/journey__structure__ifdat__self_key__SplitSeries"
+            "$ref": "#/definitions/SplitSeries"
           }
         }
       },
       "additionalProperties": false
-    },
-    "OrgIntrntnlOrgnstnCdEnum": {
-      "title": "OrgIntrntnlOrgnstnCdEnum",
-      "description": "An enumeration.",
-      "enum": [
-        "-",
-        "1C",
-        "1D",
-        "1E",
-        "1F",
-        "1G",
-        "1H",
-        "1J",
-        "1K",
-        "1L",
-        "1M",
-        "1N",
-        "1O",
-        "1P",
-        "1Q",
-        "1R",
-        "1S",
-        "1T",
-        "1U",
-        "1U1",
-        "1V",
-        "4B",
-        "4C",
-        "4D",
-        "4E",
-        "4F",
-        "4G",
-        "4H",
-        "4I",
-        "4J1",
-        "4J2",
-        "4J3",
-        "4J4",
-        "4J5",
-        "4J6",
-        "4J7",
-        "4J81",
-        "4J810",
-        "4J811",
-        "4J812",
-        "4J813",
-        "4J814",
-        "4J815",
-        "4J816",
-        "4J817",
-        "4J818",
-        "4J819",
-        "4J82",
-        "4J820",
-        "4J821",
-        "4J822",
-        "4J823",
-        "4J824",
-        "4J825",
-        "4J826",
-        "4J827",
-        "4J828",
-        "4J829",
-        "4J83",
-        "4J830",
-        "4J831",
-        "4J832",
-        "4J833",
-        "4J834",
-        "4J835",
-        "4J836",
-        "4J837",
-        "4J838",
-        "4J839",
-        "4J84",
-        "4J840",
-        "4J841",
-        "4J842",
-        "4J85",
-        "4J86",
-        "4J87",
-        "4J88",
-        "4J89",
-        "4M",
-        "4R",
-        "4S",
-        "4T",
-        "4T1",
-        "4T2",
-        "4T3",
-        "4U",
-        "4V",
-        "5B",
-        "5C",
-        "5D",
-        "5E",
-        "5F",
-        "5G",
-        "5H",
-        "5I",
-        "5J",
-        "5K",
-        "5L",
-        "5M",
-        "5N",
-        "5O",
-        "5P",
-        "5Q",
-        "5R",
-        "5S",
-        "5T",
-        "5U",
-        "5W",
-        "5X",
-        "5Z1",
-        "5Z10",
-        "5Z11",
-        "5Z12",
-        "5Z13",
-        "5Z14",
-        "5Z15",
-        "5Z16",
-        "5Z17",
-        "5Z18",
-        "5Z19",
-        "5Z2",
-        "5Z20",
-        "5Z21",
-        "5Z22",
-        "5Z23",
-        "5Z24",
-        "5Z25",
-        "5Z26",
-        "5Z27",
-        "5Z28",
-        "5Z29",
-        "5Z3",
-        "5Z30",
-        "5Z31",
-        "5Z33",
-        "5Z34",
-        "5Z35",
-        "5Z36",
-        "5Z37",
-        "5Z38",
-        "5Z39",
-        "5Z4",
-        "5Z40",
-        "5Z41",
-        "5Z42",
-        "5Z43",
-        "5Z44",
-        "5Z5",
-        "5Z6",
-        "5Z7",
-        "5Z8",
-        "5Z9",
-        "6A1",
-        "6A2",
-        "6A3",
-        "6A4",
-        "6A5",
-        "6A6",
-        "6A7",
-        "6A8",
-        "6A9",
-        "6B",
-        "6C",
-        "6D",
-        "6E",
-        "6F",
-        "6G",
-        "6H",
-        "6I",
-        "6J",
-        "6K",
-        "6L",
-        "6M",
-        "6N",
-        "6O",
-        "6P",
-        "6Q",
-        "7A",
-        "7B",
-        "7C",
-        "7D",
-        "7E",
-        "7F",
-        "7G",
-        "7H",
-        "7I",
-        "7J",
-        "7K",
-        "7L",
-        "7M",
-        "7O"
-      ],
-      "type": "string"
-    },
-    "BaseMeasure_OrgIntrntnlOrgnstnCdEnum_": {
-      "title": "BaseMeasure[OrgIntrntnlOrgnstnCdEnum]",
-      "type": "object",
-      "properties": {
-        "VALUE": {
-          "$ref": "#/definitions/OrgIntrntnlOrgnstnCdEnum"
-        }
-      },
-      "required": [
-        "VALUE"
-      ]
-    },
-    "IssuerSeries": {
-      "title": "IssuerSeries",
-      "type": "object",
-      "properties": {
-        "DIMS": {
-          "$ref": "#/definitions/DimensionContainer_ORG_"
-        },
-        "DT_BRTH": {
-          "$ref": "#/definitions/BaseMeasure_date_"
-        },
-        "DT_CLS": {
-          "$ref": "#/definitions/BaseMeasure_date_"
-        },
-        "ESCB_ID": {
-          "$ref": "#/definitions/BaseMeasure_Ascii32_"
-        },
-        "LEI_ID": {
-          "$ref": "#/definitions/BaseMeasure_Ascii20_"
-        },
-        "TAX_ID": {
-          "$ref": "#/definitions/BaseMeasure_Ascii31_"
-        },
-        "NBR_ID": {
-          "$ref": "#/definitions/BaseMeasure_Ascii31_"
-        },
-        "INTRNL_ID": {
-          "$ref": "#/definitions/BaseMeasure_Ascii31_"
-        },
-        "INTRNL_ORGNSTN": {
-          "$ref": "#/definitions/BaseMeasure_OrgIntrntnlOrgnstnCdEnum_"
-        },
-        "SPLT_FRM": {
-          "$ref": "#/definitions/BaseMeasure_ORG_"
-        },
-        "MRGD_WTH": {
-          "$ref": "#/definitions/BaseMeasure_ORG_"
-        },
-        "DDPLCT_OF": {
-          "$ref": "#/definitions/BaseMeasure_ORG_"
-        }
-      },
-      "required": [
-        "DIMS"
-      ]
-    },
-    "OrgLglPrcdngSttsEnum": {
-      "title": "OrgLglPrcdngSttsEnum",
-      "description": "An enumeration.",
-      "enum": [
-        "-",
-        "0",
-        "1",
-        "2",
-        "3",
-        "4"
-      ],
-      "type": "string"
-    },
-    "BaseMeasure_OrgLglPrcdngSttsEnum_": {
-      "title": "BaseMeasure[OrgLglPrcdngSttsEnum]",
-      "type": "object",
-      "properties": {
-        "VALUE": {
-          "$ref": "#/definitions/OrgLglPrcdngSttsEnum"
-        }
-      },
-      "required": [
-        "VALUE"
-      ]
     },
     "OrgInstttnlSctrEnum": {
       "title": "OrgInstttnlSctrEnum",
@@ -5258,1008 +4817,18 @@
         "VALUE"
       ]
     },
-    "OrgEcnmcActvtyTypEnum": {
-      "title": "OrgEcnmcActvtyTypEnum",
-      "description": "An enumeration.",
-      "enum": [
-        "-",
-        "01",
-        "01_1",
-        "01_11",
-        "01_12",
-        "01_13",
-        "01_14",
-        "01_15",
-        "01_16",
-        "01_19",
-        "01_2",
-        "01_21",
-        "01_22",
-        "01_23",
-        "01_24",
-        "01_25",
-        "01_26",
-        "01_27",
-        "01_28",
-        "01_29",
-        "01_3",
-        "01_30",
-        "01_4",
-        "01_41",
-        "01_42",
-        "01_43",
-        "01_44",
-        "01_45",
-        "01_46",
-        "01_47",
-        "01_49",
-        "01_5",
-        "01_50",
-        "01_6",
-        "01_61",
-        "01_62",
-        "01_63",
-        "01_64",
-        "01_7",
-        "01_70",
-        "02",
-        "02_1",
-        "02_10",
-        "02_2",
-        "02_20",
-        "02_3",
-        "02_30",
-        "02_4",
-        "02_40",
-        "03",
-        "03_1",
-        "03_11",
-        "03_12",
-        "03_2",
-        "03_21",
-        "03_22",
-        "05",
-        "05_1",
-        "05_10",
-        "05_2",
-        "05_20",
-        "06",
-        "06_1",
-        "06_10",
-        "06_2",
-        "06_20",
-        "07",
-        "07_1",
-        "07_10",
-        "07_2",
-        "07_21",
-        "07_29",
-        "08",
-        "08_1",
-        "08_11",
-        "08_12",
-        "08_9",
-        "08_91",
-        "08_92",
-        "08_93",
-        "08_99",
-        "09",
-        "09_1",
-        "09_10",
-        "09_9",
-        "09_90",
-        "10",
-        "10_1",
-        "10_11",
-        "10_12",
-        "10_13",
-        "10_2",
-        "10_20",
-        "10_3",
-        "10_31",
-        "10_32",
-        "10_39",
-        "10_4",
-        "10_41",
-        "10_42",
-        "10_5",
-        "10_51",
-        "10_52",
-        "10_6",
-        "10_61",
-        "10_62",
-        "10_7",
-        "10_71",
-        "10_72",
-        "10_73",
-        "10_8",
-        "10_81",
-        "10_82",
-        "10_83",
-        "10_84",
-        "10_85",
-        "10_86",
-        "10_89",
-        "10_9",
-        "10_91",
-        "10_92",
-        "11",
-        "11_0",
-        "11_01",
-        "11_02",
-        "11_03",
-        "11_04",
-        "11_05",
-        "11_06",
-        "11_07",
-        "12",
-        "12_0",
-        "12_00",
-        "13",
-        "13_1",
-        "13_10",
-        "13_2",
-        "13_20",
-        "13_3",
-        "13_30",
-        "13_9",
-        "13_91",
-        "13_92",
-        "13_93",
-        "13_94",
-        "13_95",
-        "13_96",
-        "13_99",
-        "14",
-        "14_1",
-        "14_11",
-        "14_12",
-        "14_13",
-        "14_14",
-        "14_19",
-        "14_2",
-        "14_20",
-        "14_3",
-        "14_31",
-        "14_39",
-        "15",
-        "15_1",
-        "15_11",
-        "15_12",
-        "15_2",
-        "15_20",
-        "16",
-        "16_1",
-        "16_10",
-        "16_2",
-        "16_21",
-        "16_22",
-        "16_23",
-        "16_24",
-        "16_29",
-        "17",
-        "17_1",
-        "17_11",
-        "17_12",
-        "17_2",
-        "17_21",
-        "17_22",
-        "17_23",
-        "17_24",
-        "17_29",
-        "18",
-        "18_1",
-        "18_11",
-        "18_12",
-        "18_13",
-        "18_14",
-        "18_2",
-        "18_20",
-        "19",
-        "19_1",
-        "19_10",
-        "19_2",
-        "19_20",
-        "20",
-        "20_1",
-        "20_11",
-        "20_12",
-        "20_13",
-        "20_14",
-        "20_15",
-        "20_16",
-        "20_17",
-        "20_2",
-        "20_20",
-        "20_3",
-        "20_30",
-        "20_4",
-        "20_41",
-        "20_42",
-        "20_5",
-        "20_51",
-        "20_52",
-        "20_53",
-        "20_59",
-        "20_6",
-        "20_60",
-        "21",
-        "21_1",
-        "21_10",
-        "21_2",
-        "21_20",
-        "22",
-        "22_1",
-        "22_11",
-        "22_19",
-        "22_2",
-        "22_21",
-        "22_22",
-        "22_23",
-        "22_29",
-        "23",
-        "23_1",
-        "23_11",
-        "23_12",
-        "23_13",
-        "23_14",
-        "23_19",
-        "23_2",
-        "23_20",
-        "23_3",
-        "23_31",
-        "23_32",
-        "23_4",
-        "23_41",
-        "23_42",
-        "23_43",
-        "23_44",
-        "23_49",
-        "23_5",
-        "23_51",
-        "23_52",
-        "23_6",
-        "23_61",
-        "23_62",
-        "23_63",
-        "23_64",
-        "23_65",
-        "23_69",
-        "23_7",
-        "23_70",
-        "23_9",
-        "23_91",
-        "23_99",
-        "24",
-        "24_1",
-        "24_10",
-        "24_2",
-        "24_20",
-        "24_3",
-        "24_31",
-        "24_32",
-        "24_33",
-        "24_34",
-        "24_4",
-        "24_41",
-        "24_42",
-        "24_43",
-        "24_44",
-        "24_45",
-        "24_46",
-        "24_5",
-        "24_51",
-        "24_52",
-        "24_53",
-        "24_54",
-        "25",
-        "25_1",
-        "25_11",
-        "25_12",
-        "25_2",
-        "25_21",
-        "25_29",
-        "25_3",
-        "25_30",
-        "25_4",
-        "25_40",
-        "25_5",
-        "25_50",
-        "25_6",
-        "25_61",
-        "25_62",
-        "25_7",
-        "25_71",
-        "25_72",
-        "25_73",
-        "25_9",
-        "25_91",
-        "25_92",
-        "25_93",
-        "25_94",
-        "25_99",
-        "26",
-        "26_1",
-        "26_11",
-        "26_12",
-        "26_2",
-        "26_20",
-        "26_3",
-        "26_30",
-        "26_4",
-        "26_40",
-        "26_5",
-        "26_51",
-        "26_52",
-        "26_6",
-        "26_60",
-        "26_7",
-        "26_70",
-        "26_8",
-        "26_80",
-        "27",
-        "27_1",
-        "27_11",
-        "27_12",
-        "27_2",
-        "27_20",
-        "27_3",
-        "27_31",
-        "27_32",
-        "27_33",
-        "27_4",
-        "27_40",
-        "27_5",
-        "27_51",
-        "27_52",
-        "27_9",
-        "27_90",
-        "28",
-        "28_1",
-        "28_11",
-        "28_12",
-        "28_13",
-        "28_14",
-        "28_15",
-        "28_2",
-        "28_21",
-        "28_22",
-        "28_23",
-        "28_24",
-        "28_25",
-        "28_29",
-        "28_3",
-        "28_30",
-        "28_4",
-        "28_41",
-        "28_49",
-        "28_9",
-        "28_91",
-        "28_92",
-        "28_93",
-        "28_94",
-        "28_95",
-        "28_96",
-        "28_99",
-        "29",
-        "29_1",
-        "29_10",
-        "29_2",
-        "29_20",
-        "29_3",
-        "29_31",
-        "29_32",
-        "30",
-        "30_1",
-        "30_11",
-        "30_12",
-        "30_2",
-        "30_20",
-        "30_3",
-        "30_30",
-        "30_4",
-        "30_40",
-        "30_9",
-        "30_91",
-        "30_92",
-        "30_99",
-        "31",
-        "31_0",
-        "31_01",
-        "31_02",
-        "31_03",
-        "31_09",
-        "32",
-        "32_1",
-        "32_11",
-        "32_12",
-        "32_13",
-        "32_2",
-        "32_20",
-        "32_3",
-        "32_30",
-        "32_4",
-        "32_40",
-        "32_5",
-        "32_50",
-        "32_9",
-        "32_91",
-        "32_99",
-        "33",
-        "33_1",
-        "33_11",
-        "33_12",
-        "33_13",
-        "33_14",
-        "33_15",
-        "33_16",
-        "33_17",
-        "33_19",
-        "33_2",
-        "33_20",
-        "35",
-        "35_1",
-        "35_11",
-        "35_12",
-        "35_13",
-        "35_14",
-        "35_2",
-        "35_21",
-        "35_22",
-        "35_23",
-        "35_3",
-        "35_30",
-        "36",
-        "36_0",
-        "36_00",
-        "37",
-        "37_0",
-        "37_00",
-        "38",
-        "38_1",
-        "38_11",
-        "38_12",
-        "38_2",
-        "38_21",
-        "38_22",
-        "38_3",
-        "38_31",
-        "38_32",
-        "39",
-        "39_0",
-        "39_00",
-        "41",
-        "41_1",
-        "41_10",
-        "41_2",
-        "41_20",
-        "42",
-        "42_1",
-        "42_11",
-        "42_12",
-        "42_13",
-        "42_2",
-        "42_21",
-        "42_22",
-        "42_9",
-        "42_91",
-        "42_99",
-        "43",
-        "43_1",
-        "43_11",
-        "43_12",
-        "43_13",
-        "43_2",
-        "43_21",
-        "43_22",
-        "43_29",
-        "43_3",
-        "43_31",
-        "43_32",
-        "43_33",
-        "43_34",
-        "43_39",
-        "43_9",
-        "43_91",
-        "43_99",
-        "45",
-        "45_1",
-        "45_11",
-        "45_19",
-        "45_2",
-        "45_20",
-        "45_3",
-        "45_31",
-        "45_32",
-        "45_4",
-        "45_40",
-        "46",
-        "46_1",
-        "46_11",
-        "46_12",
-        "46_13",
-        "46_14",
-        "46_15",
-        "46_16",
-        "46_17",
-        "46_18",
-        "46_19",
-        "46_2",
-        "46_21",
-        "46_22",
-        "46_23",
-        "46_24",
-        "46_3",
-        "46_31",
-        "46_32",
-        "46_33",
-        "46_34",
-        "46_35",
-        "46_36",
-        "46_37",
-        "46_38",
-        "46_39",
-        "46_4",
-        "46_41",
-        "46_42",
-        "46_43",
-        "46_44",
-        "46_45",
-        "46_46",
-        "46_47",
-        "46_48",
-        "46_49",
-        "46_5",
-        "46_51",
-        "46_52",
-        "46_6",
-        "46_61",
-        "46_62",
-        "46_63",
-        "46_64",
-        "46_65",
-        "46_66",
-        "46_69",
-        "46_7",
-        "46_71",
-        "46_72",
-        "46_73",
-        "46_74",
-        "46_75",
-        "46_76",
-        "46_77",
-        "46_9",
-        "46_90",
-        "47",
-        "47_1",
-        "47_11",
-        "47_19",
-        "47_2",
-        "47_21",
-        "47_22",
-        "47_23",
-        "47_24",
-        "47_25",
-        "47_26",
-        "47_29",
-        "47_3",
-        "47_30",
-        "47_4",
-        "47_41",
-        "47_42",
-        "47_43",
-        "47_5",
-        "47_51",
-        "47_52",
-        "47_53",
-        "47_54",
-        "47_59",
-        "47_6",
-        "47_61",
-        "47_62",
-        "47_63",
-        "47_64",
-        "47_65",
-        "47_7",
-        "47_71",
-        "47_72",
-        "47_73",
-        "47_74",
-        "47_75",
-        "47_76",
-        "47_77",
-        "47_78",
-        "47_79",
-        "47_8",
-        "47_81",
-        "47_82",
-        "47_89",
-        "47_9",
-        "47_91",
-        "47_99",
-        "49",
-        "49_1",
-        "49_10",
-        "49_2",
-        "49_20",
-        "49_3",
-        "49_31",
-        "49_32",
-        "49_39",
-        "49_4",
-        "49_41",
-        "49_42",
-        "49_5",
-        "49_50",
-        "50",
-        "50_1",
-        "50_10",
-        "50_2",
-        "50_20",
-        "50_3",
-        "50_30",
-        "50_4",
-        "50_40",
-        "51",
-        "51_1",
-        "51_10",
-        "51_2",
-        "51_21",
-        "51_22",
-        "52",
-        "52_1",
-        "52_10",
-        "52_2",
-        "52_21",
-        "52_22",
-        "52_23",
-        "52_24",
-        "52_29",
-        "53",
-        "53_1",
-        "53_10",
-        "53_2",
-        "53_20",
-        "55",
-        "55_1",
-        "55_10",
-        "55_2",
-        "55_20",
-        "55_3",
-        "55_30",
-        "55_9",
-        "55_90",
-        "56",
-        "56_1",
-        "56_10",
-        "56_2",
-        "56_21",
-        "56_29",
-        "56_3",
-        "56_30",
-        "58",
-        "58_1",
-        "58_11",
-        "58_12",
-        "58_13",
-        "58_14",
-        "58_19",
-        "58_2",
-        "58_21",
-        "58_29",
-        "59",
-        "59_1",
-        "59_11",
-        "59_12",
-        "59_13",
-        "59_14",
-        "59_2",
-        "59_20",
-        "60",
-        "60_1",
-        "60_10",
-        "60_2",
-        "60_20",
-        "61",
-        "61_1",
-        "61_10",
-        "61_2",
-        "61_20",
-        "61_3",
-        "61_30",
-        "61_9",
-        "61_90",
-        "62",
-        "62_0",
-        "62_01",
-        "62_02",
-        "62_03",
-        "62_09",
-        "63",
-        "63_1",
-        "63_11",
-        "63_12",
-        "63_9",
-        "63_91",
-        "63_99",
-        "64",
-        "64_1",
-        "64_11",
-        "64_19",
-        "64_2",
-        "64_20",
-        "64_3",
-        "64_30",
-        "64_9",
-        "64_91",
-        "64_92",
-        "64_99",
-        "65",
-        "65_1",
-        "65_11",
-        "65_12",
-        "65_2",
-        "65_20",
-        "65_3",
-        "65_30",
-        "66",
-        "66_1",
-        "66_11",
-        "66_12",
-        "66_19",
-        "66_2",
-        "66_21",
-        "66_22",
-        "66_29",
-        "66_3",
-        "66_30",
-        "68",
-        "68_1",
-        "68_10",
-        "68_2",
-        "68_20",
-        "68_3",
-        "68_31",
-        "68_32",
-        "69",
-        "69_1",
-        "69_10",
-        "69_2",
-        "69_20",
-        "70",
-        "70_1",
-        "70_10",
-        "70_2",
-        "70_21",
-        "70_22",
-        "71",
-        "71_1",
-        "71_11",
-        "71_12",
-        "71_2",
-        "71_20",
-        "72",
-        "72_1",
-        "72_11",
-        "72_19",
-        "72_2",
-        "72_20",
-        "73",
-        "73_1",
-        "73_11",
-        "73_12",
-        "73_2",
-        "73_20",
-        "74",
-        "74_1",
-        "74_10",
-        "74_2",
-        "74_20",
-        "74_3",
-        "74_30",
-        "74_9",
-        "74_90",
-        "75",
-        "75_0",
-        "75_00",
-        "77",
-        "77_1",
-        "77_11",
-        "77_12",
-        "77_2",
-        "77_21",
-        "77_22",
-        "77_29",
-        "77_3",
-        "77_31",
-        "77_32",
-        "77_33",
-        "77_34",
-        "77_35",
-        "77_39",
-        "77_4",
-        "77_40",
-        "78",
-        "78_1",
-        "78_10",
-        "78_2",
-        "78_20",
-        "78_3",
-        "78_30",
-        "79",
-        "79_1",
-        "79_11",
-        "79_12",
-        "79_9",
-        "79_90",
-        "80",
-        "80_1",
-        "80_10",
-        "80_2",
-        "80_20",
-        "80_3",
-        "80_30",
-        "81",
-        "81_1",
-        "81_10",
-        "81_2",
-        "81_21",
-        "81_22",
-        "81_29",
-        "81_3",
-        "81_30",
-        "82",
-        "82_1",
-        "82_11",
-        "82_19",
-        "82_2",
-        "82_20",
-        "82_3",
-        "82_30",
-        "82_9",
-        "82_91",
-        "82_92",
-        "82_99",
-        "84",
-        "84_1",
-        "84_11",
-        "84_12",
-        "84_13",
-        "84_2",
-        "84_21",
-        "84_22",
-        "84_23",
-        "84_24",
-        "84_25",
-        "84_3",
-        "84_30",
-        "85",
-        "85_1",
-        "85_10",
-        "85_2",
-        "85_20",
-        "85_3",
-        "85_31",
-        "85_32",
-        "85_4",
-        "85_41",
-        "85_42",
-        "85_5",
-        "85_51",
-        "85_52",
-        "85_53",
-        "85_59",
-        "85_6",
-        "85_60",
-        "86",
-        "86_1",
-        "86_10",
-        "86_2",
-        "86_21",
-        "86_22",
-        "86_23",
-        "86_9",
-        "86_90",
-        "87",
-        "87_1",
-        "87_10",
-        "87_2",
-        "87_20",
-        "87_3",
-        "87_30",
-        "87_9",
-        "87_90",
-        "88",
-        "88_1",
-        "88_10",
-        "88_9",
-        "88_91",
-        "88_99",
-        "90",
-        "90_0",
-        "90_01",
-        "90_02",
-        "90_03",
-        "90_04",
-        "91",
-        "91_0",
-        "91_01",
-        "91_02",
-        "91_03",
-        "91_04",
-        "92",
-        "92_0",
-        "92_00",
-        "93",
-        "93_1",
-        "93_11",
-        "93_12",
-        "93_13",
-        "93_19",
-        "93_2",
-        "93_21",
-        "93_29",
-        "94",
-        "94_1",
-        "94_11",
-        "94_12",
-        "94_2",
-        "94_20",
-        "94_9",
-        "94_91",
-        "94_92",
-        "94_99",
-        "95",
-        "95_1",
-        "95_11",
-        "95_12",
-        "95_2",
-        "95_21",
-        "95_22",
-        "95_23",
-        "95_24",
-        "95_25",
-        "95_29",
-        "96",
-        "96_0",
-        "96_01",
-        "96_02",
-        "96_03",
-        "96_04",
-        "96_09",
-        "97",
-        "97_0",
-        "97_00",
-        "98",
-        "98_1",
-        "98_10",
-        "98_2",
-        "98_20",
-        "99",
-        "-99",
-        "99_0",
-        "99_00"
-      ],
-      "type": "string"
-    },
-    "BaseMeasure_OrgEcnmcActvtyTypEnum_": {
-      "title": "BaseMeasure[OrgEcnmcActvtyTypEnum]",
-      "type": "object",
-      "properties": {
-        "VALUE": {
-          "$ref": "#/definitions/OrgEcnmcActvtyTypEnum"
-        }
-      },
-      "required": [
-        "VALUE"
-      ]
-    },
-    "StaticIssuerSeries": {
-      "title": "StaticIssuerSeries",
+    "IssuerSeries": {
+      "title": "IssuerSeries",
       "type": "object",
       "properties": {
         "DIMS": {
-          "$ref": "#/definitions/StaticDimensionContainer_ORG_"
+          "$ref": "#/definitions/DimensionContainer_ORG_"
+        },
+        "DT_BRTH": {
+          "$ref": "#/definitions/BaseMeasure_date_"
+        },
+        "DT_CLS": {
+          "$ref": "#/definitions/BaseMeasure_date_"
         },
         "NM": {
           "$ref": "#/definitions/BaseMeasure_Str128_"
@@ -6267,21 +4836,18 @@
         "CNTRY_RSDNC": {
           "$ref": "#/definitions/BaseMeasure_GenCntryEnum_"
         },
-        "LGL_PRCDNG_STTS": {
-          "$ref": "#/definitions/BaseMeasure_OrgLglPrcdngSttsEnum_"
-        },
         "INSTTTNL_SCTR": {
           "$ref": "#/definitions/BaseMeasure_OrgInstttnlSctrEnum_"
         },
-        "ECNMC_ACTVTY": {
-          "$ref": "#/definitions/BaseMeasure_OrgEcnmcActvtyTypEnum_"
+        "ALS_OF": {
+          "$ref": "#/definitions/BaseMeasure_ORG_"
         }
       },
       "required": [
         "DIMS"
       ]
     },
-    "journey__structure__ifdat__other_info__HolderSeries": {
+    "journey__structure__ifdat__other__HolderSeries": {
       "title": "HolderSeries",
       "type": "object",
       "properties": {
@@ -6294,45 +4860,6 @@
         "DT_CLS": {
           "$ref": "#/definitions/BaseMeasure_date_"
         },
-        "ESCB_ID": {
-          "$ref": "#/definitions/BaseMeasure_Ascii32_"
-        },
-        "LEI_ID": {
-          "$ref": "#/definitions/BaseMeasure_Ascii20_"
-        },
-        "TAX_ID": {
-          "$ref": "#/definitions/BaseMeasure_Ascii31_"
-        },
-        "NBR_ID": {
-          "$ref": "#/definitions/BaseMeasure_Ascii31_"
-        },
-        "INTRNL_ID": {
-          "$ref": "#/definitions/BaseMeasure_Ascii31_"
-        },
-        "INTRNL_ORGNSTN": {
-          "$ref": "#/definitions/BaseMeasure_OrgIntrntnlOrgnstnCdEnum_"
-        },
-        "SPLT_FRM": {
-          "$ref": "#/definitions/BaseMeasure_ORG_"
-        },
-        "MRGD_WTH": {
-          "$ref": "#/definitions/BaseMeasure_ORG_"
-        },
-        "DDPLCT_OF": {
-          "$ref": "#/definitions/BaseMeasure_ORG_"
-        }
-      },
-      "required": [
-        "DIMS"
-      ]
-    },
-    "StaticHolderSeries": {
-      "title": "StaticHolderSeries",
-      "type": "object",
-      "properties": {
-        "DIMS": {
-          "$ref": "#/definitions/StaticDimensionContainer_ORG_"
-        },
         "NM": {
           "$ref": "#/definitions/BaseMeasure_Str128_"
         },
@@ -6341,6 +4868,9 @@
         },
         "INSTTTNL_SCTR": {
           "$ref": "#/definitions/BaseMeasure_OrgInstttnlSctrEnum_"
+        },
+        "ALS_OF": {
+          "$ref": "#/definitions/BaseMeasure_ORG_"
         }
       },
       "required": [
@@ -6408,6 +4938,21 @@
         "VALUE"
       ]
     },
+    "BaseMeasure_DEP_": {
+      "title": "BaseMeasure[DEP]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "title": "Value",
+          "maxLength": 32,
+          "pattern": "^[IP][a-zA-z0-9_]+",
+          "type": "string"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
     "DepSeries": {
       "title": "DepSeries",
       "type": "object",
@@ -6421,12 +4966,6 @@
         "DT_CLS": {
           "$ref": "#/definitions/BaseMeasure_date_"
         },
-        "IBAN_ID": {
-          "$ref": "#/definitions/BaseMeasure_Ascii32_"
-        },
-        "INTRNL_ID": {
-          "$ref": "#/definitions/BaseMeasure_Ascii31_"
-        },
         "TYP": {
           "$ref": "#/definitions/BaseMeasure_DepTypEnum_"
         },
@@ -6439,63 +4978,14 @@
         "IS_TRNSFRBL": {
           "$ref": "#/definitions/BaseMeasure_bool_"
         },
-        "IS_SHRD": {
-          "$ref": "#/definitions/BaseMeasure_bool_"
-        },
-        "DDPLCT_OF": {
-          "$ref": "#/definitions/BaseMeasure_ORG_"
-        }
-      },
-      "required": [
-        "DIMS"
-      ]
-    },
-    "StaticDimensionContainer_DEP_": {
-      "title": "StaticDimensionContainer[DEP]",
-      "type": "object",
-      "properties": {
-        "ID": {
-          "title": "Id",
-          "maxLength": 32,
-          "pattern": "^[IP][a-zA-z0-9_]+",
-          "type": "string"
-        },
-        "VLD_FRM": {
-          "title": "Vld Frm",
-          "type": "string",
-          "format": "date"
-        },
-        "VLD_T": {
-          "title": "Vld T",
-          "type": "string",
-          "format": "date"
-        }
-      },
-      "required": [
-        "ID"
-      ]
-    },
-    "StaticDepSeries": {
-      "title": "StaticDepSeries",
-      "type": "object",
-      "properties": {
-        "DIMS": {
-          "$ref": "#/definitions/StaticDimensionContainer_DEP_"
-        },
-        "MTRTY_DT": {
-          "$ref": "#/definitions/BaseMeasure_date_"
-        },
-        "NMNL_INTRST": {
-          "$ref": "#/definitions/BaseMeasure_float_"
-        },
-        "CMPND_TMS": {
-          "$ref": "#/definitions/BaseMeasure_float_"
-        },
         "DBTR": {
           "$ref": "#/definitions/BaseMeasure_ORG_"
         },
         "CRDTR": {
           "$ref": "#/definitions/BaseMeasure_ORG_"
+        },
+        "ALS_OF": {
+          "$ref": "#/definitions/BaseMeasure_DEP_"
         }
       },
       "required": [
@@ -6556,7 +5046,7 @@
         "VALUE"
       ]
     },
-    "journey__structure__ifdat__other_info__SftSeries": {
+    "journey__structure__ifdat__other__SftSeries": {
       "title": "SftSeries",
       "type": "object",
       "properties": {
@@ -6569,66 +5059,20 @@
         "DT_CLS": {
           "$ref": "#/definitions/BaseMeasure_date_"
         },
-        "INTRNL_ID": {
-          "$ref": "#/definitions/BaseMeasure_Ascii31_"
-        },
         "CRRNCY": {
           "$ref": "#/definitions/BaseMeasure_GenCrrncyEnum_"
         },
         "TYP": {
           "$ref": "#/definitions/BaseMeasure_SftTypEnum_"
         },
-        "DDPLCT_OF": {
-          "$ref": "#/definitions/BaseMeasure_SFT_"
-        }
-      },
-      "required": [
-        "DIMS"
-      ]
-    },
-    "StaticDimensionContainer_SFT_": {
-      "title": "StaticDimensionContainer[SFT]",
-      "type": "object",
-      "properties": {
-        "ID": {
-          "title": "Id",
-          "maxLength": 32,
-          "pattern": "^P[a-zA-z0-9_]+",
-          "type": "string"
-        },
-        "VLD_FRM": {
-          "title": "Vld Frm",
-          "type": "string",
-          "format": "date"
-        },
-        "VLD_T": {
-          "title": "Vld T",
-          "type": "string",
-          "format": "date"
-        }
-      },
-      "required": [
-        "ID"
-      ]
-    },
-    "StaticSftSeries": {
-      "title": "StaticSftSeries",
-      "type": "object",
-      "properties": {
-        "DIMS": {
-          "$ref": "#/definitions/StaticDimensionContainer_SFT_"
-        },
-        "MTRTY_DT": {
-          "$ref": "#/definitions/BaseMeasure_date_"
-        },
-        "NMNL_INTRST": {
-          "$ref": "#/definitions/BaseMeasure_float_"
-        },
         "DBTR": {
           "$ref": "#/definitions/BaseMeasure_ORG_"
         },
         "CRDTR": {
           "$ref": "#/definitions/BaseMeasure_ORG_"
+        },
+        "ALS_OF": {
+          "$ref": "#/definitions/BaseMeasure_SFT_"
         }
       },
       "required": [
@@ -6694,66 +5138,20 @@
         "DT_CLS": {
           "$ref": "#/definitions/BaseMeasure_date_"
         },
-        "INTRNL_ID": {
-          "$ref": "#/definitions/BaseMeasure_Ascii31_"
-        },
         "CRRNCY": {
           "$ref": "#/definitions/BaseMeasure_GenCrrncyEnum_"
         },
         "TYP": {
           "$ref": "#/definitions/BaseMeasure_LonTypEnum_"
         },
-        "DDPLCT_OF": {
-          "$ref": "#/definitions/BaseMeasure_LON_"
-        }
-      },
-      "required": [
-        "DIMS"
-      ]
-    },
-    "StaticDimensionContainer_LON_": {
-      "title": "StaticDimensionContainer[LON]",
-      "type": "object",
-      "properties": {
-        "ID": {
-          "title": "Id",
-          "maxLength": 32,
-          "pattern": "^P[a-zA-z0-9_]+",
-          "type": "string"
-        },
-        "VLD_FRM": {
-          "title": "Vld Frm",
-          "type": "string",
-          "format": "date"
-        },
-        "VLD_T": {
-          "title": "Vld T",
-          "type": "string",
-          "format": "date"
-        }
-      },
-      "required": [
-        "ID"
-      ]
-    },
-    "StaticLonSeries": {
-      "title": "StaticLonSeries",
-      "type": "object",
-      "properties": {
-        "DIMS": {
-          "$ref": "#/definitions/StaticDimensionContainer_LON_"
-        },
-        "MTRTY_DT": {
-          "$ref": "#/definitions/BaseMeasure_date_"
-        },
-        "NMNL_INTRST": {
-          "$ref": "#/definitions/BaseMeasure_float_"
-        },
         "DBTR": {
           "$ref": "#/definitions/BaseMeasure_ID_"
         },
         "CRDTR": {
           "$ref": "#/definitions/BaseMeasure_ID_"
+        },
+        "ALS_OF": {
+          "$ref": "#/definitions/BaseMeasure_LON_"
         }
       },
       "required": [
@@ -6773,110 +5171,17 @@
         "DT_CLS": {
           "$ref": "#/definitions/BaseMeasure_date_"
         },
-        "ORGNL_MTRTY": {
-          "$ref": "#/definitions/BaseMeasure_date_"
-        },
-        "ISIN_ID": {
-          "$ref": "#/definitions/BaseMeasure_Ascii12_"
-        },
-        "INTRNL_ID": {
-          "$ref": "#/definitions/BaseMeasure_Ascii31_"
-        },
         "CRRNCY": {
           "$ref": "#/definitions/BaseMeasure_GenCrrncyEnum_"
-        },
-        "ISS_PRC": {
-          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
-        },
-        "RDMPTN_PRC": {
-          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
-        },
-        "MRKT": {
-          "$ref": "#/definitions/BaseMeasure_GenMrktEnum_"
-        },
-        "ACCRL_STRTDT": {
-          "$ref": "#/definitions/BaseMeasure_date_"
         },
         "PRMRY_CLSS": {
           "$ref": "#/definitions/BaseMeasure_DbtPrmryClssEnum_"
         },
-        "GRNT_LVL": {
-          "$ref": "#/definitions/BaseMeasure_DbtGrntLvlEnum_"
-        },
-        "RNK_LVL": {
-          "$ref": "#/definitions/BaseMeasure_DbtRnkLvlEnum_"
-        },
-        "SCRTY_LVL": {
-          "$ref": "#/definitions/BaseMeasure_DbtScrtyLvlEnum_"
-        },
-        "IS_SCRTZTN": {
-          "$ref": "#/definitions/BaseMeasure_bool_"
-        },
-        "SCRTZTN_TYP": {
-          "$ref": "#/definitions/BaseMeasure_DbtScrtznTypEnum_"
-        },
-        "IS_CVRD": {
-          "$ref": "#/definitions/BaseMeasure_bool_"
-        },
-        "CVRD_TYP": {
-          "$ref": "#/definitions/BaseMeasure_DbtCvrdTypEnum_"
-        },
-        "CPN_TYP": {
-          "$ref": "#/definitions/BaseMeasure_DbtCpnTypEnum_"
-        },
-        "CPN_CRRNCY": {
-          "$ref": "#/definitions/BaseMeasure_GenCrrncyEnum_"
-        },
-        "CPN_FRQNCY": {
-          "$ref": "#/definitions/BaseMeasure_DbtCpnFrqncyEnum_"
-        },
-        "CPN_SPRD": {
-          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
-        },
-        "CPN_MLTPLR": {
-          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
-        },
-        "CPN_CP": {
-          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
-        },
-        "CPN_FLR": {
-          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
-        },
-        "FRST_CPN_DT": {
-          "$ref": "#/definitions/BaseMeasure_date_"
-        },
-        "LST_CPN_DT": {
-          "$ref": "#/definitions/BaseMeasure_date_"
-        },
-        "UNDRLYNG": {
-          "$ref": "#/definitions/BaseMeasure_DBT_"
-        },
-        "DDPLCT_OF": {
-          "$ref": "#/definitions/BaseMeasure_DBT_"
-        }
-      },
-      "required": [
-        "DIMS"
-      ]
-    },
-    "StaticDbtSeries": {
-      "title": "StaticDbtSeries",
-      "type": "object",
-      "properties": {
-        "DIMS": {
-          "$ref": "#/definitions/StaticDimensionContainer_DBT_"
-        },
-        "NM": {
-          "$ref": "#/definitions/BaseMeasure_Str128_"
-        },
-        "STTS": {
-          "$ref": "#/definitions/BaseMeasure_DbtSttsEnum_"
-        },
-        "MTRTY_DT": {
-          "$ref": "#/definitions/BaseMeasure_date_"
-        },
         "ISSD_BY": {
           "$ref": "#/definitions/BaseMeasure_ORG_"
+        },
+        "ALS_OF": {
+          "$ref": "#/definitions/BaseMeasure_DBT_"
         }
       },
       "required": [
@@ -6907,35 +5212,7 @@
         "VALUE"
       ]
     },
-    "ShrPrmryClssEnum": {
-      "title": "ShrPrmryClssEnum",
-      "description": "An enumeration.",
-      "enum": [
-        "-",
-        "E.1",
-        "E.2",
-        "E.3",
-        "E.4",
-        "E.9",
-        "F.1",
-        "F.2",
-        "F.9"
-      ],
-      "type": "string"
-    },
-    "BaseMeasure_ShrPrmryClssEnum_": {
-      "title": "BaseMeasure[ShrPrmryClssEnum]",
-      "type": "object",
-      "properties": {
-        "VALUE": {
-          "$ref": "#/definitions/ShrPrmryClssEnum"
-        }
-      },
-      "required": [
-        "VALUE"
-      ]
-    },
-    "journey__structure__ifdat__other_info__ShareSeries": {
+    "journey__structure__ifdat__other__ShareSeries": {
       "title": "ShareSeries",
       "type": "object",
       "properties": {
@@ -6948,44 +5225,17 @@
         "DT_CLS": {
           "$ref": "#/definitions/BaseMeasure_date_"
         },
-        "ISIN_ID": {
-          "$ref": "#/definitions/BaseMeasure_Ascii12_"
-        },
-        "INTRNL_ID": {
-          "$ref": "#/definitions/BaseMeasure_Ascii31_"
-        },
         "CRRNCY": {
           "$ref": "#/definitions/BaseMeasure_GenCrrncyEnum_"
-        },
-        "MRKT": {
-          "$ref": "#/definitions/BaseMeasure_GenMrktEnum_"
         },
         "TYP": {
           "$ref": "#/definitions/BaseMeasure_ShrTypEnum_"
         },
-        "PRMRY_CLSS": {
-          "$ref": "#/definitions/BaseMeasure_ShrPrmryClssEnum_"
-        },
-        "DDPLCT_OF": {
-          "$ref": "#/definitions/BaseMeasure_SHR_"
-        }
-      },
-      "required": [
-        "DIMS"
-      ]
-    },
-    "journey__structure__ifdat__other_info__StaticShareSeries": {
-      "title": "StaticShareSeries",
-      "type": "object",
-      "properties": {
-        "DIMS": {
-          "$ref": "#/definitions/StaticDimensionContainer_SHR_"
-        },
-        "NM": {
-          "$ref": "#/definitions/BaseMeasure_Str128_"
-        },
         "ISSD_BY": {
           "$ref": "#/definitions/BaseMeasure_ORG_"
+        },
+        "ALS_OF": {
+          "$ref": "#/definitions/BaseMeasure_SHR_"
         }
       },
       "required": [
@@ -7050,7 +5300,7 @@
         "VALUE"
       ]
     },
-    "journey__structure__ifdat__other_info__EdrSeries": {
+    "journey__structure__ifdat__other__EdrSeries": {
       "title": "EdrSeries",
       "type": "object",
       "properties": {
@@ -7066,14 +5316,8 @@
         "NM": {
           "$ref": "#/definitions/BaseMeasure_Str128_"
         },
-        "ISIN_ID": {
-          "$ref": "#/definitions/BaseMeasure_Ascii12_"
-        },
         "TCKR": {
           "$ref": "#/definitions/BaseMeasure_Ascii12_"
-        },
-        "INTRNL_ID": {
-          "$ref": "#/definitions/BaseMeasure_Ascii31_"
         },
         "TYP": {
           "$ref": "#/definitions/BaseMeasure_DrvtvTypEnum_"
@@ -7087,7 +5331,7 @@
         "WRITER": {
           "$ref": "#/definitions/BaseMeasure_GenMrktEnum_"
         },
-        "DDPLCT_OF": {
+        "ALS_OF": {
           "$ref": "#/definitions/BaseMeasure_EDR_"
         }
       },
@@ -7095,7 +5339,22 @@
         "DIMS"
       ]
     },
-    "journey__structure__ifdat__other_info__OdrSeries": {
+    "BaseMeasure_ODR_": {
+      "title": "BaseMeasure[ODR]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "title": "Value",
+          "maxLength": 32,
+          "pattern": "^[IP][a-zA-z0-9_]+",
+          "type": "string"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "journey__structure__ifdat__other__OdrSeries": {
       "title": "OdrSeries",
       "type": "object",
       "properties": {
@@ -7110,9 +5369,6 @@
         },
         "NM": {
           "$ref": "#/definitions/BaseMeasure_Str128_"
-        },
-        "INTRNL_ID": {
-          "$ref": "#/definitions/BaseMeasure_Ascii31_"
         },
         "TYP": {
           "$ref": "#/definitions/BaseMeasure_DrvtvTypEnum_"
@@ -7129,8 +5385,8 @@
         "BYR": {
           "$ref": "#/definitions/BaseMeasure_ORG_"
         },
-        "DDPLCT_OF": {
-          "$ref": "#/definitions/BaseMeasure_EDR_"
+        "ALS_OF": {
+          "$ref": "#/definitions/BaseMeasure_ODR_"
         }
       },
       "required": [
@@ -7178,1575 +5434,6 @@
         "VALUE"
       ]
     },
-    "GenNutsEnum": {
-      "title": "GenNutsEnum",
-      "description": "An enumeration.",
-      "enum": [
-        "-",
-        "AT111",
-        "AT112",
-        "AT113",
-        "AT121",
-        "AT122",
-        "AT123",
-        "AT124",
-        "AT125",
-        "AT126",
-        "AT127",
-        "AT130",
-        "AT211",
-        "AT212",
-        "AT213",
-        "AT221",
-        "AT222",
-        "AT223",
-        "AT224",
-        "AT225",
-        "AT226",
-        "AT311",
-        "AT312",
-        "AT313",
-        "AT314",
-        "AT315",
-        "AT321",
-        "AT322",
-        "AT323",
-        "AT331",
-        "AT332",
-        "AT333",
-        "AT334",
-        "AT335",
-        "AT341",
-        "AT342",
-        "ATZZZ",
-        "BE100",
-        "BE211",
-        "BE212",
-        "BE213",
-        "BE221",
-        "BE222",
-        "BE223",
-        "BE231",
-        "BE232",
-        "BE233",
-        "BE234",
-        "BE235",
-        "BE236",
-        "BE241",
-        "BE242",
-        "BE251",
-        "BE252",
-        "BE253",
-        "BE254",
-        "BE255",
-        "BE256",
-        "BE257",
-        "BE258",
-        "BE310",
-        "BE321",
-        "BE322",
-        "BE323",
-        "BE324",
-        "BE325",
-        "BE326",
-        "BE327",
-        "BE331",
-        "BE332",
-        "BE334",
-        "BE335",
-        "BE336",
-        "BE341",
-        "BE342",
-        "BE343",
-        "BE344",
-        "BE345",
-        "BE351",
-        "BE352",
-        "BE353",
-        "BEZZZ",
-        "BG311",
-        "BG312",
-        "BG313",
-        "BG314",
-        "BG315",
-        "BG321",
-        "BG322",
-        "BG323",
-        "BG324",
-        "BG325",
-        "BG331",
-        "BG332",
-        "BG333",
-        "BG334",
-        "BG341",
-        "BG342",
-        "BG343",
-        "BG344",
-        "BG411",
-        "BG412",
-        "BG413",
-        "BG414",
-        "BG415",
-        "BG421",
-        "BG422",
-        "BG423",
-        "BG424",
-        "BG425",
-        "BGZZZ",
-        "CY000",
-        "CYZZZ",
-        "CZ010",
-        "CZ020",
-        "CZ031",
-        "CZ032",
-        "CZ041",
-        "CZ042",
-        "CZ051",
-        "CZ052",
-        "CZ053",
-        "CZ063",
-        "CZ064",
-        "CZ071",
-        "CZ072",
-        "CZ080",
-        "CZZZZ",
-        "DE111",
-        "DE112",
-        "DE113",
-        "DE114",
-        "DE115",
-        "DE116",
-        "DE117",
-        "DE118",
-        "DE119",
-        "DE11A",
-        "DE11B",
-        "DE11C",
-        "DE11D",
-        "DE121",
-        "DE122",
-        "DE123",
-        "DE124",
-        "DE125",
-        "DE126",
-        "DE127",
-        "DE128",
-        "DE129",
-        "DE12A",
-        "DE12B",
-        "DE12C",
-        "DE131",
-        "DE132",
-        "DE133",
-        "DE134",
-        "DE135",
-        "DE136",
-        "DE137",
-        "DE138",
-        "DE139",
-        "DE13A",
-        "DE141",
-        "DE142",
-        "DE143",
-        "DE144",
-        "DE145",
-        "DE146",
-        "DE147",
-        "DE148",
-        "DE149",
-        "DE211",
-        "DE212",
-        "DE213",
-        "DE214",
-        "DE215",
-        "DE216",
-        "DE217",
-        "DE218",
-        "DE219",
-        "DE21A",
-        "DE21B",
-        "DE21C",
-        "DE21D",
-        "DE21E",
-        "DE21F",
-        "DE21G",
-        "DE21H",
-        "DE21I",
-        "DE21J",
-        "DE21K",
-        "DE21L",
-        "DE21M",
-        "DE21N",
-        "DE221",
-        "DE222",
-        "DE223",
-        "DE224",
-        "DE225",
-        "DE226",
-        "DE227",
-        "DE228",
-        "DE229",
-        "DE22A",
-        "DE22B",
-        "DE22C",
-        "DE231",
-        "DE232",
-        "DE233",
-        "DE234",
-        "DE235",
-        "DE236",
-        "DE237",
-        "DE238",
-        "DE239",
-        "DE23A",
-        "DE241",
-        "DE242",
-        "DE243",
-        "DE244",
-        "DE245",
-        "DE246",
-        "DE247",
-        "DE248",
-        "DE249",
-        "DE24A",
-        "DE24B",
-        "DE24C",
-        "DE24D",
-        "DE251",
-        "DE252",
-        "DE253",
-        "DE254",
-        "DE255",
-        "DE256",
-        "DE257",
-        "DE258",
-        "DE259",
-        "DE25A",
-        "DE25B",
-        "DE25C",
-        "DE261",
-        "DE262",
-        "DE263",
-        "DE264",
-        "DE265",
-        "DE266",
-        "DE267",
-        "DE268",
-        "DE269",
-        "DE26A",
-        "DE26B",
-        "DE26C",
-        "DE271",
-        "DE272",
-        "DE273",
-        "DE274",
-        "DE275",
-        "DE276",
-        "DE277",
-        "DE278",
-        "DE279",
-        "DE27A",
-        "DE27B",
-        "DE27C",
-        "DE27D",
-        "DE27E",
-        "DE300",
-        "DE401",
-        "DE402",
-        "DE403",
-        "DE404",
-        "DE405",
-        "DE406",
-        "DE407",
-        "DE408",
-        "DE409",
-        "DE40A",
-        "DE40B",
-        "DE40C",
-        "DE40D",
-        "DE40E",
-        "DE40F",
-        "DE40G",
-        "DE40H",
-        "DE40I",
-        "DE501",
-        "DE502",
-        "DE600",
-        "DE711",
-        "DE712",
-        "DE713",
-        "DE714",
-        "DE715",
-        "DE716",
-        "DE717",
-        "DE718",
-        "DE719",
-        "DE71A",
-        "DE71B",
-        "DE71C",
-        "DE71D",
-        "DE71E",
-        "DE721",
-        "DE722",
-        "DE723",
-        "DE724",
-        "DE725",
-        "DE731",
-        "DE732",
-        "DE733",
-        "DE734",
-        "DE735",
-        "DE736",
-        "DE737",
-        "DE803",
-        "DE804",
-        "DE80J",
-        "DE80K",
-        "DE80L",
-        "DE80M",
-        "DE80N",
-        "DE80O",
-        "DE911",
-        "DE912",
-        "DE913",
-        "DE914",
-        "DE915",
-        "DE916",
-        "DE917",
-        "DE918",
-        "DE919",
-        "DE91A",
-        "DE91B",
-        "DE91C",
-        "DE922",
-        "DE923",
-        "DE925",
-        "DE926",
-        "DE927",
-        "DE928",
-        "DE929",
-        "DE931",
-        "DE932",
-        "DE933",
-        "DE934",
-        "DE935",
-        "DE936",
-        "DE937",
-        "DE938",
-        "DE939",
-        "DE93A",
-        "DE93B",
-        "DE941",
-        "DE942",
-        "DE943",
-        "DE944",
-        "DE945",
-        "DE946",
-        "DE947",
-        "DE948",
-        "DE949",
-        "DE94A",
-        "DE94B",
-        "DE94C",
-        "DE94D",
-        "DE94E",
-        "DE94F",
-        "DE94G",
-        "DE94H",
-        "DEA11",
-        "DEA12",
-        "DEA13",
-        "DEA14",
-        "DEA15",
-        "DEA16",
-        "DEA17",
-        "DEA18",
-        "DEA19",
-        "DEA1A",
-        "DEA1B",
-        "DEA1C",
-        "DEA1D",
-        "DEA1E",
-        "DEA1F",
-        "DEA22",
-        "DEA23",
-        "DEA24",
-        "DEA26",
-        "DEA27",
-        "DEA28",
-        "DEA29",
-        "DEA2A",
-        "DEA2B",
-        "DEA2C",
-        "DEA2D",
-        "DEA31",
-        "DEA32",
-        "DEA33",
-        "DEA34",
-        "DEA35",
-        "DEA36",
-        "DEA37",
-        "DEA38",
-        "DEA41",
-        "DEA42",
-        "DEA43",
-        "DEA44",
-        "DEA45",
-        "DEA46",
-        "DEA47",
-        "DEA51",
-        "DEA52",
-        "DEA53",
-        "DEA54",
-        "DEA55",
-        "DEA56",
-        "DEA57",
-        "DEA58",
-        "DEA59",
-        "DEA5A",
-        "DEA5B",
-        "DEA5C",
-        "DEB11",
-        "DEB12",
-        "DEB13",
-        "DEB14",
-        "DEB15",
-        "DEB16",
-        "DEB17",
-        "DEB18",
-        "DEB19",
-        "DEB1A",
-        "DEB1B",
-        "DEB1C",
-        "DEB1D",
-        "DEB21",
-        "DEB22",
-        "DEB23",
-        "DEB24",
-        "DEB25",
-        "DEB31",
-        "DEB32",
-        "DEB33",
-        "DEB34",
-        "DEB35",
-        "DEB36",
-        "DEB37",
-        "DEB38",
-        "DEB39",
-        "DEB3A",
-        "DEB3B",
-        "DEB3C",
-        "DEB3D",
-        "DEB3E",
-        "DEB3F",
-        "DEB3G",
-        "DEB3H",
-        "DEB3I",
-        "DEB3J",
-        "DEB3K",
-        "DEC01",
-        "DEC02",
-        "DEC03",
-        "DEC04",
-        "DEC05",
-        "DEC06",
-        "DED21",
-        "DED2C",
-        "DED2D",
-        "DED2E",
-        "DED2F",
-        "DED41",
-        "DED42",
-        "DED43",
-        "DED44",
-        "DED45",
-        "DED51",
-        "DED52",
-        "DED53",
-        "DEE01",
-        "DEE02",
-        "DEE03",
-        "DEE04",
-        "DEE05",
-        "DEE06",
-        "DEE07",
-        "DEE08",
-        "DEE09",
-        "DEE0A",
-        "DEE0B",
-        "DEE0C",
-        "DEE0D",
-        "DEE0E",
-        "DEF01",
-        "DEF02",
-        "DEF03",
-        "DEF04",
-        "DEF05",
-        "DEF06",
-        "DEF07",
-        "DEF08",
-        "DEF09",
-        "DEF0A",
-        "DEF0B",
-        "DEF0C",
-        "DEF0D",
-        "DEF0E",
-        "DEF0F",
-        "DEG01",
-        "DEG02",
-        "DEG03",
-        "DEG04",
-        "DEG05",
-        "DEG06",
-        "DEG07",
-        "DEG09",
-        "DEG0A",
-        "DEG0B",
-        "DEG0C",
-        "DEG0D",
-        "DEG0E",
-        "DEG0F",
-        "DEG0G",
-        "DEG0H",
-        "DEG0I",
-        "DEG0J",
-        "DEG0K",
-        "DEG0L",
-        "DEG0M",
-        "DEG0N",
-        "DEG0P",
-        "DEZZZ",
-        "DK011",
-        "DK012",
-        "DK013",
-        "DK014",
-        "DK021",
-        "DK022",
-        "DK031",
-        "DK032",
-        "DK041",
-        "DK042",
-        "DK050",
-        "DKZZZ",
-        "EE001",
-        "EE004",
-        "EE006",
-        "EE007",
-        "EE008",
-        "EEZZZ",
-        "EL301",
-        "EL302",
-        "EL303",
-        "EL304",
-        "EL305",
-        "EL306",
-        "EL307",
-        "EL411",
-        "EL412",
-        "EL413",
-        "EL421",
-        "EL422",
-        "EL431",
-        "EL432",
-        "EL433",
-        "EL434",
-        "EL511",
-        "EL512",
-        "EL513",
-        "EL514",
-        "EL515",
-        "EL521",
-        "EL522",
-        "EL523",
-        "EL524",
-        "EL525",
-        "EL526",
-        "EL527",
-        "EL531",
-        "EL532",
-        "EL533",
-        "EL541",
-        "EL542",
-        "EL543",
-        "EL611",
-        "EL612",
-        "EL613",
-        "EL621",
-        "EL622",
-        "EL623",
-        "EL624",
-        "EL631",
-        "EL632",
-        "EL633",
-        "EL641",
-        "EL642",
-        "EL643",
-        "EL644",
-        "EL645",
-        "EL651",
-        "EL652",
-        "EL653",
-        "ELZZZ",
-        "ES111",
-        "ES112",
-        "ES113",
-        "ES114",
-        "ES120",
-        "ES130",
-        "ES211",
-        "ES212",
-        "ES213",
-        "ES220",
-        "ES230",
-        "ES241",
-        "ES242",
-        "ES243",
-        "ES300",
-        "ES411",
-        "ES412",
-        "ES413",
-        "ES414",
-        "ES415",
-        "ES416",
-        "ES417",
-        "ES418",
-        "ES419",
-        "ES421",
-        "ES422",
-        "ES423",
-        "ES424",
-        "ES425",
-        "ES431",
-        "ES432",
-        "ES511",
-        "ES512",
-        "ES513",
-        "ES514",
-        "ES521",
-        "ES522",
-        "ES523",
-        "ES531",
-        "ES532",
-        "ES533",
-        "ES611",
-        "ES612",
-        "ES613",
-        "ES614",
-        "ES615",
-        "ES616",
-        "ES617",
-        "ES618",
-        "ES620",
-        "ES630",
-        "ES640",
-        "ES703",
-        "ES704",
-        "ES705",
-        "ES706",
-        "ES707",
-        "ES708",
-        "ES709",
-        "ESZZZ",
-        "FI193",
-        "FI194",
-        "FI195",
-        "FI196",
-        "FI197",
-        "FI1B1",
-        "FI1C1",
-        "FI1C2",
-        "FI1C3",
-        "FI1C4",
-        "FI1C5",
-        "FI1D1",
-        "FI1D2",
-        "FI1D3",
-        "FI1D4",
-        "FI1D5",
-        "FI1D6",
-        "FI1D7",
-        "FI1D8",
-        "FI1D9",
-        "FI200",
-        "FIZZZ",
-        "FR101",
-        "FR102",
-        "FR103",
-        "FR104",
-        "FR105",
-        "FR106",
-        "FR107",
-        "FR108",
-        "FR211",
-        "FR212",
-        "FR213",
-        "FR214",
-        "FR221",
-        "FR222",
-        "FR223",
-        "FR231",
-        "FR232",
-        "FR241",
-        "FR242",
-        "FR243",
-        "FR244",
-        "FR245",
-        "FR246",
-        "FR251",
-        "FR252",
-        "FR253",
-        "FR261",
-        "FR262",
-        "FR263",
-        "FR264",
-        "FR301",
-        "FR302",
-        "FR411",
-        "FR412",
-        "FR413",
-        "FR414",
-        "FR421",
-        "FR422",
-        "FR431",
-        "FR432",
-        "FR433",
-        "FR434",
-        "FR511",
-        "FR512",
-        "FR513",
-        "FR514",
-        "FR515",
-        "FR521",
-        "FR522",
-        "FR523",
-        "FR524",
-        "FR531",
-        "FR532",
-        "FR533",
-        "FR534",
-        "FR611",
-        "FR612",
-        "FR613",
-        "FR614",
-        "FR615",
-        "FR621",
-        "FR622",
-        "FR623",
-        "FR624",
-        "FR625",
-        "FR626",
-        "FR627",
-        "FR628",
-        "FR631",
-        "FR632",
-        "FR633",
-        "FR711",
-        "FR712",
-        "FR713",
-        "FR714",
-        "FR715",
-        "FR716",
-        "FR717",
-        "FR718",
-        "FR721",
-        "FR722",
-        "FR723",
-        "FR724",
-        "FR811",
-        "FR812",
-        "FR813",
-        "FR814",
-        "FR815",
-        "FR821",
-        "FR822",
-        "FR823",
-        "FR824",
-        "FR825",
-        "FR826",
-        "FR831",
-        "FR832",
-        "FRA10",
-        "FRA20",
-        "FRA30",
-        "FRA40",
-        "FRA50",
-        "FRB01",
-        "FRB02",
-        "FRB03",
-        "FRB04",
-        "FRB05",
-        "FRB06",
-        "FRC11",
-        "FRC12",
-        "FRC13",
-        "FRC14",
-        "FRC21",
-        "FRC22",
-        "FRC23",
-        "FRC24",
-        "FRD11",
-        "FRD12",
-        "FRD13",
-        "FRD21",
-        "FRD22",
-        "FRE11",
-        "FRE12",
-        "FRE21",
-        "FRE22",
-        "FRE23",
-        "FRF11",
-        "FRF12",
-        "FRF21",
-        "FRF22",
-        "FRF23",
-        "FRF24",
-        "FRF31",
-        "FRF32",
-        "FRF33",
-        "FRF34",
-        "FRG01",
-        "FRG02",
-        "FRG03",
-        "FRG04",
-        "FRG05",
-        "FRH01",
-        "FRH02",
-        "FRH03",
-        "FRH04",
-        "FRI11",
-        "FRI12",
-        "FRI13",
-        "FRI14",
-        "FRI15",
-        "FRI21",
-        "FRI22",
-        "FRI23",
-        "FRI31",
-        "FRI32",
-        "FRI33",
-        "FRI34",
-        "FRJ11",
-        "FRJ12",
-        "FRJ13",
-        "FRJ14",
-        "FRJ15",
-        "FRJ21",
-        "FRJ22",
-        "FRJ23",
-        "FRJ24",
-        "FRJ25",
-        "FRJ26",
-        "FRJ27",
-        "FRJ28",
-        "FRK11",
-        "FRK12",
-        "FRK13",
-        "FRK14",
-        "FRK21",
-        "FRK22",
-        "FRK23",
-        "FRK24",
-        "FRK25",
-        "FRK26",
-        "FRK27",
-        "FRK28",
-        "FRL01",
-        "FRL02",
-        "FRL03",
-        "FRL04",
-        "FRL05",
-        "FRL06",
-        "FRM01",
-        "FRM02",
-        "FRY10",
-        "FRY20",
-        "FRY30",
-        "FRY40",
-        "FRY50",
-        "FRZZZ",
-        "HR031",
-        "HR032",
-        "HR033",
-        "HR034",
-        "HR035",
-        "HR036",
-        "HR037",
-        "HR041",
-        "HR042",
-        "HR043",
-        "HR044",
-        "HR045",
-        "HR046",
-        "HR047",
-        "HR048",
-        "HR049",
-        "HR04A",
-        "HR04B",
-        "HR04C",
-        "HR04D",
-        "HR04E",
-        "HRZZZ",
-        "HU101",
-        "HU102",
-        "HU110",
-        "HU120",
-        "HU211",
-        "HU212",
-        "HU213",
-        "HU221",
-        "HU222",
-        "HU223",
-        "HU231",
-        "HU232",
-        "HU233",
-        "HU311",
-        "HU312",
-        "HU313",
-        "HU321",
-        "HU322",
-        "HU323",
-        "HU331",
-        "HU332",
-        "HU333",
-        "HUZZZ",
-        "IE011",
-        "IE012",
-        "IE013",
-        "IE021",
-        "IE022",
-        "IE023",
-        "IE024",
-        "IE025",
-        "IE041",
-        "IE042",
-        "IE051",
-        "IE052",
-        "IE053",
-        "IE061",
-        "IE062",
-        "IE063",
-        "IEZZZ",
-        "ITC11",
-        "ITC12",
-        "ITC13",
-        "ITC14",
-        "ITC15",
-        "ITC16",
-        "ITC17",
-        "ITC18",
-        "ITC20",
-        "ITC31",
-        "ITC32",
-        "ITC33",
-        "ITC34",
-        "ITC41",
-        "ITC42",
-        "ITC43",
-        "ITC44",
-        "ITC46",
-        "ITC47",
-        "ITC48",
-        "ITC49",
-        "ITC4A",
-        "ITC4B",
-        "ITC4C",
-        "ITC4D",
-        "ITF11",
-        "ITF12",
-        "ITF13",
-        "ITF14",
-        "ITF21",
-        "ITF22",
-        "ITF31",
-        "ITF32",
-        "ITF33",
-        "ITF34",
-        "ITF35",
-        "ITF43",
-        "ITF44",
-        "ITF45",
-        "ITF46",
-        "ITF47",
-        "ITF48",
-        "ITF51",
-        "ITF52",
-        "ITF61",
-        "ITF62",
-        "ITF63",
-        "ITF64",
-        "ITF65",
-        "ITG11",
-        "ITG12",
-        "ITG13",
-        "ITG14",
-        "ITG15",
-        "ITG16",
-        "ITG17",
-        "ITG18",
-        "ITG19",
-        "ITG25",
-        "ITG26",
-        "ITG27",
-        "ITG28",
-        "ITG29",
-        "ITG2A",
-        "ITG2B",
-        "ITG2C",
-        "ITH10",
-        "ITH20",
-        "ITH31",
-        "ITH32",
-        "ITH33",
-        "ITH34",
-        "ITH35",
-        "ITH36",
-        "ITH37",
-        "ITH41",
-        "ITH42",
-        "ITH43",
-        "ITH44",
-        "ITH51",
-        "ITH52",
-        "ITH53",
-        "ITH54",
-        "ITH55",
-        "ITH56",
-        "ITH57",
-        "ITH58",
-        "ITH59",
-        "ITI11",
-        "ITI12",
-        "ITI13",
-        "ITI14",
-        "ITI15",
-        "ITI16",
-        "ITI17",
-        "ITI18",
-        "ITI19",
-        "ITI1A",
-        "ITI21",
-        "ITI22",
-        "ITI31",
-        "ITI32",
-        "ITI33",
-        "ITI34",
-        "ITI35",
-        "ITI41",
-        "ITI42",
-        "ITI43",
-        "ITI44",
-        "ITI45",
-        "ITZZZ",
-        "LT001",
-        "LT002",
-        "LT003",
-        "LT004",
-        "LT005",
-        "LT006",
-        "LT007",
-        "LT008",
-        "LT009",
-        "LT00A",
-        "LT011",
-        "LT021",
-        "LT022",
-        "LT023",
-        "LT024",
-        "LT025",
-        "LT026",
-        "LT027",
-        "LT028",
-        "LT029",
-        "LTZZZ",
-        "LU000",
-        "LUZZZ",
-        "LV003",
-        "LV005",
-        "LV006",
-        "LV007",
-        "LV008",
-        "LV009",
-        "LVZZZ",
-        "MT001",
-        "MT002",
-        "MTZZZ",
-        "NL111",
-        "NL112",
-        "NL113",
-        "NL121",
-        "NL122",
-        "NL123",
-        "NL124",
-        "NL125",
-        "NL126",
-        "NL131",
-        "NL132",
-        "NL133",
-        "NL211",
-        "NL212",
-        "NL213",
-        "NL221",
-        "NL224",
-        "NL225",
-        "NL226",
-        "NL230",
-        "NL310",
-        "NL321",
-        "NL322",
-        "NL323",
-        "NL324",
-        "NL325",
-        "NL326",
-        "NL327",
-        "NL328",
-        "NL329",
-        "NL332",
-        "NL333",
-        "NL337",
-        "NL338",
-        "NL339",
-        "NL33A",
-        "NL33B",
-        "NL33C",
-        "NL341",
-        "NL342",
-        "NL411",
-        "NL412",
-        "NL413",
-        "NL414",
-        "NL421",
-        "NL422",
-        "NL423",
-        "NLZZZ",
-        "PL113",
-        "PL114",
-        "PL115",
-        "PL116",
-        "PL117",
-        "PL127",
-        "PL128",
-        "PL129",
-        "PL12A",
-        "PL12B",
-        "PL12C",
-        "PL12D",
-        "PL12E",
-        "PL213",
-        "PL214",
-        "PL217",
-        "PL218",
-        "PL219",
-        "PL21A",
-        "PL224",
-        "PL225",
-        "PL227",
-        "PL228",
-        "PL229",
-        "PL22A",
-        "PL22B",
-        "PL22C",
-        "PL311",
-        "PL312",
-        "PL314",
-        "PL315",
-        "PL323",
-        "PL324",
-        "PL325",
-        "PL326",
-        "PL331",
-        "PL332",
-        "PL343",
-        "PL344",
-        "PL345",
-        "PL411",
-        "PL414",
-        "PL415",
-        "PL416",
-        "PL417",
-        "PL418",
-        "PL424",
-        "PL426",
-        "PL427",
-        "PL428",
-        "PL431",
-        "PL432",
-        "PL514",
-        "PL515",
-        "PL516",
-        "PL517",
-        "PL518",
-        "PL523",
-        "PL524",
-        "PL613",
-        "PL616",
-        "PL617",
-        "PL618",
-        "PL619",
-        "PL621",
-        "PL622",
-        "PL623",
-        "PL633",
-        "PL634",
-        "PL636",
-        "PL637",
-        "PL638",
-        "PL711",
-        "PL712",
-        "PL713",
-        "PL714",
-        "PL715",
-        "PL721",
-        "PL722",
-        "PL811",
-        "PL812",
-        "PL814",
-        "PL815",
-        "PL821",
-        "PL822",
-        "PL823",
-        "PL824",
-        "PL841",
-        "PL842",
-        "PL843",
-        "PL911",
-        "PL912",
-        "PL913",
-        "PL921",
-        "PL922",
-        "PL923",
-        "PL924",
-        "PL925",
-        "PL926",
-        "PLZZZ",
-        "PT111",
-        "PT112",
-        "PT119",
-        "PT11A",
-        "PT11B",
-        "PT11C",
-        "PT11D",
-        "PT11E",
-        "PT150",
-        "PT16B",
-        "PT16D",
-        "PT16E",
-        "PT16F",
-        "PT16G",
-        "PT16H",
-        "PT16I",
-        "PT16J",
-        "PT170",
-        "PT181",
-        "PT184",
-        "PT185",
-        "PT186",
-        "PT187",
-        "PT200",
-        "PT300",
-        "PTZZZ",
-        "RO111",
-        "RO112",
-        "RO113",
-        "RO114",
-        "RO115",
-        "RO116",
-        "RO121",
-        "RO122",
-        "RO123",
-        "RO124",
-        "RO125",
-        "RO126",
-        "RO211",
-        "RO212",
-        "RO213",
-        "RO214",
-        "RO215",
-        "RO216",
-        "RO221",
-        "RO222",
-        "RO223",
-        "RO224",
-        "RO225",
-        "RO226",
-        "RO311",
-        "RO312",
-        "RO313",
-        "RO314",
-        "RO315",
-        "RO316",
-        "RO317",
-        "RO321",
-        "RO322",
-        "RO411",
-        "RO412",
-        "RO413",
-        "RO414",
-        "RO415",
-        "RO421",
-        "RO422",
-        "RO423",
-        "RO424",
-        "ROZZZ",
-        "SE110",
-        "SE121",
-        "SE122",
-        "SE123",
-        "SE124",
-        "SE125",
-        "SE211",
-        "SE212",
-        "SE213",
-        "SE214",
-        "SE221",
-        "SE224",
-        "SE231",
-        "SE232",
-        "SE311",
-        "SE312",
-        "SE313",
-        "SE321",
-        "SE322",
-        "SE331",
-        "SE332",
-        "SEZZZ",
-        "SI031",
-        "SI032",
-        "SI033",
-        "SI034",
-        "SI035",
-        "SI036",
-        "SI037",
-        "SI038",
-        "SI041",
-        "SI042",
-        "SI043",
-        "SI044",
-        "SIZZZ",
-        "SK010",
-        "SK021",
-        "SK022",
-        "SK023",
-        "SK031",
-        "SK032",
-        "SK041",
-        "SK042",
-        "SKZZZ",
-        "UKC11",
-        "UKC12",
-        "UKC13",
-        "UKC14",
-        "UKC21",
-        "UKC22",
-        "UKC23",
-        "UKD11",
-        "UKD12",
-        "UKD33",
-        "UKD34",
-        "UKD35",
-        "UKD36",
-        "UKD37",
-        "UKD41",
-        "UKD42",
-        "UKD44",
-        "UKD45",
-        "UKD46",
-        "UKD47",
-        "UKD61",
-        "UKD62",
-        "UKD63",
-        "UKD71",
-        "UKD72",
-        "UKD73",
-        "UKD74",
-        "UKE11",
-        "UKE12",
-        "UKE13",
-        "UKE21",
-        "UKE22",
-        "UKE31",
-        "UKE32",
-        "UKE41",
-        "UKE42",
-        "UKE44",
-        "UKE45",
-        "UKF11",
-        "UKF12",
-        "UKF13",
-        "UKF14",
-        "UKF15",
-        "UKF16",
-        "UKF21",
-        "UKF22",
-        "UKF24",
-        "UKF25",
-        "UKF30",
-        "UKG11",
-        "UKG12",
-        "UKG13",
-        "UKG21",
-        "UKG22",
-        "UKG23",
-        "UKG24",
-        "UKG31",
-        "UKG32",
-        "UKG33",
-        "UKG36",
-        "UKG37",
-        "UKG38",
-        "UKG39",
-        "UKH11",
-        "UKH12",
-        "UKH14",
-        "UKH15",
-        "UKH16",
-        "UKH17",
-        "UKH21",
-        "UKH23",
-        "UKH24",
-        "UKH25",
-        "UKH31",
-        "UKH32",
-        "UKH34",
-        "UKH35",
-        "UKH36",
-        "UKH37",
-        "UKI31",
-        "UKI32",
-        "UKI33",
-        "UKI34",
-        "UKI41",
-        "UKI42",
-        "UKI43",
-        "UKI44",
-        "UKI45",
-        "UKI51",
-        "UKI52",
-        "UKI53",
-        "UKI54",
-        "UKI61",
-        "UKI62",
-        "UKI63",
-        "UKI71",
-        "UKI72",
-        "UKI73",
-        "UKI74",
-        "UKI75",
-        "UKJ11",
-        "UKJ12",
-        "UKJ13",
-        "UKJ14",
-        "UKJ21",
-        "UKJ22",
-        "UKJ25",
-        "UKJ26",
-        "UKJ27",
-        "UKJ28",
-        "UKJ31",
-        "UKJ32",
-        "UKJ34",
-        "UKJ35",
-        "UKJ36",
-        "UKJ37",
-        "UKJ41",
-        "UKJ43",
-        "UKJ44",
-        "UKJ45",
-        "UKJ46",
-        "UKK11",
-        "UKK12",
-        "UKK13",
-        "UKK14",
-        "UKK15",
-        "UKK21",
-        "UKK22",
-        "UKK23",
-        "UKK30",
-        "UKK41",
-        "UKK42",
-        "UKK43",
-        "UKL11",
-        "UKL12",
-        "UKL13",
-        "UKL14",
-        "UKL15",
-        "UKL16",
-        "UKL17",
-        "UKL18",
-        "UKL21",
-        "UKL22",
-        "UKL23",
-        "UKL24",
-        "UKM21",
-        "UKM22",
-        "UKM23",
-        "UKM24",
-        "UKM25",
-        "UKM26",
-        "UKM27",
-        "UKM28",
-        "UKM31",
-        "UKM32",
-        "UKM33",
-        "UKM34",
-        "UKM35",
-        "UKM36",
-        "UKM37",
-        "UKM38",
-        "UKM50",
-        "UKM61",
-        "UKM62",
-        "UKM63",
-        "UKM64",
-        "UKM65",
-        "UKM66",
-        "UKM71",
-        "UKM72",
-        "UKM73",
-        "UKM75",
-        "UKM76",
-        "UKM77",
-        "UKM78",
-        "UKM81",
-        "UKM82",
-        "UKM83",
-        "UKM84",
-        "UKM91",
-        "UKM92",
-        "UKM93",
-        "UKM94",
-        "UKM95",
-        "UKN01",
-        "UKN02",
-        "UKN03",
-        "UKN04",
-        "UKN05",
-        "UKN06",
-        "UKN07",
-        "UKN08",
-        "UKN09",
-        "UKN10",
-        "UKN11",
-        "UKN12",
-        "UKN13",
-        "UKN14",
-        "UKN15",
-        "UKN16",
-        "UKZZZ"
-      ],
-      "type": "string"
-    },
-    "BaseMeasure_GenNutsEnum_": {
-      "title": "BaseMeasure[GenNutsEnum]",
-      "type": "object",
-      "properties": {
-        "VALUE": {
-          "$ref": "#/definitions/GenNutsEnum"
-        }
-      },
-      "required": [
-        "VALUE"
-      ]
-    },
     "BaseMeasure_RRE_": {
       "title": "BaseMeasure[RRE]",
       "type": "object",
@@ -8762,18 +5449,12 @@
         "VALUE"
       ]
     },
-    "journey__structure__ifdat__other_info__RreSeries": {
+    "journey__structure__ifdat__other__RreSeries": {
       "title": "RreSeries",
       "type": "object",
       "properties": {
         "DIMS": {
           "$ref": "#/definitions/DimensionContainer_RRE_"
-        },
-        "NTNL_ID": {
-          "$ref": "#/definitions/BaseMeasure_Ascii32_"
-        },
-        "INTRNL_ID": {
-          "$ref": "#/definitions/BaseMeasure_Ascii31_"
         },
         "CNTRY": {
           "$ref": "#/definitions/BaseMeasure_GenCntryEnum_"
@@ -8781,16 +5462,7 @@
         "TYP": {
           "$ref": "#/definitions/BaseMeasure_RreTypEnum_"
         },
-        "CTY": {
-          "$ref": "#/definitions/BaseMeasure_Str32_"
-        },
-        "PSTL_CD": {
-          "$ref": "#/definitions/BaseMeasure_Str32_"
-        },
-        "TRRTRY": {
-          "$ref": "#/definitions/BaseMeasure_GenNutsEnum_"
-        },
-        "DDPLCT_OF": {
+        "ALS_OF": {
           "$ref": "#/definitions/BaseMeasure_RRE_"
         }
       },
@@ -8855,18 +5527,12 @@
         "VALUE"
       ]
     },
-    "journey__structure__ifdat__other_info__CreSeries": {
+    "journey__structure__ifdat__other__CreSeries": {
       "title": "CreSeries",
       "type": "object",
       "properties": {
         "DIMS": {
           "$ref": "#/definitions/DimensionContainer_CRE_"
-        },
-        "NTNL_ID": {
-          "$ref": "#/definitions/BaseMeasure_Ascii32_"
-        },
-        "INTRNL_ID": {
-          "$ref": "#/definitions/BaseMeasure_Ascii31_"
         },
         "CNTRY": {
           "$ref": "#/definitions/BaseMeasure_GenCntryEnum_"
@@ -8874,16 +5540,7 @@
         "TYP": {
           "$ref": "#/definitions/BaseMeasure_CreTypEnum_"
         },
-        "CTY": {
-          "$ref": "#/definitions/BaseMeasure_Str32_"
-        },
-        "PSTL_CD": {
-          "$ref": "#/definitions/BaseMeasure_Str32_"
-        },
-        "TRRTRY": {
-          "$ref": "#/definitions/BaseMeasure_GenNutsEnum_"
-        },
-        "DDPLCT_OF": {
+        "ALS_OF": {
           "$ref": "#/definitions/BaseMeasure_CRE_"
         }
       },
@@ -8891,7 +5548,7 @@
         "DIMS"
       ]
     },
-    "journey__structure__ifdat__other_info__Datasets": {
+    "journey__structure__ifdat__other__Datasets": {
       "title": "Datasets",
       "type": "object",
       "properties": {
@@ -8902,25 +5559,11 @@
             "$ref": "#/definitions/IssuerSeries"
           }
         },
-        "STATIC_ISSUER": {
-          "title": "Static Issuer",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/StaticIssuerSeries"
-          }
-        },
         "HOLDER": {
           "title": "Holder",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/journey__structure__ifdat__other_info__HolderSeries"
-          }
-        },
-        "STATIC_HOLDER": {
-          "title": "Static Holder",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/StaticHolderSeries"
+            "$ref": "#/definitions/journey__structure__ifdat__other__HolderSeries"
           }
         },
         "DEPOSIT": {
@@ -8930,25 +5573,11 @@
             "$ref": "#/definitions/DepSeries"
           }
         },
-        "STATIC_DEPOSIT": {
-          "title": "Static Deposit",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/StaticDepSeries"
-          }
-        },
         "SFT": {
           "title": "Sft",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/journey__structure__ifdat__other_info__SftSeries"
-          }
-        },
-        "STATIC_SFT": {
-          "title": "Static Sft",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/StaticSftSeries"
+            "$ref": "#/definitions/journey__structure__ifdat__other__SftSeries"
           }
         },
         "LOAN": {
@@ -8958,13 +5587,6 @@
             "$ref": "#/definitions/LonSeries"
           }
         },
-        "STATIC_LOAN": {
-          "title": "Static Loan",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/StaticLonSeries"
-          }
-        },
         "DEBT": {
           "title": "Debt",
           "type": "array",
@@ -8972,275 +5594,39 @@
             "$ref": "#/definitions/DbtSeries"
           }
         },
-        "STATIC_DEBT": {
-          "title": "Static Debt",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/StaticDbtSeries"
-          }
-        },
         "SHARE": {
           "title": "Share",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/journey__structure__ifdat__other_info__ShareSeries"
-          }
-        },
-        "STATIC_SHARE": {
-          "title": "Static Share",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/journey__structure__ifdat__other_info__StaticShareSeries"
+            "$ref": "#/definitions/journey__structure__ifdat__other__ShareSeries"
           }
         },
         "EXT_DER": {
           "title": "Ext Der",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/journey__structure__ifdat__other_info__EdrSeries"
+            "$ref": "#/definitions/journey__structure__ifdat__other__EdrSeries"
           }
         },
         "OTC_DER": {
           "title": "Otc Der",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/journey__structure__ifdat__other_info__OdrSeries"
+            "$ref": "#/definitions/journey__structure__ifdat__other__OdrSeries"
           }
         },
         "RES_RE": {
           "title": "Res Re",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/journey__structure__ifdat__other_info__RreSeries"
+            "$ref": "#/definitions/journey__structure__ifdat__other__RreSeries"
           }
         },
         "COM_RE": {
           "title": "Com Re",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/journey__structure__ifdat__other_info__CreSeries"
-          }
-        }
-      },
-      "additionalProperties": false
-    },
-    "journey__structure__ifdat__other_key__DebtSeries": {
-      "title": "DebtSeries",
-      "type": "object",
-      "properties": {
-        "DIMS": {
-          "$ref": "#/definitions/DtDimensionContainer_DBT_"
-        },
-        "PRC": {
-          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
-        },
-        "ACCRD_INTRST": {
-          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
-        }
-      },
-      "required": [
-        "DIMS",
-        "PRC",
-        "ACCRD_INTRST"
-      ]
-    },
-    "journey__structure__ifdat__other_key__CouponSeries": {
-      "title": "CouponSeries",
-      "type": "object",
-      "properties": {
-        "DIMS": {
-          "$ref": "#/definitions/DtDimensionContainer_DBT_"
-        },
-        "RT": {
-          "$ref": "#/definitions/BaseMeasure_float_"
-        }
-      },
-      "required": [
-        "DIMS",
-        "RT"
-      ]
-    },
-    "journey__structure__ifdat__other_key__ShareSeries": {
-      "title": "ShareSeries",
-      "type": "object",
-      "properties": {
-        "DIMS": {
-          "$ref": "#/definitions/DtDimensionContainer_SHR_"
-        },
-        "PRC": {
-          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
-        }
-      },
-      "required": [
-        "DIMS",
-        "PRC"
-      ]
-    },
-    "journey__structure__ifdat__other_key__DividendSeries": {
-      "title": "DividendSeries",
-      "type": "object",
-      "properties": {
-        "DIMS": {
-          "$ref": "#/definitions/DtDimensionContainer_SHR_"
-        },
-        "TYP": {
-          "$ref": "#/definitions/BaseMeasure_DvdndTypEnum_"
-        },
-        "CRRNCY": {
-          "$ref": "#/definitions/BaseMeasure_GenCrrncyEnum_"
-        },
-        "AMNT": {
-          "$ref": "#/definitions/BaseMeasure_PositiveFloat_"
-        }
-      },
-      "required": [
-        "DIMS",
-        "TYP",
-        "CRRNCY",
-        "AMNT"
-      ]
-    },
-    "journey__structure__ifdat__other_key__SplitSeries": {
-      "title": "SplitSeries",
-      "type": "object",
-      "properties": {
-        "DIMS": {
-          "$ref": "#/definitions/DtDimensionContainer_SHR_"
-        },
-        "FCTR": {
-          "$ref": "#/definitions/BaseMeasure_PositiveFloat_"
-        }
-      },
-      "required": [
-        "DIMS",
-        "FCTR"
-      ]
-    },
-    "DtDimensionContainer_EDR_": {
-      "title": "DtDimensionContainer[EDR]",
-      "type": "object",
-      "properties": {
-        "ID": {
-          "title": "Id",
-          "maxLength": 32,
-          "pattern": "^[IP][a-zA-z0-9_]+",
-          "type": "string"
-        },
-        "DT": {
-          "title": "Dt",
-          "type": "string",
-          "format": "date"
-        }
-      },
-      "required": [
-        "ID",
-        "DT"
-      ]
-    },
-    "journey__structure__ifdat__other_key__EdrSeries": {
-      "title": "EdrSeries",
-      "type": "object",
-      "properties": {
-        "DIMS": {
-          "$ref": "#/definitions/DtDimensionContainer_EDR_"
-        },
-        "PRC": {
-          "$ref": "#/definitions/BaseMeasure_float_"
-        }
-      },
-      "required": [
-        "DIMS",
-        "PRC"
-      ]
-    },
-    "DtDimensionContainer_ODR_": {
-      "title": "DtDimensionContainer[ODR]",
-      "type": "object",
-      "properties": {
-        "ID": {
-          "title": "Id",
-          "maxLength": 32,
-          "pattern": "^[IP][a-zA-z0-9_]+",
-          "type": "string"
-        },
-        "DT": {
-          "title": "Dt",
-          "type": "string",
-          "format": "date"
-        }
-      },
-      "required": [
-        "ID",
-        "DT"
-      ]
-    },
-    "journey__structure__ifdat__other_key__OdrSeries": {
-      "title": "OdrSeries",
-      "type": "object",
-      "properties": {
-        "DIMS": {
-          "$ref": "#/definitions/DtDimensionContainer_ODR_"
-        },
-        "PRC": {
-          "$ref": "#/definitions/BaseMeasure_float_"
-        }
-      },
-      "required": [
-        "DIMS",
-        "PRC"
-      ]
-    },
-    "journey__structure__ifdat__other_key__Datasets": {
-      "title": "Datasets",
-      "type": "object",
-      "properties": {
-        "DEBT": {
-          "title": "Debt",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/journey__structure__ifdat__other_key__DebtSeries"
-          }
-        },
-        "COUPON": {
-          "title": "Coupon",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/journey__structure__ifdat__other_key__CouponSeries"
-          }
-        },
-        "SHARE": {
-          "title": "Share",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/journey__structure__ifdat__other_key__ShareSeries"
-          }
-        },
-        "DIVIDEND": {
-          "title": "Dividend",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/journey__structure__ifdat__other_key__DividendSeries"
-          }
-        },
-        "SPLIT": {
-          "title": "Split",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/journey__structure__ifdat__other_key__SplitSeries"
-          }
-        },
-        "EXT_DERIVATIVE": {
-          "title": "Ext Derivative",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/journey__structure__ifdat__other_key__EdrSeries"
-          }
-        },
-        "OTC_DERIVATIVE": {
-          "title": "Otc Derivative",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/journey__structure__ifdat__other_key__OdrSeries"
+            "$ref": "#/definitions/journey__structure__ifdat__other__CreSeries"
           }
         }
       },
@@ -9291,8 +5677,50 @@
         "EUR_STCK"
       ]
     },
-    "AccDimensionContainer_DEP_": {
-      "title": "AccDimensionContainer[DEP]",
+    "GenFrqncyEnum": {
+      "title": "GenFrqncyEnum",
+      "description": "An enumeration.",
+      "enum": [
+        "-",
+        "A",
+        "B",
+        "D",
+        "H",
+        "M",
+        "N",
+        "Q",
+        "S",
+        "W",
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A10",
+        "A20",
+        "A30",
+        "A_3",
+        "M2",
+        "M_2",
+        "M_3",
+        "W2",
+        "W3",
+        "W4",
+        "W_2",
+        "W_3",
+        "D_2",
+        "H2",
+        "H3",
+        "I",
+        "OA",
+        "OM",
+        "_O",
+        "_U",
+        "_Z"
+      ],
+      "type": "string"
+    },
+    "FrqncyAccDimensionContainer_DEP_": {
+      "title": "FrqncyAccDimensionContainer[DEP]",
       "type": "object",
       "properties": {
         "IID": {
@@ -9305,11 +5733,15 @@
           "title": "Dt",
           "type": "string",
           "format": "date"
+        },
+        "FRQNCY": {
+          "$ref": "#/definitions/GenFrqncyEnum"
         }
       },
       "required": [
         "IID",
-        "DT"
+        "DT",
+        "FRQNCY"
       ]
     },
     "DepositSeries": {
@@ -9317,13 +5749,16 @@
       "type": "object",
       "properties": {
         "DIMS": {
-          "$ref": "#/definitions/AccDimensionContainer_DEP_"
+          "$ref": "#/definitions/FrqncyAccDimensionContainer_DEP_"
         },
         "STCK": {
           "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
         "EUR_STCK": {
           "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
+        },
+        "FLS": {
+          "$ref": "#/definitions/BaseMeasure_float_"
         },
         "ACCRLS": {
           "$ref": "#/definitions/BaseMeasure_float_"
@@ -9333,11 +5768,12 @@
         "DIMS",
         "STCK",
         "EUR_STCK",
+        "FLS",
         "ACCRLS"
       ]
     },
-    "AccDimensionContainer_SFT_": {
-      "title": "AccDimensionContainer[SFT]",
+    "FrqncyAccDimensionContainer_SFT_": {
+      "title": "FrqncyAccDimensionContainer[SFT]",
       "type": "object",
       "properties": {
         "IID": {
@@ -9350,11 +5786,15 @@
           "title": "Dt",
           "type": "string",
           "format": "date"
+        },
+        "FRQNCY": {
+          "$ref": "#/definitions/GenFrqncyEnum"
         }
       },
       "required": [
         "IID",
-        "DT"
+        "DT",
+        "FRQNCY"
       ]
     },
     "journey__structure__ifdat__bsi__SftSeries": {
@@ -9362,19 +5802,27 @@
       "type": "object",
       "properties": {
         "DIMS": {
-          "$ref": "#/definitions/AccDimensionContainer_SFT_"
+          "$ref": "#/definitions/FrqncyAccDimensionContainer_SFT_"
         },
         "STCK": {
           "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
         "EUR_STCK": {
           "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
+        },
+        "FLS": {
+          "$ref": "#/definitions/BaseMeasure_float_"
+        },
+        "RTE": {
+          "$ref": "#/definitions/BaseMeasure_float_"
         }
       },
       "required": [
         "DIMS",
         "STCK",
-        "EUR_STCK"
+        "EUR_STCK",
+        "FLS",
+        "RTE"
       ]
     },
     "RelFrqncyAccDimensionContainer_DBT__ORG_": {
@@ -9428,16 +5876,7 @@
         "NMNL_STCK": {
           "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
-        "LND_FR_RPS": {
-          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
-        },
-        "LND_FR_SCLB": {
-          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
-        },
-        "LND_FR_BSBT": {
-          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
-        },
-        "LND_FR_MLT": {
+        "LND_FR_SFT": {
           "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
         "ACCRLS": {
@@ -9453,10 +5892,7 @@
         "EUR_STCK",
         "TRNSCTNS",
         "NMNL_STCK",
-        "LND_FR_RPS",
-        "LND_FR_SCLB",
-        "LND_FR_BSBT",
-        "LND_FR_MLT",
+        "LND_FR_SFT",
         "ACCRLS",
         "ARRRS"
       ]
@@ -9512,17 +5948,11 @@
         "QNTTY": {
           "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
-        "LND_FR_RPS": {
+        "LND_FR_SFT": {
           "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
-        "LND_FR_SCLB": {
-          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
-        },
-        "LND_FR_BSBT": {
-          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
-        },
-        "LND_FR_MLT": {
-          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
+        "IS_DRCT_INVSTMNT": {
+          "$ref": "#/definitions/BaseMeasure_bool_"
         }
       },
       "required": [
@@ -9531,10 +5961,8 @@
         "EUR_STCK",
         "TRNSCTNS",
         "QNTTY",
-        "LND_FR_RPS",
-        "LND_FR_SCLB",
-        "LND_FR_BSBT",
-        "LND_FR_MLT"
+        "LND_FR_SFT",
+        "IS_DRCT_INVSTMNT"
       ]
     },
     "RelFrqncyAccDimensionContainer_EDR__ORG_": {
@@ -9569,30 +5997,6 @@
         "FRQNCY"
       ]
     },
-    "DrvtvStrtgyEnum": {
-      "title": "DrvtvStrtgyEnum",
-      "description": "An enumeration.",
-      "enum": [
-        "-",
-        "MICRO_HEDGE",
-        "MACRO_HEDGE",
-        "PORT_MGMNT",
-        "SPECULATIVE"
-      ],
-      "type": "string"
-    },
-    "BaseMeasure_DrvtvStrtgyEnum_": {
-      "title": "BaseMeasure[DrvtvStrtgyEnum]",
-      "type": "object",
-      "properties": {
-        "VALUE": {
-          "$ref": "#/definitions/DrvtvStrtgyEnum"
-        }
-      },
-      "required": [
-        "VALUE"
-      ]
-    },
     "journey__structure__ifdat__bsi__EdrSeries": {
       "title": "EdrSeries",
       "type": "object",
@@ -9614,9 +6018,6 @@
         },
         "QNTTY": {
           "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
-        },
-        "STRTGY": {
-          "$ref": "#/definitions/BaseMeasure_DrvtvStrtgyEnum_"
         }
       },
       "required": [
@@ -9625,8 +6026,7 @@
         "EUR_STCK",
         "GRSS_STCK",
         "TRNSCTNS",
-        "QNTTY",
-        "STRTGY"
+        "QNTTY"
       ]
     },
     "FrqncyAccDimensionContainer_ODR_": {
@@ -9669,17 +6069,13 @@
         },
         "TRNSCTNS": {
           "$ref": "#/definitions/BaseMeasure_float_"
-        },
-        "STRTGY": {
-          "$ref": "#/definitions/BaseMeasure_DrvtvStrtgyEnum_"
         }
       },
       "required": [
         "DIMS",
         "STCK",
         "EUR_STCK",
-        "TRNSCTNS",
-        "STRTGY"
+        "TRNSCTNS"
       ]
     },
     "RelFrqncyAccDimensionContainer_RRE__ORG_": {
@@ -11682,9 +8078,6 @@
         "EUR_STCK": {
           "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
-        "UDRN_AMNT": {
-          "$ref": "#/definitions/BaseMeasure_float_"
-        },
         "ACCRLS": {
           "$ref": "#/definitions/BaseMeasure_float_"
         },
@@ -11699,7 +8092,6 @@
         "DIMS",
         "STCK",
         "EUR_STCK",
-        "UDRN_AMNT",
         "ACCRLS",
         "ARRRS",
         "WRT_OFFS"
@@ -11735,6 +8127,43 @@
         "SUB_CHRGS",
         "RDMPTNS",
         "RED_CHRGS"
+      ]
+    },
+    "AccDimensionContainer_SHR_": {
+      "title": "AccDimensionContainer[SHR]",
+      "type": "object",
+      "properties": {
+        "IID": {
+          "title": "Iid",
+          "maxLength": 32,
+          "pattern": "^[IP][a-zA-z0-9_]+",
+          "type": "string"
+        },
+        "DT": {
+          "title": "Dt",
+          "type": "string",
+          "format": "date"
+        }
+      },
+      "required": [
+        "IID",
+        "DT"
+      ]
+    },
+    "PriceSeries": {
+      "title": "PriceSeries",
+      "type": "object",
+      "properties": {
+        "DIMS": {
+          "$ref": "#/definitions/AccDimensionContainer_SHR_"
+        },
+        "PRC": {
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
+        }
+      },
+      "required": [
+        "DIMS",
+        "PRC"
       ]
     },
     "journey__structure__ifdat__bsi__Datasets": {
@@ -11851,6 +8280,13 @@
           "type": "array",
           "items": {
             "$ref": "#/definitions/journey__structure__ifdat__bsi__HolderSeries"
+          }
+        },
+        "PRICE": {
+          "title": "Price",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PriceSeries"
           }
         }
       },
@@ -12010,22 +8446,19 @@
       "title": "Categories",
       "type": "object",
       "properties": {
-        "SI": {
-          "$ref": "#/definitions/journey__structure__ifdat__self_info__Datasets"
+        "SELF": {
+          "$ref": "#/definitions/journey__structure__ifdat__self__Datasets"
         },
-        "SK": {
-          "$ref": "#/definitions/journey__structure__ifdat__self_key__Datasets"
+        "EVENT": {
+          "$ref": "#/definitions/journey__structure__ifdat__event__Datasets"
         },
-        "OI": {
-          "$ref": "#/definitions/journey__structure__ifdat__other_info__Datasets"
-        },
-        "OK": {
-          "$ref": "#/definitions/journey__structure__ifdat__other_key__Datasets"
+        "OTHER": {
+          "$ref": "#/definitions/journey__structure__ifdat__other__Datasets"
         },
         "BSI": {
           "$ref": "#/definitions/journey__structure__ifdat__bsi__Datasets"
         },
-        "INC": {
+        "INCOME": {
           "$ref": "#/definitions/journey__structure__ifdat__income__Datasets"
         }
       }

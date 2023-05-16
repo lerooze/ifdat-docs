@@ -45,7 +45,7 @@ IFDAT-DOCS
    generic
    categories
    examples
-   validation
+   .. validation
    identifiers
    ras
    whatsnew
@@ -54,5 +54,5 @@ IFDAT-DOCS
 .. toctree::
    :hidden:
 
-   glossary
+   .. glossary
    license
