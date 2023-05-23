@@ -1,0 +1,32 @@
+"ID","NAME","DESCRIPTION"
+"--","Reset","Reset value"
+"DOM","Domestic","
+            The investment fund predominantly invests in assets issued by
+            residents in the same country as the investment fund.
+            "
+"EEA","Europe (EEA)","
+            Defined in Guideline ESMA/2014/869EN
+            "
+"OEA","Europe (other than EEA)","
+            Defined in Guideline ESMA/2014/869EN
+            "
+"NAM","North America","
+            Defined in Guideline ESMA/2014/869EN
+            "
+"SAM","South America","
+            Defined in Guideline ESMA/2014/869EN
+            "
+"ASP","Asia / Pacific","
+            Defined in Guideline ESMA/2014/869EN
+            "
+"MEA","Middle East","
+            Defined in Guideline ESMA/2014/869EN
+            "
+"AFR","Africa","
+            Defined in Guideline ESMA/2014/869EN
+            "
+"OTH","Other","
+            Predominantly invests in assets issued by supranational entities or
+            it does not predominantly invest in any single geographical region
+            defined above.
+            "

@@ -3,8 +3,6 @@ IFDAT-DOCS
 
 :download:`Εδώ </_files/ifdat-docs.pdf>` θα βρείτε τις οδηγίες σε μορφή pdf.
 
-:download:`Εδώ </_files/ifdat-docs.docx>` θα βρείτε τις οδηγίες σε μορφή docx.
-
 :download:`Εδώ </_files/IFDAT_DATAMODEL.xlsx>` θα βρείτε τo DATA MODEL (:doc:`model`).
 
 :download:`Εδώ </_files/IFDAT_TEMPLATE.xlsx>` θα βρείτε τo υπόδειγμα EXCEL για εισαγωγή στοιχείων (:doc:`submission`).
@@ -44,6 +42,7 @@ IFDAT-DOCS
    model
    generic
    categories
+   codelists
    examples
    identifiers
    ras

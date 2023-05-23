@@ -1,0 +1,135 @@
+"ID","NAME","DESCRIPTION"
+"--","Reset","Reset value"
+"CRD","Credit-card loan","
+            Credit granted via delayed debit cards, i.e. cards providing
+            convenience credit, or via credit cards, i.e. cards providing
+            convenience credit and extended credit.  Convenience credit is the
+            credit granted at an interest rate of 0% in the period between the
+            payment transactions made with the card during one billing cycle
+            and the date at which the debit balances from this specific billing
+            cycle become due.  Extended credit it credit granted after the due
+            dates of the previous billing cylces have passed, i.e. debit
+            amounts on the card account that have not been settled when this
+            was first possible, for which an interest rate or tiered interest
+            rates usually greater than 0% are charged.
+            "
+"OVR","Overdraft","
+            Where a deposit account has an overdraft facility and subsequently
+            becomes overdrawn, the withdrawal to zero is the withdrawal of a
+            deposit (recorded in the DEPOSIT relevant tables) and the amount of
+            overdraft is recorded in the LOAN relevant tables.
+            "
+"REV","Revolving loans","
+            Revolving loans are loans, excluding overdrafts and credit card
+            debt, obtained through a line of credit and not yet repaid, where
+            funds can be repeatedly repaid and drawn again (whether in one
+            amount or in installments) up to an agreed contractual credit
+            limit.  Revolving loans have the following features:
+                (a) the borrower may draw on the facility up to an agreed
+                    amount without notifying the lender
+                (b) the amount of available credit fluctuates as funds are
+                    borrowed and repaid
+                (c) the facility may be used repeatedly
+                (d) there is no obligation to repay regularly
+            A margin account in which the broker-dealer lends the investor cash
+            to purchase securities is a revolving loan.
+            "
+"FLS","Financial leases","
+            Financial leases are defined in Regulation ECB/2013/33 as contracts
+            under which the legal owner of a durable good (lessor) lends it to
+            a third party (lessee) for most if not all of its economic life, in
+            exchange for instalments covering the cost of the good and an
+            imputed interest charge. The lessee, as the economic owner, enjoys
+            all the benefits from the use of the good and incurs the costs and
+            risks of ownership. In addition it is the lessee, as the economic
+            owner, that must provide any necessary repair and maintenance of
+            the good. For statistical purposes, financial leases are treated as
+            loans from the lessor to the lessee, with payments treated as loan
+            repayments rather than rentals on the asset. The durable goods
+            which are the subject of the lease are recorded on the balance
+            sheet of the lessee (and valued at the purchase price paid by the
+            lessor). Hire-purchase agreements are considered a type of
+            financial lease.
+            "
+"NOS","Non-negotiable securities","
+            Holdings of debt securities which are not negotiable and cannot be
+            traded on secondary markets are recorded as loans. These are
+            instruments where the transfer of legal ownership is subject to
+            restrictions which imply that they cannot be marketed or, although
+            they are technically negotiable, cannot be traded owing to the
+            absence of an organised market. Non-negotiable instruments that
+            subsequently become negotiable and can be traded on secondary
+            markets should be reclassified as debt securities.
+            "
+"TRD","Traded loans","
+            Loans that have de facto become negotiable are called traded loans.
+            Where there is no evidence of secondary market trading in the
+            traded loans, they are classified as loans. Otherwise, they are
+            classified as debt securities.
+            "
+"SUB","Subordinated debt in the form of loans","
+            These are non-negotiable instruments constituting a subsidiary
+            claim on the issuer that can be exercised only after all
+            higher-status claims (i.e. deposits, loans) have been satisfied,
+            giving them some of the characteristics of equity. Subordinated
+            debt is classified as either “loans” or “debt securities” according
+            to the nature and characteristics of the financial instrument.
+            "
+"INT","Intragroup loans","
+            For subsidiaries, financing via inter-company or funding can be
+            classified either as inter-company lending or as capital endowments
+            (equity) in a subsidiary. As with subordinated debt, positions
+            should be classified according to the criteria of loan and equity
+            instruments.
+            "
+"RFC","Recource factoring","
+            Factoring refers to a transaction whereby a financial institution,
+            known as a factoring company, purchases accounts receivable (i.e.
+            invoices) from a third party. Specifically, it is the sale of a
+            firm’s (the factoring client’s) claims (in full or in part)
+            recorded under accounts receivable (in the form of invoices),
+            representing money due from its customers, to a factoring company.
+            The factoring company buys the receivables at a price which is
+            lower than the face value of the invoice, thereby effectively
+            charging the applicable fees and interest. The factoring company
+            manages the sales ledger and the collection of the accounts under
+            the terms agreed by the factoring client (firm). The customers send
+            their payments directly to the factoring company. Finance is
+            therefore extended for the duration of the trade debt.
+            In recourse factoring the risk of default by the customer is
+            retained by the factoring client in which case the factoring
+            company is able to hold the factoring client liable if a debtor is
+            unable to pay.  In particular, in recourse factoring the factoring
+            company buys the receivables at a discount to the face value of the
+            invoice.  This discount is retained as collateral to cover the
+            risks associated with the operation. Upon payment of the invoices
+            by the customers, the factoring company transmits the proceeds net
+            of the advanced cash and the applicable fees and interest charges
+            to the factoring client.  The counterparty of the loan by the
+            factoring company is the factoring client.
+            "
+"NFC","Non-recource factoring","
+            Factoring refers to a transaction whereby a financial institution,
+            known as a factoring company, purchases accounts receivable (i.e.
+            invoices) from a third party. Specifically, it is the sale of a
+            firm’s (the factoring client’s) claims (in full or in part)
+            recorded under accounts receivable (in the form of invoices),
+            representing money due from its customers, to a factoring company.
+            The factoring company buys the receivables at a price which is
+            lower than the face value of the invoice, thereby effectively
+            charging the applicable fees and interest. The factoring company
+            manages the sales ledger and the collection of the accounts under
+            the terms agreed by the factoring client (firm). The customers send
+            their payments directly to the factoring company. Finance is
+            therefore extended for the duration of the trade debt. In
+            non-recourse factoring the full risk of default by the customer is
+            assumed by the factoring company and fees and interest are
+            therefore charged immediately to the factoring client, who receives
+            the full amount of the trade credit net of these charges. In this
+            case the customers are the counterparty of the loan by the
+            factoring company.
+            "
+"OTH","Other loan","
+            Loan other than CRD, OVR, REV, FLS, NOS, TRD, SUB, INT, RFC,
+            NFC.
+            "

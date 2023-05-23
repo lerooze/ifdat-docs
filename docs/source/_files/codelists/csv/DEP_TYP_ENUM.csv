@@ -1,0 +1,19 @@
+"ID","NAME","DESCRIPTION"
+"--","Reset","Reset value"
+"OVER","Overnight deposits","
+            Overnight deposits, as defined by Regulation ECB/2013/33, are
+            convertible into currency and/or transferable on demand by cheque,
+            banker's order, debit entry or similar means, without significant
+            delay (maximum by close of business on the following business day),
+            restriction or penalty.
+            "
+"AMAT","Deposits with agreed maturity","
+             Deposits with agreed maturity are non-transferable deposits which
+             cannot be withdrawn before an agreed fixed term, or that can be
+             withdrawn only subject to a penalty.
+             "
+"ANOT","Deposits redeemable at notice","
+             Deposits redeemable at notice are non-transferable deposits,
+             usually with no agreed maturity, but which may be withdrawn
+             without penalty only after a period of notice.
+             "

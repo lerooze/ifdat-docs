@@ -1,9 +1,0 @@
-
-[91mException occurred:[39;49;00m
-  File "/home/al459/envs/ifdat-docs/env/lib/python3.11/site-packages/docutils/nodes.py", line 575, in __getitem__
-    return self.children[key]
-           ~~~~~~~~~~~~~^^^^^
-IndexError: list index out of range
-[91mThe full traceback has been saved in /tmp/sphinx-err-099kku8j.log, if you want to report the issue to the developers.[39;49;00m
-Please also report this if it was a user error, so that a better error message can be provided next time.
-A bug report can be filed in the tracker at <https://github.com/sphinx-doc/sphinx/issues>. Thanks!

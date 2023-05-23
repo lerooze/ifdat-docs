@@ -1,0 +1,58 @@
+"ID","NAME","DESCRIPTION"
+"--","Reset","Reset value"
+"MMF","Money Market Funds","
+            ‘Money market funds’ means collective investment undertakings that
+            have been authorised pursuant to Article 4 of Regulation (EU)
+            2017/1131 and that issue shares or units which are close
+            substitutes for deposits as referred to in Part 1 of Annex I to
+            Regulation ECB/2021/2.
+            "
+"EQT","Equity Funds","
+            Equity funds are investment funds primarily investing in equity.
+            "
+"BON","Bond Funds","
+            Equity funds are investment funds primarily investing in debt securities.
+            "
+"MIX","Mixed Funds","
+            Mixed funds are investment funds investing in both equity and bonds
+            with no prevailing policy in favour of one or the other instrument.
+            "
+"RES","Read Estate Funds","
+            Real estate funds are investment funds primarily investing in real
+            estate.
+            "
+"HED","Hedge Funds","
+            Hedge funds mean any collective investment undertakings regardless
+            of its legal structure under national laws, which apply relatively
+            unconstrained investment strategies to achieve positive absolute
+            returns, and whose managers, in addition to management fees, are
+            remunerated in relation to the fund’s performance. For that
+            purpose, hedge funds have few restrictions on the type of financial
+            instruments in which they may invest and may therefore flexibly
+            employ a wide variety of financial techniques, involving leverage,
+            short-selling or any other techniques.  This definition also covers
+            funds that invest, in full or in part, in other hedge funds
+            provided that they otherwise meet the definition.
+            "
+"LOA","Loan / credit Funds","
+            Loan credit funds are investment funds primarily investing in loans.
+            "
+"COM","Commodity Funds","
+            Commodity funds are investment funds primarily investing in commodities.
+            "
+"INF","Infrastructure Funds","
+            Infrastructure funds are investment funds primarily investing in
+            public building infrastructure such as schools, hospitals or
+            prisons, social infrastructure such as social housing, transport
+            infrastructure such as roads, mass transit systems or airports,
+            energy infrastructure such as energy grids, climate adaptation and
+            mitigation projects, power plants or pipelines, water management
+            infrastructure such as water supply systems, sewage or irrigation
+            systems, communication infrastructure such as networks, and waste
+            management infrastructure such as recycling or collection systems.
+            "
+"OTH","Other Funds","
+            Other funds are investment funds other than bond funds, equity
+            funds, mixed funds, real estate funds, hedge funds, loan / credit
+            funds, commodity funds or infrastructure funds.
+            "

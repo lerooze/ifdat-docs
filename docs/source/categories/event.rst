@@ -119,15 +119,15 @@ PAYMENT DATE (PMNT_DT)
     Ημερομηνία πληρωμής·
 
 FREQUENCY (FRQNCY)
-    Συχνότητα διανομής μεριδίου με επιλογή από τη λίστα τιμών ``DVDND_CSTM_FRQNCY_ENUM`` ·
+    Συχνότητα διανομής μεριδίου με επιλογή από τη λίστα τιμών :doc:`../codelists/dvdnd_cstm_frqncy`
 
 TYPE (TYP)
-    Είδος με επιλογή από τη λίστα τιμών ``DVDND_TYP_ENUM`` ·
+    Είδος με επιλογή από τη λίστα τιμών :doc:`../codelists/dvdnd_typ`
 
 .. _currency_div:
 
 CRRNCY (CURRENCY)
-    Το νόμισμα συναλλαγής με επιλογή από τη λίστα τιμών ``GEN_CRRNCY_ENUM`` (κατά περίπτωση)·
+    Το νόμισμα συναλλαγής με επιλογή από τη λίστα τιμών :doc:`../codelists/gen_crrncy`
 
 AMOUNT (AMNT)
     Πόσο εκφραζόμενο σε currency_div_ αν η πληρωμή γίνεται σε νόμισμα·

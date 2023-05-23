@@ -117,8 +117,8 @@
         "VALUE"
       ]
     },
-    "FundSeries": {
-      "title": "FundSeries",
+    "FndSeries": {
+      "title": "FndSeries",
       "type": "object",
       "properties": {
         "DIMS": {
@@ -660,8 +660,8 @@
         "VALUE"
       ]
     },
-    "StaticFundSeries": {
-      "title": "StaticFundSeries",
+    "FndExtnddSeries": {
+      "title": "FndExtnddSeries",
       "type": "object",
       "properties": {
         "DIMS": {
@@ -710,9 +710,6 @@
           "$ref": "#/definitions/BaseMeasure_OrgInstttnlSctrCntrlEnum_"
         },
         "MNGD_BY": {
-          "$ref": "#/definitions/BaseMeasure_ID_"
-        },
-        "RPRTD_BY": {
           "$ref": "#/definitions/BaseMeasure_ID_"
         },
         "UNDR_UMBRLL_BY": {
@@ -3621,8 +3618,8 @@
         "VALUE"
       ]
     },
-    "DebtSeries": {
-      "title": "DebtSeries",
+    "journey__structure__ifdat__self__DbtSeries": {
+      "title": "DbtSeries",
       "type": "object",
       "properties": {
         "DIMS": {
@@ -3782,8 +3779,8 @@
         "VALUE"
       ]
     },
-    "StaticDebtSeries": {
-      "title": "StaticDebtSeries",
+    "DbtExtnddSeries": {
+      "title": "DbtExtnddSeries",
       "type": "object",
       "properties": {
         "DIMS": {
@@ -3856,8 +3853,8 @@
         "VALUE"
       ]
     },
-    "journey__structure__ifdat__self__ShareSeries": {
-      "title": "ShareSeries",
+    "journey__structure__ifdat__self__ShrSeries": {
+      "title": "ShrSeries",
       "type": "object",
       "properties": {
         "DIMS": {
@@ -3977,8 +3974,8 @@
         "VALUE"
       ]
     },
-    "StaticShareSeries": {
-      "title": "StaticShareSeries",
+    "ShrExtnddSeries": {
+      "title": "ShrExtnddSeries",
       "type": "object",
       "properties": {
         "DIMS": {
@@ -4013,8 +4010,8 @@
         "DIMS"
       ]
     },
-    "ManagementSeries": {
-      "title": "ManagementSeries",
+    "MngmntSeries": {
+      "title": "MngmntSeries",
       "type": "object",
       "properties": {
         "DIMS": {
@@ -4168,86 +4165,8 @@
         "VALUE"
       ]
     },
-    "StaticManagementSeries": {
-      "title": "StaticManagementSeries",
-      "type": "object",
-      "properties": {
-        "DIMS": {
-          "$ref": "#/definitions/StaticDimensionContainer_ORG_"
-        },
-        "NM": {
-          "$ref": "#/definitions/BaseMeasure_Str128_"
-        },
-        "NM_LTN": {
-          "$ref": "#/definitions/BaseMeasure_Ascii128_"
-        },
-        "NM_SHRT": {
-          "$ref": "#/definitions/BaseMeasure_Str64_"
-        },
-        "STRT": {
-          "$ref": "#/definitions/BaseMeasure_Str64_"
-        },
-        "STRT_LTN": {
-          "$ref": "#/definitions/BaseMeasure_Ascii64_"
-        },
-        "CTY": {
-          "$ref": "#/definitions/BaseMeasure_Str32_"
-        },
-        "CTY_LTN": {
-          "$ref": "#/definitions/BaseMeasure_Ascii32_"
-        },
-        "PSTL_CD": {
-          "$ref": "#/definitions/BaseMeasure_Str16_"
-        },
-        "URL": {
-          "$ref": "#/definitions/BaseMeasure_AnyUrl_"
-        },
-        "EMAIL": {
-          "$ref": "#/definitions/BaseMeasure_EmailStr_"
-        },
-        "CNTRY_RSDNC": {
-          "$ref": "#/definitions/BaseMeasure_GenCntryEnum_"
-        }
-      },
-      "required": [
-        "DIMS"
-      ]
-    },
-    "ReporterSeries": {
-      "title": "ReporterSeries",
-      "type": "object",
-      "properties": {
-        "DIMS": {
-          "$ref": "#/definitions/DimensionContainer_ORG_"
-        },
-        "DT_BRTH": {
-          "$ref": "#/definitions/BaseMeasure_date_"
-        },
-        "DT_CLS": {
-          "$ref": "#/definitions/BaseMeasure_date_"
-        },
-        "LEI_ID": {
-          "$ref": "#/definitions/BaseMeasure_Ascii20_"
-        },
-        "TAX_ID": {
-          "$ref": "#/definitions/BaseMeasure_Ascii31_"
-        },
-        "NBR_ID": {
-          "$ref": "#/definitions/BaseMeasure_Ascii31_"
-        },
-        "SPLT_FRM": {
-          "$ref": "#/definitions/BaseMeasure_ORG_"
-        },
-        "MRGD_WTH": {
-          "$ref": "#/definitions/BaseMeasure_ORG_"
-        }
-      },
-      "required": [
-        "DIMS"
-      ]
-    },
-    "StaticReporterSeries": {
-      "title": "StaticReporterSeries",
+    "MngmntExtnddSeries": {
+      "title": "MngmntExtnddSeries",
       "type": "object",
       "properties": {
         "DIMS": {
@@ -4306,8 +4225,8 @@
         "ID"
       ]
     },
-    "ContactSeries": {
-      "title": "ContactSeries",
+    "CntctSeries": {
+      "title": "CntctSeries",
       "type": "object",
       "properties": {
         "DIMS": {
@@ -4388,8 +4307,8 @@
         "VALUE"
       ]
     },
-    "ContactToReporterSeries": {
-      "title": "ContactToReporterSeries",
+    "CntctTRaSeries": {
+      "title": "CntctTRaSeries",
       "type": "object",
       "properties": {
         "DIMS": {
@@ -4419,88 +4338,74 @@
       "title": "Datasets",
       "type": "object",
       "properties": {
-        "FUND": {
-          "title": "Fund",
+        "FND": {
+          "title": "Fnd",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/FundSeries"
+            "$ref": "#/definitions/FndSeries"
           }
         },
-        "STATIC_FUND": {
-          "title": "Static Fund",
+        "FND_EXTNDD": {
+          "title": "Fnd Extndd",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/StaticFundSeries"
+            "$ref": "#/definitions/FndExtnddSeries"
           }
         },
-        "DEBT": {
-          "title": "Debt",
+        "DBT": {
+          "title": "Dbt",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/DebtSeries"
+            "$ref": "#/definitions/journey__structure__ifdat__self__DbtSeries"
           }
         },
-        "STATIC_DEBT": {
-          "title": "Static Debt",
+        "DBT_EXTNDD": {
+          "title": "Dbt Extndd",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/StaticDebtSeries"
+            "$ref": "#/definitions/DbtExtnddSeries"
           }
         },
-        "SHARE": {
-          "title": "Share",
+        "SHR": {
+          "title": "Shr",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/journey__structure__ifdat__self__ShareSeries"
+            "$ref": "#/definitions/journey__structure__ifdat__self__ShrSeries"
           }
         },
-        "STATIC_SHARE": {
-          "title": "Static Share",
+        "SHR_EXTNDD": {
+          "title": "Shr Extndd",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/StaticShareSeries"
+            "$ref": "#/definitions/ShrExtnddSeries"
           }
         },
-        "MANAGEMENT": {
-          "title": "Management",
+        "MNGMNT": {
+          "title": "Mngmnt",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/ManagementSeries"
+            "$ref": "#/definitions/MngmntSeries"
           }
         },
-        "STATIC_MANAGEMENT": {
-          "title": "Static Management",
+        "MNGMNT_EXTNDD": {
+          "title": "Mngmnt Extndd",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/StaticManagementSeries"
+            "$ref": "#/definitions/MngmntExtnddSeries"
           }
         },
-        "RA": {
-          "title": "Ra",
+        "CNTCT": {
+          "title": "Cntct",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/ReporterSeries"
+            "$ref": "#/definitions/CntctSeries"
           }
         },
-        "STATIC_RA": {
-          "title": "Static Ra",
+        "CNTCT_T_RA": {
+          "title": "Cntct T Ra",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/StaticReporterSeries"
-          }
-        },
-        "CONTACT": {
-          "title": "Contact",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/ContactSeries"
-          }
-        },
-        "CONTACT_TO_RA": {
-          "title": "Contact To Ra",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/ContactToReporterSeries"
+            "$ref": "#/definitions/CntctTRaSeries"
           }
         }
       },
@@ -4527,8 +4432,8 @@
         "DT"
       ]
     },
-    "TrancheSeries": {
-      "title": "TrancheSeries",
+    "TrnchSeries": {
+      "title": "TrnchSeries",
       "type": "object",
       "properties": {
         "DIMS": {
@@ -4543,8 +4448,8 @@
         "AMNT"
       ]
     },
-    "RedemptionSeries": {
-      "title": "RedemptionSeries",
+    "RdmptnSeries": {
+      "title": "RdmptnSeries",
       "type": "object",
       "properties": {
         "DIMS": {
@@ -4572,8 +4477,8 @@
         "VALUE"
       ]
     },
-    "CouponSeries": {
-      "title": "CouponSeries",
+    "CpnSeries": {
+      "title": "CpnSeries",
       "type": "object",
       "properties": {
         "DIMS": {
@@ -4684,8 +4589,8 @@
         "VALUE"
       ]
     },
-    "DividendSeries": {
-      "title": "DividendSeries",
+    "DvdndSeries": {
+      "title": "DvdndSeries",
       "type": "object",
       "properties": {
         "DIMS": {
@@ -4724,8 +4629,8 @@
         "AMNT"
       ]
     },
-    "SplitSeries": {
-      "title": "SplitSeries",
+    "SpltSeries": {
+      "title": "SpltSeries",
       "type": "object",
       "properties": {
         "DIMS": {
@@ -4744,39 +4649,39 @@
       "title": "Datasets",
       "type": "object",
       "properties": {
-        "TRANCHE": {
-          "title": "Tranche",
+        "TRNCH": {
+          "title": "Trnch",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/TrancheSeries"
+            "$ref": "#/definitions/TrnchSeries"
           }
         },
         "REDEMPTION": {
           "title": "Redemption",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/RedemptionSeries"
+            "$ref": "#/definitions/RdmptnSeries"
           }
         },
-        "COUPON": {
-          "title": "Coupon",
+        "CPN": {
+          "title": "Cpn",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/CouponSeries"
+            "$ref": "#/definitions/CpnSeries"
           }
         },
-        "DIV": {
-          "title": "Div",
+        "DVDND": {
+          "title": "Dvdnd",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/DividendSeries"
+            "$ref": "#/definitions/DvdndSeries"
           }
         },
-        "SPLIT": {
-          "title": "Split",
+        "SPLT": {
+          "title": "Splt",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/SplitSeries"
+            "$ref": "#/definitions/SpltSeries"
           }
         }
       },
@@ -4817,8 +4722,8 @@
         "VALUE"
       ]
     },
-    "IssuerSeries": {
-      "title": "IssuerSeries",
+    "IssrSeries": {
+      "title": "IssrSeries",
       "type": "object",
       "properties": {
         "DIMS": {
@@ -4847,8 +4752,8 @@
         "DIMS"
       ]
     },
-    "journey__structure__ifdat__other__HolderSeries": {
-      "title": "HolderSeries",
+    "journey__structure__ifdat__other__HldrSeries": {
+      "title": "HldrSeries",
       "type": "object",
       "properties": {
         "DIMS": {
@@ -4953,8 +4858,8 @@
         "VALUE"
       ]
     },
-    "DepSeries": {
-      "title": "DepSeries",
+    "journey__structure__ifdat__other__DpstSeries": {
+      "title": "DpstSeries",
       "type": "object",
       "properties": {
         "DIMS": {
@@ -5125,8 +5030,8 @@
         "VALUE"
       ]
     },
-    "LonSeries": {
-      "title": "LonSeries",
+    "journey__structure__ifdat__other__LnSeries": {
+      "title": "LnSeries",
       "type": "object",
       "properties": {
         "DIMS": {
@@ -5158,7 +5063,7 @@
         "DIMS"
       ]
     },
-    "DbtSeries": {
+    "journey__structure__ifdat__other__DbtSeries": {
       "title": "DbtSeries",
       "type": "object",
       "properties": {
@@ -5212,8 +5117,8 @@
         "VALUE"
       ]
     },
-    "journey__structure__ifdat__other__ShareSeries": {
-      "title": "ShareSeries",
+    "journey__structure__ifdat__other__ShrSeries": {
+      "title": "ShrSeries",
       "type": "object",
       "properties": {
         "DIMS": {
@@ -5552,25 +5457,25 @@
       "title": "Datasets",
       "type": "object",
       "properties": {
-        "ISSUER": {
-          "title": "Issuer",
+        "ISSR": {
+          "title": "Issr",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/IssuerSeries"
+            "$ref": "#/definitions/IssrSeries"
           }
         },
-        "HOLDER": {
-          "title": "Holder",
+        "HLDR": {
+          "title": "Hldr",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/journey__structure__ifdat__other__HolderSeries"
+            "$ref": "#/definitions/journey__structure__ifdat__other__HldrSeries"
           }
         },
-        "DEPOSIT": {
-          "title": "Deposit",
+        "DPST": {
+          "title": "Dpst",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/DepSeries"
+            "$ref": "#/definitions/journey__structure__ifdat__other__DpstSeries"
           }
         },
         "SFT": {
@@ -5580,50 +5485,50 @@
             "$ref": "#/definitions/journey__structure__ifdat__other__SftSeries"
           }
         },
-        "LOAN": {
-          "title": "Loan",
+        "LN": {
+          "title": "Ln",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/LonSeries"
+            "$ref": "#/definitions/journey__structure__ifdat__other__LnSeries"
           }
         },
-        "DEBT": {
-          "title": "Debt",
+        "DBT": {
+          "title": "Dbt",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/DbtSeries"
+            "$ref": "#/definitions/journey__structure__ifdat__other__DbtSeries"
           }
         },
-        "SHARE": {
-          "title": "Share",
+        "SHR": {
+          "title": "Shr",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/journey__structure__ifdat__other__ShareSeries"
+            "$ref": "#/definitions/journey__structure__ifdat__other__ShrSeries"
           }
         },
-        "EXT_DER": {
-          "title": "Ext Der",
+        "EDR": {
+          "title": "Edr",
           "type": "array",
           "items": {
             "$ref": "#/definitions/journey__structure__ifdat__other__EdrSeries"
           }
         },
-        "OTC_DER": {
-          "title": "Otc Der",
+        "ODR": {
+          "title": "Odr",
           "type": "array",
           "items": {
             "$ref": "#/definitions/journey__structure__ifdat__other__OdrSeries"
           }
         },
-        "RES_RE": {
-          "title": "Res Re",
+        "RRE": {
+          "title": "Rre",
           "type": "array",
           "items": {
             "$ref": "#/definitions/journey__structure__ifdat__other__RreSeries"
           }
         },
-        "COM_RE": {
-          "title": "Com Re",
+        "CRE": {
+          "title": "Cre",
           "type": "array",
           "items": {
             "$ref": "#/definitions/journey__structure__ifdat__other__CreSeries"
@@ -5657,8 +5562,8 @@
         "DT"
       ]
     },
-    "CashSeries": {
-      "title": "CashSeries",
+    "CshSeries": {
+      "title": "CshSeries",
       "type": "object",
       "properties": {
         "DIMS": {
@@ -5744,8 +5649,8 @@
         "FRQNCY"
       ]
     },
-    "DepositSeries": {
-      "title": "DepositSeries",
+    "journey__structure__ifdat__bsi__DpstSeries": {
+      "title": "DpstSeries",
       "type": "object",
       "properties": {
         "DIMS": {
@@ -5857,8 +5762,8 @@
         "FRQNCY"
       ]
     },
-    "AssetDebtSeries": {
-      "title": "AssetDebtSeries",
+    "AsstDbtSeries": {
+      "title": "AsstDbtSeries",
       "type": "object",
       "properties": {
         "DIMS": {
@@ -5897,6 +5802,63 @@
         "ARRRS"
       ]
     },
+    "AccDimensionContainer_LON_": {
+      "title": "AccDimensionContainer[LON]",
+      "type": "object",
+      "properties": {
+        "IID": {
+          "title": "Iid",
+          "maxLength": 32,
+          "pattern": "^P[a-zA-z0-9_]+",
+          "type": "string"
+        },
+        "DT": {
+          "title": "Dt",
+          "type": "string",
+          "format": "date"
+        }
+      },
+      "required": [
+        "IID",
+        "DT"
+      ]
+    },
+    "journey__structure__ifdat__bsi__LnSeries": {
+      "title": "LnSeries",
+      "type": "object",
+      "properties": {
+        "DIMS": {
+          "$ref": "#/definitions/AccDimensionContainer_LON_"
+        },
+        "STCK": {
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
+        },
+        "EUR_STCK": {
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
+        },
+        "ACCRLS": {
+          "$ref": "#/definitions/BaseMeasure_float_"
+        },
+        "ARRRS": {
+          "$ref": "#/definitions/BaseMeasure_float_"
+        },
+        "WRT_OFFS": {
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
+        },
+        "IS_GRP_LN": {
+          "$ref": "#/definitions/BaseMeasure_bool_"
+        }
+      },
+      "required": [
+        "DIMS",
+        "STCK",
+        "EUR_STCK",
+        "ACCRLS",
+        "ARRRS",
+        "WRT_OFFS",
+        "IS_GRP_LN"
+      ]
+    },
     "RelFrqncyAccDimensionContainer_SHR__ORG_": {
       "title": "RelFrqncyAccDimensionContainer[SHR, ORG]",
       "type": "object",
@@ -5929,8 +5891,8 @@
         "FRQNCY"
       ]
     },
-    "journey__structure__ifdat__bsi__ShareSeries": {
-      "title": "ShareSeries",
+    "journey__structure__ifdat__bsi__ShrSeries": {
+      "title": "ShrSeries",
       "type": "object",
       "properties": {
         "DIMS": {
@@ -6268,8 +6230,8 @@
         "FRQNCY"
       ]
     },
-    "RemainingFixedSeries": {
-      "title": "RemainingFixedSeries",
+    "RmnngFxdSeries": {
+      "title": "RmnngFxdSeries",
       "type": "object",
       "properties": {
         "DIMS": {
@@ -7988,8 +7950,8 @@
         "DT"
       ]
     },
-    "RemainingSeries": {
-      "title": "RemainingSeries",
+    "RmnngSeries": {
+      "title": "RmnngSeries",
       "type": "object",
       "properties": {
         "DIMS": {
@@ -8008,8 +7970,8 @@
         "EUR_STCK"
       ]
     },
-    "LiabilityDebtSeries": {
-      "title": "LiabilityDebtSeries",
+    "LbltyDbtSeries": {
+      "title": "LbltyDbtSeries",
       "type": "object",
       "properties": {
         "DIMS": {
@@ -8044,61 +8006,8 @@
         "ARRRS"
       ]
     },
-    "AccDimensionContainer_LON_": {
-      "title": "AccDimensionContainer[LON]",
-      "type": "object",
-      "properties": {
-        "IID": {
-          "title": "Iid",
-          "maxLength": 32,
-          "pattern": "^P[a-zA-z0-9_]+",
-          "type": "string"
-        },
-        "DT": {
-          "title": "Dt",
-          "type": "string",
-          "format": "date"
-        }
-      },
-      "required": [
-        "IID",
-        "DT"
-      ]
-    },
-    "LoanSeries": {
-      "title": "LoanSeries",
-      "type": "object",
-      "properties": {
-        "DIMS": {
-          "$ref": "#/definitions/AccDimensionContainer_LON_"
-        },
-        "STCK": {
-          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
-        },
-        "EUR_STCK": {
-          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
-        },
-        "ACCRLS": {
-          "$ref": "#/definitions/BaseMeasure_float_"
-        },
-        "ARRRS": {
-          "$ref": "#/definitions/BaseMeasure_float_"
-        },
-        "WRT_OFFS": {
-          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
-        }
-      },
-      "required": [
-        "DIMS",
-        "STCK",
-        "EUR_STCK",
-        "ACCRLS",
-        "ARRRS",
-        "WRT_OFFS"
-      ]
-    },
-    "journey__structure__ifdat__bsi__HolderSeries": {
-      "title": "HolderSeries",
+    "journey__structure__ifdat__bsi__HldrSeries": {
+      "title": "HldrSeries",
       "type": "object",
       "properties": {
         "DIMS": {
@@ -8150,8 +8059,8 @@
         "DT"
       ]
     },
-    "PriceSeries": {
-      "title": "PriceSeries",
+    "BkPrcSeries": {
+      "title": "BkPrcSeries",
       "type": "object",
       "properties": {
         "DIMS": {
@@ -8170,123 +8079,130 @@
       "title": "Datasets",
       "type": "object",
       "properties": {
-        "CASH": {
-          "title": "Cash",
+        "CSH": {
+          "title": "Csh",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/CashSeries"
+            "$ref": "#/definitions/CshSeries"
           }
         },
-        "DEPOSIT": {
-          "title": "Deposit",
+        "DPST": {
+          "title": "Dpst",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/DepositSeries"
+            "$ref": "#/definitions/journey__structure__ifdat__bsi__DpstSeries"
           }
         },
-        "ASSET_SFT": {
-          "title": "Asset Sft",
+        "ASST_SFT": {
+          "title": "Asst Sft",
           "type": "array",
           "items": {
             "$ref": "#/definitions/journey__structure__ifdat__bsi__SftSeries"
           }
         },
-        "ASSET_DEBT": {
-          "title": "Asset Debt",
+        "ASST_DBT": {
+          "title": "Asst Dbt",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/AssetDebtSeries"
+            "$ref": "#/definitions/AsstDbtSeries"
           }
         },
-        "SHARE": {
-          "title": "Share",
+        "ASST_LN": {
+          "title": "Asst Ln",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/journey__structure__ifdat__bsi__ShareSeries"
+            "$ref": "#/definitions/journey__structure__ifdat__bsi__LnSeries"
           }
         },
-        "EXT_DERIVATIVE": {
-          "title": "Ext Derivative",
+        "SHR": {
+          "title": "Shr",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/journey__structure__ifdat__bsi__ShrSeries"
+          }
+        },
+        "EDR": {
+          "title": "Edr",
           "type": "array",
           "items": {
             "$ref": "#/definitions/journey__structure__ifdat__bsi__EdrSeries"
           }
         },
-        "OTC_DERIVATIVE": {
-          "title": "Otc Derivative",
+        "ODR": {
+          "title": "Odr",
           "type": "array",
           "items": {
             "$ref": "#/definitions/journey__structure__ifdat__bsi__OdrSeries"
           }
         },
-        "RESIDENTIAL_RE": {
-          "title": "Residential Re",
+        "RRE": {
+          "title": "Rre",
           "type": "array",
           "items": {
             "$ref": "#/definitions/journey__structure__ifdat__bsi__RreSeries"
           }
         },
-        "COMMERCIAL_RE": {
-          "title": "Commercial Re",
+        "CRE": {
+          "title": "Cre",
           "type": "array",
           "items": {
             "$ref": "#/definitions/journey__structure__ifdat__bsi__CreSeries"
           }
         },
-        "REM_FIXED": {
-          "title": "Rem Fixed",
+        "RMNNG_FXD": {
+          "title": "Rmnng Fxd",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/RemainingFixedSeries"
+            "$ref": "#/definitions/RmnngFxdSeries"
           }
         },
-        "ASSET_REM": {
-          "title": "Asset Rem",
+        "ASST_RMNNG": {
+          "title": "Asst Rmnng",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/RemainingSeries"
+            "$ref": "#/definitions/RmnngSeries"
           }
         },
-        "LIAB_SFT": {
-          "title": "Liab Sft",
+        "LBLTY_SFT": {
+          "title": "Lblty Sft",
           "type": "array",
           "items": {
             "$ref": "#/definitions/journey__structure__ifdat__bsi__SftSeries"
           }
         },
-        "LIAB_DEBT": {
-          "title": "Liab Debt",
+        "LBLTY_DBT": {
+          "title": "Lblty Dbt",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/LiabilityDebtSeries"
+            "$ref": "#/definitions/LbltyDbtSeries"
           }
         },
-        "LOAN": {
-          "title": "Loan",
+        "LBLTY_LN": {
+          "title": "Lblty Ln",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/LoanSeries"
+            "$ref": "#/definitions/journey__structure__ifdat__bsi__LnSeries"
           }
         },
-        "LIAB_REM": {
-          "title": "Liab Rem",
+        "LBLTY_RMNNG": {
+          "title": "Lblty Rmnng",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/RemainingSeries"
+            "$ref": "#/definitions/RmnngSeries"
           }
         },
-        "HOLDER": {
-          "title": "Holder",
+        "HLDR": {
+          "title": "Hldr",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/journey__structure__ifdat__bsi__HolderSeries"
+            "$ref": "#/definitions/journey__structure__ifdat__bsi__HldrSeries"
           }
         },
-        "PRICE": {
-          "title": "Price",
+        "BK_PRC": {
+          "title": "Bk Prc",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/PriceSeries"
+            "$ref": "#/definitions/BkPrcSeries"
           }
         }
       },
@@ -8334,8 +8250,8 @@
         "FREQ"
       ]
     },
-    "RevenueSeries": {
-      "title": "RevenueSeries",
+    "RvnSeries": {
+      "title": "RvnSeries",
       "type": "object",
       "properties": {
         "DIMS": {
@@ -8401,8 +8317,8 @@
         "FREQ"
       ]
     },
-    "ExpenseSeries": {
-      "title": "ExpenseSeries",
+    "ExpnsSeries": {
+      "title": "ExpnsSeries",
       "type": "object",
       "properties": {
         "DIMS": {
@@ -8425,18 +8341,18 @@
       "title": "Datasets",
       "type": "object",
       "properties": {
-        "REVENUE": {
-          "title": "Revenue",
+        "RVN": {
+          "title": "Rvn",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/RevenueSeries"
+            "$ref": "#/definitions/RvnSeries"
           }
         },
-        "EXPENSE": {
-          "title": "Expense",
+        "EXPNS": {
+          "title": "Expns",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/ExpenseSeries"
+            "$ref": "#/definitions/ExpnsSeries"
           }
         }
       },
