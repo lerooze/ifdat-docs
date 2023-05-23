@@ -15,9 +15,9 @@ What's new?
 v0.5.1 (2023-05-24)
 -------------------
 
-* Add codelist section and links in categories to codelists 
-* Introduce greek names for categories and variables
-* Refactor examples
+* Add codelist section and links of enumerated variables and dimensions to codelists 
+* Start introducing greek names for categories and variables
+* Start refactoring examples
 * Other minor changes
   
 v0.5.0 (2023-05-16)
