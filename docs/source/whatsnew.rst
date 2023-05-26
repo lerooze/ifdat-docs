@@ -12,6 +12,15 @@ What's new?
 .. ============
 
 
+v0.5.2 (2023-05-26)
+-------------------
+
+* Refactor IFDat categories to three (REF, BSI, INC)
+* Refactor data category presentation
+* Start introducing variable data types into docs
+* Refactor examples
+* Other minor changes
+  
 v0.5.1 (2023-05-24)
 -------------------
 

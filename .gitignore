@@ -112,3 +112,5 @@ docs/source/_todo.txt
 
 # greek cache
 docs/source_el/
+
+copy_files.py
