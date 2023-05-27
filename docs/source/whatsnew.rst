@@ -12,6 +12,13 @@ What's new?
 .. ============
 
 
+v0.5.3 (2023-05-28)
+-------------------
+
+* Refactor IFDat categories to three (REF, ACC)
+* Complete t0 and t1 full examples for MFMC
+* Other minor changes
+  
 v0.5.2 (2023-05-26)
 -------------------
 

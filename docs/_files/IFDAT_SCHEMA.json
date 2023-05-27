@@ -3920,20 +3920,6 @@
         "ID"
       ]
     },
-    "BaseMeasure_Ascii12_": {
-      "title": "BaseMeasure[Ascii12]",
-      "type": "object",
-      "properties": {
-        "VALUE": {
-          "title": "Value",
-          "maxLength": 12,
-          "type": "string"
-        }
-      },
-      "required": [
-        "VALUE"
-      ]
-    },
     "BaseMeasure_SHR_": {
       "title": "BaseMeasure[SHR]",
       "type": "object",
@@ -3961,12 +3947,6 @@
         },
         "DT_CLS": {
           "$ref": "#/definitions/BaseMeasure_date_"
-        },
-        "ISIN_ID": {
-          "$ref": "#/definitions/BaseMeasure_Ascii32_"
-        },
-        "INTRNL_ID": {
-          "$ref": "#/definitions/BaseMeasure_Ascii12_"
         },
         "CRRNCY": {
           "$ref": "#/definitions/BaseMeasure_GenCrrncyEnum_"
@@ -5057,6 +5037,20 @@
         "ID"
       ]
     },
+    "BaseMeasure_Ascii12_": {
+      "title": "BaseMeasure[Ascii12]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "title": "Value",
+          "maxLength": 12,
+          "type": "string"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
     "DrvtvTypEnum": {
       "title": "DrvtvTypEnum",
       "description": "An enumeration.",
@@ -5649,7 +5643,7 @@
         "FRQNCY"
       ]
     },
-    "journey__structure__ifdat__bsi__DpstSeries": {
+    "journey__structure__ifdat__acc__DpstSeries": {
       "title": "DpstSeries",
       "type": "object",
       "properties": {
@@ -5702,7 +5696,7 @@
         "FRQNCY"
       ]
     },
-    "journey__structure__ifdat__bsi__SftSeries": {
+    "journey__structure__ifdat__acc__SftSeries": {
       "title": "SftSeries",
       "type": "object",
       "properties": {
@@ -5823,7 +5817,7 @@
         "DT"
       ]
     },
-    "journey__structure__ifdat__bsi__LnSeries": {
+    "journey__structure__ifdat__acc__LnSeries": {
       "title": "LnSeries",
       "type": "object",
       "properties": {
@@ -5891,7 +5885,7 @@
         "FRQNCY"
       ]
     },
-    "journey__structure__ifdat__bsi__ShrSeries": {
+    "journey__structure__ifdat__acc__ShrSeries": {
       "title": "ShrSeries",
       "type": "object",
       "properties": {
@@ -5959,7 +5953,7 @@
         "FRQNCY"
       ]
     },
-    "journey__structure__ifdat__bsi__EdrSeries": {
+    "journey__structure__ifdat__acc__EdrSeries": {
       "title": "EdrSeries",
       "type": "object",
       "properties": {
@@ -6016,7 +6010,7 @@
         "FRQNCY"
       ]
     },
-    "journey__structure__ifdat__bsi__OdrSeries": {
+    "journey__structure__ifdat__acc__OdrSeries": {
       "title": "OdrSeries",
       "type": "object",
       "properties": {
@@ -6072,7 +6066,7 @@
         "FRQNCY"
       ]
     },
-    "journey__structure__ifdat__bsi__RreSeries": {
+    "journey__structure__ifdat__acc__RreSeries": {
       "title": "RreSeries",
       "type": "object",
       "properties": {
@@ -6140,7 +6134,7 @@
         "FRQNCY"
       ]
     },
-    "journey__structure__ifdat__bsi__CreSeries": {
+    "journey__structure__ifdat__acc__CreSeries": {
       "title": "CreSeries",
       "type": "object",
       "properties": {
@@ -8006,7 +8000,7 @@
         "ARRRS"
       ]
     },
-    "journey__structure__ifdat__bsi__HldrSeries": {
+    "journey__structure__ifdat__acc__HldrSeries": {
       "title": "HldrSeries",
       "type": "object",
       "properties": {
@@ -8037,176 +8031,6 @@
         "RDMPTNS",
         "RED_CHRGS"
       ]
-    },
-    "AccDimensionContainer_SHR_": {
-      "title": "AccDimensionContainer[SHR]",
-      "type": "object",
-      "properties": {
-        "IID": {
-          "title": "Iid",
-          "maxLength": 32,
-          "pattern": "^[IP][a-zA-z0-9_]+",
-          "type": "string"
-        },
-        "DT": {
-          "title": "Dt",
-          "type": "string",
-          "format": "date"
-        }
-      },
-      "required": [
-        "IID",
-        "DT"
-      ]
-    },
-    "BkPrcSeries": {
-      "title": "BkPrcSeries",
-      "type": "object",
-      "properties": {
-        "DIMS": {
-          "$ref": "#/definitions/AccDimensionContainer_SHR_"
-        },
-        "PRC": {
-          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
-        }
-      },
-      "required": [
-        "DIMS",
-        "PRC"
-      ]
-    },
-    "journey__structure__ifdat__bsi__Datasets": {
-      "title": "Datasets",
-      "type": "object",
-      "properties": {
-        "CSH": {
-          "title": "Csh",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/CshSeries"
-          }
-        },
-        "DPST": {
-          "title": "Dpst",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/journey__structure__ifdat__bsi__DpstSeries"
-          }
-        },
-        "ASST_SFT": {
-          "title": "Asst Sft",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/journey__structure__ifdat__bsi__SftSeries"
-          }
-        },
-        "ASST_DBT": {
-          "title": "Asst Dbt",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/AsstDbtSeries"
-          }
-        },
-        "ASST_LN": {
-          "title": "Asst Ln",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/journey__structure__ifdat__bsi__LnSeries"
-          }
-        },
-        "SHR": {
-          "title": "Shr",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/journey__structure__ifdat__bsi__ShrSeries"
-          }
-        },
-        "EDR": {
-          "title": "Edr",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/journey__structure__ifdat__bsi__EdrSeries"
-          }
-        },
-        "ODR": {
-          "title": "Odr",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/journey__structure__ifdat__bsi__OdrSeries"
-          }
-        },
-        "RRE": {
-          "title": "Rre",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/journey__structure__ifdat__bsi__RreSeries"
-          }
-        },
-        "CRE": {
-          "title": "Cre",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/journey__structure__ifdat__bsi__CreSeries"
-          }
-        },
-        "RMNNG_FXD": {
-          "title": "Rmnng Fxd",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/RmnngFxdSeries"
-          }
-        },
-        "ASST_RMNNG": {
-          "title": "Asst Rmnng",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/RmnngSeries"
-          }
-        },
-        "LBLTY_SFT": {
-          "title": "Lblty Sft",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/journey__structure__ifdat__bsi__SftSeries"
-          }
-        },
-        "LBLTY_DBT": {
-          "title": "Lblty Dbt",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/LbltyDbtSeries"
-          }
-        },
-        "LBLTY_LN": {
-          "title": "Lblty Ln",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/journey__structure__ifdat__bsi__LnSeries"
-          }
-        },
-        "LBLTY_RMNNG": {
-          "title": "Lblty Rmnng",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/RmnngSeries"
-          }
-        },
-        "HLDR": {
-          "title": "Hldr",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/journey__structure__ifdat__bsi__HldrSeries"
-          }
-        },
-        "BK_PRC": {
-          "title": "Bk Prc",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/BkPrcSeries"
-          }
-        }
-      },
-      "additionalProperties": false
     },
     "IncmRvnEnum": {
       "title": "IncmRvnEnum",
@@ -8337,10 +8161,182 @@
         "EUR_AMNT"
       ]
     },
-    "journey__structure__ifdat__inc__Datasets": {
+    "AccFreqDimensionContainer_SHR_": {
+      "title": "AccFreqDimensionContainer[SHR]",
+      "type": "object",
+      "properties": {
+        "IID": {
+          "title": "Iid",
+          "maxLength": 32,
+          "pattern": "^[IP][a-zA-z0-9_]+",
+          "type": "string"
+        },
+        "DT": {
+          "title": "Dt",
+          "type": "string",
+          "format": "date"
+        },
+        "FRQNCY": {
+          "$ref": "#/definitions/GenFrqncyEnum"
+        }
+      },
+      "required": [
+        "IID",
+        "DT",
+        "FRQNCY"
+      ]
+    },
+    "AggSeries": {
+      "title": "AggSeries",
+      "type": "object",
+      "properties": {
+        "DIMS": {
+          "$ref": "#/definitions/AccFreqDimensionContainer_SHR_"
+        },
+        "BK_PRC": {
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
+        },
+        "BK_PRC_EUR": {
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
+        },
+        "INCM": {
+          "$ref": "#/definitions/BaseMeasure_float_"
+        },
+        "INCM_EUR": {
+          "$ref": "#/definitions/BaseMeasure_float_"
+        }
+      },
+      "required": [
+        "DIMS",
+        "BK_PRC",
+        "BK_PRC_EUR",
+        "INCM",
+        "INCM_EUR"
+      ]
+    },
+    "journey__structure__ifdat__acc__Datasets": {
       "title": "Datasets",
       "type": "object",
       "properties": {
+        "CSH": {
+          "title": "Csh",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CshSeries"
+          }
+        },
+        "DPST": {
+          "title": "Dpst",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/journey__structure__ifdat__acc__DpstSeries"
+          }
+        },
+        "ASST_SFT": {
+          "title": "Asst Sft",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/journey__structure__ifdat__acc__SftSeries"
+          }
+        },
+        "ASST_DBT": {
+          "title": "Asst Dbt",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AsstDbtSeries"
+          }
+        },
+        "ASST_LN": {
+          "title": "Asst Ln",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/journey__structure__ifdat__acc__LnSeries"
+          }
+        },
+        "SHR": {
+          "title": "Shr",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/journey__structure__ifdat__acc__ShrSeries"
+          }
+        },
+        "EDR": {
+          "title": "Edr",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/journey__structure__ifdat__acc__EdrSeries"
+          }
+        },
+        "ODR": {
+          "title": "Odr",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/journey__structure__ifdat__acc__OdrSeries"
+          }
+        },
+        "RRE": {
+          "title": "Rre",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/journey__structure__ifdat__acc__RreSeries"
+          }
+        },
+        "CRE": {
+          "title": "Cre",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/journey__structure__ifdat__acc__CreSeries"
+          }
+        },
+        "RMNNG_FXD": {
+          "title": "Rmnng Fxd",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/RmnngFxdSeries"
+          }
+        },
+        "ASST_RMNNG": {
+          "title": "Asst Rmnng",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/RmnngSeries"
+          }
+        },
+        "LBLTY_SFT": {
+          "title": "Lblty Sft",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/journey__structure__ifdat__acc__SftSeries"
+          }
+        },
+        "LBLTY_DBT": {
+          "title": "Lblty Dbt",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/LbltyDbtSeries"
+          }
+        },
+        "LBLTY_LN": {
+          "title": "Lblty Ln",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/journey__structure__ifdat__acc__LnSeries"
+          }
+        },
+        "LBLTY_RMNNG": {
+          "title": "Lblty Rmnng",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/RmnngSeries"
+          }
+        },
+        "HLDR": {
+          "title": "Hldr",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/journey__structure__ifdat__acc__HldrSeries"
+          }
+        },
         "RVN": {
           "title": "Rvn",
           "type": "array",
@@ -8354,6 +8350,13 @@
           "items": {
             "$ref": "#/definitions/ExpnsSeries"
           }
+        },
+        "AGG": {
+          "title": "Agg",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AggSeries"
+          }
         }
       },
       "additionalProperties": false
@@ -8365,11 +8368,8 @@
         "REF": {
           "$ref": "#/definitions/journey__structure__ifdat__ref__Datasets"
         },
-        "BSI": {
-          "$ref": "#/definitions/journey__structure__ifdat__bsi__Datasets"
-        },
-        "INC": {
-          "$ref": "#/definitions/journey__structure__ifdat__inc__Datasets"
+        "ACC": {
+          "$ref": "#/definitions/journey__structure__ifdat__acc__Datasets"
         }
       }
     }
