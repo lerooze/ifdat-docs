@@ -1,7 +1,7 @@
 {
   "HEADER": {
     "RA": "EGRMFMC000",
-    "RP": "mfmc_rp",
+    "RP": "afoo",
     "DOMAIN": "IFDat"
   },
   "CATEGORIES": {
@@ -12,10 +12,43 @@
             "ID": "EGRAK1"
           },
           "DT_BRTH": {
-            "VALUE": "2022-01-27"
+            "VALUE": "2022-01-31"
           },
           "LEI_ID": {
             "VALUE": "213800X4WM397A7OL933"
+          }
+        },
+        {
+          "DIMS": {
+            "ID": "EGRAK2"
+          },
+          "DT_BRTH": {
+            "VALUE": "2022-01-31"
+          },
+          "LEI_ID": {
+            "VALUE": "213800X4WM397A7OL939"
+          }
+        },
+        {
+          "DIMS": {
+            "ID": "EGRAK3"
+          },
+          "DT_BRTH": {
+            "VALUE": "2022-01-31"
+          },
+          "LEI_ID": {
+            "VALUE": "213805X4WM397A7OL939"
+          }
+        },
+        {
+          "DIMS": {
+            "ID": "EGRAK4"
+          },
+          "DT_BRTH": {
+            "VALUE": "2022-01-31"
+          },
+          "LEI_ID": {
+            "VALUE": "213805X4WM399B7OL939"
           }
         }
       ],
@@ -63,18 +96,194 @@
           "VLTN_CRRNCY": {
             "VALUE": "EUR"
           }
+        },
+        {
+          "DIMS": {
+            "ID": "EGRAK2"
+          },
+          "NM": {
+            "VALUE": "ΦΟΥ ΜETOXIKO"
+          },
+          "NM_LTN": {
+            "VALUE": "FOO EQUITY"
+          },
+          "NM_SHRT": {
+            "VALUE": "FOO EQTY"
+          },
+          "INSTTTNL_SCTR_CNTRL": {
+            "VALUE": "0"
+          },
+          "MNGD_BY": {
+            "VALUE": "EGRMFMC000"
+          },
+          "TYP": {
+            "VALUE": "UCITS"
+          },
+          "INVSTMNT_PLCY": {
+            "VALUE": "EQT"
+          },
+          "SBTYP": {
+            "VALUE": "OPEN"
+          },
+          "DSTRBTN_TYP": {
+            "VALUE": "CUM"
+          },
+          "INVSTR_TYP": {
+            "VALUE": "RTL"
+          },
+          "STRTGY": {
+            "VALUE": "ACTIVE"
+          },
+          "GGRPHCL_FCS": {
+            "VALUE": "EEA"
+          },
+          "VLTN_CRRNCY": {
+            "VALUE": "EUR"
+          }
+        },
+        {
+          "DIMS": {
+            "ID": "EGRAK3"
+          },
+          "NM": {
+            "VALUE": "ΦΟΥ ΟΜΟΛΟΓΙΑΚΟ"
+          },
+          "NM_LTN": {
+            "VALUE": "FOO BOND"
+          },
+          "NM_SHRT": {
+            "VALUE": "FOO BND"
+          },
+          "INSTTTNL_SCTR_CNTRL": {
+            "VALUE": "0"
+          },
+          "MNGD_BY": {
+            "VALUE": "EGRMFMC000"
+          },
+          "TYP": {
+            "VALUE": "UCITS"
+          },
+          "INVSTMNT_PLCY": {
+            "VALUE": "BON"
+          },
+          "SBTYP": {
+            "VALUE": "OPEN"
+          },
+          "DSTRBTN_TYP": {
+            "VALUE": "CUM"
+          },
+          "INVSTR_TYP": {
+            "VALUE": "RTL"
+          },
+          "STRTGY": {
+            "VALUE": "ACTIVE"
+          },
+          "GGRPHCL_FCS": {
+            "VALUE": "DOM"
+          },
+          "BND_FCS": {
+            "VALUE": "MIX"
+          },
+          "VLTN_CRRNCY": {
+            "VALUE": "EUR"
+          }
+        },
+        {
+          "DIMS": {
+            "ID": "EGRAK4"
+          },
+          "NM": {
+            "VALUE": "ΦΟΥ ΣΥΝΘΕΤΟ"
+          },
+          "NM_LTN": {
+            "VALUE": "FOO STRUCTURED"
+          },
+          "NM_SHRT": {
+            "VALUE": "FOO STRCTRD"
+          },
+          "INSTTTNL_SCTR_CNTRL": {
+            "VALUE": "0"
+          },
+          "MNGD_BY": {
+            "VALUE": "EGRMFMC000"
+          },
+          "TYP": {
+            "VALUE": "UCITS"
+          },
+          "INVSTMNT_PLCY": {
+            "VALUE": "OTH"
+          },
+          "SBTYP": {
+            "VALUE": "OPEN"
+          },
+          "DSTRBTN_TYP": {
+            "VALUE": "CUM"
+          },
+          "INVSTR_TYP": {
+            "VALUE": "PRF"
+          },
+          "STRTGY": {
+            "VALUE": "ACTIVE"
+          },
+          "GGRPHCL_FCS": {
+            "VALUE": "DOM"
+          },
+          "VLTN_CRRNCY": {
+            "VALUE": "EUR"
+          }
         }
       ],
       "SELF_SHR": [
         {
           "DIMS": {
-            "ID": "IGRF000000001"
+            "ID": "IGRF00000AK10"
           },
           "DT_BRTH": {
-            "VALUE": "2022-01-27"
+            "VALUE": "2022-01-31"
           },
-          "ISIN_ID": {
-            "VALUE": "GRF000000001"
+          "CRRNCY": {
+            "VALUE": "EUR"
+          }
+        },
+        {
+          "DIMS": {
+            "ID": "IGRF00000AK20"
+          },
+          "DT_BRTH": {
+            "VALUE": "2022-01-31"
+          },
+          "CRRNCY": {
+            "VALUE": "EUR"
+          }
+        },
+        {
+          "DIMS": {
+            "ID": "IGRF00000AK30"
+          },
+          "DT_BRTH": {
+            "VALUE": "2022-01-31"
+          },
+          "CRRNCY": {
+            "VALUE": "EUR"
+          }
+        },
+        {
+          "DIMS": {
+            "ID": "IGRF00000AK4A"
+          },
+          "DT_BRTH": {
+            "VALUE": "2022-01-31"
+          },
+          "CRRNCY": {
+            "VALUE": "EUR"
+          }
+        },
+        {
+          "DIMS": {
+            "ID": "IGRF00000AK4B"
+          },
+          "DT_BRTH": {
+            "VALUE": "2022-01-31"
           },
           "CRRNCY": {
             "VALUE": "EUR"
@@ -84,13 +293,13 @@
       "SELF_SHR_DYNMC": [
         {
           "DIMS": {
-            "ID": "IGRF000000001"
+            "ID": "IGRF00000AK10"
           },
           "NM_LTN": {
-            "VALUE": "FOO BALANCED DOMESTIC (class R)"
+            "VALUE": "FOO BALANCED (R)"
           },
           "NM_SHRT": {
-            "VALUE": "FOO BLNCD DOMESTIC (R)/UT"
+            "VALUE": "FOO BLNCD (R)/UT"
           },
           "ISSD_BY": {
             "VALUE": "EGRAK1"
@@ -103,6 +312,113 @@
           },
           "RDMPTN_FRQNCY": {
             "VALUE": "PP"
+          },
+          "PRMRY_CLSS": {
+            "VALUE": "F.1"
+          }
+        },
+        {
+          "DIMS": {
+            "ID": "IGRF00000AK20"
+          },
+          "NM_LTN": {
+            "VALUE": "FOO EQUITY (class R)"
+          },
+          "NM_SHRT": {
+            "VALUE": "FOO EQTY (R)/UT"
+          },
+          "ISSD_BY": {
+            "VALUE": "EGRAK2"
+          },
+          "NMNL_PRC": {
+            "VALUE": 15.0
+          },
+          "CFI": {
+            "VALUE": "CIOJEU"
+          },
+          "RDMPTN_FRQNCY": {
+            "VALUE": "PP"
+          },
+          "PRMRY_CLSS": {
+            "VALUE": "F.1"
+          }
+        },
+        {
+          "DIMS": {
+            "ID": "IGRF00000AK30"
+          },
+          "NM_LTN": {
+            "VALUE": "FOO BOND (class R)"
+          },
+          "NM_SHRT": {
+            "VALUE": "FOO BND (R)/UT"
+          },
+          "ISSD_BY": {
+            "VALUE": "EGRAK3"
+          },
+          "NMNL_PRC": {
+            "VALUE": 20.0
+          },
+          "CFI": {
+            "VALUE": "CIOJBU"
+          },
+          "RDMPTN_FRQNCY": {
+            "VALUE": "PP"
+          },
+          "PRMRY_CLSS": {
+            "VALUE": "F.1"
+          }
+        },
+        {
+          "DIMS": {
+            "ID": "IGRF00000AK4A"
+          },
+          "NM_LTN": {
+            "VALUE": "FOO STRUCTURED (R)"
+          },
+          "NM_SHRT": {
+            "VALUE": "FOO STRCTRD (R)/UT"
+          },
+          "ISSD_BY": {
+            "VALUE": "EGRAK4"
+          },
+          "NMNL_PRC": {
+            "VALUE": 10.0
+          },
+          "CFI": {
+            "VALUE": "CIOGLU"
+          },
+          "RDMPTN_FRQNCY": {
+            "VALUE": "PP"
+          },
+          "PRMRY_CLSS": {
+            "VALUE": "F.1"
+          }
+        },
+        {
+          "DIMS": {
+            "ID": "IGRF00000AK4B"
+          },
+          "NM_LTN": {
+            "VALUE": "FOO STRUCTURED (I)"
+          },
+          "NM_SHRT": {
+            "VALUE": "FOO STRCTRD (I)/UT"
+          },
+          "ISSD_BY": {
+            "VALUE": "EGRAK4"
+          },
+          "NMNL_PRC": {
+            "VALUE": 20.0
+          },
+          "CFI": {
+            "VALUE": "CIOGLY"
+          },
+          "RDMPTN_FRQNCY": {
+            "VALUE": "PP"
+          },
+          "PRMRY_CLSS": {
+            "VALUE": "F.1"
           }
         }
       ],
@@ -168,16 +484,16 @@
       "CNTCT": [
         {
           "DIMS": {
-            "ID": "mfmc_rp"
+            "ID": "afoo"
           },
           "EMAIL": {
-            "VALUE": "aloumiotis@fooaedak.gr"
+            "VALUE": "afoo@fooaedak.gr"
           },
           "FRST": {
-            "VALUE": "Αντώνιος"
+            "VALUE": "Foo"
           },
           "LST": {
-            "VALUE": "Λουμιώτης"
+            "VALUE": "User"
           },
           "PHN": {
             "VALUE": "+303000000"
@@ -187,7 +503,7 @@
       "CNTCT_T_RA": [
         {
           "DIMS": {
-            "LID": "mfmc_rp",
+            "LID": "afoo",
             "RID": "EGRMFMC000"
           },
           "ASSCTD_WTH": {
@@ -198,30 +514,6 @@
           },
           "RSPNSBL_FR_IFDAT": {
             "VALUE": true
-          }
-        }
-      ],
-      "HLDR": [
-        {
-          "DIMS": {
-            "ID": "PGRMFMC000_H1"
-          },
-          "CNTRY_RSDNC": {
-            "VALUE": "GR"
-          },
-          "INSTTTNL_SCTR": {
-            "VALUE": "S14"
-          }
-        },
-        {
-          "DIMS": {
-            "ID": "PGRMFMC000_H2"
-          },
-          "CNTRY_RSDNC": {
-            "VALUE": "CY"
-          },
-          "INSTTTNL_SCTR": {
-            "VALUE": "S14"
           }
         }
       ],
@@ -248,10 +540,79 @@
           "CRDTR": {
             "VALUE": "EGRAK1"
           }
+        },
+        {
+          "DIMS": {
+            "ID": "IGR8901701231004012300302700"
+          },
+          "DT_BRTH": {
+            "VALUE": "2022-01-10"
+          },
+          "TYP": {
+            "VALUE": "OVER"
+          },
+          "CRRNCY": {
+            "VALUE": "EUR"
+          },
+          "IS_TRNSFRBL": {
+            "VALUE": true
+          },
+          "DBTR": {
+            "VALUE": "EGR017"
+          },
+          "CRDTR": {
+            "VALUE": "EGRAK2"
+          }
+        },
+        {
+          "DIMS": {
+            "ID": "IGR8902601231004093500302356"
+          },
+          "DT_BRTH": {
+            "VALUE": "2022-01-12"
+          },
+          "TYP": {
+            "VALUE": "OVER"
+          },
+          "CRRNCY": {
+            "VALUE": "EUR"
+          },
+          "IS_TRNSFRBL": {
+            "VALUE": true
+          },
+          "DBTR": {
+            "VALUE": "EGR026"
+          },
+          "CRDTR": {
+            "VALUE": "EGRAK3"
+          }
+        },
+        {
+          "DIMS": {
+            "ID": "IGB52CITI19540810456263"
+          },
+          "DT_BRTH": {
+            "VALUE": "2022-01-20"
+          },
+          "TYP": {
+            "VALUE": "OVER"
+          },
+          "CRRNCY": {
+            "VALUE": "EUR"
+          },
+          "IS_TRNSFRBL": {
+            "VALUE": true
+          },
+          "DBTR": {
+            "VALUE": "L549300U8H3KN0K301B23"
+          },
+          "CRDTR": {
+            "VALUE": "EGRAK4"
+          }
         }
       ]
     },
-    "BSI": {
+    "ACC": {
       "DPST": [
         {
           "DIMS": {
@@ -260,196 +621,287 @@
             "FRQNCY": "M"
           },
           "STCK": {
-            "VALUE": 4110007.78
+            "VALUE": 100000.0
           },
           "EUR_STCK": {
-            "VALUE": 4110007.78
+            "VALUE": 100000.0
           },
           "FLS": {
-            "VALUE": 4110000.0
+            "VALUE": 100000.0
           },
           "ACCRLS": {
-            "VALUE": 7.78
+            "VALUE": 0.0
           }
-        }
-      ],
-      "ASST_DBT": [
+        },
         {
           "DIMS": {
-            "IID": "IXS2400040460",
-            "ID": "EGRAK1",
+            "IID": "IGR8901701231004012300302700",
             "DT": "2022-01-31",
             "FRQNCY": "M"
           },
           "STCK": {
-            "VALUE": 1000000.0
+            "VALUE": 150000.0
           },
           "EUR_STCK": {
-            "VALUE": 1000000.0
+            "VALUE": 150000.0
           },
-          "TRNSCTNS": {
-            "VALUE": 1000000.0
-          },
-          "NMNL_STCK": {
-            "VALUE": 1023386.0
-          },
-          "LND_FR_SFT": {
-            "VALUE": 0.0
+          "FLS": {
+            "VALUE": 150000.0
           },
           "ACCRLS": {
-            "VALUE": 9667.55
-          },
-          "ARRRS": {
             "VALUE": 0.0
           }
-        }
-      ],
-      "SHR": [
+        },
         {
           "DIMS": {
-            "IID": "IXS2400040460",
-            "ID": "EGRAK1",
+            "IID": "IGR8902601231004093500302356",
             "DT": "2022-01-31",
             "FRQNCY": "M"
           },
           "STCK": {
-            "VALUE": 3950003.16
+            "VALUE": 200000.0
           },
           "EUR_STCK": {
-            "VALUE": 3950003.16
+            "VALUE": 200000.0
           },
-          "TRNSCTNS": {
-            "VALUE": 4000000.0
+          "FLS": {
+            "VALUE": 200000.0
           },
-          "QNTTY": {
-            "VALUE": 277778.0
-          },
-          "LND_FR_SFT": {
+          "ACCRLS": {
             "VALUE": 0.0
-          },
-          "IS_DRCT_INVSTMNT": {
-            "VALUE": false
           }
-        }
-      ],
-      "LBLTY_RMNNG": [
+        },
         {
           "DIMS": {
-            "ID": "EGRAK1",
-            "CNTRGRP": "S126.GR",
-            "CRRNCY": "EUR",
-            "DT": "2022-01-31"
+            "IID": "IGB52CITI19540810456263",
+            "DT": "2022-01-31",
+            "FRQNCY": "M"
           },
           "STCK": {
-            "VALUE": 110000.0
+            "VALUE": 140000.0
           },
           "EUR_STCK": {
-            "VALUE": 110000.0
+            "VALUE": 140000.0
+          },
+          "FLS": {
+            "VALUE": 140000.0
+          },
+          "ACCRLS": {
+            "VALUE": 0.0
           }
         }
       ],
       "HLDR": [
         {
           "DIMS": {
-            "IID": "IGRF000000001",
-            "ID": "PGRMFMC000_H1",
+            "IID": "IGRF00000AK10",
+            "ID": "EGRMFMC000",
             "DT": "2022-01-31",
             "FRQNCY": "M"
           },
           "QNTTY": {
-            "VALUE": 30000.0
-          },
-          "SBSCRPTNS": {
-            "VALUE": 303000.0
-          },
-          "SUB_CHRGS": {
-            "VALUE": 3000.0
-          },
-          "RDMPTNS": {
-            "VALUE": 0.0
-          },
-          "RED_CHRGS": {
-            "VALUE": 0.0
-          }
-        },
-        {
-          "DIMS": {
-            "IID": "IGRF000000001",
-            "ID": "PGRMFMC000_H2",
-            "DT": "2022-01-31",
-            "FRQNCY": "M"
-          },
-          "QNTTY": {
-            "VALUE": 70000.0
-          },
-          "SBSCRPTNS": {
-            "VALUE": 707000.0
-          },
-          "SUB_CHRGS": {
-            "VALUE": 7000.0
-          },
-          "RDMPTNS": {
-            "VALUE": 0.0
-          },
-          "RED_CHRGS": {
-            "VALUE": 0.0
-          }
-        },
-        {
-          "DIMS": {
-            "IID": "IGRF000000001",
-            "ID": "TGR99999999",
-            "DT": "2022-01-31",
-            "FRQNCY": "M"
-          },
-          "QNTTY": {
-            "VALUE": 900000.0
-          },
-          "SBSCRPTNS": {
-            "VALUE": 9090000.0
-          },
-          "SUB_CHRGS": {
-            "VALUE": 90000.0
-          },
-          "RDMPTNS": {
-            "VALUE": 990000.0
-          },
-          "RED_CHRGS": {
             "VALUE": 10000.0
+          },
+          "SBSCRPTNS": {
+            "VALUE": 100000.0
+          },
+          "SUB_CHRGS": {
+            "VALUE": 0.0
+          },
+          "RDMPTNS": {
+            "VALUE": 0.0
+          },
+          "RED_CHRGS": {
+            "VALUE": 0.0
           }
-        }
-      ]
-    },
-    "INC": {
-      "RVN": [
+        },
         {
           "DIMS": {
-            "IID": "IGRF000000001",
-            "TP": "R1",
+            "IID": "IGRF00000AK20",
+            "ID": "EGRMFMC000",
             "DT": "2022-01-31",
-            "FREQ": "M"
+            "FRQNCY": "M"
           },
-          "AMNT": {
-            "VALUE": 7.78
+          "QNTTY": {
+            "VALUE": 10000.0
           },
-          "EUR_AMNT": {
-            "VALUE": 7.78
+          "SBSCRPTNS": {
+            "VALUE": 150000.0
+          },
+          "SUB_CHRGS": {
+            "VALUE": 0.0
+          },
+          "RDMPTNS": {
+            "VALUE": 0.0
+          },
+          "RED_CHRGS": {
+            "VALUE": 0.0
+          }
+        },
+        {
+          "DIMS": {
+            "IID": "IGRF00000AK30",
+            "ID": "EGRMFMC000",
+            "DT": "2022-01-31",
+            "FRQNCY": "M"
+          },
+          "QNTTY": {
+            "VALUE": 10000.0
+          },
+          "SBSCRPTNS": {
+            "VALUE": 200000.0
+          },
+          "SUB_CHRGS": {
+            "VALUE": 0.0
+          },
+          "RDMPTNS": {
+            "VALUE": 0.0
+          },
+          "RED_CHRGS": {
+            "VALUE": 0.0
+          }
+        },
+        {
+          "DIMS": {
+            "IID": "IGRF00000AK4A",
+            "ID": "EGRMFMC000",
+            "DT": "2022-01-31",
+            "FRQNCY": "M"
+          },
+          "QNTTY": {
+            "VALUE": 10000.0
+          },
+          "SBSCRPTNS": {
+            "VALUE": 100000.0
+          },
+          "SUB_CHRGS": {
+            "VALUE": 0.0
+          },
+          "RDMPTNS": {
+            "VALUE": 0.0
+          },
+          "RED_CHRGS": {
+            "VALUE": 0.0
+          }
+        },
+        {
+          "DIMS": {
+            "IID": "IGRF00000AK4B",
+            "ID": "EGRMFMC000",
+            "DT": "2022-01-31",
+            "FRQNCY": "M"
+          },
+          "QNTTY": {
+            "VALUE": 2000.0
+          },
+          "SBSCRPTNS": {
+            "VALUE": 40000.0
+          },
+          "SUB_CHRGS": {
+            "VALUE": 0.0
+          },
+          "RDMPTNS": {
+            "VALUE": 0.0
+          },
+          "RED_CHRGS": {
+            "VALUE": 0.0
           }
         }
       ],
-      "EXPNS": [
+      "AGG": [
         {
           "DIMS": {
-            "IID": "IGRF000000001",
-            "TP": "E6",
+            "IID": "IGRF00000AK10",
             "DT": "2022-01-31",
-            "FREQ": "M"
+            "FRQNCY": "M"
           },
-          "AMNT": {
-            "VALUE": 67.11
+          "BK_PRC": {
+            "VALUE": 10.0
           },
-          "EUR_AMNT": {
-            "VALUE": 67.11
+          "BK_PRC_EUR": {
+            "VALUE": 10.0
+          },
+          "INCM": {
+            "VALUE": 0.0
+          },
+          "INCM_EUR": {
+            "VALUE": 0.0
+          }
+        },
+        {
+          "DIMS": {
+            "IID": "IGRF00000AK20",
+            "DT": "2022-01-31",
+            "FRQNCY": "M"
+          },
+          "BK_PRC": {
+            "VALUE": 15.0
+          },
+          "BK_PRC_EUR": {
+            "VALUE": 15.0
+          },
+          "INCM": {
+            "VALUE": 0.0
+          },
+          "INCM_EUR": {
+            "VALUE": 0.0
+          }
+        },
+        {
+          "DIMS": {
+            "IID": "IGRF00000AK30",
+            "DT": "2022-01-31",
+            "FRQNCY": "M"
+          },
+          "BK_PRC": {
+            "VALUE": 20.0
+          },
+          "BK_PRC_EUR": {
+            "VALUE": 20.0
+          },
+          "INCM": {
+            "VALUE": 0.0
+          },
+          "INCM_EUR": {
+            "VALUE": 0.0
+          }
+        },
+        {
+          "DIMS": {
+            "IID": "IGRF00000AK4A",
+            "DT": "2022-01-31",
+            "FRQNCY": "M"
+          },
+          "BK_PRC": {
+            "VALUE": 10.0
+          },
+          "BK_PRC_EUR": {
+            "VALUE": 10.0
+          },
+          "INCM": {
+            "VALUE": 0.0
+          },
+          "INCM_EUR": {
+            "VALUE": 0.0
+          }
+        },
+        {
+          "DIMS": {
+            "IID": "IGRF00000AK4B",
+            "DT": "2022-01-31",
+            "FRQNCY": "M"
+          },
+          "BK_PRC": {
+            "VALUE": 20.0
+          },
+          "BK_PRC_EUR": {
+            "VALUE": 20.0
+          },
+          "INCM": {
+            "VALUE": 0.0
+          },
+          "INCM_EUR": {
+            "VALUE": 0.0
           }
         }
       ]

@@ -5,5 +5,7 @@
 Φεβρουαρίου του 2022.
 
 .. toctree::
+   :maxdepth: 1
+
    ucitsmc/t0.rst
    ucitsmc/t1.rst
