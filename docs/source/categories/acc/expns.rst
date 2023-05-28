@@ -25,5 +25,8 @@ FREQUENCY (FRQNCY)
 AMOUNT (AMNT)
     Έξοδα ανά μετοχή/μερίδιο εκφραζόμενο στο :ref:`νόμισμα <sishrcurrency>`
 
+AMOUNT IN FSC (FSC_AMNT)
+    Η expense_ στο νόμισμα αποτίμησης της λογιστικής κατάστασης.
+
 AMOUNT IN EURO (EUR_AMNT)
     Η expense_ σε Ευρώ.

@@ -19,6 +19,9 @@ DATE (DT)
 STOCK (STCK)
     Συμπληρώνεται το ποσό των χρηματικών διαθέσιμων που δανείστηκε η ``ΠΜ`` ·
 
+STOCK IN FSC (FSC_STCK)
+    Η lsftstock_ στο νόμισμα αποτίμησης της λογιστικής κατάστασης.
+
 STOCK IN EURO (EUR_STCK)
     Η lsftstock_ σε Ευρώ.
 

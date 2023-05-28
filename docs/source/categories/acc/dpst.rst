@@ -22,6 +22,9 @@ FREQUENCY (FRQNCY)
 STOCK (STCK)
     Υπόλοιπο περιλαμβάνοντας τους δεδουλευμένους τόκους. 
 
+STOCK IN FSC (FSC_STCK)
+    Η depstock_ στο νόμισμα αποτίμησης της λογιστικής κατάστασης.
+
 STOCK IN EURO (EUR_STCK)
     Η depstock_ σε Ευρώ·
 

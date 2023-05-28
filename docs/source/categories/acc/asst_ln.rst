@@ -18,6 +18,9 @@ DATE (DT)
 STOCK (STCK)
     Ονομαστική αξία·
 
+STOCK IN FSC (FSC_STCK)
+    Η STOCK στο νόμισμα αποτίμησης της λογιστικής κατάστασης.
+
 STOCK IN EURO (EUR_STCK)
     Η STOCK σε Ευρώ·
 

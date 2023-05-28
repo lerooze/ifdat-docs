@@ -27,5 +27,8 @@ DATE (DT)
 STOCK (STCK)
     Ονομαστική αξία εκφρασμένο στο aremcurrency_·
 
+STOCK IN FSC (FSC_STCK)
+    Η aremstock_ στο νόμισμα αποτίμησης της λογιστικής κατάστασης.
+
 STOCK IN EURO (EUR_STCK)
     Η aremstock_ σε Ευρώ.

@@ -19,13 +19,13 @@ FREQUENCY (FRQNCY)
 ΜΕΤΑΒΛΗΤΕΣ
 ~~~~~~~~~~
 
-PRICE (PRC)
+PRICE (FSC_PRC)
     Λογιστική/καθαρή τιμή στο νόμισμα που αποτιμάται η ΠΜ.
 
 PRICE EURO (PRC_EUR)
     Λογιστική/καθαρή τιμή σε Ευρώ.
 
-INCOME (INC)
+INCOME (FSC_INC)
     Εισόδημα στο νόμισμα που αποτιμάται η ΠΜ (μεταβλητή ροής).
 
 INCOME EURO (INC_EUR)

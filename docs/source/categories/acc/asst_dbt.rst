@@ -25,6 +25,9 @@ FREQUENCY (FRQNCY)
 STOCK (STCK)
     Αγοραία αξία περιλαμβάνοντας τους δεδουλευμένους τόκους αλλά χωρίς τους εκπρόθεσμους/απλήρωτους τόκους·
 
+STOCK IN FSC (FSC_STCK)
+    Η adbtstock_ στο νόμισμα αποτίμησης της λογιστικής κατάστασης.
+
 STOCK IN EURO (EUR_STCK)
     Η adbtstock_ in euro.
 

@@ -29,6 +29,9 @@ FREQUENCY (FRQNCY)
 STOCK (STCK)
     Αξία σύμφωνα με τους κανόνες αποτίμησης που περιγράφονται στο κεφάλαιο 7 του ``ESA2010`` ·
 
+STOCK IN FSC (FSC_STCK)
+    Η remstock_ στο νόμισμα αποτίμησης της λογιστικής κατάστασης.
+
 STOCK IN EURO (EUR_STCK)
     Η remstock_ σε Ευρώ·
 

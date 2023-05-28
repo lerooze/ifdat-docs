@@ -22,6 +22,9 @@ FREQUENCY (FRQNCY)
 STOCK (STCK)
     Συμπληρώνεται το ποσό των χρηματικών διαθέσιμων που δάνεισε η ``ΠΜ`` ·
 
+STOCK IN FSC (FSC_STCK)
+    Η asftstock_ στο νόμισμα αποτίμησης της λογιστικής κατάστασης.
+
 STOCK IN EURO (EUR_STCK)
     Η asftstock_ σε Ευρώ.
 
