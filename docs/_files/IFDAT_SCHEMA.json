@@ -5566,6 +5566,9 @@
         "STCK": {
           "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
+        "FSC_STCK": {
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
+        },
         "EUR_STCK": {
           "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         }
@@ -5573,6 +5576,7 @@
       "required": [
         "DIMS",
         "STCK",
+        "FSC_STCK",
         "EUR_STCK"
       ]
     },
@@ -5653,6 +5657,9 @@
         "STCK": {
           "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
+        "FSC_STCK": {
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
+        },
         "EUR_STCK": {
           "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
@@ -5666,6 +5673,7 @@
       "required": [
         "DIMS",
         "STCK",
+        "FSC_STCK",
         "EUR_STCK",
         "FLS",
         "ACCRLS"
@@ -5706,6 +5714,9 @@
         "STCK": {
           "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
+        "FSC_STCK": {
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
+        },
         "EUR_STCK": {
           "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
@@ -5719,6 +5730,7 @@
       "required": [
         "DIMS",
         "STCK",
+        "FSC_STCK",
         "EUR_STCK",
         "FLS",
         "RTE"
@@ -5766,6 +5778,9 @@
         "STCK": {
           "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
+        "FSC_STCK": {
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
+        },
         "EUR_STCK": {
           "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
@@ -5788,6 +5803,7 @@
       "required": [
         "DIMS",
         "STCK",
+        "FSC_STCK",
         "EUR_STCK",
         "TRNSCTNS",
         "NMNL_STCK",
@@ -5827,6 +5843,9 @@
         "STCK": {
           "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
+        "FSC_STCK": {
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
+        },
         "EUR_STCK": {
           "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
@@ -5846,6 +5865,7 @@
       "required": [
         "DIMS",
         "STCK",
+        "FSC_STCK",
         "EUR_STCK",
         "ACCRLS",
         "ARRRS",
@@ -5895,6 +5915,9 @@
         "STCK": {
           "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
+        "FSC_STCK": {
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
+        },
         "EUR_STCK": {
           "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
@@ -5914,6 +5937,7 @@
       "required": [
         "DIMS",
         "STCK",
+        "FSC_STCK",
         "EUR_STCK",
         "TRNSCTNS",
         "QNTTY",
@@ -5963,6 +5987,9 @@
         "STCK": {
           "$ref": "#/definitions/BaseMeasure_float_"
         },
+        "FSC_STCK": {
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
+        },
         "EUR_STCK": {
           "$ref": "#/definitions/BaseMeasure_float_"
         },
@@ -5979,6 +6006,7 @@
       "required": [
         "DIMS",
         "STCK",
+        "FSC_STCK",
         "EUR_STCK",
         "GRSS_STCK",
         "TRNSCTNS",
@@ -6020,6 +6048,9 @@
         "STCK": {
           "$ref": "#/definitions/BaseMeasure_float_"
         },
+        "FSC_STCK": {
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
+        },
         "EUR_STCK": {
           "$ref": "#/definitions/BaseMeasure_float_"
         },
@@ -6030,6 +6061,7 @@
       "required": [
         "DIMS",
         "STCK",
+        "FSC_STCK",
         "EUR_STCK",
         "TRNSCTNS"
       ]
@@ -6076,6 +6108,9 @@
         "STCK": {
           "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
+        "FSC_STCK": {
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
+        },
         "EUR_STCK": {
           "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
@@ -6095,6 +6130,7 @@
       "required": [
         "DIMS",
         "STCK",
+        "FSC_STCK",
         "EUR_STCK",
         "TRNSCTNS",
         "ACCRLS",
@@ -6144,6 +6180,9 @@
         "STCK": {
           "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
+        "FSC_STCK": {
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
+        },
         "EUR_STCK": {
           "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
@@ -6163,6 +6202,7 @@
       "required": [
         "DIMS",
         "STCK",
+        "FSC_STCK",
         "EUR_STCK",
         "TRNSCTNS",
         "ACCRLS",
@@ -6234,6 +6274,9 @@
         "STCK": {
           "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
+        "FSC_STCK": {
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
+        },
         "EUR_STCK": {
           "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
@@ -6253,6 +6296,7 @@
       "required": [
         "DIMS",
         "STCK",
+        "FSC_STCK",
         "EUR_STCK",
         "TRNSCTNS",
         "ACCRLS",
@@ -7954,6 +7998,9 @@
         "STCK": {
           "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
+        "FSC_STCK": {
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
+        },
         "EUR_STCK": {
           "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         }
@@ -7961,6 +8008,7 @@
       "required": [
         "DIMS",
         "STCK",
+        "FSC_STCK",
         "EUR_STCK"
       ]
     },
@@ -7972,6 +8020,9 @@
           "$ref": "#/definitions/RelFrqncyAccDimensionContainer_DBT__ORG_"
         },
         "STCK": {
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
+        },
+        "FSC_STCK": {
           "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
         "EUR_STCK": {
@@ -7993,6 +8044,7 @@
       "required": [
         "DIMS",
         "STCK",
+        "FSC_STCK",
         "EUR_STCK",
         "TRNSCTNS",
         "NMNL_STCK",
@@ -8010,26 +8062,42 @@
         "QNTTY": {
           "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
-        "SBSCRPTNS": {
+        "FSC_SBSCRPTNS": {
           "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
-        "SUB_CHRGS": {
+        "EUR_SBSCRPTNS": {
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
+        },
+        "FSC_SUB_CHRGS": {
           "$ref": "#/definitions/BaseMeasure_float_"
         },
-        "RDMPTNS": {
+        "EUR_SUB_CHRGS": {
+          "$ref": "#/definitions/BaseMeasure_float_"
+        },
+        "FSC_RDMPTNS": {
           "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
-        "RED_CHRGS": {
+        "EUR_RDMPTNS": {
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
+        },
+        "FSC_RED_CHRGS": {
+          "$ref": "#/definitions/BaseMeasure_float_"
+        },
+        "EUR_RED_CHRGS": {
           "$ref": "#/definitions/BaseMeasure_float_"
         }
       },
       "required": [
         "DIMS",
         "QNTTY",
-        "SBSCRPTNS",
-        "SUB_CHRGS",
-        "RDMPTNS",
-        "RED_CHRGS"
+        "FSC_SBSCRPTNS",
+        "EUR_SBSCRPTNS",
+        "FSC_SUB_CHRGS",
+        "EUR_SUB_CHRGS",
+        "FSC_RDMPTNS",
+        "EUR_RDMPTNS",
+        "FSC_RED_CHRGS",
+        "EUR_RED_CHRGS"
       ]
     },
     "IncmRvnEnum": {
@@ -8063,7 +8131,7 @@
           "type": "string",
           "format": "date"
         },
-        "FREQ": {
+        "FRQNCY": {
           "$ref": "#/definitions/GenFrqncyEnum"
         }
       },
@@ -8071,7 +8139,7 @@
         "IID",
         "TP",
         "DT",
-        "FREQ"
+        "FRQNCY"
       ]
     },
     "RvnSeries": {
@@ -8081,7 +8149,7 @@
         "DIMS": {
           "$ref": "#/definitions/RevenueDimensionContainer"
         },
-        "AMNT": {
+        "FSC_AMNT": {
           "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
         "EUR_AMNT": {
@@ -8090,7 +8158,7 @@
       },
       "required": [
         "DIMS",
-        "AMNT",
+        "FSC_AMNT",
         "EUR_AMNT"
       ]
     },
@@ -8130,7 +8198,7 @@
           "type": "string",
           "format": "date"
         },
-        "FREQ": {
+        "FRQNCY": {
           "$ref": "#/definitions/GenFrqncyEnum"
         }
       },
@@ -8138,7 +8206,7 @@
         "IID",
         "TP",
         "DT",
-        "FREQ"
+        "FRQNCY"
       ]
     },
     "ExpnsSeries": {
@@ -8148,7 +8216,7 @@
         "DIMS": {
           "$ref": "#/definitions/ExpenseDimensionContainer"
         },
-        "AMNT": {
+        "FSC_AMNT": {
           "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
         "EUR_AMNT": {
@@ -8157,7 +8225,7 @@
       },
       "required": [
         "DIMS",
-        "AMNT",
+        "FSC_AMNT",
         "EUR_AMNT"
       ]
     },
@@ -8193,25 +8261,25 @@
         "DIMS": {
           "$ref": "#/definitions/AccFreqDimensionContainer_SHR_"
         },
-        "BK_PRC": {
+        "FSC_BK_PRC": {
           "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
-        "BK_PRC_EUR": {
+        "EUR_BK_PRC": {
           "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
-        "INCM": {
+        "FSC_INCM": {
           "$ref": "#/definitions/BaseMeasure_float_"
         },
-        "INCM_EUR": {
+        "EUR_INCM": {
           "$ref": "#/definitions/BaseMeasure_float_"
         }
       },
       "required": [
         "DIMS",
-        "BK_PRC",
-        "BK_PRC_EUR",
-        "INCM",
-        "INCM_EUR"
+        "FSC_BK_PRC",
+        "EUR_BK_PRC",
+        "FSC_INCM",
+        "EUR_INCM"
       ]
     },
     "journey__structure__ifdat__acc__Datasets": {
