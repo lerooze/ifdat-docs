@@ -1,21 +1,32 @@
 {
   "HEADER": {
     "RA": "EGRMFMC000",
-    "RP": "afoo",
+    "RP": "gpapadimitriou",
     "DOMAIN": "IFDat"
   },
   "CATEGORIES": {
     "REF": {
-      "HLDR": [
+      "FND": [
         {
           "DIMS": {
             "ID": "PMFMC000_HA"
+          }
+        }
+      ],
+      "MNGMNT_DYNMC": [
+        {
+          "DIMS": {
+            "ID": "EGRMFMC000",
+            "VLD_FRM": "2022-02-11"
           },
-          "CNTRY_RSDNC": {
-            "VALUE": "GR"
+          "NM": {
+            "VALUE": "ΦΟΥ ΔΙΕΘΝΗ ΑΕΔΑΚ"
           },
-          "INSTTTNL_SCTR": {
-            "VALUE": "S14"
+          "NM_LTN": {
+            "VALUE": "FOO INTERNATIONAL MFMC"
+          },
+          "NM_SHRT": {
+            "VALUE": "FOO INTNTNL"
           }
         }
       ]
@@ -29,6 +40,9 @@
             "FRQNCY": "M"
           },
           "STCK": {
+            "VALUE": 100200.0
+          },
+          "FSC_STCK": {
             "VALUE": 100200.0
           },
           "EUR_STCK": {
@@ -50,6 +64,9 @@
           "STCK": {
             "VALUE": 134150.0
           },
+          "FSC_STCK": {
+            "VALUE": 134150.0
+          },
           "EUR_STCK": {
             "VALUE": 134150.0
           },
@@ -63,10 +80,13 @@
         {
           "DIMS": {
             "IID": "IGR8902601231004093500302356",
-            "DT": "2022-02-28",
+            "DT": "2022-01-31",
             "FRQNCY": "M"
           },
           "STCK": {
+            "VALUE": 200400.0
+          },
+          "FSC_STCK": {
             "VALUE": 200400.0
           },
           "EUR_STCK": {
@@ -82,14 +102,17 @@
         {
           "DIMS": {
             "IID": "IGB52CITI19540810456263",
-            "DT": "2022-02-28",
+            "DT": "2022-01-31",
             "FRQNCY": "M"
           },
           "STCK": {
             "VALUE": 140130.0
           },
-          "EUR_STCK": {
+          "FSC_STCK": {
             "VALUE": 140130.0
+          },
+          "EUR_STCK": {
+            "VALUE": 140100.0
           },
           "FLS": {
             "VALUE": 0.0
@@ -108,6 +131,9 @@
             "FRQNCY": "M"
           },
           "STCK": {
+            "VALUE": 18400.0
+          },
+          "FSC_STCK": {
             "VALUE": 18400.0
           },
           "EUR_STCK": {
@@ -134,6 +160,9 @@
             "FRQNCY": "M"
           },
           "STCK": {
+            "VALUE": 26000.0
+          },
+          "FSC_STCK": {
             "VALUE": 26000.0
           },
           "EUR_STCK": {
@@ -164,6 +193,9 @@
           "STCK": {
             "VALUE": 83.42
           },
+          "FSC_STCK": {
+            "VALUE": 83.42
+          },
           "EUR_STCK": {
             "VALUE": 83.42
           }
@@ -178,6 +210,9 @@
           "STCK": {
             "VALUE": 300.0
           },
+          "FSC_STCK": {
+            "VALUE": 300.0
+          },
           "EUR_STCK": {
             "VALUE": 300.0
           }
@@ -190,6 +225,9 @@
             "DT": "2022-02-28"
           },
           "STCK": {
+            "VALUE": 222.8125
+          },
+          "FSC_STCK": {
             "VALUE": 222.8125
           },
           "EUR_STCK": {
@@ -206,6 +244,9 @@
           "STCK": {
             "VALUE": 125.125
           },
+          "FSC_STCK": {
+            "VALUE": 125.125
+          },
           "EUR_STCK": {
             "VALUE": 125.125
           }
@@ -218,6 +259,9 @@
             "DT": "2022-02-28"
           },
           "STCK": {
+            "VALUE": 175.1625
+          },
+          "FSC_STCK": {
             "VALUE": 175.1625
           },
           "EUR_STCK": {
@@ -236,16 +280,28 @@
           "QNTTY": {
             "VALUE": 10000.0
           },
-          "SBSCRPTNS": {
+          "FSC_SBSCRPTNS": {
             "VALUE": 0.0
           },
-          "SUB_CHRGS": {
+          "EUR_SBSCRPTNS": {
             "VALUE": 0.0
           },
-          "RDMPTNS": {
+          "FSC_SUB_CHRGS": {
             "VALUE": 0.0
           },
-          "RED_CHRGS": {
+          "EUR_SUB_CHRGS": {
+            "VALUE": 0.0
+          },
+          "FSC_RDMPTNS": {
+            "VALUE": 0.0
+          },
+          "EUR_RDMPTNS": {
+            "VALUE": 0.0
+          },
+          "FSC_RED_CHRGS": {
+            "VALUE": 0.0
+          },
+          "EUR_RED_CHRGS": {
             "VALUE": 0.0
           }
         },
@@ -259,16 +315,28 @@
           "QNTTY": {
             "VALUE": 2000.0
           },
-          "SBSCRPTNS": {
-            "VALUE": 30300.0
+          "FSC_SBSCRPTNS": {
+            "VALUE": 30000.0
           },
-          "SUB_CHRGS": {
-            "VALUE": 300.0
+          "EUR_SBSCRPTNS": {
+            "VALUE": 30000.0
           },
-          "RDMPTNS": {
+          "FSC_SUB_CHRGS": {
             "VALUE": 0.0
           },
-          "RED_CHRGS": {
+          "EUR_SUB_CHRGS": {
+            "VALUE": 0.0
+          },
+          "FSC_RDMPTNS": {
+            "VALUE": 0.0
+          },
+          "EUR_RDMPTNS": {
+            "VALUE": 0.0
+          },
+          "FSC_RED_CHRGS": {
+            "VALUE": 0.0
+          },
+          "EUR_RED_CHRGS": {
             "VALUE": 0.0
           }
         },
@@ -282,16 +350,28 @@
           "QNTTY": {
             "VALUE": 10000.0
           },
-          "SBSCRPTNS": {
+          "FSC_SBSCRPTNS": {
             "VALUE": 0.0
           },
-          "SUB_CHRGS": {
+          "EUR_SBSCRPTNS": {
             "VALUE": 0.0
           },
-          "RDMPTNS": {
+          "FSC_SUB_CHRGS": {
             "VALUE": 0.0
           },
-          "RED_CHRGS": {
+          "EUR_SUB_CHRGS": {
+            "VALUE": 0.0
+          },
+          "FSC_RDMPTNS": {
+            "VALUE": 0.0
+          },
+          "EUR_RDMPTNS": {
+            "VALUE": 0.0
+          },
+          "FSC_RED_CHRGS": {
+            "VALUE": 0.0
+          },
+          "EUR_RED_CHRGS": {
             "VALUE": 0.0
           }
         },
@@ -305,22 +385,34 @@
           "QNTTY": {
             "VALUE": 10000.0
           },
-          "SBSCRPTNS": {
+          "FSC_SBSCRPTNS": {
             "VALUE": 0.0
           },
-          "SUB_CHRGS": {
+          "EUR_SBSCRPTNS": {
             "VALUE": 0.0
           },
-          "RDMPTNS": {
+          "FSC_SUB_CHRGS": {
             "VALUE": 0.0
           },
-          "RED_CHRGS": {
+          "EUR_SUB_CHRGS": {
+            "VALUE": 0.0
+          },
+          "FSC_RDMPTNS": {
+            "VALUE": 0.0
+          },
+          "EUR_RDMPTNS": {
+            "VALUE": 0.0
+          },
+          "FSC_RED_CHRGS": {
+            "VALUE": 0.0
+          },
+          "EUR_RED_CHRGS": {
             "VALUE": 0.0
           }
         },
         {
           "DIMS": {
-            "IID": "IGRF00000AK4B",
+            "IID": "IGRF00000AK4A",
             "ID": "EGRMFMC000",
             "DT": "2022-02-28",
             "FRQNCY": "M"
@@ -328,16 +420,28 @@
           "QNTTY": {
             "VALUE": 2000.0
           },
-          "SBSCRPTNS": {
+          "FSC_SBSCRPTNS": {
             "VALUE": 0.0
           },
-          "SUB_CHRGS": {
+          "EUR_SBSCRPTNS": {
             "VALUE": 0.0
           },
-          "RDMPTNS": {
+          "FSC_SUB_CHRGS": {
             "VALUE": 0.0
           },
-          "RED_CHRGS": {
+          "EUR_SUB_CHRGS": {
+            "VALUE": 0.0
+          },
+          "FSC_RDMPTNS": {
+            "VALUE": 0.0
+          },
+          "EUR_RDMPTNS": {
+            "VALUE": 0.0
+          },
+          "FSC_RED_CHRGS": {
+            "VALUE": 0.0
+          },
+          "EUR_RED_CHRGS": {
             "VALUE": 0.0
           }
         }
@@ -348,9 +452,9 @@
             "IID": "IGRF00000AK10",
             "TP": "R1",
             "DT": "2022-02-28",
-            "FREQ": "M"
+            "FRQNCY": "M"
           },
-          "AMNT": {
+          "FSC_AMNT": {
             "VALUE": 0.02
           },
           "EUR_AMNT": {
@@ -362,9 +466,9 @@
             "IID": "IGRF00000AK20",
             "TP": "R1",
             "DT": "2022-02-28",
-            "FREQ": "M"
+            "FRQNCY": "M"
           },
-          "AMNT": {
+          "FSC_AMNT": {
             "VALUE": 0.01153846153846154
           },
           "EUR_AMNT": {
@@ -376,9 +480,9 @@
             "IID": "IGRF00000AK30",
             "TP": "R1",
             "DT": "2022-02-28",
-            "FREQ": "M"
+            "FRQNCY": "M"
           },
-          "AMNT": {
+          "FSC_AMNT": {
             "VALUE": 0.04
           },
           "EUR_AMNT": {
@@ -390,9 +494,9 @@
             "IID": "IGRF00000AK4A",
             "TP": "R1",
             "DT": "2022-02-28",
-            "FREQ": "M"
+            "FRQNCY": "M"
           },
-          "AMNT": {
+          "FSC_AMNT": {
             "VALUE": 0.009285714285714286
           },
           "EUR_AMNT": {
@@ -404,9 +508,9 @@
             "IID": "IGRF00000AK4B",
             "TP": "R1",
             "DT": "2022-02-28",
-            "FREQ": "M"
+            "FRQNCY": "M"
           },
-          "AMNT": {
+          "FSC_AMNT": {
             "VALUE": 0.01857142857142857
           },
           "EUR_AMNT": {
@@ -420,9 +524,9 @@
             "IID": "IGRF00000AK10",
             "TP": "E6",
             "DT": "2022-02-28",
-            "FREQ": "M"
+            "FRQNCY": "M"
           },
-          "AMNT": {
+          "FSC_AMNT": {
             "VALUE": 0.008342
           },
           "EUR_AMNT": {
@@ -434,9 +538,9 @@
             "IID": "IGRF00000AK20",
             "TP": "E6",
             "DT": "2022-02-28",
-            "FREQ": "M"
+            "FRQNCY": "M"
           },
-          "AMNT": {
+          "FSC_AMNT": {
             "VALUE": 0.01713942307692308
           },
           "EUR_AMNT": {
@@ -448,9 +552,9 @@
             "IID": "IGRF00000AK30",
             "TP": "E6",
             "DT": "2022-02-28",
-            "FREQ": "M"
+            "FRQNCY": "M"
           },
-          "AMNT": {
+          "FSC_AMNT": {
             "VALUE": 0.0125125
           },
           "EUR_AMNT": {
@@ -462,9 +566,9 @@
             "IID": "IGRF00000AK4A",
             "TP": "E6",
             "DT": "2022-02-28",
-            "FREQ": "M"
+            "FRQNCY": "M"
           },
-          "AMNT": {
+          "FSC_AMNT": {
             "VALUE": 0.01251160714285714
           },
           "EUR_AMNT": {
@@ -476,9 +580,9 @@
             "IID": "IGRF00000AK4B",
             "TP": "E6",
             "DT": "2022-02-28",
-            "FREQ": "M"
+            "FRQNCY": "M"
           },
-          "AMNT": {
+          "FSC_AMNT": {
             "VALUE": 0.02502321428571428
           },
           "EUR_AMNT": {
@@ -493,16 +597,16 @@
             "DT": "2022-02-28",
             "FRQNCY": "M"
           },
-          "BK_PRC": {
+          "FSC_BK_PRC": {
             "VALUE": 10.011658
           },
-          "BK_PRC_EUR": {
+          "EUR_BK_PRC": {
             "VALUE": 10.011658
           },
-          "INCM": {
+          "FSC_INCM": {
             "VALUE": 0.011658
           },
-          "INCM_EUR": {
+          "EUR_INCM": {
             "VALUE": 0.011658
           }
         },
@@ -512,16 +616,16 @@
             "DT": "2022-02-28",
             "FRQNCY": "M"
           },
-          "BK_PRC": {
+          "FSC_BK_PRC": {
             "VALUE": 14.8356
           },
-          "BK_PRC_EUR": {
+          "EUR_BK_PRC": {
             "VALUE": 14.8356
           },
-          "INCM": {
+          "FSC_INCM": {
             "VALUE": -0.005600961538461538
           },
-          "INCM_EUR": {
+          "EUR_INCM": {
             "VALUE": -0.005600961538461538
           }
         },
@@ -531,16 +635,16 @@
             "DT": "2022-02-28",
             "FRQNCY": "M"
           },
-          "BK_PRC": {
+          "FSC_BK_PRC": {
             "VALUE": 20.0274875
           },
-          "BK_PRC_EUR": {
+          "EUR_BK_PRC": {
             "VALUE": 20.0274875
           },
-          "INCM": {
+          "FSC_INCM": {
             "VALUE": 0.0274875
           },
-          "INCM_EUR": {
+          "EUR_INCM": {
             "VALUE": 0.0274875
           }
         },
@@ -550,16 +654,16 @@
             "DT": "2022-02-28",
             "FRQNCY": "M"
           },
-          "BK_PRC": {
+          "FSC_BK_PRC": {
             "VALUE": 9.996774107142857
           },
-          "BK_PRC_EUR": {
+          "EUR_BK_PRC": {
             "VALUE": 9.996774107142857
           },
-          "INCM": {
+          "FSC_INCM": {
             "VALUE": -0.003225892857142857
           },
-          "INCM_EUR": {
+          "EUR_INCM": {
             "VALUE": -0.003225892857142857
           }
         },
@@ -569,16 +673,16 @@
             "DT": "2022-02-28",
             "FRQNCY": "M"
           },
-          "BK_PRC": {
+          "FSC_BK_PRC": {
             "VALUE": 19.99354821428571
           },
-          "BK_PRC_EUR": {
+          "EUR_BK_PRC": {
             "VALUE": 19.99354821428571
           },
-          "INCM": {
+          "FSC_INCM": {
             "VALUE": -0.006451785714285714
           },
-          "INCM_EUR": {
+          "EUR_INCM": {
             "VALUE": -0.006451785714285714
           }
         }

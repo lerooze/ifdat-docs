@@ -1,0 +1,44 @@
+{
+  "HEADER": {
+    "RA": "EGRMFMC000",
+    "RP": "gpapadimitriou",
+    "DOMAIN": "IFDat"
+  },
+  "CATEGORIES": {
+    "REF": {
+      "MNGMNT_DYNMC": [
+        {
+          "DIMS": {
+            "ID": "EGRMFMC000",
+            "VLD_T": "2022-02-21"
+          },
+          "NM": {
+            "VALUE": "ΦΟΥ ΑΕΔΑΚ"
+          },
+          "NM_LTN": {
+            "VALUE": "FOO MFMC"
+          },
+          "NM_SHRT": {
+            "VALUE": "ΦΟΥ"
+          }
+        },
+        {
+          "DIMS": {
+            "ID": "EGRMFMC000",
+            "VLD_FRM": "2022-02-21"
+          },
+          "NM": {
+            "VALUE": "ΦΟΥ ΔΙΕΘΝΗ ΑΕΔΑΚ"
+          },
+          "NM_LTN": {
+            "VALUE": "FOO INTERNATIONAL MFMC"
+          },
+          "NM_SHRT": {
+            "VALUE": "FOO INTNTNL"
+          }
+        }
+      ]
+    },
+    "ACC": {}
+  }
+}

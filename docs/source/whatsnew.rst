@@ -12,6 +12,13 @@ What's new?
 .. ============
 
 
+v0.5.4 (2023-05-30)
+-------------------
+
+* Add FSC valuation in acc tables
+* Add T1 correction example file for MFMC
+* Other minor changes
+  
 v0.5.3 (2023-05-28)
 -------------------
 

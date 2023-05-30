@@ -9,3 +9,4 @@
 
    ucitsmc/t0.rst
    ucitsmc/t1.rst
+   ucitsmc/t1_corr.rst
