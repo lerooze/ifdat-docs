@@ -1,31 +1,33 @@
-Validation
-==========
-All files successfully submitted based on the steps described in :doc:`file submission <submission>` are validated every day at 08:00am, 11:00am and 2:00pm local time and if no critical_errors occur they are loaded into the system database.  For each authorized user that has submitted at least one file on the time intervals formed from the above times a validation report is prepared by the platform for all files that the authorized user has submitted, data of the validation report are loaded into the system validation database and the report is disseminated to the user.
+Επικύρωση
+=========
+Τα περιεχόμενα των αρχείων που υποβλήθηκαν επιτυχώς με βάση τις οδηγίες στο :doc:`file submission <submission>` επικυρώνονται με συχνότητα 5 λεπτών και εάν δεν περιέχουν κρίσιμα λάθη φορτώνονται στην κεντρική βάση δεδομένων.  Κάθε χρήστης του IRIS που υπέβαλλε τουλάχιστον ένα αρχείο με στοιχεία IFDat σε ένα χρονικό διάστημα των 5 λεπτών θα λαμβάνει μία έκθεση επικύρωσης σε μορφή json που θα περιλαμβάνει τα ακόλουθα: 
 
-The validation report is formatted as a ``.json`` file and contains the following attributes:
+ID
+    Αναγνωριστικός κωδικός της έκθεσης επικύρωσης
 
-id
-    A unique identification of the validation report 
+RA
+    Κωδικός χρήστη στο IRIS
 
-submitter
-    Unique identification of the user that submits data on behalf of a RA
+FILES
+    Για κάθε αρχείο που έχει υποβλήθει επιτυχώς σε ένα συγκεκριμένο χρονικό διάστημα 5 λεπτών θα γνωστοποιούνται τα ακόλουθα:
+    
+    NAME
+        Το όνομα του αρχείου 
 
-submitter_email
-    The email of the user that submits data on behalf of a RA (optional)
+    PROCESSED
+        Ένδειξη ότι δεν υπάρχουν κρίσιμα λάθη και τα περιεχόμενα του αρχείου φορτώθηκαν στη κεντρική βάση δεδομένων
 
-submitter_unknown
-    Whether the user that submits data is not known to the system.  No data files submissions are accepted from unknown users and thus there will be no furher validation on them.
+CRITICAL_ERRORS
+    Περιέχει τα :doc:`κρίσιμα λάθη <validation/critical>` των υποβαλλόμενων αρχείων.
 
-files
-    For each file submitted as described in :doc:`file submission <submission>` two attributes are provided:
-    * name: the name of the file
-    * processed: whether there was no critical errors and the file was processed and its contents entered into the database.
+ACCOUNTING_ERRORS
+    Περιέχει τα :doc:`λογιστικά λάθη <validation/accounting>` που προκύπτουν από τα υποβαλλόμενα στοιχεία.
 
-critical_errors
-    A list of critical errors as described in :doc:`Critical Error <validation/critical>` (optional)
+REFERENCE_ERRORS
+    Περιέχει λάθη στα στοχεία αναφοράς. 
 
 .. toctree::
    :maxdepth: 1 
 
    validation/critical
-   validation/schema_error
+   validation/accounting

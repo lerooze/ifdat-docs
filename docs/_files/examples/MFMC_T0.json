@@ -623,12 +623,6 @@
           "STCK": {
             "VALUE": 100000.0
           },
-          "FSC_STCK": {
-            "VALUE": 100000.0
-          },
-          "EUR_STCK": {
-            "VALUE": 100000.0
-          },
           "FLS": {
             "VALUE": 100000.0
           },
@@ -643,12 +637,6 @@
             "FRQNCY": "M"
           },
           "STCK": {
-            "VALUE": 150000.0
-          },
-          "FSC_STCK": {
-            "VALUE": 150000.0
-          },
-          "EUR_STCK": {
             "VALUE": 150000.0
           },
           "FLS": {
@@ -667,12 +655,6 @@
           "STCK": {
             "VALUE": 200000.0
           },
-          "FSC_STCK": {
-            "VALUE": 200000.0
-          },
-          "EUR_STCK": {
-            "VALUE": 200000.0
-          },
           "FLS": {
             "VALUE": 200000.0
           },
@@ -687,12 +669,6 @@
             "FRQNCY": "M"
           },
           "STCK": {
-            "VALUE": 140000.0
-          },
-          "FSC_STCK": {
-            "VALUE": 140000.0
-          },
-          "EUR_STCK": {
             "VALUE": 140000.0
           },
           "FLS": {
@@ -714,28 +690,16 @@
           "QNTTY": {
             "VALUE": 10000.0
           },
-          "FSC_SBSCRPTNS": {
+          "SBSCRPTNS": {
             "VALUE": 100000.0
           },
-          "EUR_SBSCRPTNS": {
-            "VALUE": 100000.0
-          },
-          "FSC_SUB_CHRGS": {
+          "SBSCRPTNS_CHRGS": {
             "VALUE": 0.0
           },
-          "EUR_SUB_CHRGS": {
+          "RDMPTNS": {
             "VALUE": 0.0
           },
-          "FSC_RDMPTNS": {
-            "VALUE": 0.0
-          },
-          "EUR_RDMPTNS": {
-            "VALUE": 0.0
-          },
-          "FSC_RED_CHRGS": {
-            "VALUE": 0.0
-          },
-          "EUR_RED_CHRGS": {
+          "RDMPTNS_CHRGS": {
             "VALUE": 0.0
           }
         },
@@ -749,28 +713,16 @@
           "QNTTY": {
             "VALUE": 10000.0
           },
-          "FSC_SBSCRPTNS": {
+          "SBSCRPTNS": {
             "VALUE": 150000.0
           },
-          "EUR_SBSCRPTNS": {
-            "VALUE": 150000.0
-          },
-          "FSC_SUB_CHRGS": {
+          "SBSCRPTNS_CHRGS": {
             "VALUE": 0.0
           },
-          "EUR_SUB_CHRGS": {
+          "RDMPTNS": {
             "VALUE": 0.0
           },
-          "FSC_RDMPTNS": {
-            "VALUE": 0.0
-          },
-          "EUR_RDMPTNS": {
-            "VALUE": 0.0
-          },
-          "FSC_RED_CHRGS": {
-            "VALUE": 0.0
-          },
-          "EUR_RED_CHRGS": {
+          "RDMPTNS_CHRGS": {
             "VALUE": 0.0
           }
         },
@@ -784,28 +736,16 @@
           "QNTTY": {
             "VALUE": 10000.0
           },
-          "FSC_SBSCRPTNS": {
+          "SBSCRPTNS": {
             "VALUE": 200000.0
           },
-          "EUR_SBSCRPTNS": {
-            "VALUE": 200000.0
-          },
-          "FSC_SUB_CHRGS": {
+          "SBSCRPTNS_CHRGS": {
             "VALUE": 0.0
           },
-          "EUR_SUB_CHRGS": {
+          "RDMPTNS": {
             "VALUE": 0.0
           },
-          "FSC_RDMPTNS": {
-            "VALUE": 0.0
-          },
-          "EUR_RDMPTNS": {
-            "VALUE": 0.0
-          },
-          "FSC_RED_CHRGS": {
-            "VALUE": 0.0
-          },
-          "EUR_RED_CHRGS": {
+          "RDMPTNS_CHRGS": {
             "VALUE": 0.0
           }
         },
@@ -819,28 +759,16 @@
           "QNTTY": {
             "VALUE": 10000.0
           },
-          "FSC_SBSCRPTNS": {
+          "SBSCRPTNS": {
             "VALUE": 100000.0
           },
-          "EUR_SBSCRPTNS": {
-            "VALUE": 100000.0
-          },
-          "FSC_SUB_CHRGS": {
+          "SBSCRPTNS_CHRGS": {
             "VALUE": 0.0
           },
-          "EUR_SUB_CHRGS": {
+          "RDMPTNS": {
             "VALUE": 0.0
           },
-          "FSC_RDMPTNS": {
-            "VALUE": 0.0
-          },
-          "EUR_RDMPTNS": {
-            "VALUE": 0.0
-          },
-          "FSC_RED_CHRGS": {
-            "VALUE": 0.0
-          },
-          "EUR_RED_CHRGS": {
+          "RDMPTNS_CHRGS": {
             "VALUE": 0.0
           }
         },
@@ -854,28 +782,16 @@
           "QNTTY": {
             "VALUE": 2000.0
           },
-          "FSC_SBSCRPTNS": {
+          "SBSCRPTNS": {
             "VALUE": 40000.0
           },
-          "EUR_SBSCRPTNS": {
-            "VALUE": 40000.0
-          },
-          "FSC_SUB_CHRGS": {
+          "SBSCRPTNS_CHRGS": {
             "VALUE": 0.0
           },
-          "EUR_SUB_CHRGS": {
+          "RDMPTNS": {
             "VALUE": 0.0
           },
-          "FSC_RDMPTNS": {
-            "VALUE": 0.0
-          },
-          "EUR_RDMPTNS": {
-            "VALUE": 0.0
-          },
-          "FSC_RED_CHRGS": {
-            "VALUE": 0.0
-          },
-          "EUR_RED_CHRGS": {
+          "RDMPTNS_CHRGS": {
             "VALUE": 0.0
           }
         }
@@ -887,16 +803,10 @@
             "DT": "2022-01-31",
             "FRQNCY": "M"
           },
-          "FSC_BK_PRC": {
+          "BK_PRC": {
             "VALUE": 10.0
           },
-          "EUR_BK_PRC": {
-            "VALUE": 10.0
-          },
-          "FSC_INCM": {
-            "VALUE": 0.0
-          },
-          "EUR_INCM": {
+          "INCM": {
             "VALUE": 0.0
           }
         },
@@ -906,16 +816,10 @@
             "DT": "2022-01-31",
             "FRQNCY": "M"
           },
-          "FSC_BK_PRC": {
+          "BK_PRC": {
             "VALUE": 15.0
           },
-          "EUR_BK_PRC": {
-            "VALUE": 15.0
-          },
-          "FSC_INCM": {
-            "VALUE": 0.0
-          },
-          "EUR_INCM": {
+          "INCM": {
             "VALUE": 0.0
           }
         },
@@ -925,16 +829,10 @@
             "DT": "2022-01-31",
             "FRQNCY": "M"
           },
-          "FSC_BK_PRC": {
+          "BK_PRC": {
             "VALUE": 20.0
           },
-          "EUR_BK_PRC": {
-            "VALUE": 20.0
-          },
-          "FSC_INCM": {
-            "VALUE": 0.0
-          },
-          "EUR_INCM": {
+          "INCM": {
             "VALUE": 0.0
           }
         },
@@ -944,16 +842,10 @@
             "DT": "2022-01-31",
             "FRQNCY": "M"
           },
-          "FSC_BK_PRC": {
+          "BK_PRC": {
             "VALUE": 10.0
           },
-          "EUR_BK_PRC": {
-            "VALUE": 10.0
-          },
-          "FSC_INCM": {
-            "VALUE": 0.0
-          },
-          "EUR_INCM": {
+          "INCM": {
             "VALUE": 0.0
           }
         },
@@ -963,16 +855,10 @@
             "DT": "2022-01-31",
             "FRQNCY": "M"
           },
-          "FSC_BK_PRC": {
+          "BK_PRC": {
             "VALUE": 20.0
           },
-          "EUR_BK_PRC": {
-            "VALUE": 20.0
-          },
-          "FSC_INCM": {
-            "VALUE": 0.0
-          },
-          "EUR_INCM": {
+          "INCM": {
             "VALUE": 0.0
           }
         }

@@ -1,25 +1,100 @@
 Yποβολή Τ1 (περίοδος αναφοράς Φεβρουάριος 2022)
 ===============================================
+Η προθεσμία υποβολής σε μορφή JSON ή EXCEL που
+περίεχει στοιχεία με όλες τις παρακάτω εξελίξεις κατά τη διάρκεια του
+Ιανουαρίου του 2022 είναι η 2022-03-14. 
 
 
 Εξελίξεις κατά τη διάρκεια του Φεβρουαρίου του 2022
 ---------------------------------------------------
 
-#. Νέος Ιδιώτης Μεριδιούχος -> Συμπλήρωση πινάκων REF.HLDR
-#. Αλλαγή ονομασίας ΑΕΔΑΚ -> Συμπλήρωση πινάκων REF.MNGMNT_DYNMC
-#. Λογιστικά στοιχεία -> Συμπλήρωση πινάκων ACC.DPST, ACC.SHR, ACC.LBLTY_RMNNG, ACC.HLDR, ACC.RVN, ACC.EXPNS, ACC.AGG
+Στοιχεία αναφοράς (κατηγορία REF)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+#. Αλλαγή ονομασίας ΑΕΔΑΚ -> REF.MNGMNT_DYNMC
+
+   Απόσπαμα json αρχείου:
+   
+.. literalinclude:: ../../../../_files/examples/MFMC_T1.json 
+   :language: json
+   :lines: 9-25
+
+
+
+Λογιστικά στοιχεία (κατηγορία ACC)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+#. Καταθέσεις -> Συμπληρωση πίνακα ACC.DPST
+   
+   Απόσπαμα json αρχείου:
+   
+.. literalinclude:: ../../../../_files/examples/MFMC_T1.json 
+   :language: json
+   :lines: 28-93
+
+#. Μετοχές -> Συμπληρωση πίνακα ACC.SHR
+   
+   Απόσπαμα json αρχείου:
+   
+.. literalinclude:: ../../../../_files/examples/MFMC_T1.json 
+   :language: json
+   :lines: 94-141
+
+#. Λοιπά στοιχεία ενεργητικού -> Συμπληρωση πίνακα ACC.ASST_RMNNG
+   
+   Απόσπαμα json αρχείου:
+   
+.. literalinclude:: ../../../../_files/examples/MFMC_T1.json 
+   :language: json
+   :lines: 142-199
+
+#. Λοιπά στοιχεία παθητικού -> Συμπληρωση πίνακα ACC.LBLTY_RMNNG
+   
+   Απόσπαμα json αρχείου:
+   
+.. literalinclude:: ../../../../_files/examples/MFMC_T1.json 
+   :language: json
+   :lines: 200-271
+
+#. Διακρατήσεις -> Συμπληρωση πίνακα ACC.HLDR
+   
+   Απόσπαμα json αρχείου:
+   
+.. literalinclude:: ../../../../_files/examples/MFMC_T1.json 
+   :language: json
+   :lines: 272-388
+
+#. Έσοδα -> Συμπληρωση πίνακα ACC.RVN
+   
+   Απόσπαμα json αρχείου:
+   
+.. literalinclude:: ../../../../_files/examples/MFMC_T1.json 
+   :language: json
+   :lines: 389-445
+
+#. Έξοδα -> Συμπληρωση πίνακα ACC.EXPNS
+   
+   Απόσπαμα json αρχείου:
+   
+.. literalinclude:: ../../../../_files/examples/MFMC_T1.json 
+   :language: json
+   :lines: 446-502
+
+#. Συγκεντρωτικά στοιχεία -> Συμπληρωση πίνακα ACC.AGG
+   
+   Απόσπαμα json αρχείου:
+   
+.. literalinclude:: ../../../../_files/examples/MFMC_T1.json 
+   :language: json
+   :lines: 503-569
 
 Αρχεία
 ------
-Η προθεσμία υποβολής ενός από του παρακάτω αρχείου σε μορφή JSON ή EXCEL που
-περίεχει στοιχεία με όλες τις παραπάνω εξελίξεις κατά τη διάρκεια του
-Φεβρουαρίου του 2022 είναι η 2022-03-14. 
-
 excel
-    :download:`MFMC_T0_EXCEL <../../../../_files/examples/MFMC_T1.xlsx>`
+    :download:`MFMC_T1_EXCEL <../../../../_files/examples/MFMC_T1.xlsx>`
 
 json
-    :download:`MFMC_T0_JSON <../../../../_files/examples/MFMC_T1.json>`
+    :download:`MFMC_T1_JSON <../../../../_files/examples/MFMC_T1.json>`
     
 
 Προβολή αρχείου json

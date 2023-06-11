@@ -12,6 +12,20 @@ What's new?
 .. ============
 
 
+v0.6.0 (2023-06-11)
+-------------------
+
+* Merge ACC tables regarding non-financial assets into ASST_NN_FNNCL
+* Refactor ACC tables ASST_RMNNG, LBLTY_RMNNG by adding types in the dimensions.
+* Refactor all ACC tables to include FLOWS (FLS)
+* Accrued interest, rent not included in STOCK
+* If not explicitly stated in the variables definitions all monetary variables are expressed in Euros (and thus removed explicit variables for Euro and FSC in ACC tables)
+* Refactor examples
+* Merge DEBT TRANCHE and REDEMPTION tables in REF into OUTSTANDING_CHANGE
+* Add validation section
+* Refactor documentation to reflect the above changes
+* Clean documentation
+  
 v0.5.4 (2023-05-30)
 -------------------
 

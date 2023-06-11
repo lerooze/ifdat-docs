@@ -23,11 +23,5 @@ FREQUENCY (FRQNCY)
 
 .. _revenue:
 
-AMOUNT (AMNT)
-    Έσοδα ανά μετοχή/μερίδιο εκφραζόμενο στο :ref:`νόμισμα <sishrcurrency>`
-
-AMOUNT IN FSC (FSC_AMNT)
-    Η revenue_ στο νόμισμα αποτίμησης της λογιστικής κατάστασης.
-
 AMOUNT IN EURO (EUR_AMNT)
-    Η revenue_ σε Ευρώ.
+    Έσοδα ανά μετοχή/μερίδιο σε ευρώ

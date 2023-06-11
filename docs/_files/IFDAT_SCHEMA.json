@@ -3823,6 +3823,76 @@
         "DIMS"
       ]
     },
+    "DbtOutstndngChnTypEnum": {
+      "title": "DbtOutstndngChnTypEnum",
+      "description": "An enumeration.",
+      "enum": [
+        "-",
+        "INIT",
+        "TRANCHE",
+        "PARTIAL",
+        "FULL"
+      ],
+      "type": "string"
+    },
+    "DbtOutstndngChnDimensionContainer": {
+      "title": "DbtOutstndngChnDimensionContainer",
+      "type": "object",
+      "properties": {
+        "ID": {
+          "title": "Id",
+          "maxLength": 32,
+          "pattern": "^[IP][a-zA-z0-9_]+",
+          "type": "string"
+        },
+        "TP": {
+          "$ref": "#/definitions/DbtOutstndngChnTypEnum"
+        },
+        "DT": {
+          "title": "Dt",
+          "type": "string",
+          "format": "date"
+        }
+      },
+      "required": [
+        "ID",
+        "TP",
+        "DT"
+      ]
+    },
+    "BaseMeasure_float_": {
+      "title": "BaseMeasure[float]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "title": "Value",
+          "type": "number"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
+    "DbtOutstndngChnSeries": {
+      "title": "DbtOutstndngChnSeries",
+      "type": "object",
+      "properties": {
+        "DIMS": {
+          "$ref": "#/definitions/DbtOutstndngChnDimensionContainer"
+        },
+        "AMNT": {
+          "$ref": "#/definitions/BaseMeasure_float_"
+        },
+        "PRC": {
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
+        }
+      },
+      "required": [
+        "DIMS",
+        "AMNT",
+        "PRC"
+      ]
+    },
     "DtDimensionContainer_DBT_": {
       "title": "DtDimensionContainer[DBT]",
       "type": "object",
@@ -3842,51 +3912,6 @@
       "required": [
         "ID",
         "DT"
-      ]
-    },
-    "TrnchSeries": {
-      "title": "TrnchSeries",
-      "type": "object",
-      "properties": {
-        "DIMS": {
-          "$ref": "#/definitions/DtDimensionContainer_DBT_"
-        },
-        "AMNT": {
-          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
-        }
-      },
-      "required": [
-        "DIMS",
-        "AMNT"
-      ]
-    },
-    "RdmptnSeries": {
-      "title": "RdmptnSeries",
-      "type": "object",
-      "properties": {
-        "DIMS": {
-          "$ref": "#/definitions/DtDimensionContainer_DBT_"
-        },
-        "AMNT": {
-          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
-        }
-      },
-      "required": [
-        "DIMS",
-        "AMNT"
-      ]
-    },
-    "BaseMeasure_float_": {
-      "title": "BaseMeasure[float]",
-      "type": "object",
-      "properties": {
-        "VALUE": {
-          "title": "Value",
-          "type": "number"
-        }
-      },
-      "required": [
-        "VALUE"
       ]
     },
     "CpnSeries": {
@@ -3920,6 +3945,20 @@
         "ID"
       ]
     },
+    "BaseMeasure_Ascii12_": {
+      "title": "BaseMeasure[Ascii12]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "title": "Value",
+          "maxLength": 12,
+          "type": "string"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
     "BaseMeasure_SHR_": {
       "title": "BaseMeasure[SHR]",
       "type": "object",
@@ -3947,6 +3986,12 @@
         },
         "DT_CLS": {
           "$ref": "#/definitions/BaseMeasure_date_"
+        },
+        "ISIN_ID": {
+          "$ref": "#/definitions/BaseMeasure_Ascii32_"
+        },
+        "INTRNL_ID": {
+          "$ref": "#/definitions/BaseMeasure_Ascii12_"
         },
         "CRRNCY": {
           "$ref": "#/definitions/BaseMeasure_GenCrrncyEnum_"
@@ -4597,38 +4642,8 @@
         "VALUE"
       ]
     },
-    "IssrSeries": {
-      "title": "IssrSeries",
-      "type": "object",
-      "properties": {
-        "DIMS": {
-          "$ref": "#/definitions/DimensionContainer_ORG_"
-        },
-        "DT_BRTH": {
-          "$ref": "#/definitions/BaseMeasure_date_"
-        },
-        "DT_CLS": {
-          "$ref": "#/definitions/BaseMeasure_date_"
-        },
-        "NM": {
-          "$ref": "#/definitions/BaseMeasure_Str128_"
-        },
-        "CNTRY_RSDNC": {
-          "$ref": "#/definitions/BaseMeasure_GenCntryEnum_"
-        },
-        "INSTTTNL_SCTR": {
-          "$ref": "#/definitions/BaseMeasure_OrgInstttnlSctrEnum_"
-        },
-        "ALS_OF": {
-          "$ref": "#/definitions/BaseMeasure_ORG_"
-        }
-      },
-      "required": [
-        "DIMS"
-      ]
-    },
-    "journey__structure__ifdat__ref__HldrSeries": {
-      "title": "HldrSeries",
+    "CntrprtySeries": {
+      "title": "CntrprtySeries",
       "type": "object",
       "properties": {
         "DIMS": {
@@ -5037,20 +5052,6 @@
         "ID"
       ]
     },
-    "BaseMeasure_Ascii12_": {
-      "title": "BaseMeasure[Ascii12]",
-      "type": "object",
-      "properties": {
-        "VALUE": {
-          "title": "Value",
-          "maxLength": 12,
-          "type": "string"
-        }
-      },
-      "required": [
-        "VALUE"
-      ]
-    },
     "DrvtvTypEnum": {
       "title": "DrvtvTypEnum",
       "description": "An enumeration.",
@@ -5187,161 +5188,6 @@
         "DIMS"
       ]
     },
-    "DimensionContainer_RRE_": {
-      "title": "DimensionContainer[RRE]",
-      "type": "object",
-      "properties": {
-        "ID": {
-          "title": "Id",
-          "maxLength": 32,
-          "pattern": "^[NP][a-zA-z0-9_]+",
-          "type": "string"
-        }
-      },
-      "required": [
-        "ID"
-      ]
-    },
-    "RreTypEnum": {
-      "title": "RreTypEnum",
-      "description": "An enumeration.",
-      "enum": [
-        "-",
-        "APARTMENT",
-        "DETACHED",
-        "TERRACED",
-        "STORE",
-        "PARKING",
-        "PLOT"
-      ],
-      "type": "string"
-    },
-    "BaseMeasure_RreTypEnum_": {
-      "title": "BaseMeasure[RreTypEnum]",
-      "type": "object",
-      "properties": {
-        "VALUE": {
-          "$ref": "#/definitions/RreTypEnum"
-        }
-      },
-      "required": [
-        "VALUE"
-      ]
-    },
-    "BaseMeasure_RRE_": {
-      "title": "BaseMeasure[RRE]",
-      "type": "object",
-      "properties": {
-        "VALUE": {
-          "title": "Value",
-          "maxLength": 32,
-          "pattern": "^[NP][a-zA-z0-9_]+",
-          "type": "string"
-        }
-      },
-      "required": [
-        "VALUE"
-      ]
-    },
-    "journey__structure__ifdat__ref__RreSeries": {
-      "title": "RreSeries",
-      "type": "object",
-      "properties": {
-        "DIMS": {
-          "$ref": "#/definitions/DimensionContainer_RRE_"
-        },
-        "CNTRY": {
-          "$ref": "#/definitions/BaseMeasure_GenCntryEnum_"
-        },
-        "TYP": {
-          "$ref": "#/definitions/BaseMeasure_RreTypEnum_"
-        },
-        "ALS_OF": {
-          "$ref": "#/definitions/BaseMeasure_RRE_"
-        }
-      },
-      "required": [
-        "DIMS"
-      ]
-    },
-    "DimensionContainer_CRE_": {
-      "title": "DimensionContainer[CRE]",
-      "type": "object",
-      "properties": {
-        "ID": {
-          "title": "Id",
-          "maxLength": 32,
-          "pattern": "^[NP][a-zA-z0-9_]+",
-          "type": "string"
-        }
-      },
-      "required": [
-        "ID"
-      ]
-    },
-    "CreTypEnum": {
-      "title": "CreTypEnum",
-      "description": "An enumeration.",
-      "enum": [
-        "-",
-        "OFFICE",
-        "SHOP",
-        "WAREHOUSE",
-        "INDUSTRIAL",
-        "RESTAURANT",
-        "TOURISM",
-        "OTHER"
-      ],
-      "type": "string"
-    },
-    "BaseMeasure_CreTypEnum_": {
-      "title": "BaseMeasure[CreTypEnum]",
-      "type": "object",
-      "properties": {
-        "VALUE": {
-          "$ref": "#/definitions/CreTypEnum"
-        }
-      },
-      "required": [
-        "VALUE"
-      ]
-    },
-    "BaseMeasure_CRE_": {
-      "title": "BaseMeasure[CRE]",
-      "type": "object",
-      "properties": {
-        "VALUE": {
-          "title": "Value",
-          "maxLength": 32,
-          "pattern": "^[NP][a-zA-z0-9_]+",
-          "type": "string"
-        }
-      },
-      "required": [
-        "VALUE"
-      ]
-    },
-    "journey__structure__ifdat__ref__CreSeries": {
-      "title": "CreSeries",
-      "type": "object",
-      "properties": {
-        "DIMS": {
-          "$ref": "#/definitions/DimensionContainer_CRE_"
-        },
-        "CNTRY": {
-          "$ref": "#/definitions/BaseMeasure_GenCntryEnum_"
-        },
-        "TYP": {
-          "$ref": "#/definitions/BaseMeasure_CreTypEnum_"
-        },
-        "ALS_OF": {
-          "$ref": "#/definitions/BaseMeasure_CRE_"
-        }
-      },
-      "required": [
-        "DIMS"
-      ]
-    },
     "journey__structure__ifdat__ref__Datasets": {
       "title": "Datasets",
       "type": "object",
@@ -5374,18 +5220,11 @@
             "$ref": "#/definitions/SelfDbtDynmcSeries"
           }
         },
-        "SELF_DBT_TRNCH": {
-          "title": "Self Dbt Trnch",
+        "SELF_DBT_OUTSTNDNG_CNG": {
+          "title": "Self Dbt Outstndng Cng",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/TrnchSeries"
-          }
-        },
-        "SELF_DBT_RDMPTN": {
-          "title": "Self Dbt Rdmptn",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/RdmptnSeries"
+            "$ref": "#/definitions/DbtOutstndngChnSeries"
           }
         },
         "SELF_DBT_CPN": {
@@ -5423,6 +5262,13 @@
             "$ref": "#/definitions/SpltSeries"
           }
         },
+        "SPLT": {
+          "title": "Splt",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SpltSeries"
+          }
+        },
         "MNGMNT": {
           "title": "Mngmnt",
           "type": "array",
@@ -5451,18 +5297,11 @@
             "$ref": "#/definitions/CntctTRaSeries"
           }
         },
-        "ISSR": {
-          "title": "Issr",
+        "CNTRPRTY": {
+          "title": "Cntrprty",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/IssrSeries"
-          }
-        },
-        "HLDR": {
-          "title": "Hldr",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/journey__structure__ifdat__ref__HldrSeries"
+            "$ref": "#/definitions/CntrprtySeries"
           }
         },
         "DPST": {
@@ -5513,72 +5352,9 @@
           "items": {
             "$ref": "#/definitions/journey__structure__ifdat__ref__OdrSeries"
           }
-        },
-        "RRE": {
-          "title": "Rre",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/journey__structure__ifdat__ref__RreSeries"
-          }
-        },
-        "CRE": {
-          "title": "Cre",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/journey__structure__ifdat__ref__CreSeries"
-          }
         }
       },
       "additionalProperties": false
-    },
-    "CrrncyDimensionContainer": {
-      "title": "CrrncyDimensionContainer",
-      "type": "object",
-      "properties": {
-        "CRRNCY": {
-          "$ref": "#/definitions/GenCrrncyEnum"
-        },
-        "ID": {
-          "title": "Id",
-          "maxLength": 32,
-          "pattern": "^[ELTBP][a-zA-z0-9_]+",
-          "type": "string"
-        },
-        "DT": {
-          "title": "Dt",
-          "type": "string",
-          "format": "date"
-        }
-      },
-      "required": [
-        "CRRNCY",
-        "ID",
-        "DT"
-      ]
-    },
-    "CshSeries": {
-      "title": "CshSeries",
-      "type": "object",
-      "properties": {
-        "DIMS": {
-          "$ref": "#/definitions/CrrncyDimensionContainer"
-        },
-        "STCK": {
-          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
-        },
-        "FSC_STCK": {
-          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
-        },
-        "EUR_STCK": {
-          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
-        }
-      },
-      "required": [
-        "DIMS",
-        "STCK",
-        "FSC_STCK",
-        "EUR_STCK"
-      ]
     },
     "GenFrqncyEnum": {
       "title": "GenFrqncyEnum",
@@ -5622,6 +5398,55 @@
       ],
       "type": "string"
     },
+    "CrrncyDimensionContainer": {
+      "title": "CrrncyDimensionContainer",
+      "type": "object",
+      "properties": {
+        "CRRNCY": {
+          "$ref": "#/definitions/GenCrrncyEnum"
+        },
+        "ID": {
+          "title": "Id",
+          "maxLength": 32,
+          "pattern": "^[ELTBP][a-zA-z0-9_]+",
+          "type": "string"
+        },
+        "DT": {
+          "title": "Dt",
+          "type": "string",
+          "format": "date"
+        },
+        "FRQNCY": {
+          "$ref": "#/definitions/GenFrqncyEnum"
+        }
+      },
+      "required": [
+        "CRRNCY",
+        "ID",
+        "DT",
+        "FRQNCY"
+      ]
+    },
+    "CshSeries": {
+      "title": "CshSeries",
+      "type": "object",
+      "properties": {
+        "DIMS": {
+          "$ref": "#/definitions/CrrncyDimensionContainer"
+        },
+        "STCK": {
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
+        },
+        "FLS": {
+          "$ref": "#/definitions/BaseMeasure_float_"
+        }
+      },
+      "required": [
+        "DIMS",
+        "STCK",
+        "FLS"
+      ]
+    },
     "FrqncyAccDimensionContainer_DEP_": {
       "title": "FrqncyAccDimensionContainer[DEP]",
       "type": "object",
@@ -5657,12 +5482,6 @@
         "STCK": {
           "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
-        "FSC_STCK": {
-          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
-        },
-        "EUR_STCK": {
-          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
-        },
         "FLS": {
           "$ref": "#/definitions/BaseMeasure_float_"
         },
@@ -5673,8 +5492,6 @@
       "required": [
         "DIMS",
         "STCK",
-        "FSC_STCK",
-        "EUR_STCK",
         "FLS",
         "ACCRLS"
       ]
@@ -5714,26 +5531,14 @@
         "STCK": {
           "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
-        "FSC_STCK": {
-          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
-        },
-        "EUR_STCK": {
-          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
-        },
         "FLS": {
-          "$ref": "#/definitions/BaseMeasure_float_"
-        },
-        "RTE": {
           "$ref": "#/definitions/BaseMeasure_float_"
         }
       },
       "required": [
         "DIMS",
         "STCK",
-        "FSC_STCK",
-        "EUR_STCK",
-        "FLS",
-        "RTE"
+        "FLS"
       ]
     },
     "RelFrqncyAccDimensionContainer_DBT__ORG_": {
@@ -5778,13 +5583,7 @@
         "STCK": {
           "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
-        "FSC_STCK": {
-          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
-        },
-        "EUR_STCK": {
-          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
-        },
-        "TRNSCTNS": {
+        "FLS": {
           "$ref": "#/definitions/BaseMeasure_float_"
         },
         "NMNL_STCK": {
@@ -5795,25 +5594,19 @@
         },
         "ACCRLS": {
           "$ref": "#/definitions/BaseMeasure_float_"
-        },
-        "ARRRS": {
-          "$ref": "#/definitions/BaseMeasure_float_"
         }
       },
       "required": [
         "DIMS",
         "STCK",
-        "FSC_STCK",
-        "EUR_STCK",
-        "TRNSCTNS",
+        "FLS",
         "NMNL_STCK",
         "LND_FR_SFT",
-        "ACCRLS",
-        "ARRRS"
+        "ACCRLS"
       ]
     },
-    "AccDimensionContainer_LON_": {
-      "title": "AccDimensionContainer[LON]",
+    "AccFreqDimensionContainer_LON_": {
+      "title": "AccFreqDimensionContainer[LON]",
       "type": "object",
       "properties": {
         "IID": {
@@ -5826,11 +5619,15 @@
           "title": "Dt",
           "type": "string",
           "format": "date"
+        },
+        "FRQNCY": {
+          "$ref": "#/definitions/GenFrqncyEnum"
         }
       },
       "required": [
         "IID",
-        "DT"
+        "DT",
+        "FRQNCY"
       ]
     },
     "journey__structure__ifdat__acc__LnSeries": {
@@ -5838,25 +5635,16 @@
       "type": "object",
       "properties": {
         "DIMS": {
-          "$ref": "#/definitions/AccDimensionContainer_LON_"
+          "$ref": "#/definitions/AccFreqDimensionContainer_LON_"
         },
         "STCK": {
           "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
-        "FSC_STCK": {
-          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
-        },
-        "EUR_STCK": {
-          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
+        "FLS": {
+          "$ref": "#/definitions/BaseMeasure_float_"
         },
         "ACCRLS": {
           "$ref": "#/definitions/BaseMeasure_float_"
-        },
-        "ARRRS": {
-          "$ref": "#/definitions/BaseMeasure_float_"
-        },
-        "WRT_OFFS": {
-          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
         "IS_GRP_LN": {
           "$ref": "#/definitions/BaseMeasure_bool_"
@@ -5865,11 +5653,8 @@
       "required": [
         "DIMS",
         "STCK",
-        "FSC_STCK",
-        "EUR_STCK",
+        "FLS",
         "ACCRLS",
-        "ARRRS",
-        "WRT_OFFS",
         "IS_GRP_LN"
       ]
     },
@@ -5915,13 +5700,7 @@
         "STCK": {
           "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
-        "FSC_STCK": {
-          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
-        },
-        "EUR_STCK": {
-          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
-        },
-        "TRNSCTNS": {
+        "FLS": {
           "$ref": "#/definitions/BaseMeasure_float_"
         },
         "QNTTY": {
@@ -5937,9 +5716,7 @@
       "required": [
         "DIMS",
         "STCK",
-        "FSC_STCK",
-        "EUR_STCK",
-        "TRNSCTNS",
+        "FLS",
         "QNTTY",
         "LND_FR_SFT",
         "IS_DRCT_INVSTMNT"
@@ -5987,16 +5764,7 @@
         "STCK": {
           "$ref": "#/definitions/BaseMeasure_float_"
         },
-        "FSC_STCK": {
-          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
-        },
-        "EUR_STCK": {
-          "$ref": "#/definitions/BaseMeasure_float_"
-        },
-        "GRSS_STCK": {
-          "$ref": "#/definitions/BaseMeasure_float_"
-        },
-        "TRNSCTNS": {
+        "FLS": {
           "$ref": "#/definitions/BaseMeasure_float_"
         },
         "QNTTY": {
@@ -6006,10 +5774,7 @@
       "required": [
         "DIMS",
         "STCK",
-        "FSC_STCK",
-        "EUR_STCK",
-        "GRSS_STCK",
-        "TRNSCTNS",
+        "FLS",
         "QNTTY"
       ]
     },
@@ -6048,195 +5813,36 @@
         "STCK": {
           "$ref": "#/definitions/BaseMeasure_float_"
         },
-        "FSC_STCK": {
-          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
-        },
-        "EUR_STCK": {
-          "$ref": "#/definitions/BaseMeasure_float_"
-        },
-        "TRNSCTNS": {
+        "FLS": {
           "$ref": "#/definitions/BaseMeasure_float_"
         }
       },
       "required": [
         "DIMS",
         "STCK",
-        "FSC_STCK",
-        "EUR_STCK",
-        "TRNSCTNS"
+        "FLS"
       ]
     },
-    "RelFrqncyAccDimensionContainer_RRE__ORG_": {
-      "title": "RelFrqncyAccDimensionContainer[RRE, ORG]",
-      "type": "object",
-      "properties": {
-        "IID": {
-          "title": "Iid",
-          "maxLength": 32,
-          "pattern": "^[NP][a-zA-z0-9_]+",
-          "type": "string"
-        },
-        "ID": {
-          "title": "Id",
-          "maxLength": 32,
-          "pattern": "^[ELTBP][a-zA-z0-9_]+",
-          "type": "string"
-        },
-        "DT": {
-          "title": "Dt",
-          "type": "string",
-          "format": "date"
-        },
-        "FRQNCY": {
-          "$ref": "#/definitions/GenFrqncyEnum"
-        }
-      },
-      "required": [
-        "IID",
-        "ID",
-        "DT",
-        "FRQNCY"
-      ]
-    },
-    "journey__structure__ifdat__acc__RreSeries": {
-      "title": "RreSeries",
-      "type": "object",
-      "properties": {
-        "DIMS": {
-          "$ref": "#/definitions/RelFrqncyAccDimensionContainer_RRE__ORG_"
-        },
-        "STCK": {
-          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
-        },
-        "FSC_STCK": {
-          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
-        },
-        "EUR_STCK": {
-          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
-        },
-        "TRNSCTNS": {
-          "$ref": "#/definitions/BaseMeasure_float_"
-        },
-        "ACCRLS": {
-          "$ref": "#/definitions/BaseMeasure_float_"
-        },
-        "ARRRS": {
-          "$ref": "#/definitions/BaseMeasure_float_"
-        },
-        "WRT_OFFS": {
-          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
-        }
-      },
-      "required": [
-        "DIMS",
-        "STCK",
-        "FSC_STCK",
-        "EUR_STCK",
-        "TRNSCTNS",
-        "ACCRLS",
-        "ARRRS",
-        "WRT_OFFS"
-      ]
-    },
-    "RelFrqncyAccDimensionContainer_CRE__ORG_": {
-      "title": "RelFrqncyAccDimensionContainer[CRE, ORG]",
-      "type": "object",
-      "properties": {
-        "IID": {
-          "title": "Iid",
-          "maxLength": 32,
-          "pattern": "^[NP][a-zA-z0-9_]+",
-          "type": "string"
-        },
-        "ID": {
-          "title": "Id",
-          "maxLength": 32,
-          "pattern": "^[ELTBP][a-zA-z0-9_]+",
-          "type": "string"
-        },
-        "DT": {
-          "title": "Dt",
-          "type": "string",
-          "format": "date"
-        },
-        "FRQNCY": {
-          "$ref": "#/definitions/GenFrqncyEnum"
-        }
-      },
-      "required": [
-        "IID",
-        "ID",
-        "DT",
-        "FRQNCY"
-      ]
-    },
-    "journey__structure__ifdat__acc__CreSeries": {
-      "title": "CreSeries",
-      "type": "object",
-      "properties": {
-        "DIMS": {
-          "$ref": "#/definitions/RelFrqncyAccDimensionContainer_CRE__ORG_"
-        },
-        "STCK": {
-          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
-        },
-        "FSC_STCK": {
-          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
-        },
-        "EUR_STCK": {
-          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
-        },
-        "TRNSCTNS": {
-          "$ref": "#/definitions/BaseMeasure_float_"
-        },
-        "ACCRLS": {
-          "$ref": "#/definitions/BaseMeasure_float_"
-        },
-        "ARRRS": {
-          "$ref": "#/definitions/BaseMeasure_float_"
-        },
-        "WRT_OFFS": {
-          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
-        }
-      },
-      "required": [
-        "DIMS",
-        "STCK",
-        "FSC_STCK",
-        "EUR_STCK",
-        "TRNSCTNS",
-        "ACCRLS",
-        "ARRRS",
-        "WRT_OFFS"
-      ]
-    },
-    "BsiRmngFxdEnum": {
-      "title": "BsiRmngFxdEnum",
+    "AsstNnFnnclEnum": {
+      "title": "AsstNnFnnclEnum",
       "description": "An enumeration.",
       "enum": [
         "-",
-        "N1131",
-        "N1132",
-        "N1139",
-        "N114",
-        "N115",
-        "N1171",
-        "N1172",
-        "N1173",
-        "N1174",
-        "N1179",
-        "N131",
-        "N132",
-        "N133"
+        "NFA1",
+        "NFA2",
+        "NFA3",
+        "NFA4",
+        "NFA5",
+        "NFA6"
       ],
       "type": "string"
     },
-    "RmngFxdDimensionContainer": {
-      "title": "RmngFxdDimensionContainer",
+    "AsstNnFnnclDimensionContainer": {
+      "title": "AsstNnFnnclDimensionContainer",
       "type": "object",
       "properties": {
         "TYP": {
-          "$ref": "#/definitions/BsiRmngFxdEnum"
+          "$ref": "#/definitions/AsstNnFnnclEnum"
         },
         "CNTRY": {
           "$ref": "#/definitions/GenCntryEnum"
@@ -6264,1752 +5870,87 @@
         "FRQNCY"
       ]
     },
-    "RmnngFxdSeries": {
-      "title": "RmnngFxdSeries",
+    "AsstNnFnnclSeries": {
+      "title": "AsstNnFnnclSeries",
       "type": "object",
       "properties": {
         "DIMS": {
-          "$ref": "#/definitions/RmngFxdDimensionContainer"
+          "$ref": "#/definitions/AsstNnFnnclDimensionContainer"
         },
         "STCK": {
           "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
-        "FSC_STCK": {
-          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
-        },
-        "EUR_STCK": {
-          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
-        },
-        "TRNSCTNS": {
+        "FLS": {
           "$ref": "#/definitions/BaseMeasure_float_"
         },
         "ACCRLS": {
           "$ref": "#/definitions/BaseMeasure_float_"
-        },
-        "ARRRS": {
-          "$ref": "#/definitions/BaseMeasure_float_"
-        },
-        "WRT_OFFS": {
-          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         }
       },
       "required": [
         "DIMS",
         "STCK",
-        "FSC_STCK",
-        "EUR_STCK",
-        "TRNSCTNS",
-        "ACCRLS",
-        "ARRRS",
-        "WRT_OFFS"
+        "FLS",
+        "ACCRLS"
       ]
     },
-    "GrpCntrgrpEnum": {
-      "title": "GrpCntrgrpEnum",
+    "RemAssetEnum": {
+      "title": "RemAssetEnum",
       "description": "An enumeration.",
       "enum": [
-        "S11.AE",
-        "S11.AF",
-        "S11.AL",
-        "S11.AO",
-        "S11.AR",
-        "S11.AT",
-        "S11.AU",
-        "S11.BE",
-        "S11.BG",
-        "S11.BH",
-        "S11.BJ",
-        "S11.BM",
-        "S11.BR",
-        "S11.BS",
-        "S11.BY",
-        "S11.BZ",
-        "S11.CA",
-        "S11.CG",
-        "S11.CH",
-        "S11.CL",
-        "S11.CM",
-        "S11.CN",
-        "S11.CO",
-        "S11.CW",
-        "S11.CY",
-        "S11.CZ",
-        "S11.DE",
-        "S11.DK",
-        "S11.DO",
-        "S11.EG",
-        "S11.ER",
-        "S11.ES",
-        "S11.FI",
-        "S11.FO",
-        "S11.FR",
-        "S11.GB",
-        "S11.GE",
-        "S11.GG",
-        "S11.GI",
-        "S11.GR",
-        "S11.HK",
-        "S11.HR",
-        "S11.HU",
-        "S11.ID",
-        "S11.IE",
-        "S11.IL",
-        "S11.IM",
-        "S11.IN",
-        "S11.IO",
-        "S11.IS",
-        "S11.IT",
-        "S11.JE",
-        "S11.JP",
-        "S11.KE",
-        "S11.KR",
-        "S11.KY",
-        "S11.KZ",
-        "S11.LB",
-        "S11.LR",
-        "S11.LU",
-        "S11.LV",
-        "S11.LY",
-        "S11.ME",
-        "S11.MH",
-        "S11.MK",
-        "S11.MN",
-        "S11.MU",
-        "S11.MW",
-        "S11.MX",
-        "S11.NG",
-        "S11.NL",
-        "S11.NO",
-        "S11.NZ",
-        "S11.OM",
-        "S11.PA",
-        "S11.PE",
-        "S11.PG",
-        "S11.PH",
-        "S11.PL",
-        "S11.PT",
-        "S11.QA",
-        "S11.RO",
-        "S11.RS",
-        "S11.RU",
-        "S11.SA",
-        "S11.SC",
-        "S11.SD",
-        "S11.SE",
-        "S11.SG",
-        "S11.SH",
-        "S11.SI",
-        "S11.SK",
-        "S11.TH",
-        "S11.TR",
-        "S11.TW",
-        "S11.TZ",
-        "S11.UA",
-        "S11.US",
-        "S11.VA",
-        "S11.VE",
-        "S11.VG",
-        "S11.ZA",
-        "S11.ZM",
-        "S121.AE",
-        "S121.AF",
-        "S121.AL",
-        "S121.AO",
-        "S121.AR",
-        "S121.AT",
-        "S121.AU",
-        "S121.BE",
-        "S121.BG",
-        "S121.BH",
-        "S121.BJ",
-        "S121.BM",
-        "S121.BR",
-        "S121.BS",
-        "S121.BY",
-        "S121.BZ",
-        "S121.CA",
-        "S121.CG",
-        "S121.CH",
-        "S121.CL",
-        "S121.CM",
-        "S121.CN",
-        "S121.CO",
-        "S121.CW",
-        "S121.CY",
-        "S121.CZ",
-        "S121.DE",
-        "S121.DK",
-        "S121.DO",
-        "S121.EG",
-        "S121.ER",
-        "S121.ES",
-        "S121.FI",
-        "S121.FO",
-        "S121.FR",
-        "S121.GB",
-        "S121.GE",
-        "S121.GG",
-        "S121.GI",
-        "S121.GR",
-        "S121.HK",
-        "S121.HR",
-        "S121.HU",
-        "S121.ID",
-        "S121.IE",
-        "S121.IL",
-        "S121.IM",
-        "S121.IN",
-        "S121.IO",
-        "S121.IS",
-        "S121.IT",
-        "S121.JE",
-        "S121.JP",
-        "S121.KE",
-        "S121.KR",
-        "S121.KY",
-        "S121.KZ",
-        "S121.LB",
-        "S121.LR",
-        "S121.LU",
-        "S121.LV",
-        "S121.LY",
-        "S121.ME",
-        "S121.MH",
-        "S121.MK",
-        "S121.MN",
-        "S121.MU",
-        "S121.MW",
-        "S121.MX",
-        "S121.NG",
-        "S121.NL",
-        "S121.NO",
-        "S121.NZ",
-        "S121.OM",
-        "S121.PA",
-        "S121.PE",
-        "S121.PG",
-        "S121.PH",
-        "S121.PL",
-        "S121.PT",
-        "S121.QA",
-        "S121.RO",
-        "S121.RS",
-        "S121.RU",
-        "S121.SA",
-        "S121.SC",
-        "S121.SD",
-        "S121.SE",
-        "S121.SG",
-        "S121.SH",
-        "S121.SI",
-        "S121.SK",
-        "S121.TH",
-        "S121.TR",
-        "S121.TW",
-        "S121.TZ",
-        "S121.UA",
-        "S121.US",
-        "S121.VA",
-        "S121.VE",
-        "S121.VG",
-        "S121.ZA",
-        "S121.ZM",
-        "S122.AE",
-        "S122.AF",
-        "S122.AL",
-        "S122.AO",
-        "S122.AR",
-        "S122.AT",
-        "S122.AU",
-        "S122.BE",
-        "S122.BG",
-        "S122.BH",
-        "S122.BJ",
-        "S122.BM",
-        "S122.BR",
-        "S122.BS",
-        "S122.BY",
-        "S122.BZ",
-        "S122.CA",
-        "S122.CG",
-        "S122.CH",
-        "S122.CL",
-        "S122.CM",
-        "S122.CN",
-        "S122.CO",
-        "S122.CW",
-        "S122.CY",
-        "S122.CZ",
-        "S122.DE",
-        "S122.DK",
-        "S122.DO",
-        "S122.EG",
-        "S122.ER",
-        "S122.ES",
-        "S122.FI",
-        "S122.FO",
-        "S122.FR",
-        "S122.GB",
-        "S122.GE",
-        "S122.GG",
-        "S122.GI",
-        "S122.GR",
-        "S122.HK",
-        "S122.HR",
-        "S122.HU",
-        "S122.ID",
-        "S122.IE",
-        "S122.IL",
-        "S122.IM",
-        "S122.IN",
-        "S122.IO",
-        "S122.IS",
-        "S122.IT",
-        "S122.JE",
-        "S122.JP",
-        "S122.KE",
-        "S122.KR",
-        "S122.KY",
-        "S122.KZ",
-        "S122.LB",
-        "S122.LR",
-        "S122.LU",
-        "S122.LV",
-        "S122.LY",
-        "S122.ME",
-        "S122.MH",
-        "S122.MK",
-        "S122.MN",
-        "S122.MU",
-        "S122.MW",
-        "S122.MX",
-        "S122.NG",
-        "S122.NL",
-        "S122.NO",
-        "S122.NZ",
-        "S122.OM",
-        "S122.PA",
-        "S122.PE",
-        "S122.PG",
-        "S122.PH",
-        "S122.PL",
-        "S122.PT",
-        "S122.QA",
-        "S122.RO",
-        "S122.RS",
-        "S122.RU",
-        "S122.SA",
-        "S122.SC",
-        "S122.SD",
-        "S122.SE",
-        "S122.SG",
-        "S122.SH",
-        "S122.SI",
-        "S122.SK",
-        "S122.TH",
-        "S122.TR",
-        "S122.TW",
-        "S122.TZ",
-        "S122.UA",
-        "S122.US",
-        "S122.VA",
-        "S122.VE",
-        "S122.VG",
-        "S122.ZA",
-        "S122.ZM",
-        "S123.AE",
-        "S123.AF",
-        "S123.AL",
-        "S123.AO",
-        "S123.AR",
-        "S123.AT",
-        "S123.AU",
-        "S123.BE",
-        "S123.BG",
-        "S123.BH",
-        "S123.BJ",
-        "S123.BM",
-        "S123.BR",
-        "S123.BS",
-        "S123.BY",
-        "S123.BZ",
-        "S123.CA",
-        "S123.CG",
-        "S123.CH",
-        "S123.CL",
-        "S123.CM",
-        "S123.CN",
-        "S123.CO",
-        "S123.CW",
-        "S123.CY",
-        "S123.CZ",
-        "S123.DE",
-        "S123.DK",
-        "S123.DO",
-        "S123.EG",
-        "S123.ER",
-        "S123.ES",
-        "S123.FI",
-        "S123.FO",
-        "S123.FR",
-        "S123.GB",
-        "S123.GE",
-        "S123.GG",
-        "S123.GI",
-        "S123.GR",
-        "S123.HK",
-        "S123.HR",
-        "S123.HU",
-        "S123.ID",
-        "S123.IE",
-        "S123.IL",
-        "S123.IM",
-        "S123.IN",
-        "S123.IO",
-        "S123.IS",
-        "S123.IT",
-        "S123.JE",
-        "S123.JP",
-        "S123.KE",
-        "S123.KR",
-        "S123.KY",
-        "S123.KZ",
-        "S123.LB",
-        "S123.LR",
-        "S123.LU",
-        "S123.LV",
-        "S123.LY",
-        "S123.ME",
-        "S123.MH",
-        "S123.MK",
-        "S123.MN",
-        "S123.MU",
-        "S123.MW",
-        "S123.MX",
-        "S123.NG",
-        "S123.NL",
-        "S123.NO",
-        "S123.NZ",
-        "S123.OM",
-        "S123.PA",
-        "S123.PE",
-        "S123.PG",
-        "S123.PH",
-        "S123.PL",
-        "S123.PT",
-        "S123.QA",
-        "S123.RO",
-        "S123.RS",
-        "S123.RU",
-        "S123.SA",
-        "S123.SC",
-        "S123.SD",
-        "S123.SE",
-        "S123.SG",
-        "S123.SH",
-        "S123.SI",
-        "S123.SK",
-        "S123.TH",
-        "S123.TR",
-        "S123.TW",
-        "S123.TZ",
-        "S123.UA",
-        "S123.US",
-        "S123.VA",
-        "S123.VE",
-        "S123.VG",
-        "S123.ZA",
-        "S123.ZM",
-        "S124.AE",
-        "S124.AF",
-        "S124.AL",
-        "S124.AO",
-        "S124.AR",
-        "S124.AT",
-        "S124.AU",
-        "S124.BE",
-        "S124.BG",
-        "S124.BH",
-        "S124.BJ",
-        "S124.BM",
-        "S124.BR",
-        "S124.BS",
-        "S124.BY",
-        "S124.BZ",
-        "S124.CA",
-        "S124.CG",
-        "S124.CH",
-        "S124.CL",
-        "S124.CM",
-        "S124.CN",
-        "S124.CO",
-        "S124.CW",
-        "S124.CY",
-        "S124.CZ",
-        "S124.DE",
-        "S124.DK",
-        "S124.DO",
-        "S124.EG",
-        "S124.ER",
-        "S124.ES",
-        "S124.FI",
-        "S124.FO",
-        "S124.FR",
-        "S124.GB",
-        "S124.GE",
-        "S124.GG",
-        "S124.GI",
-        "S124.GR",
-        "S124.HK",
-        "S124.HR",
-        "S124.HU",
-        "S124.ID",
-        "S124.IE",
-        "S124.IL",
-        "S124.IM",
-        "S124.IN",
-        "S124.IO",
-        "S124.IS",
-        "S124.IT",
-        "S124.JE",
-        "S124.JP",
-        "S124.KE",
-        "S124.KR",
-        "S124.KY",
-        "S124.KZ",
-        "S124.LB",
-        "S124.LR",
-        "S124.LU",
-        "S124.LV",
-        "S124.LY",
-        "S124.ME",
-        "S124.MH",
-        "S124.MK",
-        "S124.MN",
-        "S124.MU",
-        "S124.MW",
-        "S124.MX",
-        "S124.NG",
-        "S124.NL",
-        "S124.NO",
-        "S124.NZ",
-        "S124.OM",
-        "S124.PA",
-        "S124.PE",
-        "S124.PG",
-        "S124.PH",
-        "S124.PL",
-        "S124.PT",
-        "S124.QA",
-        "S124.RO",
-        "S124.RS",
-        "S124.RU",
-        "S124.SA",
-        "S124.SC",
-        "S124.SD",
-        "S124.SE",
-        "S124.SG",
-        "S124.SH",
-        "S124.SI",
-        "S124.SK",
-        "S124.TH",
-        "S124.TR",
-        "S124.TW",
-        "S124.TZ",
-        "S124.UA",
-        "S124.US",
-        "S124.VA",
-        "S124.VE",
-        "S124.VG",
-        "S124.ZA",
-        "S124.ZM",
-        "S125.AE",
-        "S125.AF",
-        "S125.AL",
-        "S125.AO",
-        "S125.AR",
-        "S125.AT",
-        "S125.AU",
-        "S125.BE",
-        "S125.BG",
-        "S125.BH",
-        "S125.BJ",
-        "S125.BM",
-        "S125.BR",
-        "S125.BS",
-        "S125.BY",
-        "S125.BZ",
-        "S125.CA",
-        "S125.CG",
-        "S125.CH",
-        "S125.CL",
-        "S125.CM",
-        "S125.CN",
-        "S125.CO",
-        "S125.CW",
-        "S125.CY",
-        "S125.CZ",
-        "S125.DE",
-        "S125.DK",
-        "S125.DO",
-        "S125.EG",
-        "S125.ER",
-        "S125.ES",
-        "S125.FI",
-        "S125.FO",
-        "S125.FR",
-        "S125.GB",
-        "S125.GE",
-        "S125.GG",
-        "S125.GI",
-        "S125.GR",
-        "S125.HK",
-        "S125.HR",
-        "S125.HU",
-        "S125.ID",
-        "S125.IE",
-        "S125.IL",
-        "S125.IM",
-        "S125.IN",
-        "S125.IO",
-        "S125.IS",
-        "S125.IT",
-        "S125.JE",
-        "S125.JP",
-        "S125.KE",
-        "S125.KR",
-        "S125.KY",
-        "S125.KZ",
-        "S125.LB",
-        "S125.LR",
-        "S125.LU",
-        "S125.LV",
-        "S125.LY",
-        "S125.ME",
-        "S125.MH",
-        "S125.MK",
-        "S125.MN",
-        "S125.MU",
-        "S125.MW",
-        "S125.MX",
-        "S125.NG",
-        "S125.NL",
-        "S125.NO",
-        "S125.NZ",
-        "S125.OM",
-        "S125.PA",
-        "S125.PE",
-        "S125.PG",
-        "S125.PH",
-        "S125.PL",
-        "S125.PT",
-        "S125.QA",
-        "S125.RO",
-        "S125.RS",
-        "S125.RU",
-        "S125.SA",
-        "S125.SC",
-        "S125.SD",
-        "S125.SE",
-        "S125.SG",
-        "S125.SH",
-        "S125.SI",
-        "S125.SK",
-        "S125.TH",
-        "S125.TR",
-        "S125.TW",
-        "S125.TZ",
-        "S125.UA",
-        "S125.US",
-        "S125.VA",
-        "S125.VE",
-        "S125.VG",
-        "S125.ZA",
-        "S125.ZM",
-        "S126.AE",
-        "S126.AF",
-        "S126.AL",
-        "S126.AO",
-        "S126.AR",
-        "S126.AT",
-        "S126.AU",
-        "S126.BE",
-        "S126.BG",
-        "S126.BH",
-        "S126.BJ",
-        "S126.BM",
-        "S126.BR",
-        "S126.BS",
-        "S126.BY",
-        "S126.BZ",
-        "S126.CA",
-        "S126.CG",
-        "S126.CH",
-        "S126.CL",
-        "S126.CM",
-        "S126.CN",
-        "S126.CO",
-        "S126.CW",
-        "S126.CY",
-        "S126.CZ",
-        "S126.DE",
-        "S126.DK",
-        "S126.DO",
-        "S126.EG",
-        "S126.ER",
-        "S126.ES",
-        "S126.FI",
-        "S126.FO",
-        "S126.FR",
-        "S126.GB",
-        "S126.GE",
-        "S126.GG",
-        "S126.GI",
-        "S126.GR",
-        "S126.HK",
-        "S126.HR",
-        "S126.HU",
-        "S126.ID",
-        "S126.IE",
-        "S126.IL",
-        "S126.IM",
-        "S126.IN",
-        "S126.IO",
-        "S126.IS",
-        "S126.IT",
-        "S126.JE",
-        "S126.JP",
-        "S126.KE",
-        "S126.KR",
-        "S126.KY",
-        "S126.KZ",
-        "S126.LB",
-        "S126.LR",
-        "S126.LU",
-        "S126.LV",
-        "S126.LY",
-        "S126.ME",
-        "S126.MH",
-        "S126.MK",
-        "S126.MN",
-        "S126.MU",
-        "S126.MW",
-        "S126.MX",
-        "S126.NG",
-        "S126.NL",
-        "S126.NO",
-        "S126.NZ",
-        "S126.OM",
-        "S126.PA",
-        "S126.PE",
-        "S126.PG",
-        "S126.PH",
-        "S126.PL",
-        "S126.PT",
-        "S126.QA",
-        "S126.RO",
-        "S126.RS",
-        "S126.RU",
-        "S126.SA",
-        "S126.SC",
-        "S126.SD",
-        "S126.SE",
-        "S126.SG",
-        "S126.SH",
-        "S126.SI",
-        "S126.SK",
-        "S126.TH",
-        "S126.TR",
-        "S126.TW",
-        "S126.TZ",
-        "S126.UA",
-        "S126.US",
-        "S126.VA",
-        "S126.VE",
-        "S126.VG",
-        "S126.ZA",
-        "S126.ZM",
-        "S127.AE",
-        "S127.AF",
-        "S127.AL",
-        "S127.AO",
-        "S127.AR",
-        "S127.AT",
-        "S127.AU",
-        "S127.BE",
-        "S127.BG",
-        "S127.BH",
-        "S127.BJ",
-        "S127.BM",
-        "S127.BR",
-        "S127.BS",
-        "S127.BY",
-        "S127.BZ",
-        "S127.CA",
-        "S127.CG",
-        "S127.CH",
-        "S127.CL",
-        "S127.CM",
-        "S127.CN",
-        "S127.CO",
-        "S127.CW",
-        "S127.CY",
-        "S127.CZ",
-        "S127.DE",
-        "S127.DK",
-        "S127.DO",
-        "S127.EG",
-        "S127.ER",
-        "S127.ES",
-        "S127.FI",
-        "S127.FO",
-        "S127.FR",
-        "S127.GB",
-        "S127.GE",
-        "S127.GG",
-        "S127.GI",
-        "S127.GR",
-        "S127.HK",
-        "S127.HR",
-        "S127.HU",
-        "S127.ID",
-        "S127.IE",
-        "S127.IL",
-        "S127.IM",
-        "S127.IN",
-        "S127.IO",
-        "S127.IS",
-        "S127.IT",
-        "S127.JE",
-        "S127.JP",
-        "S127.KE",
-        "S127.KR",
-        "S127.KY",
-        "S127.KZ",
-        "S127.LB",
-        "S127.LR",
-        "S127.LU",
-        "S127.LV",
-        "S127.LY",
-        "S127.ME",
-        "S127.MH",
-        "S127.MK",
-        "S127.MN",
-        "S127.MU",
-        "S127.MW",
-        "S127.MX",
-        "S127.NG",
-        "S127.NL",
-        "S127.NO",
-        "S127.NZ",
-        "S127.OM",
-        "S127.PA",
-        "S127.PE",
-        "S127.PG",
-        "S127.PH",
-        "S127.PL",
-        "S127.PT",
-        "S127.QA",
-        "S127.RO",
-        "S127.RS",
-        "S127.RU",
-        "S127.SA",
-        "S127.SC",
-        "S127.SD",
-        "S127.SE",
-        "S127.SG",
-        "S127.SH",
-        "S127.SI",
-        "S127.SK",
-        "S127.TH",
-        "S127.TR",
-        "S127.TW",
-        "S127.TZ",
-        "S127.UA",
-        "S127.US",
-        "S127.VA",
-        "S127.VE",
-        "S127.VG",
-        "S127.ZA",
-        "S127.ZM",
-        "S128.AE",
-        "S128.AF",
-        "S128.AL",
-        "S128.AO",
-        "S128.AR",
-        "S128.AT",
-        "S128.AU",
-        "S128.BE",
-        "S128.BG",
-        "S128.BH",
-        "S128.BJ",
-        "S128.BM",
-        "S128.BR",
-        "S128.BS",
-        "S128.BY",
-        "S128.BZ",
-        "S128.CA",
-        "S128.CG",
-        "S128.CH",
-        "S128.CL",
-        "S128.CM",
-        "S128.CN",
-        "S128.CO",
-        "S128.CW",
-        "S128.CY",
-        "S128.CZ",
-        "S128.DE",
-        "S128.DK",
-        "S128.DO",
-        "S128.EG",
-        "S128.ER",
-        "S128.ES",
-        "S128.FI",
-        "S128.FO",
-        "S128.FR",
-        "S128.GB",
-        "S128.GE",
-        "S128.GG",
-        "S128.GI",
-        "S128.GR",
-        "S128.HK",
-        "S128.HR",
-        "S128.HU",
-        "S128.ID",
-        "S128.IE",
-        "S128.IL",
-        "S128.IM",
-        "S128.IN",
-        "S128.IO",
-        "S128.IS",
-        "S128.IT",
-        "S128.JE",
-        "S128.JP",
-        "S128.KE",
-        "S128.KR",
-        "S128.KY",
-        "S128.KZ",
-        "S128.LB",
-        "S128.LR",
-        "S128.LU",
-        "S128.LV",
-        "S128.LY",
-        "S128.ME",
-        "S128.MH",
-        "S128.MK",
-        "S128.MN",
-        "S128.MU",
-        "S128.MW",
-        "S128.MX",
-        "S128.NG",
-        "S128.NL",
-        "S128.NO",
-        "S128.NZ",
-        "S128.OM",
-        "S128.PA",
-        "S128.PE",
-        "S128.PG",
-        "S128.PH",
-        "S128.PL",
-        "S128.PT",
-        "S128.QA",
-        "S128.RO",
-        "S128.RS",
-        "S128.RU",
-        "S128.SA",
-        "S128.SC",
-        "S128.SD",
-        "S128.SE",
-        "S128.SG",
-        "S128.SH",
-        "S128.SI",
-        "S128.SK",
-        "S128.TH",
-        "S128.TR",
-        "S128.TW",
-        "S128.TZ",
-        "S128.UA",
-        "S128.US",
-        "S128.VA",
-        "S128.VE",
-        "S128.VG",
-        "S128.ZA",
-        "S128.ZM",
-        "S129.AE",
-        "S129.AF",
-        "S129.AL",
-        "S129.AO",
-        "S129.AR",
-        "S129.AT",
-        "S129.AU",
-        "S129.BE",
-        "S129.BG",
-        "S129.BH",
-        "S129.BJ",
-        "S129.BM",
-        "S129.BR",
-        "S129.BS",
-        "S129.BY",
-        "S129.BZ",
-        "S129.CA",
-        "S129.CG",
-        "S129.CH",
-        "S129.CL",
-        "S129.CM",
-        "S129.CN",
-        "S129.CO",
-        "S129.CW",
-        "S129.CY",
-        "S129.CZ",
-        "S129.DE",
-        "S129.DK",
-        "S129.DO",
-        "S129.EG",
-        "S129.ER",
-        "S129.ES",
-        "S129.FI",
-        "S129.FO",
-        "S129.FR",
-        "S129.GB",
-        "S129.GE",
-        "S129.GG",
-        "S129.GI",
-        "S129.GR",
-        "S129.HK",
-        "S129.HR",
-        "S129.HU",
-        "S129.ID",
-        "S129.IE",
-        "S129.IL",
-        "S129.IM",
-        "S129.IN",
-        "S129.IO",
-        "S129.IS",
-        "S129.IT",
-        "S129.JE",
-        "S129.JP",
-        "S129.KE",
-        "S129.KR",
-        "S129.KY",
-        "S129.KZ",
-        "S129.LB",
-        "S129.LR",
-        "S129.LU",
-        "S129.LV",
-        "S129.LY",
-        "S129.ME",
-        "S129.MH",
-        "S129.MK",
-        "S129.MN",
-        "S129.MU",
-        "S129.MW",
-        "S129.MX",
-        "S129.NG",
-        "S129.NL",
-        "S129.NO",
-        "S129.NZ",
-        "S129.OM",
-        "S129.PA",
-        "S129.PE",
-        "S129.PG",
-        "S129.PH",
-        "S129.PL",
-        "S129.PT",
-        "S129.QA",
-        "S129.RO",
-        "S129.RS",
-        "S129.RU",
-        "S129.SA",
-        "S129.SC",
-        "S129.SD",
-        "S129.SE",
-        "S129.SG",
-        "S129.SH",
-        "S129.SI",
-        "S129.SK",
-        "S129.TH",
-        "S129.TR",
-        "S129.TW",
-        "S129.TZ",
-        "S129.UA",
-        "S129.US",
-        "S129.VA",
-        "S129.VE",
-        "S129.VG",
-        "S129.ZA",
-        "S129.ZM",
-        "S1311.AE",
-        "S1311.AF",
-        "S1311.AL",
-        "S1311.AO",
-        "S1311.AR",
-        "S1311.AT",
-        "S1311.AU",
-        "S1311.BE",
-        "S1311.BG",
-        "S1311.BH",
-        "S1311.BJ",
-        "S1311.BM",
-        "S1311.BR",
-        "S1311.BS",
-        "S1311.BY",
-        "S1311.BZ",
-        "S1311.CA",
-        "S1311.CG",
-        "S1311.CH",
-        "S1311.CL",
-        "S1311.CM",
-        "S1311.CN",
-        "S1311.CO",
-        "S1311.CW",
-        "S1311.CY",
-        "S1311.CZ",
-        "S1311.DE",
-        "S1311.DK",
-        "S1311.DO",
-        "S1311.EG",
-        "S1311.ER",
-        "S1311.ES",
-        "S1311.FI",
-        "S1311.FO",
-        "S1311.FR",
-        "S1311.GB",
-        "S1311.GE",
-        "S1311.GG",
-        "S1311.GI",
-        "S1311.GR",
-        "S1311.HK",
-        "S1311.HR",
-        "S1311.HU",
-        "S1311.ID",
-        "S1311.IE",
-        "S1311.IL",
-        "S1311.IM",
-        "S1311.IN",
-        "S1311.IO",
-        "S1311.IS",
-        "S1311.IT",
-        "S1311.JE",
-        "S1311.JP",
-        "S1311.KE",
-        "S1311.KR",
-        "S1311.KY",
-        "S1311.KZ",
-        "S1311.LB",
-        "S1311.LR",
-        "S1311.LU",
-        "S1311.LV",
-        "S1311.LY",
-        "S1311.ME",
-        "S1311.MH",
-        "S1311.MK",
-        "S1311.MN",
-        "S1311.MU",
-        "S1311.MW",
-        "S1311.MX",
-        "S1311.NG",
-        "S1311.NL",
-        "S1311.NO",
-        "S1311.NZ",
-        "S1311.OM",
-        "S1311.PA",
-        "S1311.PE",
-        "S1311.PG",
-        "S1311.PH",
-        "S1311.PL",
-        "S1311.PT",
-        "S1311.QA",
-        "S1311.RO",
-        "S1311.RS",
-        "S1311.RU",
-        "S1311.SA",
-        "S1311.SC",
-        "S1311.SD",
-        "S1311.SE",
-        "S1311.SG",
-        "S1311.SH",
-        "S1311.SI",
-        "S1311.SK",
-        "S1311.TH",
-        "S1311.TR",
-        "S1311.TW",
-        "S1311.TZ",
-        "S1311.UA",
-        "S1311.US",
-        "S1311.VA",
-        "S1311.VE",
-        "S1311.VG",
-        "S1311.ZA",
-        "S1311.ZM",
-        "S1312.AE",
-        "S1312.AF",
-        "S1312.AL",
-        "S1312.AO",
-        "S1312.AR",
-        "S1312.AT",
-        "S1312.AU",
-        "S1312.BE",
-        "S1312.BG",
-        "S1312.BH",
-        "S1312.BJ",
-        "S1312.BM",
-        "S1312.BR",
-        "S1312.BS",
-        "S1312.BY",
-        "S1312.BZ",
-        "S1312.CA",
-        "S1312.CG",
-        "S1312.CH",
-        "S1312.CL",
-        "S1312.CM",
-        "S1312.CN",
-        "S1312.CO",
-        "S1312.CW",
-        "S1312.CY",
-        "S1312.CZ",
-        "S1312.DE",
-        "S1312.DK",
-        "S1312.DO",
-        "S1312.EG",
-        "S1312.ER",
-        "S1312.ES",
-        "S1312.FI",
-        "S1312.FO",
-        "S1312.FR",
-        "S1312.GB",
-        "S1312.GE",
-        "S1312.GG",
-        "S1312.GI",
-        "S1312.GR",
-        "S1312.HK",
-        "S1312.HR",
-        "S1312.HU",
-        "S1312.ID",
-        "S1312.IE",
-        "S1312.IL",
-        "S1312.IM",
-        "S1312.IN",
-        "S1312.IO",
-        "S1312.IS",
-        "S1312.IT",
-        "S1312.JE",
-        "S1312.JP",
-        "S1312.KE",
-        "S1312.KR",
-        "S1312.KY",
-        "S1312.KZ",
-        "S1312.LB",
-        "S1312.LR",
-        "S1312.LU",
-        "S1312.LV",
-        "S1312.LY",
-        "S1312.ME",
-        "S1312.MH",
-        "S1312.MK",
-        "S1312.MN",
-        "S1312.MU",
-        "S1312.MW",
-        "S1312.MX",
-        "S1312.NG",
-        "S1312.NL",
-        "S1312.NO",
-        "S1312.NZ",
-        "S1312.OM",
-        "S1312.PA",
-        "S1312.PE",
-        "S1312.PG",
-        "S1312.PH",
-        "S1312.PL",
-        "S1312.PT",
-        "S1312.QA",
-        "S1312.RO",
-        "S1312.RS",
-        "S1312.RU",
-        "S1312.SA",
-        "S1312.SC",
-        "S1312.SD",
-        "S1312.SE",
-        "S1312.SG",
-        "S1312.SH",
-        "S1312.SI",
-        "S1312.SK",
-        "S1312.TH",
-        "S1312.TR",
-        "S1312.TW",
-        "S1312.TZ",
-        "S1312.UA",
-        "S1312.US",
-        "S1312.VA",
-        "S1312.VE",
-        "S1312.VG",
-        "S1312.ZA",
-        "S1312.ZM",
-        "S1313.AE",
-        "S1313.AF",
-        "S1313.AL",
-        "S1313.AO",
-        "S1313.AR",
-        "S1313.AT",
-        "S1313.AU",
-        "S1313.BE",
-        "S1313.BG",
-        "S1313.BH",
-        "S1313.BJ",
-        "S1313.BM",
-        "S1313.BR",
-        "S1313.BS",
-        "S1313.BY",
-        "S1313.BZ",
-        "S1313.CA",
-        "S1313.CG",
-        "S1313.CH",
-        "S1313.CL",
-        "S1313.CM",
-        "S1313.CN",
-        "S1313.CO",
-        "S1313.CW",
-        "S1313.CY",
-        "S1313.CZ",
-        "S1313.DE",
-        "S1313.DK",
-        "S1313.DO",
-        "S1313.EG",
-        "S1313.ER",
-        "S1313.ES",
-        "S1313.FI",
-        "S1313.FO",
-        "S1313.FR",
-        "S1313.GB",
-        "S1313.GE",
-        "S1313.GG",
-        "S1313.GI",
-        "S1313.GR",
-        "S1313.HK",
-        "S1313.HR",
-        "S1313.HU",
-        "S1313.ID",
-        "S1313.IE",
-        "S1313.IL",
-        "S1313.IM",
-        "S1313.IN",
-        "S1313.IO",
-        "S1313.IS",
-        "S1313.IT",
-        "S1313.JE",
-        "S1313.JP",
-        "S1313.KE",
-        "S1313.KR",
-        "S1313.KY",
-        "S1313.KZ",
-        "S1313.LB",
-        "S1313.LR",
-        "S1313.LU",
-        "S1313.LV",
-        "S1313.LY",
-        "S1313.ME",
-        "S1313.MH",
-        "S1313.MK",
-        "S1313.MN",
-        "S1313.MU",
-        "S1313.MW",
-        "S1313.MX",
-        "S1313.NG",
-        "S1313.NL",
-        "S1313.NO",
-        "S1313.NZ",
-        "S1313.OM",
-        "S1313.PA",
-        "S1313.PE",
-        "S1313.PG",
-        "S1313.PH",
-        "S1313.PL",
-        "S1313.PT",
-        "S1313.QA",
-        "S1313.RO",
-        "S1313.RS",
-        "S1313.RU",
-        "S1313.SA",
-        "S1313.SC",
-        "S1313.SD",
-        "S1313.SE",
-        "S1313.SG",
-        "S1313.SH",
-        "S1313.SI",
-        "S1313.SK",
-        "S1313.TH",
-        "S1313.TR",
-        "S1313.TW",
-        "S1313.TZ",
-        "S1313.UA",
-        "S1313.US",
-        "S1313.VA",
-        "S1313.VE",
-        "S1313.VG",
-        "S1313.ZA",
-        "S1313.ZM",
-        "S1314.AE",
-        "S1314.AF",
-        "S1314.AL",
-        "S1314.AO",
-        "S1314.AR",
-        "S1314.AT",
-        "S1314.AU",
-        "S1314.BE",
-        "S1314.BG",
-        "S1314.BH",
-        "S1314.BJ",
-        "S1314.BM",
-        "S1314.BR",
-        "S1314.BS",
-        "S1314.BY",
-        "S1314.BZ",
-        "S1314.CA",
-        "S1314.CG",
-        "S1314.CH",
-        "S1314.CL",
-        "S1314.CM",
-        "S1314.CN",
-        "S1314.CO",
-        "S1314.CW",
-        "S1314.CY",
-        "S1314.CZ",
-        "S1314.DE",
-        "S1314.DK",
-        "S1314.DO",
-        "S1314.EG",
-        "S1314.ER",
-        "S1314.ES",
-        "S1314.FI",
-        "S1314.FO",
-        "S1314.FR",
-        "S1314.GB",
-        "S1314.GE",
-        "S1314.GG",
-        "S1314.GI",
-        "S1314.GR",
-        "S1314.HK",
-        "S1314.HR",
-        "S1314.HU",
-        "S1314.ID",
-        "S1314.IE",
-        "S1314.IL",
-        "S1314.IM",
-        "S1314.IN",
-        "S1314.IO",
-        "S1314.IS",
-        "S1314.IT",
-        "S1314.JE",
-        "S1314.JP",
-        "S1314.KE",
-        "S1314.KR",
-        "S1314.KY",
-        "S1314.KZ",
-        "S1314.LB",
-        "S1314.LR",
-        "S1314.LU",
-        "S1314.LV",
-        "S1314.LY",
-        "S1314.ME",
-        "S1314.MH",
-        "S1314.MK",
-        "S1314.MN",
-        "S1314.MU",
-        "S1314.MW",
-        "S1314.MX",
-        "S1314.NG",
-        "S1314.NL",
-        "S1314.NO",
-        "S1314.NZ",
-        "S1314.OM",
-        "S1314.PA",
-        "S1314.PE",
-        "S1314.PG",
-        "S1314.PH",
-        "S1314.PL",
-        "S1314.PT",
-        "S1314.QA",
-        "S1314.RO",
-        "S1314.RS",
-        "S1314.RU",
-        "S1314.SA",
-        "S1314.SC",
-        "S1314.SD",
-        "S1314.SE",
-        "S1314.SG",
-        "S1314.SH",
-        "S1314.SI",
-        "S1314.SK",
-        "S1314.TH",
-        "S1314.TR",
-        "S1314.TW",
-        "S1314.TZ",
-        "S1314.UA",
-        "S1314.US",
-        "S1314.VA",
-        "S1314.VE",
-        "S1314.VG",
-        "S1314.ZA",
-        "S1314.ZM",
-        "S14.AE",
-        "S14.AF",
-        "S14.AL",
-        "S14.AO",
-        "S14.AR",
-        "S14.AT",
-        "S14.AU",
-        "S14.BE",
-        "S14.BG",
-        "S14.BH",
-        "S14.BJ",
-        "S14.BM",
-        "S14.BR",
-        "S14.BS",
-        "S14.BY",
-        "S14.BZ",
-        "S14.CA",
-        "S14.CG",
-        "S14.CH",
-        "S14.CL",
-        "S14.CM",
-        "S14.CN",
-        "S14.CO",
-        "S14.CW",
-        "S14.CY",
-        "S14.CZ",
-        "S14.DE",
-        "S14.DK",
-        "S14.DO",
-        "S14.EG",
-        "S14.ER",
-        "S14.ES",
-        "S14.FI",
-        "S14.FO",
-        "S14.FR",
-        "S14.GB",
-        "S14.GE",
-        "S14.GG",
-        "S14.GI",
-        "S14.GR",
-        "S14.HK",
-        "S14.HR",
-        "S14.HU",
-        "S14.ID",
-        "S14.IE",
-        "S14.IL",
-        "S14.IM",
-        "S14.IN",
-        "S14.IO",
-        "S14.IS",
-        "S14.IT",
-        "S14.JE",
-        "S14.JP",
-        "S14.KE",
-        "S14.KR",
-        "S14.KY",
-        "S14.KZ",
-        "S14.LB",
-        "S14.LR",
-        "S14.LU",
-        "S14.LV",
-        "S14.LY",
-        "S14.ME",
-        "S14.MH",
-        "S14.MK",
-        "S14.MN",
-        "S14.MU",
-        "S14.MW",
-        "S14.MX",
-        "S14.NG",
-        "S14.NL",
-        "S14.NO",
-        "S14.NZ",
-        "S14.OM",
-        "S14.PA",
-        "S14.PE",
-        "S14.PG",
-        "S14.PH",
-        "S14.PL",
-        "S14.PT",
-        "S14.QA",
-        "S14.RO",
-        "S14.RS",
-        "S14.RU",
-        "S14.SA",
-        "S14.SC",
-        "S14.SD",
-        "S14.SE",
-        "S14.SG",
-        "S14.SH",
-        "S14.SI",
-        "S14.SK",
-        "S14.TH",
-        "S14.TR",
-        "S14.TW",
-        "S14.TZ",
-        "S14.UA",
-        "S14.US",
-        "S14.VA",
-        "S14.VE",
-        "S14.VG",
-        "S14.ZA",
-        "S14.ZM",
-        "S15.AE",
-        "S15.AF",
-        "S15.AL",
-        "S15.AO",
-        "S15.AR",
-        "S15.AT",
-        "S15.AU",
-        "S15.BE",
-        "S15.BG",
-        "S15.BH",
-        "S15.BJ",
-        "S15.BM",
-        "S15.BR",
-        "S15.BS",
-        "S15.BY",
-        "S15.BZ",
-        "S15.CA",
-        "S15.CG",
-        "S15.CH",
-        "S15.CL",
-        "S15.CM",
-        "S15.CN",
-        "S15.CO",
-        "S15.CW",
-        "S15.CY",
-        "S15.CZ",
-        "S15.DE",
-        "S15.DK",
-        "S15.DO",
-        "S15.EG",
-        "S15.ER",
-        "S15.ES",
-        "S15.FI",
-        "S15.FO",
-        "S15.FR",
-        "S15.GB",
-        "S15.GE",
-        "S15.GG",
-        "S15.GI",
-        "S15.GR",
-        "S15.HK",
-        "S15.HR",
-        "S15.HU",
-        "S15.ID",
-        "S15.IE",
-        "S15.IL",
-        "S15.IM",
-        "S15.IN",
-        "S15.IO",
-        "S15.IS",
-        "S15.IT",
-        "S15.JE",
-        "S15.JP",
-        "S15.KE",
-        "S15.KR",
-        "S15.KY",
-        "S15.KZ",
-        "S15.LB",
-        "S15.LR",
-        "S15.LU",
-        "S15.LV",
-        "S15.LY",
-        "S15.ME",
-        "S15.MH",
-        "S15.MK",
-        "S15.MN",
-        "S15.MU",
-        "S15.MW",
-        "S15.MX",
-        "S15.NG",
-        "S15.NL",
-        "S15.NO",
-        "S15.NZ",
-        "S15.OM",
-        "S15.PA",
-        "S15.PE",
-        "S15.PG",
-        "S15.PH",
-        "S15.PL",
-        "S15.PT",
-        "S15.QA",
-        "S15.RO",
-        "S15.RS",
-        "S15.RU",
-        "S15.SA",
-        "S15.SC",
-        "S15.SD",
-        "S15.SE",
-        "S15.SG",
-        "S15.SH",
-        "S15.SI",
-        "S15.SK",
-        "S15.TH",
-        "S15.TR",
-        "S15.TW",
-        "S15.TZ",
-        "S15.UA",
-        "S15.US",
-        "S15.VA",
-        "S15.VE",
-        "S15.VG",
-        "S15.ZA",
-        "S15.ZM"
+        "-",
+        "RA1",
+        "RA2"
       ],
       "type": "string"
     },
-    "RmngDimensionContainer": {
-      "title": "RmngDimensionContainer",
+    "AsstRmnngDimensionContainer": {
+      "title": "AsstRmnngDimensionContainer",
       "type": "object",
       "properties": {
+        "TYP": {
+          "$ref": "#/definitions/RemAssetEnum"
+        },
         "ID": {
           "title": "Id",
           "maxLength": 32,
           "pattern": "^[ELTBP][a-zA-z0-9_]+",
           "type": "string"
         },
-        "CNTRGRP": {
-          "$ref": "#/definitions/GrpCntrgrpEnum"
-        },
-        "CRRNCY": {
-          "$ref": "#/definitions/GenCrrncyEnum"
-        },
         "DT": {
           "title": "Dt",
           "type": "string",
           "format": "date"
+        },
+        "FRQNCY": {
+          "$ref": "#/definitions/GenFrqncyEnum"
         }
       },
       "required": [
+        "TYP",
         "ID",
-        "CNTRGRP",
-        "CRRNCY",
-        "DT"
+        "DT",
+        "FRQNCY"
       ]
     },
-    "RmnngSeries": {
-      "title": "RmnngSeries",
+    "AsstRmnngSeries": {
+      "title": "AsstRmnngSeries",
       "type": "object",
       "properties": {
         "DIMS": {
-          "$ref": "#/definitions/RmngDimensionContainer"
+          "$ref": "#/definitions/AsstRmnngDimensionContainer"
         },
         "STCK": {
           "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
-        "FSC_STCK": {
-          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
-        },
-        "EUR_STCK": {
-          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
+        "FLS": {
+          "$ref": "#/definitions/BaseMeasure_float_"
         }
       },
       "required": [
         "DIMS",
         "STCK",
-        "FSC_STCK",
-        "EUR_STCK"
+        "FLS"
       ]
     },
     "LbltyDbtSeries": {
@@ -8022,13 +5963,7 @@
         "STCK": {
           "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
-        "FSC_STCK": {
-          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
-        },
-        "EUR_STCK": {
-          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
-        },
-        "TRNSCTNS": {
+        "FLS": {
           "$ref": "#/definitions/BaseMeasure_float_"
         },
         "NMNL_STCK": {
@@ -8036,68 +5971,146 @@
         },
         "ACCRLS": {
           "$ref": "#/definitions/BaseMeasure_float_"
+        }
+      },
+      "required": [
+        "DIMS",
+        "STCK",
+        "FLS",
+        "NMNL_STCK",
+        "ACCRLS"
+      ]
+    },
+    "RemLiabEnum": {
+      "title": "RemLiabEnum",
+      "description": "An enumeration.",
+      "enum": [
+        "-",
+        "RL1",
+        "RL2",
+        "RL3",
+        "RL4",
+        "RL5",
+        "RL6",
+        "RL7",
+        "RL8",
+        "RL9",
+        "RL10",
+        "RL11"
+      ],
+      "type": "string"
+    },
+    "LbltyRmnngDimensionContainer": {
+      "title": "LbltyRmnngDimensionContainer",
+      "type": "object",
+      "properties": {
+        "TYP": {
+          "$ref": "#/definitions/RemLiabEnum"
         },
-        "ARRRS": {
+        "ID": {
+          "title": "Id",
+          "maxLength": 32,
+          "pattern": "^[ELTBP][a-zA-z0-9_]+",
+          "type": "string"
+        },
+        "DT": {
+          "title": "Dt",
+          "type": "string",
+          "format": "date"
+        },
+        "FRQNCY": {
+          "$ref": "#/definitions/GenFrqncyEnum"
+        }
+      },
+      "required": [
+        "TYP",
+        "ID",
+        "DT",
+        "FRQNCY"
+      ]
+    },
+    "LbltyRmnngSeries": {
+      "title": "LbltyRmnngSeries",
+      "type": "object",
+      "properties": {
+        "DIMS": {
+          "$ref": "#/definitions/LbltyRmnngDimensionContainer"
+        },
+        "STCK": {
+          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
+        },
+        "FLS": {
           "$ref": "#/definitions/BaseMeasure_float_"
         }
       },
       "required": [
         "DIMS",
         "STCK",
-        "FSC_STCK",
-        "EUR_STCK",
-        "TRNSCTNS",
-        "NMNL_STCK",
-        "ACCRLS",
-        "ARRRS"
+        "FLS"
       ]
     },
-    "journey__structure__ifdat__acc__HldrSeries": {
+    "RelFrqncyAccDimensionContainer_SHR__ORG__": {
+      "title": "RelFrqncyAccDimensionContainer[SHR, ORG_]",
+      "type": "object",
+      "properties": {
+        "IID": {
+          "title": "Iid",
+          "maxLength": 32,
+          "pattern": "^[IP][a-zA-z0-9_]+",
+          "type": "string"
+        },
+        "ID": {
+          "title": "Id",
+          "maxLength": 32,
+          "pattern": "^[ELTBP_][a-zA-z0-9_]+",
+          "type": "string"
+        },
+        "DT": {
+          "title": "Dt",
+          "type": "string",
+          "format": "date"
+        },
+        "FRQNCY": {
+          "$ref": "#/definitions/GenFrqncyEnum"
+        }
+      },
+      "required": [
+        "IID",
+        "ID",
+        "DT",
+        "FRQNCY"
+      ]
+    },
+    "HldrSeries": {
       "title": "HldrSeries",
       "type": "object",
       "properties": {
         "DIMS": {
-          "$ref": "#/definitions/RelFrqncyAccDimensionContainer_SHR__ORG_"
+          "$ref": "#/definitions/RelFrqncyAccDimensionContainer_SHR__ORG__"
         },
         "QNTTY": {
           "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
-        "FSC_SBSCRPTNS": {
+        "SBSCRPTNS": {
           "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
-        "EUR_SBSCRPTNS": {
-          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
-        },
-        "FSC_SUB_CHRGS": {
+        "SBSCRPTNS_CHRGS": {
           "$ref": "#/definitions/BaseMeasure_float_"
         },
-        "EUR_SUB_CHRGS": {
-          "$ref": "#/definitions/BaseMeasure_float_"
-        },
-        "FSC_RDMPTNS": {
+        "RDMPTNS": {
           "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
-        "EUR_RDMPTNS": {
-          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
-        },
-        "FSC_RED_CHRGS": {
-          "$ref": "#/definitions/BaseMeasure_float_"
-        },
-        "EUR_RED_CHRGS": {
+        "RDMPTNS_CHRGS": {
           "$ref": "#/definitions/BaseMeasure_float_"
         }
       },
       "required": [
         "DIMS",
         "QNTTY",
-        "FSC_SBSCRPTNS",
-        "EUR_SBSCRPTNS",
-        "FSC_SUB_CHRGS",
-        "EUR_SUB_CHRGS",
-        "FSC_RDMPTNS",
-        "EUR_RDMPTNS",
-        "FSC_RED_CHRGS",
-        "EUR_RED_CHRGS"
+        "SBSCRPTNS",
+        "SBSCRPTNS_CHRGS",
+        "RDMPTNS",
+        "RDMPTNS_CHRGS"
       ]
     },
     "IncmRvnEnum": {
@@ -8149,17 +6162,13 @@
         "DIMS": {
           "$ref": "#/definitions/RevenueDimensionContainer"
         },
-        "FSC_AMNT": {
-          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
-        },
-        "EUR_AMNT": {
+        "AMNT": {
           "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         }
       },
       "required": [
         "DIMS",
-        "FSC_AMNT",
-        "EUR_AMNT"
+        "AMNT"
       ]
     },
     "IncmExpnsEnum": {
@@ -8216,17 +6225,13 @@
         "DIMS": {
           "$ref": "#/definitions/ExpenseDimensionContainer"
         },
-        "FSC_AMNT": {
-          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
-        },
-        "EUR_AMNT": {
+        "AMNT": {
           "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         }
       },
       "required": [
         "DIMS",
-        "FSC_AMNT",
-        "EUR_AMNT"
+        "AMNT"
       ]
     },
     "AccFreqDimensionContainer_SHR_": {
@@ -8261,25 +6266,17 @@
         "DIMS": {
           "$ref": "#/definitions/AccFreqDimensionContainer_SHR_"
         },
-        "FSC_BK_PRC": {
+        "BK_PRC": {
           "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
-        "EUR_BK_PRC": {
-          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
-        },
-        "FSC_INCM": {
-          "$ref": "#/definitions/BaseMeasure_float_"
-        },
-        "EUR_INCM": {
+        "INCM": {
           "$ref": "#/definitions/BaseMeasure_float_"
         }
       },
       "required": [
         "DIMS",
-        "FSC_BK_PRC",
-        "EUR_BK_PRC",
-        "FSC_INCM",
-        "EUR_INCM"
+        "BK_PRC",
+        "INCM"
       ]
     },
     "journey__structure__ifdat__acc__Datasets": {
@@ -8342,32 +6339,18 @@
             "$ref": "#/definitions/journey__structure__ifdat__acc__OdrSeries"
           }
         },
-        "RRE": {
-          "title": "Rre",
+        "ASST_NN_FNNCL": {
+          "title": "Asst Nn Fnncl",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/journey__structure__ifdat__acc__RreSeries"
-          }
-        },
-        "CRE": {
-          "title": "Cre",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/journey__structure__ifdat__acc__CreSeries"
-          }
-        },
-        "RMNNG_FXD": {
-          "title": "Rmnng Fxd",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/RmnngFxdSeries"
+            "$ref": "#/definitions/AsstNnFnnclSeries"
           }
         },
         "ASST_RMNNG": {
           "title": "Asst Rmnng",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/RmnngSeries"
+            "$ref": "#/definitions/AsstRmnngSeries"
           }
         },
         "LBLTY_SFT": {
@@ -8395,14 +6378,14 @@
           "title": "Lblty Rmnng",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/RmnngSeries"
+            "$ref": "#/definitions/LbltyRmnngSeries"
           }
         },
         "HLDR": {
           "title": "Hldr",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/journey__structure__ifdat__acc__HldrSeries"
+            "$ref": "#/definitions/HldrSeries"
           }
         },
         "RVN": {

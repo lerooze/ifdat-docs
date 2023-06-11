@@ -41,6 +41,7 @@ extensions = [
     "sphinx.ext.napoleon",
     "sphinx.ext.todo",
     "sphinx.ext.viewcode",
+    "sphinx.ext.mathjax",
     "IPython.sphinxext.ipython_console_highlighting",
     "IPython.sphinxext.ipython_directive",
     "docxsphinx",
@@ -48,6 +49,8 @@ extensions = [
 
 from links.link import *
 from links import *
+
+mathjax3_config = {"chtml": {"displayAlign": "left"}}
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ["_templates"]
