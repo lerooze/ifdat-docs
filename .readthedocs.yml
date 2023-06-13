@@ -12,3 +12,4 @@ python:
 formats:
   - epub
   - pdf
+  - docx
