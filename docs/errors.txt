@@ -1,5 +1,5 @@
-[31m_files/csv/codelists/LON_TYP_ENUM.csv:7: ERROR: Unexpected indentation.[39;49;00m
-[91m/home/al459/envs/ifdat-docs/docs/source/types/codelists/lon_typ.rst:20: WARNING: Block quote ends without a blank line; unexpected unindent.[39;49;00m
+[91m/home/al459/envs/ifdat-docs/docs/source/download.rst:7: WARNING: download file not readable: /home/al459/envs/ifdat-docs/docs/_build/_files/ifdat-docs.pdf[39;49;00m
+[91m/home/al459/envs/ifdat-docs/docs/source/download.rst:8: WARNING: download file not readable: /home/al459/envs/ifdat-docs/docs/_build/_files/IFDat-Docs.docx[39;49;00m
 [91m/home/al459/envs/ifdat-docs/docs/source/glossary.rst: WARNING: document isn't included in any toctree[39;49;00m
 [91m/home/al459/envs/ifdat-docs/docs/source/categories/ref/self_dbt_outstndng_cng.rst:15: WARNING: unknown document: '../../types/codelists/dbt_chng_rsn'[39;49;00m
 [91m/home/al459/envs/ifdat-docs/docs/source/validation/critical.rst:22: WARNING: unknown document: 'criticalschema_error'[39;49;00m
