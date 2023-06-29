@@ -100,7 +100,7 @@
 
     \mathrm{LHS} &= \mathrm{RHS}
 
-    \mathrm{LHS} &= (\mathrm{ASSET\_FLOWS} - \mathrm{LIABILITY\_FLOWS}) - (\mathrm{SUBSCRIPTIONS} - \mathrm{REDEMPTIONS})
+    \mathrm{LHS} &= (\mathrm{ASSET\_FLOWS} - \mathrm{LIABILITY\_FLOWS}) - ((\mathrm{SUBSCRIPTIONS} - \mathrm{SUBSCRIPTION_FEES})- (\mathrm{REDEMPTIONS} - \mathrm{REDEMPTION_FEES})
 
     \mathrm{RHS} &= \sum_s(\mathrm{AGG.INCM}\sum_h\mathrm{HLDR.QNTTY})
 
