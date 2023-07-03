@@ -22,10 +22,10 @@ Yποβολή Τ1 - ΔΙΟΡΘΩΣΗ
 ------
 
 excel
-    :download:`MFMC_T0_EXCEL <../../../../_files/examples/MFMC_T1_CORR.xlsx>`
+    :download:`MFMC_T1_CORR_EXCEL <../../../../_files/examples/MFMC_T1_CORR.xlsx>`
 
 json
-    :download:`MFMC_T0_JSON <../../../../_files/examples/MFMC_T1_CORR.json>`
+    :download:`MFMC_T1_CORR_JSON <../../../../_files/examples/MFMC_T1_CORR.json>`
     
 
 Προβολή αρχείου json

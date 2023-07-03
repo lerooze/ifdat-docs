@@ -693,13 +693,7 @@
           "SBSCRPTNS": {
             "VALUE": 100000.0
           },
-          "SBSCRPTNS_CHRGS": {
-            "VALUE": 0.0
-          },
           "RDMPTNS": {
-            "VALUE": 0.0
-          },
-          "RDMPTNS_CHRGS": {
             "VALUE": 0.0
           }
         },
@@ -716,13 +710,7 @@
           "SBSCRPTNS": {
             "VALUE": 150000.0
           },
-          "SBSCRPTNS_CHRGS": {
-            "VALUE": 0.0
-          },
           "RDMPTNS": {
-            "VALUE": 0.0
-          },
-          "RDMPTNS_CHRGS": {
             "VALUE": 0.0
           }
         },
@@ -739,13 +727,7 @@
           "SBSCRPTNS": {
             "VALUE": 200000.0
           },
-          "SBSCRPTNS_CHRGS": {
-            "VALUE": 0.0
-          },
           "RDMPTNS": {
-            "VALUE": 0.0
-          },
-          "RDMPTNS_CHRGS": {
             "VALUE": 0.0
           }
         },
@@ -762,13 +744,7 @@
           "SBSCRPTNS": {
             "VALUE": 100000.0
           },
-          "SBSCRPTNS_CHRGS": {
-            "VALUE": 0.0
-          },
           "RDMPTNS": {
-            "VALUE": 0.0
-          },
-          "RDMPTNS_CHRGS": {
             "VALUE": 0.0
           }
         },
@@ -785,13 +761,7 @@
           "SBSCRPTNS": {
             "VALUE": 40000.0
           },
-          "SBSCRPTNS_CHRGS": {
-            "VALUE": 0.0
-          },
           "RDMPTNS": {
-            "VALUE": 0.0
-          },
-          "RDMPTNS_CHRGS": {
             "VALUE": 0.0
           }
         }

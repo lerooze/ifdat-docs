@@ -12,7 +12,7 @@ ID
     Ο αναγνωριστικός κωδικός :ref:`DBT <dbt>` του χρεογράφου που έχει εκδώσει η ΠΜ.
 
 RSN (Λόγος αλλαγής)
-    Λόγος αλλαγής με επιλογή από :doc:`../../types/codelists/dbt_chng_rsn`
+    Λόγος αλλαγής με επιλογή από :doc:`../../types/codelists/dbt_outstndng_chn_typ`
     
 DATE (DT)
     Ημερομηνία αλλαγής.

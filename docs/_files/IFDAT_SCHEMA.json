@@ -6094,23 +6094,15 @@
         "SBSCRPTNS": {
           "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
-        "SBSCRPTNS_CHRGS": {
-          "$ref": "#/definitions/BaseMeasure_float_"
-        },
         "RDMPTNS": {
           "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
-        },
-        "RDMPTNS_CHRGS": {
-          "$ref": "#/definitions/BaseMeasure_float_"
         }
       },
       "required": [
         "DIMS",
         "QNTTY",
         "SBSCRPTNS",
-        "SBSCRPTNS_CHRGS",
-        "RDMPTNS",
-        "RDMPTNS_CHRGS"
+        "RDMPTNS"
       ]
     },
     "IncmRvnEnum": {

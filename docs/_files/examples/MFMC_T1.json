@@ -200,7 +200,7 @@
       "LBLTY_RMNNG": [
         {
           "DIMS": {
-            "TYP": "RL7",
+            "TYP": "RL6",
             "ID": "EGRAK1",
             "DT": "2022-02-28",
             "FRQNCY": "M"
@@ -228,7 +228,7 @@
         },
         {
           "DIMS": {
-            "TYP": "RL7",
+            "TYP": "RL6",
             "ID": "EGRAK2",
             "DT": "2022-02-28",
             "FRQNCY": "M"
@@ -242,7 +242,7 @@
         },
         {
           "DIMS": {
-            "TYP": "RL7",
+            "TYP": "RL6",
             "ID": "EGRAK3",
             "DT": "2022-02-28",
             "FRQNCY": "M"
@@ -256,7 +256,7 @@
         },
         {
           "DIMS": {
-            "TYP": "RL7",
+            "TYP": "RL6",
             "ID": "EGRAK4",
             "DT": "2022-02-28",
             "FRQNCY": "M"
@@ -283,13 +283,7 @@
           "SBSCRPTNS": {
             "VALUE": 0.0
           },
-          "SBSCRPTNS_CHRGS": {
-            "VALUE": 0.0
-          },
           "RDMPTNS": {
-            "VALUE": 0.0
-          },
-          "RDMPTNS_CHRGS": {
             "VALUE": 0.0
           }
         },
@@ -306,13 +300,7 @@
           "SBSCRPTNS": {
             "VALUE": 30000.0
           },
-          "SBSCRPTNS_CHRGS": {
-            "VALUE": 0.0
-          },
           "RDMPTNS": {
-            "VALUE": 0.0
-          },
-          "RDMPTNS_CHRGS": {
             "VALUE": 0.0
           }
         },
@@ -329,13 +317,7 @@
           "SBSCRPTNS": {
             "VALUE": 0.0
           },
-          "SBSCRPTNS_CHRGS": {
-            "VALUE": 0.0
-          },
           "RDMPTNS": {
-            "VALUE": 0.0
-          },
-          "RDMPTNS_CHRGS": {
             "VALUE": 0.0
           }
         },
@@ -352,13 +334,7 @@
           "SBSCRPTNS": {
             "VALUE": 0.0
           },
-          "SBSCRPTNS_CHRGS": {
-            "VALUE": 0.0
-          },
           "RDMPTNS": {
-            "VALUE": 0.0
-          },
-          "RDMPTNS_CHRGS": {
             "VALUE": 0.0
           }
         },
@@ -375,13 +351,7 @@
           "SBSCRPTNS": {
             "VALUE": 0.0
           },
-          "SBSCRPTNS_CHRGS": {
-            "VALUE": 0.0
-          },
           "RDMPTNS": {
-            "VALUE": 0.0
-          },
-          "RDMPTNS_CHRGS": {
             "VALUE": 0.0
           }
         }
@@ -458,6 +428,17 @@
         {
           "DIMS": {
             "IID": "IGRF00000AK20",
+            "TP": "E4",
+            "DT": "2022-02-28",
+            "FRQNCY": "M"
+          },
+          "AMNT": {
+            "VALUE": 0.015
+          }
+        },
+        {
+          "DIMS": {
+            "IID": "IGRF00000AK20",
             "TP": "E6",
             "DT": "2022-02-28",
             "FRQNCY": "M"
@@ -524,7 +505,7 @@
             "VALUE": 14.8356
           },
           "INCM": {
-            "VALUE": -0.005600961538461538
+            "VALUE": -0.15560096153846154
           }
         },
         {
