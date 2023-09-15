@@ -290,6 +290,23 @@
         {
           "DIMS": {
             "IID": "IGRF00000AK20",
+            "ID": "EGRMFMC000",
+            "DT": "2022-02-28",
+            "FRQNCY": "M"
+          },
+          "QNTTY": {
+            "VALUE": 10000.0
+          },
+          "SBSCRPTNS": {
+            "VALUE": 0.0
+          },
+          "RDMPTNS": {
+            "VALUE": 0.0
+          }
+        },
+        {
+          "DIMS": {
+            "IID": "IGRF00000AK20",
             "ID": "_GR",
             "DT": "2022-02-28",
             "FRQNCY": "M"

@@ -12,6 +12,27 @@ What's new?
 .. ============
 
 
+v0.6.1 (2023-09-15)
+-------------------
+
+* Merge ACC.CSH table into ACC.DPST
+* Rename ACC.AGG to ACC.KEY, PSN to USR
+* Created formats DBT, DEP, EDR, LON, ODR, ORG, SFT, SHR, USR
+* Rename Κατηγορίες to Δέσμες in categories.rst 
+* Improve categories documentation
+* Improve and refactor codelists (dbt_prmry_clss to dbt_typ, fnd_dstrbtn_typ to fnd_dstrbtn_plcy, fnd_typ to fnd_lgl_typ, fnd_sbtyp to fnd_eqty_typ, shr_prmry_clss to shr_typ) 
+* Refactor REF.DPST
+* Fix bug in regex A-z to A-Z
+* Add to glossary
+* Improve generic.rst description
+* Improve identifiers description
+* Add Ελληνικη Αναπτυξιακή Τράπεζα to RAs
+* Update accounting checks
+* Spell check
+* Note: Examples have not yet been updated to reflect the updated model
+
+
+  
 v0.6.0 (2023-06-11)
 -------------------
 

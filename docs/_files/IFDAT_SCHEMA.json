@@ -22,13 +22,13 @@
         "RA": {
           "title": "Ra",
           "maxLength": 32,
-          "pattern": "^[ELTBP][a-zA-z0-9_]+",
+          "pattern": "^[ELTBP][a-zA-Z0-9_]+",
           "type": "string"
         },
-        "RP": {
-          "title": "Rp",
+        "USER": {
+          "title": "User",
           "maxLength": 32,
-          "pattern": "^[a-zA-z0-9_]+",
+          "pattern": "^[a-zA-Z0-9_]+",
           "type": "string"
         },
         "DOMAIN": {
@@ -41,7 +41,7 @@
       },
       "required": [
         "RA",
-        "RP",
+        "USER",
         "DOMAIN"
       ]
     },
@@ -52,7 +52,7 @@
         "ID": {
           "title": "Id",
           "maxLength": 32,
-          "pattern": "^[ELTBP][a-zA-z0-9_]+",
+          "pattern": "^[ELTBP][a-zA-Z0-9_]+",
           "type": "string"
         }
       },
@@ -109,7 +109,7 @@
         "VALUE": {
           "title": "Value",
           "maxLength": 32,
-          "pattern": "^[ELTBP][a-zA-z0-9_]+",
+          "pattern": "^[ELTBP][a-zA-Z0-9_]+",
           "type": "string"
         }
       },
@@ -150,14 +150,14 @@
         "DIMS"
       ]
     },
-    "StaticDimensionContainer_ORG_": {
-      "title": "StaticDimensionContainer[ORG]",
+    "DynmcDimensionContainer_ORG_": {
+      "title": "DynmcDimensionContainer[ORG]",
       "type": "object",
       "properties": {
         "ID": {
           "title": "Id",
           "maxLength": 32,
-          "pattern": "^[ELTBP][a-zA-z0-9_]+",
+          "pattern": "^[ELTBP][a-zA-Z0-9_]+",
           "type": "string"
         },
         "VLD_FRM": {
@@ -355,24 +355,25 @@
         "VALUE"
       ]
     },
-    "FndTypEnum": {
-      "title": "FndTypEnum",
+    "FndLglTypEnum": {
+      "title": "FndLglTypEnum",
       "description": "An enumeration.",
       "enum": [
         "-",
         "UCITS",
-        "AIF",
+        "RAIF",
+        "OAIF",
         "REIT",
         "OTHER"
       ],
       "type": "string"
     },
-    "BaseMeasure_FndTypEnum_": {
-      "title": "BaseMeasure[FndTypEnum]",
+    "BaseMeasure_FndLglTypEnum_": {
+      "title": "BaseMeasure[FndLglTypEnum]",
       "type": "object",
       "properties": {
         "VALUE": {
-          "$ref": "#/definitions/FndTypEnum"
+          "$ref": "#/definitions/FndLglTypEnum"
         }
       },
       "required": [
@@ -385,8 +386,8 @@
       "enum": [
         "-",
         "MMF",
-        "EQT",
         "BON",
+        "EQT",
         "MIX",
         "RES",
         "HED",
@@ -409,8 +410,8 @@
         "VALUE"
       ]
     },
-    "FndSbtypEnum": {
-      "title": "FndSbtypEnum",
+    "FndEqtyTypEnum": {
+      "title": "FndEqtyTypEnum",
       "description": "An enumeration.",
       "enum": [
         "-",
@@ -419,20 +420,20 @@
       ],
       "type": "string"
     },
-    "BaseMeasure_FndSbtypEnum_": {
-      "title": "BaseMeasure[FndSbtypEnum]",
+    "BaseMeasure_FndEqtyTypEnum_": {
+      "title": "BaseMeasure[FndEqtyTypEnum]",
       "type": "object",
       "properties": {
         "VALUE": {
-          "$ref": "#/definitions/FndSbtypEnum"
+          "$ref": "#/definitions/FndEqtyTypEnum"
         }
       },
       "required": [
         "VALUE"
       ]
     },
-    "FndDstrbtnTypEnum": {
-      "title": "FndDstrbtnTypEnum",
+    "FndDstrbtnPlcyEnum": {
+      "title": "FndDstrbtnPlcyEnum",
       "description": "An enumeration.",
       "enum": [
         "-",
@@ -442,12 +443,12 @@
       ],
       "type": "string"
     },
-    "BaseMeasure_FndDstrbtnTypEnum_": {
-      "title": "BaseMeasure[FndDstrbtnTypEnum]",
+    "BaseMeasure_FndDstrbtnPlcyEnum_": {
+      "title": "BaseMeasure[FndDstrbtnPlcyEnum]",
       "type": "object",
       "properties": {
         "VALUE": {
-          "$ref": "#/definitions/FndDstrbtnTypEnum"
+          "$ref": "#/definitions/FndDstrbtnPlcyEnum"
         }
       },
       "required": [
@@ -460,9 +461,7 @@
       "enum": [
         "-",
         "PRF",
-        "RTL",
-        "ART",
-        "OTH"
+        "RTL"
       ],
       "type": "string"
     },
@@ -484,7 +483,8 @@
       "enum": [
         "-",
         "LIGHT",
-        "DARK"
+        "DARK",
+        "OTHER"
       ],
       "type": "string"
     },
@@ -600,6 +600,120 @@
         "VALUE"
       ]
     },
+    "FndDynmcSeries": {
+      "title": "FndDynmcSeries",
+      "type": "object",
+      "properties": {
+        "DIMS": {
+          "$ref": "#/definitions/DynmcDimensionContainer_ORG_"
+        },
+        "NM": {
+          "$ref": "#/definitions/BaseMeasure_Str128_"
+        },
+        "NM_LTN": {
+          "$ref": "#/definitions/BaseMeasure_Ascii128_"
+        },
+        "NM_SHRT": {
+          "$ref": "#/definitions/BaseMeasure_Str64_"
+        },
+        "STRT": {
+          "$ref": "#/definitions/BaseMeasure_Str64_"
+        },
+        "STRT_LTN": {
+          "$ref": "#/definitions/BaseMeasure_Ascii64_"
+        },
+        "CTY": {
+          "$ref": "#/definitions/BaseMeasure_Str32_"
+        },
+        "CTY_LTN": {
+          "$ref": "#/definitions/BaseMeasure_Ascii32_"
+        },
+        "PSTL_CD": {
+          "$ref": "#/definitions/BaseMeasure_Str16_"
+        },
+        "URL": {
+          "$ref": "#/definitions/BaseMeasure_AnyUrl_"
+        },
+        "EMAIL": {
+          "$ref": "#/definitions/BaseMeasure_EmailStr_"
+        },
+        "IS_LSTD": {
+          "$ref": "#/definitions/BaseMeasure_bool_"
+        },
+        "IS_INCTV": {
+          "$ref": "#/definitions/BaseMeasure_bool_"
+        },
+        "IS_UNDR_LQDTN": {
+          "$ref": "#/definitions/BaseMeasure_bool_"
+        },
+        "INSTTTNL_SCTR_CNTRL": {
+          "$ref": "#/definitions/BaseMeasure_OrgInstttnlSctrCntrlEnum_"
+        },
+        "MNGD_BY": {
+          "$ref": "#/definitions/BaseMeasure_ID_"
+        },
+        "UNDR_UMBRLL_BY": {
+          "$ref": "#/definitions/BaseMeasure_ID_"
+        },
+        "LGL_TYP": {
+          "$ref": "#/definitions/BaseMeasure_FndLglTypEnum_"
+        },
+        "INVSTMNT_PLCY": {
+          "$ref": "#/definitions/BaseMeasure_FndInvstmntPlcyEnum_"
+        },
+        "EQTY_TYP": {
+          "$ref": "#/definitions/BaseMeasure_FndEqtyTypEnum_"
+        },
+        "DSTRBTN_PLCY": {
+          "$ref": "#/definitions/BaseMeasure_FndDstrbtnPlcyEnum_"
+        },
+        "INVSTR_TYP": {
+          "$ref": "#/definitions/BaseMeasure_FndInvstrTypEnum_"
+        },
+        "GRN_TYP": {
+          "$ref": "#/definitions/BaseMeasure_FndGrnTypEnum_"
+        },
+        "STRTGY": {
+          "$ref": "#/definitions/BaseMeasure_FndStrtgyEnum_"
+        },
+        "GGRPHCL_FCS": {
+          "$ref": "#/definitions/BaseMeasure_FndGgrphclFcsEnum_"
+        },
+        "BND_FCS": {
+          "$ref": "#/definitions/BaseMeasure_FndBndFcsEnum_"
+        },
+        "RL_ESTT_TYP": {
+          "$ref": "#/definitions/BaseMeasure_FndRlEsttTypEnum_"
+        },
+        "IS_FOF": {
+          "$ref": "#/definitions/BaseMeasure_bool_"
+        },
+        "IS_ETF": {
+          "$ref": "#/definitions/BaseMeasure_bool_"
+        },
+        "IS_PEF": {
+          "$ref": "#/definitions/BaseMeasure_bool_"
+        }
+      },
+      "required": [
+        "DIMS"
+      ]
+    },
+    "DimensionContainer_DBT_": {
+      "title": "DimensionContainer[DBT]",
+      "type": "object",
+      "properties": {
+        "ID": {
+          "title": "Id",
+          "maxLength": 32,
+          "pattern": "^[IP][a-zA-Z0-9_]+",
+          "type": "string"
+        }
+      },
+      "required": [
+        "ID"
+      ]
+    },
     "GenCrrncyEnum": {
       "title": "GenCrrncyEnum",
       "description": "An enumeration.",
@@ -658,123 +772,6 @@
       },
       "required": [
         "VALUE"
-      ]
-    },
-    "FndDynmcSeries": {
-      "title": "FndDynmcSeries",
-      "type": "object",
-      "properties": {
-        "DIMS": {
-          "$ref": "#/definitions/StaticDimensionContainer_ORG_"
-        },
-        "NM": {
-          "$ref": "#/definitions/BaseMeasure_Str128_"
-        },
-        "NM_LTN": {
-          "$ref": "#/definitions/BaseMeasure_Ascii128_"
-        },
-        "NM_SHRT": {
-          "$ref": "#/definitions/BaseMeasure_Str64_"
-        },
-        "STRT": {
-          "$ref": "#/definitions/BaseMeasure_Str64_"
-        },
-        "STRT_LTN": {
-          "$ref": "#/definitions/BaseMeasure_Ascii64_"
-        },
-        "CTY": {
-          "$ref": "#/definitions/BaseMeasure_Str32_"
-        },
-        "CTY_LTN": {
-          "$ref": "#/definitions/BaseMeasure_Ascii32_"
-        },
-        "PSTL_CD": {
-          "$ref": "#/definitions/BaseMeasure_Str16_"
-        },
-        "URL": {
-          "$ref": "#/definitions/BaseMeasure_AnyUrl_"
-        },
-        "EMAIL": {
-          "$ref": "#/definitions/BaseMeasure_EmailStr_"
-        },
-        "IS_LSTD": {
-          "$ref": "#/definitions/BaseMeasure_bool_"
-        },
-        "IS_INCTV": {
-          "$ref": "#/definitions/BaseMeasure_bool_"
-        },
-        "IS_UNDR_LQDTN": {
-          "$ref": "#/definitions/BaseMeasure_bool_"
-        },
-        "INSTTTNL_SCTR_CNTRL": {
-          "$ref": "#/definitions/BaseMeasure_OrgInstttnlSctrCntrlEnum_"
-        },
-        "MNGD_BY": {
-          "$ref": "#/definitions/BaseMeasure_ID_"
-        },
-        "UNDR_UMBRLL_BY": {
-          "$ref": "#/definitions/BaseMeasure_ID_"
-        },
-        "TYP": {
-          "$ref": "#/definitions/BaseMeasure_FndTypEnum_"
-        },
-        "INVSTMNT_PLCY": {
-          "$ref": "#/definitions/BaseMeasure_FndInvstmntPlcyEnum_"
-        },
-        "SBTYP": {
-          "$ref": "#/definitions/BaseMeasure_FndSbtypEnum_"
-        },
-        "DSTRBTN_TYP": {
-          "$ref": "#/definitions/BaseMeasure_FndDstrbtnTypEnum_"
-        },
-        "INVSTR_TYP": {
-          "$ref": "#/definitions/BaseMeasure_FndInvstrTypEnum_"
-        },
-        "GRN_TYP": {
-          "$ref": "#/definitions/BaseMeasure_FndGrnTypEnum_"
-        },
-        "STRTGY": {
-          "$ref": "#/definitions/BaseMeasure_FndStrtgyEnum_"
-        },
-        "GGRPHCL_FCS": {
-          "$ref": "#/definitions/BaseMeasure_FndGgrphclFcsEnum_"
-        },
-        "BND_FCS": {
-          "$ref": "#/definitions/BaseMeasure_FndBndFcsEnum_"
-        },
-        "RL_ESTT_TYP": {
-          "$ref": "#/definitions/BaseMeasure_FndRlEsttTypEnum_"
-        },
-        "IS_FOF": {
-          "$ref": "#/definitions/BaseMeasure_bool_"
-        },
-        "IS_ETF": {
-          "$ref": "#/definitions/BaseMeasure_bool_"
-        },
-        "IS_PEF": {
-          "$ref": "#/definitions/BaseMeasure_bool_"
-        },
-        "VLTN_CRRNCY": {
-          "$ref": "#/definitions/BaseMeasure_GenCrrncyEnum_"
-        }
-      },
-      "required": [
-        "DIMS"
-      ]
-    },
-    "DimensionContainer_DBT_": {
-      "title": "DimensionContainer[DBT]",
-      "type": "object",
-      "properties": {
-        "ID": {
-          "title": "Id",
-          "maxLength": 32,
-          "pattern": "^[IP][a-zA-z0-9_]+",
-          "type": "string"
-        }
-      },
-      "required": [
-        "ID"
       ]
     },
     "BaseMeasure_NonNegativeFloat_": {
@@ -3364,24 +3361,24 @@
         "VALUE"
       ]
     },
-    "DbtPrmryClssEnum": {
-      "title": "DbtPrmryClssEnum",
+    "DbtTypEnum": {
+      "title": "DbtTypEnum",
       "description": "An enumeration.",
       "enum": [
         "-",
-        "D.1",
-        "D.2",
-        "D.3",
-        "D.9"
+        "BND",
+        "MNY",
+        "HBRD",
+        "OTHR"
       ],
       "type": "string"
     },
-    "BaseMeasure_DbtPrmryClssEnum_": {
-      "title": "BaseMeasure[DbtPrmryClssEnum]",
+    "BaseMeasure_DbtTypEnum_": {
+      "title": "BaseMeasure[DbtTypEnum]",
       "type": "object",
       "properties": {
         "VALUE": {
-          "$ref": "#/definitions/DbtPrmryClssEnum"
+          "$ref": "#/definitions/DbtTypEnum"
         }
       },
       "required": [
@@ -3393,10 +3390,10 @@
       "description": "An enumeration.",
       "enum": [
         "-",
-        "1",
-        "2",
-        "8",
-        "9"
+        "UNGUARANTEED",
+        "GOVERNMENT",
+        "OTHER",
+        "NA"
       ],
       "type": "string"
     },
@@ -3417,14 +3414,14 @@
       "description": "An enumeration.",
       "enum": [
         "-",
-        "1",
-        "2",
-        "3",
-        "4",
-        "5",
-        "6",
-        "7",
-        "9"
+        "SUB_JUNIOR",
+        "SUB_SENIOR",
+        "SUB_NOINFO",
+        "SENIOR",
+        "ABS_JUNIOR",
+        "ABS_MEZZANINE",
+        "ABS_SENIOR",
+        "NOINFO"
       ],
       "type": "string"
     },
@@ -3445,9 +3442,9 @@
       "description": "An enumeration.",
       "enum": [
         "-",
-        "1",
-        "2",
-        "3"
+        "UNSECURED",
+        "SECURED",
+        "NOINFO"
       ],
       "type": "string"
     },
@@ -3468,13 +3465,13 @@
       "description": "An enumeration.",
       "enum": [
         "-",
-        "1100",
-        "1200",
-        "1300",
-        "1400",
-        "1500",
-        "1800",
-        "1900"
+        "ABS",
+        "MBS",
+        "CDO",
+        "CMO",
+        "MIX",
+        "OTHER",
+        "NOINFO"
       ],
       "type": "string"
     },
@@ -3495,13 +3492,13 @@
       "description": "An enumeration.",
       "enum": [
         "-",
-        "2100",
-        "2200",
-        "2300",
-        "2400",
-        "2500",
-        "2800",
-        "2900"
+        "PUBLIC",
+        "MORTGAGE",
+        "SHIP",
+        "AIRCRAFT",
+        "MIX",
+        "OTHER",
+        "NOINFO"
       ],
       "type": "string"
     },
@@ -3588,6 +3585,21 @@
         "VALUE"
       ]
     },
+    "BaseMeasure_DBT_": {
+      "title": "BaseMeasure[DBT]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "title": "Value",
+          "maxLength": 32,
+          "pattern": "^[IP][a-zA-Z0-9_]+",
+          "type": "string"
+        }
+      },
+      "required": [
+        "VALUE"
+      ]
+    },
     "BaseMeasure_Ascii6_": {
       "title": "BaseMeasure[Ascii6]",
       "type": "object",
@@ -3602,21 +3614,6 @@
         "VALUE"
       ]
     },
-    "BaseMeasure_DBT_": {
-      "title": "BaseMeasure[DBT]",
-      "type": "object",
-      "properties": {
-        "VALUE": {
-          "title": "Value",
-          "maxLength": 32,
-          "pattern": "^[IP][a-zA-z0-9_]+",
-          "type": "string"
-        }
-      },
-      "required": [
-        "VALUE"
-      ]
-    },
     "BaseMeasure_LON_": {
       "title": "BaseMeasure[LON]",
       "type": "object",
@@ -3624,7 +3621,7 @@
         "VALUE": {
           "title": "Value",
           "maxLength": 32,
-          "pattern": "^P[a-zA-z0-9_]+",
+          "pattern": "^P[a-zA-Z0-9_]+",
           "type": "string"
         }
       },
@@ -3663,8 +3660,8 @@
         "ACCRL_STRTDT": {
           "$ref": "#/definitions/BaseMeasure_date_"
         },
-        "PRMRY_CLSS": {
-          "$ref": "#/definitions/BaseMeasure_DbtPrmryClssEnum_"
+        "TYP": {
+          "$ref": "#/definitions/BaseMeasure_DbtTypEnum_"
         },
         "GRNT_LVL": {
           "$ref": "#/definitions/BaseMeasure_DbtGrntLvlEnum_"
@@ -3715,7 +3712,7 @@
           "$ref": "#/definitions/BaseMeasure_date_"
         },
         "UNDRLYNG": {
-          "$ref": "#/definitions/BaseMeasure_ID_"
+          "$ref": "#/definitions/BaseMeasure_DBT_"
         },
         "MNMM_INVSTMNT": {
           "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
@@ -3740,14 +3737,14 @@
         "DIMS"
       ]
     },
-    "StaticDimensionContainer_DBT_": {
-      "title": "StaticDimensionContainer[DBT]",
+    "DynmcDimensionContainer_DBT_": {
+      "title": "DynmcDimensionContainer[DBT]",
       "type": "object",
       "properties": {
         "ID": {
           "title": "Id",
           "maxLength": 32,
-          "pattern": "^[IP][a-zA-z0-9_]+",
+          "pattern": "^[IP][a-zA-Z0-9_]+",
           "type": "string"
         },
         "VLD_FRM": {
@@ -3798,7 +3795,7 @@
       "type": "object",
       "properties": {
         "DIMS": {
-          "$ref": "#/definitions/StaticDimensionContainer_DBT_"
+          "$ref": "#/definitions/DynmcDimensionContainer_DBT_"
         },
         "NM_LTN": {
           "$ref": "#/definitions/BaseMeasure_Ascii128_"
@@ -3813,7 +3810,7 @@
           "$ref": "#/definitions/BaseMeasure_date_"
         },
         "ISSD_BY": {
-          "$ref": "#/definitions/BaseMeasure_ID_"
+          "$ref": "#/definitions/BaseMeasure_ORG_"
         },
         "CFI": {
           "$ref": "#/definitions/BaseMeasure_Ascii6_"
@@ -3842,7 +3839,7 @@
         "ID": {
           "title": "Id",
           "maxLength": 32,
-          "pattern": "^[IP][a-zA-z0-9_]+",
+          "pattern": "^[IP][a-zA-Z0-9_]+",
           "type": "string"
         },
         "TP": {
@@ -3873,8 +3870,8 @@
         "VALUE"
       ]
     },
-    "DbtOutstndngChnSeries": {
-      "title": "DbtOutstndngChnSeries",
+    "SelfDbtOutstndngChngSeries": {
+      "title": "SelfDbtOutstndngChngSeries",
       "type": "object",
       "properties": {
         "DIMS": {
@@ -3900,7 +3897,7 @@
         "ID": {
           "title": "Id",
           "maxLength": 32,
-          "pattern": "^[IP][a-zA-z0-9_]+",
+          "pattern": "^[IP][a-zA-Z0-9_]+",
           "type": "string"
         },
         "DT": {
@@ -3914,8 +3911,8 @@
         "DT"
       ]
     },
-    "CpnSeries": {
-      "title": "CpnSeries",
+    "SelfCpnSeries": {
+      "title": "SelfCpnSeries",
       "type": "object",
       "properties": {
         "DIMS": {
@@ -3937,26 +3934,12 @@
         "ID": {
           "title": "Id",
           "maxLength": 32,
-          "pattern": "^[IP][a-zA-z0-9_]+",
+          "pattern": "^[IP][a-zA-Z0-9_]+",
           "type": "string"
         }
       },
       "required": [
         "ID"
-      ]
-    },
-    "BaseMeasure_Ascii12_": {
-      "title": "BaseMeasure[Ascii12]",
-      "type": "object",
-      "properties": {
-        "VALUE": {
-          "title": "Value",
-          "maxLength": 12,
-          "type": "string"
-        }
-      },
-      "required": [
-        "VALUE"
       ]
     },
     "BaseMeasure_SHR_": {
@@ -3966,7 +3949,7 @@
         "VALUE": {
           "title": "Value",
           "maxLength": 32,
-          "pattern": "^[IP][a-zA-z0-9_]+",
+          "pattern": "^[IP][a-zA-Z0-9_]+",
           "type": "string"
         }
       },
@@ -3987,12 +3970,6 @@
         "DT_CLS": {
           "$ref": "#/definitions/BaseMeasure_date_"
         },
-        "ISIN_ID": {
-          "$ref": "#/definitions/BaseMeasure_Ascii32_"
-        },
-        "INTRNL_ID": {
-          "$ref": "#/definitions/BaseMeasure_Ascii12_"
-        },
         "CRRNCY": {
           "$ref": "#/definitions/BaseMeasure_GenCrrncyEnum_"
         },
@@ -4010,14 +3987,14 @@
         "DIMS"
       ]
     },
-    "StaticDimensionContainer_SHR_": {
-      "title": "StaticDimensionContainer[SHR]",
+    "DynmcDimensionContainer_SHR_": {
+      "title": "DynmcDimensionContainer[SHR]",
       "type": "object",
       "properties": {
         "ID": {
           "title": "Id",
           "maxLength": 32,
-          "pattern": "^[IP][a-zA-z0-9_]+",
+          "pattern": "^[IP][a-zA-Z0-9_]+",
           "type": "string"
         },
         "VLD_FRM": {
@@ -4067,28 +4044,28 @@
         "VALUE"
       ]
     },
-    "ShrPrmryClssEnum": {
-      "title": "ShrPrmryClssEnum",
+    "ShrTypEnum": {
+      "title": "ShrTypEnum",
       "description": "An enumeration.",
       "enum": [
         "-",
-        "E.1",
-        "E.2",
-        "E.3",
-        "E.4",
-        "E.9",
-        "F.1",
-        "F.2",
-        "F.9"
+        "CMMN",
+        "PRFRRD",
+        "DPSTRY_RCPT",
+        "HYBRD",
+        "OTHR_EQTY",
+        "UCITS",
+        "AIF",
+        "OTHR_FND"
       ],
       "type": "string"
     },
-    "BaseMeasure_ShrPrmryClssEnum_": {
-      "title": "BaseMeasure[ShrPrmryClssEnum]",
+    "BaseMeasure_ShrTypEnum_": {
+      "title": "BaseMeasure[ShrTypEnum]",
       "type": "object",
       "properties": {
         "VALUE": {
-          "$ref": "#/definitions/ShrPrmryClssEnum"
+          "$ref": "#/definitions/ShrTypEnum"
         }
       },
       "required": [
@@ -4100,7 +4077,7 @@
       "type": "object",
       "properties": {
         "DIMS": {
-          "$ref": "#/definitions/StaticDimensionContainer_SHR_"
+          "$ref": "#/definitions/DynmcDimensionContainer_SHR_"
         },
         "NM_LTN": {
           "$ref": "#/definitions/BaseMeasure_Ascii128_"
@@ -4123,8 +4100,8 @@
         "MNMM_AMNT": {
           "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
-        "PRMRY_CLSS": {
-          "$ref": "#/definitions/BaseMeasure_ShrPrmryClssEnum_"
+        "TYP": {
+          "$ref": "#/definitions/BaseMeasure_ShrTypEnum_"
         }
       },
       "required": [
@@ -4138,7 +4115,7 @@
         "ID": {
           "title": "Id",
           "maxLength": 32,
-          "pattern": "^[IP][a-zA-z0-9_]+",
+          "pattern": "^[IP][a-zA-Z0-9_]+",
           "type": "string"
         },
         "DT": {
@@ -4227,8 +4204,8 @@
         "VALUE"
       ]
     },
-    "DvdndSeries": {
-      "title": "DvdndSeries",
+    "SelfDvdndSeries": {
+      "title": "SelfDvdndSeries",
       "type": "object",
       "properties": {
         "DIMS": {
@@ -4267,8 +4244,8 @@
         "AMNT"
       ]
     },
-    "SpltSeries": {
-      "title": "SpltSeries",
+    "SelfSpltSeries": {
+      "title": "SelfSpltSeries",
       "type": "object",
       "properties": {
         "DIMS": {
@@ -4443,7 +4420,7 @@
       "type": "object",
       "properties": {
         "DIMS": {
-          "$ref": "#/definitions/StaticDimensionContainer_ORG_"
+          "$ref": "#/definitions/DynmcDimensionContainer_ORG_"
         },
         "NM": {
           "$ref": "#/definitions/BaseMeasure_Str128_"
@@ -4483,14 +4460,14 @@
         "DIMS"
       ]
     },
-    "DimensionContainer_PSN_": {
-      "title": "DimensionContainer[PSN]",
+    "DimensionContainer_USR_": {
+      "title": "DimensionContainer[USR]",
       "type": "object",
       "properties": {
         "ID": {
           "title": "Id",
           "maxLength": 32,
-          "pattern": "^[a-zA-z0-9_]+",
+          "pattern": "^[a-zA-Z0-9_]+",
           "type": "string"
         }
       },
@@ -4498,12 +4475,12 @@
         "ID"
       ]
     },
-    "CntctSeries": {
-      "title": "CntctSeries",
+    "UsrSeries": {
+      "title": "UsrSeries",
       "type": "object",
       "properties": {
         "DIMS": {
-          "$ref": "#/definitions/DimensionContainer_PSN_"
+          "$ref": "#/definitions/DimensionContainer_USR_"
         },
         "EMAIL": {
           "$ref": "#/definitions/BaseMeasure_EmailStr_"
@@ -4522,20 +4499,20 @@
         "DIMS"
       ]
     },
-    "RelDimensionContainer_PSN__ORG_": {
-      "title": "RelDimensionContainer[PSN, ORG]",
+    "RelDimensionContainer_USR__ORG_": {
+      "title": "RelDimensionContainer[USR, ORG]",
       "type": "object",
       "properties": {
         "LID": {
           "title": "Lid",
           "maxLength": 32,
-          "pattern": "^[a-zA-z0-9_]+",
+          "pattern": "^[a-zA-Z0-9_]+",
           "type": "string"
         },
         "RID": {
           "title": "Rid",
           "maxLength": 32,
-          "pattern": "^[ELTBP][a-zA-z0-9_]+",
+          "pattern": "^[ELTBP][a-zA-Z0-9_]+",
           "type": "string"
         },
         "VLD_FRM": {
@@ -4580,20 +4557,14 @@
         "VALUE"
       ]
     },
-    "CntctTRaSeries": {
-      "title": "CntctTRaSeries",
+    "Usr2RaSeries": {
+      "title": "Usr2RaSeries",
       "type": "object",
       "properties": {
         "DIMS": {
-          "$ref": "#/definitions/RelDimensionContainer_PSN__ORG_"
+          "$ref": "#/definitions/RelDimensionContainer_USR__ORG_"
         },
         "ASSCTD_WTH": {
-          "$ref": "#/definitions/BaseMeasure_bool_"
-        },
-        "IS_EMPLY_OF": {
-          "$ref": "#/definitions/BaseMeasure_bool_"
-        },
-        "IS_CNTRCTR_OF": {
           "$ref": "#/definitions/BaseMeasure_bool_"
         },
         "WRKS_FR": {
@@ -4655,7 +4626,7 @@
         "DT_CLS": {
           "$ref": "#/definitions/BaseMeasure_date_"
         },
-        "NM": {
+        "NM_LTN": {
           "$ref": "#/definitions/BaseMeasure_Str128_"
         },
         "CNTRY_RSDNC": {
@@ -4679,7 +4650,7 @@
         "ID": {
           "title": "Id",
           "maxLength": 32,
-          "pattern": "^[IP][a-zA-z0-9_]+",
+          "pattern": "^[IP][a-zA-Z0-9_]+",
           "type": "string"
         }
       },
@@ -4692,7 +4663,7 @@
       "description": "An enumeration.",
       "enum": [
         "-",
-        "OVER",
+        "SIGHT",
         "AMAT",
         "ANOT"
       ],
@@ -4740,7 +4711,7 @@
         "VALUE": {
           "title": "Value",
           "maxLength": 32,
-          "pattern": "^[IP][a-zA-z0-9_]+",
+          "pattern": "^[IP][a-zA-Z0-9_]+",
           "type": "string"
         }
       },
@@ -4770,9 +4741,6 @@
         "CRRNCY": {
           "$ref": "#/definitions/BaseMeasure_GenCrrncyEnum_"
         },
-        "IS_TRNSFRBL": {
-          "$ref": "#/definitions/BaseMeasure_bool_"
-        },
         "DBTR": {
           "$ref": "#/definitions/BaseMeasure_ORG_"
         },
@@ -4794,7 +4762,7 @@
         "ID": {
           "title": "Id",
           "maxLength": 32,
-          "pattern": "^P[a-zA-z0-9_]+",
+          "pattern": "^P[a-zA-Z0-9_]+",
           "type": "string"
         }
       },
@@ -4833,7 +4801,7 @@
         "VALUE": {
           "title": "Value",
           "maxLength": 32,
-          "pattern": "^P[a-zA-z0-9_]+",
+          "pattern": "^P[a-zA-Z0-9_]+",
           "type": "string"
         }
       },
@@ -4881,7 +4849,7 @@
         "ID": {
           "title": "Id",
           "maxLength": 32,
-          "pattern": "^P[a-zA-z0-9_]+",
+          "pattern": "^P[a-zA-Z0-9_]+",
           "type": "string"
         }
       },
@@ -4904,6 +4872,7 @@
         "INT",
         "RFC",
         "NFC",
+        "LVG",
         "OTH"
       ],
       "type": "string"
@@ -4940,10 +4909,10 @@
           "$ref": "#/definitions/BaseMeasure_LonTypEnum_"
         },
         "DBTR": {
-          "$ref": "#/definitions/BaseMeasure_ID_"
+          "$ref": "#/definitions/BaseMeasure_ORG_"
         },
         "CRDTR": {
-          "$ref": "#/definitions/BaseMeasure_ID_"
+          "$ref": "#/definitions/BaseMeasure_ORG_"
         },
         "ALS_OF": {
           "$ref": "#/definitions/BaseMeasure_LON_"
@@ -4969,8 +4938,8 @@
         "CRRNCY": {
           "$ref": "#/definitions/BaseMeasure_GenCrrncyEnum_"
         },
-        "PRMRY_CLSS": {
-          "$ref": "#/definitions/BaseMeasure_DbtPrmryClssEnum_"
+        "TYP": {
+          "$ref": "#/definitions/BaseMeasure_DbtTypEnum_"
         },
         "ISSD_BY": {
           "$ref": "#/definitions/BaseMeasure_ORG_"
@@ -4983,8 +4952,8 @@
         "DIMS"
       ]
     },
-    "ShrTypEnum": {
-      "title": "ShrTypEnum",
+    "ShrEsaTypEnum": {
+      "title": "ShrEsaTypEnum",
       "description": "An enumeration.",
       "enum": [
         "F511",
@@ -4995,12 +4964,12 @@
       ],
       "type": "string"
     },
-    "BaseMeasure_ShrTypEnum_": {
-      "title": "BaseMeasure[ShrTypEnum]",
+    "BaseMeasure_ShrEsaTypEnum_": {
+      "title": "BaseMeasure[ShrEsaTypEnum]",
       "type": "object",
       "properties": {
         "VALUE": {
-          "$ref": "#/definitions/ShrTypEnum"
+          "$ref": "#/definitions/ShrEsaTypEnum"
         }
       },
       "required": [
@@ -5024,7 +4993,7 @@
           "$ref": "#/definitions/BaseMeasure_GenCrrncyEnum_"
         },
         "TYP": {
-          "$ref": "#/definitions/BaseMeasure_ShrTypEnum_"
+          "$ref": "#/definitions/BaseMeasure_ShrEsaTypEnum_"
         },
         "ISSD_BY": {
           "$ref": "#/definitions/BaseMeasure_ORG_"
@@ -5044,12 +5013,26 @@
         "ID": {
           "title": "Id",
           "maxLength": 32,
-          "pattern": "^[IP][a-zA-z0-9_]+",
+          "pattern": "^[IP][a-zA-Z0-9_]+",
           "type": "string"
         }
       },
       "required": [
         "ID"
+      ]
+    },
+    "BaseMeasure_Ascii12_": {
+      "title": "BaseMeasure[Ascii12]",
+      "type": "object",
+      "properties": {
+        "VALUE": {
+          "title": "Value",
+          "maxLength": 12,
+          "type": "string"
+        }
+      },
+      "required": [
+        "VALUE"
       ]
     },
     "DrvtvTypEnum": {
@@ -5087,7 +5070,7 @@
         "VALUE": {
           "title": "Value",
           "maxLength": 32,
-          "pattern": "^[IP][a-zA-z0-9_]+",
+          "pattern": "^[IP][a-zA-Z0-9_]+",
           "type": "string"
         }
       },
@@ -5108,8 +5091,8 @@
         "DT_CLS": {
           "$ref": "#/definitions/BaseMeasure_date_"
         },
-        "NM": {
-          "$ref": "#/definitions/BaseMeasure_Str128_"
+        "NM_LTN": {
+          "$ref": "#/definitions/BaseMeasure_Ascii128_"
         },
         "TCKR": {
           "$ref": "#/definitions/BaseMeasure_Ascii12_"
@@ -5123,7 +5106,7 @@
         "MLTPLR": {
           "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
         },
-        "WRITER": {
+        "WRTR": {
           "$ref": "#/definitions/BaseMeasure_GenMrktEnum_"
         },
         "ALS_OF": {
@@ -5141,7 +5124,7 @@
         "VALUE": {
           "title": "Value",
           "maxLength": 32,
-          "pattern": "^[IP][a-zA-z0-9_]+",
+          "pattern": "^[IP][a-zA-Z0-9_]+",
           "type": "string"
         }
       },
@@ -5162,8 +5145,8 @@
         "DT_CLS": {
           "$ref": "#/definitions/BaseMeasure_date_"
         },
-        "NM": {
-          "$ref": "#/definitions/BaseMeasure_Str128_"
+        "NM_LTN": {
+          "$ref": "#/definitions/BaseMeasure_Ascii128_"
         },
         "TYP": {
           "$ref": "#/definitions/BaseMeasure_DrvtvTypEnum_"
@@ -5220,18 +5203,18 @@
             "$ref": "#/definitions/SelfDbtDynmcSeries"
           }
         },
-        "SELF_DBT_OUTSTNDNG_CNG": {
-          "title": "Self Dbt Outstndng Cng",
+        "SELF_DBT_OUTSTNDNG_CHNG": {
+          "title": "Self Dbt Outstndng Chng",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/DbtOutstndngChnSeries"
+            "$ref": "#/definitions/SelfDbtOutstndngChngSeries"
           }
         },
         "SELF_DBT_CPN": {
           "title": "Self Dbt Cpn",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/CpnSeries"
+            "$ref": "#/definitions/SelfCpnSeries"
           }
         },
         "SELF_SHR": {
@@ -5252,21 +5235,14 @@
           "title": "Self Shr Dvdnd",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/DvdndSeries"
+            "$ref": "#/definitions/SelfDvdndSeries"
           }
         },
         "SELF_SHR_SPLT": {
           "title": "Self Shr Splt",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/SpltSeries"
-          }
-        },
-        "SPLT": {
-          "title": "Splt",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/SpltSeries"
+            "$ref": "#/definitions/SelfSpltSeries"
           }
         },
         "MNGMNT": {
@@ -5283,18 +5259,18 @@
             "$ref": "#/definitions/MngmntDynmcSeries"
           }
         },
-        "CNTCT": {
-          "title": "Cntct",
+        "USR": {
+          "title": "Usr",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/CntctSeries"
+            "$ref": "#/definitions/UsrSeries"
           }
         },
-        "CNTCT_T_RA": {
-          "title": "Cntct T Ra",
+        "USR_T_RA": {
+          "title": "Usr T Ra",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/CntctTRaSeries"
+            "$ref": "#/definitions/Usr2RaSeries"
           }
         },
         "CNTRPRTY": {
@@ -5398,63 +5374,14 @@
       ],
       "type": "string"
     },
-    "CrrncyDimensionContainer": {
-      "title": "CrrncyDimensionContainer",
-      "type": "object",
-      "properties": {
-        "CRRNCY": {
-          "$ref": "#/definitions/GenCrrncyEnum"
-        },
-        "ID": {
-          "title": "Id",
-          "maxLength": 32,
-          "pattern": "^[ELTBP][a-zA-z0-9_]+",
-          "type": "string"
-        },
-        "DT": {
-          "title": "Dt",
-          "type": "string",
-          "format": "date"
-        },
-        "FRQNCY": {
-          "$ref": "#/definitions/GenFrqncyEnum"
-        }
-      },
-      "required": [
-        "CRRNCY",
-        "ID",
-        "DT",
-        "FRQNCY"
-      ]
-    },
-    "CshSeries": {
-      "title": "CshSeries",
-      "type": "object",
-      "properties": {
-        "DIMS": {
-          "$ref": "#/definitions/CrrncyDimensionContainer"
-        },
-        "STCK": {
-          "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
-        },
-        "FLS": {
-          "$ref": "#/definitions/BaseMeasure_float_"
-        }
-      },
-      "required": [
-        "DIMS",
-        "STCK",
-        "FLS"
-      ]
-    },
-    "FrqncyAccDimensionContainer_DEP_": {
-      "title": "FrqncyAccDimensionContainer[DEP]",
+    "FrqncyAccDimensionContainer_DEP__": {
+      "title": "FrqncyAccDimensionContainer[DEP_]",
       "type": "object",
       "properties": {
         "IID": {
           "title": "Iid",
           "maxLength": 32,
-          "pattern": "^[IP][a-zA-z0-9_]+",
+          "pattern": "^[IPC][a-zA-Z0-9_]+",
           "type": "string"
         },
         "DT": {
@@ -5477,7 +5404,7 @@
       "type": "object",
       "properties": {
         "DIMS": {
-          "$ref": "#/definitions/FrqncyAccDimensionContainer_DEP_"
+          "$ref": "#/definitions/FrqncyAccDimensionContainer_DEP__"
         },
         "STCK": {
           "$ref": "#/definitions/BaseMeasure_NonNegativeFloat_"
@@ -5503,7 +5430,7 @@
         "IID": {
           "title": "Iid",
           "maxLength": 32,
-          "pattern": "^P[a-zA-z0-9_]+",
+          "pattern": "^P[a-zA-Z0-9_]+",
           "type": "string"
         },
         "DT": {
@@ -5548,13 +5475,13 @@
         "IID": {
           "title": "Iid",
           "maxLength": 32,
-          "pattern": "^[IP][a-zA-z0-9_]+",
+          "pattern": "^[IP][a-zA-Z0-9_]+",
           "type": "string"
         },
         "ID": {
           "title": "Id",
           "maxLength": 32,
-          "pattern": "^[ELTBP][a-zA-z0-9_]+",
+          "pattern": "^[ELTBP][a-zA-Z0-9_]+",
           "type": "string"
         },
         "DT": {
@@ -5612,7 +5539,7 @@
         "IID": {
           "title": "Iid",
           "maxLength": 32,
-          "pattern": "^P[a-zA-z0-9_]+",
+          "pattern": "^P[a-zA-Z0-9_]+",
           "type": "string"
         },
         "DT": {
@@ -5665,13 +5592,13 @@
         "IID": {
           "title": "Iid",
           "maxLength": 32,
-          "pattern": "^[IP][a-zA-z0-9_]+",
+          "pattern": "^[IP][a-zA-Z0-9_]+",
           "type": "string"
         },
         "ID": {
           "title": "Id",
           "maxLength": 32,
-          "pattern": "^[ELTBP][a-zA-z0-9_]+",
+          "pattern": "^[ELTBP][a-zA-Z0-9_]+",
           "type": "string"
         },
         "DT": {
@@ -5729,13 +5656,13 @@
         "IID": {
           "title": "Iid",
           "maxLength": 32,
-          "pattern": "^[IP][a-zA-z0-9_]+",
+          "pattern": "^[IP][a-zA-Z0-9_]+",
           "type": "string"
         },
         "ID": {
           "title": "Id",
           "maxLength": 32,
-          "pattern": "^[ELTBP][a-zA-z0-9_]+",
+          "pattern": "^[ELTBP][a-zA-Z0-9_]+",
           "type": "string"
         },
         "DT": {
@@ -5785,7 +5712,7 @@
         "IID": {
           "title": "Iid",
           "maxLength": 32,
-          "pattern": "^[IP][a-zA-z0-9_]+",
+          "pattern": "^[IP][a-zA-Z0-9_]+",
           "type": "string"
         },
         "DT": {
@@ -5850,7 +5777,7 @@
         "ID": {
           "title": "Id",
           "maxLength": 32,
-          "pattern": "^[ELTBP][a-zA-z0-9_]+",
+          "pattern": "^[ELTBP][a-zA-Z0-9_]+",
           "type": "string"
         },
         "DT": {
@@ -5899,8 +5826,11 @@
       "description": "An enumeration.",
       "enum": [
         "-",
-        "RA1",
-        "RA2"
+        "AI_DPST",
+        "AI_LN",
+        "AI_DBT",
+        "AR",
+        "OTR"
       ],
       "type": "string"
     },
@@ -5914,7 +5844,7 @@
         "ID": {
           "title": "Id",
           "maxLength": 32,
-          "pattern": "^[ELTBP][a-zA-z0-9_]+",
+          "pattern": "^[ELTBP][a-zA-Z0-9_]+",
           "type": "string"
         },
         "DT": {
@@ -5986,17 +5916,16 @@
       "description": "An enumeration.",
       "enum": [
         "-",
-        "RL1",
-        "RL2",
-        "RL3",
-        "RL4",
-        "RL5",
-        "RL6",
-        "RL7",
-        "RL8",
-        "RL9",
-        "RL10",
-        "RL11"
+        "AI_LN",
+        "AI_DBT",
+        "AR",
+        "MNGMNT_FEES",
+        "TRNSCTNS_FEES",
+        "TAXES",
+        "OTHER_PRVSNS",
+        "NO_CASH_SL",
+        "FUTURE",
+        "OTHER"
       ],
       "type": "string"
     },
@@ -6010,7 +5939,7 @@
         "ID": {
           "title": "Id",
           "maxLength": 32,
-          "pattern": "^[ELTBP][a-zA-z0-9_]+",
+          "pattern": "^[ELTBP][a-zA-Z0-9_]+",
           "type": "string"
         },
         "DT": {
@@ -6056,13 +5985,13 @@
         "IID": {
           "title": "Iid",
           "maxLength": 32,
-          "pattern": "^[IP][a-zA-z0-9_]+",
+          "pattern": "^[IP][a-zA-Z0-9_]+",
           "type": "string"
         },
         "ID": {
           "title": "Id",
           "maxLength": 32,
-          "pattern": "^[ELTBP_][a-zA-z0-9_]+",
+          "pattern": "^[ELTBP_][a-zA-Z0-9_]+",
           "type": "string"
         },
         "DT": {
@@ -6110,11 +6039,11 @@
       "description": "An enumeration.",
       "enum": [
         "-",
-        "R1",
-        "R2",
-        "R3",
-        "R4",
-        "R5"
+        "INTRST",
+        "DVDNDS",
+        "RNTS",
+        "FDI",
+        "INS"
       ],
       "type": "string"
     },
@@ -6125,7 +6054,7 @@
         "IID": {
           "title": "Iid",
           "maxLength": 32,
-          "pattern": "^[IP][a-zA-z0-9_]+",
+          "pattern": "^[IP][a-zA-Z0-9_]+",
           "type": "string"
         },
         "TP": {
@@ -6168,16 +6097,16 @@
       "description": "An enumeration.",
       "enum": [
         "-",
-        "E1",
-        "E2",
-        "E3",
-        "E4",
-        "E5",
-        "E6",
-        "E7",
-        "E8",
-        "E9",
-        "E10"
+        "INTRST",
+        "RNTS",
+        "TRNSCTNS_FEES",
+        "MNGMNT_FEES",
+        "DPSTR_FEES",
+        "TAXES",
+        "WAGES",
+        "BDE",
+        "BLE",
+        "OTHER"
       ],
       "type": "string"
     },
@@ -6188,7 +6117,7 @@
         "IID": {
           "title": "Iid",
           "maxLength": 32,
-          "pattern": "^[IP][a-zA-z0-9_]+",
+          "pattern": "^[IP][a-zA-Z0-9_]+",
           "type": "string"
         },
         "TP": {
@@ -6233,7 +6162,7 @@
         "IID": {
           "title": "Iid",
           "maxLength": 32,
-          "pattern": "^[IP][a-zA-z0-9_]+",
+          "pattern": "^[IP][a-zA-Z0-9_]+",
           "type": "string"
         },
         "DT": {
@@ -6251,8 +6180,8 @@
         "FRQNCY"
       ]
     },
-    "AggSeries": {
-      "title": "AggSeries",
+    "KeySeries": {
+      "title": "KeySeries",
       "type": "object",
       "properties": {
         "DIMS": {
@@ -6275,13 +6204,6 @@
       "title": "Datasets",
       "type": "object",
       "properties": {
-        "CSH": {
-          "title": "Csh",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/CshSeries"
-          }
-        },
         "DPST": {
           "title": "Dpst",
           "type": "array",
@@ -6394,11 +6316,11 @@
             "$ref": "#/definitions/ExpnsSeries"
           }
         },
-        "AGG": {
-          "title": "Agg",
+        "KEY": {
+          "title": "Key",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/AggSeries"
+            "$ref": "#/definitions/KeySeries"
           }
         }
       },

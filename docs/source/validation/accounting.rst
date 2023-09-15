@@ -108,7 +108,7 @@
 
     \mathrm{REDEMPTIONS} &= \sum_s\sum_h\mathrm{HLDR.RDMPTNS}
 
-    \mathrm{ASSET\_FLOWS} &= \sum_i\mathrm{CSH.FLS} + \sum_i\mathrm{DPST.FLS} + \sum_i\mathrm{ASST\_SFT.FLS} + \sum_iA\mathrm{SST\_DBT.FLS}  + \sum_i\mathrm{ASST\_LN.FLS} + \sum_i\mathrm{SHR.FLS} + \sum_i\mathrm{EXT.FLS} + \sum_i\mathrm{ODR.FLS} + \sum_i\mathrm{ASST\_NN\_FNNCL.FLS} + \sum_i\mathrm{ASST\_RMNNG.FLS}  
+    \mathrm{ASSET\_FLOWS} &= \sum_i\mathrm{DPST.FLS} + \sum_i\mathrm{ASST\_SFT.FLS} + \sum_iA\mathrm{SST\_DBT.FLS}  + \sum_i\mathrm{ASST\_LN.FLS} + \sum_i\mathrm{SHR.FLS} + \sum_i\mathrm{EXT.FLS} + \sum_i\mathrm{ODR.FLS} + \sum_i\mathrm{ASST\_NN\_FNNCL.FLS} + \sum_i\mathrm{ASST\_RMNNG.FLS}  
     
     \mathrm{LIABILITY\_FLOWS} &= \sum_i\mathrm{LBLTY\_SFT.FLS} + \sum_i\mathrm{LBLTY\_DBT.FLS} + \sum_i\mathrm{LBLTY\_LN.FLS} + \sum_i\mathrm{LBLTY\_RMNNG.FLS}
 
@@ -162,7 +162,7 @@
 
     \mathrm{LHS} &=  \sum_i\mathrm{DPST.ACCRLS} + \sum_i\mathrm{ASST\_DBT.ACCRLS} + \sum_i\mathrm{ASST\_LN.ACCRLS} + \sum_i\mathrm{ASST\_NN\_FNNCL.ACCRLS} 
 
-    \mathrm{RHS} &= \mathrm{ASST\_RMNNG.RA1.STCK}
+    \mathrm{RHS} &= \mathrm{ASST\_RMNNG.AI_DPST.STCK} + \mathrm{ASST\_RMNNG.AI_DBT.STCK} + \mathrm{ASST\_RMNNG.AI_LN.STCK} + \mathrm{ASST\_RMNNG.AR.STCK}
 
     i &= \text{Άθροισμα ανά στοιχείο του λογαριασμού του ισολογισμού που ακολουθεί}
 

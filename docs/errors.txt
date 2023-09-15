@@ -1,4 +1,1 @@
 [91m/home/al459/envs/ifdat-docs/docs/source/examples.rst:6: WARNING: toctree contains reference to nonexisting document 'examples/by_category_table'[39;49;00m
-[91m/home/al459/envs/ifdat-docs/docs/source/examples/treatment.rst: WARNING: document isn't included in any toctree[39;49;00m
-[91m/home/al459/envs/ifdat-docs/docs/source/glossary.rst: WARNING: document isn't included in any toctree[39;49;00m
-[91m/home/al459/envs/ifdat-docs/docs/source/validation/critical.rst:22: WARNING: unknown document: 'criticalschema_error'[39;49;00m

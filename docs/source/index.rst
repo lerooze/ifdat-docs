@@ -31,3 +31,4 @@ DISCLAIMER: Το παρόν αποτελεί σχέδιο και δεν έχει
    :hidden:
 
    license
+   glossary

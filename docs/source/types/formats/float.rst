@@ -1,0 +1,4 @@
+FLOAT
+=====
+type
+    Float 
