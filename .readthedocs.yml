@@ -1,8 +1,11 @@
 version: 2
 
-python:
+build:
   os: "ubuntu-22.04"
-  version: 3.12
+  tools:
+    python: "3.12"
+    
+python:
   install:
   - method: pip
     path: .
