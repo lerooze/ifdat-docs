@@ -1,0 +1,8086 @@
+{
+  "$defs": {
+    "AsstDbtSeries": {
+      "properties": {
+        "DIMS": {
+          "$ref": "#/$defs/journey__model_dimension__RelFrqncyAccDimensionContainer_Annotated_str__StringConstraints__str__StringConstraints__Doc__Annotated_str__StringConstraints__str__StringConstraints__Doc____1"
+        },
+        "STCK": {
+          "$ref": "#/$defs/BaseMeasure_Annotated_float__Ge__"
+        },
+        "FLS": {
+          "$ref": "#/$defs/BaseMeasure_float_"
+        },
+        "NMNL_STCK": {
+          "$ref": "#/$defs/BaseMeasure_Annotated_float__Ge__"
+        },
+        "LND_FR_SFT": {
+          "$ref": "#/$defs/BaseMeasure_Annotated_float__Ge__"
+        },
+        "ACCRLS": {
+          "$ref": "#/$defs/BaseMeasure_float_"
+        }
+      },
+      "required": [
+        "DIMS",
+        "STCK",
+        "FLS",
+        "NMNL_STCK",
+        "LND_FR_SFT",
+        "ACCRLS"
+      ],
+      "title": "AsstDbtSeries",
+      "type": "object"
+    },
+    "AsstNnFnnclDimensionContainer": {
+      "properties": {
+        "TYP": {
+          "$ref": "#/$defs/AsstNnFnnclEnum"
+        },
+        "CNTRY": {
+          "$ref": "#/$defs/GenCntryEnum"
+        },
+        "ID": {
+          "maxLength": 512,
+          "pattern": "^[ELTBP][a-zA-Z0-9_]+",
+          "title": "Id",
+          "type": "string"
+        },
+        "DT": {
+          "format": "date",
+          "title": "Dt",
+          "type": "string"
+        },
+        "FRQNCY": {
+          "$ref": "#/$defs/GenFrqncyEnum"
+        }
+      },
+      "required": [
+        "TYP",
+        "CNTRY",
+        "ID",
+        "DT",
+        "FRQNCY"
+      ],
+      "title": "AsstNnFnnclDimensionContainer",
+      "type": "object"
+    },
+    "AsstNnFnnclEnum": {
+      "enum": [
+        "-",
+        "NFA1",
+        "NFA2",
+        "NFA3",
+        "NFA4",
+        "NFA5",
+        "NFA6"
+      ],
+      "title": "AsstNnFnnclEnum",
+      "type": "string"
+    },
+    "AsstNnFnnclSeries": {
+      "properties": {
+        "DIMS": {
+          "$ref": "#/$defs/AsstNnFnnclDimensionContainer"
+        },
+        "STCK": {
+          "$ref": "#/$defs/BaseMeasure_Annotated_float__Ge__"
+        },
+        "FLS": {
+          "$ref": "#/$defs/BaseMeasure_float_"
+        },
+        "ACCRLS": {
+          "$ref": "#/$defs/BaseMeasure_float_"
+        }
+      },
+      "required": [
+        "DIMS",
+        "STCK",
+        "FLS",
+        "ACCRLS"
+      ],
+      "title": "AsstNnFnnclSeries",
+      "type": "object"
+    },
+    "AsstRmnngDimensionContainer": {
+      "properties": {
+        "TYP": {
+          "$ref": "#/$defs/RemAssetEnum"
+        },
+        "ID": {
+          "maxLength": 512,
+          "pattern": "^[ELTBP][a-zA-Z0-9_]+",
+          "title": "Id",
+          "type": "string"
+        },
+        "DT": {
+          "format": "date",
+          "title": "Dt",
+          "type": "string"
+        },
+        "FRQNCY": {
+          "$ref": "#/$defs/GenFrqncyEnum"
+        }
+      },
+      "required": [
+        "TYP",
+        "ID",
+        "DT",
+        "FRQNCY"
+      ],
+      "title": "AsstRmnngDimensionContainer",
+      "type": "object"
+    },
+    "AsstRmnngSeries": {
+      "properties": {
+        "DIMS": {
+          "$ref": "#/$defs/AsstRmnngDimensionContainer"
+        },
+        "STCK": {
+          "$ref": "#/$defs/BaseMeasure_Annotated_float__Ge__"
+        },
+        "FLS": {
+          "$ref": "#/$defs/BaseMeasure_float_"
+        }
+      },
+      "required": [
+        "DIMS",
+        "STCK",
+        "FLS"
+      ],
+      "title": "AsstRmnngSeries",
+      "type": "object"
+    },
+    "BaseMeasure_Annotated_float__Ge__": {
+      "properties": {
+        "VALUE": {
+          "minimum": 0.0,
+          "title": "Value",
+          "type": "number"
+        }
+      },
+      "required": [
+        "VALUE"
+      ],
+      "title": "BaseMeasure[Annotated[float, Ge]]",
+      "type": "object"
+    },
+    "BaseMeasure_Annotated_float__Gt__": {
+      "properties": {
+        "VALUE": {
+          "exclusiveMinimum": 0.0,
+          "title": "Value",
+          "type": "number"
+        }
+      },
+      "required": [
+        "VALUE"
+      ],
+      "title": "BaseMeasure[Annotated[float, Gt]]",
+      "type": "object"
+    },
+    "BaseMeasure_Annotated_int__Ge__": {
+      "properties": {
+        "VALUE": {
+          "minimum": 0,
+          "title": "Value",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "VALUE"
+      ],
+      "title": "BaseMeasure[Annotated[int, Ge]]",
+      "type": "object"
+    },
+    "BaseMeasure_BoolEnum_": {
+      "properties": {
+        "VALUE": {
+          "$ref": "#/$defs/BoolEnum"
+        }
+      },
+      "required": [
+        "VALUE"
+      ],
+      "title": "BaseMeasure[BoolEnum]",
+      "type": "object"
+    },
+    "BaseMeasure_DbtCpnFrqncyEnum_": {
+      "properties": {
+        "VALUE": {
+          "$ref": "#/$defs/DbtCpnFrqncyEnum"
+        }
+      },
+      "required": [
+        "VALUE"
+      ],
+      "title": "BaseMeasure[DbtCpnFrqncyEnum]",
+      "type": "object"
+    },
+    "BaseMeasure_DbtCpnTypEnum_": {
+      "properties": {
+        "VALUE": {
+          "$ref": "#/$defs/DbtCpnTypEnum"
+        }
+      },
+      "required": [
+        "VALUE"
+      ],
+      "title": "BaseMeasure[DbtCpnTypEnum]",
+      "type": "object"
+    },
+    "BaseMeasure_DbtCvrdTypEnum_": {
+      "properties": {
+        "VALUE": {
+          "$ref": "#/$defs/DbtCvrdTypEnum"
+        }
+      },
+      "required": [
+        "VALUE"
+      ],
+      "title": "BaseMeasure[DbtCvrdTypEnum]",
+      "type": "object"
+    },
+    "BaseMeasure_DbtGrntLvlEnum_": {
+      "properties": {
+        "VALUE": {
+          "$ref": "#/$defs/DbtGrntLvlEnum"
+        }
+      },
+      "required": [
+        "VALUE"
+      ],
+      "title": "BaseMeasure[DbtGrntLvlEnum]",
+      "type": "object"
+    },
+    "BaseMeasure_DbtRnkLvlEnum_": {
+      "properties": {
+        "VALUE": {
+          "$ref": "#/$defs/DbtRnkLvlEnum"
+        }
+      },
+      "required": [
+        "VALUE"
+      ],
+      "title": "BaseMeasure[DbtRnkLvlEnum]",
+      "type": "object"
+    },
+    "BaseMeasure_DbtScrtyLvlEnum_": {
+      "properties": {
+        "VALUE": {
+          "$ref": "#/$defs/DbtScrtyLvlEnum"
+        }
+      },
+      "required": [
+        "VALUE"
+      ],
+      "title": "BaseMeasure[DbtScrtyLvlEnum]",
+      "type": "object"
+    },
+    "BaseMeasure_DbtScrtznTypEnum_": {
+      "properties": {
+        "VALUE": {
+          "$ref": "#/$defs/DbtScrtznTypEnum"
+        }
+      },
+      "required": [
+        "VALUE"
+      ],
+      "title": "BaseMeasure[DbtScrtznTypEnum]",
+      "type": "object"
+    },
+    "BaseMeasure_DbtSttsEnum_": {
+      "properties": {
+        "VALUE": {
+          "$ref": "#/$defs/DbtSttsEnum"
+        }
+      },
+      "required": [
+        "VALUE"
+      ],
+      "title": "BaseMeasure[DbtSttsEnum]",
+      "type": "object"
+    },
+    "BaseMeasure_DbtTypEnum_": {
+      "properties": {
+        "VALUE": {
+          "$ref": "#/$defs/DbtTypEnum"
+        }
+      },
+      "required": [
+        "VALUE"
+      ],
+      "title": "BaseMeasure[DbtTypEnum]",
+      "type": "object"
+    },
+    "BaseMeasure_DepNtcEnum_": {
+      "properties": {
+        "VALUE": {
+          "$ref": "#/$defs/DepNtcEnum"
+        }
+      },
+      "required": [
+        "VALUE"
+      ],
+      "title": "BaseMeasure[DepNtcEnum]",
+      "type": "object"
+    },
+    "BaseMeasure_DepTypEnum_": {
+      "properties": {
+        "VALUE": {
+          "$ref": "#/$defs/DepTypEnum"
+        }
+      },
+      "required": [
+        "VALUE"
+      ],
+      "title": "BaseMeasure[DepTypEnum]",
+      "type": "object"
+    },
+    "BaseMeasure_DprtmntEnum_": {
+      "properties": {
+        "VALUE": {
+          "$ref": "#/$defs/DprtmntEnum"
+        }
+      },
+      "required": [
+        "VALUE"
+      ],
+      "title": "BaseMeasure[DprtmntEnum]",
+      "type": "object"
+    },
+    "BaseMeasure_DrvtvTypEnum_": {
+      "properties": {
+        "VALUE": {
+          "$ref": "#/$defs/DrvtvTypEnum"
+        }
+      },
+      "required": [
+        "VALUE"
+      ],
+      "title": "BaseMeasure[DrvtvTypEnum]",
+      "type": "object"
+    },
+    "BaseMeasure_DvdndCstmFrqncyEnum_": {
+      "properties": {
+        "VALUE": {
+          "$ref": "#/$defs/DvdndCstmFrqncyEnum"
+        }
+      },
+      "required": [
+        "VALUE"
+      ],
+      "title": "BaseMeasure[DvdndCstmFrqncyEnum]",
+      "type": "object"
+    },
+    "BaseMeasure_DvdndTypEnum_": {
+      "properties": {
+        "VALUE": {
+          "$ref": "#/$defs/DvdndTypEnum"
+        }
+      },
+      "required": [
+        "VALUE"
+      ],
+      "title": "BaseMeasure[DvdndTypEnum]",
+      "type": "object"
+    },
+    "BaseMeasure_EmailStr_": {
+      "properties": {
+        "VALUE": {
+          "format": "email",
+          "title": "Value",
+          "type": "string"
+        }
+      },
+      "required": [
+        "VALUE"
+      ],
+      "title": "BaseMeasure[EmailStr]",
+      "type": "object"
+    },
+    "BaseMeasure_FndBndFcsEnum_": {
+      "properties": {
+        "VALUE": {
+          "$ref": "#/$defs/FndBndFcsEnum"
+        }
+      },
+      "required": [
+        "VALUE"
+      ],
+      "title": "BaseMeasure[FndBndFcsEnum]",
+      "type": "object"
+    },
+    "BaseMeasure_FndDstrbtnPlcyEnum_": {
+      "properties": {
+        "VALUE": {
+          "$ref": "#/$defs/FndDstrbtnPlcyEnum"
+        }
+      },
+      "required": [
+        "VALUE"
+      ],
+      "title": "BaseMeasure[FndDstrbtnPlcyEnum]",
+      "type": "object"
+    },
+    "BaseMeasure_FndEqtyTypEnum_": {
+      "properties": {
+        "VALUE": {
+          "$ref": "#/$defs/FndEqtyTypEnum"
+        }
+      },
+      "required": [
+        "VALUE"
+      ],
+      "title": "BaseMeasure[FndEqtyTypEnum]",
+      "type": "object"
+    },
+    "BaseMeasure_FndGgrphclFcsEnum_": {
+      "properties": {
+        "VALUE": {
+          "$ref": "#/$defs/FndGgrphclFcsEnum"
+        }
+      },
+      "required": [
+        "VALUE"
+      ],
+      "title": "BaseMeasure[FndGgrphclFcsEnum]",
+      "type": "object"
+    },
+    "BaseMeasure_FndGrnTypEnum_": {
+      "properties": {
+        "VALUE": {
+          "$ref": "#/$defs/FndGrnTypEnum"
+        }
+      },
+      "required": [
+        "VALUE"
+      ],
+      "title": "BaseMeasure[FndGrnTypEnum]",
+      "type": "object"
+    },
+    "BaseMeasure_FndInvstmntPlcyEnum_": {
+      "properties": {
+        "VALUE": {
+          "$ref": "#/$defs/FndInvstmntPlcyEnum"
+        }
+      },
+      "required": [
+        "VALUE"
+      ],
+      "title": "BaseMeasure[FndInvstmntPlcyEnum]",
+      "type": "object"
+    },
+    "BaseMeasure_FndInvstrTypEnum_": {
+      "properties": {
+        "VALUE": {
+          "$ref": "#/$defs/FndInvstrTypEnum"
+        }
+      },
+      "required": [
+        "VALUE"
+      ],
+      "title": "BaseMeasure[FndInvstrTypEnum]",
+      "type": "object"
+    },
+    "BaseMeasure_FndLglTypEnum_": {
+      "properties": {
+        "VALUE": {
+          "$ref": "#/$defs/FndLglTypEnum"
+        }
+      },
+      "required": [
+        "VALUE"
+      ],
+      "title": "BaseMeasure[FndLglTypEnum]",
+      "type": "object"
+    },
+    "BaseMeasure_FndRlEsttTypEnum_": {
+      "properties": {
+        "VALUE": {
+          "$ref": "#/$defs/FndRlEsttTypEnum"
+        }
+      },
+      "required": [
+        "VALUE"
+      ],
+      "title": "BaseMeasure[FndRlEsttTypEnum]",
+      "type": "object"
+    },
+    "BaseMeasure_FndStrtgyEnum_": {
+      "properties": {
+        "VALUE": {
+          "$ref": "#/$defs/FndStrtgyEnum"
+        }
+      },
+      "required": [
+        "VALUE"
+      ],
+      "title": "BaseMeasure[FndStrtgyEnum]",
+      "type": "object"
+    },
+    "BaseMeasure_GenCntryEnum_": {
+      "properties": {
+        "VALUE": {
+          "$ref": "#/$defs/GenCntryEnum"
+        }
+      },
+      "required": [
+        "VALUE"
+      ],
+      "title": "BaseMeasure[GenCntryEnum]",
+      "type": "object"
+    },
+    "BaseMeasure_GenCrrncyEnum_": {
+      "properties": {
+        "VALUE": {
+          "$ref": "#/$defs/GenCrrncyEnum"
+        }
+      },
+      "required": [
+        "VALUE"
+      ],
+      "title": "BaseMeasure[GenCrrncyEnum]",
+      "type": "object"
+    },
+    "BaseMeasure_GenMrktEnum_": {
+      "properties": {
+        "VALUE": {
+          "$ref": "#/$defs/GenMrktEnum"
+        }
+      },
+      "required": [
+        "VALUE"
+      ],
+      "title": "BaseMeasure[GenMrktEnum]",
+      "type": "object"
+    },
+    "BaseMeasure_LonTypEnum_": {
+      "properties": {
+        "VALUE": {
+          "$ref": "#/$defs/LonTypEnum"
+        }
+      },
+      "required": [
+        "VALUE"
+      ],
+      "title": "BaseMeasure[LonTypEnum]",
+      "type": "object"
+    },
+    "BaseMeasure_OrgInstttnlSctrCntrlEnum_": {
+      "properties": {
+        "VALUE": {
+          "$ref": "#/$defs/OrgInstttnlSctrCntrlEnum"
+        }
+      },
+      "required": [
+        "VALUE"
+      ],
+      "title": "BaseMeasure[OrgInstttnlSctrCntrlEnum]",
+      "type": "object"
+    },
+    "BaseMeasure_OrgInstttnlSctrEnum_": {
+      "properties": {
+        "VALUE": {
+          "$ref": "#/$defs/OrgInstttnlSctrEnum"
+        }
+      },
+      "required": [
+        "VALUE"
+      ],
+      "title": "BaseMeasure[OrgInstttnlSctrEnum]",
+      "type": "object"
+    },
+    "BaseMeasure_SftTypEnum_": {
+      "properties": {
+        "VALUE": {
+          "$ref": "#/$defs/SftTypEnum"
+        }
+      },
+      "required": [
+        "VALUE"
+      ],
+      "title": "BaseMeasure[SftTypEnum]",
+      "type": "object"
+    },
+    "BaseMeasure_ShrEsaTypEnum_": {
+      "properties": {
+        "VALUE": {
+          "$ref": "#/$defs/ShrEsaTypEnum"
+        }
+      },
+      "required": [
+        "VALUE"
+      ],
+      "title": "BaseMeasure[ShrEsaTypEnum]",
+      "type": "object"
+    },
+    "BaseMeasure_ShrFndRdmptnFrqncyEnum_": {
+      "properties": {
+        "VALUE": {
+          "$ref": "#/$defs/ShrFndRdmptnFrqncyEnum"
+        }
+      },
+      "required": [
+        "VALUE"
+      ],
+      "title": "BaseMeasure[ShrFndRdmptnFrqncyEnum]",
+      "type": "object"
+    },
+    "BaseMeasure_ShrTypEnum_": {
+      "properties": {
+        "VALUE": {
+          "$ref": "#/$defs/ShrTypEnum"
+        }
+      },
+      "required": [
+        "VALUE"
+      ],
+      "title": "BaseMeasure[ShrTypEnum]",
+      "type": "object"
+    },
+    "BaseMeasure_Url_": {
+      "properties": {
+        "VALUE": {
+          "format": "uri",
+          "minLength": 1,
+          "title": "Value",
+          "type": "string"
+        }
+      },
+      "required": [
+        "VALUE"
+      ],
+      "title": "BaseMeasure[Url]",
+      "type": "object"
+    },
+    "BaseMeasure_bool_": {
+      "properties": {
+        "VALUE": {
+          "title": "Value",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "VALUE"
+      ],
+      "title": "BaseMeasure[bool]",
+      "type": "object"
+    },
+    "BaseMeasure_date_": {
+      "properties": {
+        "VALUE": {
+          "format": "date",
+          "title": "Value",
+          "type": "string"
+        }
+      },
+      "required": [
+        "VALUE"
+      ],
+      "title": "BaseMeasure[date]",
+      "type": "object"
+    },
+    "BaseMeasure_float_": {
+      "properties": {
+        "VALUE": {
+          "title": "Value",
+          "type": "number"
+        }
+      },
+      "required": [
+        "VALUE"
+      ],
+      "title": "BaseMeasure[float]",
+      "type": "object"
+    },
+    "BoolEnum": {
+      "enum": [
+        "-",
+        "T",
+        "F"
+      ],
+      "title": "BoolEnum",
+      "type": "string"
+    },
+    "Categories": {
+      "properties": {
+        "REF": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/journey__structure__ifdat__ref__Datasets"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "ACC": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/journey__structure__ifdat__acc__Datasets"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "title": "Categories",
+      "type": "object"
+    },
+    "CntrprtySeries": {
+      "properties": {
+        "DIMS": {
+          "$ref": "#/$defs/journey__model_dimension__DimensionContainer_Annotated_str__StringConstraints__str__StringConstraints__Doc____1"
+        },
+        "DT_BRTH": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_date_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "DT_CLS": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_date_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "NM_LTN": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/journey__model__BaseMeasure_Annotated_str__str__str__StringConstraints____2"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "CNTRY_RSDNC": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_GenCntryEnum_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "INSTTTNL_SCTR": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_OrgInstttnlSctrEnum_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "ALS_OF": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/journey__model__BaseMeasure_Annotated_str__StringConstraints__str__StringConstraints__Doc____1"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "DIMS"
+      ],
+      "title": "CntrprtySeries",
+      "type": "object"
+    },
+    "DbtCpnFrqncyEnum": {
+      "enum": [
+        "-",
+        "ZC",
+        "AN",
+        "SA",
+        "QU",
+        "BM",
+        "MO",
+        "FN",
+        "IR",
+        "UK",
+        "OT"
+      ],
+      "title": "DbtCpnFrqncyEnum",
+      "type": "string"
+    },
+    "DbtCpnTypEnum": {
+      "enum": [
+        "-",
+        "FIX",
+        "STE",
+        "FLO",
+        "ZER",
+        "IDX",
+        "OTH",
+        "CRE"
+      ],
+      "title": "DbtCpnTypEnum",
+      "type": "string"
+    },
+    "DbtCvrdTypEnum": {
+      "enum": [
+        "-",
+        "PUBLIC",
+        "MORTGAGE",
+        "SHIP",
+        "AIRCRAFT",
+        "MIX",
+        "OTHER",
+        "NOINFO"
+      ],
+      "title": "DbtCvrdTypEnum",
+      "type": "string"
+    },
+    "DbtGrntLvlEnum": {
+      "enum": [
+        "-",
+        "UNGUARANTEED",
+        "GOVERNMENT",
+        "OTHER",
+        "NA"
+      ],
+      "title": "DbtGrntLvlEnum",
+      "type": "string"
+    },
+    "DbtOutstndngChnDimensionContainer": {
+      "properties": {
+        "ID": {
+          "maxLength": 512,
+          "pattern": "^[IP][a-zA-Z0-9_]+",
+          "title": "Id",
+          "type": "string"
+        },
+        "TP": {
+          "$ref": "#/$defs/DbtOutstndngChnTypEnum"
+        },
+        "DT": {
+          "format": "date",
+          "title": "Dt",
+          "type": "string"
+        }
+      },
+      "required": [
+        "ID",
+        "TP",
+        "DT"
+      ],
+      "title": "DbtOutstndngChnDimensionContainer",
+      "type": "object"
+    },
+    "DbtOutstndngChnTypEnum": {
+      "enum": [
+        "-",
+        "INIT",
+        "TRANCHE",
+        "PARTIAL",
+        "FULL"
+      ],
+      "title": "DbtOutstndngChnTypEnum",
+      "type": "string"
+    },
+    "DbtRnkLvlEnum": {
+      "enum": [
+        "-",
+        "SUB_JUNIOR",
+        "SUB_SENIOR",
+        "SUB_NOINFO",
+        "SENIOR",
+        "ABS_JUNIOR",
+        "ABS_MEZZANINE",
+        "ABS_SENIOR",
+        "NOINFO"
+      ],
+      "title": "DbtRnkLvlEnum",
+      "type": "string"
+    },
+    "DbtScrtyLvlEnum": {
+      "enum": [
+        "-",
+        "UNSECURED",
+        "SECURED",
+        "NOINFO"
+      ],
+      "title": "DbtScrtyLvlEnum",
+      "type": "string"
+    },
+    "DbtScrtznTypEnum": {
+      "enum": [
+        "-",
+        "ABS",
+        "MBS",
+        "CDO",
+        "CMO",
+        "MIX",
+        "OTHER",
+        "NOINFO"
+      ],
+      "title": "DbtScrtznTypEnum",
+      "type": "string"
+    },
+    "DbtSeries": {
+      "properties": {
+        "DIMS": {
+          "$ref": "#/$defs/journey__model_dimension__DimensionContainer_Annotated_str__StringConstraints__str__StringConstraints__Doc____2"
+        },
+        "DT_BRTH": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_date_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "DT_CLS": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_date_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "CRRNCY": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_GenCrrncyEnum_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "TYP": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_DbtTypEnum_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "ISSD_BY": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/journey__model__BaseMeasure_Annotated_str__StringConstraints__str__StringConstraints__Doc____1"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "ALS_OF": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/journey__model__BaseMeasure_Annotated_str__StringConstraints__str__StringConstraints__Doc____2"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "DIMS"
+      ],
+      "title": "DbtSeries",
+      "type": "object"
+    },
+    "DbtSttsEnum": {
+      "enum": [
+        "-",
+        "100",
+        "101",
+        "102",
+        "202",
+        "220",
+        "221",
+        "222",
+        "223"
+      ],
+      "title": "DbtSttsEnum",
+      "type": "string"
+    },
+    "DbtTypEnum": {
+      "enum": [
+        "-",
+        "BND",
+        "MNY",
+        "HBRD",
+        "OTHR"
+      ],
+      "title": "DbtTypEnum",
+      "type": "string"
+    },
+    "DepNtcEnum": {
+      "enum": [
+        "-",
+        "S",
+        "M",
+        "L"
+      ],
+      "title": "DepNtcEnum",
+      "type": "string"
+    },
+    "DepTypEnum": {
+      "enum": [
+        "-",
+        "SIGHT",
+        "AMAT",
+        "ANOT"
+      ],
+      "title": "DepTypEnum",
+      "type": "string"
+    },
+    "DprtmntEnum": {
+      "enum": [
+        "-",
+        "ACC",
+        "ECO",
+        "COM",
+        "FIN",
+        "STA",
+        "ORG"
+      ],
+      "title": "DprtmntEnum",
+      "type": "string"
+    },
+    "DrvtvTypEnum": {
+      "enum": [
+        "-",
+        "CAL",
+        "PUT",
+        "WAR",
+        "FUT",
+        "FOR",
+        "SWA",
+        "EMC",
+        "OTH"
+      ],
+      "title": "DrvtvTypEnum",
+      "type": "string"
+    },
+    "DvdndCstmFrqncyEnum": {
+      "enum": [
+        "-",
+        "AN",
+        "SA",
+        "QA",
+        "BM",
+        "MO",
+        "WE",
+        "DA"
+      ],
+      "title": "DvdndCstmFrqncyEnum",
+      "type": "string"
+    },
+    "DvdndTypEnum": {
+      "enum": [
+        "-",
+        "10",
+        "20",
+        "11",
+        "12",
+        "13",
+        "21",
+        "22",
+        "23",
+        "31",
+        "32",
+        "33",
+        "91",
+        "92",
+        "93"
+      ],
+      "title": "DvdndTypEnum",
+      "type": "string"
+    },
+    "ExpenseDimensionContainer": {
+      "properties": {
+        "IID": {
+          "maxLength": 512,
+          "pattern": "^[IPU][a-zA-Z0-9_]+",
+          "title": "Iid",
+          "type": "string"
+        },
+        "TP": {
+          "$ref": "#/$defs/IncmExpnsEnum"
+        },
+        "DT": {
+          "format": "date",
+          "title": "Dt",
+          "type": "string"
+        },
+        "FRQNCY": {
+          "$ref": "#/$defs/GenFrqncyEnum"
+        }
+      },
+      "required": [
+        "IID",
+        "TP",
+        "DT",
+        "FRQNCY"
+      ],
+      "title": "ExpenseDimensionContainer",
+      "type": "object"
+    },
+    "ExpnsSeries": {
+      "properties": {
+        "DIMS": {
+          "$ref": "#/$defs/ExpenseDimensionContainer"
+        },
+        "AMNT": {
+          "$ref": "#/$defs/BaseMeasure_Annotated_float__Ge__"
+        }
+      },
+      "required": [
+        "DIMS",
+        "AMNT"
+      ],
+      "title": "ExpnsSeries",
+      "type": "object"
+    },
+    "FndBndFcsEnum": {
+      "enum": [
+        "-",
+        "GOV",
+        "COR",
+        "MIX"
+      ],
+      "title": "FndBndFcsEnum",
+      "type": "string"
+    },
+    "FndDstrbtnPlcyEnum": {
+      "enum": [
+        "-",
+        "DIS",
+        "CUM",
+        "MIX"
+      ],
+      "title": "FndDstrbtnPlcyEnum",
+      "type": "string"
+    },
+    "FndDynmcSeries": {
+      "properties": {
+        "DIMS": {
+          "$ref": "#/$defs/journey__model_dimension__DynmcDimensionContainer_Annotated_str__StringConstraints__str__StringConstraints__Doc____1"
+        },
+        "NM": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/journey__model__BaseMeasure_Annotated_str__str__str__StringConstraints____2"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "NM_LTN": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/journey__model__BaseMeasure_Annotated_str__StringConstraints__str__StringConstraints____4"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "NM_SHRT": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/journey__model__BaseMeasure_Annotated_str__str__str__StringConstraints____1"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "STRT": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/journey__model__BaseMeasure_Annotated_str__str__str__StringConstraints____1"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "STRT_LTN": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/journey__model__BaseMeasure_Annotated_str__StringConstraints__str__StringConstraints____5"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "CTY": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/journey__model__BaseMeasure_Annotated_str__str__str__StringConstraints____3"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "CTY_LTN": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/journey__model__BaseMeasure_Annotated_str__StringConstraints__str__StringConstraints____6"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "PSTL_CD": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/journey__model__BaseMeasure_Annotated_str__str__str__StringConstraints____4"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "URL": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_Url_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "EMAIL": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_EmailStr_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "IS_LSTD": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_BoolEnum_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "IS_INCTV": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_BoolEnum_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "IS_UNDR_LQDTN": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_BoolEnum_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "INSTTTNL_SCTR_CNTRL": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_OrgInstttnlSctrCntrlEnum_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "MNGD_BY": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/journey__model__BaseMeasure_Annotated_str__StringConstraints__str__StringConstraints____3"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "UNDR_UMBRLL_BY": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/journey__model__BaseMeasure_Annotated_str__StringConstraints__str__StringConstraints____3"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "LGL_TYP": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_FndLglTypEnum_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "INVSTMNT_PLCY": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_FndInvstmntPlcyEnum_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "EQTY_TYP": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_FndEqtyTypEnum_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "DSTRBTN_PLCY": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_FndDstrbtnPlcyEnum_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "INVSTR_TYP": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_FndInvstrTypEnum_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "GRN_TYP": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_FndGrnTypEnum_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "STRTGY": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_FndStrtgyEnum_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "GGRPHCL_FCS": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_FndGgrphclFcsEnum_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "BND_FCS": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_FndBndFcsEnum_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "RL_ESTT_TYP": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_FndRlEsttTypEnum_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "IS_FOF": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_BoolEnum_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "IS_ETF": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_BoolEnum_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "IS_PEF": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_BoolEnum_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "DIMS"
+      ],
+      "title": "FndDynmcSeries",
+      "type": "object"
+    },
+    "FndEqtyTypEnum": {
+      "enum": [
+        "-",
+        "OPEN",
+        "CLOSE"
+      ],
+      "title": "FndEqtyTypEnum",
+      "type": "string"
+    },
+    "FndGgrphclFcsEnum": {
+      "enum": [
+        "-",
+        "DOM",
+        "EEA",
+        "OEA",
+        "NAM",
+        "SAM",
+        "ASP",
+        "MEA",
+        "AFR",
+        "OTH"
+      ],
+      "title": "FndGgrphclFcsEnum",
+      "type": "string"
+    },
+    "FndGrnTypEnum": {
+      "enum": [
+        "-",
+        "LIGHT",
+        "DARK",
+        "OTHER"
+      ],
+      "title": "FndGrnTypEnum",
+      "type": "string"
+    },
+    "FndInvstmntPlcyEnum": {
+      "enum": [
+        "-",
+        "MMF",
+        "BON",
+        "EQT",
+        "MIX",
+        "RES",
+        "HED",
+        "LOA",
+        "COM",
+        "INF",
+        "OTH"
+      ],
+      "title": "FndInvstmntPlcyEnum",
+      "type": "string"
+    },
+    "FndInvstrTypEnum": {
+      "enum": [
+        "-",
+        "PRF",
+        "RTL"
+      ],
+      "title": "FndInvstrTypEnum",
+      "type": "string"
+    },
+    "FndLglTypEnum": {
+      "enum": [
+        "-",
+        "UCITS",
+        "RAIF",
+        "OAIF",
+        "REIT",
+        "OTHER"
+      ],
+      "title": "FndLglTypEnum",
+      "type": "string"
+    },
+    "FndRlEsttTypEnum": {
+      "enum": [
+        "-",
+        "RES",
+        "COM",
+        "IND",
+        "MUL",
+        "OTH"
+      ],
+      "title": "FndRlEsttTypEnum",
+      "type": "string"
+    },
+    "FndSeries": {
+      "properties": {
+        "DIMS": {
+          "$ref": "#/$defs/journey__model_dimension__DimensionContainer_Annotated_str__StringConstraints__str__StringConstraints__Doc____1"
+        },
+        "DT_BRTH": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_date_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "DT_CLS": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_date_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "LEI_ID": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/journey__model__BaseMeasure_Annotated_str__StringConstraints__str__StringConstraints____2"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "TAX_ID": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/journey__model__BaseMeasure_Annotated_str__StringConstraints__str__StringConstraints____1"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "NBR_ID": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/journey__model__BaseMeasure_Annotated_str__StringConstraints__str__StringConstraints____1"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "SPLT_FRM": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/journey__model__BaseMeasure_Annotated_str__StringConstraints__str__StringConstraints__Doc____1"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "MRGD_WTH": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/journey__model__BaseMeasure_Annotated_str__StringConstraints__str__StringConstraints__Doc____1"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "DIMS"
+      ],
+      "title": "FndSeries",
+      "type": "object"
+    },
+    "FndStrtgyEnum": {
+      "enum": [
+        "-",
+        "ACTIVE",
+        "SYNPAS",
+        "SYNPHY"
+      ],
+      "title": "FndStrtgyEnum",
+      "type": "string"
+    },
+    "GenCntryEnum": {
+      "enum": [
+        "-",
+        "AE",
+        "AF",
+        "AL",
+        "AO",
+        "AR",
+        "AT",
+        "AU",
+        "BE",
+        "BG",
+        "BH",
+        "BJ",
+        "BM",
+        "BR",
+        "BS",
+        "BY",
+        "BZ",
+        "CA",
+        "CG",
+        "CH",
+        "CL",
+        "CM",
+        "CN",
+        "CO",
+        "CW",
+        "CY",
+        "CZ",
+        "DE",
+        "DK",
+        "DO",
+        "EG",
+        "ER",
+        "ES",
+        "FI",
+        "FO",
+        "FR",
+        "GB",
+        "GE",
+        "GG",
+        "GI",
+        "GR",
+        "HK",
+        "HR",
+        "HU",
+        "ID",
+        "IE",
+        "IL",
+        "IM",
+        "IN",
+        "IO",
+        "IS",
+        "IT",
+        "JE",
+        "JP",
+        "KE",
+        "KR",
+        "KY",
+        "KZ",
+        "LB",
+        "LR",
+        "LU",
+        "LV",
+        "LY",
+        "ME",
+        "MH",
+        "MK",
+        "MN",
+        "MU",
+        "MW",
+        "MX",
+        "NG",
+        "NL",
+        "NO",
+        "NZ",
+        "OM",
+        "PA",
+        "PE",
+        "PG",
+        "PH",
+        "PL",
+        "PT",
+        "QA",
+        "RO",
+        "RS",
+        "RU",
+        "SA",
+        "SC",
+        "SD",
+        "SE",
+        "SG",
+        "SH",
+        "SI",
+        "SK",
+        "TH",
+        "TR",
+        "TW",
+        "TZ",
+        "UA",
+        "US",
+        "VA",
+        "VE",
+        "VG",
+        "ZA",
+        "ZM"
+      ],
+      "title": "GenCntryEnum",
+      "type": "string"
+    },
+    "GenCrrncyEnum": {
+      "enum": [
+        "-",
+        "ARS",
+        "AUD",
+        "BGN",
+        "BRL",
+        "CAD",
+        "CHF",
+        "CLP",
+        "CNY",
+        "COP",
+        "CZK",
+        "DKK",
+        "EGP",
+        "EUR",
+        "GBP",
+        "HKD",
+        "HRK",
+        "HUF",
+        "IDR",
+        "ILS",
+        "INR",
+        "JPY",
+        "KRW",
+        "KZT",
+        "MXN",
+        "NOK",
+        "PEN",
+        "PGK",
+        "PHP",
+        "PLN",
+        "RON",
+        "RSD",
+        "RUB",
+        "SEK",
+        "SGD",
+        "THB",
+        "TRY",
+        "TWD",
+        "UAH",
+        "USD",
+        "ZAR",
+        "GRD"
+      ],
+      "title": "GenCrrncyEnum",
+      "type": "string"
+    },
+    "GenFrqncyEnum": {
+      "enum": [
+        "-",
+        "A",
+        "B",
+        "D",
+        "H",
+        "M",
+        "N",
+        "Q",
+        "S",
+        "W",
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A10",
+        "A20",
+        "A30",
+        "A_3",
+        "M2",
+        "M_2",
+        "M_3",
+        "W2",
+        "W3",
+        "W4",
+        "W_2",
+        "W_3",
+        "D_2",
+        "H2",
+        "H3",
+        "I",
+        "OA",
+        "OM",
+        "_O",
+        "_U",
+        "_Z"
+      ],
+      "title": "GenFrqncyEnum",
+      "type": "string"
+    },
+    "GenMrktEnum": {
+      "enum": [
+        "-",
+        "3579",
+        "24EX",
+        "360T",
+        "4AXE",
+        "A2XX",
+        "AACA",
+        "AAPA",
+        "AATS",
+        "ABAN",
+        "ABFI",
+        "ABNA",
+        "ABNC",
+        "ABSI",
+        "ABUL",
+        "ABXX",
+        "ACEX",
+        "ACKF",
+        "ADVT",
+        "AFDL",
+        "AFET",
+        "AFEX",
+        "AFSA",
+        "AFSE",
+        "AFSI",
+        "AFSL",
+        "AFSO",
+        "AFSX",
+        "AGBP",
+        "AILT",
+        "AIMX",
+        "AIXE",
+        "AIXK",
+        "AKIS",
+        "ALDP",
+        "ALLT",
+        "ALSI",
+        "ALTX",
+        "ALXA",
+        "ALXB",
+        "ALXL",
+        "ALXP",
+        "AMLG",
+        "AMNL",
+        "AMPX",
+        "AMTS",
+        "AMXO",
+        "ANLP",
+        "ANTS",
+        "ANZL",
+        "APAW",
+        "APCL",
+        "APEX",
+        "APXL",
+        "AQEA",
+        "AQED",
+        "AQEU",
+        "AQSD",
+        "AQSE",
+        "AQSF",
+        "AQSG",
+        "AQSL",
+        "AQSN",
+        "AQST",
+        "AQUA",
+        "AQXA",
+        "AQXD",
+        "AQXE",
+        "ARAX",
+        "ARCD",
+        "ARCH",
+        "ARCO",
+        "ARCX",
+        "AREX",
+        "ARIA",
+        "ARKX",
+        "ARTX",
+        "ASEF",
+        "ASEX",
+        "ASMT",
+        "ASPI",
+        "ASPN",
+        "ASTR",
+        "ASXB",
+        "ASXC",
+        "ASXP",
+        "ASXT",
+        "ASXV",
+        "ATDF",
+        "ATFX",
+        "ATHL",
+        "ATLB",
+        "ATLN",
+        "ATSA",
+        "AURB",
+        "AURO",
+        "AUTB",
+        "AUTO",
+        "AUTP",
+        "AUTX",
+        "AWBX",
+        "AWEX",
+        "AXSI",
+        "BAAD",
+        "BACE",
+        "BACR",
+        "BAEP",
+        "BAIK",
+        "BAIP",
+        "BAJD",
+        "BAJM",
+        "BALT",
+        "BAML",
+        "BAMP",
+        "BAMX",
+        "BANA",
+        "BAPA",
+        "BAPE",
+        "BAPX",
+        "BARD",
+        "BARK",
+        "BARL",
+        "BARO",
+        "BART",
+        "BARU",
+        "BARX",
+        "BASE",
+        "BASI",
+        "BASP",
+        "BASX",
+        "BATD",
+        "BATE",
+        "BATF",
+        "BATO",
+        "BATP",
+        "BATS",
+        "BATY",
+        "BBIE",
+        "BBIS",
+        "BBLX",
+        "BBOK",
+        "BBSF",
+        "BBSI",
+        "BBSX",
+        "BBVA",
+        "BBVX",
+        "BCDX",
+        "BCEE",
+        "BCFS",
+        "BCMA",
+        "BCMM",
+        "BCRM",
+        "BCSC",
+        "BCSE",
+        "BCSI",
+        "BCSL",
+        "BCXE",
+        "BDEA",
+        "BDSK",
+        "BEAM",
+        "BEBG",
+        "BEEX",
+        "BEIS",
+        "BELB",
+        "BELF",
+        "BERA",
+        "BERB",
+        "BERC",
+        "BETA",
+        "BETP",
+        "BETX",
+        "BEUD",
+        "BEUE",
+        "BEUF",
+        "BEUO",
+        "BEUP",
+        "BEUT",
+        "BFEX",
+        "BFPT",
+        "BGCA",
+        "BGCB",
+        "BGCD",
+        "BGCF",
+        "BGCI",
+        "BGCM",
+        "BGCO",
+        "BGFI",
+        "BGFU",
+        "BGFX",
+        "BGHX",
+        "BGLU",
+        "BGSI",
+        "BGUK",
+        "BHSF",
+        "BHWA",
+        "BIDS",
+        "BILT",
+        "BILU",
+        "BINV",
+        "BISI",
+        "BIVA",
+        "BJSE",
+        "BKBF",
+        "BKBR",
+        "BKDM",
+        "BKKT",
+        "BKLF",
+        "BKLN",
+        "BKSK",
+        "BLBB",
+        "BLBF",
+        "BLBS",
+        "BLEQ",
+        "BLEV",
+        "BLFX",
+        "BLIQ",
+        "BLKX",
+        "BLNK",
+        "BLOX",
+        "BLPX",
+        "BLTD",
+        "BLTX",
+        "BLUE",
+        "BLUX",
+        "BLXA",
+        "BMCL",
+        "BMCM",
+        "BMEA",
+        "BMEX",
+        "BMFA",
+        "BMFM",
+        "BMFX",
+        "BMLB",
+        "BMLI",
+        "BMLS",
+        "BMLX",
+        "BMSI",
+        "BMTF",
+        "BMTS",
+        "BNDD",
+        "BNLD",
+        "BNPA",
+        "BNPC",
+        "BNPF",
+        "BNPL",
+        "BNPP",
+        "BNPS",
+        "BNPX",
+        "BNSX",
+        "BNTW",
+        "BNYC",
+        "BOAL",
+        "BOAT",
+        "BOCF",
+        "BOFS",
+        "BOND",
+        "BOSC",
+        "BOSD",
+        "BOSP",
+        "BOTC",
+        "BOTE",
+        "BOTV",
+        "BOVA",
+        "BOVM",
+        "BPAS",
+        "BPKO",
+        "BPLC",
+        "BPOL",
+        "BPSX",
+        "BRDE",
+        "BRDL",
+        "BRDS",
+        "BREA",
+        "BRED",
+        "BRFQ",
+        "BRGA",
+        "BRIX",
+        "BRMF",
+        "BRNX",
+        "BSAB",
+        "BSEX",
+        "BSFX",
+        "BSLB",
+        "BSME",
+        "BSPL",
+        "BSTX",
+        "BTAM",
+        "BTBS",
+        "BTEC",
+        "BTEE",
+        "BTEQ",
+        "BTFE",
+        "BTLX",
+        "BTNL",
+        "BTQE",
+        "BTQG",
+        "BTRL",
+        "BTUN",
+        "BULK",
+        "BURG",
+        "BURM",
+        "BUYN",
+        "BVCA",
+        "BVMF",
+        "BVUK",
+        "BVUR",
+        "BVUS",
+        "BYXD",
+        "BZXD",
+        "C2OX",
+        "CABK",
+        "CABV",
+        "CAES",
+        "CALH",
+        "CAND",
+        "CANX",
+        "CAPA",
+        "CAPI",
+        "CAPL",
+        "CASI",
+        "CATS",
+        "CAVD",
+        "CAVE",
+        "CAZE",
+        "CBAE",
+        "CBAL",
+        "CBKA",
+        "CBKC",
+        "CBKD",
+        "CBKE",
+        "CBKF",
+        "CBKG",
+        "CBKS",
+        "CBLC",
+        "CBNL",
+        "CBOE",
+        "CBSK",
+        "CBSX",
+        "CBTS",
+        "CCEU",
+        "CCEX",
+        "CCFE",
+        "CCFX",
+        "CCLX",
+        "CCML",
+        "CCMS",
+        "CCMX",
+        "CCO2",
+        "CCRM",
+        "CCXE",
+        "CDED",
+        "CDEL",
+        "CDSI",
+        "CDSL",
+        "CECA",
+        "CECS",
+        "CEDX",
+        "CELP",
+        "CEPL",
+        "CEPU",
+        "CESI",
+        "CETI",
+        "CETO",
+        "CEUD",
+        "CEUE",
+        "CEUO",
+        "CEUX",
+        "CFAU",
+        "CFBC",
+        "CFHK",
+        "CFIC",
+        "CFIF",
+        "CFIL",
+        "CFJP",
+        "CFTW",
+        "CGCM",
+        "CGDB",
+        "CGEB",
+        "CGEC",
+        "CGEE",
+        "CGET",
+        "CGGD",
+        "CGIT",
+        "CGMA",
+        "CGMC",
+        "CGMD",
+        "CGME",
+        "CGMG",
+        "CGMH",
+        "CGMI",
+        "CGML",
+        "CGMT",
+        "CGMU",
+        "CGMX",
+        "CGND",
+        "CGQD",
+        "CGQT",
+        "CGTR",
+        "CGXS",
+        "CHEV",
+        "CHIA",
+        "CHIC",
+        "CHID",
+        "CHIE",
+        "CHIJ",
+        "CHIO",
+        "CHIS",
+        "CHIV",
+        "CHIX",
+        "CHIY",
+        "CIBC",
+        "CIBH",
+        "CIBP",
+        "CICX",
+        "CILH",
+        "CIMA",
+        "CIMB",
+        "CIMD",
+        "CIME",
+        "CIMV",
+        "CIOI",
+        "CISD",
+        "CITD",
+        "CITX",
+        "CLAU",
+        "CLCH",
+        "CLHK",
+        "CLJP",
+        "CLMX",
+        "CLPH",
+        "CLST",
+        "CLTD",
+        "CLVE",
+        "CMAP",
+        "CMCI",
+        "CMCM",
+        "CMEC",
+        "CMED",
+        "CMEE",
+        "CMES",
+        "CMET",
+        "CMMT",
+        "CMSF",
+        "CMTS",
+        "CNOD",
+        "CNSI",
+        "COAL",
+        "CODA",
+        "COHR",
+        "COMG",
+        "COMM",
+        "CONC",
+        "CONE",
+        "CORE",
+        "COTC",
+        "CPGX",
+        "CPTX",
+        "CRDL",
+        "CRED",
+        "CREM",
+        "CRYD",
+        "CRYP",
+        "CRYX",
+        "CSAG",
+        "CSAS",
+        "CSAU",
+        "CSBX",
+        "CSCF",
+        "CSCL",
+        "CSDA",
+        "CSE2",
+        "CSEC",
+        "CSEU",
+        "CSFB",
+        "CSGI",
+        "CSHK",
+        "CSIN",
+        "CSJP",
+        "CSLB",
+        "CSLP",
+        "CSMD",
+        "CSOB",
+        "CSOT",
+        "CSSI",
+        "CSSX",
+        "CSTO",
+        "CSVW",
+        "CSZH",
+        "CTWO",
+        "CURX",
+        "CXAB",
+        "CXAC",
+        "CXAF",
+        "CXAM",
+        "CXAN",
+        "CXAP",
+        "CXAQ",
+        "CXAR",
+        "CXAV",
+        "CXAW",
+        "CXAI",
+        "CXOT",
+        "CXRT",
+        "DAIW",
+        "DAMP",
+        "DAPA",
+        "DASH",
+        "DASI",
+        "DAUK",
+        "DAVY",
+        "DBAB",
+        "DBAG",
+        "DBCR",
+        "DBCX",
+        "DBDC",
+        "DBDX",
+        "DBES",
+        "DBHK",
+        "DBIX",
+        "DBLN",
+        "DBLX",
+        "DBMO",
+        "DBOX",
+        "DBSE",
+        "DBSX",
+        "DBVX",
+        "DCSE",
+        "DCSX",
+        "DDTX",
+        "DEAL",
+        "DEKA",
+        "DEXE",
+        "DGCX",
+        "DHEL",
+        "DHLX",
+        "DICE",
+        "DIFX",
+        "DKED",
+        "DKFI",
+        "DKOB",
+        "DKTC",
+        "DKWB",
+        "DNDK",
+        "DNFI",
+        "DNIS",
+        "DNSE",
+        "DOSE",
+        "DOTS",
+        "DOWE",
+        "DOWG",
+        "DOWM",
+        "DRCT",
+        "DRSP",
+        "DSMD",
+        "DSME",
+        "DSTO",
+        "DUMX",
+        "DUSA",
+        "DUSB",
+        "DUSC",
+        "DUSD",
+        "DVFX",
+        "DWFI",
+        "DWSF",
+        "DZBK",
+        "EACM",
+        "EBHU",
+        "EBLX",
+        "EBMX",
+        "EBON",
+        "EBRA",
+        "EBSC",
+        "EBSD",
+        "EBSF",
+        "EBSI",
+        "EBSM",
+        "EBSN",
+        "EBSO",
+        "EBSS",
+        "EBSX",
+        "EBXV",
+        "ECAG",
+        "ECAL",
+        "ECEU",
+        "ECGS",
+        "ECHO",
+        "ECNL",
+        "ECSL",
+        "ECXE",
+        "EDBT",
+        "EDDP",
+        "EDGA",
+        "EDGD",
+        "EDGE",
+        "EDGL",
+        "EDGO",
+        "EDGX",
+        "EDRF",
+        "EEAL",
+        "EESE",
+        "EFTP",
+        "EGMT",
+        "EGSI",
+        "EIXE",
+        "ELEU",
+        "ELIX",
+        "ELNO",
+        "ELSE",
+        "ELUK",
+        "ELXE",
+        "EMBX",
+        "EMCE",
+        "EMCH",
+        "EMDR",
+        "EMIB",
+        "EMID",
+        "EMIR",
+        "EMLD",
+        "EMTF",
+        "EMTS",
+        "ENAX",
+        "ENCL",
+        "ENMS",
+        "ENSL",
+        "ENSX",
+        "ENSY",
+        "ENTW",
+        "ENXB",
+        "ENXL",
+        "EOTC",
+        "EPEX",
+        "EPRD",
+        "EPRL",
+        "EQCA",
+        "EQIE",
+        "EQLD",
+        "EQOC",
+        "EQOD",
+        "EQOS",
+        "EQSE",
+        "EQSL",
+        "EQTA",
+        "EQTB",
+        "EQTC",
+        "EQTD",
+        "EQUS",
+        "EQWB",
+        "ERBX",
+        "ERFQ",
+        "ERIS",
+        "ERST",
+        "ESLO",
+        "ESPD",
+        "ESTO",
+        "ETFP",
+        "ETLX",
+        "ETPA",
+        "ETSC",
+        "EUAX",
+        "EUCC",
+        "EUCH",
+        "EUFN",
+        "EUOB",
+        "EURM",
+        "EUSC",
+        "EUSP",
+        "EUWA",
+        "EUWB",
+        "EUWX",
+        "EVOL",
+        "EWRM",
+        "EWSM",
+        "EXAA",
+        "EXBO",
+        "EXCP",
+        "EXDC",
+        "EXEU",
+        "EXGM",
+        "EXLP",
+        "EXMP",
+        "EXOR",
+        "EXOT",
+        "EXPA",
+        "EXPM",
+        "EXSB",
+        "EXSD",
+        "EXSE",
+        "EXSF",
+        "EXSH",
+        "EXSI",
+        "EXSP",
+        "EXSY",
+        "EXTR",
+        "EXVP",
+        "EXYY",
+        "FAIR",
+        "FAST",
+        "FBSI",
+        "FCBT",
+        "FCME",
+        "FGEX",
+        "FICO",
+        "FICX",
+        "FIED",
+        "FINC",
+        "FINN",
+        "FINO",
+        "FINR",
+        "FINY",
+        "FISH",
+        "FISU",
+        "FLTB",
+        "FLTR",
+        "FLWX",
+        "FMTS",
+        "FNCS",
+        "FNDK",
+        "FNEE",
+        "FNFI",
+        "FNFT",
+        "FNFX",
+        "FNIS",
+        "FNIX",
+        "FNLT",
+        "FNLV",
+        "FNSE",
+        "FNUK",
+        "FNXB",
+        "FPWB",
+        "FRAA",
+        "FRAB",
+        "FRAD",
+        "FRAS",
+        "FRAU",
+        "FRAV",
+        "FRAW",
+        "FREI",
+        "FREX",
+        "FRRF",
+        "FRTE",
+        "FSEF",
+        "FSHX",
+        "FSME",
+        "FTFM",
+        "FTFS",
+        "FTUS",
+        "FUSD",
+        "FXAL",
+        "FXCL",
+        "FXCM",
+        "FXFM",
+        "FXGB",
+        "FXMT",
+        "FXNM",
+        "FXOP",
+        "FXPS",
+        "FXRQ",
+        "FXRS",
+        "FXSM",
+        "FXSW",
+        "G1XX",
+        "GBOB",
+        "GBOT",
+        "GBSI",
+        "GBUL",
+        "GBWB",
+        "GEMX",
+        "GETB",
+        "GFAM",
+        "GFAU",
+        "GFBM",
+        "GFBO",
+        "GFIA",
+        "GFIB",
+        "GFIC",
+        "GFIF",
+        "GFIM",
+        "GFIN",
+        "GFIR",
+        "GFKS",
+        "GFOX",
+        "GFPO",
+        "GFSM",
+        "GFSO",
+        "GIPB",
+        "GLBX",
+        "GLLC",
+        "GLMX",
+        "GLOM",
+        "GLPS",
+        "GLPX",
+        "GMBG",
+        "GMEG",
+        "GMEO",
+        "GMES",
+        "GMEX",
+        "GMGD",
+        "GMGE",
+        "GMGL",
+        "GMNI",
+        "GMTF",
+        "GMTS",
+        "GOTC",
+        "GOVX",
+        "GPBC",
+        "GREE",
+        "GRIF",
+        "GRIO",
+        "GROW",
+        "GRSE",
+        "GSAL",
+        "GSBE",
+        "GSBX",
+        "GSCI",
+        "GSCO",
+        "GSEF",
+        "GSEI",
+        "GSIB",
+        "GSIL",
+        "GSPL",
+        "GSPX",
+        "GSSI",
+        "GSXC",
+        "GSXH",
+        "GSXK",
+        "GSXL",
+        "GSXT",
+        "GTCO",
+        "GTSX",
+        "GTXE",
+        "GTXS",
+        "GXGF",
+        "GXGM",
+        "GXGR",
+        "GXMA",
+        "HAMA",
+        "HAMB",
+        "HAML",
+        "HAMM",
+        "HAMN",
+        "HANA",
+        "HANB",
+        "HBFR",
+        "HBPL",
+        "HCER",
+        "HCHC",
+        "HDAT",
+        "HEDE",
+        "HEGX",
+        "HELA",
+        "HEMO",
+        "HESP",
+        "HGSP",
+        "HKME",
+        "HMOD",
+        "HMTF",
+        "HOTC",
+        "HPCO",
+        "HPCS",
+        "HPCV",
+        "HPCX",
+        "HPPO",
+        "HPSO",
+        "HPSX",
+        "HREU",
+        "HRFQ",
+        "HRSI",
+        "HRTF",
+        "HRTX",
+        "HSBC",
+        "HSBT",
+        "HSFX",
+        "HSTC",
+        "HSXA",
+        "HSXE",
+        "HUDX",
+        "HUNG",
+        "HUPX",
+        "IATS",
+        "IBAL",
+        "IBEQ",
+        "IBER",
+        "IBEX",
+        "IBGH",
+        "IBIS",
+        "IBLX",
+        "IBSI",
+        "IBUL",
+        "ICAH",
+        "ICAP",
+        "ICAS",
+        "ICAT",
+        "ICBX",
+        "ICDX",
+        "ICEL",
+        "ICEN",
+        "ICEO",
+        "ICES",
+        "ICEU",
+        "ICHK",
+        "ICKR",
+        "ICOR",
+        "ICOT",
+        "ICPM",
+        "ICRO",
+        "ICSE",
+        "ICSH",
+        "ICSU",
+        "ICSZ",
+        "ICTQ",
+        "ICTW",
+        "ICUR",
+        "ICUS",
+        "ICXL",
+        "ICXR",
+        "IDXM",
+        "IEBS",
+        "IECE",
+        "IECL",
+        "IENG",
+        "IEPA",
+        "IEXC",
+        "IEXD",
+        "IEXG",
+        "IFAD",
+        "IFBX",
+        "IFCA",
+        "IFED",
+        "IFEN",
+        "IFEU",
+        "IFLL",
+        "IFLO",
+        "IFLS",
+        "IFLX",
+        "IFSG",
+        "IFSM",
+        "IFUS",
+        "IFUT",
+        "IFXA",
+        "IFXC",
+        "IFXR",
+        "IGDL",
+        "IIDX",
+        "IINX",
+        "IKBS",
+        "ILCM",
+        "IMAG",
+        "IMBD",
+        "IMCC",
+        "IMCD",
+        "IMCE",
+        "IMCG",
+        "IMCM",
+        "IMCO",
+        "IMCR",
+        "IMCS",
+        "IMCT",
+        "IMED",
+        "IMEN",
+        "IMEQ",
+        "IMET",
+        "IMEX",
+        "IMFD",
+        "IMFX",
+        "IMGB",
+        "IMGI",
+        "IMIR",
+        "IMMH",
+        "IMMM",
+        "IMRD",
+        "IMSB",
+        "IMTF",
+        "IMTS",
+        "INCA",
+        "INCR",
+        "INGB",
+        "INGE",
+        "INGF",
+        "INGU",
+        "INGW",
+        "INSE",
+        "INTL",
+        "INVE",
+        "IOCD",
+        "IOED",
+        "IOFB",
+        "IOFI",
+        "IOFX",
+        "IOGB",
+        "IOGI",
+        "IOIR",
+        "IOMM",
+        "IOTC",
+        "IOTF",
+        "IPNL",
+        "IPSX",
+        "IPXP",
+        "IPXW",
+        "ISBA",
+        "ISBV",
+        "ISDA",
+        "ISDX",
+        "ISEC",
+        "ISEX",
+        "ISSI",
+        "ISWA",
+        "ISWB",
+        "ISWC",
+        "ISWE",
+        "ISWN",
+        "ISWO",
+        "ISWP",
+        "ISWR",
+        "ISWT",
+        "ISWV",
+        "ITGI",
+        "ITGL",
+        "ITSM",
+        "IUOB",
+        "IVZX",
+        "IXSP",
+        "JADX",
+        "JASR",
+        "JATA",
+        "JBSI",
+        "JBUL",
+        "JEFE",
+        "JEFS",
+        "JEFX",
+        "JESI",
+        "JISI",
+        "JLEQ",
+        "JLEU",
+        "JLQD",
+        "JLSI",
+        "JNSI",
+        "JNST",
+        "JPBX",
+        "JPCB",
+        "JPEU",
+        "JPMI",
+        "JPMS",
+        "JPMX",
+        "JPSI",
+        "JSEB",
+        "JSEF",
+        "JSER",
+        "JSES",
+        "JSJX",
+        "JSSI",
+        "JYSI",
+        "KABU",
+        "KAIX",
+        "KBCB",
+        "KBLC",
+        "KBLL",
+        "KBLM",
+        "KBLS",
+        "KBLT",
+        "KCCP",
+        "KDPW",
+        "KELR",
+        "KHHU",
+        "KLEU",
+        "KLSH",
+        "KMTS",
+        "KMUX",
+        "KNCM",
+        "KNEM",
+        "KNIG",
+        "KNLI",
+        "KNMX",
+        "KOCN",
+        "KOME",
+        "KOTF",
+        "KRME",
+        "LAFD",
+        "LAFL",
+        "LAFX",
+        "LAMP",
+        "LASF",
+        "LASP",
+        "LATG",
+        "LAVA",
+        "LBBW",
+        "LBCM",
+        "LBCW",
+        "LBWL",
+        "LBWS",
+        "LCHC",
+        "LCUR",
+        "LEBV",
+        "LEDG",
+        "LELE",
+        "LESI",
+        "LEUE",
+        "LEUF",
+        "LEVL",
+        "LICA",
+        "LIFI",
+        "LIGA",
+        "LIQF",
+        "LIQH",
+        "LIQU",
+        "LISX",
+        "LISZ",
+        "LIUH",
+        "LIUS",
+        "LLAT",
+        "LMAD",
+        "LMAE",
+        "LMAF",
+        "LMAO",
+        "LMAX",
+        "LMEC",
+        "LMNR",
+        "LMNX",
+        "LMTS",
+        "LNEQ",
+        "LNFI",
+        "LOTC",
+        "LOUI",
+        "LOYD",
+        "LPPM",
+        "LPSF",
+        "LQED",
+        "LQFI",
+        "LSSI",
+        "LTAA",
+        "LTSE",
+        "LXJP",
+        "LYNX",
+        "MABX",
+        "MACB",
+        "MACX",
+        "MAEL",
+        "MAGM",
+        "MAKX",
+        "MALM",
+        "MALX",
+        "MANL",
+        "MAQE",
+        "MAQH",
+        "MAQI",
+        "MAQJ",
+        "MAQL",
+        "MAQU",
+        "MAQX",
+        "MARF",
+        "MASG",
+        "MATN",
+        "MATX",
+        "MAXD",
+        "MBCP",
+        "MBPL",
+        "MBSI",
+        "MBUL",
+        "MCAD",
+        "MCID",
+        "MCRY",
+        "MCSE",
+        "MCUR",
+        "MCXR",
+        "MCXS",
+        "MCXX",
+        "MCZK",
+        "MDIP",
+        "MDRV",
+        "MEAU",
+        "MEHK",
+        "MELO",
+        "MEMD",
+        "MEMM",
+        "MEMX",
+        "MERD",
+        "MERF",
+        "MERK",
+        "MESI",
+        "MESQ",
+        "METZ",
+        "MFGL",
+        "MFOX",
+        "MFXA",
+        "MFXC",
+        "MFXR",
+        "MHBD",
+        "MHBE",
+        "MHBL",
+        "MHBP",
+        "MHEL",
+        "MHEU",
+        "MHIP",
+        "MIBG",
+        "MIBL",
+        "MICE",
+        "MIDC",
+        "MIHI",
+        "MISX",
+        "MIVX",
+        "MIZX",
+        "MKAA",
+        "MKAP",
+        "MKTF",
+        "MLAX",
+        "MLCO",
+        "MLER",
+        "MLES",
+        "MLEU",
+        "MLEX",
+        "MLIB",
+        "MLIX",
+        "MLRQ",
+        "MLSI",
+        "MLVE",
+        "MLVX",
+        "MLXB",
+        "MLXN",
+        "MNDK",
+        "MNFI",
+        "MNIS",
+        "MNSE",
+        "MOCX",
+        "MOSE",
+        "MOTX",
+        "MPRL",
+        "MSAL",
+        "MSAX",
+        "MSBI",
+        "MSCO",
+        "MSCX",
+        "MSDM",
+        "MSEL",
+        "MSEU",
+        "MSIP",
+        "MSLP",
+        "MSMS",
+        "MSNT",
+        "MSPL",
+        "MSRP",
+        "MSSI",
+        "MSTC",
+        "MSTO",
+        "MSTX",
+        "MSWP",
+        "MTAA",
+        "MTAH",
+        "MTAX",
+        "MTCH",
+        "MTSA",
+        "MTSB",
+        "MTSC",
+        "MTSD",
+        "MTSF",
+        "MTSG",
+        "MTSM",
+        "MTSO",
+        "MTSP",
+        "MTSS",
+        "MTSW",
+        "MTUS",
+        "MTXA",
+        "MTXC",
+        "MTXM",
+        "MTXS",
+        "MTXX",
+        "MUBE",
+        "MUBL",
+        "MUBM",
+        "MUBP",
+        "MUDX",
+        "MUFP",
+        "MUNA",
+        "MUNB",
+        "MUNC",
+        "MUND",
+        "MUSE",
+        "MUSN",
+        "MUTI",
+        "MVCX",
+        "MXLM",
+        "MXNL",
+        "MXOP",
+        "MYTR",
+        "N2EX",
+        "NABA",
+        "NABE",
+        "NABL",
+        "NABP",
+        "NABU",
+        "NAMX",
+        "NAPA",
+        "NASB",
+        "NASD",
+        "NASN",
+        "NASX",
+        "NATX",
+        "NAVE",
+        "NBFL",
+        "NBLX",
+        "NBOT",
+        "NBXO",
+        "NCEL",
+        "NCME",
+        "NCML",
+        "NDCM",
+        "NDEX",
+        "NDXS",
+        "NECD",
+        "NEEQ",
+        "NEOC",
+        "NEOD",
+        "NEOE",
+        "NEON",
+        "NESI",
+        "NEXD",
+        "NEXF",
+        "NEXG",
+        "NEXL",
+        "NEXN",
+        "NEXO",
+        "NEXS",
+        "NEXT",
+        "NEXX",
+        "NEXY",
+        "NFSA",
+        "NFSC",
+        "NFSD",
+        "NGXC",
+        "NIBC",
+        "NIBR",
+        "NILX",
+        "NLAX",
+        "NLBX",
+        "NLPX",
+        "NMCE",
+        "NMRA",
+        "NMRJ",
+        "NMSX",
+        "NMTF",
+        "NMTS",
+        "NNCS",
+        "NOCO",
+        "NODX",
+        "NOED",
+        "NOFF",
+        "NOFI",
+        "NOME",
+        "NOOB",
+        "NOPS",
+        "NORD",
+        "NORX",
+        "NOSC",
+        "NOSI",
+        "NOTC",
+        "NOWB",
+        "NOWX",
+        "NPEX",
+        "NPGA",
+        "NSME",
+        "NSPO",
+        "NSSA",
+        "NSXB",
+        "NTUK",
+        "NURD",
+        "NURO",
+        "NWMS",
+        "NWNV",
+        "NXEU",
+        "NXJP",
+        "NXSE",
+        "NXUS",
+        "NXVW",
+        "NYFX",
+        "NYMS",
+        "NYMX",
+        "NYPC",
+        "NYSD",
+        "NYSI",
+        "NZFX",
+        "OAPA",
+        "OBKL",
+        "OCEA",
+        "OCSI",
+        "ODDO",
+        "ODOC",
+        "ODXE",
+        "OFEX",
+        "OHVO",
+        "OILX",
+        "OLBB",
+        "OLLC",
+        "OMEL",
+        "OMGA",
+        "OMIC",
+        "OMIP",
+        "ONEC",
+        "ONSE",
+        "OOTC",
+        "OPCO",
+        "OPEX",
+        "OPRA",
+        "OSDS",
+        "OSLC",
+        "OSSG",
+        "OTCB",
+        "OTCE",
+        "OTCI",
+        "OTCM",
+        "OTCN",
+        "OTCQ",
+        "OTCX",
+        "OTPB",
+        "OTPR",
+        "OTXB",
+        "OTXT",
+        "PARK",
+        "PARX",
+        "PATF",
+        "PAVE",
+        "PBGR",
+        "PBUL",
+        "PCDS",
+        "PDEX",
+        "PDQD",
+        "PDQX",
+        "PEEL",
+        "PEPH",
+        "PEPM",
+        "PEPQ",
+        "PEPW",
+        "PEPY",
+        "PFTQ",
+        "PFTS",
+        "PFXD",
+        "PIEU",
+        "PINC",
+        "PINI",
+        "PINL",
+        "PINX",
+        "PIPE",
+        "PIPR",
+        "PIRM",
+        "PJCX",
+        "PKOP",
+        "PLDX",
+        "PLPD",
+        "PLPO",
+        "PLPS",
+        "PLPX",
+        "PLSX",
+        "PLUS",
+        "PMTS",
+        "PNED",
+        "POEE",
+        "PORT",
+        "POSE",
+        "POTC",
+        "PPEX",
+        "PRME",
+        "PROS",
+        "PRSE",
+        "PSGM",
+        "PSXD",
+        "PTPG",
+        "PULX",
+        "PUMA",
+        "PUMX",
+        "PUND",
+        "PURE",
+        "PVMF",
+        "PXIL",
+        "QMTF",
+        "QMTS",
+        "QWIX",
+        "R5FX",
+        "RABL",
+        "RABO",
+        "RAJA",
+        "RBCB",
+        "RBCC",
+        "RBCE",
+        "RBCG",
+        "RBCM",
+        "RBCT",
+        "RBHU",
+        "RBIV",
+        "RBSI",
+        "RBSX",
+        "RCBX",
+        "RCMA",
+        "RENC",
+        "RESE",
+        "RESF",
+        "REST",
+        "RFBK",
+        "RICD",
+        "RICX",
+        "RITS",
+        "RLBO",
+        "RMMS",
+        "RMMX",
+        "RMTF",
+        "RMTS",
+        "ROCO",
+        "ROFX",
+        "ROSR",
+        "ROTC",
+        "RPDX",
+        "RPWC",
+        "RR4G",
+        "RSEX",
+        "RTSI",
+        "RTSL",
+        "RTSP",
+        "RTSX",
+        "RUSX",
+        "S3FM",
+        "SAGE",
+        "SANT",
+        "SB1M",
+        "SBAR",
+        "SBEX",
+        "SBIJ",
+        "SBIL",
+        "SBIU",
+        "SBIV",
+        "SBMF",
+        "SBSI",
+        "SCAG",
+        "SCOT",
+        "SCXA",
+        "SCXF",
+        "SCXM",
+        "SCXO",
+        "SCXS",
+        "SEBA",
+        "SEBL",
+        "SEBS",
+        "SEBX",
+        "SECC",
+        "SECD",
+        "SECE",
+        "SECF",
+        "SEDC",
+        "SEDR",
+        "SEDX",
+        "SEED",
+        "SELC",
+        "SEMX",
+        "SEND",
+        "SEOB",
+        "SEPE",
+        "SEWB",
+        "SFCL",
+        "SFOX",
+        "SGA2",
+        "SGAS",
+        "SGEX",
+        "SGMA",
+        "SGMT",
+        "SGMU",
+        "SGMV",
+        "SGMW",
+        "SGMX",
+        "SGMY",
+        "SGMZ",
+        "SGOE",
+        "SHAD",
+        "SHAR",
+        "SHAW",
+        "SHSC",
+        "SIAB",
+        "SIBC",
+        "SICS",
+        "SIDX",
+        "SIFX",
+        "SIGA",
+        "SIGH",
+        "SIGJ",
+        "SIGX",
+        "SIMD",
+        "SIMV",
+        "SISI",
+        "SISU",
+        "SKBB",
+        "SKSI",
+        "SKYX",
+        "SLHB",
+        "SLKK",
+        "SLXT",
+        "SMBB",
+        "SMBC",
+        "SMBD",
+        "SMBE",
+        "SMBG",
+        "SMBP",
+        "SMEX",
+        "SMFE",
+        "SMFF",
+        "SMTS",
+        "SNSI",
+        "SNUK",
+        "SOHO",
+        "SPAD",
+        "SPAX",
+        "SPBE",
+        "SPDX",
+        "SPEC",
+        "SPEX",
+        "SPIM",
+        "SPRZ",
+        "SPTR",
+        "SPTX",
+        "SPXE",
+        "SQUA",
+        "SSBI",
+        "SSBM",
+        "SSBT",
+        "SSEX",
+        "SSFX",
+        "SSIL",
+        "SSME",
+        "SSOB",
+        "SSTX",
+        "SSWM",
+        "STAL",
+        "STAN",
+        "STEE",
+        "STFL",
+        "STFU",
+        "STFX",
+        "STOX",
+        "STRM",
+        "STRT",
+        "STSI",
+        "STUA",
+        "STUB",
+        "STUC",
+        "STUD",
+        "STUE",
+        "STUF",
+        "STXS",
+        "SUNB",
+        "SUNM",
+        "SUNO",
+        "SUNT",
+        "SVES",
+        "SVEX",
+        "SVXI",
+        "SWAP",
+        "SWBI",
+        "SWEE",
+        "SWLT",
+        "SWLV",
+        "SXSI",
+        "SYFX",
+        "SZSC",
+        "T212",
+        "TBEN",
+        "TBLA",
+        "TBSA",
+        "TBSP",
+        "TCDS",
+        "TCME",
+        "TCML",
+        "TDBL",
+        "TDGF",
+        "TDON",
+        "TECO",
+        "TEEG",
+        "TEFD",
+        "TEFX",
+        "TEGB",
+        "TEGI",
+        "TEIR",
+        "TEMB",
+        "TEMC",
+        "TEMF",
+        "TEMG",
+        "TEMI",
+        "TEMM",
+        "TEMR",
+        "TEOF",
+        "TEPF",
+        "TEPG",
+        "TEPI",
+        "TEPM",
+        "TEPR",
+        "TEPX",
+        "TERA",
+        "TERE",
+        "TERM",
+        "TEUR",
+        "TFEX",
+        "TFSA",
+        "TFSC",
+        "TFSD",
+        "TFSE",
+        "TFSG",
+        "TFSS",
+        "TFSU",
+        "TFSV",
+        "TGAT",
+        "TGSI",
+        "THEM",
+        "THRD",
+        "THRE",
+        "TIRD",
+        "TLAB",
+        "TLCM",
+        "TMCC",
+        "TMCY",
+        "TMEX",
+        "TMID",
+        "TMTS",
+        "TMUK",
+        "TMXS",
+        "TNLA",
+        "TNLB",
+        "TNLK",
+        "TNLL",
+        "TOCP",
+        "TOMD",
+        "TOMF",
+        "TOMG",
+        "TOMX",
+        "TOWR",
+        "TPCD",
+        "TPDE",
+        "TPEE",
+        "TPEL",
+        "TPEO",
+        "TPEQ",
+        "TPER",
+        "TPES",
+        "TPEU",
+        "TPFD",
+        "TPFR",
+        "TPIC",
+        "TPID",
+        "TPIE",
+        "TPIM",
+        "TPIO",
+        "TPIR",
+        "TPIS",
+        "TPLF",
+        "TPMF",
+        "TPMG",
+        "TPRE",
+        "TPSD",
+        "TPSE",
+        "TPSL",
+        "TPSO",
+        "TPSP",
+        "TPSV",
+        "TPSY",
+        "TQEA",
+        "TQEB",
+        "TQEM",
+        "TQEX",
+        "TRAI",
+        "TRAL",
+        "TRAS",
+        "TRAX",
+        "TRCK",
+        "TRCX",
+        "TRDC",
+        "TRDE",
+        "TRDX",
+        "TREA",
+        "TREO",
+        "TREU",
+        "TRFW",
+        "TRFX",
+        "TRNL",
+        "TRPX",
+        "TRQA",
+        "TRQB",
+        "TRQC",
+        "TRQD",
+        "TRQM",
+        "TRQS",
+        "TRQX",
+        "TRSI",
+        "TRU1",
+        "TRU2",
+        "TRUK",
+        "TRUX",
+        "TRWB",
+        "TRXE",
+        "TSAD",
+        "TSAF",
+        "TSBX",
+        "TSCB",
+        "TSCD",
+        "TSED",
+        "TSEF",
+        "TSFF",
+        "TSFG",
+        "TSFI",
+        "TSFX",
+        "TSGB",
+        "TSGI",
+        "TSIG",
+        "TSIR",
+        "TSMB",
+        "TSMC",
+        "TSMG",
+        "TSMI",
+        "TSMM",
+        "TSMR",
+        "TSRE",
+        "TSUK",
+        "TUOB",
+        "TWEA",
+        "TWEM",
+        "TWEO",
+        "TWEU",
+        "TWGP",
+        "TWHK",
+        "TWJP",
+        "TWJT",
+        "TWSF",
+        "TWSG",
+        "UBCZ",
+        "UBEC",
+        "UBIM",
+        "UBIN",
+        "UBIS",
+        "UBSA",
+        "UBSB",
+        "UBSC",
+        "UBSD",
+        "UBSE",
+        "UBSF",
+        "UBSG",
+        "UBSI",
+        "UBSL",
+        "UBSP",
+        "UBSS",
+        "UBST",
+        "UBSX",
+        "UBSY",
+        "UCBA",
+        "UCBG",
+        "UCDE",
+        "UCHU",
+        "UCIT",
+        "UFEX",
+        "UGEN",
+        "UICE",
+        "UKCA",
+        "UKEX",
+        "UKGD",
+        "UKOR",
+        "UKPX",
+        "UKRE",
+        "ULTX",
+        "UMTS",
+        "UNGB",
+        "URCE",
+        "USEF",
+        "USOB",
+        "USWB",
+        "USWP",
+        "UTSL",
+        "VABD",
+        "VAGL",
+        "VAGM",
+        "VALX",
+        "VCMO",
+        "VCRS",
+        "VDRK",
+        "VEGA",
+        "VERT",
+        "VFCM",
+        "VFEX",
+        "VFGB",
+        "VFIL",
+        "VFMI",
+        "VFSI",
+        "VFUK",
+        "VFXO",
+        "VIRT",
+        "VIUK",
+        "VKAB",
+        "VLEX",
+        "VMFX",
+        "VMTS",
+        "VNDM",
+        "VOLA",
+        "VONT",
+        "VPXB",
+        "VRXP",
+        "VTBC",
+        "VTEX",
+        "VTLS",
+        "VTPS",
+        "VUSA",
+        "VWDA",
+        "VWDX",
+        "WABR",
+        "WBAH",
+        "WBCL",
+        "WBDM",
+        "WBGF",
+        "WBKP",
+        "WBLC",
+        "WBON",
+        "WCDE",
+        "WCLK",
+        "WDER",
+        "WEED",
+        "WELN",
+        "WELS",
+        "WELX",
+        "WETP",
+        "WFLB",
+        "WFSE",
+        "WGAS",
+        "WIND",
+        "WINS",
+        "WINX",
+        "WIPO",
+        "WMTF",
+        "WOOD",
+        "WOPO",
+        "WQXL",
+        "WSAG",
+        "WSIL",
+        "WSIN",
+        "XA1X",
+        "XABC",
+        "XABG",
+        "XABJ",
+        "XABX",
+        "XACE",
+        "XADE",
+        "XADF",
+        "XADS",
+        "XAEX",
+        "XAFR",
+        "XAFX",
+        "XAIM",
+        "XALB",
+        "XALG",
+        "XALS",
+        "XALT",
+        "XAMM",
+        "XAMS",
+        "XANT",
+        "XAOM",
+        "XAPA",
+        "XAPI",
+        "XAQS",
+        "XARC",
+        "XARM",
+        "XASE",
+        "XASM",
+        "XASX",
+        "XATH",
+        "XATL",
+        "XATS",
+        "XAUK",
+        "XAZX",
+        "XBAA",
+        "XBAB",
+        "XBAH",
+        "XBAN",
+        "XBAR",
+        "XBAV",
+        "XBBF",
+        "XBBJ",
+        "XBBK",
+        "XBCC",
+        "XBCE",
+        "XBCL",
+        "XBCM",
+        "XBCV",
+        "XBCX",
+        "XBDA",
+        "XBDV",
+        "XBEL",
+        "XBER",
+        "XBES",
+        "XBEY",
+        "XBFO",
+        "XBIL",
+        "XBIS",
+        "XBKF",
+        "XBKK",
+        "XBLB",
+        "XBLK",
+        "XBLN",
+        "XBMF",
+        "XBMK",
+        "XBND",
+        "XBNV",
+        "XBOG",
+        "XBOL",
+        "XBOM",
+        "XBOS",
+        "XBOT",
+        "XBOX",
+        "XBRA",
+        "XBRD",
+        "XBRE",
+        "XBRM",
+        "XBRN",
+        "XBRT",
+        "XBRU",
+        "XBRV",
+        "XBSD",
+        "XBSE",
+        "XBSP",
+        "XBTF",
+        "XBTR",
+        "XBUD",
+        "XBUE",
+        "XBUL",
+        "XBVC",
+        "XBVM",
+        "XBVP",
+        "XBVR",
+        "XBXO",
+        "XCAI",
+        "XCAL",
+        "XCAN",
+        "XCAR",
+        "XCAS",
+        "XCAY",
+        "XCBF",
+        "XCBO",
+        "XCBT",
+        "XCCE",
+        "XCCX",
+        "XCDE",
+        "XCEC",
+        "XCEG",
+        "XCET",
+        "XCFE",
+        "XCFF",
+        "XCGS",
+        "XCHG",
+        "XCHI",
+        "XCIE",
+        "XCIS",
+        "XCME",
+        "XCNF",
+        "XCNQ",
+        "XCOL",
+        "XCOR",
+        "XCRC",
+        "XCRO",
+        "XCSC",
+        "XCSE",
+        "XCSX",
+        "XCUE",
+        "XCUR",
+        "XCX2",
+        "XCXD",
+        "XCYO",
+        "XCYS",
+        "XDAR",
+        "XDBC",
+        "XDBV",
+        "XDBX",
+        "XDCE",
+        "XDES",
+        "XDEX",
+        "XDFB",
+        "XDFM",
+        "XDHA",
+        "XDLP",
+        "XDMI",
+        "XDNB",
+        "XDPA",
+        "XDRF",
+        "XDRK",
+        "XDSE",
+        "XDSM",
+        "XDSX",
+        "XDTB",
+        "XDUB",
+        "XDUS",
+        "XDWZ",
+        "XEAS",
+        "XEBI",
+        "XEBS",
+        "XECB",
+        "XECC",
+        "XECM",
+        "XECS",
+        "XEDA",
+        "XEDX",
+        "XEEE",
+        "XEEO",
+        "XEER",
+        "XEHQ",
+        "XEID",
+        "XELX",
+        "XEMD",
+        "XEMS",
+        "XEQT",
+        "XEQY",
+        "XERE",
+        "XERT",
+        "XESM",
+        "XETA",
+        "XETB",
+        "XETC",
+        "XETD",
+        "XETE",
+        "XETF",
+        "XETI",
+        "XETR",
+        "XETS",
+        "XETU",
+        "XETV",
+        "XETW",
+        "XETX",
+        "XEUB",
+        "XEUC",
+        "XEUE",
+        "XEUI",
+        "XEUM",
+        "XEUP",
+        "XEUR",
+        "XEUS",
+        "XEYE",
+        "XFCI",
+        "XFCM",
+        "XFDA",
+        "XFEX",
+        "XFFE",
+        "XFKA",
+        "XFMN",
+        "XFND",
+        "XFNO",
+        "XFNX",
+        "XFOM",
+        "XFRA",
+        "XFTA",
+        "XFTX",
+        "XGAS",
+        "XGAT",
+        "XGCL",
+        "XGCX",
+        "XGDX",
+        "XGEM",
+        "XGFI",
+        "XGHA",
+        "XGLO",
+        "XGME",
+        "XGMX",
+        "XGRM",
+        "XGSE",
+        "XGSX",
+        "XGTG",
+        "XGUA",
+        "XHAM",
+        "XHAN",
+        "XHCE",
+        "XHEL",
+        "XHER",
+        "XHFT",
+        "XHIR",
+        "XHKF",
+        "XHKG",
+        "XHNF",
+        "XHNX",
+        "XHON",
+        "XIAB",
+        "XIBE",
+        "XICB",
+        "XICE",
+        "XICX",
+        "XIDX",
+        "XIEL",
+        "XIEX",
+        "XIGG",
+        "XIHK",
+        "XIJP",
+        "XIMA",
+        "XIMC",
+        "XIME",
+        "XIMM",
+        "XINE",
+        "XINS",
+        "XINV",
+        "XIOM",
+        "XIPE",
+        "XIPO",
+        "XIQS",
+        "XISA",
+        "XISE",
+        "XISL",
+        "XIST",
+        "XISX",
+        "XJAM",
+        "XJAS",
+        "XJKT",
+        "XJNB",
+        "XJPX",
+        "XJSE",
+        "XJWY",
+        "XKAC",
+        "XKAR",
+        "XKAZ",
+        "XKBT",
+        "XKCE",
+        "XKCM",
+        "XKEM",
+        "XKFB",
+        "XKFE",
+        "XKGT",
+        "XKHA",
+        "XKHR",
+        "XKIE",
+        "XKIS",
+        "XKKT",
+        "XKLS",
+        "XKON",
+        "XKOR",
+        "XKOS",
+        "XKRX",
+        "XKSE",
+        "XKST",
+        "XKUW",
+        "XKYO",
+        "XLAH",
+        "XLAO",
+        "XLAT",
+        "XLBM",
+        "XLCE",
+        "XLCH",
+        "XLDN",
+        "XLDX",
+        "XLFX",
+        "XLGT",
+        "XLIF",
+        "XLIM",
+        "XLIS",
+        "XLIT",
+        "XLJM",
+        "XLJS",
+        "XLJU",
+        "XLLB",
+        "XLME",
+        "XLOD",
+        "XLOF",
+        "XLOM",
+        "XLON",
+        "XLQC",
+        "XLSM",
+        "XLTO",
+        "XLUS",
+        "XLUX",
+        "XMAB",
+        "XMAC",
+        "XMAD",
+        "XMAE",
+        "XMAI",
+        "XMAL",
+        "XMAN",
+        "XMAP",
+        "XMAT",
+        "XMAU",
+        "XMCE",
+        "XMDG",
+        "XMDS",
+        "XMEF",
+        "XMER",
+        "XMEV",
+        "XMEX",
+        "XMFX",
+        "XMGE",
+        "XMIC",
+        "XMID",
+        "XMIF",
+        "XMIL",
+        "XMIO",
+        "XMLI",
+        "XMLX",
+        "XMNT",
+        "XMNX",
+        "XMOC",
+        "XMOD",
+        "XMOL",
+        "XMON",
+        "XMOO",
+        "XMOS",
+        "XMOT",
+        "XMPW",
+        "XMRV",
+        "XMSM",
+        "XMSW",
+        "XMTB",
+        "XMTS",
+        "XMUN",
+        "XMUS",
+        "XMVL",
+        "XNAF",
+        "XNAI",
+        "XNAM",
+        "XNAS",
+        "XNCD",
+        "XNCM",
+        "XNCO",
+        "XNDQ",
+        "XNDU",
+        "XNDX",
+        "XNEC",
+        "XNEE",
+        "XNEP",
+        "XNEW",
+        "XNFI",
+        "XNGM",
+        "XNGO",
+        "XNGS",
+        "XNII",
+        "XNIM",
+        "XNKS",
+        "XNLI",
+        "XNLX",
+        "XNMR",
+        "XNMS",
+        "XNOM",
+        "XNOR",
+        "XNQL",
+        "XNSA",
+        "XNSE",
+        "XNST",
+        "XNXC",
+        "XNXD",
+        "XNYC",
+        "XNYE",
+        "XNYF",
+        "XNYL",
+        "XNYM",
+        "XNYS",
+        "XNZE",
+        "XOAA",
+        "XOAD",
+        "XOAM",
+        "XOAS",
+        "XOBD",
+        "XOCH",
+        "XODE",
+        "XOFF",
+        "XOME",
+        "XOPV",
+        "XOSA",
+        "XOSC",
+        "XOSD",
+        "XOSE",
+        "XOSJ",
+        "XOSL",
+        "XOSM",
+        "XOST",
+        "XOTB",
+        "XOTC",
+        "XOTP",
+        "XPAC",
+        "XPAE",
+        "XPAL",
+        "XPAR",
+        "XPBT",
+        "XPET",
+        "XPHL",
+        "XPHO",
+        "XPHS",
+        "XPHX",
+        "XPIC",
+        "XPIN",
+        "XPLU",
+        "XPMS",
+        "XPOL",
+        "XPOM",
+        "XPOR",
+        "XPOS",
+        "XPOT",
+        "XPOW",
+        "XPRA",
+        "XPRI",
+        "XPRM",
+        "XPSE",
+        "XPSF",
+        "XPST",
+        "XPSX",
+        "XPTY",
+        "XPUK",
+        "XPUS",
+        "XPXE",
+        "XQLX",
+        "XQMH",
+        "XQOD",
+        "XQTX",
+        "XQUI",
+        "XRAS",
+        "XRBM",
+        "XRCB",
+        "XREP",
+        "XRFQ",
+        "XRIO",
+        "XRIS",
+        "XRMO",
+        "XRMS",
+        "XRMZ",
+        "XROS",
+        "XROT",
+        "XROV",
+        "XROX",
+        "XRPM",
+        "XRSP",
+        "XRTR",
+        "XRUS",
+        "XSAF",
+        "XSAM",
+        "XSAP",
+        "XSAT",
+        "XSAU",
+        "XSBI",
+        "XSBT",
+        "XSC1",
+        "XSC2",
+        "XSC3",
+        "XSCA",
+        "XSCE",
+        "XSCL",
+        "XSCO",
+        "XSCU",
+        "XSDX",
+        "XSEB",
+        "XSEC",
+        "XSEF",
+        "XSES",
+        "XSFA",
+        "XSFE",
+        "XSGA",
+        "XSGB",
+        "XSGE",
+        "XSGO",
+        "XSHE",
+        "XSHG",
+        "XSIB",
+        "XSIC",
+        "XSIM",
+        "XSLS",
+        "XSME",
+        "XSMP",
+        "XSOM",
+        "XSOP",
+        "XSPM",
+        "XSPS",
+        "XSRM",
+        "XSSC",
+        "XSSE",
+        "XSTC",
+        "XSTE",
+        "XSTF",
+        "XSTM",
+        "XSTO",
+        "XSTP",
+        "XSTU",
+        "XSTV",
+        "XSTX",
+        "XSUR",
+        "XSVA",
+        "XSWA",
+        "XSWB",
+        "XSWM",
+        "XSWO",
+        "XSWX",
+        "XTAA",
+        "XTAD",
+        "XTAE",
+        "XTAF",
+        "XTAI",
+        "XTAL",
+        "XTAM",
+        "XTAR",
+        "XTEH",
+        "XTFE",
+        "XTFF",
+        "XTFN",
+        "XTIR",
+        "XTK1",
+        "XTK2",
+        "XTK3",
+        "XTKA",
+        "XTKO",
+        "XTKS",
+        "XTKT",
+        "XTLX",
+        "XTND",
+        "XTNX",
+        "XTOE",
+        "XTPE",
+        "XTPZ",
+        "XTRA",
+        "XTRD",
+        "XTRN",
+        "XTRZ",
+        "XTSE",
+        "XTSX",
+        "XTUC",
+        "XTUN",
+        "XTUP",
+        "XTUR",
+        "XTXD",
+        "XTXE",
+        "XTXM",
+        "XUAX",
+        "XUBS",
+        "XUGA",
+        "XUKR",
+        "XULA",
+        "XUMP",
+        "XUNI",
+        "XUSE",
+        "XVAL",
+        "XVAR",
+        "XVES",
+        "XVIA",
+        "XVIE",
+        "XVLA",
+        "XVPA",
+        "XVPB",
+        "XVSE",
+        "XVTX",
+        "XWAR",
+        "XWBO",
+        "XWCE",
+        "XWEE",
+        "XXSC",
+        "XXXX",
+        "XYIE",
+        "XYKT",
+        "XZAG",
+        "XZAM",
+        "XZAP",
+        "XZCE",
+        "XZIM",
+        "YKNA",
+        "YLDX",
+        "ZAPA",
+        "ZARX",
+        "ZBUL",
+        "ZERO",
+        "ZFXM",
+        "ZKBX",
+        "ZOBX",
+        "ZODM"
+      ],
+      "title": "GenMrktEnum",
+      "type": "string"
+    },
+    "Header": {
+      "properties": {
+        "PARTNER": {
+          "maxLength": 512,
+          "pattern": "^[ELTBP][a-zA-Z0-9_]+",
+          "title": "Partner",
+          "type": "string"
+        },
+        "USERNAME": {
+          "maxLength": 512,
+          "pattern": "^[a-zA-Z0-9]+",
+          "title": "Username",
+          "type": "string"
+        },
+        "DOMAIN": {
+          "const": "IFDat",
+          "title": "Domain"
+        }
+      },
+      "required": [
+        "PARTNER",
+        "USERNAME",
+        "DOMAIN"
+      ],
+      "title": "Header",
+      "type": "object"
+    },
+    "HldrSeries": {
+      "properties": {
+        "DIMS": {
+          "$ref": "#/$defs/journey__model_dimension__RelFrqncyAccDimensionContainer_Annotated_str__StringConstraints__str__StringConstraints__Doc__Annotated_str__StringConstraints__str__StringConstraints__Doc____4"
+        },
+        "QNTTY": {
+          "$ref": "#/$defs/BaseMeasure_Annotated_float__Ge__"
+        },
+        "SBSCRPTNS": {
+          "$ref": "#/$defs/BaseMeasure_Annotated_float__Ge__"
+        },
+        "RDMPTNS": {
+          "$ref": "#/$defs/BaseMeasure_Annotated_float__Ge__"
+        }
+      },
+      "required": [
+        "DIMS",
+        "QNTTY",
+        "SBSCRPTNS",
+        "RDMPTNS"
+      ],
+      "title": "HldrSeries",
+      "type": "object"
+    },
+    "IncmExpnsEnum": {
+      "enum": [
+        "-",
+        "INTRST",
+        "RNTS",
+        "TRNSCTNS_FEES",
+        "MNGMNT_FEES",
+        "DPSTR_FEES",
+        "TAXES",
+        "WAGES",
+        "BDE",
+        "BLE",
+        "OTHER"
+      ],
+      "title": "IncmExpnsEnum",
+      "type": "string"
+    },
+    "IncmRvnEnum": {
+      "enum": [
+        "-",
+        "INTRST",
+        "DVDNDS",
+        "RNTS",
+        "FDI",
+        "INS"
+      ],
+      "title": "IncmRvnEnum",
+      "type": "string"
+    },
+    "KeySeries": {
+      "properties": {
+        "DIMS": {
+          "$ref": "#/$defs/journey__model_dimension__AccFreqDimensionContainer_Annotated_str__StringConstraints__str__StringConstraints__Doc____2"
+        },
+        "BK_PRC": {
+          "$ref": "#/$defs/BaseMeasure_Annotated_float__Ge__"
+        },
+        "INCM": {
+          "$ref": "#/$defs/BaseMeasure_float_"
+        }
+      },
+      "required": [
+        "DIMS",
+        "BK_PRC",
+        "INCM"
+      ],
+      "title": "KeySeries",
+      "type": "object"
+    },
+    "LbltyDbtSeries": {
+      "properties": {
+        "DIMS": {
+          "$ref": "#/$defs/journey__model_dimension__RelFrqncyAccDimensionContainer_Annotated_str__StringConstraints__str__StringConstraints__Doc__Annotated_str__StringConstraints__str__StringConstraints__Doc____1"
+        },
+        "STCK": {
+          "$ref": "#/$defs/BaseMeasure_Annotated_float__Ge__"
+        },
+        "FLS": {
+          "$ref": "#/$defs/BaseMeasure_float_"
+        },
+        "NMNL_STCK": {
+          "$ref": "#/$defs/BaseMeasure_Annotated_float__Ge__"
+        },
+        "ACCRLS": {
+          "$ref": "#/$defs/BaseMeasure_float_"
+        }
+      },
+      "required": [
+        "DIMS",
+        "STCK",
+        "FLS",
+        "NMNL_STCK",
+        "ACCRLS"
+      ],
+      "title": "LbltyDbtSeries",
+      "type": "object"
+    },
+    "LbltyRmnngDimensionContainer": {
+      "properties": {
+        "TYP": {
+          "$ref": "#/$defs/RemLiabEnum"
+        },
+        "ID": {
+          "maxLength": 512,
+          "pattern": "^[ELTBP][a-zA-Z0-9_]+",
+          "title": "Id",
+          "type": "string"
+        },
+        "DT": {
+          "format": "date",
+          "title": "Dt",
+          "type": "string"
+        },
+        "FRQNCY": {
+          "$ref": "#/$defs/GenFrqncyEnum"
+        }
+      },
+      "required": [
+        "TYP",
+        "ID",
+        "DT",
+        "FRQNCY"
+      ],
+      "title": "LbltyRmnngDimensionContainer",
+      "type": "object"
+    },
+    "LbltyRmnngSeries": {
+      "properties": {
+        "DIMS": {
+          "$ref": "#/$defs/LbltyRmnngDimensionContainer"
+        },
+        "STCK": {
+          "$ref": "#/$defs/BaseMeasure_Annotated_float__Ge__"
+        },
+        "FLS": {
+          "$ref": "#/$defs/BaseMeasure_float_"
+        }
+      },
+      "required": [
+        "DIMS",
+        "STCK",
+        "FLS"
+      ],
+      "title": "LbltyRmnngSeries",
+      "type": "object"
+    },
+    "LonTypEnum": {
+      "enum": [
+        "-",
+        "CRD",
+        "OVR",
+        "REV",
+        "FLS",
+        "NOS",
+        "TRD",
+        "SUB",
+        "INT",
+        "RFC",
+        "NFC",
+        "LVG",
+        "OTH"
+      ],
+      "title": "LonTypEnum",
+      "type": "string"
+    },
+    "MngmntDynmcSeries": {
+      "properties": {
+        "DIMS": {
+          "$ref": "#/$defs/journey__model_dimension__DynmcDimensionContainer_Annotated_str__StringConstraints__str__StringConstraints__Doc____1"
+        },
+        "NM": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/journey__model__BaseMeasure_Annotated_str__str__str__StringConstraints____2"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "NM_LTN": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/journey__model__BaseMeasure_Annotated_str__StringConstraints__str__StringConstraints____4"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "NM_SHRT": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/journey__model__BaseMeasure_Annotated_str__str__str__StringConstraints____1"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "STRT": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/journey__model__BaseMeasure_Annotated_str__str__str__StringConstraints____1"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "STRT_LTN": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/journey__model__BaseMeasure_Annotated_str__StringConstraints__str__StringConstraints____5"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "CTY": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/journey__model__BaseMeasure_Annotated_str__str__str__StringConstraints____3"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "CTY_LTN": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/journey__model__BaseMeasure_Annotated_str__StringConstraints__str__StringConstraints____6"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "PSTL_CD": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/journey__model__BaseMeasure_Annotated_str__str__str__StringConstraints____4"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "URL": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_Url_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "EMAIL": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_EmailStr_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "CNTRY_RSDNC": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_GenCntryEnum_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "DIMS"
+      ],
+      "title": "MngmntDynmcSeries",
+      "type": "object"
+    },
+    "MngmntSeries": {
+      "properties": {
+        "DIMS": {
+          "$ref": "#/$defs/journey__model_dimension__DimensionContainer_Annotated_str__StringConstraints__str__StringConstraints__Doc____1"
+        },
+        "DT_BRTH": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_date_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "DT_CLS": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_date_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "LEI_ID": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/journey__model__BaseMeasure_Annotated_str__StringConstraints__str__StringConstraints____2"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "TAX_ID": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/journey__model__BaseMeasure_Annotated_str__StringConstraints__str__StringConstraints____1"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "NBR_ID": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/journey__model__BaseMeasure_Annotated_str__StringConstraints__str__StringConstraints____1"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "SPLT_FRM": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/journey__model__BaseMeasure_Annotated_str__StringConstraints__str__StringConstraints__Doc____1"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "MRGD_WTH": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/journey__model__BaseMeasure_Annotated_str__StringConstraints__str__StringConstraints__Doc____1"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "DIMS"
+      ],
+      "title": "MngmntSeries",
+      "type": "object"
+    },
+    "OrgInstttnlSctrCntrlEnum": {
+      "enum": [
+        "-",
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "title": "OrgInstttnlSctrCntrlEnum",
+      "type": "string"
+    },
+    "OrgInstttnlSctrEnum": {
+      "enum": [
+        "-",
+        "S11",
+        "S121",
+        "S122",
+        "S123",
+        "S124",
+        "S125",
+        "S126",
+        "S127",
+        "S128",
+        "S129",
+        "S1311",
+        "S1312",
+        "S1313",
+        "S1314",
+        "S14",
+        "S15"
+      ],
+      "title": "OrgInstttnlSctrEnum",
+      "type": "string"
+    },
+    "RelDimensionContainer_Annotated_str__StringConstraints__str__StringConstraints__Doc__Annotated_str__StringConstraints__str__StringConstraints__Doc__": {
+      "properties": {
+        "LID": {
+          "maxLength": 512,
+          "pattern": "^[a-zA-Z0-9]+",
+          "title": "Lid",
+          "type": "string"
+        },
+        "RID": {
+          "maxLength": 512,
+          "pattern": "^[ELTBP][a-zA-Z0-9_]+",
+          "title": "Rid",
+          "type": "string"
+        },
+        "VLD_FRM": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Vld Frm"
+        },
+        "VLD_T": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Vld T"
+        }
+      },
+      "required": [
+        "LID",
+        "RID"
+      ],
+      "title": "RelDimensionContainer[Annotated[str, StringConstraints, str, StringConstraints, Doc], Annotated[str, StringConstraints, str, StringConstraints, Doc]]",
+      "type": "object"
+    },
+    "RemAssetEnum": {
+      "enum": [
+        "-",
+        "AI_DPST",
+        "AI_LN",
+        "AI_DBT",
+        "AR",
+        "OTR"
+      ],
+      "title": "RemAssetEnum",
+      "type": "string"
+    },
+    "RemLiabEnum": {
+      "enum": [
+        "-",
+        "AI_LN",
+        "AI_DBT",
+        "AR",
+        "MNGMNT_FEES",
+        "TRNSCTNS_FEES",
+        "TAXES",
+        "OTHER_PRVSNS",
+        "NO_CASH_SL",
+        "FUTURE",
+        "OTHER"
+      ],
+      "title": "RemLiabEnum",
+      "type": "string"
+    },
+    "RevenueDimensionContainer": {
+      "properties": {
+        "IID": {
+          "maxLength": 512,
+          "pattern": "^[IPU][a-zA-Z0-9_]+",
+          "title": "Iid",
+          "type": "string"
+        },
+        "TP": {
+          "$ref": "#/$defs/IncmRvnEnum"
+        },
+        "DT": {
+          "format": "date",
+          "title": "Dt",
+          "type": "string"
+        },
+        "FRQNCY": {
+          "$ref": "#/$defs/GenFrqncyEnum"
+        }
+      },
+      "required": [
+        "IID",
+        "TP",
+        "DT",
+        "FRQNCY"
+      ],
+      "title": "RevenueDimensionContainer",
+      "type": "object"
+    },
+    "RvnSeries": {
+      "properties": {
+        "DIMS": {
+          "$ref": "#/$defs/RevenueDimensionContainer"
+        },
+        "AMNT": {
+          "$ref": "#/$defs/BaseMeasure_Annotated_float__Ge__"
+        }
+      },
+      "required": [
+        "DIMS",
+        "AMNT"
+      ],
+      "title": "RvnSeries",
+      "type": "object"
+    },
+    "SelfCpnSeries": {
+      "properties": {
+        "DIMS": {
+          "$ref": "#/$defs/journey__model_dimension__DtDimensionContainer_Annotated_str__StringConstraints__str__StringConstraints__Doc____2"
+        },
+        "RT": {
+          "$ref": "#/$defs/BaseMeasure_float_"
+        }
+      },
+      "required": [
+        "DIMS",
+        "RT"
+      ],
+      "title": "SelfCpnSeries",
+      "type": "object"
+    },
+    "SelfDbtDynmcSeries": {
+      "properties": {
+        "DIMS": {
+          "$ref": "#/$defs/journey__model_dimension__DynmcDimensionContainer_Annotated_str__StringConstraints__str__StringConstraints__Doc____2"
+        },
+        "NM_LTN": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/journey__model__BaseMeasure_Annotated_str__StringConstraints__str__StringConstraints____4"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "NM_SHRT": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/journey__model__BaseMeasure_Annotated_str__str__str__StringConstraints____1"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "STTS": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_DbtSttsEnum_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "MTRTY_DT": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_date_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "ISSD_BY": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/journey__model__BaseMeasure_Annotated_str__StringConstraints__str__StringConstraints__Doc____1"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "CFI": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/journey__model__BaseMeasure_Annotated_str__StringConstraints__str__StringConstraints____7"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "DIMS"
+      ],
+      "title": "SelfDbtDynmcSeries",
+      "type": "object"
+    },
+    "SelfDbtOutstndngChngSeries": {
+      "properties": {
+        "DIMS": {
+          "$ref": "#/$defs/DbtOutstndngChnDimensionContainer"
+        },
+        "AMNT": {
+          "$ref": "#/$defs/BaseMeasure_float_"
+        },
+        "PRC": {
+          "$ref": "#/$defs/BaseMeasure_Annotated_float__Ge__"
+        }
+      },
+      "required": [
+        "DIMS",
+        "AMNT",
+        "PRC"
+      ],
+      "title": "SelfDbtOutstndngChngSeries",
+      "type": "object"
+    },
+    "SelfDbtSeries": {
+      "properties": {
+        "DIMS": {
+          "$ref": "#/$defs/journey__model_dimension__DimensionContainer_Annotated_str__StringConstraints__str__StringConstraints__Doc____2"
+        },
+        "DT_BRTH": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_date_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "DT_CLS": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_date_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "ORGNL_MTRTY": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_date_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "CRRNCY": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_GenCrrncyEnum_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "ISS_PRC": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_Annotated_float__Ge__"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "RDMPTN_PRC": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_Annotated_float__Ge__"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "MRKT": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_GenMrktEnum_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "ACCRL_STRTDT": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_date_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "TYP": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_DbtTypEnum_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "GRNT_LVL": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_DbtGrntLvlEnum_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "RNK_LVL": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_DbtRnkLvlEnum_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "SCRTY_LVL": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_DbtScrtyLvlEnum_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "IS_SCRTZTN": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_BoolEnum_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "SCRTZTN_TYP": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_DbtScrtznTypEnum_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "IS_CVRD": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_BoolEnum_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "CVRD_TYP": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_DbtCvrdTypEnum_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "CPN_TYP": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_DbtCpnTypEnum_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "CPN_CRRNCY": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_GenCrrncyEnum_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "CPN_FRQNCY": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_DbtCpnFrqncyEnum_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "CPN_SPRD": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_Annotated_int__Ge__"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "CPN_MLTPLR": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_Annotated_float__Ge__"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "CPN_CP": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_Annotated_float__Ge__"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "CPN_FLR": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_Annotated_float__Ge__"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "FRST_CPN_DT": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_date_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "LST_CPN_DT": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_date_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "UNDRLYNG": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/journey__model__BaseMeasure_Annotated_str__StringConstraints__str__StringConstraints__Doc____2"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "MNMM_INVSTMNT": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_Annotated_float__Ge__"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "IS_PRVT": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_BoolEnum_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "CFI": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/journey__model__BaseMeasure_Annotated_str__StringConstraints__str__StringConstraints____7"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "RSTRCTRD_T": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/journey__model__BaseMeasure_Annotated_str__StringConstraints__str__StringConstraints__Doc____2"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "RSTRCTRD_FRM": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/journey__model__BaseMeasure_Annotated_str__StringConstraints__str__StringConstraints__Doc____3"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "ALS_OF": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/journey__model__BaseMeasure_Annotated_str__StringConstraints__str__StringConstraints__Doc____2"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "DIMS"
+      ],
+      "title": "SelfDbtSeries",
+      "type": "object"
+    },
+    "SelfDvdndSeries": {
+      "properties": {
+        "DIMS": {
+          "$ref": "#/$defs/journey__model_dimension__DtDimensionContainer_Annotated_str__StringConstraints__str__StringConstraints__Doc____1"
+        },
+        "EX_DT": {
+          "$ref": "#/$defs/BaseMeasure_date_"
+        },
+        "DCLRTN_DT": {
+          "$ref": "#/$defs/BaseMeasure_date_"
+        },
+        "PYMNT_DT": {
+          "$ref": "#/$defs/BaseMeasure_date_"
+        },
+        "FRQNCY": {
+          "$ref": "#/$defs/BaseMeasure_DvdndCstmFrqncyEnum_"
+        },
+        "TYP": {
+          "$ref": "#/$defs/BaseMeasure_DvdndTypEnum_"
+        },
+        "CRRNCY": {
+          "$ref": "#/$defs/BaseMeasure_GenCrrncyEnum_"
+        },
+        "AMNT": {
+          "$ref": "#/$defs/BaseMeasure_Annotated_float__Gt__"
+        }
+      },
+      "required": [
+        "DIMS",
+        "EX_DT",
+        "DCLRTN_DT",
+        "PYMNT_DT",
+        "FRQNCY",
+        "TYP",
+        "CRRNCY",
+        "AMNT"
+      ],
+      "title": "SelfDvdndSeries",
+      "type": "object"
+    },
+    "SelfShrDynmcSeries": {
+      "properties": {
+        "DIMS": {
+          "$ref": "#/$defs/journey__model_dimension__DynmcDimensionContainer_Annotated_str__StringConstraints__str__StringConstraints__Doc____3"
+        },
+        "NM_LTN": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/journey__model__BaseMeasure_Annotated_str__StringConstraints__str__StringConstraints____4"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "NM_SHRT": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/journey__model__BaseMeasure_Annotated_str__str__str__StringConstraints____1"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "ISSD_BY": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/journey__model__BaseMeasure_Annotated_str__StringConstraints__str__StringConstraints____3"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "NMNL_PRC": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_Annotated_float__Ge__"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "CFI": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/journey__model__BaseMeasure_Annotated_str__StringConstraints__str__StringConstraints____7"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "RDMPTN_FRQNCY": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_ShrFndRdmptnFrqncyEnum_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "MNMM_AMNT": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_Annotated_float__Ge__"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "TYP": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_ShrTypEnum_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "DIMS"
+      ],
+      "title": "SelfShrDynmcSeries",
+      "type": "object"
+    },
+    "SelfShrSeries": {
+      "properties": {
+        "DIMS": {
+          "$ref": "#/$defs/journey__model_dimension__DimensionContainer_Annotated_str__StringConstraints__str__StringConstraints__Doc____3"
+        },
+        "DT_BRTH": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_date_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "DT_CLS": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_date_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "CRRNCY": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_GenCrrncyEnum_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "MRKT": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_GenMrktEnum_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "RSTRCTRD_T": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/journey__model__BaseMeasure_Annotated_str__StringConstraints__str__StringConstraints__Doc____4"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "ALS_OF": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/journey__model__BaseMeasure_Annotated_str__StringConstraints__str__StringConstraints__Doc____4"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "DIMS"
+      ],
+      "title": "SelfShrSeries",
+      "type": "object"
+    },
+    "SelfSpltSeries": {
+      "properties": {
+        "DIMS": {
+          "$ref": "#/$defs/journey__model_dimension__DtDimensionContainer_Annotated_str__StringConstraints__str__StringConstraints__Doc____1"
+        },
+        "FCTR": {
+          "$ref": "#/$defs/BaseMeasure_Annotated_float__Gt__"
+        }
+      },
+      "required": [
+        "DIMS",
+        "FCTR"
+      ],
+      "title": "SelfSpltSeries",
+      "type": "object"
+    },
+    "SftTypEnum": {
+      "enum": [
+        "-",
+        "REP",
+        "SBL",
+        "BSB",
+        "MLT"
+      ],
+      "title": "SftTypEnum",
+      "type": "string"
+    },
+    "ShrEsaTypEnum": {
+      "enum": [
+        "F511",
+        "F512",
+        "F519",
+        "F521",
+        "F522"
+      ],
+      "title": "ShrEsaTypEnum",
+      "type": "string"
+    },
+    "ShrFndRdmptnFrqncyEnum": {
+      "enum": [
+        "-",
+        "PP",
+        "AN",
+        "SA",
+        "QU",
+        "MO",
+        "BA",
+        "OR",
+        "IR",
+        "SS",
+        "ON",
+        "EL",
+        "OT"
+      ],
+      "title": "ShrFndRdmptnFrqncyEnum",
+      "type": "string"
+    },
+    "ShrTypEnum": {
+      "enum": [
+        "-",
+        "CMMN",
+        "PRFRRD",
+        "DPSTRY_RCPT",
+        "HYBRD",
+        "OTHR_EQTY",
+        "UCITS",
+        "AIF",
+        "OTHR_FND"
+      ],
+      "title": "ShrTypEnum",
+      "type": "string"
+    },
+    "Usr2RaSeries": {
+      "properties": {
+        "DIMS": {
+          "$ref": "#/$defs/RelDimensionContainer_Annotated_str__StringConstraints__str__StringConstraints__Doc__Annotated_str__StringConstraints__str__StringConstraints__Doc__"
+        },
+        "ASSCTD_WTH": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_BoolEnum_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "WRKS_FR": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_DprtmntEnum_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "RSPNSBL_FR_IFDAT": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_BoolEnum_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "DIMS"
+      ],
+      "title": "Usr2RaSeries",
+      "type": "object"
+    },
+    "UsrSeries": {
+      "properties": {
+        "DIMS": {
+          "$ref": "#/$defs/journey__model_dimension__DimensionContainer_Annotated_str__StringConstraints__str__StringConstraints__Doc____5"
+        },
+        "EMAIL": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_EmailStr_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "FRST": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/journey__model__BaseMeasure_Annotated_str__str__str__StringConstraints____3"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "LST": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/journey__model__BaseMeasure_Annotated_str__str__str__StringConstraints____3"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "PHN": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/journey__model__BaseMeasure_Annotated_str__StringConstraints__str__StringConstraints____6"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "DIMS"
+      ],
+      "title": "UsrSeries",
+      "type": "object"
+    },
+    "journey__model__BaseMeasure_Annotated_str__StringConstraints__str__StringConstraints__Doc____1": {
+      "properties": {
+        "VALUE": {
+          "maxLength": 512,
+          "pattern": "^[ELTBP][a-zA-Z0-9_]+",
+          "title": "Value",
+          "type": "string"
+        }
+      },
+      "required": [
+        "VALUE"
+      ],
+      "title": "BaseMeasure[Annotated[str, StringConstraints, str, StringConstraints, Doc]]",
+      "type": "object"
+    },
+    "journey__model__BaseMeasure_Annotated_str__StringConstraints__str__StringConstraints__Doc____2": {
+      "properties": {
+        "VALUE": {
+          "maxLength": 512,
+          "pattern": "^[IP][a-zA-Z0-9_]+",
+          "title": "Value",
+          "type": "string"
+        }
+      },
+      "required": [
+        "VALUE"
+      ],
+      "title": "BaseMeasure[Annotated[str, StringConstraints, str, StringConstraints, Doc]]",
+      "type": "object"
+    },
+    "journey__model__BaseMeasure_Annotated_str__StringConstraints__str__StringConstraints__Doc____3": {
+      "properties": {
+        "VALUE": {
+          "maxLength": 512,
+          "pattern": "^[P][a-zA-Z0-9_]+",
+          "title": "Value",
+          "type": "string"
+        }
+      },
+      "required": [
+        "VALUE"
+      ],
+      "title": "BaseMeasure[Annotated[str, StringConstraints, str, StringConstraints, Doc]]",
+      "type": "object"
+    },
+    "journey__model__BaseMeasure_Annotated_str__StringConstraints__str__StringConstraints__Doc____4": {
+      "properties": {
+        "VALUE": {
+          "maxLength": 512,
+          "pattern": "^[IPU][a-zA-Z0-9_]+",
+          "title": "Value",
+          "type": "string"
+        }
+      },
+      "required": [
+        "VALUE"
+      ],
+      "title": "BaseMeasure[Annotated[str, StringConstraints, str, StringConstraints, Doc]]",
+      "type": "object"
+    },
+    "journey__model__BaseMeasure_Annotated_str__StringConstraints__str__StringConstraints__Doc____5": {
+      "properties": {
+        "VALUE": {
+          "maxLength": 512,
+          "pattern": "^[IP][a-zA-Z0-9_]+",
+          "title": "Value",
+          "type": "string"
+        }
+      },
+      "required": [
+        "VALUE"
+      ],
+      "title": "BaseMeasure[Annotated[str, StringConstraints, str, StringConstraints, Doc]]",
+      "type": "object"
+    },
+    "journey__model__BaseMeasure_Annotated_str__StringConstraints__str__StringConstraints__Doc____6": {
+      "properties": {
+        "VALUE": {
+          "maxLength": 512,
+          "pattern": "^[P][a-zA-Z0-9_]+",
+          "title": "Value",
+          "type": "string"
+        }
+      },
+      "required": [
+        "VALUE"
+      ],
+      "title": "BaseMeasure[Annotated[str, StringConstraints, str, StringConstraints, Doc]]",
+      "type": "object"
+    },
+    "journey__model__BaseMeasure_Annotated_str__StringConstraints__str__StringConstraints__Doc____7": {
+      "properties": {
+        "VALUE": {
+          "maxLength": 512,
+          "pattern": "^[IP][a-zA-Z0-9_]+",
+          "title": "Value",
+          "type": "string"
+        }
+      },
+      "required": [
+        "VALUE"
+      ],
+      "title": "BaseMeasure[Annotated[str, StringConstraints, str, StringConstraints, Doc]]",
+      "type": "object"
+    },
+    "journey__model__BaseMeasure_Annotated_str__StringConstraints__str__StringConstraints__Doc____8": {
+      "properties": {
+        "VALUE": {
+          "maxLength": 512,
+          "pattern": "^[IP][a-zA-Z0-9_]+",
+          "title": "Value",
+          "type": "string"
+        }
+      },
+      "required": [
+        "VALUE"
+      ],
+      "title": "BaseMeasure[Annotated[str, StringConstraints, str, StringConstraints, Doc]]",
+      "type": "object"
+    },
+    "journey__model__BaseMeasure_Annotated_str__StringConstraints__str__StringConstraints____1": {
+      "properties": {
+        "VALUE": {
+          "maxLength": 31,
+          "pattern": "^[a-zA-Z0-9_]+",
+          "title": "Value",
+          "type": "string"
+        }
+      },
+      "required": [
+        "VALUE"
+      ],
+      "title": "BaseMeasure[Annotated[str, StringConstraints, str, StringConstraints]]",
+      "type": "object"
+    },
+    "journey__model__BaseMeasure_Annotated_str__StringConstraints__str__StringConstraints____2": {
+      "properties": {
+        "VALUE": {
+          "maxLength": 20,
+          "pattern": "^[a-zA-Z0-9_]+",
+          "title": "Value",
+          "type": "string"
+        }
+      },
+      "required": [
+        "VALUE"
+      ],
+      "title": "BaseMeasure[Annotated[str, StringConstraints, str, StringConstraints]]",
+      "type": "object"
+    },
+    "journey__model__BaseMeasure_Annotated_str__StringConstraints__str__StringConstraints____3": {
+      "properties": {
+        "VALUE": {
+          "maxLength": 512,
+          "title": "Value",
+          "type": "string"
+        }
+      },
+      "required": [
+        "VALUE"
+      ],
+      "title": "BaseMeasure[Annotated[str, StringConstraints, str, StringConstraints]]",
+      "type": "object"
+    },
+    "journey__model__BaseMeasure_Annotated_str__StringConstraints__str__StringConstraints____4": {
+      "properties": {
+        "VALUE": {
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_]+",
+          "title": "Value",
+          "type": "string"
+        }
+      },
+      "required": [
+        "VALUE"
+      ],
+      "title": "BaseMeasure[Annotated[str, StringConstraints, str, StringConstraints]]",
+      "type": "object"
+    },
+    "journey__model__BaseMeasure_Annotated_str__StringConstraints__str__StringConstraints____5": {
+      "properties": {
+        "VALUE": {
+          "maxLength": 64,
+          "pattern": "^[a-zA-Z0-9_]+",
+          "title": "Value",
+          "type": "string"
+        }
+      },
+      "required": [
+        "VALUE"
+      ],
+      "title": "BaseMeasure[Annotated[str, StringConstraints, str, StringConstraints]]",
+      "type": "object"
+    },
+    "journey__model__BaseMeasure_Annotated_str__StringConstraints__str__StringConstraints____6": {
+      "properties": {
+        "VALUE": {
+          "maxLength": 32,
+          "pattern": "^[a-zA-Z0-9_]+",
+          "title": "Value",
+          "type": "string"
+        }
+      },
+      "required": [
+        "VALUE"
+      ],
+      "title": "BaseMeasure[Annotated[str, StringConstraints, str, StringConstraints]]",
+      "type": "object"
+    },
+    "journey__model__BaseMeasure_Annotated_str__StringConstraints__str__StringConstraints____7": {
+      "properties": {
+        "VALUE": {
+          "maxLength": 6,
+          "pattern": "^[a-zA-Z0-9_]+",
+          "title": "Value",
+          "type": "string"
+        }
+      },
+      "required": [
+        "VALUE"
+      ],
+      "title": "BaseMeasure[Annotated[str, StringConstraints, str, StringConstraints]]",
+      "type": "object"
+    },
+    "journey__model__BaseMeasure_Annotated_str__StringConstraints__str__StringConstraints____8": {
+      "properties": {
+        "VALUE": {
+          "maxLength": 12,
+          "pattern": "^[a-zA-Z0-9_]+",
+          "title": "Value",
+          "type": "string"
+        }
+      },
+      "required": [
+        "VALUE"
+      ],
+      "title": "BaseMeasure[Annotated[str, StringConstraints, str, StringConstraints]]",
+      "type": "object"
+    },
+    "journey__model__BaseMeasure_Annotated_str__str__str__StringConstraints____1": {
+      "properties": {
+        "VALUE": {
+          "maxLength": 64,
+          "title": "Value",
+          "type": "string"
+        }
+      },
+      "required": [
+        "VALUE"
+      ],
+      "title": "BaseMeasure[Annotated[str, str, str, StringConstraints]]",
+      "type": "object"
+    },
+    "journey__model__BaseMeasure_Annotated_str__str__str__StringConstraints____2": {
+      "properties": {
+        "VALUE": {
+          "maxLength": 128,
+          "title": "Value",
+          "type": "string"
+        }
+      },
+      "required": [
+        "VALUE"
+      ],
+      "title": "BaseMeasure[Annotated[str, str, str, StringConstraints]]",
+      "type": "object"
+    },
+    "journey__model__BaseMeasure_Annotated_str__str__str__StringConstraints____3": {
+      "properties": {
+        "VALUE": {
+          "maxLength": 32,
+          "title": "Value",
+          "type": "string"
+        }
+      },
+      "required": [
+        "VALUE"
+      ],
+      "title": "BaseMeasure[Annotated[str, str, str, StringConstraints]]",
+      "type": "object"
+    },
+    "journey__model__BaseMeasure_Annotated_str__str__str__StringConstraints____4": {
+      "properties": {
+        "VALUE": {
+          "maxLength": 16,
+          "title": "Value",
+          "type": "string"
+        }
+      },
+      "required": [
+        "VALUE"
+      ],
+      "title": "BaseMeasure[Annotated[str, str, str, StringConstraints]]",
+      "type": "object"
+    },
+    "journey__model_dimension__AccFreqDimensionContainer_Annotated_str__StringConstraints__str__StringConstraints__Doc____1": {
+      "properties": {
+        "IID": {
+          "maxLength": 512,
+          "pattern": "^[P][a-zA-Z0-9_]+",
+          "title": "Iid",
+          "type": "string"
+        },
+        "DT": {
+          "format": "date",
+          "title": "Dt",
+          "type": "string"
+        },
+        "FRQNCY": {
+          "$ref": "#/$defs/GenFrqncyEnum"
+        }
+      },
+      "required": [
+        "IID",
+        "DT",
+        "FRQNCY"
+      ],
+      "title": "AccFreqDimensionContainer[Annotated[str, StringConstraints, str, StringConstraints, Doc]]",
+      "type": "object"
+    },
+    "journey__model_dimension__AccFreqDimensionContainer_Annotated_str__StringConstraints__str__StringConstraints__Doc____2": {
+      "properties": {
+        "IID": {
+          "maxLength": 512,
+          "pattern": "^[IPU][a-zA-Z0-9_]+",
+          "title": "Iid",
+          "type": "string"
+        },
+        "DT": {
+          "format": "date",
+          "title": "Dt",
+          "type": "string"
+        },
+        "FRQNCY": {
+          "$ref": "#/$defs/GenFrqncyEnum"
+        }
+      },
+      "required": [
+        "IID",
+        "DT",
+        "FRQNCY"
+      ],
+      "title": "AccFreqDimensionContainer[Annotated[str, StringConstraints, str, StringConstraints, Doc]]",
+      "type": "object"
+    },
+    "journey__model_dimension__DimensionContainer_Annotated_str__StringConstraints__str__StringConstraints__Doc____1": {
+      "properties": {
+        "ID": {
+          "maxLength": 512,
+          "pattern": "^[ELTBP][a-zA-Z0-9_]+",
+          "title": "Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "ID"
+      ],
+      "title": "DimensionContainer[Annotated[str, StringConstraints, str, StringConstraints, Doc]]",
+      "type": "object"
+    },
+    "journey__model_dimension__DimensionContainer_Annotated_str__StringConstraints__str__StringConstraints__Doc____2": {
+      "properties": {
+        "ID": {
+          "maxLength": 512,
+          "pattern": "^[IP][a-zA-Z0-9_]+",
+          "title": "Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "ID"
+      ],
+      "title": "DimensionContainer[Annotated[str, StringConstraints, str, StringConstraints, Doc]]",
+      "type": "object"
+    },
+    "journey__model_dimension__DimensionContainer_Annotated_str__StringConstraints__str__StringConstraints__Doc____3": {
+      "properties": {
+        "ID": {
+          "maxLength": 512,
+          "pattern": "^[IPU][a-zA-Z0-9_]+",
+          "title": "Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "ID"
+      ],
+      "title": "DimensionContainer[Annotated[str, StringConstraints, str, StringConstraints, Doc]]",
+      "type": "object"
+    },
+    "journey__model_dimension__DimensionContainer_Annotated_str__StringConstraints__str__StringConstraints__Doc____4": {
+      "properties": {
+        "ID": {
+          "maxLength": 512,
+          "pattern": "^[IP][a-zA-Z0-9_]+",
+          "title": "Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "ID"
+      ],
+      "title": "DimensionContainer[Annotated[str, StringConstraints, str, StringConstraints, Doc]]",
+      "type": "object"
+    },
+    "journey__model_dimension__DimensionContainer_Annotated_str__StringConstraints__str__StringConstraints__Doc____5": {
+      "properties": {
+        "ID": {
+          "maxLength": 512,
+          "pattern": "^[a-zA-Z0-9]+",
+          "title": "Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "ID"
+      ],
+      "title": "DimensionContainer[Annotated[str, StringConstraints, str, StringConstraints, Doc]]",
+      "type": "object"
+    },
+    "journey__model_dimension__DimensionContainer_Annotated_str__StringConstraints__str__StringConstraints__Doc____6": {
+      "properties": {
+        "ID": {
+          "maxLength": 512,
+          "pattern": "^[IP][a-zA-Z0-9_]+",
+          "title": "Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "ID"
+      ],
+      "title": "DimensionContainer[Annotated[str, StringConstraints, str, StringConstraints, Doc]]",
+      "type": "object"
+    },
+    "journey__model_dimension__DimensionContainer_Annotated_str__StringConstraints__str__StringConstraints__Doc____7": {
+      "properties": {
+        "ID": {
+          "maxLength": 512,
+          "pattern": "^[P][a-zA-Z0-9_]+",
+          "title": "Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "ID"
+      ],
+      "title": "DimensionContainer[Annotated[str, StringConstraints, str, StringConstraints, Doc]]",
+      "type": "object"
+    },
+    "journey__model_dimension__DimensionContainer_Annotated_str__StringConstraints__str__StringConstraints__Doc____8": {
+      "properties": {
+        "ID": {
+          "maxLength": 512,
+          "pattern": "^[P][a-zA-Z0-9_]+",
+          "title": "Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "ID"
+      ],
+      "title": "DimensionContainer[Annotated[str, StringConstraints, str, StringConstraints, Doc]]",
+      "type": "object"
+    },
+    "journey__model_dimension__DtDimensionContainer_Annotated_str__StringConstraints__str__StringConstraints__Doc____1": {
+      "properties": {
+        "ID": {
+          "maxLength": 512,
+          "pattern": "^[IPU][a-zA-Z0-9_]+",
+          "title": "Id",
+          "type": "string"
+        },
+        "DT": {
+          "format": "date",
+          "title": "Dt",
+          "type": "string"
+        }
+      },
+      "required": [
+        "ID",
+        "DT"
+      ],
+      "title": "DtDimensionContainer[Annotated[str, StringConstraints, str, StringConstraints, Doc]]",
+      "type": "object"
+    },
+    "journey__model_dimension__DtDimensionContainer_Annotated_str__StringConstraints__str__StringConstraints__Doc____2": {
+      "properties": {
+        "ID": {
+          "maxLength": 512,
+          "pattern": "^[IP][a-zA-Z0-9_]+",
+          "title": "Id",
+          "type": "string"
+        },
+        "DT": {
+          "format": "date",
+          "title": "Dt",
+          "type": "string"
+        }
+      },
+      "required": [
+        "ID",
+        "DT"
+      ],
+      "title": "DtDimensionContainer[Annotated[str, StringConstraints, str, StringConstraints, Doc]]",
+      "type": "object"
+    },
+    "journey__model_dimension__DynmcDimensionContainer_Annotated_str__StringConstraints__str__StringConstraints__Doc____1": {
+      "properties": {
+        "ID": {
+          "maxLength": 512,
+          "pattern": "^[ELTBP][a-zA-Z0-9_]+",
+          "title": "Id",
+          "type": "string"
+        },
+        "VLD_FRM": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Vld Frm"
+        },
+        "VLD_T": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Vld T"
+        }
+      },
+      "required": [
+        "ID"
+      ],
+      "title": "DynmcDimensionContainer[Annotated[str, StringConstraints, str, StringConstraints, Doc]]",
+      "type": "object"
+    },
+    "journey__model_dimension__DynmcDimensionContainer_Annotated_str__StringConstraints__str__StringConstraints__Doc____2": {
+      "properties": {
+        "ID": {
+          "maxLength": 512,
+          "pattern": "^[IP][a-zA-Z0-9_]+",
+          "title": "Id",
+          "type": "string"
+        },
+        "VLD_FRM": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Vld Frm"
+        },
+        "VLD_T": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Vld T"
+        }
+      },
+      "required": [
+        "ID"
+      ],
+      "title": "DynmcDimensionContainer[Annotated[str, StringConstraints, str, StringConstraints, Doc]]",
+      "type": "object"
+    },
+    "journey__model_dimension__DynmcDimensionContainer_Annotated_str__StringConstraints__str__StringConstraints__Doc____3": {
+      "properties": {
+        "ID": {
+          "maxLength": 512,
+          "pattern": "^[IPU][a-zA-Z0-9_]+",
+          "title": "Id",
+          "type": "string"
+        },
+        "VLD_FRM": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Vld Frm"
+        },
+        "VLD_T": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Vld T"
+        }
+      },
+      "required": [
+        "ID"
+      ],
+      "title": "DynmcDimensionContainer[Annotated[str, StringConstraints, str, StringConstraints, Doc]]",
+      "type": "object"
+    },
+    "journey__model_dimension__FrqncyAccDimensionContainer_Annotated_str__StringConstraints__str__StringConstraints__Doc____1": {
+      "properties": {
+        "IID": {
+          "maxLength": 512,
+          "pattern": "^[P][a-zA-Z0-9_]+",
+          "title": "Iid",
+          "type": "string"
+        },
+        "DT": {
+          "format": "date",
+          "title": "Dt",
+          "type": "string"
+        },
+        "FRQNCY": {
+          "$ref": "#/$defs/GenFrqncyEnum"
+        }
+      },
+      "required": [
+        "IID",
+        "DT",
+        "FRQNCY"
+      ],
+      "title": "FrqncyAccDimensionContainer[Annotated[str, StringConstraints, str, StringConstraints, Doc]]",
+      "type": "object"
+    },
+    "journey__model_dimension__FrqncyAccDimensionContainer_Annotated_str__StringConstraints__str__StringConstraints__Doc____2": {
+      "properties": {
+        "IID": {
+          "maxLength": 512,
+          "pattern": "^[JIPC][a-zA-Z0-9_]+",
+          "title": "Iid",
+          "type": "string"
+        },
+        "DT": {
+          "format": "date",
+          "title": "Dt",
+          "type": "string"
+        },
+        "FRQNCY": {
+          "$ref": "#/$defs/GenFrqncyEnum"
+        }
+      },
+      "required": [
+        "IID",
+        "DT",
+        "FRQNCY"
+      ],
+      "title": "FrqncyAccDimensionContainer[Annotated[str, StringConstraints, str, StringConstraints, Doc]]",
+      "type": "object"
+    },
+    "journey__model_dimension__FrqncyAccDimensionContainer_Annotated_str__StringConstraints__str__StringConstraints__Doc____3": {
+      "properties": {
+        "IID": {
+          "maxLength": 512,
+          "pattern": "^[IP][a-zA-Z0-9_]+",
+          "title": "Iid",
+          "type": "string"
+        },
+        "DT": {
+          "format": "date",
+          "title": "Dt",
+          "type": "string"
+        },
+        "FRQNCY": {
+          "$ref": "#/$defs/GenFrqncyEnum"
+        }
+      },
+      "required": [
+        "IID",
+        "DT",
+        "FRQNCY"
+      ],
+      "title": "FrqncyAccDimensionContainer[Annotated[str, StringConstraints, str, StringConstraints, Doc]]",
+      "type": "object"
+    },
+    "journey__model_dimension__RelFrqncyAccDimensionContainer_Annotated_str__StringConstraints__str__StringConstraints__Doc__Annotated_str__StringConstraints__str__StringConstraints__Doc____1": {
+      "properties": {
+        "IID": {
+          "maxLength": 512,
+          "pattern": "^[IP][a-zA-Z0-9_]+",
+          "title": "Iid",
+          "type": "string"
+        },
+        "ID": {
+          "maxLength": 512,
+          "pattern": "^[ELTBP][a-zA-Z0-9_]+",
+          "title": "Id",
+          "type": "string"
+        },
+        "DT": {
+          "format": "date",
+          "title": "Dt",
+          "type": "string"
+        },
+        "FRQNCY": {
+          "$ref": "#/$defs/GenFrqncyEnum"
+        }
+      },
+      "required": [
+        "IID",
+        "ID",
+        "DT",
+        "FRQNCY"
+      ],
+      "title": "RelFrqncyAccDimensionContainer[Annotated[str, StringConstraints, str, StringConstraints, Doc], Annotated[str, StringConstraints, str, StringConstraints, Doc]]",
+      "type": "object"
+    },
+    "journey__model_dimension__RelFrqncyAccDimensionContainer_Annotated_str__StringConstraints__str__StringConstraints__Doc__Annotated_str__StringConstraints__str__StringConstraints__Doc____2": {
+      "properties": {
+        "IID": {
+          "maxLength": 512,
+          "pattern": "^[IPU][a-zA-Z0-9_]+",
+          "title": "Iid",
+          "type": "string"
+        },
+        "ID": {
+          "maxLength": 512,
+          "pattern": "^[ELTBP][a-zA-Z0-9_]+",
+          "title": "Id",
+          "type": "string"
+        },
+        "DT": {
+          "format": "date",
+          "title": "Dt",
+          "type": "string"
+        },
+        "FRQNCY": {
+          "$ref": "#/$defs/GenFrqncyEnum"
+        }
+      },
+      "required": [
+        "IID",
+        "ID",
+        "DT",
+        "FRQNCY"
+      ],
+      "title": "RelFrqncyAccDimensionContainer[Annotated[str, StringConstraints, str, StringConstraints, Doc], Annotated[str, StringConstraints, str, StringConstraints, Doc]]",
+      "type": "object"
+    },
+    "journey__model_dimension__RelFrqncyAccDimensionContainer_Annotated_str__StringConstraints__str__StringConstraints__Doc__Annotated_str__StringConstraints__str__StringConstraints__Doc____3": {
+      "properties": {
+        "IID": {
+          "maxLength": 512,
+          "pattern": "^[IP][a-zA-Z0-9_]+",
+          "title": "Iid",
+          "type": "string"
+        },
+        "ID": {
+          "maxLength": 512,
+          "pattern": "^[ELTBP][a-zA-Z0-9_]+",
+          "title": "Id",
+          "type": "string"
+        },
+        "DT": {
+          "format": "date",
+          "title": "Dt",
+          "type": "string"
+        },
+        "FRQNCY": {
+          "$ref": "#/$defs/GenFrqncyEnum"
+        }
+      },
+      "required": [
+        "IID",
+        "ID",
+        "DT",
+        "FRQNCY"
+      ],
+      "title": "RelFrqncyAccDimensionContainer[Annotated[str, StringConstraints, str, StringConstraints, Doc], Annotated[str, StringConstraints, str, StringConstraints, Doc]]",
+      "type": "object"
+    },
+    "journey__model_dimension__RelFrqncyAccDimensionContainer_Annotated_str__StringConstraints__str__StringConstraints__Doc__Annotated_str__StringConstraints__str__StringConstraints__Doc____4": {
+      "properties": {
+        "IID": {
+          "maxLength": 512,
+          "pattern": "^[IPU][a-zA-Z0-9_]+",
+          "title": "Iid",
+          "type": "string"
+        },
+        "ID": {
+          "maxLength": 512,
+          "pattern": "^[ELTBP_][a-zA-Z0-9_]+",
+          "title": "Id",
+          "type": "string"
+        },
+        "DT": {
+          "format": "date",
+          "title": "Dt",
+          "type": "string"
+        },
+        "FRQNCY": {
+          "$ref": "#/$defs/GenFrqncyEnum"
+        }
+      },
+      "required": [
+        "IID",
+        "ID",
+        "DT",
+        "FRQNCY"
+      ],
+      "title": "RelFrqncyAccDimensionContainer[Annotated[str, StringConstraints, str, StringConstraints, Doc], Annotated[str, StringConstraints, str, StringConstraints, Doc]]",
+      "type": "object"
+    },
+    "journey__structure__ifdat__acc__Datasets": {
+      "additionalProperties": false,
+      "properties": {
+        "DPST": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/journey__structure__ifdat__acc__DpstSeries"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Dpst"
+        },
+        "ASST_SFT": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/journey__structure__ifdat__acc__SftSeries"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Asst Sft"
+        },
+        "ASST_DBT": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/AsstDbtSeries"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Asst Dbt"
+        },
+        "ASST_LN": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/journey__structure__ifdat__acc__LnSeries"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Asst Ln"
+        },
+        "SHR": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/journey__structure__ifdat__acc__ShrSeries"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Shr"
+        },
+        "EDR": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/journey__structure__ifdat__acc__EdrSeries"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Edr"
+        },
+        "ODR": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/journey__structure__ifdat__acc__OdrSeries"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Odr"
+        },
+        "ASST_NN_FNNCL": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/AsstNnFnnclSeries"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Asst Nn Fnncl"
+        },
+        "ASST_RMNNG": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/AsstRmnngSeries"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Asst Rmnng"
+        },
+        "LBLTY_SFT": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/journey__structure__ifdat__acc__SftSeries"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Lblty Sft"
+        },
+        "LBLTY_DBT": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/LbltyDbtSeries"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Lblty Dbt"
+        },
+        "LBLTY_LN": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/journey__structure__ifdat__acc__LnSeries"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Lblty Ln"
+        },
+        "LBLTY_RMNNG": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/LbltyRmnngSeries"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Lblty Rmnng"
+        },
+        "HLDR": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/HldrSeries"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Hldr"
+        },
+        "RVN": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/RvnSeries"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Rvn"
+        },
+        "EXPNS": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/ExpnsSeries"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Expns"
+        },
+        "KEY": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/KeySeries"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Key"
+        }
+      },
+      "title": "Datasets",
+      "type": "object"
+    },
+    "journey__structure__ifdat__acc__DpstSeries": {
+      "properties": {
+        "DIMS": {
+          "$ref": "#/$defs/journey__model_dimension__FrqncyAccDimensionContainer_Annotated_str__StringConstraints__str__StringConstraints__Doc____2"
+        },
+        "STCK": {
+          "$ref": "#/$defs/BaseMeasure_Annotated_float__Ge__"
+        },
+        "FLS": {
+          "$ref": "#/$defs/BaseMeasure_float_"
+        },
+        "ACCRLS": {
+          "$ref": "#/$defs/BaseMeasure_float_"
+        }
+      },
+      "required": [
+        "DIMS",
+        "STCK",
+        "FLS",
+        "ACCRLS"
+      ],
+      "title": "DpstSeries",
+      "type": "object"
+    },
+    "journey__structure__ifdat__acc__EdrSeries": {
+      "properties": {
+        "DIMS": {
+          "$ref": "#/$defs/journey__model_dimension__RelFrqncyAccDimensionContainer_Annotated_str__StringConstraints__str__StringConstraints__Doc__Annotated_str__StringConstraints__str__StringConstraints__Doc____3"
+        },
+        "STCK": {
+          "$ref": "#/$defs/BaseMeasure_float_"
+        },
+        "FLS": {
+          "$ref": "#/$defs/BaseMeasure_float_"
+        },
+        "QNTTY": {
+          "$ref": "#/$defs/BaseMeasure_Annotated_float__Ge__"
+        }
+      },
+      "required": [
+        "DIMS",
+        "STCK",
+        "FLS",
+        "QNTTY"
+      ],
+      "title": "EdrSeries",
+      "type": "object"
+    },
+    "journey__structure__ifdat__acc__LnSeries": {
+      "properties": {
+        "DIMS": {
+          "$ref": "#/$defs/journey__model_dimension__AccFreqDimensionContainer_Annotated_str__StringConstraints__str__StringConstraints__Doc____1"
+        },
+        "STCK": {
+          "$ref": "#/$defs/BaseMeasure_Annotated_float__Ge__"
+        },
+        "FLS": {
+          "$ref": "#/$defs/BaseMeasure_float_"
+        },
+        "ACCRLS": {
+          "$ref": "#/$defs/BaseMeasure_float_"
+        },
+        "IS_GRP_LN": {
+          "$ref": "#/$defs/BaseMeasure_bool_"
+        }
+      },
+      "required": [
+        "DIMS",
+        "STCK",
+        "FLS",
+        "ACCRLS",
+        "IS_GRP_LN"
+      ],
+      "title": "LnSeries",
+      "type": "object"
+    },
+    "journey__structure__ifdat__acc__OdrSeries": {
+      "properties": {
+        "DIMS": {
+          "$ref": "#/$defs/journey__model_dimension__FrqncyAccDimensionContainer_Annotated_str__StringConstraints__str__StringConstraints__Doc____3"
+        },
+        "STCK": {
+          "$ref": "#/$defs/BaseMeasure_float_"
+        },
+        "FLS": {
+          "$ref": "#/$defs/BaseMeasure_float_"
+        }
+      },
+      "required": [
+        "DIMS",
+        "STCK",
+        "FLS"
+      ],
+      "title": "OdrSeries",
+      "type": "object"
+    },
+    "journey__structure__ifdat__acc__SftSeries": {
+      "properties": {
+        "DIMS": {
+          "$ref": "#/$defs/journey__model_dimension__FrqncyAccDimensionContainer_Annotated_str__StringConstraints__str__StringConstraints__Doc____1"
+        },
+        "STCK": {
+          "$ref": "#/$defs/BaseMeasure_Annotated_float__Ge__"
+        },
+        "FLS": {
+          "$ref": "#/$defs/BaseMeasure_float_"
+        }
+      },
+      "required": [
+        "DIMS",
+        "STCK",
+        "FLS"
+      ],
+      "title": "SftSeries",
+      "type": "object"
+    },
+    "journey__structure__ifdat__acc__ShrSeries": {
+      "properties": {
+        "DIMS": {
+          "$ref": "#/$defs/journey__model_dimension__RelFrqncyAccDimensionContainer_Annotated_str__StringConstraints__str__StringConstraints__Doc__Annotated_str__StringConstraints__str__StringConstraints__Doc____2"
+        },
+        "STCK": {
+          "$ref": "#/$defs/BaseMeasure_Annotated_float__Ge__"
+        },
+        "FLS": {
+          "$ref": "#/$defs/BaseMeasure_float_"
+        },
+        "QNTTY": {
+          "$ref": "#/$defs/BaseMeasure_Annotated_float__Ge__"
+        },
+        "LND_FR_SFT": {
+          "$ref": "#/$defs/BaseMeasure_Annotated_float__Ge__"
+        },
+        "IS_DRCT_INVSTMNT": {
+          "$ref": "#/$defs/BaseMeasure_bool_"
+        }
+      },
+      "required": [
+        "DIMS",
+        "STCK",
+        "FLS",
+        "QNTTY",
+        "LND_FR_SFT",
+        "IS_DRCT_INVSTMNT"
+      ],
+      "title": "ShrSeries",
+      "type": "object"
+    },
+    "journey__structure__ifdat__ref__Datasets": {
+      "additionalProperties": false,
+      "properties": {
+        "FND": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/FndSeries"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Fnd"
+        },
+        "FND_DYNMC": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/FndDynmcSeries"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Fnd Dynmc"
+        },
+        "SELF_DBT": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/SelfDbtSeries"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Self Dbt"
+        },
+        "SELF_DBT_DYNMC": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/SelfDbtDynmcSeries"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Self Dbt Dynmc"
+        },
+        "SELF_DBT_OUTSTNDNG_CHNG": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/SelfDbtOutstndngChngSeries"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Self Dbt Outstndng Chng"
+        },
+        "SELF_DBT_CPN": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/SelfCpnSeries"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Self Dbt Cpn"
+        },
+        "SELF_SHR": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/SelfShrSeries"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Self Shr"
+        },
+        "SELF_SHR_DYNMC": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/SelfShrDynmcSeries"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Self Shr Dynmc"
+        },
+        "SELF_SHR_DVDND": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/SelfDvdndSeries"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Self Shr Dvdnd"
+        },
+        "SELF_SHR_SPLT": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/SelfSpltSeries"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Self Shr Splt"
+        },
+        "MNGMNT": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/MngmntSeries"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Mngmnt"
+        },
+        "MNGMNT_DYNMC": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/MngmntDynmcSeries"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Mngmnt Dynmc"
+        },
+        "USR": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/UsrSeries"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Usr"
+        },
+        "USR_T_RA": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/Usr2RaSeries"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Usr T Ra"
+        },
+        "CNTRPRTY": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/CntrprtySeries"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Cntrprty"
+        },
+        "DPST": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/journey__structure__ifdat__ref__DpstSeries"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Dpst"
+        },
+        "SFT": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/journey__structure__ifdat__ref__SftSeries"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Sft"
+        },
+        "LN": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/journey__structure__ifdat__ref__LnSeries"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Ln"
+        },
+        "DBT": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/DbtSeries"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Dbt"
+        },
+        "SHR": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/journey__structure__ifdat__ref__ShrSeries"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Shr"
+        },
+        "EDR": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/journey__structure__ifdat__ref__EdrSeries"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Edr"
+        },
+        "ODR": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/journey__structure__ifdat__ref__OdrSeries"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Odr"
+        }
+      },
+      "title": "Datasets",
+      "type": "object"
+    },
+    "journey__structure__ifdat__ref__DpstSeries": {
+      "properties": {
+        "DIMS": {
+          "$ref": "#/$defs/journey__model_dimension__DimensionContainer_Annotated_str__StringConstraints__str__StringConstraints__Doc____6"
+        },
+        "DT_BRTH": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_date_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "DT_CLS": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_date_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "TYP": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_DepTypEnum_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "NTC": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_DepNtcEnum_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "CRRNCY": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_GenCrrncyEnum_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "DBTR": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/journey__model__BaseMeasure_Annotated_str__StringConstraints__str__StringConstraints__Doc____1"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "CRDTR": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/journey__model__BaseMeasure_Annotated_str__StringConstraints__str__StringConstraints__Doc____1"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "ALS_OF": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/journey__model__BaseMeasure_Annotated_str__StringConstraints__str__StringConstraints__Doc____5"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "DIMS"
+      ],
+      "title": "DpstSeries",
+      "type": "object"
+    },
+    "journey__structure__ifdat__ref__EdrSeries": {
+      "properties": {
+        "DIMS": {
+          "$ref": "#/$defs/journey__model_dimension__DimensionContainer_Annotated_str__StringConstraints__str__StringConstraints__Doc____4"
+        },
+        "DT_BRTH": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_date_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "DT_CLS": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_date_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "NM_LTN": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/journey__model__BaseMeasure_Annotated_str__StringConstraints__str__StringConstraints____4"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "TCKR": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/journey__model__BaseMeasure_Annotated_str__StringConstraints__str__StringConstraints____8"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "TYP": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_DrvtvTypEnum_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "CRRNCY": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_GenCrrncyEnum_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "MLTPLR": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_Annotated_float__Ge__"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "WRTR": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_GenMrktEnum_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "ALS_OF": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/journey__model__BaseMeasure_Annotated_str__StringConstraints__str__StringConstraints__Doc____7"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "DIMS"
+      ],
+      "title": "EdrSeries",
+      "type": "object"
+    },
+    "journey__structure__ifdat__ref__LnSeries": {
+      "properties": {
+        "DIMS": {
+          "$ref": "#/$defs/journey__model_dimension__DimensionContainer_Annotated_str__StringConstraints__str__StringConstraints__Doc____8"
+        },
+        "DT_BRTH": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_date_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "DT_CLS": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_date_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "CRRNCY": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_GenCrrncyEnum_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "TYP": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_LonTypEnum_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "DBTR": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/journey__model__BaseMeasure_Annotated_str__StringConstraints__str__StringConstraints__Doc____1"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "CRDTR": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/journey__model__BaseMeasure_Annotated_str__StringConstraints__str__StringConstraints__Doc____1"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "ALS_OF": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/journey__model__BaseMeasure_Annotated_str__StringConstraints__str__StringConstraints__Doc____3"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "DIMS"
+      ],
+      "title": "LnSeries",
+      "type": "object"
+    },
+    "journey__structure__ifdat__ref__OdrSeries": {
+      "properties": {
+        "DIMS": {
+          "$ref": "#/$defs/journey__model_dimension__DimensionContainer_Annotated_str__StringConstraints__str__StringConstraints__Doc____4"
+        },
+        "DT_BRTH": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_date_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "DT_CLS": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_date_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "NM_LTN": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/journey__model__BaseMeasure_Annotated_str__StringConstraints__str__StringConstraints____4"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "TYP": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_DrvtvTypEnum_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "CRRNCY": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_GenCrrncyEnum_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "MLTPLR": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_Annotated_float__Ge__"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "WRTR": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/journey__model__BaseMeasure_Annotated_str__StringConstraints__str__StringConstraints__Doc____1"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "BYR": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/journey__model__BaseMeasure_Annotated_str__StringConstraints__str__StringConstraints__Doc____1"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "ALS_OF": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/journey__model__BaseMeasure_Annotated_str__StringConstraints__str__StringConstraints__Doc____8"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "DIMS"
+      ],
+      "title": "OdrSeries",
+      "type": "object"
+    },
+    "journey__structure__ifdat__ref__SftSeries": {
+      "properties": {
+        "DIMS": {
+          "$ref": "#/$defs/journey__model_dimension__DimensionContainer_Annotated_str__StringConstraints__str__StringConstraints__Doc____7"
+        },
+        "DT_BRTH": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_date_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "DT_CLS": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_date_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "CRRNCY": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_GenCrrncyEnum_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "TYP": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_SftTypEnum_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "DBTR": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/journey__model__BaseMeasure_Annotated_str__StringConstraints__str__StringConstraints__Doc____1"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "CRDTR": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/journey__model__BaseMeasure_Annotated_str__StringConstraints__str__StringConstraints__Doc____1"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "ALS_OF": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/journey__model__BaseMeasure_Annotated_str__StringConstraints__str__StringConstraints__Doc____6"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "DIMS"
+      ],
+      "title": "SftSeries",
+      "type": "object"
+    },
+    "journey__structure__ifdat__ref__ShrSeries": {
+      "properties": {
+        "DIMS": {
+          "$ref": "#/$defs/journey__model_dimension__DimensionContainer_Annotated_str__StringConstraints__str__StringConstraints__Doc____3"
+        },
+        "DT_BRTH": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_date_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "DT_CLS": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_date_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "CRRNCY": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_GenCrrncyEnum_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "TYP": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaseMeasure_ShrEsaTypEnum_"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "ISSD_BY": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/journey__model__BaseMeasure_Annotated_str__StringConstraints__str__StringConstraints__Doc____1"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "ALS_OF": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/journey__model__BaseMeasure_Annotated_str__StringConstraints__str__StringConstraints__Doc____4"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "DIMS"
+      ],
+      "title": "ShrSeries",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "HEADER": {
+      "$ref": "#/$defs/Header"
+    },
+    "CATEGORIES": {
+      "$ref": "#/$defs/Categories"
+    }
+  },
+  "required": [
+    "HEADER",
+    "CATEGORIES"
+  ],
+  "title": "Message",
+  "type": "object"
+}

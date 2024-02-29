@@ -11,6 +11,14 @@ What's new?
 .. Next release
 .. ============
 
+v0.7.0 (2024-02-29)
+-------------------
+
+* Refactored excel data model
+* Added acknowledgment schema
+* Other syntactic changes
+* Example section (not available on this version)
+
 
 v0.6.1 (2023-09-15)
 -------------------

@@ -1,0 +1,12 @@
+"ID","NAME","DESCRIPTION"
+"--","Reset","Reset value"
+"OPEN","Open-end investment funds","
+            Open-end investment funds are investment funds whose units or
+            shares are, at the request of the holders, repurchased or redeemed
+            directly or indirectly out of the undertaking’s assets.
+            "
+"CLOSE","Closed-end investment funds","
+            Closed-end investment funds are investment funds with a fixed
+            number of issued shares whose shareholders have to buy or sell
+            existing shares to enter or leave the fund.
+            "

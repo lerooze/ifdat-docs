@@ -1,0 +1,32 @@
+"ID","NAME","DESCRIPTION"
+"--","Reset","Reset value"
+"DOM","Domestic","
+            Predominantly domestic investments.
+            "
+"EEA","Europe (EEA)","
+            Predominantly investments in Europe (EEA) region as defined in Guideline ESMA/2014/869EN.
+            "
+"OEA","Europe (other than EEA)","
+            Predominantly investments in Europe (other than EEA) region as defined in Guideline ESMA/2014/869EN.
+            "
+"NAM","North America","
+            Predominantly investments in North America region as defined in Guideline ESMA/2014/869EN.
+            "
+"SAM","South America","
+            Predominantly investments in South America region as defined in Guideline ESMA/2014/869EN.
+            "
+"ASP","Asia / Pacific","
+            Predominantly investments in Asia/Pacific region as defined in Guideline ESMA/2014/869EN.
+            "
+"MEA","Middle East","
+            Predominantly investments in Middle East region as defined in Guideline ESMA/2014/869EN.
+            "
+"AFR","Africa","
+            Predominantly investments in Africa region as defined in Guideline ESMA/2014/869EN.
+            Defined in Guideline ESMA/2014/869EN
+            "
+"OTH","Other","
+            Predominantly investments in assets issued by supranational entities or
+            it does not predominantly invest in any single geographical region
+            defined above.
+            "

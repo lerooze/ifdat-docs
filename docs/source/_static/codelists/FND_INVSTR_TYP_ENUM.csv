@@ -1,0 +1,12 @@
+"ID","NAME","DESCRIPTION"
+"--","Reset","Reset value"
+"PRF","Professional client","
+            An investment fund in which the holders are predominantly (more than 50%)
+            `professional clients`.  Professional client means a client who
+            meets the criteria laid down in Annex II to Directive 2014/65/EU.
+            "
+"RTL","Retail client","
+            An investment fund in which the holders are predominantly (more than 50%) `retail
+            clients`.  Retail client means a client who is not a professional
+            client as defined above.
+            "

@@ -1,11 +1,12 @@
 Λήψεις
 ======
 
-* :download:`Data Model <../_files/IFDAT_DATAMODEL.xlsx>`
-* :download:`Υπόδειγμα EXCEL <../_files/IFDAT_TEMPLATE.xlsx>`
-* :download:`JSON Schema <../_files/IFDAT_SCHEMA.json>`
+* :download:`Data Model </_static/structure/IFDAT_DATAMODEL.xlsx>`
+* :download:`Υπόδειγμα EXCEL </_static/structure/IFDAT_TEMPLATE.xlsx>`
+* :download:`JSON Schema </_static/structure/IFDAT_SCHEMA.json>`
+* :download:`Acknowledgement Schema </_static/structure/IFDAT_ACK.json>`
 
 
 Τις οδηγιές για offline χρήση θα τις κατεβάσετε κάνοντας click κάτω αριστερά
 στο **Read The docs** και έπειτα **Downloads** εκτός από τις οδηγίες σε WORD
-που θα τις κατεβάσετε :download:`εδώ <../_files/IFDat-Docs.docx>`
+που θα τις κατεβάσετε από :download:`εδώ </_static/IFDat-Docs.docx>`

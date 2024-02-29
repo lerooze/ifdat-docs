@@ -1,0 +1,487 @@
+{
+  "$defs": {
+    "CriticalErrorsModel": {
+      "properties": {
+        "no_header": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "No Header",
+          "type": "array"
+        },
+        "corrupt_excel": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Corrupt Excel",
+          "type": "array"
+        },
+        "not_supported_domain": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Not Supported Domain",
+          "type": "array"
+        },
+        "corrupt_json": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Corrupt Json",
+          "type": "array"
+        },
+        "submitter_inconsistency": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/SubmitterInconsistencyModel"
+          },
+          "title": "Submitter Inconsistency",
+          "type": "array"
+        },
+        "unauthorized_submitter": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/UnauthorizedSubmitterModel"
+          },
+          "title": "Unauthorized Submitter",
+          "type": "array"
+        },
+        "schema_errors": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/SchemaErrorSeries"
+          },
+          "title": "Schema Errors",
+          "type": "array"
+        },
+        "no_content": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "No Content",
+          "type": "array"
+        },
+        "wrong_suffix": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Wrong Suffix",
+          "type": "array"
+        }
+      },
+      "title": "CriticalErrorsModel",
+      "type": "object"
+    },
+    "DupAliasModel": {
+      "properties": {
+        "typ": {
+          "title": "Typ",
+          "type": "string"
+        },
+        "lid": {
+          "title": "Lid",
+          "type": "string"
+        },
+        "rids": {
+          "title": "Rids",
+          "type": "string"
+        }
+      },
+      "required": [
+        "typ",
+        "lid",
+        "rids"
+      ],
+      "title": "DupAliasModel",
+      "type": "object"
+    },
+    "EmailInfo": {
+      "properties": {
+        "email_id": {
+          "title": "Email Id",
+          "type": "integer"
+        },
+        "email_subject": {
+          "title": "Email Subject",
+          "type": "string"
+        },
+        "email_date": {
+          "format": "date-time",
+          "title": "Email Date",
+          "type": "string"
+        },
+        "files": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Files",
+          "type": "array"
+        }
+      },
+      "required": [
+        "email_id",
+        "email_subject",
+        "email_date"
+      ],
+      "title": "EmailInfo",
+      "type": "object"
+    },
+    "FileInfoStatus": {
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "processed": {
+          "title": "Processed",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "name",
+        "processed"
+      ],
+      "title": "FileInfoStatus",
+      "type": "object"
+    },
+    "SchemaErrorSeries": {
+      "properties": {
+        "filename": {
+          "title": "Filename",
+          "type": "string"
+        },
+        "location": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Location"
+        },
+        "message": {
+          "anyOf": [
+            {
+              "maxLength": 512,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Message"
+        },
+        "input": {
+          "anyOf": [
+            {
+              "maxLength": 512,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Input"
+        },
+        "domain": {
+          "anyOf": [
+            {
+              "maxLength": 32,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Domain"
+        },
+        "type": {
+          "anyOf": [
+            {
+              "maxLength": 32,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Type"
+        },
+        "level": {
+          "anyOf": [
+            {
+              "maxLength": 32,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Level"
+        },
+        "line": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Line"
+        },
+        "column": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Column"
+        },
+        "file": {
+          "anyOf": [
+            {
+              "maxLength": 512,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "File"
+        }
+      },
+      "required": [
+        "filename"
+      ],
+      "title": "SchemaErrorSeries",
+      "type": "object"
+    },
+    "StandardErrorsModel": {
+      "properties": {
+        "dup_alias": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/DupAliasModel"
+          },
+          "title": "Dup Alias",
+          "type": "array"
+        }
+      },
+      "title": "StandardErrorsModel",
+      "type": "object"
+    },
+    "SubmitterInconsistencyModel": {
+      "properties": {
+        "filename": {
+          "title": "Filename",
+          "type": "string"
+        },
+        "from_filename": {
+          "anyOf": [
+            {
+              "maxLength": 512,
+              "pattern": "^[a-zA-Z0-9]+",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "From Filename"
+        },
+        "from_object": {
+          "anyOf": [
+            {
+              "maxLength": 512,
+              "pattern": "^[a-zA-Z0-9]+",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "From Object"
+        }
+      },
+      "required": [
+        "filename"
+      ],
+      "title": "SubmitterInconsistencyModel",
+      "type": "object"
+    },
+    "UnauthorizedSubmitterModel": {
+      "properties": {
+        "filename": {
+          "title": "Filename",
+          "type": "string"
+        },
+        "domain": {
+          "title": "Domain",
+          "type": "string"
+        }
+      },
+      "required": [
+        "filename",
+        "domain"
+      ],
+      "title": "UnauthorizedSubmitterModel",
+      "type": "object"
+    },
+    "WarningsModel": {
+      "properties": {
+        "empty_sheet": {
+          "default": [],
+          "items": {
+            "maxItems": 2,
+            "minItems": 2,
+            "prefixItems": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "string"
+              }
+            ],
+            "type": "array"
+          },
+          "title": "Empty Sheet",
+          "type": "array"
+        }
+      },
+      "title": "WarningsModel",
+      "type": "object"
+    }
+  },
+  "properties": {
+    "id": {
+      "title": "Id",
+      "type": "integer"
+    },
+    "submitter": {
+      "anyOf": [
+        {
+          "maxLength": 512,
+          "pattern": "^[a-zA-Z0-9]+",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Submitter"
+    },
+    "submitter_email": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Submitter Email"
+    },
+    "submitter_unknown": {
+      "default": false,
+      "title": "Submitter Unknown",
+      "type": "boolean"
+    },
+    "data_domain": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Data Domain"
+    },
+    "emails": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/EmailInfo"
+      },
+      "title": "Emails",
+      "type": "array"
+    },
+    "files": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/FileInfoStatus"
+      },
+      "title": "Files",
+      "type": "array"
+    },
+    "critical_errors": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/CriticalErrorsModel"
+        }
+      ],
+      "default": {
+        "no_header": [],
+        "corrupt_excel": [],
+        "not_supported_domain": [],
+        "corrupt_json": [],
+        "submitter_inconsistency": [],
+        "unauthorized_submitter": [],
+        "schema_errors": [],
+        "no_content": [],
+        "wrong_suffix": []
+      }
+    },
+    "standard_errors": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/StandardErrorsModel"
+        }
+      ],
+      "default": {
+        "dup_alias": []
+      }
+    },
+    "warnings": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/WarningsModel"
+        }
+      ],
+      "default": {
+        "empty_sheet": []
+      }
+    }
+  },
+  "required": [
+    "id"
+  ],
+  "title": "AcknowledgeModel",
+  "type": "object"
+}

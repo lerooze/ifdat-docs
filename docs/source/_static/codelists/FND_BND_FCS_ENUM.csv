@@ -1,0 +1,14 @@
+"ID","NAME","DESCRIPTION"
+"--","Reset","Reset value"
+"GOV","Government bond","
+            Bond funds that predominantly (more than 50%) invest in debt
+            securities issued by governments.
+            "
+"COR","Corporate bond","
+            Bond funds that predominantly (more than 50%) invest in debt
+            securities issued by financial and non-financial corporations.
+            "
+"MIX","Mix bond","
+            Bond funds that invest in both government and corporate bonds with
+            no prevailing policy in favour of one or the other.
+            "

@@ -1,0 +1,8 @@
+"ID","NAME","DESCRIPTION"
+"--","Reset","Reset value"
+"ACC","Accounting Department","Accounting Department"
+"ECO","Economics Department","Economics Department"
+"COM","Regulatory Compliance Department","Regulatory Compliance Department"
+"FIN","Financial Operations Department","Financial Operations Department"
+"STA","Statistics Department","Statistics Department"
+"ORG","Organisation Department","Organisation Department"

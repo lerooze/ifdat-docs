@@ -60,7 +60,9 @@ templates_path = ["_templates"]
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-# language = "el"
+language = "el"
+latex_engine = "xelatex"
+latex_use_xindy = False
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
@@ -75,6 +77,3 @@ html_theme = "sphinx_book_theme"
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-latex_engine = "xelatex"
-latex_use_xindy = False
-language = "el"
