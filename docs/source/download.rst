@@ -6,7 +6,6 @@
 * :download:`Υπόδειγμα EXCEL </_static/structure/IFDAT_TEMPLATE.xlsx>`
 * :download:`JSON Schema </_static/structure/IFDAT_SCHEMA.json>`
 * :download:`IFDAT-RAS </_static/structure/IFDAT-RAS.xlsx>`
-.. * :download:`Acknowledgement Schema </_static/structure/ACK_SCHEMA.json>`
 
 Στο Excel αρχείο :download:`IFDAT-RAS </_static/structure/IFDAT-RAS.xlsx>` στο
 

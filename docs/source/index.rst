@@ -7,7 +7,7 @@ DISCLAIMER: Το παρόν αποτελεί σχέδιο και δεν έχει
 Οργανισμοί με χώρα καταγωγής την Ελλάδα θα υποβάλουν τα αναλυτικά στατιστικά
 τους στοιχεία στην Τράπεζα της Ελλάδος.
 
-Στο Excel αρχείο :download:`IFDAT-RAS </_static/structure/IFDAT-RAS.xlsx>` στο
+Στο Excel αρχείο :download:`IFDAT-RAS </_static/IFDAT-RAS.xlsx>` στο
 φύλλο RAS παρουσιάζονται οι μονάδες παροχής στοιχείων του IFDAT.  Στο φύλλο OAS
 παρουσιάζονται οι ΕΟ του IFDAT, στο φύλλο SHR παρουσιάζονται οι ίδιες
 μετοχές/μερίδια των ΕΟ του IFDAT και στο φύλλο DBT οι ίδιες εκδόσεις των ΕΟ του
@@ -70,7 +70,6 @@ IFDAT.
    validation
    types 
    download
-   .. examples
    whatsnew
    dev
 

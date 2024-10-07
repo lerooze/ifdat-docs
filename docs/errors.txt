@@ -1,9 +1,6 @@
-[91m/home/al459/envs/ifdat-docs/docs/source/download.rst:7: WARNING: download file not readable: /home/al459/envs/ifdat-docs/docs/source/_static/structure/IFDAT_ACKACK.json[39;49;00m
-[91m/home/al459/envs/ifdat-docs/docs/source/download.rst:10: WARNING: download file not readable: /home/al459/envs/ifdat-docs/docs/source/_static/IFDat-Docs.docx[39;49;00m
 [91m/home/al459/envs/ifdat-docs/docs/source/examples.rst:6: WARNING: toctree contains reference to nonexisting document 'examples/by_category_table'[39;49;00m
-[91m/home/al459/envs/ifdat-docs/docs/source/examples/by_ra_type/ucitsmc/t0.rst.rst:81: WARNING: line number spec is out of range(1-838): '799-865'[39;49;00m
-[91m/home/al459/envs/ifdat-docs/docs/source/model/attrs.rst: WARNING: document isn't included in any toctree[39;49;00m
-[91m/home/al459/envs/ifdat-docs/docs/source/model/dims.rst: WARNING: document isn't included in any toctree[39;49;00m
-[91m/home/al459/envs/ifdat-docs/docs/source/model/dsds.rst: WARNING: document isn't included in any toctree[39;49;00m
-[91m/home/al459/envs/ifdat-docs/docs/source/model/measures.rst: WARNING: document isn't included in any toctree[39;49;00m
-[91m/home/al459/envs/ifdat-docs/docs/source/model/types.rst: WARNING: document isn't included in any toctree[39;49;00m
+[91m/home/al459/envs/ifdat-docs/docs/source/index.rst:10: WARNING: download file not readable: /home/al459/envs/ifdat-docs/docs/source/_static/IFDAT-RAS.xlsx[39;49;00m
+[91m/home/al459/envs/ifdat-docs/docs/source/examples.rst: WARNING: document isn't included in any toctree[39;49;00m
+[91m/home/al459/envs/ifdat-docs/docs/source/tables/acc/lblty_sft.rst: WARNING: document isn't included in any toctree[39;49;00m
+[91m/home/al459/envs/ifdat-docs/docs/source/validation/accounting.rst: WARNING: document isn't included in any toctree[39;49;00m
+[91m/home/al459/envs/ifdat-docs/docs/source/validation/critical.rst: WARNING: document isn't included in any toctree[39;49;00m
