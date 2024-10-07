@@ -1,6 +1,6 @@
-"ID","NAME","DESCRIPTION"
-"--","Reset","Reset value"
-"0","not applicable","not applicable"
-"1","Public","Public as defined in Regulation (EU) No 549/2013 (paragraphs 2.35 to 2.39)"
-"2","National private","National private as defined in Regulation (EU) No 549/2013 (paragraphs 2.35 to 2.39)"
-"3","Foreign controlled","Foreign controlled as defined in Regulation (EU) No 549/2013 (paragraphs 2.35 to 2.39)"
+"ID","NAME","DESCRIPTION","IID"
+".","Reset","Reset value",0
+"0","not applicable","not applicable",1
+"1","Public","Public as defined in Regulation (EU) No 549/2013 (paragraphs 2.35 to 2.39)",2
+"2","National private","National private as defined in Regulation (EU) No 549/2013 (paragraphs 2.35 to 2.39)",3
+"3","Foreign controlled","Foreign controlled as defined in Regulation (EU) No 549/2013 (paragraphs 2.35 to 2.39)",4

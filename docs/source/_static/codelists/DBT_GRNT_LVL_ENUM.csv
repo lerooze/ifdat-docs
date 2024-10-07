@@ -1,6 +1,6 @@
-"ID","NAME","DESCRIPTION"
-"--","Reset","Reset value"
-"UNGUARANTEED","Unguaranteed","Unguaranteed"
-"GOVERNMENT","Government / Treasury guarantee","Government / Treasury guarantee"
-"OTHER","Other guarantee","Other guarantee"
-"NA","No detail information available","No detail information available"
+"ID","NAME","DESCRIPTION","IID"
+".","Reset","Reset value",0
+"UNGUARANTEED","Unguaranteed","Unguaranteed",1
+"GOVERNMENT","Government / Treasury guarantee","Government / Treasury guarantee",2
+"OTHER","Other guarantee","Other guarantee",3
+"NA","No detail information available","No detail information available",4

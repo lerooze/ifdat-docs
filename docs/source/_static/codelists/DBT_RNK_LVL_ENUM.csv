@@ -1,10 +1,10 @@
-"ID","NAME","DESCRIPTION"
-"--","Reset","Reset value"
-"SUB_JUNIOR","Subordinated - Junior level","Subordinated - Junior level"
-"SUB_SENIOR","Subordinated - Senior level","Subordinated - Senior level"
-"SUB_NOINFO","Subordinated - No further breakdown available","Subordinated - No further breakdown available"
-"SENIOR","Senior","Senior"
-"ABS_JUNIOR","ABS Class - Junior","ABS Class - Junior"
-"ABS_MEZZANINE","ABS Class - Mezzanine","ABS Class - Mezzanine"
-"ABS_SENIOR","ABS Class - Senior","ABS Class - Senior"
-"NOINFO","No detail information available","No detail information available"
+"ID","NAME","DESCRIPTION","IID"
+".","Reset","Reset value",0
+"SUB_JUNIOR","Subordinated - Junior level","Subordinated - Junior level",1
+"SUB_SENIOR","Subordinated - Senior level","Subordinated - Senior level",2
+"SUB_NOINFO","Subordinated - No further breakdown available","Subordinated - No further breakdown available",3
+"SENIOR","Senior","Senior",4
+"ABS_JUNIOR","ABS Class - Junior","ABS Class - Junior",5
+"ABS_MEZZANINE","ABS Class - Mezzanine","ABS Class - Mezzanine",6
+"ABS_SENIOR","ABS Class - Senior","ABS Class - Senior",7
+"NOINFO","No detail information available","No detail information available",8

@@ -1,43 +1,43 @@
-"ID","NAME","DESCRIPTION"
-"--","Reset","Reset value"
-"ARS","Argentine Peso","Argentine Peso"
-"AUD","Australian Dollar","Australian Dollar"
-"BGN","Bulgarian Lev","Bulgarian Lev"
-"BRL","Brazilian Real","Brazilian Real"
-"CAD","Canadian Dollar","Canadian Dollar"
-"CHF","Swiss Franc","Swiss Franc"
-"CLP","Chilean Peso","Chilean Peso"
-"CNY","Yuan Renminbi","Yuan Renminbi"
-"COP","Colombian Peso","Colombian Peso"
-"CZK","Czech Koruna","Czech Koruna"
-"DKK","Danish Krone","Danish Krone"
-"EGP","Egyptian Pound","Egyptian Pound"
-"EUR","Euro","Euro"
-"GBP","Pound Sterling","Pound Sterling"
-"HKD","Hong Kong Dollar","Hong Kong Dollar"
-"HRK","Croatian Kuna","Croatian Kuna"
-"HUF","Hungarian Forint","Hungarian Forint"
-"IDR","Rupiah","Rupiah"
-"ILS","New Israeli Sheqel","New Israeli Sheqel"
-"INR","Indian Rupee","Indian Rupee"
-"JPY","Japanese Yen","Japanese Yen"
-"KRW","South Korean Won","South Korean Won"
-"KZT","Tenge","Tenge"
-"MXN","Mexican Peso","Mexican Peso"
-"NOK","Norwegian Krone","Norwegian Krone"
-"PEN","Nuevo Sol","Nuevo Sol"
-"PGK","Kina","Kina"
-"PHP","Philippine Peso","Philippine Peso"
-"PLN","Polish Zloty","Polish Zloty"
-"RON","New Leu","New Leu"
-"RSD","Serbian Dinar","Serbian Dinar"
-"RUB","Russian Ruble","Russian Ruble"
-"SEK","Swedish Krona","Swedish Krona"
-"SGD","Singapore Dollar","Singapore Dollar"
-"THB","Thai Baht","Thai Baht"
-"TRY","New Turkish Lira","New Turkish Lira"
-"TWD","New Taiwan Dollar","New Taiwan Dollar"
-"UAH","Hryvnia","Hryvnia"
-"USD","US Dollar","US Dollar"
-"ZAR","South African Rand","South African Rand"
-"GRD","GRD","Greek Drachma"
+"ID","NAME","DESCRIPTION","IID"
+".","Reset","Reset value",0
+"ARS","Argentine Peso","Argentine Peso",1
+"AUD","Australian Dollar","Australian Dollar",2
+"BGN","Bulgarian Lev","Bulgarian Lev",3
+"BRL","Brazilian Real","Brazilian Real",4
+"CAD","Canadian Dollar","Canadian Dollar",5
+"CHF","Swiss Franc","Swiss Franc",6
+"CLP","Chilean Peso","Chilean Peso",7
+"CNY","Yuan Renminbi","Yuan Renminbi",8
+"COP","Colombian Peso","Colombian Peso",9
+"CZK","Czech Koruna","Czech Koruna",10
+"DKK","Danish Krone","Danish Krone",11
+"EGP","Egyptian Pound","Egyptian Pound",12
+"EUR","Euro","Euro",13
+"GBP","Pound Sterling","Pound Sterling",14
+"HKD","Hong Kong Dollar","Hong Kong Dollar",15
+"HRK","Croatian Kuna","Croatian Kuna",16
+"HUF","Hungarian Forint","Hungarian Forint",17
+"IDR","Rupiah","Rupiah",18
+"ILS","New Israeli Sheqel","New Israeli Sheqel",19
+"INR","Indian Rupee","Indian Rupee",20
+"JPY","Japanese Yen","Japanese Yen",21
+"KRW","South Korean Won","South Korean Won",22
+"KZT","Tenge","Tenge",23
+"MXN","Mexican Peso","Mexican Peso",24
+"NOK","Norwegian Krone","Norwegian Krone",25
+"PEN","Nuevo Sol","Nuevo Sol",26
+"PGK","Kina","Kina",27
+"PHP","Philippine Peso","Philippine Peso",28
+"PLN","Polish Zloty","Polish Zloty",29
+"RON","New Leu","New Leu",30
+"RSD","Serbian Dinar","Serbian Dinar",31
+"RUB","Russian Ruble","Russian Ruble",32
+"SEK","Swedish Krona","Swedish Krona",33
+"SGD","Singapore Dollar","Singapore Dollar",34
+"THB","Thai Baht","Thai Baht",35
+"TRY","New Turkish Lira","New Turkish Lira",36
+"TWD","New Taiwan Dollar","New Taiwan Dollar",37
+"UAH","Hryvnia","Hryvnia",38
+"USD","US Dollar","US Dollar",39
+"ZAR","South African Rand","South African Rand",40
+"GRD","GRD","Greek Drachma",41

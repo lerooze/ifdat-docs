@@ -1,36 +1,36 @@
-"ID","NAME","DESCRIPTION"
-"--","Reset","Reset value"
-"A","Annual","Annual"
-"B","Daily - businessweek","Daily - businessweek"
-"D","Daily","Daily"
-"H","Hourly","Hourly"
-"M","Monthly","Monthly"
-"N","Minutely","Minutely"
-"Q","Quarterly","Quarterly"
-"S","Half-yearly, semester","Half-yearly, semester"
-"W","Weekly","Weekly"
-"A2","Biennial","Biennial"
-"A3","Triennial","Triennial"
-"A4","Quadrennial","Quadrennial"
-"A5","Quinquennial","Quinquennial"
-"A10","Decennial","Decennial"
-"A20","Bidecennial","Bidecennial"
-"A30","Tridecennial","Tridecennial"
-"A_3","Three times a year","Three times a year"
-"M2","Bimonthly","Bimonthly"
-"M_2","Semimonthly","Semimonthly"
-"M_3","Three times a month","Three times a month"
-"W2","Biweekly","Biweekly"
-"W3","Triweekly","Triweekly"
-"W4","Four-weekly","Four-weekly"
-"W_2","Semiweekly","Semiweekly"
-"W_3","Three times a week","Three times a week"
-"D_2","Twice a day","Twice a day"
-"H2","Bihourly","Bihourly"
-"H3","Trihourly","Trihourly"
-"I","Irregular","Irregular"
-"OA","Occasional annual","Occasional annual"
-"OM","Occasional monthly","Occasional monthly"
-"_O","Other","Other"
-"_U","Unspecified","Unspecified"
-"_Z","Not applicable","Not applicable"
+"ID","NAME","DESCRIPTION","IID"
+".","Reset","Reset value",0
+"A","Annual","Annual",1
+"B","Daily - businessweek","Daily - businessweek",2
+"D","Daily","Daily",3
+"H","Hourly","Hourly",4
+"M","Monthly","Monthly",5
+"N","Minutely","Minutely",6
+"Q","Quarterly","Quarterly",7
+"S","Half-yearly, semester","Half-yearly, semester",8
+"W","Weekly","Weekly",9
+"A2","Biennial","Biennial",10
+"A3","Triennial","Triennial",11
+"A4","Quadrennial","Quadrennial",12
+"A5","Quinquennial","Quinquennial",13
+"A10","Decennial","Decennial",14
+"A20","Bidecennial","Bidecennial",15
+"A30","Tridecennial","Tridecennial",16
+"A_3","Three times a year","Three times a year",17
+"M2","Bimonthly","Bimonthly",18
+"M_2","Semimonthly","Semimonthly",19
+"M_3","Three times a month","Three times a month",20
+"W2","Biweekly","Biweekly",21
+"W3","Triweekly","Triweekly",22
+"W4","Four-weekly","Four-weekly",23
+"W_2","Semiweekly","Semiweekly",24
+"W_3","Three times a week","Three times a week",25
+"D_2","Twice a day","Twice a day",26
+"H2","Bihourly","Bihourly",27
+"H3","Trihourly","Trihourly",28
+"I","Irregular","Irregular",29
+"OA","Occasional annual","Occasional annual",30
+"OM","Occasional monthly","Occasional monthly",31
+"_O","Other","Other",32
+"_U","Unspecified","Unspecified",33
+"_Z","Not applicable","Not applicable",34

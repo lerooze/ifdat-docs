@@ -1,9 +1,9 @@
-"ID","NAME","DESCRIPTION"
-"--","Reset","Reset value"
-"PUBLIC","Public sector covered bond","Public sector covered bond"
-"MORTGAGE","Mortgage covered bond","Mortgage covered bond"
-"SHIP","Ship covered bond","Ship covered bond"
-"AIRCRAFT","Aircraft covered bond","Aircraft covered bond"
-"MIX","Mixed covered bond","Mixed covered bond"
-"OTHER","Other covered bond","Other covered bond"
-"NOINFO","No detailed classification available","No detailed classification available"
+"ID","NAME","DESCRIPTION","IID"
+".","Reset","Reset value",0
+"PUBLIC","Public sector covered bond","Public sector covered bond",1
+"MORTGAGE","Mortgage covered bond","Mortgage covered bond",2
+"SHIP","Ship covered bond","Ship covered bond",3
+"AIRCRAFT","Aircraft covered bond","Aircraft covered bond",4
+"MIX","Mixed covered bond","Mixed covered bond",5
+"OTHER","Other covered bond","Other covered bond",6
+"NOINFO","No detailed classification available","No detailed classification available",7

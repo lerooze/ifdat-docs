@@ -1,6 +1,7 @@
-"ID","NAME","DESCRIPTION"
-"F511","Listed shares","Listed shares"
-"F512","Unlisted shares","Unlisted shares"
-"F519","Other equity","Other equity"
-"F521","Money market fund shares/units","Money market fund shares/units"
-"F522","Non-MMF investment fund shares/units","Non-MMF investment fund shares/units"
+"ID","NAME","DESCRIPTION","IID"
+".","Reset","Reset value",0
+"F511","Listed shares","Listed shares",1
+"F512","Unlisted shares","Unlisted shares",2
+"F519","Other equity","Other equity",3
+"F521","Money market fund shares/units","Money market fund shares/units",4
+"F522","Non-MMF investment fund shares/units","Non-MMF investment fund shares/units",5

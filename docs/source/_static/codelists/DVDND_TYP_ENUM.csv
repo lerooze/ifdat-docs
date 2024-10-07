@@ -1,16 +1,16 @@
-"ID","NAME","DESCRIPTION"
-"--","Reset","Reset value"
-"10","10","Dividend amount paid in cash per share"
-"20","20","Dividend amount paid in kind per share"
-"11","11","Distributing income - Direct provision"
-"12","12","Distributing income - Fund entity derivation"
-"13","13","Distributing income - Benchmark derivation"
-"21","21","Cumulative income - Direct provision"
-"22","22","Cumulative income - Fund entity derivation"
-"23","23","Cumulative income - Benchmark derivation"
-"31","31","Mixed income - Direct provision"
-"32","32","Mixed income - Fund entity derivation"
-"33","33","Mixed income - Benchmark derivation"
-"91","91","No detailed information available - Direct provision"
-"92","92","No detailed information available - Fund entity derivation"
-"93","93","No detailed information available - Benchmark derivation"
+"ID","NAME","DESCRIPTION","IID"
+".","Reset","Reset value",0
+"10","10","Dividend amount paid in cash per share",1
+"20","20","Dividend amount paid in kind per share",2
+"11","11","Distributing income - Direct provision",3
+"12","12","Distributing income - Fund entity derivation",4
+"13","13","Distributing income - Benchmark derivation",5
+"21","21","Cumulative income - Direct provision",6
+"22","22","Cumulative income - Fund entity derivation",7
+"23","23","Cumulative income - Benchmark derivation",8
+"31","31","Mixed income - Direct provision",9
+"32","32","Mixed income - Fund entity derivation",10
+"33","33","Mixed income - Benchmark derivation",11
+"91","91","No detailed information available - Direct provision",12
+"92","92","No detailed information available - Fund entity derivation",13
+"93","93","No detailed information available - Benchmark derivation",14

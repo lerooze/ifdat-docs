@@ -1,7 +1,7 @@
-"ID","NAME","DESCRIPTION"
-"--","Reset","Reset value"
-"AI_DPST","Accrued interest receivable on deposits","Accrued interest receivable on deposits"
-"AI_LN","Accrued interest receivable on loans","Accrued interest receivable on loans"
-"AI_DBT","Accrued interest receivable on debt securities","Accrued interest receivable on debt securities"
-"AR","Accrued rent receivable","Accrued rent receivable"
-"OTR","Other remaining assets not due to accrued interest or accured rent","Other remaining assets not due to accrued interest or accured rent"
+"ID","NAME","DESCRIPTION","IID"
+".","Reset","Reset value",0
+"AI_DPST","Accrued interest receivable on deposits","Accrued interest receivable on deposits",1
+"AI_LN","Accrued interest receivable on loans","Accrued interest receivable on loans",2
+"AI_DBT","Accrued interest receivable on debt securities","Accrued interest receivable on debt securities",3
+"AR","Accrued rent receivable","Accrued rent receivable",4
+"OTR","Other remaining assets not due to accrued interest or accured rent","Other remaining assets not due to accrued interest or accured rent",5

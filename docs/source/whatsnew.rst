@@ -11,6 +11,17 @@ What's new?
 .. Next release
 .. ============
 
+v0.7.1 (2024-10-07)
+-------------------
+
+* Refactored excel data model
+* New json schema for improvements in data model
+* Removed temporarily acknowledgment schema
+* Removed examples temporarily
+* Improve documentation
+* Improve regular expressions
+* Added IF reporting agents report
+
 v0.7.0 (2024-02-29)
 -------------------
 

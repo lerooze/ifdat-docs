@@ -1,6 +1,6 @@
-"ID","NAME","DESCRIPTION"
-"--","Reset","Reset value"
-"BND","Bond","Bond"
-"MNY","Money market instrument","Money market instrument"
-"HBRD","Hybrid debt instrument","Hybrid debt instrument"
-"OTHR","Other debt","Other debt"
+"ID","NAME","DESCRIPTION","IID"
+".","Reset","Reset value",0
+"BND","Bond","Bond",1
+"MNY","Money market instrument","Money market instrument",2
+"HBRD","Hybrid debt instrument","Hybrid debt instrument",3
+"OTHR","Other debt","Other debt",4

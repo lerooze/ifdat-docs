@@ -1,15 +1,15 @@
-"ID","NAME","DESCRIPTION"
-"--","Reset","Reset value"
+"ID","NAME","DESCRIPTION","IID"
+".","Reset","Reset value",0
 "DIS","Distribution fund","
             An investment fund which predominantly (more than 50%) pays out the income it
             receives to its shareholders as cash.
-            "
+            ",1
 "CUM","Cumulative fund","
             A fund which predominantly (more than 50%) reinvests the income it receives in
             accordance with its investment policy.
-            "
+            ",2
 "MIX","Mixed dividend distribution fund","
             A fund which uses the income it receives both to pay out to its
             shareholders as cash and to reinvest in accordance with its
             investment policy.
-            "
+            ",3

@@ -1,10 +1,10 @@
-"ID","NAME","DESCRIPTION"
-"--","Reset","Reset value"
-"CAL","Call option","Call option"
-"PUT","Put option","Put option"
-"WAR","Warrant","Warrant"
-"FUT","Future","Future"
-"FOR","Forward","Forward"
-"SWA","Swap","Swap"
-"EMC","Employee stock call option","Employee stock call option"
-"OTH","Other derivative","Other derivative"
+"ID","NAME","DESCRIPTION","IID"
+".","Reset","Reset value",0
+"CAL","Call option","Call option",1
+"PUT","Put option","Put option",2
+"WAR","Warrant","Warrant",3
+"FUT","Future","Future",4
+"FOR","Forward","Forward",5
+"SWA","Swap","Swap",6
+"EMC","Employee stock call option","Employee stock call option",7
+"OTH","Other derivative","Other derivative",8

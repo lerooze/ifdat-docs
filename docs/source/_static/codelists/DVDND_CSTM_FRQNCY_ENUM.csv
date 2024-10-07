@@ -1,9 +1,9 @@
-"ID","NAME","DESCRIPTION"
-"--","Reset","Reset value"
-"AN","Annual","Annual"
-"SA","Semi-annual","Semi-annual"
-"QA","Quarterly","Quarterly"
-"BM","Bi-monthly","Bi-monthly"
-"MO","Monthly","Monthly"
-"WE","Weekly","Weekly"
-"DA","Daily","Daily"
+"ID","NAME","DESCRIPTION","IID"
+".","Reset","Reset value",0
+"AN","Annual","Annual",1
+"SA","Semi-annual","Semi-annual",2
+"QA","Quarterly","Quarterly",3
+"BM","Bi-monthly","Bi-monthly",4
+"MO","Monthly","Monthly",5
+"WE","Weekly","Weekly",6
+"DA","Daily","Daily",7

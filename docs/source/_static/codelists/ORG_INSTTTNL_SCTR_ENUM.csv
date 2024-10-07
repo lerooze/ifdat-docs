@@ -1,18 +1,18 @@
-"ID","NAME","DESCRIPTION"
-"--","Reset","Reset value"
-"S11","Non financial corporations","Non financial corporations"
-"S121","Central bank","Central bank"
-"S122","Deposit taking corporations, except the Central Bank","Deposit taking corporations, except the Central Bank"
-"S123","Money market funds","Money market funds"
-"S124","Non MMF investment funds","Non MMF investment funds"
-"S125","Other financial intermediaries, except insurance corporations and pension funds","Other financial intermediaries, except insurance corporations and pension funds"
-"S126","Financial auxiliaries","Financial auxiliaries"
-"S127","Captive financial institutions and money lenders","Captive financial institutions and money lenders"
-"S128","Insurance corporations","Insurance corporations"
-"S129","Pension funds","Pension funds"
-"S1311","Central government excluding social security","Central government excluding social security"
-"S1312","State government excluding social security","State government excluding social security"
-"S1313","Local government excluding social security","Local government excluding social security"
-"S1314","Social security funds","Social security funds"
-"S14","Households","Households"
-"S15","Non profit institutions serving households","Non profit institutions serving households"
+"ID","NAME","DESCRIPTION","IID"
+".","Reset","Reset value",0
+"S11","Non financial corporations","Non financial corporations",1
+"S121","Central bank","Central bank",2
+"S122","Deposit taking corporations, except the Central Bank","Deposit taking corporations, except the Central Bank",3
+"S123","Money market funds","Money market funds",4
+"S124","Non MMF investment funds","Non MMF investment funds",5
+"S125","Other financial intermediaries, except insurance corporations and pension funds","Other financial intermediaries, except insurance corporations and pension funds",6
+"S126","Financial auxiliaries","Financial auxiliaries",7
+"S127","Captive financial institutions and money lenders","Captive financial institutions and money lenders",8
+"S128","Insurance corporations","Insurance corporations",9
+"S129","Pension funds","Pension funds",10
+"S1311","Central government excluding social security","Central government excluding social security",11
+"S1312","State government excluding social security","State government excluding social security",12
+"S1313","Local government excluding social security","Local government excluding social security",13
+"S1314","Social security funds","Social security funds",14
+"S14","Households","Households",15
+"S15","Non profit institutions serving households","Non profit institutions serving households",16

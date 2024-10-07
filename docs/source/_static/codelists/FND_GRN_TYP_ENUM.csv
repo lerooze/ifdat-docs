@@ -1,17 +1,17 @@
-"ID","NAME","DESCRIPTION"
-"--","Reset","Reset value"
+"ID","NAME","DESCRIPTION","IID"
+".","Reset","Reset value",0
 "LIGHT","Light green fund","
             Sustainable Finance Disclosure Regulation (SFDR) Article 8 fund is
             an investment fund compliant with Regulation (EU) 2019/2088 Article
             8, thereby promoting environmental or social characteristics
             (sometimes called light-green funds).
-            "
+            ",1
 "DARK","Dark green fund","
             Sustainable Finance Disclosure Regulation (SFDR) Article 9 fund is
             an investment fund compliant with Regulation (EU) 2019/2088 Article
             9, thereby having sustainable investment as its objective
             (dark-green funds).
-            "
+            ",2
 "OTHER","Other fund","
             IF not compliant with Article 8 nor Article 9 of Regulation (EU) 2019/2088
-            "
+            ",3

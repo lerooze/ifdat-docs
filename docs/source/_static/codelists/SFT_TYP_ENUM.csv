@@ -1,5 +1,5 @@
-"ID","NAME","DESCRIPTION"
-"--","Reset","Reset value"
+"ID","NAME","DESCRIPTION","IID"
+".","Reset","Reset value",0
 "REP","Repurchase transaction","
             Repurchase transaction means a transaction governed by an agreement
             by which a counterparty transfers securities, commodities, or
@@ -14,7 +14,7 @@
             transferor, being a repurchase agreement for the counterparty
             selling the securities or commodities and a reverse repurchase
             agreement for the counterparty buying them.
-            "
+            ",1
 "SBL","Securities or commodities lending/borrowing","
             Securities or commodities lending or securities or commodities
             borrowing means a transaction by which a counterparty transfers
@@ -25,7 +25,7 @@
             counterparty transferring the securities or commodities and
             being considered as securities or commodities borrowing for the
             counterparty to which they are transferred.
-            "
+            ",2
 "BSB","Buy-sell or sell-buy back transaction","
             Buy-sell back transaction or sell-buy back transaction means a
             transaction by which a counterparty buys or sells securities,
@@ -38,10 +38,10 @@
             transaction for the counterparty selling them, such buy-sell back
             transaction or sell-buy back transaction not being governed by a
             repurchase agreement or by a reverse-repurchase agreement.
-            "
+            ",3
 "MLT","Margin lending transaction","
             Margin lending transaction means a transaction in which a
             counterparty extends credit in connection with the purchase, sale,
             carrying or trading of securities, but not including other loans
             that are secured by collateral in the form of securities.
-            "
+            ",4

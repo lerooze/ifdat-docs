@@ -1,10 +1,10 @@
-"ID","NAME","DESCRIPTION"
-"--","Reset","Reset value"
-"CMMN","Ordinary / Common share","Ordinary / Common share"
-"PRFRRD","Preference / Preferred share","Preference / Preferred share"
-"DPSTRY_RCPT","Depository receipt","Depository receipt"
-"HYBRD","Hybrid equity instrument","Hybrid equity instrument"
-"OTHR_EQTY","Other equity","Other equity"
-"UCITS","Undertaking for collective investment in transferable securities (UCITS) Fund","Undertaking for collective investment in transferable securities (UCITS) Fund"
-"AIF","Alternative investment fund (AIF)","Alternative investment fund (AIF)"
-"OTHR_FND","Other fund","Other fund"
+"ID","NAME","DESCRIPTION","IID"
+".","Reset","Reset value",0
+"CMMN","Ordinary / Common share","Ordinary / Common share",1
+"PRFRRD","Preference / Preferred share","Preference / Preferred share",2
+"DPSTRY_RCPT","Depository receipt","Depository receipt",3
+"HYBRD","Hybrid equity instrument","Hybrid equity instrument",4
+"OTHR_EQTY","Other equity","Other equity",5
+"UCITS","Undertaking for collective investment in transferable securities (UCITS) Fund","Undertaking for collective investment in transferable securities (UCITS) Fund",6
+"AIF","Alternative investment fund (AIF)","Alternative investment fund (AIF)",7
+"OTHR_FND","Other fund","Other fund",8

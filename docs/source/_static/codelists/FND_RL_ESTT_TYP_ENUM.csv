@@ -1,23 +1,23 @@
-"ID","NAME","DESCRIPTION"
-"--","Reset","Reset value"
+"ID","NAME","DESCRIPTION","IID"
+".","Reset","Reset value",0
 "RES","Residential real estate fund","
             Predominantly invest in residential property.  Residential property
             means a residence which is occupied by the owner or the lessee of
             the residence.  (Article 4(1)(75) of Regutation (EU) No 575/2013).
-            "
+            ",1
 "COM","Commercial real estate fund","
             Predominantly invest in real estate used for commercial purposes,
             such as retail and hotels.
-            "
+            ",2
 "IND","Industrial real estate fund","
             Predominantly invest in real estate used for manufacturing,
             production, storage, and distriubution of goods.
-            "
+            ",3
 "MUL","Multi-strategy real estate fund","
             Invest in residential, commercial and industrial real estate
             without a predominant focus on any.
-            "
+            ",4
 "OTH","Other real estate fund","
             Real estate fund which are not residential, commercial, industrial,
             or multi-strategy.
-            "
+            ",5

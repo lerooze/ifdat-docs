@@ -1,4 +1,4 @@
-"ID","NAME","DESCRIPTION"
-"--","Reset","Reset value"
-"T","True","True"
-"F","False","False"
+"ID","NAME","DESCRIPTION","IID"
+".","Reset","Reset value",0
+"T","True","True",1
+"F","False","False",2

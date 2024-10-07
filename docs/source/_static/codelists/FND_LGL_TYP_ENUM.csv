@@ -1,30 +1,30 @@
-"ID","NAME","DESCRIPTION"
-"--","Reset","Reset value"
+"ID","NAME","DESCRIPTION","IID"
+".","Reset","Reset value",0
 "UCITS","Undertakings for Collective Investments in Transferable Securities (UCITS)","
             UCITS means investment funds that have been established in
             accordance with Directive 2009/65/EC of the European Parliament and
             of the Council
-            "
+            ",1
 "RAIF","Retail Investor Alternative Investment Fund","
             Retail Investor Alternative Investment Fund means investment fund
             as defined in Article 4(1) of Directive 2011/61/EU (AIFMD) which
             has received authorization to be marketed to retail investors in
             accordance with Article 43 of Directive 2011/61/EU of the European
             Parliament and of the Council.
-            "
+            ",2
 "OAIF","Other Alternative Investment Fund","
             Other Alternative Investment Fund means investment fund as defined
             in Article 4(1) of Directive 2011/61/EU (AIFMD) which has not
             received authorization to be marketed to retail investors in
             accordance with Article 43 of Directive 2011/61/EU of the European
             Parliament and of the Council.
-            "
+            ",3
 "REIT","Real Estate Investment Trust","
             Real estate investment trust is an entity that owns or finances
             income producing real estate assets and is subject to a dedicated
             national legal framework defining its legal form, eligible assets
             and tax regime.
-            "
+            ",4
 "OTHER","Other","
             Investment fund that is not UCITS, RAIF, OAIF or REIT.
-            "
+            ",5

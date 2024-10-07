@@ -1,0 +1,7 @@
+"ID","NAME","DESCRIPTION","IID"
+".","Reset","Reset value",0
+"SUPER","Highest ranked source.  It is the highest ranked source.  No data reported from other sources overrides non missing data from this source.","Highest ranked source.  It is the highest ranked source.  No data reported from other sources overrides non missing data from this source.",1
+"SDR","Self direct reporting source","Self reference data reported from collection schemes such as IFDat.  It ranks above the REG source",2
+"REG","Registry source","Reference data obtained from registry databases such as RIAD, CSDD.  It ranks above the CDR source",3
+"CDR","Counterparty direct reporting source","Counterparty reference data reported from collection schemes such as IFDat.  It ranks above the INIT source",4
+"INIT","Lowest ranked source","Any other reported source overrides the reported data from this source",5

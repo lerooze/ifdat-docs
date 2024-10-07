@@ -1,12 +1,12 @@
-"ID","NAME","DESCRIPTION"
-"--","Reset","Reset value"
-"INTRST","Interest paid","Interest paid"
-"RNTS","Rents paid","Rents paid"
-"TRNSCTNS_FEES","Financial fees/services paid by the fund (mostly for buying and selling financial assets)","Financial fees/services paid by the fund (mostly for buying and selling financial assets)"
-"MNGMNT_FEES","Management fees","Management fees"
-"DPSTR_FEES","Depository fees","Depository fees"
-"TAXES","Taxes paid (but not those of behalf of shareholders)","Taxes paid (but not those of behalf of shareholders)"
-"WAGES","wages","wages"
-"BDE","bad debt expense","bad debt expense"
-"BLE","bad loan expense","bad loan expense"
-"OTHER","Other fees and charges paid","Other fees and charges paid"
+"ID","NAME","DESCRIPTION","IID"
+".","Reset","Reset value",0
+"INTRST","Interest paid","Interest paid",1
+"RNTS","Rents paid","Rents paid",2
+"TRNSCTNS_FEES","Financial fees/services paid by the fund (mostly for buying and selling financial assets)","Financial fees/services paid by the fund (mostly for buying and selling financial assets)",3
+"MNGMNT_FEES","Management fees","Management fees",4
+"DPSTR_FEES","Depository fees","Depository fees",5
+"TAXES","Taxes paid (but not those of behalf of shareholders)","Taxes paid (but not those of behalf of shareholders)",6
+"WAGES","wages","wages",7
+"BDE","bad debt expense","bad debt expense",8
+"BLE","bad loan expense","bad loan expense",9
+"OTHER","Other fees and charges paid","Other fees and charges paid",10
