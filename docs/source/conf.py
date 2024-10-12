@@ -21,7 +21,7 @@ sys.path.append(".")
 
 project = "IFDat-Docs"
 author = "Antonis Loumiotis"
-copyright = "2022–2023 ifdat-docs developers"
+copyright = "2022–2024 IFDat-Docs developers"
 
 # # The full version, including alpha/beta/rc tags
 # release = "0.1"
