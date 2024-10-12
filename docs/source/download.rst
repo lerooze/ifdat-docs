@@ -7,8 +7,6 @@
 * :download:`JSON Schema </_static/structure/IFDAT_SCHEMA.json>`
 * :download:`IFDAT-RAS </_static/structure/IFDAT-RAS.xlsx>`
 
-Στο Excel αρχείο :download:`IFDAT-RAS </_static/structure/IFDAT-RAS.xlsx>` στο
-
 Τις οδηγιές για offline χρήση θα τις κατεβάσετε κάνοντας click κάτω αριστερά
 στο **Read The docs** και έπειτα **Downloads** εκτός από τις οδηγίες σε WORD
 που θα τις κατεβάσετε από :download:`εδώ </_static/IFDat-Docs.docx>`

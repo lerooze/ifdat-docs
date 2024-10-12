@@ -11,6 +11,12 @@ What's new?
 .. Next release
 .. ============
 
+v0.7.2 (2024-10-13)
+-------------------
+
+* Minor changes in data model
+* Improve documentation
+
 v0.7.1 (2024-10-07)
 -------------------
 
