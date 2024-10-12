@@ -1,5 +1,4 @@
 [91m/home/al459/envs/ifdat-docs/docs/source/examples.rst:6: WARNING: toctree contains reference to nonexisting document 'examples/by_category_table'[39;49;00m
-[91m/home/al459/envs/ifdat-docs/docs/source/index.rst:10: WARNING: download file not readable: /home/al459/envs/ifdat-docs/docs/source/_static/IFDAT-RAS.xlsx[39;49;00m
 [91m/home/al459/envs/ifdat-docs/docs/source/examples.rst: WARNING: document isn't included in any toctree[39;49;00m
 [91m/home/al459/envs/ifdat-docs/docs/source/tables/acc/lblty_sft.rst: WARNING: document isn't included in any toctree[39;49;00m
 [91m/home/al459/envs/ifdat-docs/docs/source/validation/accounting.rst: WARNING: document isn't included in any toctree[39;49;00m

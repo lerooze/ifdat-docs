@@ -27,8 +27,6 @@
 
 #.  :doc:`acc/asst_rmnng`
 
-#.  :doc:`acc/lblty_dbt`
-
 #.  :doc:`acc/lblty_ln`
 
 #.  :doc:`acc/lblty_rmnng`
@@ -47,7 +45,7 @@
    :hidden:
    
    DPST<acc/dpst>
-   ASST_SFT<acc/sft>
+   SFT<acc/sft>
    ASST_DBT<acc/asst_dbt>
    ASST_LN<acc/asst_ln>
    SHR<acc/shr>
