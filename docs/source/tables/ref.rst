@@ -45,9 +45,7 @@ A. Στοιχεία Αναφοράς (REF)
 
 #.  :doc:`ref/shr`
 
-#.  :doc:`ref/edr`
-
-#.  :doc:`ref/odr`
+#.  :doc:`ref/der`
 
 .. toctree::
    :maxdepth: 1
@@ -72,5 +70,4 @@ A. Στοιχεία Αναφοράς (REF)
    DBT<ref/dbt>
    LN<ref/ln>
    SHR<ref/shr>
-   EDR<ref/edr>
-   ODR<ref/odr>
+   DER<ref/der>

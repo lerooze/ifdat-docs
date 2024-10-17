@@ -7,6 +7,7 @@ import glob
 src_root = Path(cast(str, os.environ.get("JOURNEY_DATA"))).joinpath("pre_prod")
 src_dir_lists = src_root.joinpath("structure/codelists")
 src_dir_structure = src_root.joinpath("structure")
+src_dir_example = src_root.joinpath("examples")
 dst_root = Path(os.path.abspath(__file__)).parent
 static_root = dst_root.joinpath("source/_static")
 try:
@@ -20,6 +21,11 @@ os.makedirs(structure_path)
 for f in glob.glob(str(src_dir_structure.joinpath("IFDAT*"))):
     pf = Path(f)
     shutil.copyfile(pf, structure_path.joinpath(pf.name))
+example_path = static_root.joinpath("examples")
+os.makedirs(example_path)
+for f in glob.glob(str(src_dir_structure.joinpath("ifdat*"))):
+    pf = Path(f)
+    shutil.copyfile(pf, example_path.joinpath(pf.name))
 report = src_root.joinpath("reports").joinpath("IFDAT_SNAPSHOT_PUBLIC_REPORT.xlsx")
 shutil.copyfile(report, structure_path.joinpath("IFDAT-RAS.xlsx"))
 

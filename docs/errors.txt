@@ -1,4 +1,28 @@
-[91m/home/al459/envs/ifdat-docs/docs/source/examples.rst:6: WARNING: toctree contains reference to nonexisting document 'examples/by_category_table'[39;49;00m
+[91m/home/al459/envs/ifdat-docs/docs/source/download.rst:10: WARNING: download file not readable: /home/al459/envs/ifdat-docs/docs/source/_static/IFDat-Docs.docx[39;49;00m
+[91m/home/al459/envs/ifdat-docs/docs/source/examples.rst:8: WARNING: download file not readable: /home/al459/envs/ifdat-docs/docs/source/_static/examples/ifdat_zuser_init.xlsx[39;49;00m
+[91m/home/al459/envs/ifdat-docs/docs/source/examples.rst:13: WARNING: download file not readable: /home/al459/envs/ifdat-docs/docs/source/_static/examples/ifdat_zuser_main.xlsx[39;49;00m
+/home/al459/envs/ifdat-docs/docs/source/types/codelists/csv.rst:4: CRITICAL: Problems with "csv-table" directive path:
+[Errno 2] No such file or directory: 'source/_static/codelists/CSV.csv'.
+
+.. csv-table::
+   :file: /_static/codelists/CSV.csv
+   :header-rows: 1
+/home/al459/envs/ifdat-docs/docs/source/types/codelists/rst.rst:4: CRITICAL: Problems with "csv-table" directive path:
+[Errno 2] No such file or directory: 'source/_static/codelists/RST.csv'.
+
+.. csv-table::
+   :file: /_static/codelists/RST.csv
+   :header-rows: 1
 [91m/home/al459/envs/ifdat-docs/docs/source/ack/accounting.rst: WARNING: document isn't included in any toctree[39;49;00m
 [91m/home/al459/envs/ifdat-docs/docs/source/ack/critical.rst: WARNING: document isn't included in any toctree[39;49;00m
 [91m/home/al459/envs/ifdat-docs/docs/source/examples.rst: WARNING: document isn't included in any toctree[39;49;00m
+[91m/home/al459/envs/ifdat-docs/docs/source/examples/by_ra_type.rst: WARNING: document isn't included in any toctree[39;49;00m
+[91m/home/al459/envs/ifdat-docs/docs/source/tables/acc/odr.rst: WARNING: document isn't included in any toctree[39;49;00m
+[91m/home/al459/envs/ifdat-docs/docs/source/tables/ref/odr.rst: WARNING: document isn't included in any toctree[39;49;00m
+[91m/home/al459/envs/ifdat-docs/docs/source/tables/ref.rst:49: WARNING: unknown document: 'ref/edr'[39;49;00m
+[91m/home/al459/envs/ifdat-docs/docs/source/tables/ref/odr.rst:18: WARNING: undefined label: 'odr'[39;49;00m
+[91m/home/al459/envs/ifdat-docs/docs/source/tables/acc.rst:14: WARNING: unknown document: 'acc/sft'[39;49;00m
+[91m/home/al459/envs/ifdat-docs/docs/source/tables/acc.rst:22: WARNING: unknown document: 'acc/edr'[39;49;00m
+[91m/home/al459/envs/ifdat-docs/docs/source/tables/acc/odr.rst:8: WARNING: undefined label: 'odr'[39;49;00m
+[91m/home/al459/envs/ifdat-docs/docs/source/tables/acc/odr.rst:19: WARNING: undefined label: 'odr'[39;49;00m
+[91m/home/al459/envs/ifdat-docs/docs/source/identifiers.rst:220: WARNING: unknown document: '../../types/formats/der'[39;49;00m

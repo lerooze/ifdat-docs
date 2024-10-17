@@ -11,6 +11,12 @@ What's new?
 .. Next release
 .. ============
 
+v0.7.3 (2024-10-17)
+-------------------
+
+* Introduce once again examples
+* Refactor the data model
+
 v0.7.2 (2024-10-13)
 -------------------
 

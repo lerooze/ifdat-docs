@@ -45,14 +45,14 @@
    :hidden:
    
    DPST<acc/dpst>
-   SFT<acc/sft>
+   ASST_SFT<acc/asst_sft>
    ASST_DBT<acc/asst_dbt>
    ASST_LN<acc/asst_ln>
    SHR<acc/shr>
-   EDR<acc/edr>
-   ODR<acc/odr>
+   DER<acc/der>
    ASST_NN_FNNCL<acc/asst_nn_fnncl>
    ASST_RMNNG<acc/asst_rmnng>
+   LBLTY_SFT<acc/lblty_sft>
    LBLTY_DBT<acc/lblty_dbt>
    LBLTY_LN<acc/lblty_ln>
    LBLTY_RMNNG<acc/lblty_rmnng>

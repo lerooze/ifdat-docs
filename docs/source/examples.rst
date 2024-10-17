@@ -1,10 +1,13 @@
+
 Παραδείγματα
 ============
-Στο συγκεκριμένο κεφάλαιο δίνονται παραδείγματα συμπλήρωσης
-στοιχείων IFDat τόσο ολοκληρωμένα ανά είδος αναγγέλλοντος όσο και εστιασμένα ανά πίνακα. 
 
-.. toctree::
-   :maxdepth: 2
+Παράδειγμα 1 - Αρχική υποβολή
+-----------------------------
 
-   examples/by_ra_type.rst
-   examples/by_category_table.rst
+:download:`INIT </_static/examples/ifdat_zuser_init.xlsx>`
+
+Παράδειγμα 2 - Κύρια υποβολή
+-----------------------------
+
+:download:`MAIN </_static/examples/ifdat_zuser_main.xlsx>`
