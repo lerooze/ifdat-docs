@@ -23,7 +23,7 @@ for f in glob.glob(str(src_dir_structure.joinpath("IFDAT*"))):
     shutil.copyfile(pf, structure_path.joinpath(pf.name))
 example_path = static_root.joinpath("examples")
 os.makedirs(example_path)
-for f in glob.glob(str(src_dir_structure.joinpath("ifdat*"))):
+for f in glob.glob(str(src_dir_example.joinpath("ifdat*"))):
     pf = Path(f)
     shutil.copyfile(pf, example_path.joinpath(pf.name))
 report = src_root.joinpath("reports").joinpath("IFDAT_SNAPSHOT_PUBLIC_REPORT.xlsx")
