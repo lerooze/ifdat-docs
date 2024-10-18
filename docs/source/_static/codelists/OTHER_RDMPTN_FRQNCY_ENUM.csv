@@ -1,0 +1,26 @@
+"ID","NAME","DESCRIPTION","IID"
+".","Reset","Reset value",0
+"D","Daily","
+            Daily redemption
+            ",1
+"W","Weekly","
+            Weekly redemption
+            ",2
+"M","Monthly","
+            Monthly redemption
+            ",3
+"Q","Quarterly","
+            Quarterly redemption
+            ",4
+"B","Biannual","
+            Biannual redemption
+            ",5
+"Y","Yearly","
+            Yearly redemption
+            ",6
+"E","End","
+            At the end of maturity redemption 
+            ",7
+"O","Other","
+            Other/irregular redemption frequency schedule 
+            ",8

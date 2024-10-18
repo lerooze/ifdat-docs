@@ -1027,8 +1027,8 @@
     "FndBndFcsEnum": {
       "enum": [
         ".",
-        "GOV",
         "COR",
+        "GOV",
         "MIX"
       ],
       "title": "FndBndFcsEnum",
@@ -1350,7 +1350,8 @@
       "enum": [
         ".",
         "PRF",
-        "RTL"
+        "RTL",
+        "\u039c\u0399\u03a7"
       ],
       "title": "FndInvstrTypEnum",
       "type": "string"
@@ -4653,6 +4654,21 @@
       "title": "OrgInstttnlSctrEnum",
       "type": "string"
     },
+    "OtherRdmptnFrqncyEnum": {
+      "enum": [
+        ".",
+        "D",
+        "W",
+        "M",
+        "Q",
+        "B",
+        "Y",
+        "E",
+        "O"
+      ],
+      "title": "OtherRdmptnFrqncyEnum",
+      "type": "string"
+    },
     "RefDerSeries": {
       "properties": {
         "ID": {
@@ -4773,11 +4789,11 @@
           ],
           "default": null
         },
-        "OA": {
+        "OAID": {
           "default": null,
           "maxLength": 51,
           "pattern": "(^[ELTB][A-Za-z0-9_@$-][!-~]*)|(^PE[A-Za-z0-9@$-]+_[!-~]+)$",
-          "title": "Oa",
+          "title": "Oaid",
           "type": "string"
         },
         "CNTRPRTY": {
@@ -4830,11 +4846,11 @@
           ],
           "default": null
         },
-        "OA": {
+        "OAID": {
           "default": null,
           "maxLength": 51,
           "pattern": "(^[ELTB][A-Za-z0-9_@$-][!-~]*)|(^PE[A-Za-z0-9@$-]+_[!-~]+)$",
-          "title": "Oa",
+          "title": "Oaid",
           "type": "string"
         },
         "CNTRPRTY": {
@@ -4887,11 +4903,11 @@
           ],
           "default": null
         },
-        "OA": {
+        "OAID": {
           "default": null,
           "maxLength": 51,
           "pattern": "(^[ELTB][A-Za-z0-9_@$-][!-~]*)|(^PE[A-Za-z0-9@$-]+_[!-~]+)$",
-          "title": "Oa",
+          "title": "Oaid",
           "type": "string"
         },
         "CNTRPRTY": {
@@ -5486,7 +5502,7 @@
         "RDMPTN_FRQNCY": {
           "allOf": [
             {
-              "$ref": "#/$defs/ShrFndRdmptnFrqncyEnum"
+              "$ref": "#/$defs/OtherRdmptnFrqncyEnum"
             }
           ],
           "default": null
@@ -5610,25 +5626,6 @@
         "F522"
       ],
       "title": "ShrEsaTypEnum",
-      "type": "string"
-    },
-    "ShrFndRdmptnFrqncyEnum": {
-      "enum": [
-        ".",
-        "PP",
-        "AN",
-        "SA",
-        "QU",
-        "MO",
-        "BA",
-        "OR",
-        "IR",
-        "SS",
-        "ON",
-        "EL",
-        "OT"
-      ],
-      "title": "ShrFndRdmptnFrqncyEnum",
       "type": "string"
     },
     "ShrTypEnum": {

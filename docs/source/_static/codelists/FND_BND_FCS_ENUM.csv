@@ -1,14 +1,15 @@
 "ID","NAME","DESCRIPTION","IID"
 ".","Reset","Reset value",0
-"GOV","Government bond","
-            Bond funds that predominantly (more than 50%) invest in debt
-            securities issued by governments.
+"COR","Εταιρικό ομόλογο","
+            Τα εταιρικά ομόλογα (corporate bond funds) κατά κύριο λόγο (άνω του
+            50 %) επενδύουν σε χρεόγραφα έκδοσης χρηματοοικονομικών και μη
+            χρηματοοικονομικών εταιρειών.
             ",1
-"COR","Corporate bond","
-            Bond funds that predominantly (more than 50%) invest in debt
-            securities issued by financial and non-financial corporations.
+"GOV","Κρατικό ομόλογο","
+            Τα κρατικά ομόλογα (government bond funds) κατά κύριο λόγο (άνω του
+            50 %) επενδύουν σε χρεόγραφα έκδοσης κυβερνήσεων.
             ",2
-"MIX","Mix bond","
+"MIX","Μεικτό εταιρικό ομόλογο / κρατικό ομόλογο","
             Bond funds that invest in both government and corporate bonds with
             no prevailing policy in favour of one or the other.
             ",3

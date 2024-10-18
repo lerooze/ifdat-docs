@@ -1,31 +1,31 @@
 "ID","NAME","DESCRIPTION","IID"
 ".","Reset","Reset value",0
-"DOM","Domestic","
+"DOM","Εσωτερικό","
             Predominantly domestic investments.
             ",1
-"EEA","Europe (EEA)","
+"EEA","Ευρώπη [Ευρωπαικός Οικονομικός Χώρος (ΕΟΧ)]","
             Predominantly investments in Europe (EEA) region as defined in Guideline ESMA/2014/869EN.
             ",2
-"OEA","Europe (other than EEA)","
+"OEA","Ευρώπη (πλην του ΕΟΧ)","
             Predominantly investments in Europe (other than EEA) region as defined in Guideline ESMA/2014/869EN.
             ",3
-"NAM","North America","
+"NAM","Βόρεια Αμερική","
             Predominantly investments in North America region as defined in Guideline ESMA/2014/869EN.
             ",4
-"SAM","South America","
+"SAM","Νότια Αμερική","
             Predominantly investments in South America region as defined in Guideline ESMA/2014/869EN.
             ",5
-"ASP","Asia / Pacific","
+"ASP","Ασία/Ειρηνικός","
             Predominantly investments in Asia/Pacific region as defined in Guideline ESMA/2014/869EN.
             ",6
-"MEA","Middle East","
+"MEA","Μέση Ανατολή","
             Predominantly investments in Middle East region as defined in Guideline ESMA/2014/869EN.
             ",7
-"AFR","Africa","
+"AFR","Αφρική","
             Predominantly investments in Africa region as defined in Guideline ESMA/2014/869EN.
             Defined in Guideline ESMA/2014/869EN
             ",8
-"OTH","Other","
+"OTH","Υπερεθνική/πολλαπλή περιφέρεια","
             Predominantly investments in assets issued by supranational entities or
             it does not predominantly invest in any single geographical region
             defined above.

@@ -1,27 +1,27 @@
 "ID","NAME","DESCRIPTION","IID"
 ".","Reset","Reset value",0
-"MMF","Money Market Funds","
+"MMF","Αμοιβαία κεφάλαια χρηματαγοράς","
             ‘Money market funds’ means collective investment undertakings that
             have been authorised pursuant to Article 4 of Regulation (EU)
             2017/1131 and that issue shares or units which are close
             substitutes for deposits as referred to in Part 1 of Annex I to
             Regulation ECB/2021/2.
             ",1
-"BON","Bond Funds","
+"BON","Ομολογιακά αμοιβαία κεφάλαια","
             Bond funds are investment funds primarily investing in debt securities.
             ",2
-"EQT","Equity Funds","
+"EQT","Μετοχικά αμοιβαία κεφάλαια","
             Equity funds are investment funds primarily investing in equity.
             ",3
-"MIX","Mixed Funds","
+"MIX","Μεικτά αμοιβαία κεφάλαια","
             Mixed funds are investment funds investing in both equity and bonds
             with no prevailing policy in favour of one or the other instrument.
             ",4
-"RES","Real Estate Funds","
+"RES","Αμοιβαία κεφάλαια ακίνητης περιουσίας","
             Real estate funds are investment funds primarily investing in real
             estate.
             ",5
-"HED","Hedge Funds","
+"HED","Αμοιβαία κεφάλαια αντιστάθμισης κινδύνων","
             Hedge funds mean any collective investment undertakings regardless
             of its legal structure under national laws, which apply relatively
             unconstrained investment strategies to achieve positive absolute
@@ -34,13 +34,13 @@
             funds that invest, in full or in part, in other hedge funds
             provided that they otherwise meet the definition.
             ",6
-"LOA","Loan / credit Funds","
+"LOA","Δανειακά/πιστωτικά αμοιβαία κεφάλαια","
             Loan credit funds are investment funds primarily investing in loans.
             ",7
-"COM","Commodity Funds","
+"COM","Αμοιβαία κεφάλαια εμπορευμάτων","
             Commodity funds are investment funds primarily investing in commodities.
             ",8
-"INF","Infrastructure Funds","
+"INF","Αμοιβαία κεφάλαια υποδομών","
             Infrastructure funds are investment funds primarily investing in
             public building infrastructure such as schools, hospitals or
             prisons, social infrastructure such as social housing, transport
@@ -51,7 +51,7 @@
             systems, communication infrastructure such as networks, and waste
             management infrastructure such as recycling or collection systems.
             ",9
-"OTH","Other Funds","
+"OTH","Λοιπά αμοιβαία κεφάλαια","
             Other funds are investment funds other than bond funds, equity
             funds, mixed funds, real estate funds, hedge funds, loan / credit
             funds, commodity funds or infrastructure funds.

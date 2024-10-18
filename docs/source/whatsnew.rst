@@ -11,6 +11,12 @@ What's new?
 .. Next release
 .. ============
 
+v0.7.4 (2024-10-18)
+-------------------
+
+* Transform to Greek some enumerations
+* Fix bugs
+
 v0.7.3 (2024-10-17)
 -------------------
 

@@ -1,30 +1,25 @@
 "ID","NAME","DESCRIPTION","IID"
 ".","Reset","Reset value",0
-"UCITS","Undertakings for Collective Investments in Transferable Securities (UCITS)","
-            UCITS means investment funds that have been established in
-            accordance with Directive 2009/65/EC of the European Parliament and
-            of the Council
+"UCITS","Συμμορφούμενος με την οδηγία για τους ΟΣΕΚΑ","
+            Οι οργανισμοί συλλογικών επενδύσεων σε κινητές αξίες (ΟΣΕΚΑ) είναι
+            ΕΟ που έχουν συσταθεί σύμφωνα με την οδηγία 2009/65/ΕΚ.
             ",1
-"RAIF","Retail Investor Alternative Investment Fund","
-            Retail Investor Alternative Investment Fund means investment fund
-            as defined in Article 4(1) of Directive 2011/61/EU (AIFMD) which
-            has received authorization to be marketed to retail investors in
-            accordance with Article 43 of Directive 2011/61/EU of the European
-            Parliament and of the Council.
+"RAIF","Συμμορφούμενος με την οδηγία για τους ΟΕΕ με ιδιώτες επενδυτές","
+            ΕΟ που έχουν συσταθεί σύμφωνα με την οδηγία 2011/61/ΕΕ οι οποίοι
+            δεν είναι εταιρείς επενδύσεων σε ακίνητα και απευθύνονται σε
+            ιδιώτες επενδυτές.
             ",2
-"OAIF","Other Alternative Investment Fund","
-            Other Alternative Investment Fund means investment fund as defined
-            in Article 4(1) of Directive 2011/61/EU (AIFMD) which has not
-            received authorization to be marketed to retail investors in
-            accordance with Article 43 of Directive 2011/61/EU of the European
-            Parliament and of the Council.
+"OAIF","Συμμορφούμενος με την οδηγία για τους ΟΕΕ με θεσμικούς επενδυτές","
+            ΕΟ που έχουν συσταθεί σύμφωνα με την οδηγία 2011/61/ΕΕ οι οποίοι
+            δεν είναι εταιρείς επενδύσεων σε ακίνητα και απευθύνονται σε
+            θεσμικούς επενδυτές.
             ",3
-"REIT","Real Estate Investment Trust","
+"REIT","Εταιρεία επενδύσεων σε ακίνητα","
             Real estate investment trust is an entity that owns or finances
             income producing real estate assets and is subject to a dedicated
             national legal framework defining its legal form, eligible assets
             and tax regime.
             ",4
-"OTHER","Other","
-            Investment fund that is not UCITS, RAIF, OAIF or REIT.
+"OTHER","ΕΟ μη συμμορφούμενος με κάποια από τις προηγούμενες κατηγορίες","
+            ΕΟ που δεν ανήκουν σε μία από τις παραπάνω κατηγορίες.
             ",5

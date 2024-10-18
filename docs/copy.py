@@ -26,8 +26,8 @@ os.makedirs(example_path)
 for f in glob.glob(str(src_dir_example.joinpath("ifdat*"))):
     pf = Path(f)
     shutil.copyfile(pf, example_path.joinpath(pf.name))
-report = src_root.joinpath("reports").joinpath("IFDAT_SNAPSHOT_PUBLIC_REPORT.xlsx")
-shutil.copyfile(report, structure_path.joinpath("IFDAT-RAS.xlsx"))
+report = src_root.joinpath("reports").joinpath("IFDAT_RAS.xlsx")
+shutil.copyfile(report, structure_path.joinpath("IFDAT_RAS.xlsx"))
 
 for f in os.listdir(dst_dir_lists):
     fp = Path(f)
