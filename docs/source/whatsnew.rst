@@ -11,6 +11,13 @@ What's new?
 .. Next release
 .. ============
 
+v0.7.5 (2024-10-23)
+-------------------
+
+* Fix bugs
+* Reintroduce examples
+* Improve data modl and schema
+
 v0.7.4 (2024-10-18)
 -------------------
 
