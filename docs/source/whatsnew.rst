@@ -10,13 +10,20 @@ What's new?
 
 .. Next release
 .. ============
+v0.7.6 (2024-10-24)
+-------------------
+
+* Remove ACC.RVN and ACC.EXPNS and drop check
+* Modify sbscrpt, rdmptn defs
+* Bug fixes
+
 
 v0.7.5 (2024-10-23)
 -------------------
 
 * Fix bugs
 * Reintroduce examples
-* Improve data modl and schema
+* Improve data model and schema
 
 v0.7.4 (2024-10-18)
 -------------------
