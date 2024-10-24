@@ -39,7 +39,9 @@ except FileNotFoundError:
 codelists.mkdir(parents=True)
 for f in os.listdir(dst_dir_lists):
     fp = Path(f)
-    name = fp.stem.rstrip("_ENUM")
+    if "_" not in fp.stem:
+        continue
+    name = fp.stem[:-5]
     sourcepath = codelists.joinpath(f"{name.lower()}.rst")
     with open(sourcepath, mode="w") as io:
         cnt = len(name)

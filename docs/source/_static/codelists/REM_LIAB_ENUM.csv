@@ -1,12 +1,8 @@
 "ID","NAME","DESCRIPTION","IID"
 ".","Reset","Reset value",0
-"AI_LN","Accrued interest payable on loans","Accrued interest payable on loans",1
-"AI_DBT","Accrued interest payable on debt securities","Accrued interest payable on debt securities",2
-"AR","Accrued rent payable","Accrued rent payable",3
-"MNGMNT_FEES","Management fees payable","Management fees payable",4
-"TRNSCTNS_FEES","Fees, fees-like, commissions, commission-like payable for carrying out transactions on holdings","Fees, fees-like, commissions, commission-like payable for carrying out transactions on holdings",5
-"TAXES","Taxes payable","Taxes payable",6
-"OTHER_PRVSNS","Provisions representing liabilities against third parties, i.e. pensions, dividends, etc. other than AI_DBT, AI_LN, AR, TAXES","Provisions representing liabilities against third parties, i.e. pensions, dividends, etc. other than AI_DBT, AI_LN, AR, TAXES",7
-"NO_CASH_SL","Net positions arising from securities lending without cash colateral","Net positions arising from securities lending without cash colateral",8
-"FUTURE","Net amounts payable in respect of future settlements of transactions in securities","Net amounts payable in respect of future settlements of transactions in securities",9
-"OTHER","Other Remaining liabilities not included in the previous categories","Other Remaining liabilities not included in the previous categories",10
+"AI_LN","Πληρωτέοι δεδουλευμένοι τόκοι δανείων","Πληρωτέοι δεδουλευμένοι τόκοι δανείων",1
+"AI_DBT","Πληρωτέοι δεδουλευμένοι τόκοι εκδοθέντων χρεογράφων","Πληρωτέοι δεδουλευμένοι τόκοι εκδοθέντων χρεογράφων",2
+"AR","Πληρωτέα ενοίκια","Πληρωτέα ενοίκια",3
+"RCRRNG_CSTS","Πληρωτέα επαναλαμβανόμενα κόστη. Τα επαναλαμβανόμενα κόστη ορίζονται στο παράρτημα VI του κατ`εξουσιοδότηση κανονισμού (ΕΕ) 2017/653 της Επιτροπής","Πληρωτέα επαναλαμβανόμενα κόστη. Τα επαναλαμβανόμενα κόστη ορίζονται στο παράρτημα VI του κατ`εξουσιοδότηση κανονισμού (ΕΕ) 2017/653 της Επιτροπής",4
+"INCDNTL_CSTS","Πληρωτέα πρόσθετα κόστη. Τα πρόσθετα κόστη ορίζονται στο παράρτημα VI του κατ`εξουσιοδότηση κανονισμού (ΕΕ) 2017/653 της Επιτροπής","Πληρωτέα πρόσθετα κόστη. Τα πρόσθετα κόστη ορίζονται στο παράρτημα VI του κατ`εξουσιοδότηση κανονισμού (ΕΕ) 2017/653 της Επιτροπής",5
+"OTHER","Other Remaining liabilities not included in the previous categories","Other Remaining liabilities not included in the previous categories",6

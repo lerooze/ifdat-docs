@@ -11,7 +11,7 @@
 
 #.  :doc:`acc/dpst`
 
-#.  :doc:`acc/asset_sft`
+#.  :doc:`acc/asst_sft`
 
 #.  :doc:`acc/asst_dbt`
 
@@ -19,9 +19,7 @@
 
 #.  :doc:`acc/shr`
 
-#.  :doc:`acc/edr`
-
-#.  :doc:`acc/odr`
+#.  :doc:`acc/der`
 
 #.  :doc:`acc/asst_nn_fnncl`
 
@@ -34,10 +32,6 @@
 #.  :doc:`acc/lblty_rmnng`
 
 #.  :doc:`acc/hldr`
-
-#.  :doc:`acc/rvn`
-
-#.  :doc:`acc/expns`
 
 #.  :doc:`acc/key`
 
@@ -59,6 +53,4 @@
    LBLTY_LN<acc/lblty_ln>
    LBLTY_RMNNG<acc/lblty_rmnng>
    HLDR<acc/hldr>
-   RVN<acc/rvn>
-   EXPNS<acc/expns>
    KEY<acc/key>

@@ -1,5 +1,4 @@
+[91m/home/al459/envs/ifdat-docs/docs/source/examples/by_ra_type.rst:6: WARNING: toctree contains reference to nonexisting document 'examples/by_ra_type/reic'[39;49;00m
 [91m/home/al459/envs/ifdat-docs/docs/source/ack/accounting.rst: WARNING: document isn't included in any toctree[39;49;00m
 [91m/home/al459/envs/ifdat-docs/docs/source/ack/critical.rst: WARNING: document isn't included in any toctree[39;49;00m
 [91m/home/al459/envs/ifdat-docs/docs/source/examples/by_ra_type.rst: WARNING: document isn't included in any toctree[39;49;00m
-[91m/home/al459/envs/ifdat-docs/docs/source/tables/acc/odr.rst: WARNING: document isn't included in any toctree[39;49;00m
-[91m/home/al459/envs/ifdat-docs/docs/source/tables/ref/odr.rst: WARNING: document isn't included in any toctree[39;49;00m

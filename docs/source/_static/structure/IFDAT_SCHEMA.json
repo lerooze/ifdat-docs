@@ -213,8 +213,7 @@
           "type": "number"
         },
         "IS_DRCT_INVSTMNT": {
-          "title": "Is Drct Invstmnt",
-          "type": "boolean"
+          "$ref": "#/$defs/BoolExtEnum"
         }
       },
       "required": [
@@ -402,6 +401,16 @@
       "title": "BoolEnum",
       "type": "string"
     },
+    "BoolExtEnum": {
+      "enum": [
+        ".",
+        "T",
+        "F",
+        "U"
+      ],
+      "title": "BoolExtEnum",
+      "type": "string"
+    },
     "CntrprtySeries": {
       "properties": {
         "ID": {
@@ -453,158 +462,6 @@
     },
     "DataSets": {
       "properties": {
-        "REF.FND": {
-          "default": null,
-          "items": {
-            "$ref": "#/$defs/FndSeries"
-          },
-          "title": "Ref.Fnd",
-          "type": "array"
-        },
-        "REF.FND_DYNMC": {
-          "default": null,
-          "items": {
-            "$ref": "#/$defs/FndDynmcSeries"
-          },
-          "title": "Ref.Fnd Dynmc",
-          "type": "array"
-        },
-        "REF.SELF_DBT": {
-          "default": null,
-          "items": {
-            "$ref": "#/$defs/SelfDbtSeries"
-          },
-          "title": "Ref.Self Dbt",
-          "type": "array"
-        },
-        "REF.SELF_DBT_DYNMC": {
-          "default": null,
-          "items": {
-            "$ref": "#/$defs/SelfDbtDynmcSeries"
-          },
-          "title": "Ref.Self Dbt Dynmc",
-          "type": "array"
-        },
-        "REF.SELF_DBT_OUTSTNDNG_CHNG": {
-          "default": null,
-          "items": {
-            "$ref": "#/$defs/SelfDbtOutstndngChngSeries"
-          },
-          "title": "Ref.Self Dbt Outstndng Chng",
-          "type": "array"
-        },
-        "REF.SELF_DBT_CPN": {
-          "default": null,
-          "items": {
-            "$ref": "#/$defs/SelfCpnSeries"
-          },
-          "title": "Ref.Self Dbt Cpn",
-          "type": "array"
-        },
-        "REF.SELF_SHR": {
-          "default": null,
-          "items": {
-            "$ref": "#/$defs/SelfShrSeries"
-          },
-          "title": "Ref.Self Shr",
-          "type": "array"
-        },
-        "REF.SELF_SHR_DYNMC": {
-          "default": null,
-          "items": {
-            "$ref": "#/$defs/SelfShrDynmcSeries"
-          },
-          "title": "Ref.Self Shr Dynmc",
-          "type": "array"
-        },
-        "REF.SELF_SHR_DVDND": {
-          "default": null,
-          "items": {
-            "$ref": "#/$defs/SelfDvdndSeries"
-          },
-          "title": "Ref.Self Shr Dvdnd",
-          "type": "array"
-        },
-        "REF.SELF_SHR_SPLT": {
-          "default": null,
-          "items": {
-            "$ref": "#/$defs/SelfSpltSeries"
-          },
-          "title": "Ref.Self Shr Splt",
-          "type": "array"
-        },
-        "REF.MNGMNT": {
-          "default": null,
-          "items": {
-            "$ref": "#/$defs/MngmntSeries"
-          },
-          "title": "Ref.Mngmnt",
-          "type": "array"
-        },
-        "REF.MNGMNT_DYNMC": {
-          "default": null,
-          "items": {
-            "$ref": "#/$defs/MngmntDynmcSeries"
-          },
-          "title": "Ref.Mngmnt Dynmc",
-          "type": "array"
-        },
-        "REF.CNTRPRTY": {
-          "default": null,
-          "items": {
-            "$ref": "#/$defs/CntrprtySeries"
-          },
-          "title": "Ref.Cntrprty",
-          "type": "array"
-        },
-        "REF.DPST": {
-          "default": null,
-          "items": {
-            "$ref": "#/$defs/RefDpstSeries"
-          },
-          "title": "Ref.Dpst",
-          "type": "array"
-        },
-        "REF.SFT": {
-          "default": null,
-          "items": {
-            "$ref": "#/$defs/RefSftSeries"
-          },
-          "title": "Ref.Sft",
-          "type": "array"
-        },
-        "REF.LN": {
-          "default": null,
-          "items": {
-            "$ref": "#/$defs/RefLnSeries"
-          },
-          "title": "Ref.Ln",
-          "type": "array"
-        },
-        "REF.DBT": {
-          "default": null,
-          "items": {
-            "$ref": "#/$defs/DbtSeries"
-          },
-          "title": "Ref.Dbt",
-          "type": "array"
-        },
-        "REF.SHR": {
-          "default": null,
-          "items": {
-            "$ref": "#/$defs/RefShrSeries"
-          },
-          "title": "Ref.Shr",
-          "type": "array"
-        },
-        "REF.DER": {
-          "default": null,
-          "items": {
-            "$ref": "#/$defs/RefDerSeries"
-          },
-          "title": "Ref.Der",
-          "type": "array"
-        },
         "ACC.DPST": {
           "default": null,
           "items": {
@@ -731,6 +588,158 @@
             "$ref": "#/$defs/KeySeries"
           },
           "title": "Acc.Key",
+          "type": "array"
+        },
+        "REF.MNGMNT": {
+          "default": null,
+          "items": {
+            "$ref": "#/$defs/MngmntSeries"
+          },
+          "title": "Ref.Mngmnt",
+          "type": "array"
+        },
+        "REF.MNGMNT_DYNMC": {
+          "default": null,
+          "items": {
+            "$ref": "#/$defs/MngmntDynmcSeries"
+          },
+          "title": "Ref.Mngmnt Dynmc",
+          "type": "array"
+        },
+        "REF.FND": {
+          "default": null,
+          "items": {
+            "$ref": "#/$defs/FndSeries"
+          },
+          "title": "Ref.Fnd",
+          "type": "array"
+        },
+        "REF.FND_DYNMC": {
+          "default": null,
+          "items": {
+            "$ref": "#/$defs/FndDynmcSeries"
+          },
+          "title": "Ref.Fnd Dynmc",
+          "type": "array"
+        },
+        "REF.SELF_DBT": {
+          "default": null,
+          "items": {
+            "$ref": "#/$defs/SelfDbtSeries"
+          },
+          "title": "Ref.Self Dbt",
+          "type": "array"
+        },
+        "REF.SELF_DBT_DYNMC": {
+          "default": null,
+          "items": {
+            "$ref": "#/$defs/SelfDbtDynmcSeries"
+          },
+          "title": "Ref.Self Dbt Dynmc",
+          "type": "array"
+        },
+        "REF.SELF_DBT_OUTSTNDNG_CHNG": {
+          "default": null,
+          "items": {
+            "$ref": "#/$defs/SelfDbtOutstndngChngSeries"
+          },
+          "title": "Ref.Self Dbt Outstndng Chng",
+          "type": "array"
+        },
+        "REF.SELF_DBT_CPN": {
+          "default": null,
+          "items": {
+            "$ref": "#/$defs/SelfCpnSeries"
+          },
+          "title": "Ref.Self Dbt Cpn",
+          "type": "array"
+        },
+        "REF.SELF_SHR": {
+          "default": null,
+          "items": {
+            "$ref": "#/$defs/SelfShrSeries"
+          },
+          "title": "Ref.Self Shr",
+          "type": "array"
+        },
+        "REF.SELF_SHR_DYNMC": {
+          "default": null,
+          "items": {
+            "$ref": "#/$defs/SelfShrDynmcSeries"
+          },
+          "title": "Ref.Self Shr Dynmc",
+          "type": "array"
+        },
+        "REF.SELF_SHR_DVDND": {
+          "default": null,
+          "items": {
+            "$ref": "#/$defs/SelfDvdndSeries"
+          },
+          "title": "Ref.Self Shr Dvdnd",
+          "type": "array"
+        },
+        "REF.SELF_SHR_SPLT": {
+          "default": null,
+          "items": {
+            "$ref": "#/$defs/SelfSpltSeries"
+          },
+          "title": "Ref.Self Shr Splt",
+          "type": "array"
+        },
+        "REF.CNTRPRTY": {
+          "default": null,
+          "items": {
+            "$ref": "#/$defs/CntrprtySeries"
+          },
+          "title": "Ref.Cntrprty",
+          "type": "array"
+        },
+        "REF.DPST": {
+          "default": null,
+          "items": {
+            "$ref": "#/$defs/RefDpstSeries"
+          },
+          "title": "Ref.Dpst",
+          "type": "array"
+        },
+        "REF.SFT": {
+          "default": null,
+          "items": {
+            "$ref": "#/$defs/RefSftSeries"
+          },
+          "title": "Ref.Sft",
+          "type": "array"
+        },
+        "REF.LN": {
+          "default": null,
+          "items": {
+            "$ref": "#/$defs/RefLnSeries"
+          },
+          "title": "Ref.Ln",
+          "type": "array"
+        },
+        "REF.DBT": {
+          "default": null,
+          "items": {
+            "$ref": "#/$defs/DbtSeries"
+          },
+          "title": "Ref.Dbt",
+          "type": "array"
+        },
+        "REF.SHR": {
+          "default": null,
+          "items": {
+            "$ref": "#/$defs/RefShrSeries"
+          },
+          "title": "Ref.Shr",
+          "type": "array"
+        },
+        "REF.DER": {
+          "default": null,
+          "items": {
+            "$ref": "#/$defs/RefDerSeries"
+          },
+          "title": "Ref.Der",
           "type": "array"
         }
       },
@@ -4992,12 +5001,8 @@
         "AI_LN",
         "AI_DBT",
         "AR",
-        "MNGMNT_FEES",
-        "TRNSCTNS_FEES",
-        "TAXES",
-        "OTHER_PRVSNS",
-        "NO_CASH_SL",
-        "FUTURE",
+        "RCRRNG_CSTS",
+        "INCDNTL_CSTS",
         "OTHER"
       ],
       "title": "RemLiabEnum",
