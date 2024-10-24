@@ -11,7 +11,7 @@
 
 #.  :doc:`acc/dpst`
 
-#.  :doc:`acc/sft`
+#.  :doc:`acc/asset_sft`
 
 #.  :doc:`acc/asst_dbt`
 
@@ -28,6 +28,8 @@
 #.  :doc:`acc/asst_rmnng`
 
 #.  :doc:`acc/lblty_ln`
+
+#.  :doc:`acc/lblty_sft`
 
 #.  :doc:`acc/lblty_rmnng`
 
