@@ -13,10 +13,6 @@ isin.
 
 Ακολουθούν παραδείγματα αναγγελλίας στοιχείων IFDAT:
 
-#.  :doc:`examples/init`
-
-#.  :doc:`examples/main`
-
 .. toctree::
    :maxdepth: 1
 
