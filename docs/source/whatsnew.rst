@@ -11,6 +11,17 @@ What's new?
 .. Next release
 .. ============
 
+v0.8.0 (2024-10-28)
+-------------------
+
+* Add ACC.FND_KEY table so that IFs explicitly provide fees per fund
+* Renamed ACC.KEY to ACC.SHR_KEY
+* Dropped MLTPLR from REF.DER table and renamed NM_LTN to FISN
+* Imporoved examples
+* Modify regulation
+* Update data base checks
+* Bug fixes
+
 v0.7.6 (2024-10-24)
 -------------------
 

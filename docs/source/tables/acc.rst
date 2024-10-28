@@ -33,7 +33,9 @@
 
 #.  :doc:`acc/hldr`
 
-#.  :doc:`acc/key`
+#.  :doc:`acc/shr_key`
+
+#.  :doc:`acc/fnd_key`
 
 .. toctree::
    :maxdepth: 1
@@ -53,4 +55,5 @@
    LBLTY_LN<acc/lblty_ln>
    LBLTY_RMNNG<acc/lblty_rmnng>
    HLDR<acc/hldr>
-   KEY<acc/key>
+   SHR_KEY<acc/shr_key>
+   FND_KEY<acc/fnd_key>

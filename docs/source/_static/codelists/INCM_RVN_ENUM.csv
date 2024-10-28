@@ -1,7 +1,0 @@
-"ID","NAME","DESCRIPTION","IID"
-".","Reset","Reset value",0
-"INTRST","Interest received","Interest received",1
-"DVDNDS","Dividends received","Dividends received",2
-"RNTS","Rents received","Rents received",3
-"FDI","Reinvested earnings on FDI","Reinvested earnings on FDI",4
-"INS","Investment income attributable to policy holders in insurance, standardized guarantees and pension funds","Investment income attributable to policy holders in insurance, standardized guarantees and pension funds",5

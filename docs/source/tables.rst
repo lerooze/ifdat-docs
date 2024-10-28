@@ -5,5 +5,5 @@
 .. toctree::
    :maxdepth: 1
 
-   tables/ref
    tables/acc
+   tables/ref

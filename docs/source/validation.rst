@@ -20,8 +20,8 @@
 
     \mathrm{RHS} &= \mathrm{ASSETS} - \mathrm{LIABILITIES}
 
-    \mathrm{ASSETS} &= \sum_i\mathrm{CSH.STCK} + \sum_i\mathrm{DPST.STCK} + \sum_i\mathrm{ASST\_SFT.STCK} + \sum_iA\mathrm{SST\_DBT.STCK}  + \sum_i\mathrm{ASST\_LN.STCK} + \sum_i\mathrm{SHR.STCK} + \sum_i\mathrm{EXT.STCK} + \sum_i\mathrm{ODR.STCK} + \sum_i\mathrm{ASST\_NN\_FNNCL.STCK} + \sum_i\mathrm{ASST\_RMNNG.STCK}  
-    
+    \mathrm{ASSETS} &= \sum_i\mathrm{DPST.STCK} + \sum_i\mathrm{ASST\_SFT.STCK} + \sum_iA\mathrm{SST\_DBT.STCK}  + \sum_i\mathrm{ASST\_LN.STCK} + \sum_i\mathrm{SHR.STCK} + \sum_i\mathrm{DER.STCK} + \sum_i\mathrm{ASST\_NN\_FNNCL.STCK} + \sum_i\mathrm{ASST\_RMNNG.STCK}
+
     \mathrm{LIABILITIES} &= \sum_i\mathrm{LBLTY\_SFT.STCK} + \sum_i\mathrm{LBLTY\_DBT.STCK} + \sum_i\mathrm{LBLTY\_LN.STCK} + \sum_i\mathrm{LBLTY\_RMNNG.STCK}
 
     s &= \text{Άθροισμα ανά μετοχή, μερίδιο, κατηγορία μεριδίου του επενδυτικού οργανισμού}
@@ -31,6 +31,7 @@
     i &= \text{Άθροισμα ανά στοιχείο του λογαριασμού του ισολογισμού που ακολουθεί}
 
 Σε περίπτωση που δεν ισχύει η παραπάνω σχέση θα παρέχονται οι παρακάτω τιμές:
+
     ID 
         Αναγνωριστικός κωδικός ΕΟ
 
@@ -76,8 +77,8 @@
 
     \mathrm{REDEMPTIONS} &= \sum_s\sum_h\mathrm{HLDR.RDMPTNS}
 
-    \mathrm{ASSET\_FLOWS} &= \sum_i\mathrm{DPST.FLS} + \sum_i\mathrm{ASST\_SFT.FLS} + \sum_iA\mathrm{SST\_DBT.FLS}  + \sum_i\mathrm{ASST\_LN.FLS} + \sum_i\mathrm{SHR.FLS} + \sum_i\mathrm{EXT.FLS} + \sum_i\mathrm{ODR.FLS} + \sum_i\mathrm{ASST\_NN\_FNNCL.FLS} + \sum_i\mathrm{ASST\_RMNNG.FLS}  
-    
+    \mathrm{ASSET\_FLOWS} &= \sum_i\mathrm{DPST.FLS} + \sum_i\mathrm{ASST\_SFT.FLS} + \sum_iA\mathrm{SST\_DBT.FLS}  + \sum_i\mathrm{ASST\_LN.FLS} + \sum_i\mathrm{SHR.FLS} + \sum_i\mathrm{DER.FLS} + \sum_i\mathrm{ASST\_NN\_FNNCL.FLS} + \sum_i\mathrm{ASST\_RMNNG.FLS}
+
     \mathrm{LIABILITY\_FLOWS} &= \sum_i\mathrm{LBLTY\_SFT.FLS} + \sum_i\mathrm{LBLTY\_DBT.FLS} + \sum_i\mathrm{LBLTY\_LN.FLS} + \sum_i\mathrm{LBLTY\_RMNNG.FLS}
 
     s &= \text{Άθροισμα ανά μετοχή, μερίδιο, κατηγορία μεριδίου του επενδυτικού οργανισμού}
@@ -87,6 +88,7 @@
     i &= \text{Άθροισμα ανά στοιχείο του λογαριασμού του ισολογισμού}
 
 Σε περίπτωση που δεν ισχύει ο έλεγχος θα παρέχονται οι παρακάτω τιμές:
+
     ID 
         Αναγνωριστικός κωδικός ΕΟ
 
@@ -118,7 +120,7 @@
         LHS - RHS
 
    
-Έλεγχος δεδουλευμένων τόκων και μισθωμάτων (NET_ASSET)
+Έλεγχος δεδουλευμένων τόκων (ACCRLS)
 ------------------------------------------------------
 Ο έλεγχος είναι σημαντικός.
 
@@ -138,6 +140,7 @@
     i &= \text{Άθροισμα ανά στοιχείο του λογαριασμού του ισολογισμού που ακολουθεί}
 
 Σε περίπτωση που δεν ισχύει η παραπάνω σχέση θα παρέχονται οι παρακάτω τιμές:
+
     ID 
         Αναγνωριστικός κωδικός ΕΟ
 
