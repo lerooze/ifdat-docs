@@ -28,8 +28,8 @@ shutil.copytree(src_dir_example, example_path)
 # for f in glob.glob(str(src_dir_example.joinpath("ifdat*"))):
 #     pf = Path(f)
 #     shutil.copyfile(pf, example_path.joinpath(pf.name))
-report = src_root.joinpath("reports").joinpath("IFDAT_RAS.xlsx")
-shutil.copyfile(report, structure_path.joinpath("IFDAT-LIST.xlsx"))
+report = src_root.joinpath("reports").joinpath("IFDAT-LIST.xlsx")
+shutil.copy(report, structure_path)
 
 codelists = dst_root.joinpath("source/types/codelists")
 try:
