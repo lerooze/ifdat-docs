@@ -10,6 +10,11 @@ What's new?
 
 .. Next release
 .. ============
+v0.8.1 (2024-10-29)
+-------------------
+
+* Removed IID dimension from ACC.LBLTY_DBT table
+* Improve DER identifier 
 
 v0.8.0 (2024-10-28)
 -------------------

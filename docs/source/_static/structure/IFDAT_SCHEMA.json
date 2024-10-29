@@ -1317,7 +1317,7 @@
         ".",
         "PRF",
         "RTL",
-        "\u039c\u0399\u03a7"
+        "MIX"
       ],
       "title": "FndInvstrTypEnum",
       "type": "string"
@@ -4288,14 +4288,8 @@
       "properties": {
         "IID": {
           "maxLength": 51,
-          "pattern": "^(I[A-Z][A-Z][A-Z0-9]{9}[0-9])|(PE[A-Za-z0-9@$-]+_[!-~]+)$",
-          "title": "Iid",
-          "type": "string"
-        },
-        "ID": {
-          "maxLength": 51,
           "pattern": "^([ETB][A-Za-z0-9_@$-][!-~]*)|(L[0-9]{4}[0]{2}[A-Z0-9]{12}[0-9]{2})|(P[A-Za-z0-9@$-]+_[!-~]+)$",
-          "title": "Id",
+          "title": "Iid",
           "type": "string"
         },
         "DT": {
@@ -4327,7 +4321,6 @@
       },
       "required": [
         "IID",
-        "ID",
         "DT",
         "FRQNCY",
         "STCK",
