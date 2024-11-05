@@ -44,6 +44,14 @@ Factoring refers to a transaction whereby a financial institution, known as a fa
 "LVG","Leveraged loan","
 Leveraged loan is a syndicated loan extended to a corporation with low credit quality.
             ",11
-"OTH","Other loan","
-Loan other than CRD, OVR, REV, FLS, NOS, TRD, SUB, INT, RFC, NFC, LVG.
+"REP","Repurchase transaction","
+            If it appears on the asset side it refers to claims under reverse repos or reverse repos type operations against cash collateral, ie, counterpart of cash paid out in exchange for securities purchased at a given price under a firm commitment to resell the same or similar securities at a fixed price on a specific future date.
+            If it appears on the liability side it refers to repo or repo-type operations against cash collateral, ie, counterpart of cash received in exchange for securities sold at a given price under a firm commitment to repurchase the same (or similar) securities at a fixed price on a specific future date.  Amounts received in exchange for securities transferred to a third party ('temporary acquirer') are to be classified here where there is a firm commetment to reverse the operation and not merely an option to do so.  This implies that all risks and rewards of the underlying security are retained during the operation.
             ",12
+"SBL","Securities lending/borrowing","
+            If it appears on the asset side it refers to claims under securities borrowing against cash collateral, ie, counterpart of cash paid in exchange for securities borrowed.
+            If it appears on the liability side it refers to cash collateral received in exchange for securities lending or gold transfer, ie, amounts received in exchange for securities or gold temporarily transferred to a third party in the form of securities/gold cash lending operations against cash collateral.
+            ",13
+"OTH","Other loan","
+Loan other than CRD, OVR, REV, FLS, NOS, TRD, SUB, INT, RFC, NFC, LVG, REP, SBL.
+            ",14

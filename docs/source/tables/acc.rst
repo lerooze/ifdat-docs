@@ -11,8 +11,6 @@ A. Κατηγορία Πινάκων με Λογιστικά Στοιχεία (A
 
 #.  :doc:`acc/dpst`
 
-#.  :doc:`acc/asst_sft`
-
 #.  :doc:`acc/asst_dbt`
 
 #.  :doc:`acc/asst_ln`
@@ -26,8 +24,6 @@ A. Κατηγορία Πινάκων με Λογιστικά Στοιχεία (A
 #.  :doc:`acc/asst_rmnng`
 
 #.  :doc:`acc/lblty_ln`
-
-#.  :doc:`acc/lblty_sft`
 
 #.  :doc:`acc/lblty_rmnng`
 
@@ -43,14 +39,12 @@ A. Κατηγορία Πινάκων με Λογιστικά Στοιχεία (A
    :hidden:
    
    DPST<acc/dpst>
-   ASST_SFT<acc/asst_sft>
    ASST_DBT<acc/asst_dbt>
    ASST_LN<acc/asst_ln>
    SHR<acc/shr>
    DER<acc/der>
    ASST_NN_FNNCL<acc/asst_nn_fnncl>
    ASST_RMNNG<acc/asst_rmnng>
-   LBLTY_SFT<acc/lblty_sft>
    LBLTY_DBT<acc/lblty_dbt>
    LBLTY_LN<acc/lblty_ln>
    LBLTY_RMNNG<acc/lblty_rmnng>

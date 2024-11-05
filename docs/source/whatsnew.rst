@@ -10,6 +10,13 @@ What's new?
 
 .. Next release
 .. ============
+
+v0.8.2 (2024-11-06)
+-------------------
+
+* Merge SFT tables into LON tables
+* Fix bugs
+
 v0.8.1 (2024-10-29)
 -------------------
 

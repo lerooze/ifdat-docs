@@ -37,8 +37,6 @@ B. Στοιχεία Αναφοράς (REF)
 
 #.  :doc:`ref/dpst`
 
-#.  :doc:`ref/sft`
-
 #.  :doc:`ref/dbt`
 
 #.  :doc:`ref/ln`
@@ -66,7 +64,6 @@ B. Στοιχεία Αναφοράς (REF)
    MNGMNT_DYNMC<ref/mngmnt_dynmc>
    CNTRPRTY<ref/cntrprty>
    DPST<ref/dpst>
-   SFT<ref/sft>
    DBT<ref/dbt>
    LN<ref/ln>
    SHR<ref/shr>

@@ -20,9 +20,9 @@
 
     \mathrm{RHS} &= \mathrm{ASSETS} - \mathrm{LIABILITIES}
 
-    \mathrm{ASSETS} &= \sum_i\mathrm{DPST.STCK} + \sum_i\mathrm{ASST\_SFT.STCK} + \sum_iA\mathrm{SST\_DBT.STCK}  + \sum_i\mathrm{ASST\_LN.STCK} + \sum_i\mathrm{SHR.STCK} + \sum_i\mathrm{DER.STCK} + \sum_i\mathrm{ASST\_NN\_FNNCL.STCK} + \sum_i\mathrm{ASST\_RMNNG.STCK}
+    \mathrm{ASSETS} &= \sum_i\mathrm{DPST.STCK} + \sum_iA\mathrm{SST\_DBT.STCK}  + \sum_i\mathrm{ASST\_LN.STCK} + \sum_i\mathrm{SHR.STCK} + \sum_i\mathrm{DER.STCK} + \sum_i\mathrm{ASST\_NN\_FNNCL.STCK} + \sum_i\mathrm{ASST\_RMNNG.STCK}
 
-    \mathrm{LIABILITIES} &= \sum_i\mathrm{LBLTY\_SFT.STCK} + \sum_i\mathrm{LBLTY\_DBT.STCK} + \sum_i\mathrm{LBLTY\_LN.STCK} + \sum_i\mathrm{LBLTY\_RMNNG.STCK}
+    \mathrm{LIABILITIES} &= \sum_i\mathrm{LBLTY\_DBT.STCK} + \sum_i\mathrm{LBLTY\_LN.STCK} + \sum_i\mathrm{LBLTY\_RMNNG.STCK}
 
     s &= \text{Άθροισμα ανά μετοχή, μερίδιο, κατηγορία μεριδίου του επενδυτικού οργανισμού}
 
@@ -77,9 +77,9 @@
 
     \mathrm{REDEMPTIONS} &= \sum_s\sum_h\mathrm{HLDR.RDMPTNS}
 
-    \mathrm{ASSET\_FLOWS} &= \sum_i\mathrm{DPST.FLS} + \sum_i\mathrm{ASST\_SFT.FLS} + \sum_iA\mathrm{SST\_DBT.FLS}  + \sum_i\mathrm{ASST\_LN.FLS} + \sum_i\mathrm{SHR.FLS} + \sum_i\mathrm{DER.FLS} + \sum_i\mathrm{ASST\_NN\_FNNCL.FLS} + \sum_i\mathrm{ASST\_RMNNG.FLS}
+    \mathrm{ASSET\_FLOWS} &= \sum_i\mathrm{DPST.FLS} + \sum_iA\mathrm{SST\_DBT.FLS}  + \sum_i\mathrm{ASST\_LN.FLS} + \sum_i\mathrm{SHR.FLS} + \sum_i\mathrm{DER.FLS} + \sum_i\mathrm{ASST\_NN\_FNNCL.FLS} + \sum_i\mathrm{ASST\_RMNNG.FLS}
 
-    \mathrm{LIABILITY\_FLOWS} &= \sum_i\mathrm{LBLTY\_SFT.FLS} + \sum_i\mathrm{LBLTY\_DBT.FLS} + \sum_i\mathrm{LBLTY\_LN.FLS} + \sum_i\mathrm{LBLTY\_RMNNG.FLS}
+    \mathrm{LIABILITY\_FLOWS} &= \sum_i\mathrm{LBLTY\_DBT.FLS} + \sum_i\mathrm{LBLTY\_LN.FLS} + \sum_i\mathrm{LBLTY\_RMNNG.FLS}
 
     s &= \text{Άθροισμα ανά μετοχή, μερίδιο, κατηγορία μεριδίου του επενδυτικού οργανισμού}
 
