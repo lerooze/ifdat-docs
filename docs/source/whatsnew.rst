@@ -15,6 +15,7 @@ v0.8.2 (2024-11-06)
 -------------------
 
 * Merge SFT tables into LON tables
+* Update init and main examples based on IFDAT 30/10/2024 presentation
 * Fix bugs
 
 v0.8.1 (2024-10-29)

@@ -1,121 +1,25 @@
 {
-  "header": {
-    "partner": "EGR123456789",
-    "username": "zuser",
-    "domain": "IFDat"
+  "HEADER": {
+    "PARTNER": "EGR123456789",
+    "USERNAME": "zuser",
+    "DOMAIN": "IFDat"
   },
-  "datasets": {
-    "ref_fnd": [
+  "DATASETS": {
+    "REF.FND_DYNMC": [
       {
-        "id": "PEGR123456789_AKES",
-        "dt_brth": "2024-09-15T00:00:00"
+        "ID": "PEGR123456789_AKES",
+        "RPRTD_BY": "EGR123456789",
+        "MNGD_BY": "EGR123456789"
       },
       {
-        "id": "L887600ED3C2BA1B01C34",
-        "dt_brth": "2024-09-20T00:00:00",
-        "lei_id": "887600ED3C2BA1B01C34"
+        "ID": "L887600ED3C2BA1B01C34",
+        "RPRTD_BY": "EGR123456789",
+        "MNGD_BY": "EGR123456789"
       },
       {
-        "id": "L787600ED3C2BA1B01C45",
-        "dt_brth": "2024-09-25T00:00:00",
-        "lei_id": "787600ED3C2BA1B01C45"
-      }
-    ],
-    "ref_fnd_dynmc": [
-      {
-        "id": "PEGR123456789_AKES",
-        "nm": "Z Venture Fund",
-        "nm_ltn": "Z Venture Fund",
-        "nm_shrt": "ZVF",
-        "cntry_rsdnc": "GR",
-        "url": "https://z.gr/vf",
-        "mngd_by": "EGR123456789",
-        "rprtd_by": "EGR123456789",
-        "lgl_typ": "OAIF",
-        "invstmnt_plcy": "EQT",
-        "eqty_typ": "CLOSE",
-        "dstrbtn_plcy": "MIX",
-        "invstr_typ": "RTL",
-        "grn_typ": "OTHER",
-        "strtgy": "ACTIVE",
-        "ggrphcl_fcs": "DOM"
-      },
-      {
-        "id": "L887600ED3C2BA1B01C34",
-        "nm": "Z Ομολογιακό",
-        "nm_ltn": "Z Bond Fund",
-        "nm_shrt": "ZBOND",
-        "cntry_rsdnc": "GR",
-        "url": "https://z.gr/zbond",
-        "mngd_by": "EGR123456789",
-        "rprtd_by": "EGR123456789",
-        "lgl_typ": "UCITS",
-        "invstmnt_plcy": "BON",
-        "eqty_typ": "OPEN",
-        "dstrbtn_plcy": "DIS",
-        "invstr_typ": "PRF",
-        "grn_typ": "OTHER",
-        "strtgy": "ACTIVE",
-        "ggrphcl_fcs": "EEA",
-        "bnd_fcs": "MIX"
-      },
-      {
-        "id": "L787600ED3C2BA1B01C45",
-        "nm": "Ζ Μικτό",
-        "nm_ltn": "Z Balanced Fund",
-        "nm_shrt": "ZBALANCED",
-        "cntry_rsdnc": "GR",
-        "url": "https://z.gr/zbalanced",
-        "mngd_by": "EGR123456789",
-        "rprtd_by": "EGR123456789",
-        "lgl_typ": "UCITS",
-        "invstmnt_plcy": "MIX",
-        "eqty_typ": "OPEN",
-        "dstrbtn_plcy": "DIS",
-        "invstr_typ": "PRF",
-        "grn_typ": "OTHER",
-        "strtgy": "ACTIVE",
-        "ggrphcl_fcs": "EEA",
-        "is_fof": "T"
-      }
-    ],
-    "ref_mngmnt": [
-      {
-        "id": "EGR123456789",
-        "dt_brth": "2024-09-01T00:00:00",
-        "lei_id": "987600ED3C2BA1B01C23",
-        "tax_id": "123456789",
-        "nbr_id": "987654321000"
-      }
-    ],
-    "ref_mngmnt_dynmc": [
-      {
-        "id": "EGR123456789",
-        "nm": "ZZZ ΑΕΔΑΚ-ΑΕΔΟΕΕ",
-        "nm_ltn": "ZZZ AEDAK-AEDOEE",
-        "nm_shrt": "ZZZ",
-        "strt": "Ακαδημίας 0",
-        "strt_ltn": "Akadimias 0",
-        "cty": "Αθήνα",
-        "cty_ltn": "Athens",
-        "pstl_cd": "100000",
-        "url": "https://z.gr/",
-        "email": "info@z.gr",
-        "cntry_rsdnc": "GR"
-      },
-      {
-        "id": "EGR123456789",
-        "vld_frm": "2024-09-10T00:00:00",
-        "nm": "ZZZZ ΑΕΔΑΚ-ΑΕΔΟΕΕ",
-        "nm_ltn": "ZZZZ AEDAK-AEDOEE",
-        "nm_shrt": "ZZZZ"
-      },
-      {
-        "id": "EGR123456789",
-        "vld_frm": "2024-09-20T00:00:00",
-        "nm": "Z ΑΕΔΑΚ-ΑΕΔΟΕΕ",
-        "nm_ltn": "Z AEDAK-AEDOEE",
-        "nm_shrt": "Z"
+        "ID": "L787600ED3C2BA1B01C45",
+        "RPRTD_BY": "EGR123456789",
+        "MNGD_BY": "EGR123456789"
       }
     ]
   }

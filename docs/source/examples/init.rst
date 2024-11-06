@@ -17,13 +17,3 @@
 --------------------------
 
 :download:`INIT </_static/examples/ifdat_zuser_init.xlsx>`
-
-Απεικόνιση των στοιχείων
-------------------------
-
-Έχει μεσολαβήσει η ΤτΕ και έχει δώσει επίσημους κωδικούς στους νέους
-επενδυτικούς οργανιμούς που είναι αμοιβαία κεφάλαια.  Σε περίπτωση που νέοι ΕΟ
-είναι νομικές οντότητες τότε ο επίσημος κωδικός τους είναι το EGR{AFM}.
-
-:download:`INIT_SNAPSHOT_REPORT </_static/examples/IFDAT_RAS_INIT.xlsx>`
-:download:`INIT_FULL_REPORT </_static/examples/IFDATFULL_REPORT_INIT.xlsx>`
