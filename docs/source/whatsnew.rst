@@ -11,6 +11,12 @@ What's new?
 .. Next release
 .. ============
 
+v0.8.3 (2024-11-11)
+-------------------
+* Updated regulation body
+* Updated tables to be consistent with regulation body
+* Fix bugs
+
 v0.8.2 (2024-11-06)
 -------------------
 
