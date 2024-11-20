@@ -11,6 +11,14 @@ What's new?
 .. Next release
 .. ============
 
+v0.8.4 (2024-11-20)
+-------------------
+* Regulation updated and sent to the legal department
+* Added derogation tables 
+* Created IFDAT-LIST reports at the end of the main example
+* Updated tables docs to be consistent with the regulation
+* Fix bugs
+
 v0.8.3 (2024-11-11)
 -------------------
 * Updated regulation body

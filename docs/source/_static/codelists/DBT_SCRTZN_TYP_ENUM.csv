@@ -1,9 +1,0 @@
-"ID","NAME","DESCRIPTION","IID"
-".","Reset","Reset value",0
-"ABS","Asset-backed security","Asset-backed security",1
-"MBS","Mortgage-backed security","Mortgage-backed security",2
-"CDO","Collateralised Debt Obligation","Collateralised Debt Obligation",3
-"CMO","Collateralised Mortgage Obligation","Collateralised Mortgage Obligation",4
-"MIX","Mixed securitisation","Mixed securitisation",5
-"OTHER","Other securitisation","Other securitisation",6
-"NOINFO","No detailed classification available","No detailed classification available",7

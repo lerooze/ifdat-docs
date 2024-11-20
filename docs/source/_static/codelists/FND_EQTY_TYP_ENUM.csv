@@ -1,12 +1,12 @@
 "ID","NAME","DESCRIPTION","IID"
 ".","Reset","Reset value",0
 "OPEN","Ανοιχτού τύπου","
-            Open-end investment funds are investment funds whose units or
-            shares are, at the request of the holders, repurchased or redeemed
-            directly or indirectly out of the undertaking’s assets.
+Ως ΕΟ ανοικτού τύπου νοούνται οι ΕΟ των οποίων τα μερίδια ή οι μετοχές
+εξαγοράζονται η εξοφλούνται, κατ’ αίτηση των κατόχων, άμεσα ή έμμεσα
+από το ενεργητικό της επιχείρησης.
             ",1
 "CLOSE","Κλειστού τύπου","
-            Closed-end investment funds are investment funds with a fixed
-            number of issued shares whose shareholders have to buy or sell
-            existing shares to enter or leave the fund.
+Ως ΕΟ κλειστού τύπου νοούνται οι ΕΟ οι οποίοι εκδίδουν πάγιο αριθμό
+μετοχών και των οποίων οι μέτοχοι πρέπει να αγοράζουν ή να πωλούν
+υφιστάμενες μετοχές κατά την είσοδο ή έξοδό τους από αυτούς.
             ",2

@@ -1,58 +1,60 @@
 "ID","NAME","DESCRIPTION","IID"
 ".","Reset","Reset value",0
-"MMF","Αμοιβαία κεφάλαια χρηματαγοράς","
-            ‘Money market funds’ means collective investment undertakings that
-            have been authorised pursuant to Article 4 of Regulation (EU)
-            2017/1131 and that issue shares or units which are close
-            substitutes for deposits as referred to in Part 1 of Annex I to
-            Regulation ECB/2021/2.
+"MMF","Αμοιβαία κεφάλαια της χρηματαγοράς","
+Ως «αμοιβαία κεφάλαια της χρηματαγοράς» ή «ΑΚΧΑ» νοούνται οργανισμοί
+συλλογικών επενδύσεων οι οποίοι έχουν αδειοδοτηθεί κατά το άρθρο 4 του
+κανονισμού (ΕΕ) 2017/1131 και εκδίδουν μετοχές ή μερίδια που συνιστούν
+συγγενή υποκατάστατα καταθέσεων κατά τις αναφορές του πρώτου μέρους του
+παραρτήματος I του παρόντος κανονισμού·
             ",1
-"BON","Ομολογιακά αμοιβαία κεφάλαια","
-            Bond funds are investment funds primarily investing in debt securities.
+"BON","Ομολογιακοί ΕΟ","
+Ως ομολογιακοί ΕΟ νοούνται οι ΕΟ που επενδύουν κατά κύριο λόγο σε χρεόγραφα.
             ",2
-"EQT","Μετοχικά αμοιβαία κεφάλαια","
-            Equity funds are investment funds primarily investing in equity.
+"EQT","Μετοχικοί ΕΟ","
+Ως μετοχικοί ΕΟ νοούνται οι ΕΟ που επενδύουν κατά κύριο λόγο σε μετοχές.
             ",3
-"MIX","Μεικτά αμοιβαία κεφάλαια","
-            Mixed funds are investment funds investing in both equity and bonds
-            with no prevailing policy in favour of one or the other instrument.
+"MIX","Μεικτοί ΕΟ","
+Ως μεικτοί ΕΟ νοούνται οι ΕΟ που επενδύουν εξίσου σε μετοχές και
+χρεόγραφα χωρίς υπεροχή της επένδυσης στο ένα ή το άλλο μέσο.
             ",4
-"RES","Αμοιβαία κεφάλαια ακίνητης περιουσίας","
-            Real estate funds are investment funds primarily investing in real
-            estate.
+"RES","ΕΟ ακίνητης περιουσίας","
+Ως ΕΟ ακίνητης περιουσίας νοούνται οι ΕΟ που επενδύουν κατά κύριο λόγο σε ακίνητη περιουσία.
             ",5
 "HED","Αμοιβαία κεφάλαια αντιστάθμισης κινδύνων","
-            Hedge funds mean any collective investment undertakings regardless
-            of its legal structure under national laws, which apply relatively
-            unconstrained investment strategies to achieve positive absolute
-            returns, and whose managers, in addition to management fees, are
-            remunerated in relation to the fund’s performance. For that
-            purpose, hedge funds have few restrictions on the type of financial
-            instruments in which they may invest and may therefore flexibly
-            employ a wide variety of financial techniques, involving leverage,
-            short-selling or any other techniques.  This definition also covers
-            funds that invest, in full or in part, in other hedge funds
-            provided that they otherwise meet the definition.
+Ως αμοιβαία κεφάλαια αντιστάθμισης κινδύνων (hedge funds) νοείται κάθε
+οργανισμός συλλογικών επενδύσεων, ανεξαρτήτως της νομικής του
+διάρθρωσης κατά το εθνικό δίκαιο, ο οποίος εφαρμόζει σχετικά
+απεριόριστες επενδυτικές στρατηγικές με σκοπό επίτευξης θετικής
+απόλυτης απόδοσης. Εκτός από τις αποδοχές τους για τη διαχείριση, οι
+διαχειριστές του αμοιβαίου κεφαλαίου αποζημιώνονται ανάλογα με την
+απόδοσή του. Για τον λόγο αυτόν τα αμοιβαία κεφάλαια αντιστάθμισης
+κινδύνων υπόκεινται σε λίγους περιορισμούς ως προς το είδος των
+χρηματοπιστωτικών μέσων στα οποία μπορούν να επενδύσουν και, επομένως,
+μπορούν να εφαρμόζουν με ευελιξία ένα ευρύ φάσμα χρηματοπιστωτικών
+τεχνικών όπως μόχλευση, ανοιχτές πωλήσεις ή οποιαδήποτε άλλη τεχνική. Ο
+παρών ορισμός καλύπτει επίσης τους ΕΟ που επενδύουν, εν όλω ή εν μέρει,
+σε άλλα αμοιβαία κεφάλαια αντιστάθμισης κινδύνων, εφόσον κατά τα λοιπά
+συνάδουν με τον εν λόγω ορισμό.
             ",6
 "LOA","Δανειακά/πιστωτικά αμοιβαία κεφάλαια","
-            Loan credit funds are investment funds primarily investing in loans.
+Ως δανειακά / πιστωτικά αμοιβαία κεφάλαια (loan / credit funds)
+νοούνται οι ΕΟ που επενδύουν κατά κύριο λόγο σε δάνεια.
             ",7
 "COM","Αμοιβαία κεφάλαια εμπορευμάτων","
-            Commodity funds are investment funds primarily investing in commodities.
+Ως αμοιβαία κεφάλαια εμπορευμάτων (commodity funds) νοούνται οι ΕΟ που επενδύουν κατά κύριο λόγο σε εμπορεύματα.
             ",8
 "INF","Αμοιβαία κεφάλαια υποδομών","
-            Infrastructure funds are investment funds primarily investing in
-            public building infrastructure such as schools, hospitals or
-            prisons, social infrastructure such as social housing, transport
-            infrastructure such as roads, mass transit systems or airports,
-            energy infrastructure such as energy grids, climate adaptation and
-            mitigation projects, power plants or pipelines, water management
-            infrastructure such as water supply systems, sewage or irrigation
-            systems, communication infrastructure such as networks, and waste
-            management infrastructure such as recycling or collection systems.
+Ως αμοιβαία κεφάλαια υποδομών (infrastructure funds) νοούνται οι ΕΟ που
+επενδύουν κατά κύριο λόγο σε δημόσιες κτιριακές υποδομές, όπως σχολεία,
+νοσοκομεία ή φυλακές, σε κοινωνικές υποδομές, όπως κοινωνική στέγαση,
+σε υποδομές μεταφορών, όπως δρόμοι, συστήματα μαζικής μεταφοράς ή
+αερολιμένες, σε υποδομές ενέργειας, όπως ενεργειακά δίκτυα, έργα
+σχετικά με την προσαρμογή στην κλιματική αλλαγή και τον μετριασμό της,
+σταθμοί παραγωγής ενέργειας ή αγωγοί, σε υποδομές διαχείρισης υδάτων,
+όπως συστήματα ύδρευσης, συστήματα λυμάτων ή άρδευσης και αποχέτευσης,
+σε υποδομές επικοινωνιών, όπως δίκτυα, και σε υποδομές διαχείρισης
+αποβλήτων, όπως συστήματα ανακύκλωσης ή συλλογής.
             ",9
 "OTH","Λοιπά αμοιβαία κεφάλαια","
-            Other funds are investment funds other than bond funds, equity
-            funds, mixed funds, real estate funds, hedge funds, loan / credit
-            funds, commodity funds or infrastructure funds.
+Ως λοιποί ΕΟ νοούνται οι ΕΟ πλην των ομολογιακών, των μετοχικών, των μεικτών, των ΕΟ ακίνητης περιουσίας, των αμοιβαίων κεφαλαίων αντιστάθμισης κινδύνων, των δανειακών / πιστωτικών αμοιβαίων κεφαλαίων, των αμοιβαίων κεφαλαίων εμπορευμάτων ή των αμοιβαίων κεφαλαίων υποδομών.
             ",10

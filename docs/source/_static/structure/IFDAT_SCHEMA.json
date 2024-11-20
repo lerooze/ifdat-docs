@@ -10,7 +10,7 @@
         },
         "ID": {
           "maxLength": 51,
-          "pattern": "^([ETB][A-Za-z0-9_@$-][!-~]*)|(L[0-9]{4}[0]{2}[A-Z0-9]{12}[0-9]{2})|(P[A-Za-z0-9@$-]+_[!-~]+)$",
+          "pattern": "^([ETB][A-Za-z0-9_@$-][!-~]*)|(L[0-9A-Z]{18}[0-9]{2})|(P[A-Za-z0-9@$-]+_[!-~]+)$",
           "title": "Id",
           "type": "string"
         },
@@ -89,6 +89,60 @@
       "title": "AccDpstSeries",
       "type": "object"
     },
+    "AccDrgtnSeries": {
+      "properties": {
+        "IID": {
+          "maxLength": 51,
+          "pattern": "^(I[A-Z][A-Z][A-Z0-9]{9}[0-9])|(PE[A-Za-z0-9@$-]+_[!-~]+)$",
+          "title": "Iid",
+          "type": "string"
+        },
+        "DT": {
+          "format": "date-time",
+          "title": "Dt",
+          "type": "string"
+        },
+        "FRQNCY": {
+          "$ref": "#/$defs/GenFrqncyEnum"
+        },
+        "QNTTY": {
+          "minimum": 0.0,
+          "title": "Qntty",
+          "type": "number"
+        },
+        "BK_PRC": {
+          "minimum": 0.0,
+          "title": "Bk Prc",
+          "type": "number"
+        },
+        "SBSCRPTNS": {
+          "minimum": 0.0,
+          "title": "Sbscrptns",
+          "type": "number"
+        },
+        "RDMPTNS": {
+          "minimum": 0.0,
+          "title": "Rdmptns",
+          "type": "number"
+        },
+        "INCM": {
+          "title": "Incm",
+          "type": "number"
+        }
+      },
+      "required": [
+        "IID",
+        "DT",
+        "FRQNCY",
+        "QNTTY",
+        "BK_PRC",
+        "SBSCRPTNS",
+        "RDMPTNS",
+        "INCM"
+      ],
+      "title": "AccDrgtnSeries",
+      "type": "object"
+    },
     "AccLnSeries": {
       "properties": {
         "IID": {
@@ -145,7 +199,7 @@
         },
         "ID": {
           "maxLength": 51,
-          "pattern": "^([ETB][A-Za-z0-9_@$-][!-~]*)|(L[0-9]{4}[0]{2}[A-Z0-9]{12}[0-9]{2})|(P[A-Za-z0-9@$-]+_[!-~]+)$",
+          "pattern": "^([ETB][A-Za-z0-9_@$-][!-~]*)|(L[0-9A-Z]{18}[0-9]{2})|(P[A-Za-z0-9@$-]+_[!-~]+)$",
           "title": "Id",
           "type": "string"
         },
@@ -204,7 +258,7 @@
         },
         "ID": {
           "maxLength": 51,
-          "pattern": "^([ETB][A-Za-z0-9_@$-][!-~]*)|(L[0-9]{4}[0]{2}[A-Z0-9]{12}[0-9]{2})|(P[A-Za-z0-9@$-]+_[!-~]+)$",
+          "pattern": "^([ETB][A-Za-z0-9_@$-][!-~]*)|(L[0-9A-Z]{18}[0-9]{2})|(P[A-Za-z0-9@$-]+_[!-~]+)$",
           "title": "Id",
           "type": "string"
         },
@@ -271,7 +325,7 @@
       "properties": {
         "ID": {
           "maxLength": 51,
-          "pattern": "^([ETB][A-Za-z0-9_@$-][!-~]*)|(L[0-9]{4}[0]{2}[A-Z0-9]{12}[0-9]{2})|(P[A-Za-z0-9@$-]+_[!-~]+)$",
+          "pattern": "^([ETB][A-Za-z0-9_@$-][!-~]*)|(L[0-9A-Z]{18}[0-9]{2})|(P[A-Za-z0-9@$-]+_[!-~]+)$",
           "title": "Id",
           "type": "string"
         },
@@ -320,7 +374,7 @@
       "properties": {
         "ID": {
           "maxLength": 51,
-          "pattern": "^([ETB][A-Za-z0-9_@$-][!-~]*)|(L[0-9]{4}[0]{2}[A-Z0-9]{12}[0-9]{2})|(P[A-Za-z0-9@$-]+_[!-~]+)$",
+          "pattern": "^([ETB][A-Za-z0-9_@$-][!-~]*)|(L[0-9A-Z]{18}[0-9]{2})|(P[A-Za-z0-9@$-]+_[!-~]+)$",
           "title": "Id",
           "type": "string"
         },
@@ -379,20 +433,8 @@
       "properties": {
         "ID": {
           "maxLength": 51,
-          "pattern": "^([ETB][A-Za-z0-9_@$-][!-~]*)|(L[0-9]{4}[0]{2}[A-Z0-9]{12}[0-9]{2})|(P[A-Za-z0-9@$-]+_[!-~]+)$",
+          "pattern": "^([ETB][A-Za-z0-9_@$-][!-~]*)|(L[0-9A-Z]{18}[0-9]{2})|(P[A-Za-z0-9@$-]+_[!-~]+)$",
           "title": "Id",
-          "type": "string"
-        },
-        "DT_BRTH": {
-          "default": null,
-          "format": "date-time",
-          "title": "Dt Brth",
-          "type": "string"
-        },
-        "DT_CLS": {
-          "default": null,
-          "format": "date-time",
-          "title": "Dt Cls",
           "type": "string"
         },
         "NM_LTN": {
@@ -412,7 +454,7 @@
         "INSTTTNL_SCTR": {
           "allOf": [
             {
-              "$ref": "#/$defs/OrgInstttnlSctrEnum"
+              "$ref": "#/$defs/EsaSectorEnum"
             }
           ],
           "default": null
@@ -528,6 +570,14 @@
             "$ref": "#/$defs/FndKeySeries"
           },
           "title": "Acc.Fnd Key",
+          "type": "array"
+        },
+        "ACC.DRGTN": {
+          "default": null,
+          "items": {
+            "$ref": "#/$defs/AccDrgtnSeries"
+          },
+          "title": "Acc.Drgtn",
           "type": "array"
         },
         "REF.MNGMNT": {
@@ -673,6 +723,14 @@
           },
           "title": "Ref.Der",
           "type": "array"
+        },
+        "REF.DRGTN": {
+          "default": null,
+          "items": {
+            "$ref": "#/$defs/RefDrgtnSeries"
+          },
+          "title": "Ref.Drgtn",
+          "type": "array"
         }
       },
       "title": "DataSets",
@@ -770,20 +828,6 @@
       "title": "DbtScrtyLvlEnum",
       "type": "string"
     },
-    "DbtScrtznTypEnum": {
-      "enum": [
-        ".",
-        "ABS",
-        "MBS",
-        "CDO",
-        "CMO",
-        "MIX",
-        "OTHER",
-        "NOINFO"
-      ],
-      "title": "DbtScrtznTypEnum",
-      "type": "string"
-    },
     "DbtSeries": {
       "properties": {
         "ID": {
@@ -812,18 +856,10 @@
           ],
           "default": null
         },
-        "TYP": {
-          "allOf": [
-            {
-              "$ref": "#/$defs/DbtTypEnum"
-            }
-          ],
-          "default": null
-        },
         "ISSD_BY": {
           "default": null,
           "maxLength": 51,
-          "pattern": "^([ETB][A-Za-z0-9_@$-][!-~]*)|(L[0-9]{4}[0]{2}[A-Z0-9]{12}[0-9]{2})|(P[A-Za-z0-9@$-]+_[!-~]+)$",
+          "pattern": "^([ETB][A-Za-z0-9_@$-][!-~]*)|(L[0-9A-Z]{18}[0-9]{2})|(P[A-Za-z0-9@$-]+_[!-~]+)$",
           "title": "Issd By",
           "type": "string"
         }
@@ -930,6 +966,29 @@
       "title": "DvdndTypEnum",
       "type": "string"
     },
+    "EsaSectorEnum": {
+      "enum": [
+        ".",
+        "S11",
+        "S121",
+        "S122",
+        "S123",
+        "S124",
+        "S125",
+        "S126",
+        "S127",
+        "S128",
+        "S129",
+        "S1311",
+        "S1312",
+        "S1313",
+        "S1314",
+        "S14",
+        "S15"
+      ],
+      "title": "EsaSectorEnum",
+      "type": "string"
+    },
     "FndBndFcsEnum": {
       "enum": [
         ".",
@@ -954,7 +1013,7 @@
       "properties": {
         "ID": {
           "maxLength": 51,
-          "pattern": "^([ETB][A-Za-z0-9_@$-][!-~]*)|(L[0-9]{4}[0]{2}[A-Z0-9]{12}[0-9]{2})|(P[A-Za-z0-9@$-]+_[!-~]+)$",
+          "pattern": "^([ETB][A-Za-z0-9_@$-][!-~]*)|(L[0-9A-Z]{18}[0-9]{2})|(P[A-Za-z0-9@$-]+_[!-~]+)$",
           "title": "Id",
           "type": "string"
         },
@@ -1192,6 +1251,14 @@
             }
           ],
           "default": null
+        },
+        "CRRNCY": {
+          "allOf": [
+            {
+              "$ref": "#/$defs/GenCrrncyEnum"
+            }
+          ],
+          "default": null
         }
       },
       "required": [
@@ -1266,7 +1333,7 @@
       "properties": {
         "ID": {
           "maxLength": 51,
-          "pattern": "^([ETB][A-Za-z0-9_@$-][!-~]*)|(L[0-9]{4}[0]{2}[A-Z0-9]{12}[0-9]{2})|(P[A-Za-z0-9@$-]+_[!-~]+)$",
+          "pattern": "^([ETB][A-Za-z0-9_@$-][!-~]*)|(L[0-9A-Z]{18}[0-9]{2})|(P[A-Za-z0-9@$-]+_[!-~]+)$",
           "title": "Id",
           "type": "string"
         },
@@ -1312,6 +1379,7 @@
         "COM",
         "IND",
         "MUL",
+        "OFC",
         "OTH"
       ],
       "title": "FndRlEsttTypEnum",
@@ -1321,7 +1389,7 @@
       "properties": {
         "ID": {
           "maxLength": 51,
-          "pattern": "^([ETB][A-Za-z0-9_@$-][!-~]*)|(L[0-9]{4}[0]{2}[A-Z0-9]{12}[0-9]{2})|(P[A-Za-z0-9@$-]+_[!-~]+)$",
+          "pattern": "^([ETB][A-Za-z0-9_@$-][!-~]*)|(L[0-9A-Z]{18}[0-9]{2})|(P[A-Za-z0-9@$-]+_[!-~]+)$",
           "title": "Id",
           "type": "string"
         },
@@ -1339,7 +1407,7 @@
         },
         "LEI_ID": {
           "default": null,
-          "pattern": "(^[0-9]{4}[0]{2}[A-Z0-9]{12}[0-9]{2}$)|(^\\.$)",
+          "pattern": "(^[0-9A-Z]{18}[0-9]{2}$)|(^\\.$)",
           "title": "Lei Id",
           "type": "string"
         },
@@ -1358,14 +1426,14 @@
         "SPLT_FRM": {
           "default": null,
           "maxLength": 51,
-          "pattern": "^([ETB][A-Za-z0-9_@$-][!-~]*)|(L[0-9]{4}[0]{2}[A-Z0-9]{12}[0-9]{2})|(P[A-Za-z0-9@$-]+_[!-~]+)$",
+          "pattern": "^([ETB][A-Za-z0-9_@$-][!-~]*)|(L[0-9A-Z]{18}[0-9]{2})|(P[A-Za-z0-9@$-]+_[!-~]+)$",
           "title": "Splt Frm",
           "type": "string"
         },
         "MRGD_WTH": {
           "default": null,
           "maxLength": 51,
-          "pattern": "^([ETB][A-Za-z0-9_@$-][!-~]*)|(L[0-9]{4}[0]{2}[A-Z0-9]{12}[0-9]{2})|(P[A-Za-z0-9@$-]+_[!-~]+)$",
+          "pattern": "^([ETB][A-Za-z0-9_@$-][!-~]*)|(L[0-9A-Z]{18}[0-9]{2})|(P[A-Za-z0-9@$-]+_[!-~]+)$",
           "title": "Mrgd Wth",
           "type": "string"
         }
@@ -4150,7 +4218,7 @@
       "properties": {
         "PARTNER": {
           "maxLength": 51,
-          "pattern": "^([ETB][A-Za-z0-9_@$-][!-~]*)|(L[0-9]{4}[0]{2}[A-Z0-9]{12}[0-9]{2})|(P[A-Za-z0-9@$-]+_[!-~]+)$",
+          "pattern": "^([ETB][A-Za-z0-9_@$-][!-~]*)|(L[0-9A-Z]{18}[0-9]{2})|(P[A-Za-z0-9@$-]+_[!-~]+)$",
           "title": "Partner",
           "type": "string"
         },
@@ -4184,7 +4252,7 @@
         },
         "ID": {
           "maxLength": 51,
-          "pattern": "^([ETB][A-Za-z0-9_@$-][!-~]*)|(L[0-9]{4}[0]{2}[A-Z0-9]{12}[0-9]{2})|([P_][A-Za-z0-9@$-]+_[!-~]+)$",
+          "pattern": "^([ETB][A-Za-z0-9_@$-][!-~]*)|(L[0-9A-Z]{18}[0-9]{2})|([P_][A-Za-z0-9@$-]+_[!-~]+)$",
           "title": "Id",
           "type": "string"
         },
@@ -4224,11 +4292,20 @@
       "title": "HldrSeries",
       "type": "object"
     },
+    "IfdatDrgtnTypEnum": {
+      "enum": [
+        ".",
+        "A",
+        "\u0392"
+      ],
+      "title": "IfdatDrgtnTypEnum",
+      "type": "string"
+    },
     "LbltyDbtSeries": {
       "properties": {
         "IID": {
           "maxLength": 51,
-          "pattern": "^([ETB][A-Za-z0-9_@$-][!-~]*)|(L[0-9]{4}[0]{2}[A-Z0-9]{12}[0-9]{2})|(P[A-Za-z0-9@$-]+_[!-~]+)$",
+          "pattern": "^([ETB][A-Za-z0-9_@$-][!-~]*)|(L[0-9A-Z]{18}[0-9]{2})|(P[A-Za-z0-9@$-]+_[!-~]+)$",
           "title": "Iid",
           "type": "string"
         },
@@ -4275,7 +4352,7 @@
       "properties": {
         "ID": {
           "maxLength": 51,
-          "pattern": "^([ETB][A-Za-z0-9_@$-][!-~]*)|(L[0-9]{4}[0]{2}[A-Z0-9]{12}[0-9]{2})|(P[A-Za-z0-9@$-]+_[!-~]+)$",
+          "pattern": "^([ETB][A-Za-z0-9_@$-][!-~]*)|(L[0-9A-Z]{18}[0-9]{2})|(P[A-Za-z0-9@$-]+_[!-~]+)$",
           "title": "Id",
           "type": "string"
         },
@@ -4314,16 +4391,12 @@
     "LonTypEnum": {
       "enum": [
         ".",
-        "CRD",
         "OVR",
         "REV",
         "FLS",
         "NOS",
         "TRD",
-        "SUB",
         "INT",
-        "RFC",
-        "NFC",
         "LVG",
         "REP",
         "SBL",
@@ -4336,7 +4409,7 @@
       "properties": {
         "ID": {
           "maxLength": 51,
-          "pattern": "^([ETB][A-Za-z0-9_@$-][!-~]*)|(L[0-9]{4}[0]{2}[A-Z0-9]{12}[0-9]{2})|(P[A-Za-z0-9@$-]+_[!-~]+)$",
+          "pattern": "^([ETB][A-Za-z0-9_@$-][!-~]*)|(L[0-9A-Z]{18}[0-9]{2})|(P[A-Za-z0-9@$-]+_[!-~]+)$",
           "title": "Id",
           "type": "string"
         },
@@ -4432,7 +4505,7 @@
       "properties": {
         "ID": {
           "maxLength": 51,
-          "pattern": "^([ETB][A-Za-z0-9_@$-][!-~]*)|(L[0-9]{4}[0]{2}[A-Z0-9]{12}[0-9]{2})|(P[A-Za-z0-9@$-]+_[!-~]+)$",
+          "pattern": "^([ETB][A-Za-z0-9_@$-][!-~]*)|(L[0-9A-Z]{18}[0-9]{2})|(P[A-Za-z0-9@$-]+_[!-~]+)$",
           "title": "Id",
           "type": "string"
         },
@@ -4450,7 +4523,7 @@
         },
         "LEI_ID": {
           "default": null,
-          "pattern": "(^[0-9]{4}[0]{2}[A-Z0-9]{12}[0-9]{2}$)|(^\\.$)",
+          "pattern": "(^[0-9A-Z]{18}[0-9]{2}$)|(^\\.$)",
           "title": "Lei Id",
           "type": "string"
         },
@@ -4469,14 +4542,14 @@
         "SPLT_FRM": {
           "default": null,
           "maxLength": 51,
-          "pattern": "^([ETB][A-Za-z0-9_@$-][!-~]*)|(L[0-9]{4}[0]{2}[A-Z0-9]{12}[0-9]{2})|(P[A-Za-z0-9@$-]+_[!-~]+)$",
+          "pattern": "^([ETB][A-Za-z0-9_@$-][!-~]*)|(L[0-9A-Z]{18}[0-9]{2})|(P[A-Za-z0-9@$-]+_[!-~]+)$",
           "title": "Splt Frm",
           "type": "string"
         },
         "MRGD_WTH": {
           "default": null,
           "maxLength": 51,
-          "pattern": "^([ETB][A-Za-z0-9_@$-][!-~]*)|(L[0-9]{4}[0]{2}[A-Z0-9]{12}[0-9]{2})|(P[A-Za-z0-9@$-]+_[!-~]+)$",
+          "pattern": "^([ETB][A-Za-z0-9_@$-][!-~]*)|(L[0-9A-Z]{18}[0-9]{2})|(P[A-Za-z0-9@$-]+_[!-~]+)$",
           "title": "Mrgd Wth",
           "type": "string"
         }
@@ -4496,29 +4569,6 @@
         "3"
       ],
       "title": "OrgInstttnlSctrCntrlEnum",
-      "type": "string"
-    },
-    "OrgInstttnlSctrEnum": {
-      "enum": [
-        ".",
-        "S11",
-        "S121",
-        "S122",
-        "S123",
-        "S124",
-        "S125",
-        "S126",
-        "S127",
-        "S128",
-        "S129",
-        "S1311",
-        "S1312",
-        "S1313",
-        "S1314",
-        "S14",
-        "S15"
-      ],
-      "title": "OrgInstttnlSctrEnum",
       "type": "string"
     },
     "OtherRdmptnFrqncyEnum": {
@@ -4595,7 +4645,7 @@
         "CNTRPRTY": {
           "default": null,
           "maxLength": 51,
-          "pattern": "^([ETB][A-Za-z0-9_@$-][!-~]*)|(L[0-9]{4}[0]{2}[A-Z0-9]{12}[0-9]{2})|(P[A-Za-z0-9@$-]+_[!-~]+)$",
+          "pattern": "^([ETB][A-Za-z0-9_@$-][!-~]*)|(L[0-9A-Z]{18}[0-9]{2})|(P[A-Za-z0-9@$-]+_[!-~]+)$",
           "title": "Cntrprty",
           "type": "string"
         }
@@ -4653,14 +4703,14 @@
         "OAID": {
           "default": null,
           "maxLength": 51,
-          "pattern": "^([ETB][A-Za-z0-9_@$-][!-~]*)|(L[0-9]{4}[0]{2}[A-Z0-9]{12}[0-9]{2})|(P[A-Za-z0-9@$-]+_[!-~]+)$",
+          "pattern": "^([ETB][A-Za-z0-9_@$-][!-~]*)|(L[0-9A-Z]{18}[0-9]{2})|(P[A-Za-z0-9@$-]+_[!-~]+)$",
           "title": "Oaid",
           "type": "string"
         },
         "CNTRPRTY": {
           "default": null,
           "maxLength": 51,
-          "pattern": "^([ETB][A-Za-z0-9_@$-][!-~]*)|(L[0-9]{4}[0]{2}[A-Z0-9]{12}[0-9]{2})|(P[A-Za-z0-9@$-]+_[!-~]+)$",
+          "pattern": "^([ETB][A-Za-z0-9_@$-][!-~]*)|(L[0-9A-Z]{18}[0-9]{2})|(P[A-Za-z0-9@$-]+_[!-~]+)$",
           "title": "Cntrprty",
           "type": "string"
         }
@@ -4669,6 +4719,61 @@
         "ID"
       ],
       "title": "RefDpstSeries",
+      "type": "object"
+    },
+    "RefDrgtnSeries": {
+      "properties": {
+        "ID": {
+          "maxLength": 51,
+          "pattern": "^([ETB][A-Za-z0-9_@$-][!-~]*)|(L[0-9A-Z]{18}[0-9]{2})|(P[A-Za-z0-9@$-]+_[!-~]+)$",
+          "title": "Id",
+          "type": "string"
+        },
+        "VLTN_DT": {
+          "default": null,
+          "format": "date-time",
+          "title": "Vltn Dt",
+          "type": "string"
+        },
+        "ASSTS": {
+          "default": null,
+          "minimum": 0.0,
+          "title": "Assts",
+          "type": "number"
+        },
+        "VLTN_FRQNCY": {
+          "allOf": [
+            {
+              "$ref": "#/$defs/GenFrqncyEnum"
+            }
+          ],
+          "default": null
+        },
+        "DRGTN_TYPE": {
+          "allOf": [
+            {
+              "$ref": "#/$defs/IfdatDrgtnTypEnum"
+            }
+          ],
+          "default": null
+        },
+        "DRGTN_YR": {
+          "default": null,
+          "exclusiveMinimum": 0,
+          "title": "Drgtn Yr",
+          "type": "integer"
+        },
+        "CMMNT": {
+          "default": null,
+          "maxLength": 512,
+          "title": "Cmmnt",
+          "type": "string"
+        }
+      },
+      "required": [
+        "ID"
+      ],
+      "title": "RefDrgtnSeries",
       "type": "object"
     },
     "RefLnSeries": {
@@ -4710,14 +4815,14 @@
         "OAID": {
           "default": null,
           "maxLength": 51,
-          "pattern": "^([ETB][A-Za-z0-9_@$-][!-~]*)|(L[0-9]{4}[0]{2}[A-Z0-9]{12}[0-9]{2})|(P[A-Za-z0-9@$-]+_[!-~]+)$",
+          "pattern": "^([ETB][A-Za-z0-9_@$-][!-~]*)|(L[0-9A-Z]{18}[0-9]{2})|(P[A-Za-z0-9@$-]+_[!-~]+)$",
           "title": "Oaid",
           "type": "string"
         },
         "CNTRPRTY": {
           "default": null,
           "maxLength": 51,
-          "pattern": "^([ETB][A-Za-z0-9_@$-][!-~]*)|(L[0-9]{4}[0]{2}[A-Z0-9]{12}[0-9]{2})|(P[A-Za-z0-9@$-]+_[!-~]+)$",
+          "pattern": "^([ETB][A-Za-z0-9_@$-][!-~]*)|(L[0-9A-Z]{18}[0-9]{2})|(P[A-Za-z0-9@$-]+_[!-~]+)$",
           "title": "Cntrprty",
           "type": "string"
         }
@@ -4734,18 +4839,6 @@
           "maxLength": 51,
           "pattern": "^(I[A-Z][A-Z][A-Z0-9]{9}[0-9])|(PE[A-Za-z0-9@$-]+_[!-~]+)$",
           "title": "Id",
-          "type": "string"
-        },
-        "DT_BRTH": {
-          "default": null,
-          "format": "date-time",
-          "title": "Dt Brth",
-          "type": "string"
-        },
-        "DT_CLS": {
-          "default": null,
-          "format": "date-time",
-          "title": "Dt Cls",
           "type": "string"
         },
         "CRRNCY": {
@@ -4767,7 +4860,7 @@
         "ISSD_BY": {
           "default": null,
           "maxLength": 51,
-          "pattern": "^([ETB][A-Za-z0-9_@$-][!-~]*)|(L[0-9]{4}[0]{2}[A-Z0-9]{12}[0-9]{2})|(P[A-Za-z0-9@$-]+_[!-~]+)$",
+          "pattern": "^([ETB][A-Za-z0-9_@$-][!-~]*)|(L[0-9A-Z]{18}[0-9]{2})|(P[A-Za-z0-9@$-]+_[!-~]+)$",
           "title": "Issd By",
           "type": "string"
         }
@@ -4881,7 +4974,7 @@
         "ISSD_BY": {
           "default": null,
           "maxLength": 51,
-          "pattern": "^([ETB][A-Za-z0-9_@$-][!-~]*)|(L[0-9]{4}[0]{2}[A-Z0-9]{12}[0-9]{2})|(P[A-Za-z0-9@$-]+_[!-~]+)$",
+          "pattern": "^([ETB][A-Za-z0-9_@$-][!-~]*)|(L[0-9A-Z]{18}[0-9]{2})|(P[A-Za-z0-9@$-]+_[!-~]+)$",
           "title": "Issd By",
           "type": "string"
         },
@@ -5022,22 +5115,6 @@
           "allOf": [
             {
               "$ref": "#/$defs/DbtScrtyLvlEnum"
-            }
-          ],
-          "default": null
-        },
-        "IS_SCRTZTN": {
-          "allOf": [
-            {
-              "$ref": "#/$defs/BoolEnum"
-            }
-          ],
-          "default": null
-        },
-        "SCRTZTN_TYP": {
-          "allOf": [
-            {
-              "$ref": "#/$defs/DbtScrtznTypEnum"
             }
           ],
           "default": null

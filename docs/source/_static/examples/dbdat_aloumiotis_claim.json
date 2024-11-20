@@ -1,26 +1,26 @@
 {
-  "header": {
-    "partner": "EGR010",
-    "username": "aloumiotis",
-    "source": "INIT",
-    "domain": "DBDat"
+  "HEADER": {
+    "PARTNER": "EGR010",
+    "USERNAME": "aloumiotis",
+    "SOURCE": "INIT",
+    "DOMAIN": "DBDat"
   },
-  "datasets": {
-    "ref_org_alias": [
+  "DATASETS": {
+    "REF.ORG_ALIAS": [
       {
-        "lid": "PEGR123456789_AKES",
-        "rid": "EGRAKZ1",
-        "alias_of": "T"
+        "LID": "PEGR123456789_AKES",
+        "RID": "EGRAKZ1",
+        "ALIAS_OF": "T"
       },
       {
-        "lid": "L887600ED3C2BA1B01C34",
-        "rid": "EGRAKZ2",
-        "alias_of": "T"
+        "LID": "L887600ED3C2BA1B01C34",
+        "RID": "EGRAKZ2",
+        "ALIAS_OF": "T"
       },
       {
-        "lid": "L787600ED3C2BA1B01C45",
-        "rid": "EGRAKZ3",
-        "alias_of": "T"
+        "LID": "L787600ED3C2BA1B01C45",
+        "RID": "EGRAKZ3",
+        "ALIAS_OF": "T"
       }
     ]
   }

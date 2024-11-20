@@ -9,6 +9,10 @@ B. Στοιχεία Αναφοράς (REF)
 
 Ακολουθεί η αναλυτική περιγραφή των μεταβλητών ανά πίνακα:
 
+#.  :doc:`ref/mngmnt`
+
+#.  :doc:`ref/mngmnt_dynmc`
+
 #.  :doc:`ref/fnd`
 
 #.  :doc:`ref/fnd_dynmc`
@@ -29,10 +33,6 @@ B. Στοιχεία Αναφοράς (REF)
 
 #.  :doc:`ref/self_shr_splt`
 
-#.  :doc:`ref/mngmnt`
-
-#.  :doc:`ref/mngmnt_dynmc`
-
 #.  :doc:`ref/cntrprty`
 
 #.  :doc:`ref/dpst`
@@ -44,6 +44,8 @@ B. Στοιχεία Αναφοράς (REF)
 #.  :doc:`ref/shr`
 
 #.  :doc:`ref/der`
+    
+#.  :doc:`ref/drgtn`
 
 .. toctree::
    :maxdepth: 1
@@ -68,3 +70,4 @@ B. Στοιχεία Αναφοράς (REF)
    LN<ref/ln>
    SHR<ref/shr>
    DER<ref/der>
+   DRGTN<ref/drgtn>

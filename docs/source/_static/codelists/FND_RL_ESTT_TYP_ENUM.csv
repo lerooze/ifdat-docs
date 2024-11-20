@@ -1,23 +1,32 @@
 "ID","NAME","DESCRIPTION","IID"
 ".","Reset","Reset value",0
 "RES","Residential real estate fund","
-            Predominantly invest in residential property.  Residential property
-            means a residence which is occupied by the owner or the lessee of
-            the residence.  (Article 4(1)(75) of Regutation (EU) No 575/2013).
+Οι ΕΟ ακινήτων κατοικίας (residential real estate funds) κατά κύριο
+λόγο (άνω του 50 %) επενδύουν σε ακίνητα κατοικίας. Το ακίνητο
+κατοικίας είναι η κατοικία που καταλαμβάνει ο ιδιοκτήτης ή ο μισθωτής
+αυτής. [Άρθρο 4 παράγραφος 1 σημείο 75) του κανονισμού (ΕΕ)
+αριθ. 575/2013 του Ευρωπαϊκού Κοινοβουλίου και του Συμβουλίου)]
             ",1
 "COM","Commercial real estate fund","
-            Predominantly invest in real estate used for commercial purposes,
-            such as retail and hotels.
+Οι ΕΟ εμπορικών ακινήτων (commercial real estate funds) κατά κύριο λόγο
+(άνω του 50 %) επενδύουν σε ακίνητα που χρησιμοποιούνται για εμπορικούς
+σκοπούς, όπως λιανικό εμπόριο και ξενοδοχεία.
             ",2
 "IND","Industrial real estate fund","
-            Predominantly invest in real estate used for manufacturing,
-            production, storage, and distriubution of goods.
+Οι ΕΟ βιομηχανικών ακινήτων (industrial real estate funds) κατά κύριο
+λόγο (άνω του 50 %) επενδύουν σε ακίνητα που χρησιμοποιούνται για την
+κατασκευή, παραγωγή, αποθήκευση και διανομή αγαθών.
             ",3
 "MUL","Multi-strategy real estate fund","
-            Invest in residential, commercial and industrial real estate
-            without a predominant focus on any.
+Οι ΕΟ ακίνητης περιουσίας πολλαπλών στρατηγικών (multi-strategy real
+estate funds) επενδύουν σε ακίνητα κατοικίας, καθώς και σε εμπορικά και
+βιομηχανικά ακίνητα, χωρίς να επικεντρώνονται σε κάποιο από αυτά.
             ",4
-"OTH","Other real estate fund","
-            Real estate fund which are not residential, commercial, industrial,
-            or multi-strategy.
+"OFC","Office real estate funds","
+Οι ΕΟ γραφείων κατά κύριο λόγο (άνω του 50%) επενδύουν σε ακίνητα που χρησιμοποιούνται ως γραφεία.
             ",5
+"OTH","Other real estate fund","
+Ως λοιποί ΕΟ ακίνητης περιουσίας (other real estate funds) νοούνται οι
+ΕΟ ακίνητης περιουσίας που δεν είναι ΕΟ ακινήτων κατοικίας, εμπορικών
+ακινήτων, βιομηχανικών ακινήτων ή περιουσίας πολλαπλών στρατηγικών.
+            ",6

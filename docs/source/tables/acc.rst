@@ -23,6 +23,8 @@ A. Κατηγορία Πινάκων με Λογιστικά Στοιχεία (A
 
 #.  :doc:`acc/asst_rmnng`
 
+#.  :doc:`acc/lblty_dbt`
+
 #.  :doc:`acc/lblty_ln`
 
 #.  :doc:`acc/lblty_rmnng`
@@ -31,7 +33,9 @@ A. Κατηγορία Πινάκων με Λογιστικά Στοιχεία (A
 
 #.  :doc:`acc/shr_key`
 
-#.  :doc:`acc/fnd_key`
+#.  :doc:`acc/fees`
+
+#.  :doc:`acc/drgtn_typa`
 
 .. toctree::
    :maxdepth: 1
@@ -50,4 +54,5 @@ A. Κατηγορία Πινάκων με Λογιστικά Στοιχεία (A
    LBLTY_RMNNG<acc/lblty_rmnng>
    HLDR<acc/hldr>
    SHR_KEY<acc/shr_key>
-   FND_KEY<acc/fnd_key>
+   FND_KEY<acc/fees>
+   DRGTN_TYPA<acc/drgtn_typa>
