@@ -15,6 +15,7 @@ v0.8.5 (2024-11-27)
 -------------------
 * Fix bugs in regulation
 * Fix bugs in tables
+* Add IEK columns in EO sheet of IFDAT-LIST
 * Fix bugs in IFDAT-LIST
 * Add max length in url fields
 
