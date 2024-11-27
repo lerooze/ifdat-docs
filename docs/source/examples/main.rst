@@ -13,8 +13,7 @@
 Παράδειγμα σε μορϕη Excel:
 --------------------------
 
-:download:`Example IFDAT-LIST </_static/examples/reports/IFDAT-LIST.xlsx>`
-:download:`Example IFDAT-FULL_LIST </_static/examples/reports/IFDATFULL_REPORT.xlsx>`
+:download:`ΜΑΙΝ </_static/examples/ifdat_zuser_main.xlsx>`
 
 
 Παράδειγμα σε μορφή json:
@@ -25,5 +24,6 @@
 
 IFDAT-LIST
 ----------
-:download:`ΜΑΙΝ </_static/examples/ifdat_zuser_main.xlsx>`
+:download:`Example IFDAT-LIST </_static/examples/reports/IFDAT-LIST.xlsx>`
+:download:`Example IFDAT-FULL_LIST </_static/examples/reports/IFDATFULL_REPORT.xlsx>`
 

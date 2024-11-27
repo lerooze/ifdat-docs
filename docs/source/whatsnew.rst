@@ -11,6 +11,13 @@ What's new?
 .. Next release
 .. ============
 
+v0.8.5 (2024-11-27)
+-------------------
+* Fix bugs in regulation
+* Fix bugs in tables
+* Fix bugs in IFDAT-LIST
+* Add max length in url fields
+
 v0.8.4 (2024-11-20)
 -------------------
 * Regulation updated and sent to the legal department
