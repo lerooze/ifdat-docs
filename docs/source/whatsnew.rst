@@ -11,6 +11,12 @@ What's new?
 .. Next release
 .. ============
 
+v0.9.0 (2024-12-21)
+-------------------
+* Add financial instrument treatment examples
+* Allow negative values for STCK, NMNL_STCK, QNTTY for ACC.SHR and AND ACC.ASST_DBT to accomodate short positions
+* Improve tables documentation
+
 v0.8.5 (2024-11-27)
 -------------------
 * Fix bugs in regulation

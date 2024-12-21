@@ -212,7 +212,6 @@
           "$ref": "#/$defs/GenFrqncyEnum"
         },
         "STCK": {
-          "minimum": 0.0,
           "title": "Stck",
           "type": "number"
         },
@@ -221,7 +220,6 @@
           "type": "number"
         },
         "QNTTY": {
-          "minimum": 0.0,
           "title": "Qntty",
           "type": "number"
         },
@@ -271,7 +269,6 @@
           "$ref": "#/$defs/GenFrqncyEnum"
         },
         "STCK": {
-          "minimum": 0.0,
           "title": "Stck",
           "type": "number"
         },
@@ -280,7 +277,6 @@
           "type": "number"
         },
         "NMNL_STCK": {
-          "minimum": 0.0,
           "title": "Nmnl Stck",
           "type": "number"
         },
@@ -1100,6 +1096,7 @@
         "URL": {
           "default": null,
           "format": "uri",
+          "maxLength": 256,
           "minLength": 1,
           "title": "Url",
           "type": "string"
@@ -4296,7 +4293,7 @@
       "enum": [
         ".",
         "A",
-        "\u0392"
+        "B"
       ],
       "title": "IfdatDrgtnTypEnum",
       "type": "string"
@@ -4476,6 +4473,7 @@
         "URL": {
           "default": null,
           "format": "uri",
+          "maxLength": 256,
           "minLength": 1,
           "title": "Url",
           "type": "string"

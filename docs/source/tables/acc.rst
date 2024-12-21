@@ -38,7 +38,7 @@ A. Κατηγορία Πινάκων με Λογιστικά Στοιχεία (A
 #.  :doc:`acc/drgtn_typa`
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2 
    :numbered:
    :hidden:
    
