@@ -9,9 +9,9 @@ B. Στοιχεία Αναφοράς (REF)
 
 Ακολουθεί η αναλυτική περιγραφή των μεταβλητών ανά πίνακα:
 
-#.  :doc:`ref/mngmnt`
+#.  :doc:`ref/ra`
 
-#.  :doc:`ref/mngmnt_dynmc`
+#.  :doc:`ref/ra_dynmc`
 
 #.  :doc:`ref/fnd`
 
@@ -52,6 +52,8 @@ B. Στοιχεία Αναφοράς (REF)
    :numbered:
    :hidden:
    
+   RA<ref/ra>
+   RA_DYNMC<ref/ra_dynmc>
    FND<ref/fnd>
    FND_DYNMC<ref/fnd_dynmc>
    SELF_DBT<ref/self_dbt>
@@ -62,8 +64,6 @@ B. Στοιχεία Αναφοράς (REF)
    SELF_SHR_DYNMC<ref/self_shr_dynmc>
    SELF_SHR_DVDND<ref/self_shr_dvdnd>
    SELF_SHR_SPLT<ref/self_shr_splt>
-   MNGMNT<ref/mngmnt>
-   MNGMNT_DYNMC<ref/mngmnt_dynmc>
    CNTRPRTY<ref/cntrprty>
    DPST<ref/dpst>
    DBT<ref/dbt>

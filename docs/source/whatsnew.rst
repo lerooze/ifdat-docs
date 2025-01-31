@@ -11,6 +11,12 @@ What's new?
 .. Next release
 .. ============
 
+v0.9.1 (2025-01-31)
+-------------------
+* Rename MNGMNT tables to RA
+* Replace bool to enum_bool
+* Improve documentation
+
 v0.9.0 (2024-12-21)
 -------------------
 * Add financial instrument treatment examples

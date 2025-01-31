@@ -31,7 +31,7 @@ A. Κατηγορία Πινάκων με Λογιστικά Στοιχεία (A
 
 #.  :doc:`acc/hldr`
 
-#.  :doc:`acc/shr_key`
+#.  :doc:`acc/key`
 
 #.  :doc:`acc/fees`
 
@@ -53,6 +53,6 @@ A. Κατηγορία Πινάκων με Λογιστικά Στοιχεία (A
    LBLTY_LN<acc/lblty_ln>
    LBLTY_RMNNG<acc/lblty_rmnng>
    HLDR<acc/hldr>
-   SHR_KEY<acc/shr_key>
+   KEY<acc/key>
    FND_KEY<acc/fees>
    DRGTN_TYPA<acc/drgtn_typa>

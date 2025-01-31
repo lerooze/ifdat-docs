@@ -173,8 +173,7 @@
           "type": "number"
         },
         "IS_GRP_LN": {
-          "title": "Is Grp Ln",
-          "type": "boolean"
+          "$ref": "#/$defs/BoolEnum"
         }
       },
       "required": [
@@ -552,20 +551,20 @@
           "title": "Acc.Hldr",
           "type": "array"
         },
-        "ACC.SHR_KEY": {
+        "ACC.KEY": {
           "default": null,
           "items": {
-            "$ref": "#/$defs/ShrKeySeries"
+            "$ref": "#/$defs/KeySeries"
           },
-          "title": "Acc.Shr Key",
+          "title": "Acc.Key",
           "type": "array"
         },
-        "ACC.FND_KEY": {
+        "ACC.FEE": {
           "default": null,
           "items": {
-            "$ref": "#/$defs/FndKeySeries"
+            "$ref": "#/$defs/FeeSeries"
           },
-          "title": "Acc.Fnd Key",
+          "title": "Acc.Fee",
           "type": "array"
         },
         "ACC.DRGTN": {
@@ -576,20 +575,20 @@
           "title": "Acc.Drgtn",
           "type": "array"
         },
-        "REF.MNGMNT": {
+        "REF.RA": {
           "default": null,
           "items": {
-            "$ref": "#/$defs/MngmntSeries"
+            "$ref": "#/$defs/RaSeries"
           },
-          "title": "Ref.Mngmnt",
+          "title": "Ref.Ra",
           "type": "array"
         },
-        "REF.MNGMNT_DYNMC": {
+        "REF.RA_DYNMC": {
           "default": null,
           "items": {
-            "$ref": "#/$defs/MngmntDynmcSeries"
+            "$ref": "#/$defs/RaDynmcSeries"
           },
-          "title": "Ref.Mngmnt Dynmc",
+          "title": "Ref.Ra Dynmc",
           "type": "array"
         },
         "REF.FND": {
@@ -985,6 +984,37 @@
       "title": "EsaSectorEnum",
       "type": "string"
     },
+    "FeeSeries": {
+      "properties": {
+        "ID": {
+          "maxLength": 51,
+          "pattern": "^([ETB][A-Za-z0-9_@$-][!-~]*)|(L[0-9A-Z]{18}[0-9]{2})|(P[A-Za-z0-9@$-]+_[!-~]+)$",
+          "title": "Id",
+          "type": "string"
+        },
+        "DT": {
+          "format": "date-time",
+          "title": "Dt",
+          "type": "string"
+        },
+        "FRQNCY": {
+          "$ref": "#/$defs/GenFrqncyEnum"
+        },
+        "FEES": {
+          "minimum": 0.0,
+          "title": "Fees",
+          "type": "number"
+        }
+      },
+      "required": [
+        "ID",
+        "DT",
+        "FRQNCY",
+        "FEES"
+      ],
+      "title": "FeeSeries",
+      "type": "object"
+    },
     "FndBndFcsEnum": {
       "enum": [
         ".",
@@ -1325,37 +1355,6 @@
       ],
       "title": "FndInvstrTypEnum",
       "type": "string"
-    },
-    "FndKeySeries": {
-      "properties": {
-        "ID": {
-          "maxLength": 51,
-          "pattern": "^([ETB][A-Za-z0-9_@$-][!-~]*)|(L[0-9A-Z]{18}[0-9]{2})|(P[A-Za-z0-9@$-]+_[!-~]+)$",
-          "title": "Id",
-          "type": "string"
-        },
-        "DT": {
-          "format": "date-time",
-          "title": "Dt",
-          "type": "string"
-        },
-        "FRQNCY": {
-          "$ref": "#/$defs/GenFrqncyEnum"
-        },
-        "FEES": {
-          "minimum": 0.0,
-          "title": "Fees",
-          "type": "number"
-        }
-      },
-      "required": [
-        "ID",
-        "DT",
-        "FRQNCY",
-        "FEES"
-      ],
-      "title": "FndKeySeries",
-      "type": "object"
     },
     "FndLglTypEnum": {
       "enum": [
@@ -4298,6 +4297,42 @@
       "title": "IfdatDrgtnTypEnum",
       "type": "string"
     },
+    "KeySeries": {
+      "properties": {
+        "IID": {
+          "maxLength": 51,
+          "pattern": "^(I[A-Z][A-Z][A-Z0-9]{9}[0-9])|(PE[A-Za-z0-9@$-]+_[!-~]+)$",
+          "title": "Iid",
+          "type": "string"
+        },
+        "DT": {
+          "format": "date-time",
+          "title": "Dt",
+          "type": "string"
+        },
+        "FRQNCY": {
+          "$ref": "#/$defs/GenFrqncyEnum"
+        },
+        "BK_PRC": {
+          "minimum": 0.0,
+          "title": "Bk Prc",
+          "type": "number"
+        },
+        "INCM": {
+          "title": "Incm",
+          "type": "number"
+        }
+      },
+      "required": [
+        "IID",
+        "DT",
+        "FRQNCY",
+        "BK_PRC",
+        "INCM"
+      ],
+      "title": "KeySeries",
+      "type": "object"
+    },
     "LbltyDbtSeries": {
       "properties": {
         "IID": {
@@ -4402,7 +4437,33 @@
       "title": "LonTypEnum",
       "type": "string"
     },
-    "MngmntDynmcSeries": {
+    "OrgInstttnlSctrCntrlEnum": {
+      "enum": [
+        ".",
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "title": "OrgInstttnlSctrCntrlEnum",
+      "type": "string"
+    },
+    "OtherRdmptnFrqncyEnum": {
+      "enum": [
+        ".",
+        "D",
+        "W",
+        "M",
+        "Q",
+        "B",
+        "Y",
+        "E",
+        "O"
+      ],
+      "title": "OtherRdmptnFrqncyEnum",
+      "type": "string"
+    },
+    "RaDynmcSeries": {
       "properties": {
         "ID": {
           "maxLength": 51,
@@ -4496,10 +4557,10 @@
       "required": [
         "ID"
       ],
-      "title": "MngmntDynmcSeries",
+      "title": "RaDynmcSeries",
       "type": "object"
     },
-    "MngmntSeries": {
+    "RaSeries": {
       "properties": {
         "ID": {
           "maxLength": 51,
@@ -4555,34 +4616,8 @@
       "required": [
         "ID"
       ],
-      "title": "MngmntSeries",
+      "title": "RaSeries",
       "type": "object"
-    },
-    "OrgInstttnlSctrCntrlEnum": {
-      "enum": [
-        ".",
-        "0",
-        "1",
-        "2",
-        "3"
-      ],
-      "title": "OrgInstttnlSctrCntrlEnum",
-      "type": "string"
-    },
-    "OtherRdmptnFrqncyEnum": {
-      "enum": [
-        ".",
-        "D",
-        "W",
-        "M",
-        "Q",
-        "B",
-        "Y",
-        "E",
-        "O"
-      ],
-      "title": "OtherRdmptnFrqncyEnum",
-      "type": "string"
     },
     "RefDerSeries": {
       "properties": {
@@ -5459,42 +5494,6 @@
       ],
       "title": "ShrEsaTypEnum",
       "type": "string"
-    },
-    "ShrKeySeries": {
-      "properties": {
-        "IID": {
-          "maxLength": 51,
-          "pattern": "^(I[A-Z][A-Z][A-Z0-9]{9}[0-9])|(PE[A-Za-z0-9@$-]+_[!-~]+)$",
-          "title": "Iid",
-          "type": "string"
-        },
-        "DT": {
-          "format": "date-time",
-          "title": "Dt",
-          "type": "string"
-        },
-        "FRQNCY": {
-          "$ref": "#/$defs/GenFrqncyEnum"
-        },
-        "BK_PRC": {
-          "minimum": 0.0,
-          "title": "Bk Prc",
-          "type": "number"
-        },
-        "INCM": {
-          "title": "Incm",
-          "type": "number"
-        }
-      },
-      "required": [
-        "IID",
-        "DT",
-        "FRQNCY",
-        "BK_PRC",
-        "INCM"
-      ],
-      "title": "ShrKeySeries",
-      "type": "object"
     },
     "ShrTypEnum": {
       "enum": [
