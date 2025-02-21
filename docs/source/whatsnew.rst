@@ -33,16 +33,12 @@ v0.8.5 (2024-11-27)
 
 v0.8.4 (2024-11-20)
 -------------------
-* Regulation updated and sent to the legal department
 * Added derogation tables 
 * Created IFDAT-LIST reports at the end of the main example
-* Updated tables docs to be consistent with the regulation
 * Fix bugs
 
 v0.8.3 (2024-11-11)
 -------------------
-* Updated regulation body
-* Updated tables to be consistent with regulation body
 * Fix bugs
 
 v0.8.2 (2024-11-06)
@@ -237,13 +233,6 @@ v0.2.3 (2023-04-03)
 -------------------
 
 * Fix bug in restricting Greek IF reporting population.
-
-v0.2.2 (2023-03-31)
--------------------
-
-* In Greek Regulation removed the need to get data from foreign IFs, added data
-  submission concerning to IF sector reclassification or IF type change and
-  some more minor improvements.
 
 v0.2.1 (2023-03-29)
 -------------------
