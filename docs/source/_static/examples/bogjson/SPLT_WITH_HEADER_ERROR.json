@@ -1,0 +1,19 @@
+{
+  "HEADER": {
+    "PARTNER": "EGR123456789",
+    "USERNAME": "",
+    "DOMAIN": "IFDat",
+    "REP_YEAR": "2025",
+    "REP_MONTH": "06",
+    "SUBMISSION_TYPE": "UPDATE",
+    "SUBMISSION_REASON": "UPDATE"
+  },
+  "DATASETS": {
+    "REF.RA": [
+      {
+        "ID": "EGR123456789",
+        "SPLT_FRM": "EGR987654321"
+      }
+    ]
+  }
+}

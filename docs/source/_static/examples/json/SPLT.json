@@ -1,0 +1,15 @@
+{
+  "HEADER": {
+    "PARTNER": "EGR123456789",
+    "USERNAME": "zuser",
+    "DOMAIN": "IFDat"
+  },
+  "DATASETS": {
+    "REF.RA": [
+      {
+        "ID": "EGR123456789",
+        "SPLT_FRM": "EGR987654321"
+      }
+    ]
+  }
+}

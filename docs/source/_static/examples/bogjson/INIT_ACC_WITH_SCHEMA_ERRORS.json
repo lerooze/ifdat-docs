@@ -1,0 +1,341 @@
+{
+  "HEADER": {
+    "PARTNER": "EGR123456789",
+    "USERNAME": "zuser",
+    "DOMAIN": "IFDat",
+    "REP_YEAR": "2025",
+    "REP_MONTH": "06",
+    "SUBMISSION_TYPE": "UPDATE",
+    "SUBMISSION_REASON": "UPDATE"
+  },
+  "DATASETS": {
+    "ACC.DPST": [
+      {
+        "IID": "_EUR_EGRAKZ1",
+        "DT": "2024-09-30T00:00:00Z",
+        "FRQNCY": "Q",
+        "FLS": 100.0,
+        "ACCRLS": 0.0
+      },
+      {
+        "IID": "IGR0001100000000000000000000",
+        "DT": "2024-09-30T00:00:00Z",
+        "FRQNCY": "Q",
+        "STCK": 100000.0,
+        "FLS": 100000.0,
+        "ACCRLS": 100.0
+      },
+      {
+        "IID": "PEGRAZ2_DPST",
+        "DT": "2024-09-30T00:00:00Z",
+        "FRQNCY": "M",
+        "STCK": 200000.0,
+        "ACCRLS": 200.0
+      },
+      {
+        "IID": "IGR0002600000000000000000001",
+        "DT": "2024-09-30T00:00:00Z",
+        "FRQNCY": "M",
+        "STCK": 10000.0,
+        "ACCRLS": 500.0
+      },
+      {
+        "IID": "PEGRAZ3_DPST",
+        "DT": "2024-09-30",
+        "FRQNCY": "M",
+        "STCK": 500000.0,
+        "FLS": 500000.0,
+        "ACCRLS": 500.0
+      }
+    ],
+    "ACC.ASST_DBT": [
+      {
+        "IID": "IGRC123456789",
+        "ID": "EGRAKZ2",
+        "DT": "2024-09-30T00:00:00",
+        "FRQNCY": "M",
+        "STCK": 100000.0,
+        "FLS": 100000.0,
+        "NMNL_STCK": 100000.0,
+        "LND_FR_SFT": 0.0,
+        "ACCRLS": 1000.0
+      },
+      {
+        "IID": "IGRC123456789",
+        "ID": "EGRAKZ2",
+        "DT": "2024-10-31T00:00:00Z",
+        "FRQNCY": "M",
+        "STCK": 150000.0,
+        "FLS": 50000.0,
+        "NMNL_STCK": 150000.0,
+        "LND_FR_SFT": 0.0,
+        "ACCRLS": 3000.0
+      },
+      {
+        "IID": "IGRC123456789",
+        "ID": "EGRAKZ2",
+        "DT": "2024-11-30T00:00:00Z",
+        "FRQNCY": "M",
+        "STCK": 150000.0,
+        "FLS": 0.0,
+        "NMNL_STCK": 150000.0,
+        "LND_FR_SFT": 0.0
+      },
+      {
+        "IID": "IGRC123456789",
+        "ID": "EGRAKZ2",
+        "DT": "2024-12-31T00:00:00Z",
+        "FRQNCY": "M",
+        "STCK": 0.0,
+        "FLS": -150000.0,
+        "NMNL_STCK": 0.0,
+        "LND_FR_SFT": 0.0,
+        "ACCRLS": 0.0
+      },
+      {
+        "IID": "IGR0001234567",
+        "ID": "EGRAKZ2",
+        "DT": "2024-09-30T00:00:00Z",
+        "FRQNCY": "M",
+        "STCK": 198000.0,
+        "FLS": 198000.0,
+        "NMNL_STCK": 200000.0,
+        "LND_FR_SFT": 0.0,
+        "ACCRLS": 200.0
+      },
+      {
+        "IID": "IGR0001234567",
+        "ID": "EGRAKZ2",
+        "DT": "2024-10-31T00:00:00Z",
+        "FRQNCY": "M",
+        "STCK": 198000.0,
+        "FLS": 0.0,
+        "NMNL_STCK": 200000.0,
+        "LND_FR_SFT": 0.0,
+        "ACCRLS": 1000.0
+      },
+      {
+        "IID": "IGR0001234567",
+        "ID": "EGRAKZ2",
+        "DT": "2024-11-30T00:00:00Z",
+        "FRQNCY": "M",
+        "STCK": 0.0,
+        "FLS": -200000.0,
+        "NMNL_STCK": 0.0,
+        "LND_FR_SFT": 0.0,
+        "ACCRLS": 0.0
+      }
+    ],
+    "ACC.SHR": [
+      {
+        "IID": "PEGRAKZ1_SH1",
+        "ID": "EGRAKZ1",
+        "DT": "2024-09-30T00:00:00Z",
+        "FRQNCY": "Q",
+        "STCK": 1000000.0,
+        "FLS": 1000000.0,
+        "QNTTY": 1000.0,
+        "LND_FR_SFT": 0.0,
+        "IS_DRCT_INVSTMNT": "T"
+      }
+    ],
+    "ACC.DER": [
+      {
+        "IID": "MXADE_FTSE24L",
+        "ID": "EGRAKZ2",
+        "DT": "2024-09-30T00:00:00Z",
+        "FRQNCY": "M",
+        "STCK": 0.0,
+        "FLS": -1000.0,
+        "QNTTY": 5.0
+      },
+      {
+        "IID": "MXADE_FTSE25R3000",
+        "ID": "EGRAKZ2",
+        "DT": "2024-09-30T00:00:00Z",
+        "FRQNCY": "M",
+        "STCK": 200.0,
+        "FLS": 250.0,
+        "QNTTY": 2.0
+      },
+      {
+        "IID": "IGRV00000HMG8",
+        "ID": "EGRAKZ3",
+        "DT": "2024-09-30T00:00:00Z",
+        "FRQNCY": "M",
+        "STCK": 0.0,
+        "FLS": -100.0,
+        "QNTTY": 3.0
+      },
+      {
+        "IID": "PEGRAKZ3_SWP",
+        "ID": "EGRAKZ3",
+        "DT": "2024-09-30T00:00:00Z",
+        "FRQNCY": "M",
+        "STCK": 0.0,
+        "FLS": 300.0,
+        "QNTTY": 1.0
+      }
+    ],
+    "ACC.ASST_NN_FNNCL": [
+      {
+        "ID": "EGRAKZ1",
+        "TYP": "NFA4",
+        "CNTRY": "GR",
+        "DT": "2024-09-30T00:00:00Z",
+        "FRQNCY": "Q",
+        "STCK": 500000.0,
+        "FLS": 500000.0,
+        "ACCRLS": 2000.0
+      }
+    ],
+    "ACC.ASST_RMNNG": [
+      {
+        "ID": "EGRAKZ1",
+        "TYP": "AI_DPST",
+        "DT": "2024-09-30T00:00:00Z",
+        "FRQNCY": "Q",
+        "STCK": 100.0,
+        "FLS": 100.0
+      },
+      {
+        "ID": "EGRAKZ2",
+        "TYP": "AI_DPST",
+        "DT": "2024-09-30T00:00:00Z",
+        "FRQNCY": "M",
+        "STCK": 700.0,
+        "FLS": 700.0
+      },
+      {
+        "ID": "EGRAKZ3",
+        "TYP": "AI_DPST",
+        "DT": "2024-09-30T00:00:00Z",
+        "FRQNCY": "M",
+        "STCK": 500.0,
+        "FLS": 500.0
+      },
+      {
+        "ID": "EGRAKZ2",
+        "TYP": "AI_DBT",
+        "DT": "2024-09-30T00:00:00Z",
+        "FRQNCY": "M",
+        "STCK": 1200.0,
+        "FLS": 1200.0
+      },
+      {
+        "ID": "EGRAKZ2",
+        "TYP": "AI_DBT",
+        "DT": "2024-10-31T00:00:00Z",
+        "FRQNCY": "M",
+        "STCK": 4000.0,
+        "FLS": 4000.0
+      },
+      {
+        "ID": "EGRAKZ2",
+        "TYP": "AI_DBT",
+        "DT": "2024-11-30T00:00:00Z",
+        "FRQNCY": "M",
+        "STCK": 100.0,
+        "FLS": -5400.0
+      },
+      {
+        "ID": "EGRAKZ2",
+        "TYP": "AI_DBT",
+        "DT": "2024-12-31T00:00:00Z",
+        "FRQNCY": "M",
+        "STCK": 0.0,
+        "FLS": -500.0
+      },
+      {
+        "ID": "EGRAKZ1",
+        "TYP": "AR",
+        "DT": "2024-09-30T00:00:00Z",
+        "FRQNCY": "Q",
+        "STCK": 2000.0,
+        "FLS": 2000.0
+      }
+    ],
+    "ACC.LBLTY_LN": [
+      {
+        "IID": "PEGRAKZ2_OVR1",
+        "DT": "2024-09-30T00:00:00Z",
+        "FRQNCY": "M",
+        "STCK": 10000.0,
+        "FLS": 10000.0,
+        "ACCRLS": 100.0,
+        "IS_GRP_LN": "F"
+      }
+    ],
+    "ACC.LBLTY_RMNNG": [
+      {
+        "ID": "EGRAKZ2",
+        "TYP": "AI_LN",
+        "DT": "2024-09-30T00:00:00Z",
+        "FRQNCY": "M",
+        "STCK": 100.0,
+        "FLS": 100.0
+      }
+    ],
+    "ACC.HLDR": [
+      {
+        "IID": "PEGRAKZ1_SHR",
+        "ID": "PEGR123456789_PRSN1",
+        "DT": "2024-09-30T00:00:00Z",
+        "FRQNCY": "Q",
+        "QNTTY": 1000.0,
+        "SBSCRPTNS": 1600100.0,
+        "RDMPTNS": 0.0
+      },
+      {
+        "IID": "IGRF123456789",
+        "ID": "TGR321654987",
+        "DT": "2024-09-30T00:00:00Z",
+        "FRQNCY": "M",
+        "QNTTY": 10000.0,
+        "SBSCRPTNS": 497250.0,
+        "RDMPTNS": 0.0
+      },
+      {
+        "IID": "IGRF987654321",
+        "ID": "TGR123789456",
+        "DT": "2024-09-30T00:00:00Z",
+        "FRQNCY": "M",
+        "QNTTY": 20000.0,
+        "SBSCRPTNS": 490200.0,
+        "RDMPTNS": 0.0
+      }
+    ],
+    "ACC.KEY": [
+      {
+        "IID": "PEGRAKZ1_SHR",
+        "DT": "2024-09-30T00:00:00Z",
+        "FRQNCY": "Q",
+        "BK_PRC": 1602.2,
+        "INCM": 2.1
+      },
+      {
+        "IID": "IGRF123456789",
+        "DT": "2024-09-30T00:00:00Z",
+        "FRQNCY": "M",
+        "BK_PRC": 49.93,
+        "INCM": 0.18
+      },
+      {
+        "IID": "IGRF987654321",
+        "DT": "2024-09-30T00:00:00Z",
+        "FRQNCY": "M",
+        "BK_PRC": 25.0,
+        "INCM": 0.02
+      }
+    ],
+    "REF.RA": [
+      {
+        "ID": "EGR123456789",
+        "DT_BRTH": "2024-09-01T00:00:00Z",
+        "LEI_ID": "987600ED3C2BA1B01C23",
+        "TAX_ID": "123456789",
+        "NBR_ID": "987654321000"
+      }
+    ]
+  }
+}

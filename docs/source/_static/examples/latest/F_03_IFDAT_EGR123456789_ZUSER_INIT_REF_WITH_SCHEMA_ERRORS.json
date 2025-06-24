@@ -1,0 +1,306 @@
+{
+  "HEADER": {
+    "PARTNER": "EGR123456789",
+    "USERNAME": "zuser",
+    "DOMAIN": "IFDat"
+  },
+  "DATASETS": {
+    "REF.RAA": [
+      {
+        "ID": "EGR123456789",
+        "DT_BRTH": "2024-09-01T00:00:00Z",
+        "LEI_ID": "987600ED3C2BA1B01C23",
+        "TAX_ID": "123456789",
+        "NBR_ID": "987654321000"
+      }
+    ],
+    "REF.RA": [
+      {
+        "ID": "EGR123456789",
+        "IDD": "EGR123456789",
+        "DT_BRTH": "2024-09-01T00:00:00Z",
+        "LEI_ID": "987600ED3C2BA1B01C23",
+        "TAX_ID": "123456789",
+        "NBR_ID": "987654321000"
+      }
+    ],
+    "REF.RA_DYNMC": [
+      {
+        "ID": "EGR123456789",
+        "NM": "ΖΖΖ ΑΕΔΑΚ-ΑΕΔΟΕΕ",
+        "NM_LTN": "ZZZ AEDAK-AEDOEE",
+        "NM_SHRT": "ΖΖΖ",
+        "STRT": "Ακαδημίας 0",
+        "STRT_LTN": "Akadimias 0",
+        "CTY": "Αθήνα",
+        "CTY_LTN": "Athens",
+        "PSTL_CD": "100000",
+        "URL": "https://z.gr/",
+        "EMAIL": "info@z.gr",
+        "CNTRY_RSDNC": "GR"
+      },
+      {
+        "ID": "EGR123456789",
+        "VLD_FRM": "2024-09-10T00:00:00Z",
+        "NM": "ΖΖΖΖ ΑΕΔΑΚ-ΑΕΔΟΕΕ",
+        "NM_LTN": "ZZZZ AEDAK-AEDOEE",
+        "NM_SHRT": "ΖΖΖΖ"
+      },
+      {
+        "ID": "EGR123456789",
+        "VLD_FRM": "2024-09-20T00:00:00Z",
+        "NM": "Ζ ΑΕΔΑΚ-ΑΕΔΟΕΕ",
+        "NM_LTN": "Z AEDAK-AEDOEE",
+        "NM_SHRT": "Ζ"
+      }
+    ],
+    "REF.FND": [
+      {
+        "ID": "EGRAKZ1",
+        "DT_BRTH": "2024-09-15T00:00:00Z"
+      },
+      {
+        "ID": "EGRAKZ2",
+        "DT_BRTH": "2024-09-20T00:00:00Z",
+        "LEI_ID": "887600ED3C2BA1B01C34"
+      },
+      {
+        "ID": "EGRAKZ3",
+        "DT_BRTH": "2024-09-25T00:00:00Z",
+        "LEI_ID": "787600ED3C2BA1B01C45"
+      }
+    ],
+    "REF.FND_DYNMC": [
+      {
+        "ID": "EGRAKZ1",
+        "NM": "Ζ Venture Fund",
+        "NM_LTN": "Z Venture Fund",
+        "NM_SHRT": "ZVF",
+        "CNTRY_RSDNC": "GR",
+        "URL": "https://z.gr/vf",
+        "LGL_TYP": "OAIF",
+        "INVSTMNT_PLCY": "EQT",
+        "EQTY_TYP": "CLOSE",
+        "DSTRBTN_PLCY": "MIX",
+        "INVSTR_TYP": "RTL",
+        "GRN_TYP": "OTHER",
+        "STRTGY": "ACTIVE",
+        "GGRPHCL_FCS": "DOM"
+      },
+      {
+        "ID": "EGRAKZ2",
+        "NM": "Ζ Ομολογιακό",
+        "NM_LTN": "Z Bond Fund",
+        "NM_SHRT": "ZBOND",
+        "CNTRY_RSDNC": "GR",
+        "URL": "https://z.gr/zbond",
+        "LGL_TYP": "UCITS",
+        "INVSTMNT_PLCY": "BON",
+        "EQTY_TYP": "OPEN",
+        "DSTRBTN_PLCY": "DIS",
+        "INVSTR_TYP": "PRF",
+        "GRN_TYP": "OTHER",
+        "STRTGY": "ACTIVE",
+        "GGRPHCL_FCS": "EEA",
+        "BND_FCS": "MIX"
+      },
+      {
+        "ID": "EGRAKZ3",
+        "NM": "Ζ Μικτό",
+        "NM_LTN": "Z Balanced Fund",
+        "NM_SHRT": "ZBALANCED",
+        "CNTRY_RSDNC": "GR",
+        "URL": "https://z.gr/zbalanced",
+        "LGL_TYP": "UCITS",
+        "INVSTMNT_PLCY": "MIX",
+        "EQTY_TYP": "OPEN",
+        "DSTRBTN_PLCY": "DIS",
+        "INVSTR_TYP": "PRF",
+        "GRN_TYP": "OTHER",
+        "STRTGY": "ACTIVE",
+        "GGRPHCL_FCS": "EEA"
+      }
+    ],
+    "REF.SELF_SHR": [
+      {
+        "ID": "PEGRAKZ1_SHR",
+        "DT_BRTH": "2024-09-15T00:00:00Z",
+        "CRRNCY": "EUR"
+      },
+      {
+        "ID": "IGRF123456789",
+        "DT_BRTH": "2024-09-20T00:00:00Z",
+        "CRRNCY": "EUR"
+      },
+      {
+        "ID": "IGRF987654321",
+        "DT_BRTH": "2024-09-25T00:00:00Z",
+        "CRRNCY": "EUR"
+      }
+    ],
+    "REF.SELF_SHR_DYNMC": [
+      {
+        "ID": "PEGRAKZ1_SHR",
+        "ISSD_BY": "EGRAKZ1",
+        "NMNL_PRC": 100.0,
+        "RDMPTN_FRQNCY": "E",
+        "MNMM_AMNT": 1000.0,
+        "TYP": "AIF"
+      },
+      {
+        "ID": "IGRF123456789",
+        "NM_LTN": "Z Bond Fund Retail",
+        "NM_SHRT": "Z BD FD/UT",
+        "ISSD_BY": "EGRAKZ2",
+        "NMNL_PRC": 10.0,
+        "CFI": "CIOJBU",
+        "RDMPTN_FRQNCY": "D",
+        "TYP": "UCITS"
+      },
+      {
+        "ID": "IGRF987654321",
+        "NM_LTN": "Z Mixed Fund Retail",
+        "NM_SHRT": "Z BALANCED FUND",
+        "ISSD_BY": "EGRAKZ3",
+        "NMNL_PRC": 10.0,
+        "CFI": "CIOJLU",
+        "RDMPTN_FRQNCY": "D",
+        "TYP": "UCITS"
+      }
+    ],
+    "REF.CNTRPRTY": [
+      {
+        "ID": "EGR011",
+        "NM_LTN": "National Bank of Greece",
+        "CNTRY_RSDNC": "GR",
+        "INSTTTNL_SCTR": "S122"
+      },
+      {
+        "ID": "EGR026N",
+        "NM_LTN": "EUROBANK",
+        "CNTRY_RSDNC": "GR",
+        "INSTTTNL_SCTR": "S122"
+      },
+      {
+        "ID": "EGR014N",
+        "NM_LTN": "ALPHA BANK",
+        "CNTRY_RSDNC": "GR",
+        "INSTTTNL_SCTR": "S122"
+      },
+      {
+        "ID": "TGR987612345",
+        "NM_LTN": "AI DATA MODELS",
+        "CNTRY_RSDNC": "GR",
+        "INSTTTNL_SCTR": "S11"
+      },
+      {
+        "ID": "LIGJSJL3JD5P30I6NJZ34",
+        "NM_LTN": "Morgan Stanley",
+        "CNTRY_RSDNC": "US",
+        "INSTTTNL_SCTR": "S125"
+      },
+      {
+        "ID": "PEGR123456789_PRSN1",
+        "CNTRY_RSDNC": "GR",
+        "INSTTTNL_SCTR": "S14"
+      },
+      {
+        "ID": "TGR321654987",
+        "NM_LTN": "Z AEPEY",
+        "CNTRY_RSDNC": "GR",
+        "INSTTTNL_SCTR": "S126"
+      },
+      {
+        "ID": "TGR123789456",
+        "NM_LTN": "FOO SA",
+        "CNTRY_RSDNC": "GR",
+        "INSTTTNL_SCTR": "S11"
+      }
+    ],
+    "REF.DPST": [
+      {
+        "ID": "IGR0001100000000000000000000",
+        "DT_BRTH": "2024-09-15T00:00:00Z",
+        "TYP": "SIGHT",
+        "CRRNCY": "EUR",
+        "OAID": "EGRAZ1",
+        "CNTRPRTY": "EGR011"
+      },
+      {
+        "ID": "PEGRAZ2_DPST",
+        "DT_BRTH": "2024-09-20T00:00:00Z",
+        "DT_CLS": "2024-09-20T00:00:00Z",
+        "TYP": "AMAT",
+        "CRRNCY": "EUR",
+        "OAID": "EGRAZ2",
+        "CNTRPRTY": "EGR026N"
+      },
+      {
+        "ID": "IGR0002600000000000000000001",
+        "DT_BRTH": "2024-09-21T00:00:00Z",
+        "TYP": "SIGHT",
+        "CRRNCY": "USD",
+        "OAID": "EGRAZ2",
+        "CNTRPRTY": "EGR026N"
+      },
+      {
+        "ID": "PEGRAZ3_DPST",
+        "DT_BRTH": "2024-09-25T00:00:00Z",
+        "TYP": "ANOT",
+        "NTC": "S",
+        "CRRNCY": "EUR",
+        "OAID": "EGRAZ3",
+        "CNTRPRTY": "EGR014N"
+      }
+    ],
+    "REF.LN": [
+      {
+        "ID": "PEGRAKZ2_OVR1",
+        "DT_BRTH": "2024-09-15T00:00:00Z",
+        "CRRNCY": "EUR",
+        "TYP": "OVR",
+        "OAID": "EGRAKZ2",
+        "CNTRPRTY": "EGR026N"
+      }
+    ],
+    "REF.SHR": [
+      {
+        "ID": "PEGRAKZ1_SH1",
+        "CRRNCY": "EUR",
+        "TYP": "F512",
+        "ISSD_BY": "TGR987612345"
+      }
+    ],
+    "REF.DER": [
+      {
+        "ID": "MXADE_FTSE24L",
+        "TCKR": "FTSE24K",
+        "TYP": "FUT",
+        "CRRNCY": "EUR",
+        "MRKT_CNTRPRTY": "XADE"
+      },
+      {
+        "ID": "MXADE_FTSE25R3000",
+        "TCKR": "FTSE25R3000",
+        "TYP": "PUT",
+        "CRRNCY": "EUR",
+        "MRKT_CNTRPRTY": "XADE"
+      },
+      {
+        "ID": "IGRV00000HMG8",
+        "FISN": "ATHEX/F20241220PPC",
+        "TCKR": "PPC24L",
+        "TYP": "FUT",
+        "CRRNCY": "EUR",
+        "MRKT_CNTRPRTY": "XADE"
+      },
+      {
+        "ID": "PEGRAKZ3_SWP",
+        "DT_BRTH": "2024-09-26T00:00:00Z",
+        "TYP": "SWA",
+        "CRRNCY": "USD",
+        "CNTRPRTY": "LIGJSJL3JD5P30I6NJZ34"
+      }
+    ]
+  }
+}

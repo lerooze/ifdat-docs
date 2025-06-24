@@ -1,7 +1,10 @@
 License
 =======
 
-Copyright 2022–2023, `journey developers <https://github.com/lerooze/journey-docs/graphs/contributors>`_.
+Copyright 2022–present, IFDat developers:
+
+* Antonios Loumiotis <antonis.loumiotis@gmail.com>
+* Additional contributors: <https://github.com/lerooze/ifdat-docs/graphs/contributors>`_.
 
 Licensed under the Apache License, Version 2.0 (the “License”); you may not use
 these files except in compliance with the License. You may obtain a copy of the

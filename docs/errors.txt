@@ -1,2 +1,248 @@
-/home/al459/envs/ifdat-docs/docs/source/ack/accounting.rst: WARNING: document isn't included in any toctree
-/home/al459/envs/ifdat-docs/docs/source/ack/critical.rst: WARNING: document isn't included in any toctree
+/home/al459/envs/ifdat-docs/docs/source/types/codelists/asst_nn_fnncl.rst:4: CRITICAL: Problems with "csv-table" directive path:
+[Errno 2] No such file or directory: 'source/_static/codelists/ASST_NN_FNNCL_ENUM.csv'.
+
+.. csv-table::
+   :file: /_static/codelists/ASST_NN_FNNCL_ENUM.csv
+   :header-rows: 1 [docutils]
+/home/al459/envs/ifdat-docs/docs/source/types/codelists/bool.rst:4: CRITICAL: Problems with "csv-table" directive path:
+[Errno 2] No such file or directory: 'source/_static/codelists/BOOL_ENUM.csv'.
+
+.. csv-table::
+   :file: /_static/codelists/BOOL_ENUM.csv
+   :header-rows: 1 [docutils]
+/home/al459/envs/ifdat-docs/docs/source/types/codelists/bool_ext.rst:4: CRITICAL: Problems with "csv-table" directive path:
+[Errno 2] No such file or directory: 'source/_static/codelists/BOOL_EXT_ENUM.csv'.
+
+.. csv-table::
+   :file: /_static/codelists/BOOL_EXT_ENUM.csv
+   :header-rows: 1 [docutils]
+/home/al459/envs/ifdat-docs/docs/source/types/codelists/dbt_cpn_frqncy.rst:4: CRITICAL: Problems with "csv-table" directive path:
+[Errno 2] No such file or directory: 'source/_static/codelists/DBT_CPN_FRQNCY_ENUM.csv'.
+
+.. csv-table::
+   :file: /_static/codelists/DBT_CPN_FRQNCY_ENUM.csv
+   :header-rows: 1 [docutils]
+/home/al459/envs/ifdat-docs/docs/source/types/codelists/dbt_cpn_typ.rst:4: CRITICAL: Problems with "csv-table" directive path:
+[Errno 2] No such file or directory: 'source/_static/codelists/DBT_CPN_TYP_ENUM.csv'.
+
+.. csv-table::
+   :file: /_static/codelists/DBT_CPN_TYP_ENUM.csv
+   :header-rows: 1 [docutils]
+/home/al459/envs/ifdat-docs/docs/source/types/codelists/dbt_cvrd_typ.rst:4: CRITICAL: Problems with "csv-table" directive path:
+[Errno 2] No such file or directory: 'source/_static/codelists/DBT_CVRD_TYP_ENUM.csv'.
+
+.. csv-table::
+   :file: /_static/codelists/DBT_CVRD_TYP_ENUM.csv
+   :header-rows: 1 [docutils]
+/home/al459/envs/ifdat-docs/docs/source/types/codelists/dbt_grnt_lvl.rst:4: CRITICAL: Problems with "csv-table" directive path:
+[Errno 2] No such file or directory: 'source/_static/codelists/DBT_GRNT_LVL_ENUM.csv'.
+
+.. csv-table::
+   :file: /_static/codelists/DBT_GRNT_LVL_ENUM.csv
+   :header-rows: 1 [docutils]
+/home/al459/envs/ifdat-docs/docs/source/types/codelists/dbt_outstndng_chn_typ.rst:4: CRITICAL: Problems with "csv-table" directive path:
+[Errno 2] No such file or directory: 'source/_static/codelists/DBT_OUTSTNDNG_CHN_TYP_ENUM.csv'.
+
+.. csv-table::
+   :file: /_static/codelists/DBT_OUTSTNDNG_CHN_TYP_ENUM.csv
+   :header-rows: 1 [docutils]
+/home/al459/envs/ifdat-docs/docs/source/types/codelists/dbt_rnk_lvl.rst:4: CRITICAL: Problems with "csv-table" directive path:
+[Errno 2] No such file or directory: 'source/_static/codelists/DBT_RNK_LVL_ENUM.csv'.
+
+.. csv-table::
+   :file: /_static/codelists/DBT_RNK_LVL_ENUM.csv
+   :header-rows: 1 [docutils]
+/home/al459/envs/ifdat-docs/docs/source/types/codelists/dbt_scrty_lvl.rst:4: CRITICAL: Problems with "csv-table" directive path:
+[Errno 2] No such file or directory: 'source/_static/codelists/DBT_SCRTY_LVL_ENUM.csv'.
+
+.. csv-table::
+   :file: /_static/codelists/DBT_SCRTY_LVL_ENUM.csv
+   :header-rows: 1 [docutils]
+/home/al459/envs/ifdat-docs/docs/source/types/codelists/dbt_stts.rst:4: CRITICAL: Problems with "csv-table" directive path:
+[Errno 2] No such file or directory: 'source/_static/codelists/DBT_STTS_ENUM.csv'.
+
+.. csv-table::
+   :file: /_static/codelists/DBT_STTS_ENUM.csv
+   :header-rows: 1 [docutils]
+/home/al459/envs/ifdat-docs/docs/source/types/codelists/dbt_typ.rst:4: CRITICAL: Problems with "csv-table" directive path:
+[Errno 2] No such file or directory: 'source/_static/codelists/DBT_TYP_ENUM.csv'.
+
+.. csv-table::
+   :file: /_static/codelists/DBT_TYP_ENUM.csv
+   :header-rows: 1 [docutils]
+/home/al459/envs/ifdat-docs/docs/source/types/codelists/dep_ntc.rst:4: CRITICAL: Problems with "csv-table" directive path:
+[Errno 2] No such file or directory: 'source/_static/codelists/DEP_NTC_ENUM.csv'.
+
+.. csv-table::
+   :file: /_static/codelists/DEP_NTC_ENUM.csv
+   :header-rows: 1 [docutils]
+/home/al459/envs/ifdat-docs/docs/source/types/codelists/dep_typ.rst:4: CRITICAL: Problems with "csv-table" directive path:
+[Errno 2] No such file or directory: 'source/_static/codelists/DEP_TYP_ENUM.csv'.
+
+.. csv-table::
+   :file: /_static/codelists/DEP_TYP_ENUM.csv
+   :header-rows: 1 [docutils]
+/home/al459/envs/ifdat-docs/docs/source/types/codelists/drvtv_typ.rst:4: CRITICAL: Problems with "csv-table" directive path:
+[Errno 2] No such file or directory: 'source/_static/codelists/DRVTV_TYP_ENUM.csv'.
+
+.. csv-table::
+   :file: /_static/codelists/DRVTV_TYP_ENUM.csv
+   :header-rows: 1 [docutils]
+/home/al459/envs/ifdat-docs/docs/source/types/codelists/dvdnd_cstm_frqncy.rst:4: CRITICAL: Problems with "csv-table" directive path:
+[Errno 2] No such file or directory: 'source/_static/codelists/DVDND_CSTM_FRQNCY_ENUM.csv'.
+
+.. csv-table::
+   :file: /_static/codelists/DVDND_CSTM_FRQNCY_ENUM.csv
+   :header-rows: 1 [docutils]
+/home/al459/envs/ifdat-docs/docs/source/types/codelists/dvdnd_typ.rst:4: CRITICAL: Problems with "csv-table" directive path:
+[Errno 2] No such file or directory: 'source/_static/codelists/DVDND_TYP_ENUM.csv'.
+
+.. csv-table::
+   :file: /_static/codelists/DVDND_TYP_ENUM.csv
+   :header-rows: 1 [docutils]
+/home/al459/envs/ifdat-docs/docs/source/types/codelists/esa_sector.rst:4: CRITICAL: Problems with "csv-table" directive path:
+[Errno 2] No such file or directory: 'source/_static/codelists/ESA_SECTOR_ENUM.csv'.
+
+.. csv-table::
+   :file: /_static/codelists/ESA_SECTOR_ENUM.csv
+   :header-rows: 1 [docutils]
+/home/al459/envs/ifdat-docs/docs/source/types/codelists/fnd_bnd_fcs.rst:4: CRITICAL: Problems with "csv-table" directive path:
+[Errno 2] No such file or directory: 'source/_static/codelists/FND_BND_FCS_ENUM.csv'.
+
+.. csv-table::
+   :file: /_static/codelists/FND_BND_FCS_ENUM.csv
+   :header-rows: 1 [docutils]
+/home/al459/envs/ifdat-docs/docs/source/types/codelists/fnd_dstrbtn_plcy.rst:4: CRITICAL: Problems with "csv-table" directive path:
+[Errno 2] No such file or directory: 'source/_static/codelists/FND_DSTRBTN_PLCY_ENUM.csv'.
+
+.. csv-table::
+   :file: /_static/codelists/FND_DSTRBTN_PLCY_ENUM.csv
+   :header-rows: 1 [docutils]
+/home/al459/envs/ifdat-docs/docs/source/types/codelists/fnd_eqty_typ.rst:4: CRITICAL: Problems with "csv-table" directive path:
+[Errno 2] No such file or directory: 'source/_static/codelists/FND_EQTY_TYP_ENUM.csv'.
+
+.. csv-table::
+   :file: /_static/codelists/FND_EQTY_TYP_ENUM.csv
+   :header-rows: 1 [docutils]
+/home/al459/envs/ifdat-docs/docs/source/types/codelists/fnd_ggrphcl_fcs.rst:4: CRITICAL: Problems with "csv-table" directive path:
+[Errno 2] No such file or directory: 'source/_static/codelists/FND_GGRPHCL_FCS_ENUM.csv'.
+
+.. csv-table::
+   :file: /_static/codelists/FND_GGRPHCL_FCS_ENUM.csv
+   :header-rows: 1 [docutils]
+/home/al459/envs/ifdat-docs/docs/source/types/codelists/fnd_grn_typ.rst:4: CRITICAL: Problems with "csv-table" directive path:
+[Errno 2] No such file or directory: 'source/_static/codelists/FND_GRN_TYP_ENUM.csv'.
+
+.. csv-table::
+   :file: /_static/codelists/FND_GRN_TYP_ENUM.csv
+   :header-rows: 1 [docutils]
+/home/al459/envs/ifdat-docs/docs/source/types/codelists/fnd_invstmnt_plcy.rst:4: CRITICAL: Problems with "csv-table" directive path:
+[Errno 2] No such file or directory: 'source/_static/codelists/FND_INVSTMNT_PLCY_ENUM.csv'.
+
+.. csv-table::
+   :file: /_static/codelists/FND_INVSTMNT_PLCY_ENUM.csv
+   :header-rows: 1 [docutils]
+/home/al459/envs/ifdat-docs/docs/source/types/codelists/fnd_invstr_typ.rst:4: CRITICAL: Problems with "csv-table" directive path:
+[Errno 2] No such file or directory: 'source/_static/codelists/FND_INVSTR_TYP_ENUM.csv'.
+
+.. csv-table::
+   :file: /_static/codelists/FND_INVSTR_TYP_ENUM.csv
+   :header-rows: 1 [docutils]
+/home/al459/envs/ifdat-docs/docs/source/types/codelists/fnd_lgl_typ.rst:4: CRITICAL: Problems with "csv-table" directive path:
+[Errno 2] No such file or directory: 'source/_static/codelists/FND_LGL_TYP_ENUM.csv'.
+
+.. csv-table::
+   :file: /_static/codelists/FND_LGL_TYP_ENUM.csv
+   :header-rows: 1 [docutils]
+/home/al459/envs/ifdat-docs/docs/source/types/codelists/fnd_rl_estt_typ.rst:4: CRITICAL: Problems with "csv-table" directive path:
+[Errno 2] No such file or directory: 'source/_static/codelists/FND_RL_ESTT_TYP_ENUM.csv'.
+
+.. csv-table::
+   :file: /_static/codelists/FND_RL_ESTT_TYP_ENUM.csv
+   :header-rows: 1 [docutils]
+/home/al459/envs/ifdat-docs/docs/source/types/codelists/fnd_strtgy.rst:4: CRITICAL: Problems with "csv-table" directive path:
+[Errno 2] No such file or directory: 'source/_static/codelists/FND_STRTGY_ENUM.csv'.
+
+.. csv-table::
+   :file: /_static/codelists/FND_STRTGY_ENUM.csv
+   :header-rows: 1 [docutils]
+/home/al459/envs/ifdat-docs/docs/source/types/codelists/gen_cntry.rst:4: CRITICAL: Problems with "csv-table" directive path:
+[Errno 2] No such file or directory: 'source/_static/codelists/GEN_CNTRY_ENUM.csv'.
+
+.. csv-table::
+   :file: /_static/codelists/GEN_CNTRY_ENUM.csv
+   :header-rows: 1 [docutils]
+/home/al459/envs/ifdat-docs/docs/source/types/codelists/gen_crrncy.rst:4: CRITICAL: Problems with "csv-table" directive path:
+[Errno 2] No such file or directory: 'source/_static/codelists/GEN_CRRNCY_ENUM.csv'.
+
+.. csv-table::
+   :file: /_static/codelists/GEN_CRRNCY_ENUM.csv
+   :header-rows: 1 [docutils]
+/home/al459/envs/ifdat-docs/docs/source/types/codelists/gen_frqncy.rst:4: CRITICAL: Problems with "csv-table" directive path:
+[Errno 2] No such file or directory: 'source/_static/codelists/GEN_FRQNCY_ENUM.csv'.
+
+.. csv-table::
+   :file: /_static/codelists/GEN_FRQNCY_ENUM.csv
+   :header-rows: 1 [docutils]
+/home/al459/envs/ifdat-docs/docs/source/types/codelists/gen_mrkt.rst:4: CRITICAL: Problems with "csv-table" directive path:
+[Errno 2] No such file or directory: 'source/_static/codelists/GEN_MRKT_ENUM.csv'.
+
+.. csv-table::
+   :file: /_static/codelists/GEN_MRKT_ENUM.csv
+   :header-rows: 1 [docutils]
+/home/al459/envs/ifdat-docs/docs/source/types/codelists/ifdat_drgtn_typ.rst:4: CRITICAL: Problems with "csv-table" directive path:
+[Errno 2] No such file or directory: 'source/_static/codelists/IFDAT_DRGTN_TYP_ENUM.csv'.
+
+.. csv-table::
+   :file: /_static/codelists/IFDAT_DRGTN_TYP_ENUM.csv
+   :header-rows: 1 [docutils]
+/home/al459/envs/ifdat-docs/docs/source/types/codelists/lon_typ.rst:4: CRITICAL: Problems with "csv-table" directive path:
+[Errno 2] No such file or directory: 'source/_static/codelists/LON_TYP_ENUM.csv'.
+
+.. csv-table::
+   :file: /_static/codelists/LON_TYP_ENUM.csv
+   :header-rows: 1 [docutils]
+/home/al459/envs/ifdat-docs/docs/source/types/codelists/org_instttnl_sctr_cntrl.rst:4: CRITICAL: Problems with "csv-table" directive path:
+[Errno 2] No such file or directory: 'source/_static/codelists/ORG_INSTTTNL_SCTR_CNTRL_ENUM.csv'.
+
+.. csv-table::
+   :file: /_static/codelists/ORG_INSTTTNL_SCTR_CNTRL_ENUM.csv
+   :header-rows: 1 [docutils]
+/home/al459/envs/ifdat-docs/docs/source/types/codelists/other_rdmptn_frqncy.rst:4: CRITICAL: Problems with "csv-table" directive path:
+[Errno 2] No such file or directory: 'source/_static/codelists/OTHER_RDMPTN_FRQNCY_ENUM.csv'.
+
+.. csv-table::
+   :file: /_static/codelists/OTHER_RDMPTN_FRQNCY_ENUM.csv
+   :header-rows: 1 [docutils]
+/home/al459/envs/ifdat-docs/docs/source/types/codelists/rem_asset.rst:4: CRITICAL: Problems with "csv-table" directive path:
+[Errno 2] No such file or directory: 'source/_static/codelists/REM_ASSET_ENUM.csv'.
+
+.. csv-table::
+   :file: /_static/codelists/REM_ASSET_ENUM.csv
+   :header-rows: 1 [docutils]
+/home/al459/envs/ifdat-docs/docs/source/types/codelists/rem_liab.rst:4: CRITICAL: Problems with "csv-table" directive path:
+[Errno 2] No such file or directory: 'source/_static/codelists/REM_LIAB_ENUM.csv'.
+
+.. csv-table::
+   :file: /_static/codelists/REM_LIAB_ENUM.csv
+   :header-rows: 1 [docutils]
+/home/al459/envs/ifdat-docs/docs/source/types/codelists/shr_esa_typ.rst:4: CRITICAL: Problems with "csv-table" directive path:
+[Errno 2] No such file or directory: 'source/_static/codelists/SHR_ESA_TYP_ENUM.csv'.
+
+.. csv-table::
+   :file: /_static/codelists/SHR_ESA_TYP_ENUM.csv
+   :header-rows: 1 [docutils]
+/home/al459/envs/ifdat-docs/docs/source/types/codelists/shr_typ.rst:4: CRITICAL: Problems with "csv-table" directive path:
+[Errno 2] No such file or directory: 'source/_static/codelists/SHR_TYP_ENUM.csv'.
+
+.. csv-table::
+   :file: /_static/codelists/SHR_TYP_ENUM.csv
+   :header-rows: 1 [docutils]
+/home/al459/envs/ifdat-docs/docs/source/types/codelists/source_type.rst:4: CRITICAL: Problems with "csv-table" directive path:
+[Errno 2] No such file or directory: 'source/_static/codelists/SOURCE_TYPE_ENUM.csv'.
+
+.. csv-table::
+   :file: /_static/codelists/SOURCE_TYPE_ENUM.csv
+   :header-rows: 1 [docutils]
+/home/al459/envs/ifdat-docs/docs/source/ack/accounting.rst: WARNING: document isn't included in any toctree [toc.not_included]
+/home/al459/envs/ifdat-docs/docs/source/ack/critical.rst: WARNING: document isn't included in any toctree [toc.not_included]

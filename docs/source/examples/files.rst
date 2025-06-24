@@ -10,10 +10,18 @@
 εισάγονται αν πρόκειται για συμμετοχικούς τίτλους/χρεόγραφα τα οποία έχουν
 isin.
 
-Ακολουθούν παραδείγματα συμπληρωμένων αρχείων υποβολής IFDAT:
+Ακολουθούν παραδείγματα συμπληρωμένων αρχείων υποβολής IFDAT και το τελευταίο κεφάλαιο περιλαμβάνει διάφορες αναφορές με βάση το σύνολο των παραδειγμάτων:
 
 .. toctree::
    :maxdepth: 1
 
-   files/init
-   files/main
+   files/rprtd_by
+   files/ref_init_with_errors
+   files/ref_init
+   files/acc_init_with_errors
+   files/acc_init
+   files/aeeap_init_with_errors
+   files/aeeap_init
+   files/ref_plcy
+   files/ref_dpst_crctn
+   files/reports

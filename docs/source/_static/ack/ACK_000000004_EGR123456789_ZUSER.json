@@ -1,0 +1,53 @@
+{
+  "header": {
+    "id": 4,
+    "submitter": "ZUSER",
+    "partner": "EGR123456789",
+    "domain": "IFDAT",
+    "filename": "F_000000004_IFDAT_EGR123456789_ZUSER_INIT_REF_WITH_SCHEMA_ERRORS.json",
+    "timestamp": "2025-06-24T18:04:53.520333",
+    "uploaded": false
+  },
+  "errors": {
+    "wrong_suffix": null,
+    "no_header": null,
+    "corrupt_excel": {
+      "unspecified": false,
+      "header": false
+    },
+    "corrupt_json": null,
+    "not_supported_domain": null,
+    "inconsistency": null,
+    "no_content": [],
+    "schema_error": [
+      {
+        "location": "('DATASETS', 'REF.RA', 0, 'IDD')",
+        "message": "Extra inputs are not permitted",
+        "input": "EGR123456789",
+        "domain": null,
+        "type": "extra_forbidden",
+        "level": null,
+        "line": null,
+        "column": null,
+        "file": null
+      },
+      {
+        "location": "('DATASETS', 'REF.RAA')",
+        "message": "Extra inputs are not permitted",
+        "input": "[{'ID': 'EGR123456789', 'DT_BRTH': '2024-09-01T00:00:00Z', 'LEI_ID': '987600ED3C2BA1B01C23', 'TAX_ID': '123456789', 'NBR_ID': '987654321000'}]",
+        "domain": null,
+        "type": "extra_forbidden",
+        "level": null,
+        "line": null,
+        "column": null,
+        "file": null
+      }
+    ],
+    "unauthorized": []
+  },
+  "warnings": {
+    "dup_ra": [],
+    "wrong_alias": [],
+    "rebase_skip": []
+  }
+}

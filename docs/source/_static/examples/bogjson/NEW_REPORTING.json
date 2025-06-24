@@ -1,0 +1,26 @@
+{
+  "HEADER": {
+    "PARTNER": "EGR123456789",
+    "USERNAME": "zuser",
+    "DOMAIN": "IFDat",
+    "REP_YEAR": "2025",
+    "REP_MONTH": "06",
+    "SUBMISSION_TYPE": "INIT"
+  },
+  "DATASETS": {
+    "REF.FND_DYNMC": [
+      {
+        "ID": "PEGR123456789_AKES",
+        "RPRTD_BY": "EGR123456789"
+      },
+      {
+        "ID": "L887600ED3C2BA1B01C34",
+        "RPRTD_BY": "EGR123456789"
+      },
+      {
+        "ID": "L787600ED3C2BA1B01C45",
+        "RPRTD_BY": "EGR123456789"
+      }
+    ]
+  }
+}

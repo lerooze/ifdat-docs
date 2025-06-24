@@ -1,0 +1,20 @@
+{
+  "HEADER": {
+    "PARTNER": "EGR123456789",
+    "USERNAME": "zuser",
+    "DOMAIN": "IFDat",
+    "REP_YEAR": "2025",
+    "REP_MONTH": "06",
+    "SUBMISSION_TYPE": "UPDATE",
+    "SUBMISSION_REASON": "UPDATE"
+  },
+  "DATASETS": {
+    "REF.FND_DYNMC": [
+      {
+        "ID": "EGRAKZ1",
+        "VLD_FRM": "2025-02-01T00:00:00Z",
+        "INVSTMNT_PLCY": "MIX"
+      }
+    ]
+  }
+}

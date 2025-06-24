@@ -1,0 +1,19 @@
+{
+  "HEADER": {
+    "PARTNER": "EGR123456789",
+    "USERNAME": "zuser",
+    "DOMAIN": "IFDat"
+  },
+  "DATASETS": {
+    "ACC.DPST": [
+      {
+        "IID": "_EUR_EGRAKZ1",
+        "DT": "2024-09-30T00:00:00Z",
+        "FRQNCY": "Q",
+        "STCK": 500.0,
+        "FLS": 500.0,
+        "ACCRLS": 0.0
+      }
+    ]
+  }
+}

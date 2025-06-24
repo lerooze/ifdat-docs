@@ -1,0 +1,550 @@
+{
+  "$defs": {
+    "CorruptExcelReason": {
+      "properties": {
+        "unspecified": {
+          "default": false,
+          "title": "Unspecified",
+          "type": "boolean"
+        },
+        "header": {
+          "default": false,
+          "title": "Header",
+          "type": "boolean"
+        }
+      },
+      "title": "CorruptExcelReason",
+      "type": "object"
+    },
+    "DupAliasModel": {
+      "properties": {
+        "lid": {
+          "title": "Lid",
+          "type": "string"
+        },
+        "rids": {
+          "title": "Rids",
+          "type": "string"
+        }
+      },
+      "required": [
+        "lid",
+        "rids"
+      ],
+      "title": "DupAliasModel",
+      "type": "object"
+    },
+    "ErrorInfo": {
+      "properties": {
+        "wrong_suffix": {
+          "anyOf": [
+            {
+              "const": true,
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Wrong Suffix"
+        },
+        "no_header": {
+          "anyOf": [
+            {
+              "const": true,
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "No Header"
+        },
+        "corrupt_excel": {
+          "$ref": "#/$defs/CorruptExcelReason",
+          "default": {
+            "unspecified": false,
+            "header": false
+          }
+        },
+        "corrupt_json": {
+          "anyOf": [
+            {
+              "const": true,
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Corrupt Json"
+        },
+        "not_supported_domain": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Not Supported Domain"
+        },
+        "inconsistency": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Inconsistency"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "no_content": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "No Content",
+          "type": "array"
+        },
+        "schema_error": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/SchemaError"
+          },
+          "title": "Schema Error",
+          "type": "array"
+        },
+        "unauthorized": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/UnauthorizedRecord"
+          },
+          "title": "Unauthorized",
+          "type": "array"
+        }
+      },
+      "title": "ErrorInfo",
+      "type": "object"
+    },
+    "Header": {
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "integer"
+        },
+        "submitter": {
+          "maxLength": 50,
+          "pattern": "^[a-zA-Z][!-~-]{1,50}$",
+          "title": "Submitter",
+          "type": "string"
+        },
+        "partner": {
+          "maxLength": 51,
+          "pattern": "^E[A-Za-z0-9_@$-][!-~]*$",
+          "title": "Partner",
+          "type": "string"
+        },
+        "domain": {
+          "enum": [
+            "IFDAT",
+            "DBDAT"
+          ],
+          "title": "Domain",
+          "type": "string"
+        },
+        "filename": {
+          "title": "Filename",
+          "type": "string"
+        },
+        "timestamp": {
+          "default": "2025-06-24T17:59:16.657642",
+          "format": "date-time",
+          "title": "Timestamp",
+          "type": "string"
+        },
+        "uploaded": {
+          "default": false,
+          "title": "Uploaded",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "id",
+        "submitter",
+        "partner",
+        "domain",
+        "filename"
+      ],
+      "title": "Header",
+      "type": "object"
+    },
+    "Inconsistency": {
+      "properties": {
+        "partner_filename": {
+          "anyOf": [
+            {
+              "maxLength": 51,
+              "pattern": "^E[A-Za-z0-9_@$-][!-~]*$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Partner Filename"
+        },
+        "partner_object": {
+          "anyOf": [
+            {
+              "maxLength": 51,
+              "pattern": "(^E[A-Za-z0-9_@$-][!-~]*$)|(^$)",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Partner Object"
+        },
+        "user_filename": {
+          "anyOf": [
+            {
+              "maxLength": 50,
+              "pattern": "^[a-zA-Z][!-~-]{1,50}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "User Filename"
+        },
+        "user_object": {
+          "anyOf": [
+            {
+              "maxLength": 50,
+              "pattern": "(^[a-zA-Z][!-~-]*$)|(^$)$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "User Object"
+        }
+      },
+      "title": "Inconsistency",
+      "type": "object"
+    },
+    "SchemaError": {
+      "properties": {
+        "location": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Location"
+        },
+        "message": {
+          "anyOf": [
+            {
+              "maxLength": 512,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Message"
+        },
+        "input": {
+          "anyOf": [
+            {
+              "maxLength": 512,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Input"
+        },
+        "domain": {
+          "anyOf": [
+            {
+              "maxLength": 32,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Domain"
+        },
+        "type": {
+          "anyOf": [
+            {
+              "maxLength": 32,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Type"
+        },
+        "level": {
+          "anyOf": [
+            {
+              "maxLength": 32,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Level"
+        },
+        "line": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Line"
+        },
+        "column": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Column"
+        },
+        "file": {
+          "anyOf": [
+            {
+              "maxLength": 512,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "File"
+        }
+      },
+      "title": "SchemaError",
+      "type": "object"
+    },
+    "UnauthorizedRecord": {
+      "properties": {
+        "user": {
+          "maxLength": 50,
+          "pattern": "^[a-zA-Z][!-~-]{1,50}$",
+          "title": "User",
+          "type": "string"
+        },
+        "partner": {
+          "maxLength": 51,
+          "pattern": "^E[A-Za-z0-9_@$-][!-~]*$",
+          "title": "Partner",
+          "type": "string"
+        },
+        "iris_timestamp": {
+          "format": "date-time",
+          "title": "Iris Timestamp",
+          "type": "string"
+        },
+        "table": {
+          "title": "Table",
+          "type": "string"
+        },
+        "record_id": {
+          "title": "Record Id",
+          "type": "integer"
+        },
+        "ra_mc": {
+          "maxLength": 51,
+          "pattern": "^E[A-Za-z0-9_@$-][!-~]*$",
+          "title": "Ra Mc",
+          "type": "string"
+        },
+        "oa": {
+          "maxLength": 51,
+          "pattern": "^E[A-Za-z0-9_@$-][!-~]*$",
+          "title": "Oa",
+          "type": "string"
+        },
+        "iid": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Iid"
+        },
+        "cntrprty": {
+          "anyOf": [
+            {
+              "maxLength": 51,
+              "pattern": "^E[A-Za-z0-9_@$-][!-~]*$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Cntrprty"
+        },
+        "dt": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Dt"
+        }
+      },
+      "required": [
+        "user",
+        "partner",
+        "iris_timestamp",
+        "table",
+        "record_id",
+        "ra_mc",
+        "oa"
+      ],
+      "title": "UnauthorizedRecord",
+      "type": "object"
+    },
+    "WarningInfo": {
+      "properties": {
+        "dup_ra": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/DupAliasModel"
+          },
+          "title": "Dup Ra",
+          "type": "array"
+        },
+        "wrong_alias": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/WrongAliasModel"
+          },
+          "title": "Wrong Alias",
+          "type": "array"
+        },
+        "rebase_skip": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Rebase Skip",
+          "type": "array"
+        }
+      },
+      "title": "WarningInfo",
+      "type": "object"
+    },
+    "WrongAliasModel": {
+      "properties": {
+        "typ": {
+          "title": "Typ",
+          "type": "string"
+        },
+        "lid": {
+          "title": "Lid",
+          "type": "string"
+        },
+        "rids": {
+          "title": "Rids",
+          "type": "string"
+        }
+      },
+      "required": [
+        "typ",
+        "lid",
+        "rids"
+      ],
+      "title": "WrongAliasModel",
+      "type": "object"
+    }
+  },
+  "properties": {
+    "header": {
+      "$ref": "#/$defs/Header"
+    },
+    "errors": {
+      "$ref": "#/$defs/ErrorInfo",
+      "default": {
+        "wrong_suffix": null,
+        "no_header": null,
+        "corrupt_excel": {
+          "header": false,
+          "unspecified": false
+        },
+        "corrupt_json": null,
+        "not_supported_domain": null,
+        "inconsistency": null,
+        "no_content": [],
+        "schema_error": [],
+        "unauthorized": []
+      }
+    },
+    "warnings": {
+      "$ref": "#/$defs/WarningInfo",
+      "default": {
+        "dup_ra": [],
+        "wrong_alias": [],
+        "rebase_skip": []
+      }
+    }
+  },
+  "required": [
+    "header"
+  ],
+  "title": "AcknowledgeModel",
+  "type": "object"
+}

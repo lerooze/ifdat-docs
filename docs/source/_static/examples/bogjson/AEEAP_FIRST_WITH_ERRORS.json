@@ -1,0 +1,82 @@
+{
+  "HEADER": {
+    "PARTNER": "EGRAEEAP000",
+    "USERNAME": "AEEAP000USER",
+    "DOMAIN": "IFDat",
+    "REP_YEAR": "2025",
+    "REP_MONTH": "06",
+    "SUBMISSION_TYPE": "INIT"
+  },
+  "DATASETS": {
+    "REF.FND": [
+      {
+        "ID": "EGRAEEAP000",
+        "DT_BRTH": "2025-01-01T00:00:00Z"
+      }
+    ],
+    "REF.FND_DYNMC": [
+      {
+        "ID": "EGRAEEAP000",
+        "RPRTD_BY": "EGRAEEAP000",
+        "NM": "Μπουρλοαεεάπ",
+        "NM_LTN": "Bourloreic",
+        "NM_SHRT": "Bourlo",
+        "CNTRY_RSDNC": "GR",
+        "STRT": "Μπούρλοδρόμος",
+        "STRT_LTN": "Bourlostreet",
+        "CTY": "Μπούρλοπόλη",
+        "CTY_LTN": "Bourlocity",
+        "PSTL_CD": "17123",
+        "URL": "https://bourloreic.gr",
+        "INSTTTNL_SCTR_CNTRL": "3",
+        "LGL_TYP": "REIT",
+        "INVSTMNT_PLCY": "RES",
+        "EQTY_TYP": "CLOSE",
+        "DSTRBTN_PLCY": "DIS",
+        "INVSTR_TYP": "MIX",
+        "STRTGY": "ACTIVE",
+        "GGRPHCL_FCS": "DOM",
+        "RL_ESTT_TYP": "MUL",
+        "CRRNCY": "EUR"
+      }
+    ],
+    "REF.SELF_SHR": [
+      {
+        "ID": "IGRS123456789",
+        "DT_BRTH": "2025-01-01T00:00:00Z",
+        "CRRNCY": "EUR"
+      }
+    ],
+    "REF.SELF_SHR_DYNMC": [
+      {
+        "ID": "IGRS123456789",
+        "NM_LTN": "SHARE",
+        "STTS": "100",
+        "ISSD_BY": "EGRAEEAP000"
+      }
+    ],
+    "REF.SELF_DBT": [
+      {
+        "ID": "IGRC123456789",
+        "DT_BRTH": "2025-02-01T00:00:00Z",
+        "DT_CLS": "2030-02-01T00:00:00Z",
+        "ORGNL_MTRTY": "2030-02-01T00:00:00Z",
+        "CRRNCY": "EUR",
+        "ISS_PRC": 100,
+        "RDMPTN_PRC": 100,
+        "MRKT": "AAPA",
+        "ACCRL_STRTDT": "2025-02-01T00:00:00Z",
+        "TYP": "BND"
+      }
+    ],
+    "REF.SELF_DBT_DYNMC": [
+      {
+        "ID": "IGRS123456789",
+        "NM_LTN": "ΟΜΟΛΟΓΟ",
+        "STTS": "100",
+        "MTRTY_DT": "2030-02-01T00:00:00Z",
+        "ISSD_BY": "EGRAEEAP000"
+      }
+    ]
+  }
+}

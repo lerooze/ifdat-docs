@@ -11,6 +11,14 @@ What's new?
 .. Next release
 .. ============
 
+v0.9.2 (2025-06-24)
+-------------------
+* Examples were added and imporoved
+* Corner cases were added
+* Change SHR_KEY to KEY where needed
+* Fix license and credits
+* Other improvements in documentation
+
 v0.9.1 (2025-01-31)
 -------------------
 * Rename MNGMNT tables to RA

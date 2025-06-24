@@ -1,0 +1,16 @@
+{
+  "HEADER": {
+    "PARTNER": "EGR123456789",
+    "USERNAME": "zuser",
+    "DOMAIN": "IFDat"
+  },
+  "DATASETS": {
+    "REF.FND_DYNMC": [
+      {
+        "ID": "EGRAKZ1",
+        "VLD_FRM": "2025-02-01T00:00:00Z",
+        "INVSTMNT_PLCY": "MIX"
+      }
+    ]
+  }
+}
