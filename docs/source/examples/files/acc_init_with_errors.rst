@@ -12,4 +12,4 @@ Yποβολή αρχικών λογιστικών στοιχείων με λάθ
 -------------
 
 .. literalinclude:: /_static/ack/ACK_000000006_EGR123456789_ZUSER.json 
-   :language: JSON 
+   :language: JSON
