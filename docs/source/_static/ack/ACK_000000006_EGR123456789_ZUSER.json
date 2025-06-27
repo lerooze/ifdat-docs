@@ -4,72 +4,8 @@
     "submitter": "ZUSER",
     "partner": "EGR123456789",
     "domain": "IFDAT",
-    "filename": "F_000000006_IFDAT_EGR123456789_ZUSER_INIT_ACC_WITH_SCHEMA_ERRORS.json",
-    "timestamp": "2025-06-24T18:04:53.520333",
-    "uploaded": false
-  },
-  "errors": {
-    "wrong_suffix": null,
-    "no_header": null,
-    "corrupt_excel": {
-      "unspecified": false,
-      "header": false
-    },
-    "corrupt_json": null,
-    "not_supported_domain": null,
-    "inconsistency": null,
-    "no_content": [],
-    "schema_error": [
-      {
-        "location": "('DATASETS', 'ACC.DPST', 0, 'STCK')",
-        "message": "Field required",
-        "input": "{'IID': '_EUR_EGRAKZ1', 'DT': '2024-09-30T00:00:00Z', 'FRQNCY': 'Q', 'FLS': 100.0, 'ACCRLS': 0.0}",
-        "domain": null,
-        "type": "missing",
-        "level": null,
-        "line": null,
-        "column": null,
-        "file": null
-      },
-      {
-        "location": "('DATASETS', 'ACC.DPST', 2, 'FLS')",
-        "message": "Field required",
-        "input": "{'IID': 'PEGRAZ2_DPST', 'DT': '2024-09-30T00:00:00Z', 'FRQNCY': 'M', 'STCK': 200000.0, 'ACCRLS': 200.0}",
-        "domain": null,
-        "type": "missing",
-        "level": null,
-        "line": null,
-        "column": null,
-        "file": null
-      },
-      {
-        "location": "('DATASETS', 'ACC.DPST', 3, 'FLS')",
-        "message": "Field required",
-        "input": "{'IID': 'IGR0002600000000000000000001', 'DT': '2024-09-30T00:00:00Z', 'FRQNCY': 'M', 'STCK': 10000.0, 'ACCRLS': 500.0}",
-        "domain": null,
-        "type": "missing",
-        "level": null,
-        "line": null,
-        "column": null,
-        "file": null
-      },
-      {
-        "location": "('DATASETS', 'ACC.ASST_DBT', 2, 'ACCRLS')",
-        "message": "Field required",
-        "input": "{'IID': 'IGRC123456789', 'ID': 'EGRAKZ2', 'DT': '2024-11-30T00:00:00Z', 'FRQNCY': 'M', 'STCK': 150000.0, 'FLS': 0.0, 'NMNL_STCK': 150000.0, 'LND_FR_SFT': 0.0}",
-        "domain": null,
-        "type": "missing",
-        "level": null,
-        "line": null,
-        "column": null,
-        "file": null
-      }
-    ],
-    "unauthorized": []
-  },
-  "warnings": {
-    "dup_ra": [],
-    "wrong_alias": [],
-    "rebase_skip": []
+    "filename": "F_000000006_IFDAT_EGR123456789_ZUSER_INIT_REF.json",
+    "timestamp": "2025-06-27T03:41:35.006038",
+    "uploaded": true
   }
 }

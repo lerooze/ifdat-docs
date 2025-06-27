@@ -4,8 +4,50 @@
     "submitter": "AEEAP000USER",
     "partner": "EGRAEEAP000",
     "domain": "IFDAT",
-    "filename": "F_000000009_IFDAT_EGRAEEAP000_AEEAP000USER_AEEAP_FIRST.json",
-    "timestamp": "2025-06-24T18:04:53.520333",
-    "uploaded": true
+    "filename": "F_000000009_IFDAT_EGRAEEAP000_AEEAP000USER_AEEAP_FIRST_WITH_ERRORS.json",
+    "timestamp": "2025-06-27T03:41:35.006038",
+    "uploaded": false
+  },
+  "errors": {
+    "wrong_suffix": null,
+    "no_header": null,
+    "corrupt_excel": {
+      "unspecified": false,
+      "header": false
+    },
+    "corrupt_json": null,
+    "not_supported_domain": null,
+    "inconsistency": null,
+    "no_content": [],
+    "schema_error": [
+      {
+        "location": "('DATASETS', 'REF.SELF_DBT_DYNMC', 0, 'NM_LTN')",
+        "message": "String should match pattern '^[\\u0000-\\u024F‘-‟€]+$'",
+        "input": "ΟΜΟΛΟΓΟ",
+        "domain": null,
+        "type": "string_pattern_mismatch",
+        "level": null,
+        "line": null,
+        "column": null,
+        "file": null
+      },
+      {
+        "location": "('DATASETS', 'REF.SELF_SHR_DYNMC', 0, 'STTS')",
+        "message": "Extra inputs are not permitted",
+        "input": "100",
+        "domain": null,
+        "type": "extra_forbidden",
+        "level": null,
+        "line": null,
+        "column": null,
+        "file": null
+      }
+    ],
+    "unauthorized": []
+  },
+  "warnings": {
+    "dup_ra": [],
+    "wrong_alias": [],
+    "rebase_skip": []
   }
 }

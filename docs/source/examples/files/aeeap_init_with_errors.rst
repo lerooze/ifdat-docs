@@ -6,11 +6,11 @@
 Αρχείο σε μορϕη Excel:
 ----------------------
 
-:download:`ACC_WITH_ERRORS </_static/examples/latest/F_07_IFDAT_EGRAEEAP000_AEEAP000USER_AEEAP_FIRST_WITH_ERRORS.xlsx>`
+:download:`ACC_WITH_ERRORS </_static/examples/latest/F_08_IFDAT_EGRAEEAP000_AEEAP000USER_AEEAP_FIRST_WITH_ERRORS.xlsx>`
 
 
 Αρχείο λαθών:
 -------------
 
-.. literalinclude:: /_static/ack/ACK_000000008_EGRAEEAP000_AEEAP000USER.json 
+.. literalinclude:: /_static/ack/ACK_000000009_EGRAEEAP000_AEEAP000USER.json 
    :language: JSON 

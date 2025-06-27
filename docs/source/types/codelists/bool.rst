@@ -2,5 +2,5 @@ BOOL
 ====
 
 .. csv-table::
-   :file: /_static/codelists/BOOL_ENUM.csv
+   :file: /_static/structure/codelists/BOOL_ENUM.csv
    :header-rows: 1

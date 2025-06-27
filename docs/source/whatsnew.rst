@@ -11,6 +11,12 @@ What's new?
 .. Next release
 .. ============
 
+v0.9.7 (2025-06-26)
+-------------------
+* Disallow leading empty spaces in some patterns
+* Improve IFDAT-LIST
+* Align with ELFUND version
+
 v0.9.2 (2025-06-24)
 -------------------
 * Examples were added and imporoved

@@ -7,11 +7,11 @@ Yποβολή αρχικών στοιχείων αναφοράς
 Αρχείο σε μορφή json:
 ---------------------
 
-.. literalinclude:: /_static/examples/latest/F_10_IFDAT_EGR123456789_ZUSER_ACCDPSTCRRCTN.json 
+.. literalinclude:: /_static/examples/latest/F_11_IFDAT_EGR123456789_ZUSER_ACCDPSTCRRCTN.json 
    :language: JSON 
 
 
 Αρχείο σε μορϕη Excel:
 ----------------------
 
-:download:`INIT_REF </_static/examples/latest/F_10_IFDAT_EGR123456789_ZUSER_ACCDPSTCRRCTN.xlsx>`
+:download:`DPST_CRCTN </_static/examples/latest/F_11_IFDAT_EGR123456789_ZUSER_ACCDPSTCRRCTN.xlsx>`

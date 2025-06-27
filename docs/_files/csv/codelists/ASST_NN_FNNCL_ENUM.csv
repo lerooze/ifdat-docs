@@ -1,8 +1,0 @@
-"ID","NAME","DESCRIPTION"
-"--","Reset","Reset value"
-"NFA1","Residential Real Estate","Residential real estate is a residence which is occupied by the owner or the lessee of the residence"
-"NFA2","Commercial Real Estate","Commercial real estate is a real estate property where goods or services are provided to customers (e.g. hotels, restaurants, retail)"
-"NFA3","Industrial Real Estate","Industrial real estate is real estate used for industrial purposes, such as those used as factories, logistical centres and storage space"
-"NFA4","Office Real Estate","Office real estate is real estate used for business offices"
-"NFA5","Other Real Estate","Other real estate is real estate other than residential, commercial, industrial and office real estate"
-"NFA6","Non Financial Asset Other Than Real Estate","Non financial assets that is not real estate such as machinery and equipment, valuables, intellectual property products such as computer software and databases"

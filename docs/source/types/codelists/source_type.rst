@@ -2,5 +2,5 @@ SOURCE_TYPE
 ===========
 
 .. csv-table::
-   :file: /_static/codelists/SOURCE_TYPE_ENUM.csv
+   :file: /_static/structure/codelists/SOURCE_TYPE_ENUM.csv
    :header-rows: 1

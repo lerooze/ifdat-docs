@@ -164,7 +164,7 @@
           "type": "string"
         },
         "timestamp": {
-          "default": "2025-06-24T17:59:16.657642",
+          "default": "2025-06-27T02:34:55.165976",
           "format": "date-time",
           "title": "Timestamp",
           "type": "string"
@@ -233,7 +233,7 @@
           "anyOf": [
             {
               "maxLength": 50,
-              "pattern": "(^[a-zA-Z][!-~-]*$)|(^$)$",
+              "pattern": "(^[a-zA-Z][!-~-]*$)|(^$)",
               "type": "string"
             },
             {

@@ -5,7 +5,7 @@
       "properties": {
         "IID": {
           "maxLength": 51,
-          "pattern": "^(I[A-Z][A-Z][A-Z0-9]{9}[0-9])|(M[A-Z]{4}_[!-~]+)|(PE[A-Za-z0-9@$-]+_[!-~]+)$",
+          "pattern": "^((I[A-Z][A-Z][A-Z0-9]{9}[0-9])|(M[A-Z]{4}_[!-~]+)|(PE[A-Za-z0-9@$-]+_[!-~]+))$",
           "title": "Iid",
           "type": "string"
         },
@@ -54,7 +54,7 @@
       "properties": {
         "IID": {
           "maxLength": 51,
-          "pattern": "^(I[A-Z0-9]{4}[A-Z0-9]{1,30})|(PE[A-Za-z0-9@$-]+_[!-~]+)|(_[A-Z]{3}_E[A-Za-z0-9@$-]+)$",
+          "pattern": "^((I[A-Z0-9]{4}[A-Z0-9]{1,30})|(PE[A-Za-z0-9@$-]+_[!-~]+)|(_[A-Z]{3}_E[A-Za-z0-9@$-]+))$",
           "title": "Iid",
           "type": "string"
         },
@@ -96,7 +96,7 @@
       "properties": {
         "IID": {
           "maxLength": 51,
-          "pattern": "^(I[A-Z][A-Z][A-Z0-9]{9}[0-9])|(PE[A-Za-z0-9@$-]+_[!-~]+)$",
+          "pattern": "^((I[A-Z][A-Z][A-Z0-9]{9}[0-9])|(PE[A-Za-z0-9@$-]+_[!-~]+))$",
           "title": "Iid",
           "type": "string"
         },
@@ -197,7 +197,7 @@
       "properties": {
         "IID": {
           "maxLength": 51,
-          "pattern": "^(I[A-Z][A-Z][A-Z0-9]{9}[0-9])|(PE[A-Za-z0-9@$-]+_[!-~]+)$",
+          "pattern": "^((I[A-Z][A-Z][A-Z0-9]{9}[0-9])|(PE[A-Za-z0-9@$-]+_[!-~]+))$",
           "title": "Iid",
           "type": "string"
         },
@@ -255,7 +255,7 @@
       "properties": {
         "IID": {
           "maxLength": 51,
-          "pattern": "^(I[A-Z][A-Z][A-Z0-9]{9}[0-9])|(PE[A-Za-z0-9@$-]+_[!-~]+)$",
+          "pattern": "^((I[A-Z][A-Z][A-Z0-9]{9}[0-9])|(PE[A-Za-z0-9@$-]+_[!-~]+))$",
           "title": "Iid",
           "type": "string"
         },
@@ -881,7 +881,7 @@
       "properties": {
         "ID": {
           "maxLength": 51,
-          "pattern": "^(I[A-Z][A-Z][A-Z0-9]{9}[0-9])|(PE[A-Za-z0-9@$-]+_[!-~]+)$",
+          "pattern": "^((I[A-Z][A-Z][A-Z0-9]{9}[0-9])|(PE[A-Za-z0-9@$-]+_[!-~]+))$",
           "title": "Id",
           "type": "string"
         },
@@ -4201,7 +4201,7 @@
       "properties": {
         "IID": {
           "maxLength": 51,
-          "pattern": "^(I[A-Z][A-Z][A-Z0-9]{9}[0-9])|(PE[A-Za-z0-9@$-]+_[!-~]+)$",
+          "pattern": "^((I[A-Z][A-Z][A-Z0-9]{9}[0-9])|(PE[A-Za-z0-9@$-]+_[!-~]+))$",
           "title": "Iid",
           "type": "string"
         },
@@ -4261,7 +4261,7 @@
       "properties": {
         "IID": {
           "maxLength": 51,
-          "pattern": "^(I[A-Z][A-Z][A-Z0-9]{9}[0-9])|(PE[A-Za-z0-9@$-]+_[!-~]+)$",
+          "pattern": "^((I[A-Z][A-Z][A-Z0-9]{9}[0-9])|(PE[A-Za-z0-9@$-]+_[!-~]+))$",
           "title": "Iid",
           "type": "string"
         },
@@ -4298,7 +4298,7 @@
       "properties": {
         "IID": {
           "maxLength": 51,
-          "pattern": "^(I[A-Z][A-Z][A-Z0-9]{9}[0-9])|(PE[A-Za-z0-9@$-]+_[!-~]+)$",
+          "pattern": "^((I[A-Z][A-Z][A-Z0-9]{9}[0-9])|(PE[A-Za-z0-9@$-]+_[!-~]+))$",
           "title": "Iid",
           "type": "string"
         },
@@ -4591,7 +4591,7 @@
       "properties": {
         "ID": {
           "maxLength": 51,
-          "pattern": "^(I[A-Z][A-Z][A-Z0-9]{9}[0-9])|(M[A-Z]{4}_[!-~]+)|(PE[A-Za-z0-9@$-]+_[!-~]+)$",
+          "pattern": "^((I[A-Z][A-Z][A-Z0-9]{9}[0-9])|(M[A-Z]{4}_[!-~]+)|(PE[A-Za-z0-9@$-]+_[!-~]+))$",
           "title": "Id",
           "type": "string"
         },
@@ -4652,7 +4652,7 @@
       "properties": {
         "ID": {
           "maxLength": 51,
-          "pattern": "^(I[A-Z0-9]{4}[A-Z0-9]{1,30})|(PE[A-Za-z0-9@$-]+_[!-~]+)$",
+          "pattern": "^((I[A-Z0-9]{4}[A-Z0-9]{1,30})|(PE[A-Za-z0-9@$-]+_[!-~]+))$",
           "title": "Id",
           "type": "string"
         },
@@ -4804,7 +4804,7 @@
       "properties": {
         "ID": {
           "maxLength": 51,
-          "pattern": "^(I[A-Z][A-Z][A-Z0-9]{9}[0-9])|(PE[A-Za-z0-9@$-]+_[!-~]+)$",
+          "pattern": "^((I[A-Z][A-Z][A-Z0-9]{9}[0-9])|(PE[A-Za-z0-9@$-]+_[!-~]+))$",
           "title": "Id",
           "type": "string"
         },
@@ -4863,7 +4863,7 @@
       "properties": {
         "ID": {
           "maxLength": 51,
-          "pattern": "^(I[A-Z][A-Z][A-Z0-9]{9}[0-9])|(PE[A-Za-z0-9@$-]+_[!-~]+)$",
+          "pattern": "^((I[A-Z][A-Z][A-Z0-9]{9}[0-9])|(PE[A-Za-z0-9@$-]+_[!-~]+))$",
           "title": "Id",
           "type": "string"
         },
@@ -4890,7 +4890,7 @@
       "properties": {
         "ID": {
           "maxLength": 51,
-          "pattern": "^(I[A-Z][A-Z][A-Z0-9]{9}[0-9])|(PE[A-Za-z0-9@$-]+_[!-~]+)$",
+          "pattern": "^((I[A-Z][A-Z][A-Z0-9]{9}[0-9])|(PE[A-Za-z0-9@$-]+_[!-~]+))$",
           "title": "Id",
           "type": "string"
         },
@@ -4955,7 +4955,7 @@
       "properties": {
         "ID": {
           "maxLength": 51,
-          "pattern": "^(I[A-Z][A-Z][A-Z0-9]{9}[0-9])|(PE[A-Za-z0-9@$-]+_[!-~]+)$",
+          "pattern": "^((I[A-Z][A-Z][A-Z0-9]{9}[0-9])|(PE[A-Za-z0-9@$-]+_[!-~]+))$",
           "title": "Id",
           "type": "string"
         },
@@ -4992,7 +4992,7 @@
       "properties": {
         "ID": {
           "maxLength": 51,
-          "pattern": "^(I[A-Z][A-Z][A-Z0-9]{9}[0-9])|(PE[A-Za-z0-9@$-]+_[!-~]+)$",
+          "pattern": "^((I[A-Z][A-Z][A-Z0-9]{9}[0-9])|(PE[A-Za-z0-9@$-]+_[!-~]+))$",
           "title": "Id",
           "type": "string"
         },
@@ -5115,7 +5115,7 @@
         "UNDRLYNG": {
           "default": null,
           "maxLength": 51,
-          "pattern": "^(I[A-Z][A-Z][A-Z0-9]{9}[0-9])|(PE[A-Za-z0-9@$-]+_[!-~]+)$",
+          "pattern": "^((I[A-Z][A-Z][A-Z0-9]{9}[0-9])|(PE[A-Za-z0-9@$-]+_[!-~]+))$",
           "title": "Undrlyng",
           "type": "string"
         },
@@ -5132,7 +5132,7 @@
         "RSTRCTRD_T": {
           "default": null,
           "maxLength": 51,
-          "pattern": "^(I[A-Z][A-Z][A-Z0-9]{9}[0-9])|(PE[A-Za-z0-9@$-]+_[!-~]+)$",
+          "pattern": "^((I[A-Z][A-Z][A-Z0-9]{9}[0-9])|(PE[A-Za-z0-9@$-]+_[!-~]+))$",
           "title": "Rstrctrd T",
           "type": "string"
         },
@@ -5155,7 +5155,7 @@
       "properties": {
         "ID": {
           "maxLength": 51,
-          "pattern": "^(I[A-Z][A-Z][A-Z0-9]{9}[0-9])|(PE[A-Za-z0-9@$-]+_[!-~]+)$",
+          "pattern": "^((I[A-Z][A-Z][A-Z0-9]{9}[0-9])|(PE[A-Za-z0-9@$-]+_[!-~]+))$",
           "title": "Id",
           "type": "string"
         },
@@ -5213,7 +5213,7 @@
       "properties": {
         "ID": {
           "maxLength": 51,
-          "pattern": "^(I[A-Z][A-Z][A-Z0-9]{9}[0-9])|(PE[A-Za-z0-9@$-]+_[!-~]+)$",
+          "pattern": "^((I[A-Z][A-Z][A-Z0-9]{9}[0-9])|(PE[A-Za-z0-9@$-]+_[!-~]+))$",
           "title": "Id",
           "type": "string"
         },
@@ -5288,7 +5288,7 @@
       "properties": {
         "ID": {
           "maxLength": 51,
-          "pattern": "^(I[A-Z][A-Z][A-Z0-9]{9}[0-9])|(PE[A-Za-z0-9@$-]+_[!-~]+)$",
+          "pattern": "^((I[A-Z][A-Z][A-Z0-9]{9}[0-9])|(PE[A-Za-z0-9@$-]+_[!-~]+))$",
           "title": "Id",
           "type": "string"
         },
@@ -5315,7 +5315,7 @@
         "RSTRCTRD_T": {
           "default": null,
           "maxLength": 51,
-          "pattern": "^(I[A-Z][A-Z][A-Z0-9]{9}[0-9])|(PE[A-Za-z0-9@$-]+_[!-~]+)$",
+          "pattern": "^((I[A-Z][A-Z][A-Z0-9]{9}[0-9])|(PE[A-Za-z0-9@$-]+_[!-~]+))$",
           "title": "Rstrctrd T",
           "type": "string"
         }
@@ -5331,7 +5331,7 @@
       "properties": {
         "ID": {
           "maxLength": 51,
-          "pattern": "^(I[A-Z][A-Z][A-Z0-9]{9}[0-9])|(PE[A-Za-z0-9@$-]+_[!-~]+)$",
+          "pattern": "^((I[A-Z][A-Z][A-Z0-9]{9}[0-9])|(PE[A-Za-z0-9@$-]+_[!-~]+))$",
           "title": "Id",
           "type": "string"
         },

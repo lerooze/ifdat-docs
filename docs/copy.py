@@ -49,5 +49,7 @@ for f in os.listdir(dst_dir_lists):
         quote = "="
         io.write(f"{name}{os.linesep}{quote*cnt}{os.linesep}{os.linesep}")
         io.write(".. csv-table::\n")
-        io.write(f"   :file: /_static/codelists/{name.upper()}_ENUM.csv{os.linesep}")
+        io.write(
+            f"   :file: /_static/structure/codelists/{name.upper()}_ENUM.csv{os.linesep}"
+        )
         io.write("   :header-rows: 1")

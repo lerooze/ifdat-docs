@@ -8,11 +8,11 @@ Yποβολή αρχικών στοιχείων αναφοράς
 Αρχείο σε μορφή json:
 ---------------------
 
-.. literalinclude:: /_static/examples/latest/F_04_IFDAT_EGR123456789_ZUSER_INIT_REF.json 
+.. literalinclude:: /_static/examples/latest/F_05_IFDAT_EGR123456789_ZUSER_INIT_REF.json 
    :language: JSON 
 
 
 Αρχείο σε μορϕη Excel:
 ----------------------
 
-:download:`INIT_REF </_static/examples/latest/F_04_IFDAT_EGR123456789_ZUSER_INIT_REF.xlsx>`
+:download:`INIT_REF </_static/examples/latest/F_05_IFDAT_EGR123456789_ZUSER_INIT_REF.xlsx>`

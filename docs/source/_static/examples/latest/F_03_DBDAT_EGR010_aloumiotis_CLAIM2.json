@@ -1,0 +1,27 @@
+{
+  "HEADER": {
+    "PARTNER": "EGR010",
+    "USERNAME": "aloumiotis",
+    "SOURCE": "INIT",
+    "DOMAIN": "DBDat"
+  },
+  "DATASETS": {
+    "REF.ORG_ALIAS": [
+      {
+        "LID": "PEGR123456789_AKES",
+        "RID": "EGRAKZ1",
+        "ALIAS_OF": "T"
+      },
+      {
+        "LID": "L887600ED3C2BA1B01C34",
+        "RID": "EGRAKZ2",
+        "ALIAS_OF": "T"
+      },
+      {
+        "LID": "L787600ED3C2BA1B01C45",
+        "RID": "EGRAKZ3",
+        "ALIAS_OF": "T"
+      }
+    ]
+  }
+}

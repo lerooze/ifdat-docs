@@ -5,7 +5,38 @@
     "partner": "EGR010",
     "domain": "DBDAT",
     "filename": "F_000000002_DBDAT_EGR010_ALOUMIOTIS_CLAIM.json",
-    "timestamp": "2025-06-24T18:04:53.520333",
-    "uploaded": true
+    "timestamp": "2025-06-27T03:41:35.006038",
+    "uploaded": false
+  },
+  "errors": {
+    "wrong_suffix": null,
+    "no_header": null,
+    "corrupt_excel": {
+      "unspecified": false,
+      "header": false
+    },
+    "corrupt_json": null,
+    "not_supported_domain": null,
+    "inconsistency": null,
+    "no_content": [],
+    "schema_error": [
+      {
+        "location": "('DATASETS', 'REF.ORG_ALIAS', 1, 'LID')",
+        "message": "String should match pattern '^(([TB][A-Za-z0-9_@$\\-][ -~]*[!-~])|(L[0-9A-Z]{18}[0-9]{2})|(PE[A-Za-z0-9@$-]+_[!-~]+))$'",
+        "input": " L887600ED3C2BA1B01C34",
+        "domain": null,
+        "type": "string_pattern_mismatch",
+        "level": null,
+        "line": null,
+        "column": null,
+        "file": null
+      }
+    ],
+    "unauthorized": []
+  },
+  "warnings": {
+    "dup_ra": [],
+    "wrong_alias": [],
+    "rebase_skip": []
   }
 }
