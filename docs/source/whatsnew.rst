@@ -8,12 +8,11 @@ What's new?
    :backlinks: none
    :depth: 1
 
-.. Next release
-.. ============
 
-v0.9.8 (2025-07-05)
--------------------
-* Field Format Updates
+Next release
+------------
+
+* Field Format Refactoring
 
 v0.9.7 (2025-06-26)
 -------------------
