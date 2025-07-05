@@ -11,6 +11,10 @@ What's new?
 .. Next release
 .. ============
 
+v0.9.8 (2025-07-05)
+-------------------
+* Field Format Updates
+
 v0.9.7 (2025-06-26)
 -------------------
 * Disallow leading empty spaces in some patterns
