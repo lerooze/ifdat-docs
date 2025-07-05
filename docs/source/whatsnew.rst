@@ -3,10 +3,10 @@
 What's new?
 ===========
 
-.. contents::
-   :local:
-   :backlinks: none
-   :depth: 1
+.. .. contents::
+..    :local:
+..    :backlinks: none
+..    :depth: 1
 
 
 Next release
