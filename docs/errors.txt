@@ -1,2 +1,6 @@
+/home/al459/envs/ifdat-docs/docs/source/download.rst:7: WARNING: download file not readable: /home/al459/envs/ifdat-docs/docs/source/_static/reports/prod/IFDAT-LIST.xlsx [download.not_readable]
+/home/al459/envs/ifdat-docs/docs/source/examples/files/reports.rst:12: WARNING: download file not readable: /home/al459/envs/ifdat-docs/docs/source/_static/reports/IFDAT-LIST.xlsx [download.not_readable]
+/home/al459/envs/ifdat-docs/docs/source/index.rst:7: WARNING: download file not readable: /home/al459/envs/ifdat-docs/docs/source/_static/reports/prod/IFDAT-LIST.xlsx [download.not_readable]
 /home/al459/envs/ifdat-docs/docs/source/ack/accounting.rst: WARNING: document isn't included in any toctree [toc.not_included]
 /home/al459/envs/ifdat-docs/docs/source/ack/critical.rst: WARNING: document isn't included in any toctree [toc.not_included]
+/home/al459/envs/ifdat-docs/docs/source/examples/treatment/merger.rst: WARNING: document isn't included in any toctree [toc.not_included]
